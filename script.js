@@ -1,9 +1,8 @@
 /* ================================================================
-   DISTOPIA 2 — script.js v4
-   · Fondo estelar (starfield + aurora borealis)
-   · Google Sign-In con fix de botones bloqueados
-   · Upvote / Downvote / Retirar por usuario (Google JWT)
-   · Modal + carrusel táctil
+   DISTOPIA 2 — script.js v5
+   · Google Sign-In (GIS) con botón custom
+   · Votaciones por usuario — fix modal (cambio/retirada sin cerrar)
+   · Sin canvas — fondo CSS puro
    ================================================================ */
 
 // ─── CONFIG ────────────────────────────────────────────────────
@@ -17,165 +16,19 @@ const PROXY   = "https://corsproxy.io/?";
 const GET_URL = PROXY + encodeURIComponent(APPS_SCRIPT_URL);
 
 // ─── ESTADO ────────────────────────────────────────────────────
-let localVotes    = {};   // { modId: number }  del servidor
-let userVotes     = {};   // { modId: 1 | -1 }  del usuario
-let modData       = null;
-let currentUser   = null; // { token, sub, email, name, picture, exp }
+let localVotes  = {};   // { modId: number }  — totales del servidor
+let userVotes   = {};   // { modId: 1 | -1 }  — votos del usuario
+let modData     = null;
+let currentUser = null; // { token, sub, email, name, picture, exp }
 
-// ══════════════════════════════════════════════════════════════
-//  FONDO ESTELAR + AURORA BOREAL
-// ══════════════════════════════════════════════════════════════
-function initStarfield() {
-  const canvas = document.getElementById("bg-canvas");
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
-
-  // ── Estrellas ─────────────────────────────────────────────
-  const STAR_COUNT = 220;
-  let stars = [];
-
-  function buildStars(W, H) {
-    stars = Array.from({ length: STAR_COUNT }, () => ({
-      x:       Math.random() * W,
-      y:       Math.random() * H,
-      r:       Math.random() * 1.6 + 0.2,
-      alpha:   Math.random() * 0.65 + 0.15,
-      twSpeed: Math.random() * 0.018 + 0.004,
-      twPhase: Math.random() * Math.PI * 2,
-      color:   pickStarColor(),
-    }));
-  }
-
-  function pickStarColor() {
-    const roll = Math.random();
-    if (roll < 0.06) return [180, 120, 255]; // morado
-    if (roll < 0.10) return [255, 180, 100]; // naranja
-    if (roll < 0.13) return [200, 100, 255]; // magenta
-    return [255, 255, 255];                   // blanco
-  }
-
-  // ── Aurora Boreal ─────────────────────────────────────────
-  // Bandas de aurora: muy lentas, muy suaves, con blur
-  const AURORA = [
-    { yRel: 0.12, amp: 55, freq: 0.0018, speed: 0.00008, ph: 0.0,  col: [180, 60, 255],  opa: 0.07 },
-    { yRel: 0.20, amp: 40, freq: 0.0025, speed: 0.00006, ph: 2.1,  col: [220, 50, 250],  opa: 0.055 },
-    { yRel: 0.07, amp: 35, freq: 0.0032, speed: 0.00010, ph: 4.5,  col: [255, 100, 50],  opa: 0.04 },
-    { yRel: 0.30, amp: 65, freq: 0.0014, speed: 0.00005, ph: 1.4,  col: [100, 50, 255],  opa: 0.045 },
-    { yRel: 0.01, amp: 30, freq: 0.0040, speed: 0.00012, ph: 3.3,  col: [200, 80, 255],  opa: 0.035 },
-  ];
-
-  // ── Meteoros ──────────────────────────────────────────────
-  let meteors = [];
-  let meteorTimer = 0;
-  const METEOR_INTERVAL = 280; // frames entre meteoros
-
-  function spawnMeteor(W, H) {
-    const startX = Math.random() * W * 0.6 + W * 0.2;
-    const startY = Math.random() * H * 0.3;
-    const angle  = Math.PI / 4 + (Math.random() - 0.5) * 0.3;
-    meteors.push({
-      x: startX, y: startY,
-      vx: Math.cos(angle) * 8, vy: Math.sin(angle) * 8,
-      len: Math.random() * 80 + 60,
-      alpha: 1,
-      life: 0, maxLife: 35,
-    });
-  }
-
-  // ── Resize ────────────────────────────────────────────────
-  let W = 0, H = 0;
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-    buildStars(W, H);
-  }
-  window.addEventListener("resize", resize);
-  resize();
-
-  // ── Bucle de render ───────────────────────────────────────
-  let t = 0;
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-
-    // 1. Estrellas
-    stars.forEach(s => {
-      const twinkle = 0.65 + 0.35 * Math.sin(t * s.twSpeed + s.twPhase);
-      const a = s.alpha * twinkle;
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${s.color[0]},${s.color[1]},${s.color[2]},${a.toFixed(3)})`;
-      if (s.r > 1.2) {
-        ctx.shadowBlur  = 5;
-        ctx.shadowColor = ctx.fillStyle;
-      }
-      ctx.fill();
-      ctx.shadowBlur = 0;
-    });
-
-    // 2. Aurora Boreal (con blur)
-    ctx.save();
-    ctx.filter = "blur(28px)";
-    AURORA.forEach(band => {
-      const yBase = H * band.yRel;
-
-      // Construir el path ondulado
-      ctx.beginPath();
-      ctx.moveTo(0, yBase);
-      for (let x = 0; x <= W + 4; x += 6) {
-        const y = yBase
-          + Math.sin(x * band.freq + t * band.speed * 6000 + band.ph) * band.amp
-          + Math.sin(x * band.freq * 1.7 + t * band.speed * 3800 + band.ph + 1) * (band.amp * 0.22);
-        ctx.lineTo(x, y);
-      }
-      ctx.lineTo(W, yBase + band.amp * 2);
-      ctx.lineTo(0, yBase + band.amp * 2);
-      ctx.closePath();
-
-      // Gradiente vertical dentro de la banda
-      const grad = ctx.createLinearGradient(0, yBase - band.amp, 0, yBase + band.amp * 2);
-      grad.addColorStop(0,   `rgba(${band.col},0)`);
-      grad.addColorStop(0.35,`rgba(${band.col},${band.opa.toFixed(3)})`);
-      grad.addColorStop(0.65,`rgba(${band.col},${(band.opa * 0.7).toFixed(3)})`);
-      grad.addColorStop(1,   `rgba(${band.col},0)`);
-      ctx.fillStyle = grad;
-      ctx.fill();
-    });
-    ctx.restore(); // elimina el blur para el resto
-
-    // 3. Meteoros
-    meteorTimer++;
-    if (meteorTimer >= METEOR_INTERVAL && Math.random() < 0.025) {
-      spawnMeteor(W, H); meteorTimer = 0;
-    }
-    meteors = meteors.filter(m => m.life < m.maxLife);
-    meteors.forEach(m => {
-      m.x += m.vx; m.y += m.vy; m.life++;
-      const progress = m.life / m.maxLife;
-      const a = (1 - progress) * 0.9;
-      const tailX = m.x - m.vx * (m.len / 8);
-      const tailY = m.y - m.vy * (m.len / 8);
-      const grad = ctx.createLinearGradient(tailX, tailY, m.x, m.y);
-      grad.addColorStop(0, `rgba(255,255,255,0)`);
-      grad.addColorStop(1, `rgba(255,255,255,${a.toFixed(3)})`);
-      ctx.beginPath();
-      ctx.moveTo(tailX, tailY);
-      ctx.lineTo(m.x, m.y);
-      ctx.strokeStyle = grad;
-      ctx.lineWidth = 1.8;
-      ctx.stroke();
-    });
-
-    t++;
-    requestAnimationFrame(draw);
-  }
-
-  draw();
-}
+// Evita que se envíen dos peticiones para el mismo mod a la vez
+const votingLocked = new Set();
 
 // ══════════════════════════════════════════════════════════════
 //  GOOGLE SIGN-IN
 // ══════════════════════════════════════════════════════════════
+
+// Esperar a que la librería GIS esté lista
 function waitForGis() {
   if (typeof google !== "undefined" && google.accounts) {
     initGIS();
@@ -186,36 +39,34 @@ function waitForGis() {
 
 function initGIS() {
   google.accounts.id.initialize({
-    client_id:            GOOGLE_CLIENT_ID,
-    callback:             handleCredentialResponse,
-    auto_select:          true,
-    cancel_on_tap_outside:false,
-    itp_support:          true,
+    client_id:             GOOGLE_CLIENT_ID,
+    callback:              handleCredentialResponse,
+    auto_select:           true,
+    cancel_on_tap_outside: false,
+    itp_support:           true,
   });
 
-  // Renderizar botón oficial de Google
-  const container = document.getElementById("google-login-btn");
-  if (container) {
-    google.accounts.id.renderButton(container, {
-      theme: "filled_black", size: "medium", shape: "pill",
-      text: "signin_with", locale: "es",
-    });
-  }
-
-  // One Tap
-  google.accounts.id.prompt(notification => {
-    if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
-      // Mostrar botón fallback si One Tap no está disponible
-      const fallback = document.getElementById("corner-login-fallback");
-      if (fallback) fallback.hidden = false;
+  // Intentar One Tap silencioso (si el navegador lo permite)
+  google.accounts.id.prompt(note => {
+    if (note.isNotDisplayed() || note.isSkippedMoment()) {
+      console.log("[Distopia2] One Tap no disponible:", note.getNotDisplayedReason?.() ?? note.getSkippedReason?.());
     }
   });
 }
 
-// Callback cuando Google completa el Sign-In
+// Nuestro botón custom llama a este método
+function triggerLogin() {
+  if (typeof google === "undefined") {
+    showToast("⚠️ Google aún no cargó. Espera un momento.");
+    return;
+  }
+  google.accounts.id.prompt();
+}
+
+// Callback cuando el usuario completa el Sign-In
 function handleCredentialResponse(response) {
   const payload = parseJWT(response.credential);
-  if (!payload) { showToast("⚠️ Error procesando el token de Google"); return; }
+  if (!payload) { showToast("⚠️ Error al procesar el token de Google"); return; }
 
   currentUser = {
     token:   response.credential,
@@ -226,19 +77,19 @@ function handleCredentialResponse(response) {
     exp:     payload.exp,
   };
 
-  // 1. Actualizar UI de auth
+  // 1. Mostrar chip de usuario (ocultar botón de login)
   updateAuthUI(true);
 
-  // 2. ⚡ DESBLOQUEAR botones INMEDIATAMENTE (bug fix)
+  // 2. ⚡ Desbloquear todos los botones INMEDIATAMENTE
   refreshCardStates();
-  syncModalVoteButtons();
+  refreshModalButtons();
 
-  // 3. Ocultar pista de login en stats bar
-  document.getElementById("stat-login-hint")?.classList.add("hidden");
+  // 3. Ocultar hint de login
+  document.getElementById("stat-hint")?.classList.add("hidden");
 
   showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
 
-  // 4. Cargar votos previos del servidor (en background)
+  // 4. Cargar votos previos del servidor en background
   loadUserVotesFromServer();
 }
 
@@ -246,30 +97,31 @@ function logout() {
   if (typeof google !== "undefined") google.accounts.id.disableAutoSelect();
   currentUser = null;
   userVotes   = {};
+  votingLocked.clear();
   updateAuthUI(false);
   refreshCardStates();
-  syncModalVoteButtons();
-  document.getElementById("stat-login-hint")?.classList.remove("hidden");
+  refreshModalButtons();
+  document.getElementById("stat-hint")?.classList.remove("hidden");
   showToast("👋 Sesión cerrada");
 }
 
-// ── UI de auth ────────────────────────────────────────────────
+// ── Actualizar UI de auth ─────────────────────────────────────
 function updateAuthUI(loggedIn) {
-  const loginEl  = document.getElementById("login-corner");
-  const userEl   = document.getElementById("user-corner");
-  const nameEl   = document.getElementById("user-name-corner");
-  const emailEl  = document.getElementById("user-email-corner");
+  const loginBtn = document.getElementById("login-btn");
+  const userChip = document.getElementById("user-chip");
+  const nameEl   = document.getElementById("user-name");
+  const emailEl  = document.getElementById("user-email");
   const avatarEl = document.getElementById("user-avatar");
 
   if (loggedIn && currentUser) {
-    loginEl?.setAttribute("hidden", "");
-    userEl?.removeAttribute("hidden");
+    loginBtn?.setAttribute("hidden", "");
+    userChip?.removeAttribute("hidden");
     if (nameEl)   nameEl.textContent  = currentUser.name;
     if (emailEl)  emailEl.textContent = currentUser.email;
     if (avatarEl && currentUser.picture) { avatarEl.src = currentUser.picture; avatarEl.alt = currentUser.name; }
   } else {
-    loginEl?.removeAttribute("hidden");
-    userEl?.setAttribute("hidden", "");
+    loginBtn?.removeAttribute("hidden");
+    userChip?.setAttribute("hidden", "");
   }
 }
 
@@ -290,8 +142,11 @@ function isTokenExpired() {
 //  INIT PRINCIPAL
 // ══════════════════════════════════════════════════════════════
 async function init() {
-  initStarfield();
   waitForGis();
+
+  // Conectar controles de UI
+  document.getElementById("login-btn")?.addEventListener("click", triggerLogin);
+  document.getElementById("logout-btn")?.addEventListener("click", logout);
 
   try {
     const [dataRes, votes] = await Promise.all([
@@ -307,11 +162,6 @@ async function init() {
     hideLoading();
     initModal();
 
-    document.getElementById("logout-btn")?.addEventListener("click", logout);
-    document.getElementById("corner-login-fallback")?.addEventListener("click", () => {
-      if (typeof google !== "undefined") google.accounts.id.prompt();
-    });
-
   } catch (err) {
     console.error("[Distopia2]", err);
     hideLoading();
@@ -319,7 +169,7 @@ async function init() {
   }
 }
 
-// ── Fetch votos agregados (público) ───────────────────────────
+// ── Fetch votos agregados (público, sin auth) ─────────────────
 async function fetchAggregateVotes() {
   const urls = [
     `${GET_URL}&${new URLSearchParams({ action: "getVotes" })}`,
@@ -342,7 +192,7 @@ async function fetchAggregateVotes() {
   return {};
 }
 
-// ── Fetch votos del usuario (requiere JWT) ────────────────────
+// ── Fetch votos del usuario desde el servidor ─────────────────
 async function loadUserVotesFromServer() {
   if (!currentUser || isTokenExpired()) return;
   try {
@@ -356,7 +206,7 @@ async function loadUserVotesFromServer() {
     if (data.error) throw new Error(data.error);
     userVotes = data;
     refreshCardStates();
-    syncModalVoteButtons();
+    refreshModalButtons();
   } catch (e) {
     console.warn("[Distopia2] getUserVotes fallido:", e.message);
   }
@@ -368,37 +218,39 @@ async function loadUserVotesFromServer() {
 function renderAll() {
   const app = document.getElementById("app");
   app.innerHTML = "";
-  modData.sections.forEach(s => app.appendChild(createSectionBlock(s)));
+  modData.sections.forEach(s => app.appendChild(buildSection(s)));
 }
 
-function createSectionBlock(section) {
+function buildSection(section) {
   const block = document.createElement("div");
   block.className = "section-block";
 
-  const title = document.createElement("h2");
-  title.className = "section-title";
+  // Cabecera de sección
+  const header = document.createElement("div");
+  header.className = "section-header";
 
-  const pill = document.createElement("span");
-  pill.className = "section-pill";
-  pill.innerHTML = `<span class="section-pill-icon">⚙️</span>${escapeHtml(section.name)}`;
+  const label = document.createElement("h2");
+  label.className = "section-label";
+  label.textContent = section.name;
 
-  const count = document.createElement("span");
-  count.className = "section-count-pill";
-  count.textContent = `${section.mods.length} mod${section.mods.length !== 1 ? "s" : ""}`;
+  const tag = document.createElement("span");
+  tag.className = "section-tag";
+  tag.textContent = `${section.mods.length} mod${section.mods.length !== 1 ? "s" : ""}`;
 
-  title.appendChild(pill);
-  title.appendChild(count);
-  block.appendChild(title);
+  header.appendChild(label);
+  header.appendChild(tag);
+  block.appendChild(header);
 
+  // Grid de tarjetas
   const grid = document.createElement("div");
   grid.className = "mod-grid";
-  section.mods.forEach(mod => grid.appendChild(createModCard(mod)));
+  section.mods.forEach(mod => grid.appendChild(buildCard(mod)));
   block.appendChild(grid);
   return block;
 }
 
-// ── Tarjeta de mod ────────────────────────────────────────────
-function createModCard(mod) {
+// ── Tarjeta ───────────────────────────────────────────────────
+function buildCard(mod) {
   const score  = localVotes[mod.id] ?? 0;
   const myVote = userVotes[mod.id]  ?? 0;
 
@@ -416,16 +268,17 @@ function createModCard(mod) {
     const img = document.createElement("img");
     img.src = mod.images[0]; img.alt = mod.name;
     img.className = "mod-thumb-img"; img.loading = "lazy"; img.decoding = "async";
+    img.onerror = () => { img.src = `https://placehold.co/800x450/0d0d18/5e5575?text=${encodeURIComponent(mod.name)}`; };
     thumb.appendChild(img);
 
-    const ov = document.createElement("div"); ov.className = "thumb-overlay";
-    ov.innerHTML = `<span class="thumb-overlay-text">🔍 Ver detalle</span>`;
-    thumb.appendChild(ov);
+    const hover = document.createElement("div"); hover.className = "thumb-hover-layer";
+    hover.innerHTML = `<span class="thumb-open-label">Ver detalle</span>`;
+    thumb.appendChild(hover);
 
     if (mod.images.length > 1) {
       const badge = document.createElement("span");
-      badge.className = "thumb-count-badge";
-      badge.textContent = `🖼 ${mod.images.length}`;
+      badge.className = "thumb-img-count";
+      badge.textContent = `${mod.images.length} imágenes`;
       thumb.appendChild(badge);
     }
 
@@ -435,180 +288,188 @@ function createModCard(mod) {
   }
 
   // Body
-  const body = document.createElement("div");
-  body.className = "mod-body";
+  const body = document.createElement("div"); body.className = "mod-body";
 
-  const hRow = document.createElement("div"); hRow.className = "mod-header-row";
+  const titleRow = document.createElement("div"); titleRow.className = "mod-title-row";
   const nameEl = document.createElement("h3"); nameEl.className = "mod-name";
   nameEl.textContent = mod.name;
   nameEl.addEventListener("click", () => openModal(mod));
-  const badge = document.createElement("span"); badge.className = "mod-badge"; badge.textContent = "MOD";
-  hRow.appendChild(nameEl); hRow.appendChild(badge);
-  body.appendChild(hRow);
+  const typeTag = document.createElement("span"); typeTag.className = "mod-type-tag"; typeTag.textContent = "MOD";
+  titleRow.appendChild(nameEl); titleRow.appendChild(typeTag);
+  body.appendChild(titleRow);
 
   if (mod.paragraphs?.length > 0) {
-    const snip = document.createElement("p");
-    snip.className = "mod-snippet";
-    snip.textContent = mod.paragraphs[0];
-    body.appendChild(snip);
+    const ex = document.createElement("p"); ex.className = "mod-excerpt";
+    ex.textContent = mod.paragraphs[0];
+    body.appendChild(ex);
   }
 
-  // Voting
-  const voting = document.createElement("div"); voting.className = "voting";
+  // Fila de votación
+  const voteRow = document.createElement("div"); voteRow.className = "vote-row";
 
-  const scoreWrap = document.createElement("div"); scoreWrap.className = "vote-score-wrap";
-  scoreWrap.innerHTML = `
-    <span class="vote-score-label">Puntos</span>
-    <span class="vote-score ${scoreClass(score)}" id="score-${mod.id}">${score}</span>
+  const scorePill = document.createElement("div"); scorePill.className = "score-pill";
+  scorePill.innerHTML = `
+    <span class="score-val ${scoreClass(score)}" id="score-${mod.id}">${score}</span>
+    <span class="score-lbl">puntos</span>
   `;
 
-  const btnGroup = document.createElement("div"); btnGroup.className = "vote-btn-group";
-  btnGroup.appendChild(buildVoteBtn(mod.id, 1,  myVote));
-  btnGroup.appendChild(buildVoteBtn(mod.id, -1, myVote));
+  const group = document.createElement("div"); group.className = "vote-group";
+  group.appendChild(buildCardVoteBtn(mod.id, 1,  myVote));
+  group.appendChild(buildCardVoteBtn(mod.id, -1, myVote));
 
-  voting.appendChild(scoreWrap); voting.appendChild(btnGroup);
-  body.appendChild(voting); card.appendChild(body);
+  voteRow.appendChild(scorePill); voteRow.appendChild(group);
+  body.appendChild(voteRow); card.appendChild(body);
   return card;
 }
 
-function scoreClass(s) {
-  return s > 0 ? "vote-score positive" : s < 0 ? "vote-score negative" : "vote-score";
-}
-
-// Construye un botón de voto (up o down)
-function buildVoteBtn(modId, direction, myVote) {
-  const btn = document.createElement("button");
-  const isUp = direction === 1;
+function buildCardVoteBtn(modId, dir, myVote) {
+  const btn  = document.createElement("button");
+  const isUp = dir === 1;
   btn.id = isUp ? `up-${modId}` : `dn-${modId}`;
   btn.setAttribute("aria-label", isUp ? "Votar positivo" : "Votar negativo");
 
+  const upSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>`;
+  const dnSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+  const lockSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
+
   if (!currentUser) {
-    // Bloqueado
-    btn.className = "vote-btn locked";
-    btn.innerHTML = isUp
-      ? `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`
-      : `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
+    btn.className = "vote-btn-card locked";
+    btn.innerHTML = lockSVG;
     btn.title = "Inicia sesión para votar";
     btn.addEventListener("click", e => {
       e.stopPropagation();
-      showToast("🔐 Inicia sesión con Google para votar");
-      if (typeof google !== "undefined") google.accounts.id.prompt();
+      showToast("🔐 Inicia sesión para votar");
+      triggerLogin();
     });
   } else {
-    const isActive = myVote === direction;
-    btn.className = `vote-btn ${isUp ? "upvote" : "downvote"}${isActive ? " active" : ""}`;
-    btn.innerHTML = isUp
-      ? `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>`
-      : `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`;
-    btn.addEventListener("click", e => { e.stopPropagation(); handleVote(modId, direction); });
+    btn.className = `vote-btn-card ${isUp ? "up" : "dn"}${myVote === dir ? " active" : ""}`;
+    btn.innerHTML = isUp ? upSVG : dnSVG;
+    btn.addEventListener("click", e => { e.stopPropagation(); handleVote(modId, dir); });
   }
   return btn;
 }
 
-// Refresca el estado de todos los botones sin re-renderizar todo
+// Actualiza el estado de TODOS los botones de tarjetas sin re-renderizar
 function refreshCardStates() {
   if (!modData) return;
-  modData.sections.forEach(s => {
-    s.mods.forEach(mod => {
-      const myVote = userVotes[mod.id] ?? 0;
-      const upBtn  = document.getElementById(`up-${mod.id}`);
-      const dnBtn  = document.getElementById(`dn-${mod.id}`);
-      if (!upBtn || !dnBtn) return;
+  const upSVG  = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>`;
+  const dnSVG  = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+  const lockSVG= `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
 
-      if (currentUser) {
-        // Desbloquear y configurar
-        [upBtn, dnBtn].forEach((btn, i) => {
-          const dir = i === 0 ? 1 : -1;
-          btn.className = `vote-btn ${dir === 1 ? "upvote" : "downvote"}${myVote === dir ? " active" : ""}`;
-          btn.title = "";
-          btn.innerHTML = dir === 1
-            ? `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>`
-            : `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`;
-          btn.onclick = e => { e.stopPropagation(); handleVote(mod.id, dir); };
-        });
-      } else {
-        // Bloquear
-        [upBtn, dnBtn].forEach(btn => {
-          btn.className = "vote-btn locked";
-          btn.title = "Inicia sesión para votar";
-          btn.innerHTML = `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
-          btn.onclick = e => { e.stopPropagation(); showToast("🔐 Inicia sesión para votar"); };
-        });
-      }
-    });
-  });
+  modData.sections.forEach(s => s.mods.forEach(mod => {
+    const upBtn  = document.getElementById(`up-${mod.id}`);
+    const dnBtn  = document.getElementById(`dn-${mod.id}`);
+    if (!upBtn || !dnBtn) return;
+    const myVote = userVotes[mod.id] ?? 0;
+
+    if (currentUser) {
+      [[upBtn, 1, "up", upSVG], [dnBtn, -1, "dn", dnSVG]].forEach(([btn, dir, cls, svg]) => {
+        btn.className = `vote-btn-card ${cls}${myVote === dir ? " active" : ""}`;
+        btn.innerHTML = svg; btn.title = ""; btn.disabled = false;
+        btn.onclick = e => { e.stopPropagation(); handleVote(mod.id, dir); };
+      });
+    } else {
+      [upBtn, dnBtn].forEach(btn => {
+        btn.className = "vote-btn-card locked"; btn.innerHTML = lockSVG;
+        btn.title = "Inicia sesión para votar"; btn.disabled = false;
+        btn.onclick = e => { e.stopPropagation(); showToast("🔐 Inicia sesión para votar"); triggerLogin(); };
+      });
+    }
+  }));
 }
 
 // ══════════════════════════════════════════════════════════════
-//  LÓGICA DE VOTO
+//  LÓGICA DE VOTO — sin restricción por botón de tarjeta
 // ══════════════════════════════════════════════════════════════
 async function handleVote(modId, direction) {
-  if (!currentUser) { showToast("🔐 Inicia sesión para votar"); return; }
+  if (!currentUser) { showToast("🔐 Inicia sesión para votar"); triggerLogin(); return; }
   if (isTokenExpired()) { showToast("⏰ Sesión expirada, vuelve a iniciar sesión"); logout(); return; }
+  if (votingLocked.has(modId)) return; // Petición en vuelo para este mod
 
-  const upBtn   = document.getElementById(`up-${modId}`);
-  const dnBtn   = document.getElementById(`dn-${modId}`);
-  const scoreEl = document.getElementById(`score-${modId}`);
-  if (!upBtn || upBtn.disabled) return;
+  votingLocked.add(modId);
 
   const current = userVotes[modId] ?? 0;
-  let delta = 0;
+  let delta, newMyVote;
 
   if (current === direction) {
-    delta = -direction; delete userVotes[modId];
-    upBtn.classList.remove("active"); dnBtn.classList.remove("active");
+    // Mismo voto → retirar
+    delta = -direction; newMyVote = 0;
+    delete userVotes[modId];
     showToast("↩️ Voto retirado");
   } else if (current === 0) {
-    delta = direction; userVotes[modId] = direction;
-    if (direction === 1) { upBtn.classList.add("active"); dnBtn.classList.remove("active"); showToast("✅ ¡Voto positivo registrado!"); }
-    else                  { dnBtn.classList.add("active"); upBtn.classList.remove("active"); showToast("👎 Voto negativo registrado"); }
+    // Nuevo voto
+    delta = direction; newMyVote = direction;
+    userVotes[modId] = direction;
+    showToast(direction === 1 ? "✅ ¡Voto positivo registrado!" : "👎 Voto negativo registrado");
   } else {
-    delta = direction - current; userVotes[modId] = direction;
-    if (direction === 1) { upBtn.classList.add("active"); dnBtn.classList.remove("active"); showToast("✅ Voto cambiado a positivo"); }
-    else                  { dnBtn.classList.add("active"); upBtn.classList.remove("active"); showToast("👎 Voto cambiado a negativo"); }
+    // Cambio de dirección
+    delta = direction - current; newMyVote = direction;
+    userVotes[modId] = direction;
+    showToast(direction === 1 ? "✅ Voto cambiado a positivo" : "👎 Voto cambiado a negativo");
   }
 
-  // Actualizar UI optimista
+  // Actualizar score local (optimista)
   localVotes[modId] = (localVotes[modId] ?? 0) + delta;
   const newScore = localVotes[modId];
+
+  // Actualizar score UI
+  const scoreEl = document.getElementById(`score-${modId}`);
   if (scoreEl) {
     scoreEl.textContent = newScore;
-    scoreEl.className = scoreClass(newScore) + " bump";
+    scoreEl.className = `score-val ${scoreClass(newScore)} bump`;
     setTimeout(() => scoreEl.classList.remove("bump"), 320);
   }
 
-  syncModalScore(modId);
-  syncModalVoteButtons();
+  // Actualizar botones de tarjeta
+  updateCardBtnsState(modId, newMyVote);
+
+  // Actualizar modal si está abierto en este mod
+  refreshModalScore(modId);
+  refreshModalButtons();
+
   updateStatsBar();
 
-  upBtn.disabled = dnBtn.disabled = true;
-
+  // Enviar al servidor
   try {
     await fetch(APPS_SCRIPT_URL, {
-      method: "POST", mode: "no-cors",
+      method:  "POST",
+      mode:    "no-cors",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: modId, delta, token: currentUser.token }),
+      body:    JSON.stringify({ id: modId, delta, token: currentUser.token }),
     });
-  } catch (e) { console.warn("[Distopia2] Error enviando voto:", e.message); }
+  } catch (e) {
+    console.warn("[Distopia2] Error enviando voto:", e.message);
+  }
 
-  setTimeout(() => { if (upBtn) upBtn.disabled = false; if (dnBtn) dnBtn.disabled = false; }, 2500);
+  // Liberar bloqueo tras 1.5 s (suficiente para evitar doble click rápido)
+  setTimeout(() => votingLocked.delete(modId), 1500);
+}
+
+// Aplica la clase active a los botones de una tarjeta concreta
+function updateCardBtnsState(modId, myVote) {
+  const upBtn = document.getElementById(`up-${modId}`);
+  const dnBtn = document.getElementById(`dn-${modId}`);
+  if (!upBtn || !dnBtn) return;
+  upBtn.classList.toggle("active", myVote === 1);
+  dnBtn.classList.toggle("active", myVote === -1);
 }
 
 // ══════════════════════════════════════════════════════════════
 //  MODAL DE DETALLE
 // ══════════════════════════════════════════════════════════════
-let currentModalMod = null, carouselIdx = 0, touchStartX = 0;
+let currentModalMod = null;
+let carouselIdx = 0, touchStartX = 0;
 
 function initModal() {
-  const overlay  = document.getElementById("modal-overlay");
-  const closeBtn = document.getElementById("modal-close");
-  const prevBtn  = document.getElementById("carousel-prev");
-  const nextBtn  = document.getElementById("carousel-next");
-  const track    = document.getElementById("modal-carousel-track");
-  const upBtn    = document.getElementById("modal-upvote-btn");
-  const dnBtn    = document.getElementById("modal-downvote-btn");
+  const overlay = document.getElementById("modal-overlay");
+  const closeBtn= document.getElementById("modal-close");
+  const prevBtn = document.getElementById("carousel-prev");
+  const nextBtn = document.getElementById("carousel-next");
+  const track   = document.getElementById("modal-carousel-track");
+  const upBtn   = document.getElementById("modal-upvote-btn");
+  const dnBtn   = document.getElementById("modal-downvote-btn");
 
-  if (!overlay || !closeBtn || !track) { console.warn("[Distopia2] Modal: elementos no encontrados"); return; }
+  if (!overlay || !closeBtn) return;
 
   closeBtn.addEventListener("click", closeModal);
   overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
@@ -618,21 +479,24 @@ function initModal() {
     if (e.key === "ArrowLeft")  carouselGo(carouselIdx - 1);
     if (e.key === "ArrowRight") carouselGo(carouselIdx + 1);
   });
+
   prevBtn?.addEventListener("click", () => carouselGo(carouselIdx - 1));
   nextBtn?.addEventListener("click", () => carouselGo(carouselIdx + 1));
 
-  track.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener("touchend",   e => {
+  track?.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track?.addEventListener("touchend",   e => {
     const dx = touchStartX - e.changedTouches[0].clientX;
     if (Math.abs(dx) > 40) carouselGo(carouselIdx + (dx > 0 ? 1 : -1));
   });
 
+  // Botones de voto en modal — llaman directamente a handleVote
   upBtn?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, 1); });
   dnBtn?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, -1); });
 }
 
 function openModal(mod) {
   currentModalMod = mod; carouselIdx = 0;
+
   const overlay = document.getElementById("modal-overlay");
   const track   = document.getElementById("modal-carousel-track");
   const dots    = document.getElementById("carousel-dots");
@@ -641,25 +505,22 @@ function openModal(mod) {
   const nextBtn = document.getElementById("carousel-next");
   if (!overlay || !track) return;
 
-  // Tags
-  const tagsEl = document.getElementById("modal-tags");
-  if (tagsEl) tagsEl.innerHTML = `<span class="modal-tag type-mod">MOD</span>`;
-
+  // Rellenar contenido
   document.getElementById("modal-mod-name").textContent = mod.name;
   document.getElementById("modal-description").innerHTML =
     (mod.paragraphs || []).map(p => `<p>${escapeHtml(p)}</p>`).join("");
 
-  // Carrusel
+  // Galería
   track.innerHTML = ""; if (dots) dots.innerHTML = "";
   (mod.images || []).forEach((src, i) => {
-    const slide = document.createElement("div"); slide.className = "carousel-slide";
+    const slide = document.createElement("div"); slide.className = "gallery-slide";
     const img = document.createElement("img");
     img.src = src; img.alt = `${mod.name} ${i + 1}`; img.loading = "lazy";
-    img.onerror = () => { img.src = `https://placehold.co/800x450/07001a/6b5485?text=Sin+imagen`; };
+    img.onerror = () => { img.src = `https://placehold.co/800x450/0d0d18/5e5575?text=Sin+imagen`; };
     slide.appendChild(img); track.appendChild(slide);
     if (dots && (mod.images || []).length > 1) {
       const dot = document.createElement("button");
-      dot.className = `carousel-dot${i === 0 ? " active" : ""}`;
+      dot.className = `gallery-dot${i === 0 ? " active" : ""}`;
       dot.setAttribute("aria-label", `Imagen ${i + 1}`);
       dot.addEventListener("click", () => carouselGo(i));
       dots.appendChild(dot);
@@ -672,8 +533,8 @@ function openModal(mod) {
   if (!multi && dots) dots.innerHTML = "";
   if (counter) counter.textContent = multi ? `1 / ${mod.images.length}` : "";
 
-  syncModalScore(mod.id);
-  syncModalVoteButtons();
+  refreshModalScore(mod.id);
+  refreshModalButtons();
 
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
@@ -691,42 +552,83 @@ function carouselGo(idx) {
   if (imgs.length <= 1) return;
   carouselIdx = ((idx % imgs.length) + imgs.length) % imgs.length;
   const track   = document.getElementById("modal-carousel-track");
-  const dots    = document.getElementById("carousel-dots");
   const counter = document.getElementById("carousel-counter");
+  const dots    = document.getElementById("carousel-dots");
   if (track) track.style.transform = `translateX(-${carouselIdx * 100}%)`;
   if (counter) counter.textContent = `${carouselIdx + 1} / ${imgs.length}`;
-  dots?.querySelectorAll(".carousel-dot").forEach((d, i) => d.classList.toggle("active", i === carouselIdx));
+  dots?.querySelectorAll(".gallery-dot").forEach((d, i) => d.classList.toggle("active", i === carouselIdx));
 }
 
-function syncModalScore(modId) {
+// Actualiza el marcador en el modal para un mod concreto
+function refreshModalScore(modId) {
   if (!currentModalMod || currentModalMod.id !== modId) return;
-  const score  = localVotes[modId] ?? 0;
+  const score   = localVotes[modId] ?? 0;
   const scoreEl = document.getElementById("modal-vote-score");
-  if (scoreEl) { scoreEl.textContent = score; scoreEl.className = `modal-score-value${score > 0 ? " positive" : score < 0 ? " negative" : ""}`; }
+  if (scoreEl) {
+    scoreEl.textContent = score;
+    scoreEl.className = `modal-score-number${score > 0 ? " pos" : score < 0 ? " neg" : ""}`;
+  }
 }
 
-function syncModalVoteButtons() {
+// Actualiza el estado active de los botones del modal
+function refreshModalButtons() {
   if (!currentModalMod) return;
   const modId  = currentModalMod.id;
   const myVote = userVotes[modId] ?? 0;
   const upBtn  = document.getElementById("modal-upvote-btn");
   const dnBtn  = document.getElementById("modal-downvote-btn");
-  upBtn?.classList.toggle("active", myVote === 1);
-  dnBtn?.classList.toggle("active", myVote === -1);
+  const actions= document.getElementById("modal-actions");
+
+  if (!upBtn || !dnBtn) return;
+
+  if (!currentUser) {
+    // Sin login: ocultar o deshabilitar botones del modal
+    if (actions) {
+      actions.innerHTML = `<p style="font-size:.82rem;color:var(--text-3);">
+        <a href="#" onclick="triggerLogin();return false;" style="color:var(--accent);font-weight:600;text-decoration:none;">
+          Inicia sesión
+        </a> para votar este mod
+      </p>`;
+    }
+    return;
+  }
+
+  // Con login: restaurar botones si se habían eliminado
+  if (!document.getElementById("modal-upvote-btn")) {
+    if (actions) {
+      actions.innerHTML = `
+        <button class="action-btn support" id="modal-upvote-btn" aria-label="Apoyar este mod">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+          Apoyar
+        </button>
+        <button class="action-btn reject" id="modal-downvote-btn" aria-label="Rechazar este mod">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          Rechazar
+        </button>`;
+      document.getElementById("modal-upvote-btn")?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, 1); });
+      document.getElementById("modal-downvote-btn")?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, -1); });
+    }
+  }
+
+  // Actualizar estado active
+  document.getElementById("modal-upvote-btn")?.classList.toggle("active", myVote === 1);
+  document.getElementById("modal-downvote-btn")?.classList.toggle("active", myVote === -1);
 }
 
 // ══════════════════════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════════════════════
+function scoreClass(s) { return s > 0 ? "pos" : s < 0 ? "neg" : ""; }
+
 function updateStatsBar() {
   if (!modData) return;
   const totalMods  = modData.sections.reduce((a, s) => a + s.mods.length, 0);
-  const totalVotes = Object.values(localVotes).reduce((a, b) => a + Math.abs(b), 0);
+  const totalVotes = Object.values(localVotes).reduce((a, v) => a + Math.abs(v), 0);
   const sm = document.getElementById("stat-mods");
   const sv = document.getElementById("stat-votes");
   const ss = document.getElementById("stat-sections");
   if (sm) sm.innerHTML = `📦 <strong>${totalMods}</strong> mods`;
-  if (sv) sv.innerHTML = `🗳️ <strong>${totalVotes}</strong> votos`;
+  if (sv) sv.innerHTML = `🗳 <strong>${totalVotes}</strong> votos`;
   if (ss) ss.innerHTML = `📂 <strong>${modData.sections.length}</strong> secciones`;
 }
 
@@ -734,7 +636,7 @@ function hideLoading() { document.getElementById("loading-screen")?.remove(); }
 
 function showErrorState(err) {
   const app = document.getElementById("app");
-  app.innerHTML = `<div class="error-state"><h2>⚠️ Error al cargar</h2><p>Revisa la consola (F12) para más detalles.</p><pre>${escapeHtml(String(err))}</pre></div>`;
+  app.innerHTML = `<div class="error-state"><h2>⚠️ Error al cargar</h2><p>Revisa la consola (F12).</p><pre>${escapeHtml(String(err))}</pre></div>`;
 }
 
 let toastTimer = null;
@@ -750,5 +652,5 @@ function escapeHtml(s) {
           .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 }
 
-// ── Arranque ─────────────────────────────────────────────────
+// ── Arranque ──────────────────────────────────────────────────
 init();

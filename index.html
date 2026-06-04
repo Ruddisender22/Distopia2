@@ -3,139 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sistema de votaciones oficial del modpack Distopia 2. Vota los mods que quieres ver en el servidor.">
-    <meta property="og:title" content="Votaciones · Distopia 2">
-    <meta property="og:description" content="Vota los mods de Distopia 2. Tu opinión cuenta.">
-    <meta property="og:image" content="Recursos/distopia logo fixed 2.png">
+    <meta name="description" content="Sistema de votaciones del modpack Distopia 2. Inicia sesión y vota los mods que quieres ver en el servidor.">
     <title>Votaciones · Distopia 2</title>
 
     <link rel="icon" type="image/png" href="Recursos/distopia logo resized.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Identity Services -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
-    <!-- ══ CANVAS FONDO ══ -->
-    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <!-- ══ AUTH CORNER — un único botón/chip ══ -->
+    <div class="auth-corner" id="auth-corner">
+        <!-- Estado: NO logueado — botón personalizado que dispara GIS -->
+        <button class="auth-login-btn" id="login-btn" aria-label="Iniciar sesión con Google">
+            <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            <span>Iniciar sesión</span>
+        </button>
 
-    <!-- ══ AUTH CORNER (esquina fija top-right) ══ -->
-    <div class="auth-corner" id="auth-corner" aria-label="Autenticación">
-        <!-- No logueado -->
-        <div id="login-corner" class="corner-login" title="Iniciar sesión con Google">
-            <div id="google-login-btn"></div>
-            <button class="corner-login-fallback" id="corner-login-fallback" aria-label="Iniciar sesión con Google" hidden>
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-                <span>Iniciar sesión</span>
-            </button>
-        </div>
-        <!-- Logueado -->
-        <div id="user-corner" class="corner-user" hidden>
-            <img id="user-avatar" src="" alt="Avatar" class="corner-avatar">
-            <div class="corner-user-info">
-                <span class="corner-name" id="user-name-corner"></span>
-                <span class="corner-email" id="user-email-corner"></span>
+        <!-- Estado: logueado — chip de usuario (oculto por defecto) -->
+        <div class="auth-user-chip" id="user-chip" hidden>
+            <img id="user-avatar" class="chip-avatar" src="" alt="">
+            <div class="chip-info">
+                <span class="chip-name"  id="user-name"></span>
+                <span class="chip-email" id="user-email"></span>
             </div>
-            <button class="corner-logout" id="logout-btn" aria-label="Cerrar sesión" title="Cerrar sesión">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+            <button class="chip-logout" id="logout-btn" aria-label="Cerrar sesión" title="Cerrar sesión">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
             </button>
         </div>
     </div>
 
     <!-- ══ HEADER ══ -->
-    <header class="site-header" role="banner">
-        <div class="header-glow" aria-hidden="true"></div>
+    <header class="site-header">
         <div class="header-inner">
-            <div class="header-logo-wrap">
-                <img
-                    src="Recursos/distopia logo fixed 2.png"
-                    alt="Distopia 2"
-                    class="header-logo"
-                    onerror="this.src='Recursos/DISTOPIA-22-12-2024 (1).png'"
-                >
-            </div>
-            <div class="header-text-block">
-                <h1 class="header-title">VOTACIONES DE MODS</h1>
-                <p class="header-server">✦ DISTOPIA 2 · MODPACK MINECRAFT ✦</p>
-                <p class="header-subtitle">
-                    Selecciona qué mods quieres ver en el servidor. Cada jugador puede apoyar o rechazar cada mod —
-                    los resultados ayudarán a definir el modpack final.
-                </p>
-            </div>
+            <img
+                src="Recursos/DISTOPIA-22-12-2024_nobackground.png"
+                alt="Distopia 2"
+                class="header-logo"
+                onerror="this.src='Recursos/distopia logo fixed 2.png'"
+            >
+            <p class="header-eyebrow">Modpack Minecraft · Temporada 2</p>
+            <h1 class="header-title">Votaciones de Mods</h1>
+            <p class="header-subtitle">
+                Dinos qué mods quieres en el servidor. Cada jugador tiene un voto por mod —
+                apoya los que te gustan o descarta los que no.
+            </p>
         </div>
-
-        <!-- Separador decorativo -->
-        <div class="header-divider" aria-hidden="true">
-            <div class="divider-line"></div>
-            <div class="divider-diamond">◆</div>
-            <div class="divider-line"></div>
-        </div>
+        <div class="header-rule"></div>
     </header>
 
     <!-- ══ STATS BAR ══ -->
-    <div class="stats-bar" id="stats-bar" aria-live="polite">
+    <nav class="stats-bar" aria-label="Estadísticas globales">
         <div class="stats-inner">
-            <span id="stat-mods"     class="stat-badge">📦 Cargando…</span>
-            <span id="stat-votes"    class="stat-badge votes-badge">🗳️ —</span>
-            <span id="stat-sections" class="stat-badge sections-badge">📂 —</span>
-            <span class="stats-spacer"></span>
-            <span class="stat-hint" id="stat-login-hint">🔐 Inicia sesión para votar</span>
+            <span id="stat-mods"     class="stat-chip">📦 Cargando…</span>
+            <span id="stat-votes"    class="stat-chip">🗳 —</span>
+            <span id="stat-sections" class="stat-chip">📂 —</span>
+            <span class="stats-flex"></span>
+            <span class="stat-hint" id="stat-hint">Inicia sesión para votar</span>
         </div>
-    </div>
+    </nav>
 
-    <!-- ══ APP ══ -->
-    <main id="app" role="main" aria-label="Mods para votar">
-        <div class="loading-screen" id="loading-screen" aria-busy="true">
-            <div class="loading-cubes" aria-hidden="true">
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-            </div>
-            <p class="loading-text">Cargando el modpack…</p>
+    <!-- ══ CONTENIDO ══ -->
+    <main id="app" role="main">
+        <div class="loading-state" id="loading-screen">
+            <div class="spinner" aria-label="Cargando"></div>
+            <p>Cargando modpack…</p>
         </div>
     </main>
 
-    <!-- ══ MODAL DE DETALLE ══ -->
-    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Detalle del mod" hidden>
-        <div class="modal-panel" id="modal-panel" tabindex="-1">
-            <button class="modal-close" id="modal-close" aria-label="Cerrar">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <!-- ══ MODAL ══ -->
+    <div class="modal-backdrop" id="modal-overlay" hidden role="dialog" aria-modal="true" aria-label="Detalle del mod">
+        <div class="modal-sheet" id="modal-panel" tabindex="-1">
+            <button class="modal-close-btn" id="modal-close" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
 
             <!-- Carrusel -->
-            <div class="modal-carousel" id="modal-carousel">
-                <div class="modal-carousel-track" id="modal-carousel-track"></div>
-                <button class="carousel-nav prev" id="carousel-prev" aria-label="Anterior">‹</button>
-                <button class="carousel-nav next" id="carousel-next" aria-label="Siguiente">›</button>
-                <div class="carousel-dots" id="carousel-dots"></div>
-                <div class="carousel-counter" id="carousel-counter"></div>
+            <div class="modal-gallery" id="modal-carousel">
+                <div class="gallery-track" id="modal-carousel-track"></div>
+                <button class="gallery-nav prev" id="carousel-prev" aria-label="Anterior">‹</button>
+                <button class="gallery-nav next" id="carousel-next" aria-label="Siguiente">›</button>
+                <div class="gallery-dots" id="carousel-dots"></div>
+                <div class="gallery-counter" id="carousel-counter"></div>
             </div>
 
-            <!-- Info -->
-            <div class="modal-body">
-                <div class="modal-top-row">
+            <!-- Detalle -->
+            <div class="modal-content">
+                <div class="modal-meta-row">
                     <div>
-                        <div class="modal-tags" id="modal-tags"></div>
-                        <h2 class="modal-mod-name" id="modal-mod-name"></h2>
+                        <p class="modal-eyebrow">Mod · Distopia 2</p>
+                        <h2 class="modal-title" id="modal-mod-name"></h2>
                     </div>
-                    <div class="modal-score-big" id="modal-score-big">
-                        <span class="modal-score-value" id="modal-vote-score">0</span>
+                    <div class="modal-score-card">
+                        <span class="modal-score-number" id="modal-vote-score">0</span>
                         <span class="modal-score-label">puntos</span>
                     </div>
                 </div>
-                <div class="modal-description" id="modal-description"></div>
-                <div class="modal-vote-row" id="modal-vote-row">
-                    <button class="modal-vote-btn upvote" id="modal-upvote-btn" aria-label="Votar positivo">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-                        Apoyar este mod
+
+                <div class="modal-desc" id="modal-description"></div>
+
+                <!-- Acciones de voto -->
+                <div class="modal-actions" id="modal-actions">
+                    <button class="action-btn support"  id="modal-upvote-btn"   aria-label="Apoyar este mod">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        Apoyar
                     </button>
-                    <button class="modal-vote-btn downvote" id="modal-downvote-btn" aria-label="Votar negativo">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-                        Rechazar este mod
+                    <button class="action-btn reject"   id="modal-downvote-btn" aria-label="Rechazar este mod">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        Rechazar
                     </button>
                 </div>
             </div>
@@ -143,27 +127,16 @@
     </div>
 
     <!-- ══ TOAST ══ -->
-    <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <!-- ══ FOOTER ══ -->
-    <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer">
         <div class="footer-inner">
-            <div class="footer-logo-group">
-                <img src="Recursos/distopia logo resized.png" alt="Distopia" class="footer-logo">
-                <div>
-                    <p class="footer-title">Distopia 2</p>
-                    <p class="footer-sub">Modpack Minecraft · Sistema de Votaciones</p>
-                </div>
-            </div>
-            <div class="footer-credits">
-                <p>Hecho con <span class="footer-heart">♥</span> por
-                    <a href="https://github.com/Ruddisender22" target="_blank" rel="noopener noreferrer" class="footer-link">
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        Ruddisender22
-                    </a>
-                </p>
-                <p class="footer-version">v3.0 · 2025</p>
-            </div>
+            <p class="footer-brand">Distopia 2 · Modpack Minecraft</p>
+            <p class="footer-credit">
+                Hecho por
+                <a href="https://github.com/Ruddisender22" target="_blank" rel="noopener noreferrer" class="footer-link">Ruddisender22</a>
+            </p>
         </div>
     </footer>
 

@@ -1,6 +1,12 @@
 // REEMPLAZA ESTO POR TU URL REAL
 // Añadimos el prefijo del proxy de CORS
-const SHEET_URL = "https://corsproxy.io/?" + encodeURIComponent("https://script.google.com/macros/s/AKfycbyTn0kvhWm6Jk-qQAHg__HSaZ8D5C5cb_EFEcUjWLXH3EafZGxz7ymrxgYCZBupkP_8/exec");
+// 1. Aquí pega tu URL real (la que empieza por https://script.google.com/...)
+const REAL_URL = "https://script.google.com/macros/s/AKfycbyTn0kvhWm6Jk-qQAHg__HSaZ8D5C5cb_EFEcUjWLXH3EafZGxz7ymrxgYCZBupkP_8/exec"; 
+
+// 2. Esta línea usa el proxy para saltarse el error de seguridad (CORS)
+const SHEET_URL = "https://corsproxy.io/?" + encodeURIComponent(REAL_URL);
+
+// El resto de tu código init() se queda igual...
 
 async function init() {
     try {

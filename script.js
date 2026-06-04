@@ -8,7 +8,7 @@
 
 // ─── CONFIG ─────────────────────────────────────────────────────
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzvKM00NP_Ise1FRdubQY6TY6EhFIAeNLV3-Z3Omas4PcY6WZRLS3Bt9MJzMb8n3zU/exec";
+  "https://script.google.com/macros/s/AKfycbxrSAX-G-RsOJrvjyStydqKd36SEiSg_NEKoSmx4lt9B7Tv-QnNOc4ClvberNYj0GsI/exec";
 
 const GET_URL = "https://corsproxy.io/?" + encodeURIComponent(APPS_SCRIPT_URL);
 

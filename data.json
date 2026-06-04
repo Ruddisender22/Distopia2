@@ -6,9 +6,9 @@
         {
           "id": "create",
           "name": "Create",
-          "images": ["url_1.jpg", "url_2.jpg"],
-          "paragraphs": ["Primer párrafo de descripción...", "Segundo párrafo de contexto."],
-          "votes": 0 
+          "images": ["url_imagen1.jpg"],
+          "paragraphs": ["El mod principal de nuestra automatización.", "Añade cintas, motores y trenes."],
+          "votes": 0
         }
       ]
     }

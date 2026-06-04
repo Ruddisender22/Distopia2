@@ -4,6 +4,15 @@
    Mobile-First · Neon Accents · Aurora Background
    ================================================================ */
 
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/files/minecraft.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/files/minecraft.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── Reset & Tokens ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 /* CRITICAL: [hidden] must always win over CSS display rules on modals */
@@ -53,9 +62,9 @@
   --r-pill: 999px;
 
   /* ── Typography ── */
-  --font-body: 'Minecraft', 'Inter', system-ui, sans-serif;
-  --font-head: 'Minecraft', 'Space Grotesk', system-ui, sans-serif;
-  --font-mc:   'Minecraft', monospace;
+  --font-body: 'Minecraftia', 'Inter', system-ui, sans-serif;
+  --font-head: 'Minecraftia', 'Space Grotesk', system-ui, sans-serif;
+  --font-mc:   'Minecraftia', monospace;
 
   /* ── Blur ── */
   --blur-sm: blur(12px);
@@ -71,6 +80,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.04em;
+  word-spacing: 0.15em;
+  line-height: 1.65;
 }
 
 /* ── Canvas background ──────────────────────────────────────── */

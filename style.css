@@ -464,8 +464,8 @@ body {
 }
 .mod-name {
   font-family: var(--font-head);
-  font-size: 0.92rem; font-weight: 700; color: var(--t1);
-  line-height: 1.25; letter-spacing: -0.02em; flex: 1;
+  font-size: 1.15rem; font-weight: 800; color: var(--t1);
+  line-height: 1.2; letter-spacing: -0.03em; flex: 1;
   cursor: pointer; transition: color 0.18s;
 }
 .mod-name:hover { color: var(--violet); }
@@ -477,7 +477,7 @@ body {
   letter-spacing: 0.12em; text-transform: uppercase; flex-shrink: 0;
 }
 .mod-excerpt {
-  font-size: 0.7rem; line-height: 1.55; color: var(--t3);
+  font-size: 0.85rem; line-height: 1.5; color: var(--t3);
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
   overflow: hidden; margin-bottom: 0.7rem;
 }
@@ -587,9 +587,9 @@ body {
 .modal-sheet {
   position: relative; width: 96%; max-width: 1500px; height: 92vh; max-height: 92vh;
   background: linear-gradient(145deg, rgba(10,6,28,0.95), rgba(6,4,18,0.97));
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: var(--r-2xl);
-  box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 60px rgba(167,139,250,0.15), inset 0 1px 1px rgba(255,255,255,0.25), inset 0 0 30px rgba(167,139,250,0.08);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.85), 0 0 80px rgba(167,139,250,0.25), inset 0 2px 3px rgba(255,255,255,0.4), inset 0 0 40px rgba(255,255,255,0.1);
   overflow: hidden; display: flex; flex-direction: column;
   animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
 }
@@ -612,11 +612,11 @@ body {
 .modal-left {
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-right: 1px solid rgba(255,255,255,0.25);
-  box-shadow: 15px 0 40px rgba(0,0,0,0.6), inset -1px 0 10px rgba(255,255,255,0.05);
+  border-right: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 15px 0 40px rgba(0,0,0,0.6), inset -1px 0 15px rgba(255,255,255,0.15);
   z-index: 5;
   overflow-y: auto; position: relative;
-  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.2) transparent;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.25) transparent;
 }
 .modal-left::-webkit-scrollbar { width: 3px; }
 .modal-left::-webkit-scrollbar-thumb { background: var(--border-h); border-radius: 2px; }
@@ -628,9 +628,15 @@ body {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 900;
   letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1.2rem;
-  background: linear-gradient(110deg, #ffffff 0%, #c4b5fd 50%, #67e8f9 100%);
+  background: linear-gradient(110deg, #ffffff 0%, #c4b5fd 35%, #67e8f9 65%, #ffffff 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientTitle 3.5s linear infinite;
+  filter: drop-shadow(0 0 18px rgba(255,255,255,0.3));
+}
+@keyframes gradientTitle {
+  to { background-position: 200% center; }
 }
 .modal-score-row { margin-bottom: 1.1rem; }
 .modal-score-card {

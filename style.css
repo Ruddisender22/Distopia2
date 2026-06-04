@@ -6,6 +6,8 @@
 
 /* ── Reset & Tokens ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* CRITICAL: [hidden] must always win over CSS display rules on modals */
+[hidden] { display: none !important; }
 :root {
   /* ── Dark Palette ── */
   --bg:       #04020e;

@@ -129,10 +129,21 @@ function renderGisModalButton() {
   container.innerHTML = "";
   // Use measured width after element is painted
   const w = Math.min(container.clientWidth || 280, 320);
-  google.accounts.id.renderButton(container, {
-    theme: "filled_black", size: "large", shape: "rectangular",
-    text: "signin_with", width: w,
-  });
+  try {
+    google.accounts.id.renderButton(container, {
+      theme: "filled_black", size: "large", shape: "rectangular",
+      text: "signin_with", width: w,
+    });
+    // If we get here without throwing, show the GIS slot and hide the custom button
+    // (GIS button is more polished when it renders correctly)
+    container.style.display = "block";
+    const customBtn = document.getElementById("auth-google-btn");
+    if (customBtn) customBtn.style.display = "none";
+    console.log("[Distopia2] GIS modal button rendered OK");
+  } catch (e) {
+    console.warn("[Distopia2] GIS renderButton failed, using custom button:", e.message);
+    // Custom button remains visible as fallback
+  }
 }
 
 // ── Called by GIS when login completes (from corner OR modal button) ──
@@ -217,17 +228,25 @@ function openAuthModal() {
   const overlay = document.getElementById("auth-modal-overlay");
   if (!overlay) return;
 
-  // Remove closing class if re-opening quickly
+  // Remove stale animation classes if re-opening quickly
   overlay.classList.remove("closing");
   const sheet = document.getElementById("auth-modal-panel");
   sheet?.classList.remove("auth-modal-closing");
 
+  // Make sure custom button is visible (reset from previous close)
+  const customBtn = document.getElementById("auth-google-btn");
+  if (customBtn) customBtn.style.display = "";
+  const gisContainer = document.getElementById("google-login-btn-modal");
+  if (gisContainer) { gisContainer.style.display = "none"; gisContainer.innerHTML = ""; }
+
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
 
-  // ── LAZY GIS RENDER ──
-  // We do this AFTER the element is visible (has real dimensions).
-  // Double rAF ensures the browser has painted the element.
+  // Wire the custom button (idempotent — remove+add to avoid duplicate listeners)
+  wireCustomGoogleButton();
+
+  // ALSO attempt lazy GIS render as enhancement:
+  // double rAF ensures element is fully painted before GIS measures it
   requestAnimationFrame(() => {
     requestAnimationFrame(renderGisModalButton);
   });
@@ -238,7 +257,6 @@ function closeAuthModal() {
   const sheet   = document.getElementById("auth-modal-panel");
   if (!overlay || overlay.hidden) return;
 
-  // Play fade-out animation, then hide
   overlay.classList.add("closing");
   sheet?.classList.add("auth-modal-closing");
 
@@ -248,10 +266,32 @@ function closeAuthModal() {
     overlay.classList.remove("closing");
     sheet?.classList.remove("auth-modal-closing");
     document.body.style.overflow = "";
-    // Clear GIS container so next open re-renders fresh
+    // Reset GIS container + restore custom button for next open
     const container = document.getElementById("google-login-btn-modal");
-    if (container) container.innerHTML = "";
+    if (container) { container.innerHTML = ""; container.style.display = "none"; }
+    const customBtn = document.getElementById("auth-google-btn");
+    if (customBtn) customBtn.style.display = "";
   }, 260);
+}
+
+// ── Wire custom Google button — calls prompt() which ALWAYS works ──
+let _customBtnWired = false;
+function wireCustomGoogleButton() {
+  const btn = document.getElementById("auth-google-btn");
+  if (!btn) return;
+  // Replace to drop old listeners
+  const fresh = btn.cloneNode(true);
+  btn.parentNode.replaceChild(fresh, btn);
+  fresh.addEventListener("click", () => {
+    if (!gisReady) { showToast("⚠️ Google no disponible. Recarga la página."); return; }
+    // google.accounts.id.prompt() opens Google's account chooser reliably
+    google.accounts.id.prompt(notification => {
+      if (notification.isNotDisplayed()) {
+        // One-Tap suppressed — try the corner button as fallback
+        showToast("⚠️ Usa el botón de Google de la esquina si no abre el selector");
+      }
+    });
+  });
 }
 
 function initAuthModal() {

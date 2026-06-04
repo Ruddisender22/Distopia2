@@ -1,9 +1,11 @@
 /* ================================================================
-   DISTOPIA 2 — script.js v6
-   · Fondo: blobs flotantes estilo iOS/macOS Sonoma (canvas)
-   · Login: GIS renderButton sobre overlay → siempre funciona
-   · Votos: JWT decodificado sin verificación estricta (funcional)
-   · Modal: retirar / cambiar voto sin cerrar
+   DISTOPIA 2 — script.js v7
+   · Aurora background blobs
+   · Login: GIS renderButton overlay
+   · Horizontal sliders per category with counter + nav
+   · Bento grid modal (desktop) / bottom sheet + carousel (mobile)
+   · Vote: localStorage persistence + server sync
+   · Particle disintegration badge + screen shake + card tint
    ================================================================ */
 
 // ─── CONFIG ────────────────────────────────────────────────────
@@ -12,20 +14,18 @@ const GOOGLE_CLIENT_ID =
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbz2RtSxsb_HwurxvKLSXaz2wLin50Wf2Wx2L8y2FIl7r-mMdTh1rklIER9mnTb-Y0I/exec";
-// POST usa corsproxy (sin-cors requiere proxy para leer respuesta)
 const PROXY_POST = "https://corsproxy.io/?";
-// GET usa allorigins que sí sigue los redirects 302 de Google Apps Script
 const PROXY_GET  = "https://api.allorigins.win/raw?url=";
 
 // ─── ESTADO ────────────────────────────────────────────────────
 let localVotes = {};
-let userVotes = {};
-let modData = null;
+let userVotes  = {};
+let modData    = null;
 let currentUser = null;
 const votingLocked = new Set();
-let userVotesReady = false; // evita votos duplicados mientras carga
+let userVotesReady = false;
 
-// ─── PERSISTENCIA LOCAL DE VOTOS (localStorage) ──────────────────────
+// ─── PERSISTENCIA LOCAL (localStorage) ──────────────────────────
 const LS_PREFIX = 'distopia2_uv_';
 function lsGetVotes(sub) {
   try { const d = localStorage.getItem(LS_PREFIX + sub); return d ? JSON.parse(d) : {}; }
@@ -38,94 +38,70 @@ function lsClearVotes(sub) {
   try { localStorage.removeItem(LS_PREFIX + sub); } catch {}
 }
 
-
 // ══════════════════════════════════════════════════════════════
-//  FONDO — Blobs flotantes (estilo iOS/macOS Sonoma)
+//  AURORA BACKGROUND — Blobs flotantes
 // ══════════════════════════════════════════════════════════════
 function initBlobBg() {
   const canvas = document.getElementById("bg-canvas");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
 
-  // Blobs: posición inicial, radio (relativo), velocidad, HSL, opacidad
   const BLOBS = [
-    { x: 0.22, y: 0.28, r: 0.42, vx: 0.000080, vy: 0.000065, h: 270, s: 80, l: 62, a: 0.32 },
-    { x: 0.78, y: 0.68, r: 0.40, vx: -0.000065, vy: -0.000080, h: 300, s: 78, l: 58, a: 0.26 },
-    { x: 0.50, y: 0.08, r: 0.32, vx: 0.000100, vy: 0.000090, h: 245, s: 75, l: 65, a: 0.22 },
-    { x: 0.12, y: 0.80, r: 0.34, vx: 0.000090, vy: -0.000070, h: 18, s: 82, l: 65, a: 0.20 },
-    { x: 0.88, y: 0.22, r: 0.30, vx: -0.000110, vy: 0.000085, h: 200, s: 72, l: 60, a: 0.19 },
-    { x: 0.62, y: 0.88, r: 0.28, vx: -0.000075, vy: -0.000095, h: 330, s: 76, l: 68, a: 0.18 },
-    { x: 0.35, y: 0.55, r: 0.22, vx: 0.000060, vy: 0.000110, h: 260, s: 70, l: 70, a: 0.14 },
+    { x:0.18, y:0.22, r:0.48, vx:0.000075, vy:0.000060, h:268, s:75, l:58, a:0.28 },
+    { x:0.82, y:0.72, r:0.44, vx:-0.000060, vy:-0.000075, h:298, s:72, l:55, a:0.22 },
+    { x:0.50, y:0.05, r:0.36, vx:0.000095, vy:0.000085, h:200, s:80, l:62, a:0.18 },
+    { x:0.08, y:0.78, r:0.32, vx:0.000085, vy:-0.000065, h:20,  s:78, l:62, a:0.16 },
+    { x:0.90, y:0.18, r:0.28, vx:-0.000100, vy:0.000080, h:185, s:70, l:58, a:0.15 },
+    { x:0.60, y:0.90, r:0.30, vx:-0.000070, vy:-0.000090, h:330, s:72, l:65, a:0.14 },
+    { x:0.32, y:0.52, r:0.22, vx:0.000055, vy:0.000105, h:255, s:68, l:68, a:0.12 },
   ];
 
   let W = 0, H = 0;
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-  window.addEventListener("resize", resize);
-  resize();
+  window.addEventListener("resize", resize); resize();
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
     const R = Math.min(W, H);
-
     BLOBS.forEach(b => {
-      // Mover
       b.x += b.vx; b.y += b.vy;
-      // Rebote suave en bordes
-      if (b.x < 0.1) b.vx = Math.abs(b.vx);
-      if (b.x > 0.9) b.vx = -Math.abs(b.vx);
-      if (b.y < 0.05) b.vy = Math.abs(b.vy);
-      if (b.y > 0.95) b.vy = -Math.abs(b.vy);
-
-      const cx = b.x * W, cy = b.y * H, radius = b.r * R;
-      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
-      grad.addColorStop(0, `hsla(${b.h},${b.s}%,${b.l}%,${b.a})`);
-      grad.addColorStop(0.45, `hsla(${b.h},${b.s}%,${b.l}%,${(b.a * 0.55).toFixed(3)})`);
-      grad.addColorStop(1, `hsla(${b.h},${b.s}%,${b.l}%,0)`);
-
-      ctx.beginPath();
-      ctx.arc(cx, cy, radius, 0, Math.PI * 2);
-      ctx.fillStyle = grad;
-      ctx.fill();
+      if (b.x < 0.05) b.vx = Math.abs(b.vx);
+      if (b.x > 0.95) b.vx = -Math.abs(b.vx);
+      if (b.y < 0.02) b.vy = Math.abs(b.vy);
+      if (b.y > 0.98) b.vy = -Math.abs(b.vy);
+      const cx = b.x*W, cy = b.y*H, radius = b.r*R;
+      const g = ctx.createRadialGradient(cx,cy,0,cx,cy,radius);
+      g.addColorStop(0, `hsla(${b.h},${b.s}%,${b.l}%,${b.a})`);
+      g.addColorStop(0.4, `hsla(${b.h},${b.s}%,${b.l}%,${(b.a*0.5).toFixed(3)})`);
+      g.addColorStop(1, `hsla(${b.h},${b.s}%,${b.l}%,0)`);
+      ctx.beginPath(); ctx.arc(cx,cy,radius,0,Math.PI*2);
+      ctx.fillStyle = g; ctx.fill();
     });
-
     requestAnimationFrame(draw);
   }
   draw();
 }
 
 // ══════════════════════════════════════════════════════════════
-//  GOOGLE SIGN-IN — renderButton sobre overlay (siempre funciona)
+//  GOOGLE SIGN-IN
 // ══════════════════════════════════════════════════════════════
 function waitForGis() {
-  if (typeof google !== "undefined" && google.accounts) {
-    initGIS();
-  } else {
-    setTimeout(waitForGis, 200);
-  }
+  if (typeof google !== "undefined" && google.accounts) initGIS();
+  else setTimeout(waitForGis, 200);
 }
 
 function initGIS() {
   google.accounts.id.initialize({
     client_id: GOOGLE_CLIENT_ID,
     callback: handleCredentialResponse,
-    auto_select: false,   // no intentar sin interacción (menos errores)
-    cancel_on_tap_outside: false,
-    itp_support: true,
+    auto_select: false,
   });
-
-  // Renderizar el botón oficial de Google DENTRO del overlay invisible
-  const container = document.getElementById("google-login-btn");
-  if (container) {
-    google.accounts.id.renderButton(container, {
-      theme: "filled_black",
-      size: "large",
-      text: "signin_with",
-      width: 280,
-    });
-  }
+  google.accounts.id.renderButton(
+    document.getElementById("google-login-btn"),
+    { theme:"filled_black", size:"large", shape:"pill", text:"signin_with", width:200 }
+  );
 }
 
-// Callback cuando el usuario completa el Sign-In
 function handleCredentialResponse(response) {
   const payload = parseJWT(response.credential);
   if (!payload) { showToast("⚠️ Error al procesar el token"); return; }
@@ -139,14 +115,13 @@ function handleCredentialResponse(response) {
     exp: payload.exp,
   };
 
-  // Cargamos votos guardados localmente — instantáneo, sin esperar al servidor
+  // Cargamos caché local inmediatamente
   const cached = lsGetVotes(currentUser.sub);
-  const hasCached = Object.keys(cached).length > 0;
-  if (hasCached) {
+  if (Object.keys(cached).length > 0) {
     userVotes = cached;
-    userVotesReady = true; // ya tenemos datos, habilitamos votos
+    userVotesReady = true;
   } else {
-    userVotesReady = false; // sin caché, esperamos al servidor
+    userVotesReady = false;
   }
 
   updateAuthUI(true);
@@ -154,7 +129,7 @@ function handleCredentialResponse(response) {
   refreshModalButtons();
   document.getElementById("stat-hint")?.classList.add("hidden");
   showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
-  loadUserVotesFromServer(); // sincroniza con servidor (actualiza/corrige localStorage)
+  loadUserVotesFromServer();
 }
 
 function logout() {
@@ -169,28 +144,27 @@ function logout() {
 
 function updateAuthUI(loggedIn) {
   const wrapperEl = document.getElementById("login-wrapper");
-  const chipEl = document.getElementById("user-chip");
-  const nameEl = document.getElementById("user-name");
-  const emailEl = document.getElementById("user-email");
-  const avatarEl = document.getElementById("user-avatar");
-
+  const chipEl    = document.getElementById("user-chip");
+  const nameEl    = document.getElementById("user-name");
+  const emailEl   = document.getElementById("user-email");
+  const avatarEl  = document.getElementById("user-avatar");
   if (loggedIn && currentUser) {
-    wrapperEl?.setAttribute("hidden", "");
+    wrapperEl?.setAttribute("hidden","");
     chipEl?.removeAttribute("hidden");
-    if (nameEl) nameEl.textContent = currentUser.name;
+    if (nameEl)  nameEl.textContent  = currentUser.name;
     if (emailEl) emailEl.textContent = currentUser.email;
     if (avatarEl && currentUser.picture) { avatarEl.src = currentUser.picture; avatarEl.alt = currentUser.name; }
   } else {
     wrapperEl?.removeAttribute("hidden");
-    chipEl?.setAttribute("hidden", "");
+    chipEl?.setAttribute("hidden","");
   }
 }
 
 function parseJWT(token) {
   try {
-    const b64 = token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/");
+    const b64 = token.split(".")[1].replace(/-/g,"+").replace(/_/g,"/");
     return JSON.parse(decodeURIComponent(
-      atob(b64).split("").map(c => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2)).join("")
+      atob(b64).split("").map(c => "%" + ("00"+c.charCodeAt(0).toString(16)).slice(-2)).join("")
     ));
   } catch { return null; }
 }
@@ -201,7 +175,6 @@ function parseJWT(token) {
 async function init() {
   initBlobBg();
   waitForGis();
-
   document.getElementById("logout-btn")?.addEventListener("click", logout);
 
   try {
@@ -222,52 +195,44 @@ async function init() {
   }
 }
 
-// ── Votos agregados (público) ─────────────────────────────
+// ── Votos agregados (público) ──────────────────────────────────
 async function fetchAggregateVotes() {
   const targetUrl = `${APPS_SCRIPT_URL}?action=getVotes`;
-  // allorigins.win sigue los redirects 302 que hace Google Apps Script
   const urls = [
     PROXY_GET + encodeURIComponent(targetUrl),
-    targetUrl, // fallback directo (CORS error esperado, pero a veces funciona)
+    targetUrl,
   ];
   for (const url of urls) {
     try {
-      const res = await fetch(url, {
-        headers: { Accept: "application/json" },
-        signal: AbortSignal.timeout(10000),
-      });
+      const res = await fetch(url, { headers:{Accept:"application/json"}, signal:AbortSignal.timeout(10000) });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const text = await res.text();
-      const data = JSON.parse(text);
+      const data = JSON.parse(await res.text());
       if (data.error) throw new Error(data.error);
-      console.log("[Distopia2] Votos cargados:", data);
+      console.log("[Distopia2] Votos agregados:", data);
       return data;
     } catch (e) { console.warn("[Distopia2] GET votos:", e.message); }
   }
   return {};
 }
 
-// ── Votos del usuario desde el servidor ──────────────────
+// ── Votos del usuario ──────────────────────────────────────────
 async function loadUserVotesFromServer() {
   if (!currentUser) return;
   try {
-    const params = new URLSearchParams({ action: "getUserVotes", sub: currentUser.sub });
+    const params = new URLSearchParams({ action:"getUserVotes", sub:currentUser.sub });
     const targetUrl = `${APPS_SCRIPT_URL}?${params}`;
     const res = await fetch(PROXY_GET + encodeURIComponent(targetUrl), {
-      headers: { Accept: "application/json" },
+      headers: { Accept:"application/json" },
       signal: AbortSignal.timeout(10000),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const text = await res.text();
-    const data = JSON.parse(text);
+    const data = JSON.parse(await res.text());
     if (data.error) throw new Error(data.error);
-    // El servidor es la fuente de verdad: sobrescribe localStorage
     userVotes = data;
     lsSaveVotes(currentUser.sub, data);
     console.log("[Distopia2] Votos usuario sincronizados:", data);
   } catch (e) {
-    console.warn("[Distopia2] getUserVotes (usar caché local):", e.message);
-    // Si falla el servidor, mantenemos el localStorage que ya cargamos
+    console.warn("[Distopia2] getUserVotes (usando caché):", e.message);
   } finally {
     userVotesReady = true;
     refreshCardStates();
@@ -276,7 +241,7 @@ async function loadUserVotesFromServer() {
 }
 
 // ══════════════════════════════════════════════════════════════
-//  RENDER
+//  RENDER — Horizontal sliders
 // ══════════════════════════════════════════════════════════════
 function renderAll() {
   const app = document.getElementById("app");
@@ -285,46 +250,124 @@ function renderAll() {
 }
 
 function buildSection(section) {
-  const block = document.createElement("div"); block.className = "section-block";
-  // Divisor luminoso antes del header
-  const divider = document.createElement("div"); divider.className = "section-divider";
+  const block = document.createElement("div");
+  block.className = "section-block";
+
+  // Glow divider
+  const divider = document.createElement("div");
+  divider.className = "section-glow-divider";
   block.appendChild(divider);
-  const header = document.createElement("div"); header.className = "section-header";
+
+  // Section header with counter
+  const head = document.createElement("div"); head.className = "section-head";
+  const labelWrap = document.createElement("div"); labelWrap.className = "section-label-wrap";
   const label = document.createElement("h2"); label.className = "section-label"; label.textContent = section.name;
   const tag = document.createElement("span"); tag.className = "section-tag";
-  tag.textContent = `${section.mods.length} mod${section.mods.length !== 1 ? "s" : ""}`;
-  header.appendChild(label); header.appendChild(tag); block.appendChild(header);
-  const grid = document.createElement("div"); grid.className = "mod-grid";
-  section.mods.forEach(mod => grid.appendChild(buildCard(mod)));
-  block.appendChild(grid); return block;
+  tag.textContent = `${section.mods.length} ${section.mods.length !== 1 ? "mods" : "mod"}`;
+  labelWrap.appendChild(label); labelWrap.appendChild(tag);
+
+  const counter = document.createElement("span");
+  counter.className = "section-counter";
+  counter.textContent = `01 / ${String(section.mods.length).padStart(2,"0")}`;
+
+  head.appendChild(labelWrap); head.appendChild(counter);
+  block.appendChild(head);
+
+  // Slider viewport
+  const viewport = document.createElement("div"); viewport.className = "slider-viewport";
+
+  // Nav buttons
+  const prevBtn = document.createElement("button"); prevBtn.className = "slider-nav prev"; prevBtn.innerHTML = "‹"; prevBtn.setAttribute("aria-label","Anterior");
+  const nextBtn = document.createElement("button"); nextBtn.className = "slider-nav next"; nextBtn.innerHTML = "›"; nextBtn.setAttribute("aria-label","Siguiente");
+  viewport.appendChild(prevBtn);
+
+  // Track
+  const track = document.createElement("div"); track.className = "slider-track";
+  section.mods.forEach(mod => track.appendChild(buildCard(mod)));
+  viewport.appendChild(track);
+  viewport.appendChild(nextBtn);
+  block.appendChild(viewport);
+
+  // Dots
+  const dotsWrap = document.createElement("div"); dotsWrap.className = "slider-dots";
+  section.mods.forEach((_, i) => {
+    const dot = document.createElement("button"); dot.className = `sdot${i===0?" active":""}`;
+    dot.setAttribute("aria-label", `Mod ${i+1}`);
+    dotsWrap.appendChild(dot);
+  });
+  block.appendChild(dotsWrap);
+
+  // Slider logic
+  let currentIdx = 0;
+  const CARD_W = () => {
+    const c = track.querySelector(".mod-card");
+    if (!c) return 290;
+    return c.offsetWidth + parseInt(getComputedStyle(track).gap || "20");
+  };
+
+  function scrollTo(idx) {
+    const n = section.mods.length;
+    currentIdx = Math.max(0, Math.min(idx, n - 1));
+    track.scrollTo({ left: currentIdx * CARD_W(), behavior: "smooth" });
+    counter.textContent = `${String(currentIdx+1).padStart(2,"0")} / ${String(n).padStart(2,"0")}`;
+    dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.classList.toggle("active", i === currentIdx));
+    prevBtn.disabled = currentIdx === 0;
+    nextBtn.disabled = currentIdx === n - 1;
+  }
+
+  prevBtn.addEventListener("click", () => scrollTo(currentIdx - 1));
+  nextBtn.addEventListener("click", () => scrollTo(currentIdx + 1));
+  dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.addEventListener("click", () => scrollTo(i)));
+
+  // Sync dots on native scroll
+  track.addEventListener("scroll", () => {
+    const w = CARD_W(); if (!w) return;
+    const idx = Math.round(track.scrollLeft / w);
+    if (idx !== currentIdx) {
+      currentIdx = idx;
+      counter.textContent = `${String(idx+1).padStart(2,"0")} / ${String(section.mods.length).padStart(2,"0")}`;
+      dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.classList.toggle("active", i === idx));
+    }
+  }, { passive:true });
+
+  scrollTo(0);
+  return block;
 }
 
+// ── Mod Card ────────────────────────────────────────────────────
 function buildCard(mod) {
-  const score = localVotes[mod.id] ?? 0, myVote = userVotes[mod.id] ?? 0;
+  const score = localVotes[mod.id] ?? 0;
+  const myVote = userVotes[mod.id] ?? 0;
   const card = document.createElement("article");
-  card.className = "mod-card"; card.id = `card-${mod.id}`;
+  card.className = "mod-card";
+  card.id = `card-${mod.id}`;
+  if (myVote === 1)  card.classList.add("voted-up");
+  if (myVote === -1) card.classList.add("voted-down");
 
+  // Thumbnail
   if (mod.images?.length > 0) {
     const thumb = document.createElement("div");
     thumb.className = "mod-thumb";
-    thumb.setAttribute("role", "button"); thumb.setAttribute("tabindex", "0");
+    thumb.setAttribute("role","button"); thumb.setAttribute("tabindex","0");
     thumb.setAttribute("aria-label", `Ver detalle de ${mod.name}`);
     const img = document.createElement("img");
     img.src = mod.images[0]; img.alt = mod.name;
     img.className = "mod-thumb-img"; img.loading = "lazy"; img.decoding = "async";
-    img.onerror = () => { img.src = `https://placehold.co/800x450/08081a/56506a?text=${encodeURIComponent(mod.name)}`; };
+    img.onerror = () => { img.src = `https://placehold.co/800x450/050310/56406a?text=${encodeURIComponent(mod.name)}`; };
     thumb.appendChild(img);
     const hover = document.createElement("div"); hover.className = "thumb-hover";
-    hover.innerHTML = `<span class="thumb-label">Ver detalle</span>`; thumb.appendChild(hover);
+    hover.innerHTML = `<span class="thumb-label">Ver detalle</span>`;
+    thumb.appendChild(hover);
     if (mod.images.length > 1) {
       const cnt = document.createElement("span"); cnt.className = "thumb-count";
       cnt.textContent = `${mod.images.length} imágenes`; thumb.appendChild(cnt);
     }
     thumb.addEventListener("click", () => openModal(mod));
-    thumb.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") openModal(mod); });
+    thumb.addEventListener("keydown", e => { if (e.key==="Enter"||e.key===" ") openModal(mod); });
     card.appendChild(thumb);
   }
 
+  // Body
   const body = document.createElement("div"); body.className = "mod-body";
   const titleRow = document.createElement("div"); titleRow.className = "mod-title-row";
   const nameEl = document.createElement("h3"); nameEl.className = "mod-name";
@@ -337,20 +380,7 @@ function buildCard(mod) {
     body.appendChild(ex);
   }
 
-  // Badge "sin votar" — naranja glassmorph, solo si logueado y sin voto
-  if (currentUser && myVote === 0) {
-    const badge = document.createElement("div");
-    badge.className = "unvoted-badge"; badge.id = `badge-${mod.id}`;
-    badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Vota este mod</span>`;
-    card.appendChild(badge);
-  } else {
-    // placeholder oculto para poder actualizarlo luego
-    const badge = document.createElement("div");
-    badge.className = "unvoted-badge hidden"; badge.id = `badge-${mod.id}`;
-    badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Vota este mod</span>`;
-    card.appendChild(badge);
-  }
-
+  // Vote row
   const voteRow = document.createElement("div"); voteRow.className = "vote-row";
   const scorePill = document.createElement("div"); scorePill.className = "score-pill";
   scorePill.innerHTML = `<span class="score-val ${scoreClass(score)}" id="score-${mod.id}">${score}</span><span class="score-lbl">pts</span>`;
@@ -358,7 +388,16 @@ function buildCard(mod) {
   group.appendChild(buildCardBtn(mod.id, 1, myVote));
   group.appendChild(buildCardBtn(mod.id, -1, myVote));
   voteRow.appendChild(scorePill); voteRow.appendChild(group);
-  body.appendChild(voteRow); card.appendChild(body);
+  body.appendChild(voteRow);
+  card.appendChild(body);
+
+  // Unvoted badge
+  const badge = document.createElement("div");
+  badge.className = `unvoted-badge${(currentUser && userVotesReady && myVote === 0) ? "" : " hidden"}`;
+  badge.id = `badge-${mod.id}`;
+  badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Vota este mod</span>`;
+  card.appendChild(badge);
+
   return card;
 }
 
@@ -366,18 +405,17 @@ function buildCardBtn(modId, dir, myVote) {
   const btn = document.createElement("button");
   btn.id = dir === 1 ? `up-${modId}` : `dn-${modId}`;
   btn.setAttribute("aria-label", dir === 1 ? "Votar positivo" : "Votar negativo");
-  const upSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>`;
-  const dnSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+  const upSVG   = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>`;
+  const dnSVG   = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>`;
   const lockSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
 
-  // Siempre usar onclick (no addEventListener) para que refreshCardStates lo sobrescriba limpiamente
   if (!currentUser) {
     btn.className = "vote-btn-card locked"; btn.innerHTML = lockSVG;
     btn.title = "Inicia sesión para votar";
     btn.onclick = e => { e.stopPropagation(); showToast("🔐 Inicia sesión para votar"); };
   } else {
-    btn.className = `vote-btn-card ${dir === 1 ? "up" : "dn"}${myVote === dir ? " active" : ""}`;
-    btn.innerHTML = dir === 1 ? upSVG : dnSVG;
+    btn.className = `vote-btn-card ${dir===1?"up":"dn"}${myVote===dir?" active":""}`;
+    btn.innerHTML = dir===1 ? upSVG : dnSVG;
     btn.onclick = e => { e.stopPropagation(); handleVote(modId, dir); };
   }
   return btn;
@@ -385,8 +423,8 @@ function buildCardBtn(modId, dir, myVote) {
 
 function refreshCardStates() {
   if (!modData) return;
-  const upSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>`;
-  const dnSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+  const upSVG   = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>`;
+  const dnSVG   = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>`;
   const lockSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
 
   modData.sections.forEach(s => s.mods.forEach(mod => {
@@ -395,21 +433,27 @@ function refreshCardStates() {
     if (!upBtn || !dnBtn) return;
     const myVote = userVotes[mod.id] ?? 0;
 
-    // Badge "sin votar" — mostrar solo si logueado, votes listos y sin voto
+    // Badge
     const badge = document.getElementById(`badge-${mod.id}`);
-    const shouldShowBadge = currentUser && userVotesReady && myVote === 0;
-    if (badge) badge.classList.toggle("hidden", !shouldShowBadge);
+    const showBadge = currentUser && userVotesReady && myVote === 0;
+    if (badge) badge.classList.toggle("hidden", !showBadge);
+
+    // Card tint classes
+    const card = document.getElementById(`card-${mod.id}`);
+    if (card) {
+      card.classList.toggle("voted-up",   currentUser && myVote === 1);
+      card.classList.toggle("voted-down", currentUser && myVote === -1);
+    }
 
     if (currentUser) {
-      // Si los votos del usuario aún no han cargado, deshabilitar para evitar duplicados
-      const waitingLoad = !userVotesReady;
-      [[upBtn, 1, "up", upSVG], [dnBtn, -1, "dn", dnSVG]].forEach(([btn, dir, cls, svg]) => {
-        btn.className = `vote-btn-card ${cls}${myVote === dir ? " active" : ""}${waitingLoad ? " loading" : ""}`;
-        btn.innerHTML = svg; btn.title = waitingLoad ? "Cargando votos..." : ""; btn.disabled = waitingLoad;
-        btn.onclick = waitingLoad ? null : (e => { e.stopPropagation(); handleVote(mod.id, dir); });
+      const waiting = !userVotesReady;
+      [[upBtn,1,"up",upSVG],[dnBtn,-1,"dn",dnSVG]].forEach(([btn,dir,cls,svg]) => {
+        btn.className = `vote-btn-card ${cls}${myVote===dir?" active":""}${waiting?" loading":""}`;
+        btn.innerHTML = svg; btn.title = waiting ? "Cargando votos..." : ""; btn.disabled = waiting;
+        btn.onclick = waiting ? null : (e => { e.stopPropagation(); handleVote(mod.id, dir); });
       });
     } else {
-      [upBtn, dnBtn].forEach(btn => {
+      [upBtn,dnBtn].forEach(btn => {
         btn.className = "vote-btn-card locked"; btn.innerHTML = lockSVG;
         btn.title = "Inicia sesión para votar"; btn.disabled = false;
         btn.onclick = e => { e.stopPropagation(); showToast("🔐 Inicia sesión para votar"); };
@@ -422,7 +466,7 @@ function refreshCardStates() {
 //  LÓGICA DE VOTO
 // ══════════════════════════════════════════════════════════════
 async function handleVote(modId, direction) {
-  if (!currentUser) { showToast("🔐 Inicia sesión para votar"); return; }
+  if (!currentUser)    { showToast("🔐 Inicia sesión para votar"); return; }
   if (!userVotesReady) { showToast("⏳ Cargando tus votos, un momento..."); return; }
   if (votingLocked.has(modId)) { showToast("⏱️ Voto en cooldown, espera un momento"); return; }
   votingLocked.add(modId);
@@ -435,54 +479,69 @@ async function handleVote(modId, direction) {
     showToast("↩️ Voto retirado");
   } else if (current === 0) {
     delta = direction; newMyVote = direction; userVotes[modId] = direction;
-    showToast(direction === 1 ? "✅ Voto positivo registrado" : "👎 Voto negativo registrado");
+    showToast(direction===1 ? "✅ Voto positivo registrado" : "👎 Voto negativo registrado");
   } else {
     delta = direction - current; newMyVote = direction; userVotes[modId] = direction;
-    showToast(direction === 1 ? "✅ Cambiado a positivo" : "👎 Cambiado a negativo");
+    showToast(direction===1 ? "✅ Cambiado a positivo" : "👎 Cambiado a negativo");
   }
 
   localVotes[modId] = (localVotes[modId] ?? 0) + delta;
   const newScore = localVotes[modId];
 
-  // UI optimista — tarjeta
+  // UI optimista — score
   const scoreEl = document.getElementById(`score-${modId}`);
   if (scoreEl) {
     scoreEl.textContent = newScore;
     scoreEl.className = `score-val ${scoreClass(newScore)} bump`;
     setTimeout(() => scoreEl.classList.remove("bump"), 320);
   }
+
+  // UI — botones
   const upBtn = document.getElementById(`up-${modId}`);
   const dnBtn = document.getElementById(`dn-${modId}`);
   upBtn?.classList.toggle("active", newMyVote === 1);
   dnBtn?.classList.toggle("active", newMyVote === -1);
 
-  // Badge: animar con partículas al votar
+  // Card tint + shake
+  const card = document.getElementById(`card-${modId}`);
+  if (card) {
+    card.classList.remove("voted-up","voted-down","shake");
+    if (newMyVote === 1)  card.classList.add("voted-up");
+    if (newMyVote === -1) card.classList.add("voted-down");
+    // Screen shake — micro frame delay to trigger animation restart
+    requestAnimationFrame(() => {
+      card.classList.add("shake");
+      setTimeout(() => card.classList.remove("shake"), 400);
+    });
+  }
+
+  // Badge particles
   const badge = document.getElementById(`badge-${modId}`);
   if (badge && newMyVote !== 0 && !badge.classList.contains("hidden")) {
     particleDisintegrate(badge);
   } else if (badge && newMyVote === 0) {
-    badge.classList.remove("hidden", "hiding");
+    badge.classList.remove("hidden","hiding");
   }
 
-  // Guardar estado de votos en localStorage
+  // localStorage
   lsSaveVotes(currentUser.sub, userVotes);
 
-  // Modal
+  // Modal sync
   refreshModalScore(modId);
   refreshModalButtons();
   updateStatsBar();
 
-  // Enviar al servidor — corsproxy para POST (sigue funcionando bien)
+  // POST al servidor
   try {
-    const postBody = JSON.stringify({ id: modId, vote: newMyVote, token: currentUser.token, sub: currentUser.sub, email: currentUser.email });
-    console.log("[Distopia2] POST enviando:", { modId, vote: newMyVote, sub: currentUser.sub });
-    const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
-      method: "POST",
-      headers: { "Content-Type": "text/plain" },
-      body: postBody,
+    const postBody = JSON.stringify({
+      id: modId, vote: newMyVote,
+      token: currentUser.token, sub: currentUser.sub, email: currentUser.email
     });
-    const text = await res.text();
-    console.log("[Distopia2] POST respuesta:", text);
+    console.log("[Distopia2] POST:", { modId, vote: newMyVote });
+    const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
+      method: "POST", headers: { "Content-Type":"text/plain" }, body: postBody,
+    });
+    console.log("[Distopia2] POST respuesta:", await res.text());
   } catch (e) { console.warn("[Distopia2] POST error:", e.message); }
 
   setTimeout(() => votingLocked.delete(modId), 1500);
@@ -493,124 +552,102 @@ async function handleVote(modId, direction) {
 // ══════════════════════════════════════════════════════════════
 function particleDisintegrate(badge) {
   const rect = badge.getBoundingClientRect();
-  const PARTICLE_COUNT = 22;
+  const PARTICLE_COUNT = 24;
 
-  // Desvanecer el badge rápidamente
-  badge.style.transition = 'opacity 0.18s ease, transform 0.18s ease';
-  badge.style.opacity = '0';
-  badge.style.transform = 'scale(0.7)';
+  badge.style.transition = "opacity 0.15s ease, transform 0.15s ease";
+  badge.style.opacity = "0";
+  badge.style.transform = "scale(0.65)";
 
   for (let i = 0; i < PARTICLE_COUNT; i++) {
-    const p = document.createElement('div');
-    p.className = 'vote-particle';
-
-    // Posición aleatoria dentro del badge
+    const p = document.createElement("div");
+    p.className = "vote-particle";
     const startX = rect.left + Math.random() * rect.width;
-    const startY = rect.top + Math.random() * rect.height;
-
-    // Velocidad en ángulo aleatorio
-    const angle = (Math.PI * 2 * i / PARTICLE_COUNT) + (Math.random() - 0.5) * 0.8;
-    const dist  = 25 + Math.random() * 70;
-    const dx = Math.cos(angle) * dist;
-    const dy = Math.sin(angle) * dist - (15 + Math.random() * 20); // bias hacia arriba
-
-    const size = 2 + Math.random() * 3.5;
-    const hue  = 20 + Math.random() * 40; // naranja → amarillo
-    const duration = 0.45 + Math.random() * 0.35;
-    const delay    = Math.random() * 0.12;
+    const startY = rect.top  + Math.random() * rect.height;
+    const angle  = (Math.PI*2*i/PARTICLE_COUNT) + (Math.random()-0.5)*0.9;
+    const dist   = 30 + Math.random() * 75;
+    const dx = Math.cos(angle)*dist;
+    const dy = Math.sin(angle)*dist - (18+Math.random()*22);
+    const size     = 1.8 + Math.random()*3.5;
+    const hue      = 18  + Math.random()*42;
+    const duration = 0.42 + Math.random()*0.38;
+    const delay    = Math.random()*0.1;
 
     p.style.cssText = [
       `position:fixed`,
-      `left:${startX}px`, `top:${startY}px`,
-      `width:${size}px`,  `height:${size}px`,
+      `left:${startX}px`,`top:${startY}px`,
+      `width:${size}px`, `height:${size}px`,
       `border-radius:50%`,
       `background:hsl(${hue},100%,62%)`,
-      `box-shadow:0 0 ${size * 2.5}px hsl(${hue},100%,62%)`,
-      `pointer-events:none`, `z-index:9999`,
-      `--dx:${dx}px`, `--dy:${dy}px`,
+      `box-shadow:0 0 ${size*2.5}px hsl(${hue},100%,62%)`,
+      `pointer-events:none`,`z-index:9999`,
+      `--dx:${dx}px`,`--dy:${dy}px`,
       `animation:particleFly ${duration}s ${delay}s ease-out forwards`
-    ].join(';');
+    ].join(";");
 
     document.body.appendChild(p);
-    setTimeout(() => p.remove(), (duration + delay) * 1000 + 50);
+    setTimeout(() => p.remove(), (duration+delay)*1000+60);
   }
 
-  // Ocultar badge después de la animación
   setTimeout(() => {
-    badge.classList.add('hidden');
-    badge.style.opacity = '';
-    badge.style.transform = '';
-    badge.style.transition = '';
-  }, 300);
+    badge.classList.add("hidden");
+    badge.style.opacity = "";
+    badge.style.transform = "";
+    badge.style.transition = "";
+  }, 280);
 }
 
 // ══════════════════════════════════════════════════════════════
-//  MODAL
+//  MODAL — Split layout (desktop) / Bottom sheet (mobile)
 // ══════════════════════════════════════════════════════════════
 let currentModalMod = null, carouselIdx = 0, touchStartX = 0;
 
 function initModal() {
-  const overlay = document.getElementById("modal-overlay");
+  const overlay  = document.getElementById("modal-overlay");
   const closeBtn = document.getElementById("modal-close");
-  const prevBtn = document.getElementById("carousel-prev");
-  const nextBtn = document.getElementById("carousel-next");
-  const track = document.getElementById("modal-carousel-track");
+  const prevBtn  = document.getElementById("carousel-prev");
+  const nextBtn  = document.getElementById("carousel-next");
+  const track    = document.getElementById("modal-carousel-track");
   if (!overlay || !closeBtn) return;
 
   closeBtn.addEventListener("click", closeModal);
-  overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+  overlay.addEventListener("click", e => { if (e.target===overlay) closeModal(); });
   document.addEventListener("keydown", e => {
     if (!overlay || overlay.hidden) return;
-    if (e.key === "Escape") closeModal();
-    if (e.key === "ArrowLeft") carouselGo(carouselIdx - 1);
-    if (e.key === "ArrowRight") carouselGo(carouselIdx + 1);
+    if (e.key==="Escape") closeModal();
+    if (e.key==="ArrowLeft")  carouselGo(carouselIdx-1);
+    if (e.key==="ArrowRight") carouselGo(carouselIdx+1);
   });
-  prevBtn?.addEventListener("click", () => carouselGo(carouselIdx - 1));
-  nextBtn?.addEventListener("click", () => carouselGo(carouselIdx + 1));
-  track?.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  prevBtn?.addEventListener("click", () => carouselGo(carouselIdx-1));
+  nextBtn?.addEventListener("click", () => carouselGo(carouselIdx+1));
+  track?.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive:true });
   track?.addEventListener("touchend", e => {
     const dx = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(dx) > 40) carouselGo(carouselIdx + (dx > 0 ? 1 : -1));
+    if (Math.abs(dx)>40) carouselGo(carouselIdx+(dx>0?1:-1));
   });
-  document.getElementById("modal-upvote-btn")?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, 1); });
+
+  // Desktop buttons
+  document.getElementById("modal-upvote-btn")?.addEventListener("click",   () => { if (currentModalMod) handleVote(currentModalMod.id, 1); });
   document.getElementById("modal-downvote-btn")?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, -1); });
+
+  // Mobile sticky bar buttons
+  document.getElementById("modal-upvote-btn-m")?.addEventListener("click",   () => { if (currentModalMod) handleVote(currentModalMod.id, 1); });
+  document.getElementById("modal-downvote-btn-m")?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, -1); });
 }
 
 function openModal(mod) {
   currentModalMod = mod; carouselIdx = 0;
   const overlay = document.getElementById("modal-overlay");
-  const track = document.getElementById("modal-carousel-track");
-  const dots = document.getElementById("carousel-dots");
-  const counter = document.getElementById("carousel-counter");
-  const prevBtn = document.getElementById("carousel-prev");
-  const nextBtn = document.getElementById("carousel-next");
-  if (!overlay || !track) return;
+  if (!overlay) return;
 
   document.getElementById("modal-mod-name").textContent = mod.name;
   document.getElementById("modal-description").innerHTML =
-    (mod.paragraphs || []).map(p => `<p>${escapeHtml(p)}</p>`).join("");
+    (mod.paragraphs||[]).map(p=>`<p>${escapeHtml(p)}</p>`).join("");
 
-  track.innerHTML = ""; if (dots) dots.innerHTML = "";
-  (mod.images || []).forEach((src, i) => {
-    const slide = document.createElement("div"); slide.className = "gallery-slide";
-    const img = document.createElement("img");
-    img.src = src; img.alt = `${mod.name} ${i + 1}`; img.loading = "lazy";
-    img.onerror = () => { img.src = `https://placehold.co/800x450/08081a/56506a?text=Sin+imagen`; };
-    slide.appendChild(img); track.appendChild(slide);
-    if (dots && (mod.images || []).length > 1) {
-      const dot = document.createElement("button");
-      dot.className = `gallery-dot${i === 0 ? " active" : ""}`;
-      dot.setAttribute("aria-label", `Imagen ${i + 1}`);
-      dot.addEventListener("click", () => carouselGo(i));
-      dots.appendChild(dot);
-    }
-  });
+  // Bento grid (desktop)
+  buildBentoGrid(mod);
 
-  const multi = (mod.images || []).length > 1;
-  if (prevBtn) prevBtn.hidden = !multi;
-  if (nextBtn) nextBtn.hidden = !multi;
-  if (!multi && dots) dots.innerHTML = "";
-  if (counter) counter.textContent = multi ? `1 / ${mod.images.length}` : "";
+  // Carousel (mobile fallback)
+  buildCarousel(mod);
 
   refreshModalScore(mod.id);
   refreshModalButtons();
@@ -619,8 +656,61 @@ function openModal(mod) {
   document.getElementById("modal-panel")?.focus();
 }
 
+function buildBentoGrid(mod) {
+  const bento = document.getElementById("modal-bento");
+  if (!bento) return;
+  bento.innerHTML = "";
+  const images = mod.images || [];
+  const count  = Math.min(images.length, 4);
+  bento.className = `bento-grid count-${count || 1}`;
+
+  (count > 0 ? images.slice(0,count) : ["placeholder"]).forEach((src, i) => {
+    const item = document.createElement("div"); item.className = "bento-item";
+    const img  = document.createElement("img");
+    img.src = src === "placeholder"
+      ? `https://placehold.co/800x450/050310/56406a?text=${encodeURIComponent(mod.name)}`
+      : src;
+    img.alt = `${mod.name} — imagen ${i+1}`;
+    img.loading = "lazy";
+    img.onerror = () => { img.src = `https://placehold.co/800x450/050310/56406a?text=Sin+imagen`; };
+    item.appendChild(img);
+    bento.appendChild(item);
+  });
+}
+
+function buildCarousel(mod) {
+  const track   = document.getElementById("modal-carousel-track");
+  const dots    = document.getElementById("carousel-dots");
+  const counter = document.getElementById("carousel-counter");
+  const prevBtn = document.getElementById("carousel-prev");
+  const nextBtn = document.getElementById("carousel-next");
+  if (!track) return;
+
+  track.innerHTML = ""; if (dots) dots.innerHTML = "";
+  (mod.images||[]).forEach((src,i) => {
+    const slide = document.createElement("div"); slide.className = "gallery-slide";
+    const img   = document.createElement("img");
+    img.src = src; img.alt = `${mod.name} ${i+1}`; img.loading="lazy";
+    img.onerror = () => { img.src = `https://placehold.co/800x450/050310/56406a?text=Sin+imagen`; };
+    slide.appendChild(img); track.appendChild(slide);
+    if (dots && (mod.images||[]).length > 1) {
+      const dot = document.createElement("button");
+      dot.className = `gallery-dot${i===0?" active":""}`;
+      dot.setAttribute("aria-label",`Imagen ${i+1}`);
+      dot.addEventListener("click", () => carouselGo(i));
+      dots.appendChild(dot);
+    }
+  });
+
+  const multi = (mod.images||[]).length > 1;
+  if (prevBtn) prevBtn.hidden = !multi;
+  if (nextBtn) nextBtn.hidden = !multi;
+  if (!multi && dots) dots.innerHTML = "";
+  if (counter) counter.textContent = multi ? `1 / ${mod.images.length}` : "";
+}
+
 function closeModal() {
-  document.getElementById("modal-overlay")?.setAttribute("hidden", "");
+  document.getElementById("modal-overlay")?.setAttribute("hidden","");
   document.body.style.overflow = "";
   currentModalMod = null;
 }
@@ -628,53 +718,64 @@ function closeModal() {
 function carouselGo(idx) {
   const imgs = currentModalMod?.images || [];
   if (imgs.length <= 1) return;
-  carouselIdx = ((idx % imgs.length) + imgs.length) % imgs.length;
+  carouselIdx = ((idx%imgs.length)+imgs.length)%imgs.length;
   const track = document.getElementById("modal-carousel-track");
-  if (track) track.style.transform = `translateX(-${carouselIdx * 100}%)`;
+  if (track) track.style.transform = `translateX(-${carouselIdx*100}%)`;
   const counter = document.getElementById("carousel-counter");
-  if (counter) counter.textContent = `${carouselIdx + 1} / ${imgs.length}`;
+  if (counter) counter.textContent = `${carouselIdx+1} / ${imgs.length}`;
   document.getElementById("carousel-dots")?.querySelectorAll(".gallery-dot")
-    .forEach((d, i) => d.classList.toggle("active", i === carouselIdx));
+    .forEach((d,i) => d.classList.toggle("active", i===carouselIdx));
 }
 
 function refreshModalScore(modId) {
   if (!currentModalMod || currentModalMod.id !== modId) return;
   const score = localVotes[modId] ?? 0;
+  const cls = score > 0 ? " pos" : score < 0 ? " neg" : "";
+  // Desktop
   const el = document.getElementById("modal-vote-score");
-  if (el) { el.textContent = score; el.className = `modal-score-number${score > 0 ? " pos" : score < 0 ? " neg" : ""}`; }
+  if (el) { el.textContent = score; el.className = `modal-score-number${cls}`; }
+  // Mobile
+  const elm = document.getElementById("modal-vote-score-m");
+  if (elm) elm.textContent = score;
 }
 
 function refreshModalButtons() {
   if (!currentModalMod) return;
   const myVote = userVotes[currentModalMod.id] ?? 0;
+  // Desktop
   const upBtn = document.getElementById("modal-upvote-btn");
   const dnBtn = document.getElementById("modal-downvote-btn");
-  if (!upBtn || !dnBtn) return;
+  // Mobile
+  const upBtnM = document.getElementById("modal-upvote-btn-m");
+  const dnBtnM = document.getElementById("modal-downvote-btn-m");
 
-  if (!currentUser) {
-    upBtn.disabled = dnBtn.disabled = true;
-  } else {
-    upBtn.disabled = dnBtn.disabled = false;
-    upBtn.classList.toggle("active", myVote === 1);
-    dnBtn.classList.toggle("active", myVote === -1);
-  }
+  [upBtn, upBtnM].forEach(b => { if (!b) return; b.disabled = !currentUser; b.classList.toggle("active", myVote===1); });
+  [dnBtn, dnBtnM].forEach(b => { if (!b) return; b.disabled = !currentUser; b.classList.toggle("active", myVote===-1); });
 }
 
 // ══════════════════════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════════════════════
-function scoreClass(s) { return s > 0 ? "pos" : s < 0 ? "neg" : ""; }
+function scoreClass(s) { return s>0 ? "pos" : s<0 ? "neg" : ""; }
 
 function updateStatsBar() {
   if (!modData) return;
-  const totalMods = modData.sections.reduce((a, s) => a + s.mods.length, 0);
-  const totalVotes = Object.values(localVotes).reduce((a, v) => a + Math.abs(v), 0);
+  const totalMods  = modData.sections.reduce((a,s) => a+s.mods.length, 0);
+  const totalVotes = Object.values(localVotes).reduce((a,v) => a+Math.abs(v), 0);
+  // Hidden bar (JS compat)
   const sm = document.getElementById("stat-mods");
   const sv = document.getElementById("stat-votes");
   const ss = document.getElementById("stat-sections");
   if (sm) sm.innerHTML = `📦 <strong>${totalMods}</strong> mods`;
   if (sv) sv.innerHTML = `🗳 <strong>${totalVotes}</strong> votos`;
   if (ss) ss.innerHTML = `📂 <strong>${modData.sections.length}</strong> secciones`;
+  // Visible header stats
+  const smv = document.getElementById("stat-mods-val");
+  const svv = document.getElementById("stat-votes-val");
+  const ssv = document.getElementById("stat-sections-val");
+  if (smv) smv.textContent = totalMods;
+  if (svv) svv.textContent = totalVotes;
+  if (ssv) ssv.textContent = modData.sections.length;
 }
 
 function hideLoading() { document.getElementById("loading-screen")?.remove(); }
@@ -692,8 +793,8 @@ function showToast(msg) {
 
 function escapeHtml(s) {
   if (typeof s !== "string") return "";
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+          .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 }
 
 // ── Arranque ──────────────────────────────────────────────────

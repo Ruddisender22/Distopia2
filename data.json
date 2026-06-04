@@ -57,14 +57,14 @@
       ]
     },
     {
-      "name": "Magia y Encantamientos",
-      "icon": "✨",
+      "name": "Enemigos y Bosses",
+      "icon": "☠️​",
       "mods": [
         {
-          "id": "botania",
-          "name": "Botania",
+          "id": "cataclysm",
+          "name": "L_Ender 's Cataclysm",
           "images": [
-            "https://placehold.co/800x450/0a0020/f472b6?text=Botania",
+            "https://honeyfrost.notion.site/image/attachment:73266022-34e7-44cc-a8ca-463f03e17e05:image.png?table=block&id=2a714a14-28fc-8002-a34f-cc5cd1ef8960&spaceId=bb6df774-60fa-40a7-9f40-784859ac9b75&width=1420&userId=&cache=v2",
             "https://placehold.co/800x450/0a0020/ec4899?text=Botania+-+Flowers"
           ],
           "paragraphs": [

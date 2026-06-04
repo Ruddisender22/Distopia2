@@ -1,7 +1,7 @@
 {
   "sections": [
     {
-      "name": "Tecnología y Automatización",
+      "name": "Industrial y Automatización",
       "icon": "⚙️",
       "mods": [
         {
@@ -18,166 +18,872 @@
           "status": "CONFIRMADO"
         },
         {
-          "id": "ae2",
-          "name": "Applied Energistics 2",
+          "id": "create-aeronautics",
+          "name": "Create Aeronautics",
           "images": [
-            "https://placehold.co/800x450/0a001a/7c3aed?text=Applied+Energistics+2",
-            "https://placehold.co/800x450/0a001a/a855f7?text=AE2+-+ME+System"
+            "https://placehold.co/800x450/0d0018/c084fc?text=Create+Aeronautics"
           ],
           "paragraphs": [
-            "Sistema de almacenamiento digital avanzado. Guarda miles de ítems en discos de almacenamiento y accede a todo desde terminales ME.",
-            "Permite automatizar crafting complejos, ordenar inventarios masivos y transferir ítems con canales de energía."
+            "Expansión de Create que añade aeronaves y dirigibles construibles. Diseña y pilota tus propias aeronaves con la física de Create."
+          ],
+          "status": "CONFIRMADO"
+        }
+      ]
+    },
+    {
+      "name": "Magia",
+      "icon": "✨",
+      "mods": [
+        {
+          "id": "pastel",
+          "name": "Pastel",
+          "images": [
+            "https://placehold.co/800x450/1a001a/e879f9?text=Pastel"
+          ],
+          "paragraphs": [
+            "Mod de magia con una estética suave y colorida. Añade hechizos, rituales y criaturas mágicas únicas."
+          ],
+          "status": "NO DEFINITIVO"
+        }
+      ]
+    },
+    {
+      "name": "Biomas y Fauna",
+      "icon": "🌿",
+      "mods": [
+        {
+          "id": "mods-primal",
+          "name": "Mods Primal",
+          "images": [
+            "https://placehold.co/800x450/001a08/4ade80?text=Mods+Primal"
+          ],
+          "paragraphs": [
+            "Añade criaturas primitivas y biomas salvajes inspirados en épocas prehistóricas."
+          ],
+          "status": "CONFIRMADO"
+        },
+        {
+          "id": "no-mans-land",
+          "name": "No Man's Land",
+          "images": [
+            "https://placehold.co/800x450/0a1a00/86efac?text=No+Mans+Land"
+          ],
+          "paragraphs": [
+            "Nuevas tierras yermas y biomas hostiles con fauna única y recursos exclusivos."
+          ],
+          "status": "CONFIRMADO"
+        },
+        {
+          "id": "ecologics",
+          "name": "Ecologics",
+          "images": [
+            "https://placehold.co/800x450/001208/22c55e?text=Ecologics"
+          ],
+          "paragraphs": [
+            "Mejora los biomas existentes de Minecraft con flora, fauna y detalles ambientales adicionales para hacer el mundo más vivo."
           ],
           "status": "NO DEFINITIVO"
         },
         {
-          "id": "mekanism",
-          "name": "Mekanism",
+          "id": "alexs-caves",
+          "name": "Alex's Caves",
           "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Mekanism",
-            "https://placehold.co/800x450/001a0d/34d399?text=Mekanism+-+Reactors"
+            "https://placehold.co/800x450/000d0a/34d399?text=Alex%27s+Caves"
           ],
           "paragraphs": [
-            "Mod de energía y fabricación industrial de alto nivel. Incluye generadores, reactores de fusión, trituradoras y un sistema de gases únicos.",
-            "Escala desde pequeñas máquinas básicas hasta reactores de fusión capaces de alimentar bases enteras. Uno de los mods más completos."
+            "Añade biomas de cuevas totalmente nuevos llenos de criaturas únicas, flora subterránea y recursos especiales."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "spawn",
+          "name": "Spawn",
+          "images": [
+            "https://placehold.co/800x450/001a0a/4ade80?text=Spawn"
+          ],
+          "paragraphs": [
+            "Mod que mejora y expande el sistema de spawning de criaturas en el mundo."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "pale-garden",
+          "name": "Pale Garden",
+          "images": [
+            "https://placehold.co/800x450/0d1a0d/a3e635?text=Pale+Garden"
+          ],
+          "paragraphs": [
+            "Añade un nuevo bioma de jardín pálido con flora etérea y criaturas misteriosas."
           ]
         },
         {
-          "id": "immersiveeng",
-          "name": "Immersive Engineering",
+          "id": "ht-treechop",
+          "name": "HT's TreeChop",
           "images": [
-            "https://placehold.co/800x450/1a0800/fb923c?text=Immersive+Engineering",
-            "https://placehold.co/800x450/1a0800/f97316?text=IE+-+Refinery"
+            "https://placehold.co/800x450/0d1400/84cc16?text=HT%27s+TreeChop"
           ],
           "paragraphs": [
-            "Tecnología industrial con estética retro-industrial. Torres eléctricas, cables de alta tensión, refinería de petróleo y turbinas de vapor.",
-            "Estructuras multi-bloque detalladas que dan una sensación visual increíble al mundo. Perfecto para construir complejos industriales realistas."
+            "Permite talar árboles enteros de un solo golpe. Hace la recolección de madera mucho más eficiente y satisfactoria."
           ]
         }
       ]
     },
     {
       "name": "Enemigos y Bosses",
-      "icon": "☠️​",
+      "icon": "☠️",
       "mods": [
         {
           "id": "cataclysm",
           "name": "L_Ender 's Cataclysm",
           "images": [
-            "https://honeyfrost.notion.site/image/attachment:73266022-34e7-44cc-a8ca-463f03e17e05:image.png?table=block&id=2a714a14-28fc-8002-a34f-cc5cd1ef8960&spaceId=bb6df774-60fa-40a7-9f40-784859ac9b75&width=1420&userId=&cache=v2",
-            "https://placehold.co/800x450/0a0020/ec4899?text=Botania+-+Flowers"
+            "Recursos/Cataclysm/CursedDesert.png",
+            "Recursos/Cataclysm/EndCity.png",
+            "Recursos/Cataclysm/Ignis.png",
+            "Recursos/Cataclysm/SunkenCity.png",
+            "Recursos/Cataclysm/Frozen.png",
+            "Recursos/Cataclysm/Wither.png",
+            "Recursos/Cataclysm/Forja.png"
           ],
           "paragraphs": [
-            "Magia natural basada en flores que generan Mana. Sin GUI adicionales — todo se juega de forma orgánica con el mundo.",
-            "Ofrece armaduras, herramientas, rituales y criaturas únicas. El mod más elegante del género mágico."
-          ]
+            "Descubre estructuras míticas a través de dimensiones, que albergan enemigos desafiantes, jefes finales y poderosos equipos.",
+            "L'Ender's Cataclysm es un mod de Minecraft inspirado en Minecraft Dungeons, que introduce peligrosas mazmorras. Cada estructura presenta encuentros únicos con jefes, criaturas hostiles y valiosos botines que proporcionan a los jugadores poderosas armas, armaduras y equipo para mejorar su experiencia de juego."
+          ],
+          "status": "CONFIRMADO"
         },
         {
-          "id": "bloodmagic",
-          "name": "Blood Magic",
+          "id": "royal-variations",
+          "name": "Royal Variations",
           "images": [
-            "https://placehold.co/800x450/1a0000/ef4444?text=Blood+Magic",
-            "https://placehold.co/800x450/1a0000/dc2626?text=Blood+Magic+-+Altars"
+            "https://placehold.co/800x450/1a0010/f472b6?text=Royal+Variations"
           ],
           "paragraphs": [
-            "Sistema de magia oscura que utiliza tu propia vida como recurso. Altares de sangre, runas de poder y rituales prohibidos.",
-            "Progresión desde simples daggeres hasta manipulación dimensional. No apto para débiles de corazón — literalmente."
-          ]
+            "Añade variantes únicas de mobs existentes con nuevas apariencias, comportamientos y loot especial."
+          ],
+          "status": "NO DEFINITIVO"
         },
         {
-          "id": "arsnouv",
-          "name": "Ars Nouveau",
+          "id": "wither-wrath",
+          "name": "Wither's Wrath",
           "images": [
-            "https://placehold.co/800x450/000f1a/38bdf8?text=Ars+Nouveau",
-            "https://placehold.co/800x450/000f1a/0ea5e9?text=Ars+Nouveau+-+Spells"
+            "https://placehold.co/800x450/0d0010/a855f7?text=Wither%27s+Wrath"
           ],
           "paragraphs": [
-            "Sistema de magia arcana con hechizos completamente personalizables. Combina glifos para crear conjuros únicos de ataque, movimiento y utilidad.",
-            "Incluye su propio árbol tecnológico mágico, criaturas vinculadas y armaduras encantadas. Muy visual y satisfactorio."
+            "Rework completo del Wither con nuevas fases, ataques y mecánicas de combate. Una batalla épica que pondrá a prueba al equipo entero."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "qlipoth-awakening",
+          "name": "Qlipoth Awakening",
+          "images": [
+            "https://placehold.co/800x450/0a0020/7c3aed?text=Qlipoth+Awakening"
+          ],
+          "paragraphs": [
+            "Añade entidades oscuras y bosses de otro mundo inspirados en mitología mística. Desafíos únicos para jugadores veteranos."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "piglin-proliferation",
+          "name": "Piglin Proliferation",
+          "images": [
+            "https://placehold.co/800x450/1a0800/fb923c?text=Piglin+Proliferation"
+          ],
+          "paragraphs": [
+            "Expande la civilización piglin con nuevas variantes, jefes y estructuras en el Nether."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "variants-venture",
+          "name": "Variants & Venture",
+          "images": [
+            "https://placehold.co/800x450/0d000d/d946ef?text=Variants+%26+Venture"
+          ],
+          "paragraphs": [
+            "Añade numerosas variantes visuales y funcionales de mobs del juego base, haciendo el mundo más diverso y sorprendente."
           ]
         }
       ]
     },
     {
-      "name": "Exploración y Mundo",
-      "icon": "🗺️",
+      "name": "Dificultad y Progresión",
+      "icon": "⚔️",
       "mods": [
         {
-          "id": "bop",
-          "name": "Biomes O' Plenty",
+          "id": "end-remastered",
+          "name": "End Remastered",
           "images": [
-            "https://placehold.co/800x450/001a08/22c55e?text=Biomes+O+Plenty",
-            "https://placehold.co/800x450/001a08/16a34a?text=BOP+-+New+Biomes"
+            "https://placehold.co/800x450/000d1a/818cf8?text=End+Remastered"
           ],
           "paragraphs": [
-            "Añade más de 50 nuevos biomas al mundo de Minecraft, desde pantanos fluorescentes hasta volcanes nevados.",
-            "Cada bioma tiene su propia paleta de colores, flora, fauna y estructuras únicas. El mundo nunca ha parecido tan vivo."
+            "Reemplaza el sistema de portal del End con un proceso de progresión mucho más elaborado que requiere exploración activa."
+          ],
+          "status": "CONFIRMADO"
+        },
+        {
+          "id": "enhanced-celestials",
+          "name": "Enhanced Celestials",
+          "images": [
+            "https://placehold.co/800x450/00001a/6366f1?text=Enhanced+Celestials"
+          ],
+          "paragraphs": [
+            "Mejora los eventos celestiales como la luna llena con nuevos efectos, bonificaciones y peligros."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "spice-of-life",
+          "name": "Spice of Life: Carrot Edition",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Spice+of+Life"
+          ],
+          "paragraphs": [
+            "Recompensa la variedad dietética dando bonificaciones por comer alimentos diferentes. Comer siempre lo mismo tiene penalizaciones."
+          ],
+          "status": "CONFIRMADO"
+        },
+        {
+          "id": "apotheosis",
+          "name": "Apotheosis",
+          "images": [
+            "https://placehold.co/800x450/0d001a/9333ea?text=Apotheosis"
+          ],
+          "paragraphs": [
+            "Amplía enormemente los sistemas de encantamientos, pociones, generadores y jefes. Añade profundidad de progresión end-game."
+          ],
+          "status": "CONFIRMADO"
+        },
+        {
+          "id": "burnt-fire",
+          "name": "Burnt: Better Vanilla Fire",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=Burnt"
+          ],
+          "paragraphs": [
+            "Mejora visualmente el fuego de Minecraft y añade nuevas mecánicas relacionadas con el daño por fuego y la resistencia."
           ]
         },
         {
-          "id": "twilightforest",
-          "name": "The Twilight Forest",
+          "id": "origins",
+          "name": "Origins",
           "images": [
-            "https://placehold.co/800x450/001008/86efac?text=Twilight+Forest",
-            "https://placehold.co/800x450/001008/4ade80?text=TF+-+Bosses"
+            "https://placehold.co/800x450/0a001a/c084fc?text=Origins"
           ],
           "paragraphs": [
-            "Una dimensión de bosque eterno con su propio árbol de progresión de jefes. Mazmorras únicas, criaturas mágicas y botín exclusivo.",
-            "Desde el Naga hasta el Lich, pasando por el Hydra y el Snow Queen — cada jefe es una experiencia memorable."
+            "Permite elegir un origen o raza al inicio que otorga habilidades únicas y restricciones especiales. Cambia radicalmente el gameplay."
           ]
         },
         {
-          "id": "alexmobs",
-          "name": "Alex's Mobs",
+          "id": "origins-classes",
+          "name": "Origins: Classes",
           "images": [
-            "https://placehold.co/800x450/001a0d/a3e635?text=Alex%27s+Mobs",
-            "https://placehold.co/800x450/001a0d/84cc16?text=Alex+Mobs+-+Animals"
+            "https://placehold.co/800x450/0d001a/a855f7?text=Origins+Classes"
           ],
           "paragraphs": [
-            "Más de 80 nuevas criaturas con comportamientos únicos y loot especial. Desde caimanes gigantes hasta insectos, todos increíblemente detallados.",
-            "Cada mob tiene sus propias mecánicas de combate, domesticación o farmeo. Hace el mundo mucho más vivo y peligroso."
+            "Expansión de Origins que añade un sistema de clases sobre los orígenes, con habilidades adicionales y árboles de progresión."
           ]
         }
       ]
     },
     {
-      "name": "Utilidades y Calidad de Vida",
+      "name": "Family Friendly",
+      "icon": "🍓",
+      "mods": [
+        {
+          "id": "starcatcher",
+          "name": "Starcatcher",
+          "images": [
+            "https://placehold.co/800x450/00001a/818cf8?text=Starcatcher"
+          ],
+          "paragraphs": [
+            "Mod de aventura y exploración con un toque mágico y amigable para todos los públicos."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "minecraft-comes-alive",
+          "name": "Minecraft Comes Alive",
+          "images": [
+            "https://placehold.co/800x450/001a0d/4ade80?text=Minecraft+Comes+Alive"
+          ],
+          "paragraphs": [
+            "Remplaza los aldeanos con NPCs con personalidades, diálogos y relaciones. Puedes casarte, tener hijos y construir una familia."
+          ]
+        },
+        {
+          "id": "farmers-delight",
+          "name": "Farmer's Delight",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Farmer%27s+Delight"
+          ],
+          "paragraphs": [
+            "Expansión de la agricultura y cocina con decenas de nuevos cultivos, recetas y utensilios de cocina. La experiencia gastronómica definitiva."
+          ],
+          "status": "CONFIRMADO"
+        },
+        {
+          "id": "fd-brewin-chewin",
+          "name": "Farmer's Delight: Brewin' And Chewin'",
+          "images": [
+            "https://placehold.co/800x450/1a0a00/f59e0b?text=Brewin+%26+Chewin"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight que añade cervecería, quesos y recetas fermentadas especiales."
+          ]
+        },
+        {
+          "id": "fd-starcatcher",
+          "name": "Farmer's Delight: Starcatcher",
+          "images": [
+            "https://placehold.co/800x450/00001a/6366f1?text=FD+Starcatcher"
+          ],
+          "paragraphs": [
+            "Compatibilidad entre Farmer's Delight y Starcatcher. Nuevas recetas que combinan ingredientes de ambos mods."
+          ]
+        },
+        {
+          "id": "fd-create",
+          "name": "Farmer's Delight: Create",
+          "images": [
+            "https://placehold.co/800x450/0d0018/c084fc?text=FD+Create"
+          ],
+          "paragraphs": [
+            "Integración entre Farmer's Delight y Create. Permite automatizar la cocina y la agricultura con maquinaria rotacional."
+          ]
+        },
+        {
+          "id": "fd-end",
+          "name": "Farmer's Delight: End",
+          "images": [
+            "https://placehold.co/800x450/000d1a/818cf8?text=FD+End"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight con cultivos y recetas únicas del End. Ingredientes exóticos de la dimensión final."
+          ]
+        },
+        {
+          "id": "fd-nether",
+          "name": "Farmer's Delight: Nether",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=FD+Nether"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight con cultivos y recetas del Nether. Cocina con ingredientes de las dimensiones infernales."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Seguridad y Funcionalidad",
+      "icon": "🔐",
+      "mods": [
+        {
+          "id": "iron-chest",
+          "name": "Iron Chest",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Iron+Chest"
+          ],
+          "paragraphs": [
+            "Añade cofres de distintos materiales (hierro, oro, diamante, cristal...) con mayor capacidad de almacenamiento."
+          ]
+        },
+        {
+          "id": "security-craft",
+          "name": "Security Craft",
+          "images": [
+            "https://placehold.co/800x450/000d1a/38bdf8?text=Security+Craft"
+          ],
+          "paragraphs": [
+            "Mod de seguridad que añade cámaras, láseres, minas, teclados y todo tipo de sistemas de protección para tus bases."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Construcción y Decoración",
+      "icon": "🏗️",
+      "mods": [
+        {
+          "id": "mrcrayfish-furniture",
+          "name": "MrCrayfish's Furniture Mod: Refurbished",
+          "images": [
+            "https://placehold.co/800x450/0d0800/fbbf24?text=MrCrayfish+Furniture"
+          ],
+          "paragraphs": [
+            "Cientos de muebles decorativos: sofás, camas, lámparas, electrodomésticos y mucho más. Decora tu hogar al detalle."
+          ]
+        },
+        {
+          "id": "diagonal-fences",
+          "name": "Diagonal Fences",
+          "images": [
+            "https://placehold.co/800x450/0d0800/d97706?text=Diagonal+Fences"
+          ],
+          "paragraphs": [
+            "Permite colocar vallas en diagonal para construir cercas más naturales y estéticamente agradables."
+          ]
+        },
+        {
+          "id": "diagonal-walls",
+          "name": "Diagonal Walls",
+          "images": [
+            "https://placehold.co/800x450/0d0900/b45309?text=Diagonal+Walls"
+          ],
+          "paragraphs": [
+            "Permite colocar muros de piedra en diagonal, ideal para diseños arquitectónicos más complejos y naturales."
+          ]
+        },
+        {
+          "id": "diagonal-windows",
+          "name": "Diagonal Windows",
+          "images": [
+            "https://placehold.co/800x450/00101a/60a5fa?text=Diagonal+Windows"
+          ],
+          "paragraphs": [
+            "Permite colocar cristales y ventanas en diagonal. Construye fachadas modernas y tejados con ángulos únicos."
+          ]
+        },
+        {
+          "id": "immersive-paintings",
+          "name": "Immersive Paintings",
+          "images": [
+            "https://placehold.co/800x450/1a001a/e879f9?text=Immersive+Paintings"
+          ],
+          "paragraphs": [
+            "Permite crear cuadros personalizados con tus propias imágenes, transformando las pinturas de Minecraft en arte real."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dimensiones",
+      "icon": "🌌",
+      "mods": [
+        {
+          "id": "stellarity",
+          "name": "Stellarity",
+          "images": [
+            "https://placehold.co/800x450/00001a/818cf8?text=Stellarity"
+          ],
+          "paragraphs": [
+            "Transforma el End en una dimensión masiva con nuevos biomas, estructuras, jefes y una historia propia que explorar."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "jaeden-nether",
+          "name": "Jaeden's Nether Expansion",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=Jaeden%27s+Nether"
+          ],
+          "paragraphs": [
+            "Expansión masiva del Nether con nuevos biomas, estructuras y criaturas que hacen la dimensión infernal mucho más rica."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "eternal-starlight",
+          "name": "Eternal Starlight",
+          "images": [
+            "https://placehold.co/800x450/00001a/6366f1?text=Eternal+Starlight"
+          ],
+          "paragraphs": [
+            "Nueva dimensión mágica bañada en luz estelar permanente con flora, fauna y mecánicas de juego únicas."
+          ],
+          "status": "CONFIRMADO"
+        }
+      ]
+    },
+    {
+      "name": "Estructuras",
+      "icon": "🏰",
+      "mods": [
+        {
+          "id": "dungeons-nether",
+          "name": "Dungeons Dimensions: Nether",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=Dungeons+Nether"
+          ],
+          "paragraphs": [
+            "Añade mazmorras y estructuras elaboradas en el Nether con puzzles, trampas y botín único para aventureros veteranos."
+          ],
+          "status": "CONFIRMADO"
+        },
+        {
+          "id": "better-villages",
+          "name": "Better Villages",
+          "images": [
+            "https://placehold.co/800x450/0a1a00/86efac?text=Better+Villages"
+          ],
+          "paragraphs": [
+            "Rework completo de las aldeas con diseños mucho más elaborados, nuevas variantes por bioma y mejoras de generación."
+          ]
+        },
+        {
+          "id": "illager-arena",
+          "name": "Illager Arena",
+          "images": [
+            "https://placehold.co/800x450/1a000d/f43f5e?text=Illager+Arena"
+          ],
+          "paragraphs": [
+            "Añade arenas de combate generadas en el mundo donde los Illagers organizan peleas. ¡Entra y demuestra tu valía!"
+          ]
+        },
+        {
+          "id": "nether-trials",
+          "name": "Nether Trials & Chambers",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Nether+Trials"
+          ],
+          "paragraphs": [
+            "Añade cámaras de prueba al estilo Trial Chambers pero en el Nether, con mecánicas y recompensas únicas."
+          ]
+        },
+        {
+          "id": "underwater-villages",
+          "name": "Underwater Villages",
+          "images": [
+            "https://placehold.co/800x450/00101a/38bdf8?text=Underwater+Villages"
+          ],
+          "paragraphs": [
+            "Genera aldeas submarinas habitadas por variantes acuáticas de aldeanos con comercio y estructuras adaptadas al océano."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Equipamiento y Utilidades",
+      "icon": "🎒",
+      "mods": [
+        {
+          "id": "artifacts",
+          "name": "Artifacts",
+          "images": [
+            "https://placehold.co/800x450/0d001a/c084fc?text=Artifacts"
+          ],
+          "paragraphs": [
+            "Añade numerosos objetos especiales y artefactos con habilidades únicas que se encuentran en el mundo. Cada hallazgo es una sorpresa."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "dynamic-caveman",
+          "name": "Dynamic Caveman",
+          "images": [
+            "https://placehold.co/800x450/0d0d00/eab308?text=Dynamic+Caveman"
+          ],
+          "paragraphs": [
+            "Sistema de progresión de habilidades para la exploración de cuevas. Mejora tus capacidades de minería con el tiempo."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
+          "id": "backported-spears",
+          "name": "Backported Spears",
+          "images": [
+            "https://placehold.co/800x450/0a0d00/a3e635?text=Backported+Spears"
+          ],
+          "paragraphs": [
+            "Añade lanzas al juego, trayendo de vuelta un arma clásica con físicas de lanzamiento únicas."
+          ]
+        },
+        {
+          "id": "just-hammers",
+          "name": "Just Hammers",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Just+Hammers"
+          ],
+          "paragraphs": [
+            "Añade martillos que minan en área 3x3, haciendo la minería en masa mucho más eficiente."
+          ]
+        },
+        {
+          "id": "mob-lassos",
+          "name": "Mob Lassos",
+          "images": [
+            "https://placehold.co/800x450/0d1400/84cc16?text=Mob+Lassos"
+          ],
+          "paragraphs": [
+            "Permite capturar criaturas con un lazo para transportarlas y soltarlas donde quieras. Ideal para crear granjas de mobs."
+          ]
+        },
+        {
+          "id": "grappling-hooks",
+          "name": "Yori3o's Grappling Hooks",
+          "images": [
+            "https://placehold.co/800x450/001a0d/4ade80?text=Grappling+Hooks"
+          ],
+          "paragraphs": [
+            "Garfios de distintos materiales para escalar paredes y columpiarse entre edificios. Exploración vertical al siguiente nivel."
+          ]
+        },
+        {
+          "id": "traveler-toolbelt",
+          "name": "Traveler Toolbelt",
+          "images": [
+            "https://placehold.co/800x450/0d0800/fbbf24?text=Traveler+Toolbelt"
+          ],
+          "paragraphs": [
+            "Añade un cinturón de herramientas con slots rápidos de acceso para tus utensilios favoritos sin llenar el inventario."
+          ]
+        },
+        {
+          "id": "travelers-backpack",
+          "name": "Traveler's Backpack",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Traveler%27s+Backpack"
+          ],
+          "paragraphs": [
+            "Mochilas personalizables con almacenamiento extra, tanques de fluidos y herramientas integradas. El compañero perfecto de exploración."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transporte",
+      "icon": "🐉",
+      "mods": [
+        {
+          "id": "dragon-mounts",
+          "name": "Dragon Mounts",
+          "images": [
+            "https://placehold.co/800x450/000d1a/38bdf8?text=Dragon+Mounts"
+          ],
+          "paragraphs": [
+            "Permite criar y montar dragones del End. Vuela sobre el mundo en una de las monturas más icónicas de los mods de Minecraft."
+          ]
+        },
+        {
+          "id": "tempad",
+          "name": "Tempad",
+          "images": [
+            "https://placehold.co/800x450/001a1a/2dd4bf?text=Tempad"
+          ],
+          "paragraphs": [
+            "Inspirado en la serie Loki de Marvel, el TemPad permite abrir portales a ubicaciones guardadas para teletransportarse al instante."
+          ]
+        },
+        {
+          "id": "ghast-update",
+          "name": "Ghast Update",
+          "images": [
+            "https://placehold.co/800x450/0a0a1a/818cf8?text=Ghast+Update"
+          ],
+          "paragraphs": [
+            "Rework completo de los Ghasts con nuevas variantes, comportamientos y la posibilidad de domesticar algunos tipos."
+          ]
+        },
+        {
+          "id": "wings-of-fire",
+          "name": "Wings Of Fire!",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=Wings+of+Fire"
+          ],
+          "paragraphs": [
+            "Añade dragones de distintas tribus inspirados en la serie Wings of Fire, cada uno con habilidades únicas y domesticables."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "QoL",
       "icon": "🔧",
       "mods": [
         {
-          "id": "jei",
-          "name": "Just Enough Items (JEI)",
+          "id": "lootr",
+          "name": "Lootr",
           "images": [
-            "https://placehold.co/800x450/00101a/60a5fa?text=Just+Enough+Items",
-            "https://placehold.co/800x450/00101a/3b82f6?text=JEI+-+Recipes"
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Lootr"
           ],
           "paragraphs": [
-            "El mod de recetas imprescindible. Muestra cómo craftear cualquier ítem del juego con soporte para todos los mods.",
-            "Permite buscar ítems, ver ingredientes necesarios y encontrar usos para cualquier material. Básico en cualquier modpack."
+            "Cada jugador tiene su propio loot en los cofres de estructuras generadas. Elimina la competencia por el botín en servidores."
           ]
         },
         {
-          "id": "waystones",
-          "name": "Waystones",
+          "id": "more-dragon-eggs",
+          "name": "More Dragon Eggs",
           "images": [
-            "https://placehold.co/800x450/00081a/818cf8?text=Waystones",
-            "https://placehold.co/800x450/00081a/6366f1?text=Waystones+-+Travel"
+            "https://placehold.co/800x450/00001a/6366f1?text=More+Dragon+Eggs"
           ],
           "paragraphs": [
-            "Piedras de teletransporte que puedes colocar en el mundo y compartir con tu equipo. Viajes instantáneos a cualquier waystone registrada.",
-            "Personaliza el nombre y el aspecto de cada piedra. Ideal para servidores grandes donde las bases están muy alejadas."
+            "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
           ]
         },
         {
-          "id": "storagedrawers",
-          "name": "Storage Drawers",
+          "id": "player-revive",
+          "name": "Player Revive",
           "images": [
-            "https://placehold.co/800x450/0d0800/fbbf24?text=Storage+Drawers",
-            "https://placehold.co/800x450/0d0800/f59e0b?text=Drawers+-+Compacting"
+            "https://placehold.co/800x450/001a0d/4ade80?text=Player+Revive"
           ],
           "paragraphs": [
-            "Sistema de almacenamiento visual con cajones que muestran el ítem y la cantidad directamente en el bloque.",
-            "Compactadores automáticos, cajones de controlador y variantes decorativas. Perfecto para organizar granjas de recursos."
+            "Al morir, los jugadores entran en estado de agonía durante unos segundos. Sus compañeros pueden revivirse antes de morir definitivamente."
+          ]
+        },
+        {
+          "id": "simple-corpse",
+          "name": "Simple Corpse",
+          "images": [
+            "https://placehold.co/800x450/0d000d/d946ef?text=Simple+Corpse"
+          ],
+          "paragraphs": [
+            "Al morir, tu inventario queda guardado en un cuerpo en el lugar de la muerte. Protege tus objetos durante un tiempo limitado."
+          ]
+        },
+        {
+          "id": "supplementaries",
+          "name": "Supplementaries",
+          "images": [
+            "https://placehold.co/800x450/0d0800/fbbf24?text=Supplementaries"
+          ],
+          "paragraphs": [
+            "Añade decenas de bloques decorativos y funcionales que complementan el estilo vanilla de Minecraft de forma elegante."
+          ]
+        },
+        {
+          "id": "amendments",
+          "name": "Amendments",
+          "images": [
+            "https://placehold.co/800x450/0d1400/84cc16?text=Amendments"
+          ],
+          "paragraphs": [
+            "Addon de Supplementaries que añade aún más bloques y objetos decorativos integrados con el estilo del mod principal."
+          ]
+        },
+        {
+          "id": "repeatable-vaults",
+          "name": "Repeatable Trial Vaults",
+          "images": [
+            "https://placehold.co/800x450/000d1a/60a5fa?text=Repeatable+Vaults"
+          ],
+          "paragraphs": [
+            "Permite que los Trial Vaults del juego base sean repetibles. Sigue obteniendo recompensas de las cámaras de prueba."
+          ]
+        },
+        {
+          "id": "villager-names",
+          "name": "Villager Names",
+          "images": [
+            "https://placehold.co/800x450/001a08/22c55e?text=Villager+Names"
+          ],
+          "paragraphs": [
+            "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
+          ]
+        },
+        {
+          "id": "piglin-names",
+          "name": "Piglin Names",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Piglin+Names"
+          ],
+          "paragraphs": [
+            "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
+          ]
+        },
+        {
+          "id": "natures-compass",
+          "name": "Nature's Compass",
+          "images": [
+            "https://placehold.co/800x450/0a1a00/86efac?text=Nature%27s+Compass"
+          ],
+          "paragraphs": [
+            "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
+          ]
+        },
+        {
+          "id": "explorers-compass",
+          "name": "Explorer's Compass",
+          "images": [
+            "https://placehold.co/800x450/001a08/4ade80?text=Explorer%27s+Compass"
+          ],
+          "paragraphs": [
+            "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
+          ]
+        },
+        {
+          "id": "easy-anvils",
+          "name": "Easy Anvils",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Easy+Anvils"
+          ],
+          "paragraphs": [
+            "Elimina el límite de coste de experiencia en los yunques y permite reparar objetos sin el fastidioso 'Too Expensive!'."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Resource Packs",
+      "icon": "🎨",
+      "mods": [
+        {
+          "id": "alternative-rain",
+          "name": "Alternative Rain Sounds",
+          "images": [
+            "https://placehold.co/800x450/001020/38bdf8?text=Alternative+Rain"
+          ],
+          "paragraphs": [
+            "Reemplaza los sonidos de lluvia de Minecraft por grabaciones de lluvia real de alta calidad. Inmersión sonora total."
+          ]
+        },
+        {
+          "id": "farcr-dirt",
+          "name": "Farcr's Better Dirt",
+          "images": [
+            "https://placehold.co/800x450/0d0800/92400e?text=Farcr%27s+Better+Dirt"
+          ],
+          "paragraphs": [
+            "Resource pack que mejora notablemente la textura de la tierra, haciéndola más detallada y natural."
+          ]
+        },
+        {
+          "id": "farcr-recrafted",
+          "name": "Farcr's Re-Crafted",
+          "images": [
+            "https://placehold.co/800x450/0d0900/d97706?text=Farcr%27s+Re-Crafted"
+          ],
+          "paragraphs": [
+            "Resource pack completo que rediseña numerosas texturas del juego base manteniendo la estética pixel art de Minecraft."
+          ]
+        },
+        {
+          "id": "low-on-fire",
+          "name": "Low On Fire",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=Low+On+Fire"
+          ],
+          "paragraphs": [
+            "Baja la posición de las llamas en pantalla cuando el jugador está ardiendo, mejorando la visibilidad en combate."
+          ]
+        },
+        {
+          "id": "lower-shield",
+          "name": "Lower Shield",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Lower+Shield"
+          ],
+          "paragraphs": [
+            "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
+          ]
+        },
+        {
+          "id": "undopia-zombies",
+          "name": "Undopia Zombies",
+          "images": [
+            "https://placehold.co/800x450/001a08/4ade80?text=Undopia+Zombies"
+          ],
+          "paragraphs": [
+            "Resource pack que añade variantes visuales de zombies con diferentes apariencias y ropa, haciendo los no-muertos más diversos."
+          ]
+        },
+        {
+          "id": "fancy-crops",
+          "name": "Fancy Crops",
+          "images": [
+            "https://placehold.co/800x450/0a1400/84cc16?text=Fancy+Crops"
+          ],
+          "paragraphs": [
+            "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
           ]
         }
       ]

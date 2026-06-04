@@ -57,14 +57,32 @@ function initBlobBg() {
   ];
 
   let W = 0, H = 0;
+  // Mouse tracking — normalized 0–1, smoothly lerped
+  let mouseNX = 0.5, mouseNY = 0.5;
+  let targetMX = 0.5, targetMY = 0.5;
+
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   window.addEventListener("resize", resize); resize();
+
+  window.addEventListener("mousemove", e => {
+    targetMX = e.clientX / window.innerWidth;
+    targetMY = e.clientY / window.innerHeight;
+  });
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
     const R = Math.min(W, H);
+
+    // Smooth mouse lerp (lazy follow)
+    mouseNX += (targetMX - mouseNX) * 0.025;
+    mouseNY += (targetMY - mouseNY) * 0.025;
+
     BLOBS.forEach(b => {
       b.x += b.vx; b.y += b.vy;
+      // Gentle attraction toward mouse cursor (each blob moves slightly toward it)
+      b.x += (mouseNX - b.x) * 0.0005;
+      b.y += (mouseNY - b.y) * 0.0005;
+      // Boundary bounce
       if (b.x < 0.05) b.vx = Math.abs(b.vx);
       if (b.x > 0.95) b.vx = -Math.abs(b.vx);
       if (b.y < 0.02) b.vy = Math.abs(b.vy);
@@ -108,14 +126,9 @@ function initGIS() {
   // (prevents modal from appearing on its own at page load)
   google.accounts.id.cancel();
 
-  // Render the corner header button (always visible, always works)
-  const cornerBtn = document.getElementById("google-login-btn");
-  if (cornerBtn) {
-    google.accounts.id.renderButton(cornerBtn, {
-      theme: "filled_black", size: "large", shape: "pill",
-      text: "signin_with", width: 200,
-    });
-  }
+  // Corner button: clicking it opens the auth modal instead of relying
+  // on GIS iframe overlay (which breaks due to FedCM/stacking context issues)
+  document.getElementById("login-wrapper")?.addEventListener("click", openAuthModal);
   // NOTE: The auth modal button is rendered lazily in openAuthModal()
   // because the element is hidden (display:none) at init time,
   // which means GIS cannot measure it → button renders broken.
@@ -439,8 +452,6 @@ function buildSection(section) {
   labelWrap.appendChild(label); labelWrap.appendChild(tag);
 
   const right = document.createElement("div"); right.className = "section-right";
-  const thumbsWrap = document.createElement("div"); thumbsWrap.className = "section-thumbs";
-  right.appendChild(thumbsWrap);
   const counter = document.createElement("span"); counter.className = "section-counter";
   counter.textContent = `01 / ${String(section.mods.length).padStart(2,"0")}`;
   right.appendChild(counter);
@@ -478,17 +489,6 @@ function buildSection(section) {
     return c.offsetWidth + parseInt(getComputedStyle(track).gap || "18");
   }
 
-  function updateThumbs(idx) {
-    thumbsWrap.innerHTML = "";
-    section.mods.slice(idx+1, idx+4).forEach((m, i) => {
-      const th = document.createElement("div"); th.className = "sthumb"; th.title = m.name;
-      const img = document.createElement("img"); img.src = m.images?.[0]||""; img.alt = m.name; img.loading="lazy";
-      img.onerror = () => { th.style.background="var(--glass)"; img.style.display="none"; };
-      th.appendChild(img);
-      th.addEventListener("click", () => scrollTo(idx+1+i));
-      thumbsWrap.appendChild(th);
-    });
-  }
 
   function scrollTo(idx) {
     const n = section.mods.length;
@@ -498,7 +498,6 @@ function buildSection(section) {
     dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.classList.toggle("active", i===currentIdx));
     prevBtn.disabled = currentIdx===0;
     nextBtn.disabled = currentIdx===n-1;
-    updateThumbs(currentIdx);
   }
 
   prevBtn.addEventListener("click", () => scrollTo(currentIdx-1));
@@ -512,7 +511,6 @@ function buildSection(section) {
       currentIdx = idx;
       counter.textContent = `${String(idx+1).padStart(2,"0")} / ${String(section.mods.length).padStart(2,"0")}`;
       dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.classList.toggle("active", i===idx));
-      updateThumbs(idx);
     }
   }, { passive:true });
 
@@ -810,7 +808,6 @@ function openModal(mod) {
   document.getElementById("modal-mod-name").textContent = mod.name;
   document.getElementById("modal-description").innerHTML =
     (mod.paragraphs||[]).map(p=>`<p>${escapeHtml(p)}</p>`).join("");
-  buildBentoGrid(mod);
   buildCarousel(mod);
   refreshModalScore(mod.id);
   refreshModalButtons();

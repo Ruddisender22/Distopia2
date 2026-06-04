@@ -231,7 +231,8 @@ async function fetchAggregateVotes() {
 async function loadUserVotesFromServer() {
   if (!currentUser) return;
   try {
-    const params = new URLSearchParams({ action: "getUserVotes", token: currentUser.token });
+    // Usamos 'sub' (ID corto) en vez del token JWT completo (demasiado largo para URL)
+    const params = new URLSearchParams({ action: "getUserVotes", sub: currentUser.sub });
     const targetUrl = `${APPS_SCRIPT_URL}?${params}`;
     const res = await fetch(PROXY_GET + encodeURIComponent(targetUrl), {
       headers: { Accept: "application/json" },
@@ -245,7 +246,6 @@ async function loadUserVotesFromServer() {
     console.log("[Distopia2] Votos usuario cargados:", data);
   } catch (e) {
     console.warn("[Distopia2] getUserVotes:", e.message);
-    // Aunque falle, marcamos como listo para no bloquear indefinidamente
   } finally {
     userVotesReady = true;
     refreshCardStates();
@@ -401,8 +401,8 @@ function refreshCardStates() {
 // ══════════════════════════════════════════════════════════════
 async function handleVote(modId, direction) {
   if (!currentUser) { showToast("🔐 Inicia sesión para votar"); return; }
-  if (!userVotesReady) { showToast("⏳ Cargando tus votos, espera..."); return; }
-  if (votingLocked.has(modId)) return;
+  if (!userVotesReady) { showToast("⏳ Cargando tus votos, un momento..."); return; }
+  if (votingLocked.has(modId)) { showToast("⏱️ Voto en cooldown, espera un momento"); return; }
   votingLocked.add(modId);
 
   const current = userVotes[modId] ?? 0;
@@ -434,13 +434,11 @@ async function handleVote(modId, direction) {
   upBtn?.classList.toggle("active", newMyVote === 1);
   dnBtn?.classList.toggle("active", newMyVote === -1);
 
-  // Badge: ocultar con animación si ya ha votado
+  // Badge: animar con partículas al votar
   const badge = document.getElementById(`badge-${modId}`);
   if (badge && newMyVote !== 0 && !badge.classList.contains("hidden")) {
-    badge.classList.add("hiding");
-    setTimeout(() => { badge.classList.add("hidden"); badge.classList.remove("hiding"); }, 420);
+    particleDisintegrate(badge);
   } else if (badge && newMyVote === 0) {
-    // Retiró el voto — mostrar badge de nuevo
     badge.classList.remove("hidden", "hiding");
   }
 
@@ -463,6 +461,62 @@ async function handleVote(modId, direction) {
   } catch (e) { console.warn("[Distopia2] POST error:", e.message); }
 
   setTimeout(() => votingLocked.delete(modId), 1500);
+}
+
+// ══════════════════════════════════════════════════════════════
+//  PARTÍCULAS — Desintegración del badge
+// ══════════════════════════════════════════════════════════════
+function particleDisintegrate(badge) {
+  const rect = badge.getBoundingClientRect();
+  const PARTICLE_COUNT = 22;
+
+  // Desvanecer el badge rápidamente
+  badge.style.transition = 'opacity 0.18s ease, transform 0.18s ease';
+  badge.style.opacity = '0';
+  badge.style.transform = 'scale(0.7)';
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    const p = document.createElement('div');
+    p.className = 'vote-particle';
+
+    // Posición aleatoria dentro del badge
+    const startX = rect.left + Math.random() * rect.width;
+    const startY = rect.top + Math.random() * rect.height;
+
+    // Velocidad en ángulo aleatorio
+    const angle = (Math.PI * 2 * i / PARTICLE_COUNT) + (Math.random() - 0.5) * 0.8;
+    const dist  = 25 + Math.random() * 70;
+    const dx = Math.cos(angle) * dist;
+    const dy = Math.sin(angle) * dist - (15 + Math.random() * 20); // bias hacia arriba
+
+    const size = 2 + Math.random() * 3.5;
+    const hue  = 20 + Math.random() * 40; // naranja → amarillo
+    const duration = 0.45 + Math.random() * 0.35;
+    const delay    = Math.random() * 0.12;
+
+    p.style.cssText = [
+      `position:fixed`,
+      `left:${startX}px`, `top:${startY}px`,
+      `width:${size}px`,  `height:${size}px`,
+      `border-radius:50%`,
+      `background:hsl(${hue},100%,62%)`,
+      `box-shadow:0 0 ${size * 2.5}px hsl(${hue},100%,62%)`,
+      `pointer-events:none`, `z-index:9999`,
+      `--dx:${dx}px`, `--dy:${dy}px`,
+      `animation:particleFly ${duration}s ${delay}s ease-out forwards`
+    ].join(';');
+
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), (duration + delay) * 1000 + 50);
+  }
+
+  // Ocultar badge después de la animación
+  setTimeout(() => {
+    badge.classList.add('hidden');
+    badge.style.opacity = '';
+    badge.style.transform = '';
+    badge.style.transition = '';
+  }, 300);
 }
 
 // ══════════════════════════════════════════════════════════════

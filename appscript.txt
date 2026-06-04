@@ -92,11 +92,16 @@ function doGet(e) {
     }
 
     if (action === "getUserVotes") {
-      const token = e.parameter && e.parameter.token;
-      if (!token) return respond({ error: "Token requerido" });
-      const payload = decodeJWT(token);
-      if (!payload || !payload.sub) return respond({ error: "Token inválido" });
-      const userSub = payload.sub;
+      // Acepta 'sub' directamente (más corto que el token completo)
+      // o extrae del token JWT si se prefiere
+      let userSub = e.parameter && e.parameter.sub;
+      if (!userSub) {
+        const token = e.parameter && e.parameter.token;
+        if (!token) return respond({ error: "Se requiere sub o token" });
+        const payload = decodeJWT(token);
+        if (!payload || !payload.sub) return respond({ error: "Token inválido" });
+        userSub = payload.sub;
+      }
 
       const sh   = getSheet(SHEET_USERS);
       const rows = sh.getDataRange().getValues();
@@ -207,8 +212,14 @@ function handleRegisterVote(userSub, email, modId, newVote) {
   // Escribir en VotosUsuarios
   const now = new Date().toISOString();
   if (userRowIdx !== -1) {
-    usersSh.getRange(userRowIdx, 3, 1, 3).setValues([[newVote, email, now]]);
-  } else {
+    if (newVote === 0) {
+      // Voto retirado → eliminar la fila para no dejar ceros
+      usersSh.deleteRow(userRowIdx);
+    } else {
+      usersSh.getRange(userRowIdx, 3, 1, 3).setValues([[newVote, email, now]]);
+    }
+  } else if (newVote !== 0) {
+    // Solo insertar fila si el voto es válido (1 o -1)
     usersSh.appendRow([userSub, modId, newVote, email, now]);
   }
 

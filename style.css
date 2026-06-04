@@ -517,14 +517,12 @@ body {
     80%      { transform: rotate(4deg); }
 }
 
-/* Animación de salida del badge */
-.unvoted-badge.hiding {
-    animation: badgeHide 0.42s cubic-bezier(0.4,0,1,1) forwards !important;
-}
-@keyframes badgeHide {
-    0%   { opacity: 1; transform: scale(1) translateY(0); }
-    40%  { opacity: 0.7; transform: scale(1.12) translateY(-2px); }
-    100% { opacity: 0; transform: scale(0.6) translateY(6px); }
+/* Animación de partículas de desintegración del badge */
+.vote-particle { will-change: transform, opacity; }
+@keyframes particleFly {
+    0%   { opacity: 1;   transform: translate(0, 0) scale(1); }
+    60%  { opacity: 0.6; }
+    100% { opacity: 0;   transform: translate(var(--dx), var(--dy)) scale(0); }
 }
 
 /* Botón de voto mientras cargan los votos del usuario */

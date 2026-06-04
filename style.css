@@ -4,15 +4,6 @@
    Mobile-First · Neon Accents · Aurora Background
    ================================================================ */
 
-@font-face {
-  font-family: 'Minecraftia';
-  src: url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/files/minecraft.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/files/minecraft.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ── Reset & Tokens ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 /* CRITICAL: [hidden] must always win over CSS display rules on modals */
@@ -62,9 +53,9 @@
   --r-pill: 999px;
 
   /* ── Typography ── */
-  --font-body: 'Minecraftia', 'Inter', system-ui, sans-serif;
-  --font-head: 'Minecraftia', 'Space Grotesk', system-ui, sans-serif;
-  --font-mc:   'Minecraftia', monospace;
+  --font-body: 'Minecraft', 'Inter', system-ui, sans-serif;
+  --font-head: 'Minecraft', 'Space Grotesk', system-ui, sans-serif;
+  --font-mc:   'Minecraft', monospace;
 
   /* ── Blur ── */
   --blur-sm: blur(12px);
@@ -80,9 +71,10 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 0.04em;
-  word-spacing: 0.15em;
-  line-height: 1.65;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.6;
+  font-size: 1.05rem; /* Increased base font size */
 }
 
 /* ── Canvas background ──────────────────────────────────────── */
@@ -274,8 +266,8 @@ body {
 .section-label-wrap { display: flex; align-items: center; gap: 0.75rem; }
 .section-label {
   font-family: var(--font-mc);
-  font-size: clamp(0.6rem, 1.1vw, 0.85rem);
-  font-weight: 400; letter-spacing: 0.04em;
+  font-size: clamp(0.7rem, 1.2vw, 0.95rem);
+  font-weight: 800; letter-spacing: 0.06em;
   line-height: 1.4;
   background: linear-gradient(110deg, #fff 0%, #c4b5fd 55%, #67e8f9 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -595,10 +587,10 @@ body {
 
 .modal-sheet {
   position: relative; width: 96%; max-width: 1500px; height: 92vh; max-height: 92vh;
-  background: linear-gradient(145deg, rgba(10,6,28,0.97), rgba(6,4,18,0.99));
-  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(10,6,28,0.95), rgba(6,4,18,0.97));
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--r-2xl);
-  box-shadow: 0 40px 100px rgba(0,0,0,0.75), 0 0 60px rgba(139,92,246,0.1);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 60px rgba(167,139,250,0.15), inset 0 1px 1px rgba(255,255,255,0.25), inset 0 0 30px rgba(167,139,250,0.08);
   overflow: hidden; display: flex; flex-direction: column;
   animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
 }
@@ -619,8 +611,12 @@ body {
   flex: 1; overflow: hidden; min-height: 0;
 }
 .modal-left {
-  border-right: 1px solid var(--border); overflow-y: auto;
-  scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+  background: rgba(255,255,255,0.035);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-right: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 12px 0 30px rgba(0,0,0,0.5); z-index: 5;
+  overflow-y: auto; position: relative;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.2) transparent;
 }
 .modal-left::-webkit-scrollbar { width: 3px; }
 .modal-left::-webkit-scrollbar-thumb { background: var(--border-h); border-radius: 2px; }
@@ -629,9 +625,9 @@ body {
 .modal-eyebrow { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.15em; color: var(--cyan); text-transform: uppercase; margin-bottom: 0.35rem; }
 .modal-title {
   font-family: var(--font-head);
-  font-size: clamp(1.15rem, 2.5vw, 1.7rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 800; color: var(--t1);
-  letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1rem;
+  letter-spacing: 0.02em; line-height: 1.2; margin-bottom: 1rem;
 }
 .modal-score-row { margin-bottom: 1.1rem; }
 .modal-score-card {
@@ -644,7 +640,7 @@ body {
 .modal-score-number.pos { color: var(--green); text-shadow: 0 0 16px rgba(74,222,128,0.65); }
 .modal-score-number.neg { color: var(--red);   text-shadow: 0 0 16px rgba(248,113,113,0.55); }
 .modal-score-label { font-size: 0.65rem; color: var(--t3); }
-.modal-desc { font-size: 0.8rem; line-height: 1.7; color: var(--t2); margin-bottom: 1.4rem; }
+.modal-desc { font-size: 1.05rem; line-height: 1.8; color: var(--t2); margin-bottom: 1.4rem; }
 .modal-desc p { margin-bottom: 0.7rem; }
 .modal-desc p:last-child { margin-bottom: 0; }
 
@@ -664,7 +660,7 @@ body {
 .action-btn:disabled { opacity: 0.32; cursor: not-allowed; }
 
 /* Bento grid — hidden (replaced by unified carousel) */
-.modal-right { position: relative; overflow: hidden; display: flex; flex-direction: column; background: rgba(0,0,0,0.2); }
+.modal-right { position: relative; overflow: hidden; display: flex; flex-direction: column; background: rgba(0,0,0,0.5); }
 .bento-grid { display: none !important; }
 
 /* Gallery carousel — visible on ALL screen sizes */

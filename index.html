@@ -69,6 +69,17 @@
             </div>
         </div>
         <div class="header-rule"></div>
+        <!-- ══ NAV TABS ══ -->
+        <nav class="site-nav" role="navigation" aria-label="Secciones principales">
+            <button class="nav-tab active" id="tab-votaciones" onclick="switchTab('votaciones')">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/><polyline points="6 9 12 15 18 9" opacity="0.4"/></svg>
+                Votaciones
+            </button>
+            <button class="nav-tab" id="tab-servidor" onclick="switchTab('servidor')">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                Servidor
+            </button>
+        </nav>
     </header>
 
     <!-- Hidden stats (JS compat layer) -->
@@ -79,13 +90,50 @@
         <span id="stat-hint"></span>
     </nav>
 
-    <!-- ══ MAIN CONTENT ══ -->
+    <!-- ══ MAIN CONTENT — Votaciones ══ -->
     <main id="app" role="main">
         <div class="loading-state" id="loading-screen">
             <div class="spinner-ring" aria-label="Cargando"></div>
             <p class="loading-text">Cargando mods…</p>
         </div>
     </main>
+
+    <!-- ══ SERVIDOR PAGE ══ -->
+    <section id="servidor-page" hidden aria-label="Servidor">
+        <div class="server-hero">
+            <div class="server-hero-inner">
+                <span class="server-eyebrow">DISTOPIA · TEMPORADA 2</span>
+                <h2 class="server-title">El Servidor</h2>
+                <p class="server-desc">Todo lo que necesitas saber sobre el servidor, sus mecánicas y normas. Las secciones se irán completando próximamente.</p>
+            </div>
+        </div>
+        <div class="server-sections">
+            <div class="server-card coming">
+                <div class="server-card-icon">🗺️</div>
+                <h3>Descripción del Servidor</h3>
+                <p>Mundo, temática, visión general del proyecto y primeros pasos para unirte.</p>
+                <span class="soon-tag">Próximamente</span>
+            </div>
+            <div class="server-card coming">
+                <div class="server-card-icon">⚙️</div>
+                <h3>Mecánicas Especiales</h3>
+                <p>Cambios respecto a Minecraft vanilla, sistemas propios y características únicas del servidor.</p>
+                <span class="soon-tag">Próximamente</span>
+            </div>
+            <div class="server-card coming">
+                <div class="server-card-icon">📦</div>
+                <h3>Lista de Mods</h3>
+                <p>Todos los mods confirmados del modpack con descripción, versión y enlace de descarga.</p>
+                <span class="soon-tag">Próximamente</span>
+            </div>
+            <div class="server-card coming">
+                <div class="server-card-icon">📋</div>
+                <h3>Reglas</h3>
+                <p>Normas de convivencia, sanciones y código de conducta del servidor.</p>
+                <span class="soon-tag">Próximamente</span>
+            </div>
+        </div>
+    </section>
 
     <!-- ══ MOD DETAIL MODAL — split layout ══ -->
     <div class="modal-backdrop" id="modal-overlay" hidden role="dialog" aria-modal="true" aria-label="Detalle del mod">

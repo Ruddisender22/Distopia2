@@ -2,6 +2,7 @@
   "sections": [
     {
       "name": "Tecnología y Automatización",
+      "icon": "⚙️",
       "mods": [
         {
           "id": "create",
@@ -57,6 +58,7 @@
     },
     {
       "name": "Magia y Encantamientos",
+      "icon": "✨",
       "mods": [
         {
           "id": "botania",
@@ -98,6 +100,7 @@
     },
     {
       "name": "Exploración y Mundo",
+      "icon": "🗺️",
       "mods": [
         {
           "id": "bop",
@@ -139,6 +142,7 @@
     },
     {
       "name": "Utilidades y Calidad de Vida",
+      "icon": "🔧",
       "mods": [
         {
           "id": "jei",

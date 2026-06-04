@@ -366,6 +366,7 @@ async function init() {
   initBlobBg();
   waitForGis();
   document.getElementById("logout-btn")?.addEventListener("click", logout);
+  document.getElementById("login-wrapper")?.addEventListener("click", openAuthModal);
   initAuthModal();
 
   // Check if returning from OAuth redirect (user just logged in via Google)
@@ -386,6 +387,31 @@ async function init() {
     console.error("[Distopia2]", err);
     hideLoading();
     showErrorState(err);
+  }
+}
+
+// ══════════════════════════════════════════════════════════════
+//  NAVIGATION — Tab switching
+// ══════════════════════════════════════════════════════════════
+function switchTab(tab) {
+  const votPage = document.getElementById('app');
+  const srvPage = document.getElementById('servidor-page');
+  const votTab  = document.getElementById('tab-votaciones');
+  const srvTab  = document.getElementById('tab-servidor');
+  const title   = document.querySelector('.header-title');
+
+  if (tab === 'votaciones') {
+    votPage?.removeAttribute('hidden');
+    srvPage?.setAttribute('hidden','');
+    votTab?.classList.add('active');
+    srvTab?.classList.remove('active');
+    if (title) title.textContent = 'Votaciones';
+  } else {
+    votPage?.setAttribute('hidden','');
+    srvPage?.removeAttribute('hidden');
+    votTab?.classList.remove('active');
+    srvTab?.classList.add('active');
+    if (title) title.textContent = 'El Servidor';
   }
 }
 
@@ -445,18 +471,26 @@ function buildSection(section) {
   const rule = document.createElement("div"); rule.className = "section-rule";
   block.appendChild(rule);
 
-  // Section header
+  // Section header with icon and aggregate score
   const head = document.createElement("div"); head.className = "section-head";
   const labelWrap = document.createElement("div"); labelWrap.className = "section-label-wrap";
+  if (section.icon) {
+    const iconEl = document.createElement("span"); iconEl.className = "section-icon"; iconEl.textContent = section.icon;
+    labelWrap.appendChild(iconEl);
+  }
   const label = document.createElement("h2"); label.className = "section-label"; label.textContent = section.name;
   const tag = document.createElement("span"); tag.className = "section-tag";
   tag.textContent = `${section.mods.length} ${section.mods.length!==1?"mods":"mod"}`;
   labelWrap.appendChild(label); labelWrap.appendChild(tag);
 
   const right = document.createElement("div"); right.className = "section-right";
+  const sectionScore = section.mods.reduce((acc, m) => acc + (localVotes[m.id] ?? 0), 0);
+  const scoreChip = document.createElement("div"); scoreChip.className = "section-score-chip";
+  scoreChip.id = `section-score-${section.mods.map(m=>m.id).join('-').substring(0,20)}`;
+  scoreChip.innerHTML = `<span class="sscore-val ${sectionScore > 0 ? 'pos' : sectionScore < 0 ? 'neg' : ''}">${sectionScore > 0 ? '+' : ''}${sectionScore}</span><span class="sscore-lbl">pts totales</span>`;
   const counter = document.createElement("span"); counter.className = "section-counter";
   counter.textContent = `01 / ${String(section.mods.length).padStart(2,"0")}`;
-  right.appendChild(counter);
+  right.appendChild(scoreChip); right.appendChild(counter);
 
   head.appendChild(labelWrap); head.appendChild(right);
   block.appendChild(head);
@@ -566,7 +600,17 @@ function buildCard(mod) {
   const titleRow = document.createElement("div"); titleRow.className = "mod-title-row";
   const nameEl = document.createElement("h3"); nameEl.className = "mod-name";
   nameEl.textContent = mod.name; nameEl.addEventListener("click", () => openModal(mod));
-  const typeTag = document.createElement("span"); typeTag.className = "mod-type-tag"; typeTag.textContent = "MOD";
+
+  // Status replaces generic "MOD" tag when present
+  const typeTag = document.createElement("span");
+  if (mod.status) {
+    const statusClsMap = { "CONFIRMADO": "status-confirmed", "NO DEFINITIVO": "status-pending", "ELIMINADO": "status-removed" };
+    typeTag.className = `mod-type-tag status-inline ${statusClsMap[mod.status] || ""}`;
+    typeTag.textContent = mod.status === "NO DEFINITIVO" ? "NO DEF." : mod.status;
+  } else {
+    typeTag.className = "mod-type-tag";
+    typeTag.textContent = "MOD";
+  }
   titleRow.appendChild(nameEl); titleRow.appendChild(typeTag); body.appendChild(titleRow);
 
   if (mod.paragraphs?.length > 0) {
@@ -584,27 +628,22 @@ function buildCard(mod) {
   body.appendChild(voteRow);
   card.appendChild(body);
 
-  // Status badge (CONFIRMADO / NO DEFINITIVO / ELIMINADO)
-  if (mod.status) {
-    const statusMap = {
-      "CONFIRMADO":    { cls: "status-confirmed", label: "CONFIRMADO" },
-      "NO DEFINITIVO": { cls: "status-pending",   label: "NO DEFINITIVO" },
-      "ELIMINADO":     { cls: "status-removed",   label: "ELIMINADO" },
-    };
-    const s = statusMap[mod.status];
-    if (s) {
-      const statusBadge = document.createElement("div");
-      statusBadge.className = `mod-status-badge ${s.cls}`;
-      statusBadge.textContent = s.label;
-      card.appendChild(statusBadge);
-    }
-  }
-
   const badge = document.createElement("div");
   badge.className = `unvoted-badge${(currentUser && userVotesReady && myVote===0) ? "" : " hidden"}`;
   badge.id = `badge-${mod.id}`;
   badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Vota</span>`;
   card.appendChild(badge);
+
+  // Mouse-tracking specular light (Apple glass effect)
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+    card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.setProperty('--mx', '50%');
+    card.style.setProperty('--my', '50%');
+  });
 
   return card;
 }

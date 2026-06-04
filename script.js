@@ -25,6 +25,19 @@ let currentUser = null;
 const votingLocked = new Set();
 let userVotesReady = false; // evita votos duplicados mientras carga
 
+// ─── PERSISTENCIA LOCAL DE VOTOS (localStorage) ──────────────────────
+const LS_PREFIX = 'distopia2_uv_';
+function lsGetVotes(sub) {
+  try { const d = localStorage.getItem(LS_PREFIX + sub); return d ? JSON.parse(d) : {}; }
+  catch { return {}; }
+}
+function lsSaveVotes(sub, votes) {
+  try { localStorage.setItem(LS_PREFIX + sub, JSON.stringify(votes)); } catch {}
+}
+function lsClearVotes(sub) {
+  try { localStorage.removeItem(LS_PREFIX + sub); } catch {}
+}
+
 
 // ══════════════════════════════════════════════════════════════
 //  FONDO — Blobs flotantes (estilo iOS/macOS Sonoma)
@@ -114,8 +127,6 @@ function initGIS() {
 
 // Callback cuando el usuario completa el Sign-In
 function handleCredentialResponse(response) {
-  // Decodificamos el JWT localmente (sin verificar firma —
-  // la integridad la garantiza Google entregando el token a través de HTTPS)
   const payload = parseJWT(response.credential);
   if (!payload) { showToast("⚠️ Error al procesar el token"); return; }
 
@@ -128,13 +139,22 @@ function handleCredentialResponse(response) {
     exp: payload.exp,
   };
 
+  // Cargamos votos guardados localmente — instantáneo, sin esperar al servidor
+  const cached = lsGetVotes(currentUser.sub);
+  const hasCached = Object.keys(cached).length > 0;
+  if (hasCached) {
+    userVotes = cached;
+    userVotesReady = true; // ya tenemos datos, habilitamos votos
+  } else {
+    userVotesReady = false; // sin caché, esperamos al servidor
+  }
+
   updateAuthUI(true);
-  userVotesReady = false; // bloquea votos hasta que carguemos los del servidor
-  refreshCardStates();   // desbloqueo inmediato
-  refreshModalButtons(); // actualizar modal si estaba abierto
+  refreshCardStates();
+  refreshModalButtons();
   document.getElementById("stat-hint")?.classList.add("hidden");
   showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
-  loadUserVotesFromServer();
+  loadUserVotesFromServer(); // sincroniza con servidor (actualiza/corrige localStorage)
 }
 
 function logout() {
@@ -231,7 +251,6 @@ async function fetchAggregateVotes() {
 async function loadUserVotesFromServer() {
   if (!currentUser) return;
   try {
-    // Usamos 'sub' (ID corto) en vez del token JWT completo (demasiado largo para URL)
     const params = new URLSearchParams({ action: "getUserVotes", sub: currentUser.sub });
     const targetUrl = `${APPS_SCRIPT_URL}?${params}`;
     const res = await fetch(PROXY_GET + encodeURIComponent(targetUrl), {
@@ -242,10 +261,13 @@ async function loadUserVotesFromServer() {
     const text = await res.text();
     const data = JSON.parse(text);
     if (data.error) throw new Error(data.error);
+    // El servidor es la fuente de verdad: sobrescribe localStorage
     userVotes = data;
-    console.log("[Distopia2] Votos usuario cargados:", data);
+    lsSaveVotes(currentUser.sub, data);
+    console.log("[Distopia2] Votos usuario sincronizados:", data);
   } catch (e) {
-    console.warn("[Distopia2] getUserVotes:", e.message);
+    console.warn("[Distopia2] getUserVotes (usar caché local):", e.message);
+    // Si falla el servidor, mantenemos el localStorage que ya cargamos
   } finally {
     userVotesReady = true;
     refreshCardStates();
@@ -441,6 +463,9 @@ async function handleVote(modId, direction) {
   } else if (badge && newMyVote === 0) {
     badge.classList.remove("hidden", "hiding");
   }
+
+  // Guardar estado de votos en localStorage
+  lsSaveVotes(currentUser.sub, userVotes);
 
   // Modal
   refreshModalScore(modId);

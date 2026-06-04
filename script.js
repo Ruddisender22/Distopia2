@@ -13,7 +13,7 @@ const GOOGLE_CLIENT_ID =
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbz2RtSxsb_HwurxvKLSXaz2wLin50Wf2Wx2L8y2FIl7r-mMdTh1rklIER9mnTb-Y0I/exec";
 const PROXY = "https://corsproxy.io/?";
-const GET_URL = PROXY + encodeURIComponent(APPS_SCRIPT_URL);
+// GET_URL se construye dinámicamente según la acción (ver fetchAggregateVotes / loadUserVotesFromServer)
 
 // ─── ESTADO ────────────────────────────────────────────────────
 let localVotes = {};
@@ -197,11 +197,13 @@ async function init() {
   }
 }
 
-// ── Votos agregados (público) ─────────────────────────────────
+// ── Votos agregados (público) ─────────────────────────────
 async function fetchAggregateVotes() {
+  // La URL completa (con ?action=getVotes) debe codificarse antes de pasarla al proxy
+  const targetUrl = `${APPS_SCRIPT_URL}?action=getVotes`;
   const urls = [
-    `${GET_URL}&${new URLSearchParams({ action: "getVotes" })}`,
-    `${APPS_SCRIPT_URL}?action=getVotes`,
+    PROXY + encodeURIComponent(targetUrl),
+    targetUrl, // fallback directo (puede fallar por CORS)
   ];
   for (const url of urls) {
     try {
@@ -212,18 +214,21 @@ async function fetchAggregateVotes() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       if (data.error) throw new Error(data.error);
+      console.log("[Distopia2] Votos cargados:", data);
       return data;
     } catch (e) { console.warn("[Distopia2] GET:", e.message); }
   }
   return {};
 }
 
-// ── Votos del usuario desde el servidor ──────────────────────
+// ── Votos del usuario desde el servidor ──────────────────
 async function loadUserVotesFromServer() {
   if (!currentUser) return;
   try {
+    // La URL completa con params debe codificarse antes de pasarla al proxy
     const params = new URLSearchParams({ action: "getUserVotes", token: currentUser.token });
-    const res = await fetch(`${GET_URL}&${params}`, {
+    const targetUrl = `${APPS_SCRIPT_URL}?${params}`;
+    const res = await fetch(PROXY + encodeURIComponent(targetUrl), {
       headers: { Accept: "application/json" },
       signal: AbortSignal.timeout(8000),
     });
@@ -231,6 +236,7 @@ async function loadUserVotesFromServer() {
     const data = await res.json();
     if (data.error) throw new Error(data.error);
     userVotes = data;
+    console.log("[Distopia2] Votos usuario cargados:", data);
     refreshCardStates();
     refreshModalButtons();
   } catch (e) { console.warn("[Distopia2] getUserVotes:", e.message); }
@@ -395,17 +401,18 @@ async function handleVote(modId, direction) {
   refreshModalButtons();
   updateStatsBar();
 
-  // Enviar al servidor
-  // IMPORTANTE: text/plain evita el preflight CORS con no-cors
-  // Enviamos 'vote' (valor final: 1, -1 o 0) para que el servidor calcule el delta real
+  // Enviar al servidor a través del proxy CORS para poder leer la respuesta
   try {
-    await fetch(APPS_SCRIPT_URL, {
+    const postBody = JSON.stringify({ id: modId, vote: newMyVote, token: currentUser.token, sub: currentUser.sub, email: currentUser.email });
+    console.log("[Distopia2] POST enviando:", { modId, vote: newMyVote, sub: currentUser.sub });
+    const res = await fetch(PROXY + encodeURIComponent(APPS_SCRIPT_URL), {
       method: "POST",
-      mode: "no-cors",
       headers: { "Content-Type": "text/plain" },
-      body: JSON.stringify({ id: modId, vote: newMyVote, token: currentUser.token, sub: currentUser.sub, email: currentUser.email }),
+      body: postBody,
     });
-  } catch (e) { console.warn("[Distopia2] POST:", e.message); }
+    const text = await res.text();
+    console.log("[Distopia2] POST respuesta:", text);
+  } catch (e) { console.warn("[Distopia2] POST error:", e.message); }
 
   setTimeout(() => votingLocked.delete(modId), 1500);
 }

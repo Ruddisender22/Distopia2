@@ -53,9 +53,9 @@
   --r-pill: 999px;
 
   /* ── Typography ── */
-  --font-body: 'Minecraft', 'Inter', system-ui, sans-serif;
-  --font-head: 'Minecraft', 'Space Grotesk', system-ui, sans-serif;
-  --font-mc:   'Minecraft', monospace;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-head: 'Outfit', 'Space Grotesk', system-ui, sans-serif;
+  --font-mc:   'Outfit', sans-serif;
 
   /* ── Blur ── */
   --blur-sm: blur(12px);
@@ -71,9 +71,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 0.05em;
-  word-spacing: 0.1em;
-  line-height: 1.6;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
   font-size: 1.05rem; /* Increased base font size */
 }
 
@@ -611,10 +610,11 @@ body {
   flex: 1; overflow: hidden; min-height: 0;
 }
 .modal-left {
-  background: rgba(255,255,255,0.035);
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border-right: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 12px 0 30px rgba(0,0,0,0.5); z-index: 5;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-right: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 15px 0 40px rgba(0,0,0,0.6), inset -1px 0 10px rgba(255,255,255,0.05);
+  z-index: 5;
   overflow-y: auto; position: relative;
   scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.2) transparent;
 }
@@ -660,7 +660,7 @@ body {
 .action-btn:disabled { opacity: 0.32; cursor: not-allowed; }
 
 /* Bento grid — hidden (replaced by unified carousel) */
-.modal-right { position: relative; overflow: hidden; display: flex; flex-direction: column; background: rgba(0,0,0,0.5); }
+.modal-right { position: relative; overflow: hidden; display: flex; flex-direction: column; background: radial-gradient(circle at center, rgba(15,10,35,0.85) 0%, rgba(5,3,15,0.98) 100%); }
 .bento-grid { display: none !important; }
 
 /* Gallery carousel — visible on ALL screen sizes */

@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "name": "Núcleo Industrial",
+      "mods": [
+        {
+          "id": "create",
+          "name": "Create",
+          "images": ["url_1.jpg", "url_2.jpg"],
+          "paragraphs": ["Primer párrafo de descripción...", "Segundo párrafo de contexto."],
+          "votes": 0 
+        }
+      ]
+    }
+  ]
+}

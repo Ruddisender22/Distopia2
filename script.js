@@ -101,6 +101,7 @@ function initGIS() {
     callback: handleCredentialResponse,
     auto_select: false,
     cancel_on_tap_outside: true,
+    use_fedcm_for_prompt: true,
   });
 
   // CRITICAL: cancel any auto One-Tap prompt
@@ -247,10 +248,16 @@ function openAuthModal() {
   const gisContainer = document.getElementById("google-login-btn-modal");
   if (gisContainer) { gisContainer.style.display = "none"; gisContainer.innerHTML = ""; }
 
+  // Show the modal
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
 
-  // After the modal is painted, render the GIS button directly inside it
+  // STRATEGY 1: Fire FedCM/One-Tap prompt immediately (fastest path)
+  if (gisReady) {
+    try { google.accounts.id.prompt(); } catch(e) { console.warn("[Distopia2] prompt() error:", e); }
+  }
+
+  // STRATEGY 2: Also render GIS button in modal as visual backup
   requestAnimationFrame(() => {
     requestAnimationFrame(() => renderGisModalButton());
   });
@@ -300,25 +307,64 @@ function initAuthModal() {
     }
   });
 
-  // Custom button fallback — if GIS renderButton failed, this button stays visible.
-  // Clicking it tries google.accounts.id.prompt() as a last resort.
+  // STRATEGY 3: Custom button fallback — OAuth2 redirect (always works)
   const authGoogleBtn = document.getElementById("auth-google-btn");
   if (authGoogleBtn) {
     authGoogleBtn.addEventListener("click", () => {
       if (!gisReady) {
-        showToast("⏳ Cargando Google Sign-In...");
+        // GIS not loaded yet — go straight to OAuth redirect
+        googleLoginRedirect();
         return;
       }
+      // Try prompt() one more time, fall back to redirect if blocked
+      let promptShown = false;
       google.accounts.id.prompt((notification) => {
-        if (notification.isNotDisplayed()) {
-          showToast("⚠️ No se pudo abrir Google Sign-In. Prueba el botón de la esquina superior.");
-          console.warn("[Distopia2] prompt() blocked:", notification.getNotDisplayedReason());
-        } else if (notification.isSkippedMoment()) {
-          console.warn("[Distopia2] prompt() skipped:", notification.getSkippedReason());
+        if (notification.isDisplayed()) {
+          promptShown = true;
+        } else if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+          if (!promptShown) {
+            console.warn("[Distopia2] prompt() blocked, falling back to OAuth redirect");
+            googleLoginRedirect();
+          }
         }
       });
     });
   }
+}
+
+// ══════════════════════════════════════════════════════════════
+//  OAUTH2 REDIRECT FALLBACK
+//  This is the nuclear option that ALWAYS works.
+//  Opens Google's OAuth page → user picks account → redirects back
+//  with id_token in URL hash → checkOAuthRedirect() picks it up.
+// ══════════════════════════════════════════════════════════════
+function googleLoginRedirect() {
+  const nonce = Math.random().toString(36).substring(2) + Date.now().toString(36);
+  const redirectUri = window.location.origin + window.location.pathname;
+  const params = new URLSearchParams({
+    client_id: GOOGLE_CLIENT_ID,
+    redirect_uri: redirectUri,
+    response_type: 'id_token',
+    scope: 'openid email profile',
+    nonce: nonce,
+    prompt: 'select_account',
+  });
+  window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?${params}`;
+}
+
+function checkOAuthRedirect() {
+  const hash = window.location.hash.substring(1);
+  if (!hash) return false;
+  const params = new URLSearchParams(hash);
+  const idToken = params.get('id_token');
+  if (idToken) {
+    // Clean the URL hash so it doesn't persist
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    // Process the token exactly like GIS would
+    handleCredentialResponse({ credential: idToken });
+    return true;
+  }
+  return false;
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -329,6 +375,9 @@ async function init() {
   waitForGis();
   document.getElementById("logout-btn")?.addEventListener("click", logout);
   initAuthModal();
+
+  // Check if returning from OAuth redirect (user just logged in via Google)
+  checkOAuthRedirect();
 
   try {
     const [dataRes, votes] = await Promise.all([

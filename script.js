@@ -36,55 +36,66 @@ function lsSaveVotes(sub, votes) {
 }
 
 // ══════════════════════════════════════════════════════════════
-//  AURORA BACKGROUND — Dark vibrant blobs
+//  FIRE SPARKS BACKGROUND
 // ══════════════════════════════════════════════════════════════
 function initBlobBg() {
   const canvas = document.getElementById("bg-canvas");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
 
-  // High-saturation, luminous blobs for dark background
-  const BLOBS = [
-    { x:0.15, y:0.20, r:0.52, vx:0.000072, vy:0.000058, h:268, s:88, l:62, a:0.34 },
-    { x:0.84, y:0.72, r:0.48, vx:-0.000058, vy:-0.000072, h:298, s:85, l:60, a:0.28 },
-    { x:0.52, y:0.04, r:0.42, vx:0.000092, vy:0.000082, h:200, s:90, l:65, a:0.24 },
-    { x:0.06, y:0.80, r:0.36, vx:0.000082, vy:-0.000062, h:22,  s:88, l:65, a:0.20 },
-    { x:0.92, y:0.16, r:0.32, vx:-0.000098, vy:0.000078, h:185, s:82, l:62, a:0.22 },
-    { x:0.62, y:0.92, r:0.34, vx:-0.000068, vy:-0.000088, h:330, s:86, l:68, a:0.18 },
-    { x:0.30, y:0.54, r:0.26, vx:0.000055, vy:0.000102, h:252, s:80, l:70, a:0.16 },
-    { x:0.75, y:0.38, r:0.22, vx:-0.000085, vy:0.000065, h:168, s:85, l:66, a:0.14 },
-    { x:0.42, y:0.75, r:0.20, vx:0.000110, vy:-0.000075, h:350, s:90, l:65, a:0.12 },
-  ];
-
   let W = 0, H = 0;
-
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   window.addEventListener("resize", resize); resize();
 
+  const sparks = [];
+  const numSparks = 85;
+
+  for (let i = 0; i < numSparks; i++) {
+    sparks.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 1.2,
+      vy: -(Math.random() * 1.5 + 0.5), // Float upwards
+      radius: Math.random() * 2.5 + 0.5,
+      alpha: Math.random() * 0.8 + 0.2,
+      fadeRate: Math.random() * 0.008 + 0.002,
+      hue: Math.random() < 0.5 ? 35 : (Math.random() < 0.5 ? 15 : 55), // Red, Orange, Yellow
+      swayOffset: Math.random() * Math.PI * 2,
+      swaySpeed: Math.random() * 0.03 + 0.01
+    });
+  }
+
   function draw() {
     ctx.clearRect(0, 0, W, H);
-    const R = Math.min(W, H);
 
-    BLOBS.forEach(b => {
-      b.x += b.vx; b.y += b.vy;
-      
-      // Boundary bounce (allow them to float slightly off-screen before bouncing)
-      if (b.x < -0.1) b.vx = Math.abs(b.vx);
-      if (b.x > 1.1)  b.vx = -Math.abs(b.vx);
-      if (b.y < -0.1) b.vy = Math.abs(b.vy);
-      if (b.y > 1.1)  b.vy = -Math.abs(b.vy);
-      const cx = b.x*W, cy = b.y*H, radius = b.r*R;
-      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
-      g.addColorStop(0,   `hsla(${b.h},${b.s}%,${b.l}%,${b.a})`);
-      g.addColorStop(0.45,`hsla(${b.h},${b.s}%,${b.l}%,${(b.a*0.45).toFixed(3)})`);
-      g.addColorStop(1,   `hsla(${b.h},${b.s}%,${b.l}%,0)`);
-      ctx.beginPath(); ctx.arc(cx, cy, radius, 0, Math.PI*2);
-      ctx.fillStyle = g; ctx.fill();
+    sparks.forEach(s => {
+      // Gentle horizontal sway + vertical rise
+      s.x += s.vx + Math.sin(s.swayOffset) * 0.4;
+      s.swayOffset += s.swaySpeed;
+      s.y += s.vy;
+      s.alpha -= s.fadeRate;
+
+      // Reset spark when it fades out or goes above screen
+      if (s.alpha <= 0 || s.y < -10) {
+        s.y = H + 10;
+        s.x = Math.random() * W;
+        s.alpha = Math.random() * 0.8 + 0.2;
+        s.radius = Math.random() * 2.5 + 0.5;
+        s.vx = (Math.random() - 0.5) * 1.2;
+        s.vy = -(Math.random() * 1.5 + 0.5);
+      }
+
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${s.hue}, 100%, 65%, ${s.alpha})`;
+      ctx.fill();
     });
+
     requestAnimationFrame(draw);
   }
   draw();
 }
+
 
 // ══════════════════════════════════════════════════════════════
 //  GOOGLE SIGN-IN

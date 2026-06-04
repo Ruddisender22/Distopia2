@@ -1,12 +1,10 @@
 /* ================================================================
-   DISTOPIA 2 — script.js v8
-   · Light-mode ambient blob background
-   · Auth wall: NEVER blocks on load — only on vote attempt
-   · Auth modal: premium two-column login panel
-   · Horizontal sliders with ghost-dot fix (ResizeObserver)
-   · Section thumbnail nav (upcoming mods preview)
-   · Vote: stamp press effect + monochromatic particles
-   · localStorage vote persistence + server sync
+   DISTOPIA 2 — script.js v9
+   Critical fix: Auth modal GIS lazy-render + auto-close on login
+   · Dark vibrant aurora background (high saturation blobs)
+   · Auth modal: NEVER auto-opens, lazy GIS render, auto-close
+   · Sliders: ghost-dot fix, thumbnail nav, counter
+   · Vote: stamp press + neon particles + localStorage + server
    ================================================================ */
 
 // ─── CONFIG ────────────────────────────────────────────────────
@@ -19,15 +17,16 @@ const PROXY_POST = "https://corsproxy.io/?";
 const PROXY_GET  = "https://api.allorigins.win/raw?url=";
 
 // ─── STATE ─────────────────────────────────────────────────────
-let localVotes = {};
-let userVotes  = {};
-let modData    = null;
+let localVotes  = {};
+let userVotes   = {};
+let modData     = null;
 let currentUser = null;
 const votingLocked = new Set();
 let userVotesReady = false;
+let gisReady = false; // GIS library fully loaded
 
-// ─── LOCALSTORAGE PERSISTENCE ───────────────────────────────────
-const LS_PREFIX = 'distopia2_uv_';
+// ─── LOCALSTORAGE ────────────────────────────────────────────────
+const LS_PREFIX = "distopia2_uv_";
 function lsGetVotes(sub) {
   try { const d = localStorage.getItem(LS_PREFIX+sub); return d ? JSON.parse(d) : {}; }
   catch { return {}; }
@@ -37,21 +36,24 @@ function lsSaveVotes(sub, votes) {
 }
 
 // ══════════════════════════════════════════════════════════════
-//  AMBIENT BACKGROUND — Light pastel blobs
+//  AURORA BACKGROUND — Dark vibrant blobs
 // ══════════════════════════════════════════════════════════════
 function initBlobBg() {
   const canvas = document.getElementById("bg-canvas");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
 
-  // Very light, desaturated blobs on a near-white background
+  // High-saturation, luminous blobs for dark background
   const BLOBS = [
-    { x:0.15, y:0.18, r:0.55, vx:0.000060, vy:0.000050, h:220, s:70, l:92, a:0.55 },
-    { x:0.85, y:0.75, r:0.50, vx:-0.000055, vy:-0.000065, h:270, s:65, l:93, a:0.45 },
-    { x:0.55, y:0.05, r:0.40, vx:0.000080, vy:0.000070, h:195, s:60, l:94, a:0.40 },
-    { x:0.05, y:0.82, r:0.38, vx:0.000070, vy:-0.000060, h:30,  s:60, l:94, a:0.35 },
-    { x:0.90, y:0.15, r:0.32, vx:-0.000090, vy:0.000070, h:180, s:55, l:95, a:0.30 },
-    { x:0.65, y:0.92, r:0.30, vx:-0.000065, vy:-0.000080, h:340, s:60, l:95, a:0.25 },
+    { x:0.15, y:0.20, r:0.52, vx:0.000072, vy:0.000058, h:268, s:88, l:62, a:0.34 },
+    { x:0.84, y:0.72, r:0.48, vx:-0.000058, vy:-0.000072, h:298, s:85, l:60, a:0.28 },
+    { x:0.52, y:0.04, r:0.42, vx:0.000092, vy:0.000082, h:200, s:90, l:65, a:0.24 },
+    { x:0.06, y:0.80, r:0.36, vx:0.000082, vy:-0.000062, h:22,  s:88, l:65, a:0.20 },
+    { x:0.92, y:0.16, r:0.32, vx:-0.000098, vy:0.000078, h:185, s:82, l:62, a:0.22 },
+    { x:0.62, y:0.92, r:0.34, vx:-0.000068, vy:-0.000088, h:330, s:86, l:68, a:0.18 },
+    { x:0.30, y:0.54, r:0.26, vx:0.000055, vy:0.000102, h:252, s:80, l:70, a:0.16 },
+    { x:0.75, y:0.38, r:0.22, vx:-0.000085, vy:0.000065, h:168, s:85, l:66, a:0.14 },
+    { x:0.42, y:0.75, r:0.20, vx:0.000110, vy:-0.000075, h:350, s:90, l:65, a:0.12 },
   ];
 
   let W = 0, H = 0;
@@ -59,10 +61,7 @@ function initBlobBg() {
   window.addEventListener("resize", resize); resize();
 
   function draw() {
-    // Light warm white base
-    ctx.fillStyle = "#F7F8FA";
-    ctx.fillRect(0, 0, W, H);
-
+    ctx.clearRect(0, 0, W, H);
     const R = Math.min(W, H);
     BLOBS.forEach(b => {
       b.x += b.vx; b.y += b.vy;
@@ -70,13 +69,12 @@ function initBlobBg() {
       if (b.x > 0.95) b.vx = -Math.abs(b.vx);
       if (b.y < 0.02) b.vy = Math.abs(b.vy);
       if (b.y > 0.98) b.vy = -Math.abs(b.vy);
-
       const cx = b.x*W, cy = b.y*H, radius = b.r*R;
-      const g = ctx.createRadialGradient(cx,cy,0,cx,cy,radius);
+      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
       g.addColorStop(0,   `hsla(${b.h},${b.s}%,${b.l}%,${b.a})`);
-      g.addColorStop(0.5, `hsla(${b.h},${b.s}%,${b.l}%,${(b.a*0.4).toFixed(3)})`);
+      g.addColorStop(0.45,`hsla(${b.h},${b.s}%,${b.l}%,${(b.a*0.45).toFixed(3)})`);
       g.addColorStop(1,   `hsla(${b.h},${b.s}%,${b.l}%,0)`);
-      ctx.beginPath(); ctx.arc(cx,cy,radius,0,Math.PI*2);
+      ctx.beginPath(); ctx.arc(cx, cy, radius, 0, Math.PI*2);
       ctx.fillStyle = g; ctx.fill();
     });
     requestAnimationFrame(draw);
@@ -88,46 +86,56 @@ function initBlobBg() {
 //  GOOGLE SIGN-IN
 // ══════════════════════════════════════════════════════════════
 function waitForGis() {
-  if (typeof google !== "undefined" && google.accounts) initGIS();
-  else setTimeout(waitForGis, 200);
+  if (typeof google !== "undefined" && google.accounts) {
+    gisReady = true;
+    initGIS();
+  } else {
+    setTimeout(waitForGis, 200);
+  }
 }
 
-let gisInitialized = false;
 function initGIS() {
-  if (gisInitialized) return;
-  gisInitialized = true;
-
+  // Only initialize once
   google.accounts.id.initialize({
     client_id: GOOGLE_CLIENT_ID,
     callback: handleCredentialResponse,
     auto_select: false,
     cancel_on_tap_outside: true,
-    // Prevent One Tap from auto-showing
-    itp_support: true,
   });
 
-  // Cancel any auto One Tap prompt
+  // CRITICAL: cancel any auto One-Tap prompt
+  // (prevents modal from appearing on its own at page load)
   google.accounts.id.cancel();
 
-  // Button in auth corner (header)
+  // Render the corner header button (always visible, always works)
   const cornerBtn = document.getElementById("google-login-btn");
   if (cornerBtn) {
     google.accounts.id.renderButton(cornerBtn, {
-      theme: "outline", size: "large", shape: "pill",
+      theme: "filled_black", size: "large", shape: "pill",
       text: "signin_with", width: 200,
     });
   }
-
-  // Button inside the auth modal
-  const modalBtn = document.getElementById("google-login-btn-modal");
-  if (modalBtn) {
-    google.accounts.id.renderButton(modalBtn, {
-      theme: "outline", size: "large", shape: "rectangular",
-      text: "signin_with", width: 280,
-    });
-  }
+  // NOTE: The auth modal button is rendered lazily in openAuthModal()
+  // because the element is hidden (display:none) at init time,
+  // which means GIS cannot measure it → button renders broken.
 }
 
+// ── THE FIX: lazy-render GIS button when auth modal becomes visible ──
+function renderGisModalButton() {
+  if (!gisReady) return;
+  const container = document.getElementById("google-login-btn-modal");
+  if (!container) return;
+  // Clear any previous render attempt
+  container.innerHTML = "";
+  // Use measured width after element is painted
+  const w = Math.min(container.clientWidth || 280, 320);
+  google.accounts.id.renderButton(container, {
+    theme: "filled_black", size: "large", shape: "rectangular",
+    text: "signin_with", width: w,
+  });
+}
+
+// ── Called by GIS when login completes (from corner OR modal button) ──
 function handleCredentialResponse(response) {
   const payload = parseJWT(response.credential);
   if (!payload) { showToast("⚠️ Error al procesar el token"); return; }
@@ -141,7 +149,7 @@ function handleCredentialResponse(response) {
     exp: payload.exp,
   };
 
-  // Load cached votes immediately
+  // Load cached votes immediately for instant UI update
   const cached = lsGetVotes(currentUser.sub);
   if (Object.keys(cached).length > 0) {
     userVotes = cached;
@@ -150,13 +158,15 @@ function handleCredentialResponse(response) {
     userVotesReady = false;
   }
 
-  // Close auth modal if open
+  // ── AUTO-CLOSE AUTH MODAL with fade-out animation ──
+  // This runs whether the user clicked the modal button OR the corner button.
   closeAuthModal();
 
   updateAuthUI(true);
   refreshCardStates();
   refreshModalButtons();
   showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
+  // Sync votes from server in background
   loadUserVotesFromServer();
 }
 
@@ -197,33 +207,71 @@ function parseJWT(token) {
 }
 
 // ══════════════════════════════════════════════════════════════
-//  AUTH MODAL — Premium login wall
-//  CRITICAL: ONLY opens when unauthenticated user tries to vote
-//            NEVER opens automatically on page load
+//  AUTH MODAL
+//  RULE: NEVER opens automatically on page load.
+//        ONLY opens when unauthenticated user tries to vote.
 // ══════════════════════════════════════════════════════════════
+let authModalCloseTimer = null;
+
 function openAuthModal() {
   const overlay = document.getElementById("auth-modal-overlay");
   if (!overlay) return;
+
+  // Remove closing class if re-opening quickly
+  overlay.classList.remove("closing");
+  const sheet = document.getElementById("auth-modal-panel");
+  sheet?.classList.remove("auth-modal-closing");
+
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
-  document.getElementById("auth-modal-panel")?.focus();
+
+  // ── LAZY GIS RENDER ──
+  // We do this AFTER the element is visible (has real dimensions).
+  // Double rAF ensures the browser has painted the element.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(renderGisModalButton);
+  });
 }
 
 function closeAuthModal() {
   const overlay = document.getElementById("auth-modal-overlay");
-  if (!overlay) return;
-  overlay.setAttribute("hidden","");
-  document.body.style.overflow = "";
+  const sheet   = document.getElementById("auth-modal-panel");
+  if (!overlay || overlay.hidden) return;
+
+  // Play fade-out animation, then hide
+  overlay.classList.add("closing");
+  sheet?.classList.add("auth-modal-closing");
+
+  clearTimeout(authModalCloseTimer);
+  authModalCloseTimer = setTimeout(() => {
+    overlay.setAttribute("hidden","");
+    overlay.classList.remove("closing");
+    sheet?.classList.remove("auth-modal-closing");
+    document.body.style.overflow = "";
+    // Clear GIS container so next open re-renders fresh
+    const container = document.getElementById("google-login-btn-modal");
+    if (container) container.innerHTML = "";
+  }, 260);
 }
 
 function initAuthModal() {
   const overlay  = document.getElementById("auth-modal-overlay");
   const closeBtn = document.getElementById("auth-modal-close");
   if (!overlay || !closeBtn) return;
+
+  // X button — always functional
   closeBtn.addEventListener("click", closeAuthModal);
-  overlay.addEventListener("click", e => { if (e.target===overlay) closeAuthModal(); });
+
+  // Click outside sheet to close
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) closeAuthModal();
+  });
+
+  // Escape key
   document.addEventListener("keydown", e => {
-    if (overlay && !overlay.hidden && e.key==="Escape") closeAuthModal();
+    if (overlay && !overlay.hidden && !overlay.classList.contains("closing") && e.key==="Escape") {
+      closeAuthModal();
+    }
   });
 }
 
@@ -254,7 +302,7 @@ async function init() {
   }
 }
 
-// ── Aggregate votes (public) ────────────────────────────────────
+// ── Aggregate votes ─────────────────────────────────────────────
 async function fetchAggregateVotes() {
   const targetUrl = `${APPS_SCRIPT_URL}?action=getVotes`;
   const urls = [PROXY_GET + encodeURIComponent(targetUrl), targetUrl];
@@ -270,7 +318,7 @@ async function fetchAggregateVotes() {
   return {};
 }
 
-// ── User votes from server ──────────────────────────────────────
+// ── User votes ──────────────────────────────────────────────────
 async function loadUserVotesFromServer() {
   if (!currentUser) return;
   try {
@@ -285,7 +333,7 @@ async function loadUserVotesFromServer() {
     lsSaveVotes(currentUser.sub, data);
     console.log("[Distopia2] Votos sincronizados:", data);
   } catch (e) {
-    console.warn("[Distopia2] getUserVotes (caché local):", e.message);
+    console.warn("[Distopia2] getUserVotes (caché):", e.message);
   } finally {
     userVotesReady = true;
     refreshCardStates();
@@ -303,77 +351,65 @@ function renderAll() {
 }
 
 function buildSection(section) {
-  const block = document.createElement("div");
-  block.className = "section-block";
+  const block = document.createElement("div"); block.className = "section-block";
 
-  // Horizontal rule
   const rule = document.createElement("div"); rule.className = "section-rule";
   block.appendChild(rule);
 
   // Section header
   const head = document.createElement("div"); head.className = "section-head";
-
   const labelWrap = document.createElement("div"); labelWrap.className = "section-label-wrap";
   const label = document.createElement("h2"); label.className = "section-label"; label.textContent = section.name;
-  const tag   = document.createElement("span"); tag.className = "section-tag";
+  const tag = document.createElement("span"); tag.className = "section-tag";
   tag.textContent = `${section.mods.length} ${section.mods.length!==1?"mods":"mod"}`;
   labelWrap.appendChild(label); labelWrap.appendChild(tag);
 
   const right = document.createElement("div"); right.className = "section-right";
-
-  // Thumbnail nav (desktop only) — shows upcoming mods
   const thumbsWrap = document.createElement("div"); thumbsWrap.className = "section-thumbs";
   right.appendChild(thumbsWrap);
-
-  // Counter
-  const counter = document.createElement("span");
-  counter.className = "section-counter";
+  const counter = document.createElement("span"); counter.className = "section-counter";
   counter.textContent = `01 / ${String(section.mods.length).padStart(2,"0")}`;
   right.appendChild(counter);
 
   head.appendChild(labelWrap); head.appendChild(right);
   block.appendChild(head);
 
-  // Slider viewport
+  // Slider
   const viewport = document.createElement("div"); viewport.className = "slider-viewport";
   const prevBtn = document.createElement("button"); prevBtn.className = "slider-nav prev"; prevBtn.innerHTML = "‹"; prevBtn.setAttribute("aria-label","Anterior");
   const nextBtn = document.createElement("button"); nextBtn.className = "slider-nav next"; nextBtn.innerHTML = "›"; nextBtn.setAttribute("aria-label","Siguiente");
   viewport.appendChild(prevBtn);
-
   const track = document.createElement("div"); track.className = "slider-track";
   section.mods.forEach(mod => track.appendChild(buildCard(mod)));
   viewport.appendChild(track);
   viewport.appendChild(nextBtn);
   block.appendChild(viewport);
 
-  // Dots (ghost-dot fix applied after layout)
+  // Dots
   const dotsWrap = document.createElement("div"); dotsWrap.className = "slider-dots";
   section.mods.forEach((_, i) => {
-    const dot = document.createElement("button"); dot.className = `sdot${i===0?" active":""}`;
-    dot.setAttribute("aria-label", `Mod ${i+1}`); dotsWrap.appendChild(dot);
+    const dot = document.createElement("button");
+    dot.className = `sdot${i===0?" active":""}`;
+    dot.setAttribute("aria-label", `Mod ${i+1}`);
+    dotsWrap.appendChild(dot);
   });
   block.appendChild(dotsWrap);
 
-  // Slider logic
+  // Logic
   let currentIdx = 0;
 
   function cardWidth() {
     const c = track.querySelector(".mod-card");
     if (!c) return 300;
-    const gap = parseInt(getComputedStyle(track).gap||"18");
-    return c.offsetWidth + gap;
+    return c.offsetWidth + parseInt(getComputedStyle(track).gap || "18");
   }
 
   function updateThumbs(idx) {
     thumbsWrap.innerHTML = "";
-    const nextMods = section.mods.slice(idx+1, idx+4);
-    nextMods.forEach((m, i) => {
-      const th = document.createElement("div"); th.className = "sthumb";
-      th.title = m.name; th.setAttribute("aria-label", m.name);
-      const img = document.createElement("img");
-      img.src = m.images?.[0] || "";
-      img.alt = m.name; img.loading = "lazy";
-      img.onerror = () => { th.style.background = "var(--bg2)"; img.style.display="none"; };
+    section.mods.slice(idx+1, idx+4).forEach((m, i) => {
+      const th = document.createElement("div"); th.className = "sthumb"; th.title = m.name;
+      const img = document.createElement("img"); img.src = m.images?.[0]||""; img.alt = m.name; img.loading="lazy";
+      img.onerror = () => { th.style.background="var(--glass)"; img.style.display="none"; };
       th.appendChild(img);
       th.addEventListener("click", () => scrollTo(idx+1+i));
       thumbsWrap.appendChild(th);
@@ -383,11 +419,11 @@ function buildSection(section) {
   function scrollTo(idx) {
     const n = section.mods.length;
     currentIdx = Math.max(0, Math.min(idx, n-1));
-    track.scrollTo({ left: currentIdx * cardWidth(), behavior: "smooth" });
+    track.scrollTo({ left: currentIdx * cardWidth(), behavior:"smooth" });
     counter.textContent = `${String(currentIdx+1).padStart(2,"0")} / ${String(n).padStart(2,"0")}`;
     dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.classList.toggle("active", i===currentIdx));
-    prevBtn.disabled = currentIdx === 0;
-    nextBtn.disabled = currentIdx === n-1;
+    prevBtn.disabled = currentIdx===0;
+    nextBtn.disabled = currentIdx===n-1;
     updateThumbs(currentIdx);
   }
 
@@ -395,7 +431,6 @@ function buildSection(section) {
   nextBtn.addEventListener("click", () => scrollTo(currentIdx+1));
   dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.addEventListener("click", () => scrollTo(i)));
 
-  // Sync on native scroll
   track.addEventListener("scroll", () => {
     const w = cardWidth(); if (!w) return;
     const idx = Math.round(track.scrollLeft / w);
@@ -407,28 +442,25 @@ function buildSection(section) {
     }
   }, { passive:true });
 
-  // ── Ghost-dot fix ──────────────────────────────────────────
-  // Hide dots when all cards fit in viewport (no scrolling needed)
-  function checkDotsNeeded() {
+  // ── GHOST-DOT FIX ──────────────────────────────────────────
+  // Hide dots + arrows when all cards fit with no scroll needed
+  function checkOverflow() {
     const hasOverflow = track.scrollWidth > track.clientWidth + 8;
     dotsWrap.style.display = hasOverflow ? "" : "none";
-    // Also hide nav buttons if no overflow
-    prevBtn.style.display = hasOverflow ? "" : "none";
-    nextBtn.style.display = hasOverflow ? "" : "none";
+    prevBtn.style.display  = hasOverflow ? "" : "none";
+    nextBtn.style.display  = hasOverflow ? "" : "none";
   }
-
-  // Check after paint
-  requestAnimationFrame(() => requestAnimationFrame(checkDotsNeeded));
-  window.addEventListener("resize", checkDotsNeeded, { passive:true });
+  // After layout paint
+  requestAnimationFrame(() => requestAnimationFrame(checkOverflow));
+  window.addEventListener("resize", checkOverflow, { passive:true });
 
   scrollTo(0);
-  updateThumbs(0);
   return block;
 }
 
 // ── Mod Card ────────────────────────────────────────────────────
 function buildCard(mod) {
-  const score = localVotes[mod.id] ?? 0;
+  const score  = localVotes[mod.id] ?? 0;
   const myVote = userVotes[mod.id] ?? 0;
   const card = document.createElement("article");
   card.className = "mod-card"; card.id = `card-${mod.id}`;
@@ -443,7 +475,7 @@ function buildCard(mod) {
     const img = document.createElement("img");
     img.src = mod.images[0]; img.alt = mod.name;
     img.className = "mod-thumb-img"; img.loading = "lazy"; img.decoding = "async";
-    img.onerror = () => { img.src = `https://placehold.co/800x450/F0F2F5/9CA3AF?text=${encodeURIComponent(mod.name)}`; };
+    img.onerror = () => { img.src = `https://placehold.co/800x450/07041a/4c3a8a?text=${encodeURIComponent(mod.name)}`; };
     thumb.appendChild(img);
     const hover = document.createElement("div"); hover.className = "thumb-hover";
     hover.innerHTML = `<span class="thumb-label">Ver detalle</span>`; thumb.appendChild(hover);
@@ -456,7 +488,6 @@ function buildCard(mod) {
     card.appendChild(thumb);
   }
 
-  // Body
   const body = document.createElement("div"); body.className = "mod-body";
   const titleRow = document.createElement("div"); titleRow.className = "mod-title-row";
   const nameEl = document.createElement("h3"); nameEl.className = "mod-name";
@@ -469,7 +500,6 @@ function buildCard(mod) {
     body.appendChild(ex);
   }
 
-  // Vote row
   const voteRow = document.createElement("div"); voteRow.className = "vote-row";
   const scorePill = document.createElement("div"); scorePill.className = "score-pill";
   scorePill.innerHTML = `<span class="score-val ${scoreClass(score)}" id="score-${mod.id}">${score}</span><span class="score-lbl">pts</span>`;
@@ -480,11 +510,10 @@ function buildCard(mod) {
   body.appendChild(voteRow);
   card.appendChild(body);
 
-  // Unvoted badge
   const badge = document.createElement("div");
   badge.className = `unvoted-badge${(currentUser && userVotesReady && myVote===0) ? "" : " hidden"}`;
   badge.id = `badge-${mod.id}`;
-  badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Votar</span>`;
+  badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Vota</span>`;
   card.appendChild(badge);
 
   return card;
@@ -501,7 +530,6 @@ function buildCardBtn(modId, dir, myVote) {
   if (!currentUser) {
     btn.className = "vote-btn-card locked"; btn.innerHTML = lockSVG;
     btn.title = "Inicia sesión para votar";
-    // Locked buttons open auth modal — NOT a toast, NOT blocking
     btn.onclick = e => { e.stopPropagation(); openAuthModal(); };
   } else {
     btn.className = `vote-btn-card ${dir===1?"up":"dn"}${myVote===dir?" active":""}`;
@@ -524,13 +552,12 @@ function refreshCardStates() {
     const myVote = userVotes[mod.id] ?? 0;
 
     const badge = document.getElementById(`badge-${mod.id}`);
-    const showBadge = currentUser && userVotesReady && myVote === 0;
-    if (badge) badge.classList.toggle("hidden", !showBadge);
+    if (badge) badge.classList.toggle("hidden", !(currentUser && userVotesReady && myVote===0));
 
     const card = document.getElementById(`card-${mod.id}`);
     if (card) {
-      card.classList.toggle("voted-up",   currentUser && myVote === 1);
-      card.classList.toggle("voted-down", currentUser && myVote === -1);
+      card.classList.toggle("voted-up",   currentUser && myVote===1);
+      card.classList.toggle("voted-down", currentUser && myVote===-1);
     }
 
     if (currentUser) {
@@ -561,10 +588,8 @@ async function handleVote(modId, direction) {
 
   const current = userVotes[modId] ?? 0;
   let delta, newMyVote;
-
   if (current === direction) {
-    delta = -direction; newMyVote = 0; delete userVotes[modId];
-    showToast("↩ Voto retirado");
+    delta = -direction; newMyVote = 0; delete userVotes[modId]; showToast("↩ Voto retirado");
   } else if (current === 0) {
     delta = direction; newMyVote = direction; userVotes[modId] = direction;
     showToast(direction===1 ? "✓ Voto positivo" : "✗ Voto negativo");
@@ -576,7 +601,7 @@ async function handleVote(modId, direction) {
   localVotes[modId] = (localVotes[modId] ?? 0) + delta;
   const newScore = localVotes[modId];
 
-  // Score update
+  // Score
   const scoreEl = document.getElementById(`score-${modId}`);
   if (scoreEl) {
     scoreEl.textContent = newScore;
@@ -584,17 +609,15 @@ async function handleVote(modId, direction) {
     setTimeout(() => scoreEl.classList.remove("bump"), 320);
   }
 
-  // Button states + stamp press animation
+  // Button states + stamp press
   const upBtn = document.getElementById(`up-${modId}`);
   const dnBtn = document.getElementById(`dn-${modId}`);
-  const pressedBtn = direction===1 ? upBtn : dnBtn;
   upBtn?.classList.toggle("active", newMyVote===1);
   dnBtn?.classList.toggle("active", newMyVote===-1);
-
-  // Stamp press effect
+  const pressedBtn = direction===1 ? upBtn : dnBtn;
   if (pressedBtn) {
     pressedBtn.classList.add("stamp");
-    setTimeout(() => pressedBtn.classList.remove("stamp"), 250);
+    setTimeout(() => pressedBtn.classList.remove("stamp"), 240);
   }
 
   // Card tint + shake
@@ -605,7 +628,7 @@ async function handleVote(modId, direction) {
     if (newMyVote === -1) card.classList.add("voted-down");
     requestAnimationFrame(() => {
       card.classList.add("shake");
-      setTimeout(() => card.classList.remove("shake"), 320);
+      setTimeout(() => card.classList.remove("shake"), 340);
     });
   }
 
@@ -614,7 +637,7 @@ async function handleVote(modId, direction) {
   if (badge && newMyVote !== 0 && !badge.classList.contains("hidden")) {
     particleDisintegrate(badge);
   } else if (badge && newMyVote === 0) {
-    badge.classList.remove("hidden","hiding");
+    badge.classList.remove("hidden");
   }
 
   lsSaveVotes(currentUser.sub, userVotes);
@@ -623,82 +646,55 @@ async function handleVote(modId, direction) {
   updateStatsBar();
 
   try {
-    const postBody = JSON.stringify({
-      id:modId, vote:newMyVote,
-      token:currentUser.token, sub:currentUser.sub, email:currentUser.email
-    });
-    console.log("[Distopia2] POST:", { modId, vote:newMyVote });
+    const body = JSON.stringify({ id:modId, vote:newMyVote, token:currentUser.token, sub:currentUser.sub, email:currentUser.email });
     const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
-      method:"POST", headers:{"Content-Type":"text/plain"}, body:postBody,
+      method:"POST", headers:{"Content-Type":"text/plain"}, body,
     });
-    console.log("[Distopia2] POST resp:", await res.text());
+    console.log("[Distopia2] POST:", await res.text());
   } catch (e) { console.warn("[Distopia2] POST error:", e.message); }
 
   setTimeout(() => votingLocked.delete(modId), 1500);
 }
 
 // ══════════════════════════════════════════════════════════════
-//  PARTICLES — Monochromatic premium (light theme)
+//  PARTICLES — Neon orange/gold disintegration
 // ══════════════════════════════════════════════════════════════
 function particleDisintegrate(badge) {
   const rect = badge.getBoundingClientRect();
-  const PARTICLE_COUNT = 20;
-
   badge.style.transition = "opacity 0.15s ease, transform 0.15s ease";
-  badge.style.opacity = "0";
-  badge.style.transform = "scale(0.7)";
+  badge.style.opacity = "0"; badge.style.transform = "scale(0.65)";
 
-  for (let i = 0; i < PARTICLE_COUNT; i++) {
-    const p = document.createElement("div");
-    p.className = "vote-particle";
-    const startX = rect.left + Math.random() * rect.width;
-    const startY = rect.top  + Math.random() * rect.height;
-    const angle  = (Math.PI*2*i/PARTICLE_COUNT) + (Math.random()-0.5)*0.8;
-    const dist   = 25 + Math.random()*65;
+  for (let i = 0; i < 24; i++) {
+    const p = document.createElement("div"); p.className = "vote-particle";
+    const startX = rect.left + Math.random()*rect.width;
+    const startY = rect.top  + Math.random()*rect.height;
+    const angle  = (Math.PI*2*i/24) + (Math.random()-0.5)*0.9;
+    const dist   = 28 + Math.random()*72;
     const dx = Math.cos(angle)*dist;
-    const dy = Math.sin(angle)*dist - (15+Math.random()*20);
-
-    const size     = 1.5 + Math.random()*3;
-    const duration = 0.38 + Math.random()*0.35;
-    const delay    = Math.random()*0.09;
-
-    // Monochromatic: silver to near-white to cobalt blue accent
-    const type = Math.random();
-    let color;
-    if (type < 0.6) {
-      // Silver/gray
-      const l = 50 + Math.random()*45;
-      color = `hsl(220,8%,${l}%)`;
-    } else if (type < 0.85) {
-      // Near white
-      color = `hsl(0,0%,${85+Math.random()*15}%)`;
-    } else {
-      // Blue accent
-      color = `hsl(220,80%,${55+Math.random()*20}%)`;
-    }
+    const dy = Math.sin(angle)*dist - (16+Math.random()*24);
+    const size = 1.8 + Math.random()*3.5;
+    const hue  = 18 + Math.random()*38;   // orange→amber
+    const dur  = 0.4 + Math.random()*0.4;
+    const del  = Math.random()*0.1;
 
     p.style.cssText = [
-      `position:fixed`,
-      `left:${startX}px`,`top:${startY}px`,
-      `width:${size}px`,`height:${size}px`,
-      `border-radius:50%`,
-      `background:${color}`,
-      `box-shadow:0 0 ${size*2}px ${color}`,
+      `position:fixed`,`left:${startX}px`,`top:${startY}px`,
+      `width:${size}px`,`height:${size}px`,`border-radius:50%`,
+      `background:hsl(${hue},100%,60%)`,
+      `box-shadow:0 0 ${size*2.5}px hsl(${hue},100%,60%)`,
       `pointer-events:none`,`z-index:9999`,
       `--dx:${dx}px`,`--dy:${dy}px`,
-      `animation:particleFly ${duration}s ${delay}s ease-out forwards`
+      `animation:particleFly ${dur}s ${del}s ease-out forwards`
     ].join(";");
 
     document.body.appendChild(p);
-    setTimeout(() => p.remove(), (duration+delay)*1000+60);
+    setTimeout(() => p.remove(), (dur+del)*1000+80);
   }
 
   setTimeout(() => {
     badge.classList.add("hidden");
-    badge.style.opacity = "";
-    badge.style.transform = "";
-    badge.style.transition = "";
-  }, 270);
+    badge.style.opacity = ""; badge.style.transform = ""; badge.style.transition = "";
+  }, 280);
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -709,41 +705,34 @@ let currentModalMod = null, carouselIdx = 0, touchStartX = 0;
 function initModal() {
   const overlay  = document.getElementById("modal-overlay");
   const closeBtn = document.getElementById("modal-close");
-  const prevBtn  = document.getElementById("carousel-prev");
-  const nextBtn  = document.getElementById("carousel-next");
-  const track    = document.getElementById("modal-carousel-track");
   if (!overlay || !closeBtn) return;
 
   closeBtn.addEventListener("click", closeModal);
   overlay.addEventListener("click", e => { if (e.target===overlay) closeModal(); });
   document.addEventListener("keydown", e => {
     if (!overlay || overlay.hidden) return;
-    if (e.key==="Escape")      closeModal();
-    if (e.key==="ArrowLeft")   carouselGo(carouselIdx-1);
-    if (e.key==="ArrowRight")  carouselGo(carouselIdx+1);
+    if (e.key==="Escape") closeModal();
+    if (e.key==="ArrowLeft")  carouselGo(carouselIdx-1);
+    if (e.key==="ArrowRight") carouselGo(carouselIdx+1);
   });
-  prevBtn?.addEventListener("click", () => carouselGo(carouselIdx-1));
-  nextBtn?.addEventListener("click", () => carouselGo(carouselIdx+1));
+  document.getElementById("carousel-prev")?.addEventListener("click", () => carouselGo(carouselIdx-1));
+  document.getElementById("carousel-next")?.addEventListener("click", () => carouselGo(carouselIdx+1));
+  const track = document.getElementById("modal-carousel-track");
   track?.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive:true });
-  track?.addEventListener("touchend", e => {
-    const dx = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(dx)>40) carouselGo(carouselIdx+(dx>0?1:-1));
-  });
-  document.getElementById("modal-upvote-btn")?.addEventListener("click",   () => { if (currentModalMod) handleVote(currentModalMod.id, 1); });
-  document.getElementById("modal-downvote-btn")?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, -1); });
-  document.getElementById("modal-upvote-btn-m")?.addEventListener("click",   () => { if (currentModalMod) handleVote(currentModalMod.id, 1); });
-  document.getElementById("modal-downvote-btn-m")?.addEventListener("click", () => { if (currentModalMod) handleVote(currentModalMod.id, -1); });
+  track?.addEventListener("touchend", e => { const dx = touchStartX - e.changedTouches[0].clientX; if (Math.abs(dx)>40) carouselGo(carouselIdx+(dx>0?1:-1)); });
+  document.getElementById("modal-upvote-btn")?.addEventListener("click",   () => { if(currentModalMod) handleVote(currentModalMod.id, 1); });
+  document.getElementById("modal-downvote-btn")?.addEventListener("click", () => { if(currentModalMod) handleVote(currentModalMod.id, -1); });
+  document.getElementById("modal-upvote-btn-m")?.addEventListener("click",   () => { if(currentModalMod) handleVote(currentModalMod.id, 1); });
+  document.getElementById("modal-downvote-btn-m")?.addEventListener("click", () => { if(currentModalMod) handleVote(currentModalMod.id, -1); });
 }
 
 function openModal(mod) {
   currentModalMod = mod; carouselIdx = 0;
   const overlay = document.getElementById("modal-overlay");
   if (!overlay) return;
-
   document.getElementById("modal-mod-name").textContent = mod.name;
   document.getElementById("modal-description").innerHTML =
     (mod.paragraphs||[]).map(p=>`<p>${escapeHtml(p)}</p>`).join("");
-
   buildBentoGrid(mod);
   buildCarousel(mod);
   refreshModalScore(mod.id);
@@ -757,18 +746,15 @@ function buildBentoGrid(mod) {
   const bento = document.getElementById("modal-bento");
   if (!bento) return;
   bento.innerHTML = "";
-  const images = mod.images || [];
+  const images = mod.images||[];
   const count  = Math.min(images.length, 4);
   bento.className = `bento-grid count-${count||1}`;
-
-  (count > 0 ? images.slice(0,count) : ["placeholder"]).forEach((src,i) => {
+  (count>0 ? images.slice(0,count) : ["placeholder"]).forEach((src,i) => {
     const item = document.createElement("div"); item.className = "bento-item";
     const img  = document.createElement("img");
-    img.src = src==="placeholder"
-      ? `https://placehold.co/800x450/F0F2F5/9CA3AF?text=${encodeURIComponent(mod.name)}`
-      : src;
+    img.src = src==="placeholder" ? `https://placehold.co/800x450/07041a/4c3a8a?text=${encodeURIComponent(mod.name)}` : src;
     img.alt = `${mod.name} — imagen ${i+1}`; img.loading="lazy";
-    img.onerror = () => { img.src = `https://placehold.co/800x450/F0F2F5/9CA3AF?text=Sin+imagen`; };
+    img.onerror=()=>{ img.src=`https://placehold.co/800x450/07041a/4c3a8a?text=Sin+imagen`; };
     item.appendChild(img); bento.appendChild(item);
   });
 }
@@ -780,25 +766,22 @@ function buildCarousel(mod) {
   const prevBtn = document.getElementById("carousel-prev");
   const nextBtn = document.getElementById("carousel-next");
   if (!track) return;
-
-  track.innerHTML = ""; if (dots) dots.innerHTML = "";
-  (mod.images||[]).forEach((src,i) => {
-    const slide = document.createElement("div"); slide.className = "gallery-slide";
-    const img   = document.createElement("img");
-    img.src=src; img.alt=`${mod.name} ${i+1}`; img.loading="lazy";
-    img.onerror=()=>{ img.src=`https://placehold.co/800x450/F0F2F5/9CA3AF?text=Sin+imagen`; };
+  track.innerHTML=""; if(dots) dots.innerHTML="";
+  (mod.images||[]).forEach((src,i)=>{
+    const slide = document.createElement("div"); slide.className="gallery-slide";
+    const img   = document.createElement("img"); img.src=src; img.alt=`${mod.name} ${i+1}`; img.loading="lazy";
+    img.onerror=()=>{ img.src=`https://placehold.co/800x450/07041a/4c3a8a?text=Sin+imagen`; };
     slide.appendChild(img); track.appendChild(slide);
-    if (dots && (mod.images||[]).length>1) {
-      const dot = document.createElement("button");
-      dot.className=`gallery-dot${i===0?" active":""}`; dot.setAttribute("aria-label",`Imagen ${i+1}`);
+    if(dots&&(mod.images||[]).length>1){
+      const dot=document.createElement("button"); dot.className=`gallery-dot${i===0?" active":""}`; dot.setAttribute("aria-label",`Imagen ${i+1}`);
       dot.addEventListener("click",()=>carouselGo(i)); dots.appendChild(dot);
     }
   });
-  const multi = (mod.images||[]).length > 1;
-  if (prevBtn) prevBtn.hidden = !multi;
-  if (nextBtn) nextBtn.hidden = !multi;
-  if (!multi && dots) dots.innerHTML="";
-  if (counter) counter.textContent = multi ? `1 / ${mod.images.length}` : "";
+  const multi=(mod.images||[]).length>1;
+  if(prevBtn) prevBtn.hidden=!multi;
+  if(nextBtn) nextBtn.hidden=!multi;
+  if(!multi&&dots) dots.innerHTML="";
+  if(counter) counter.textContent=multi?`1 / ${mod.images.length}`:"";
 }
 
 function closeModal() {
@@ -808,80 +791,68 @@ function closeModal() {
 }
 
 function carouselGo(idx) {
-  const imgs = currentModalMod?.images||[];
-  if (imgs.length<=1) return;
-  carouselIdx = ((idx%imgs.length)+imgs.length)%imgs.length;
-  const track = document.getElementById("modal-carousel-track");
-  if (track) track.style.transform=`translateX(-${carouselIdx*100}%)`;
-  const counter = document.getElementById("carousel-counter");
-  if (counter) counter.textContent=`${carouselIdx+1} / ${imgs.length}`;
+  const imgs=currentModalMod?.images||[]; if(imgs.length<=1) return;
+  carouselIdx=((idx%imgs.length)+imgs.length)%imgs.length;
+  const track=document.getElementById("modal-carousel-track");
+  if(track) track.style.transform=`translateX(-${carouselIdx*100}%)`;
+  const counter=document.getElementById("carousel-counter");
+  if(counter) counter.textContent=`${carouselIdx+1} / ${imgs.length}`;
   document.getElementById("carousel-dots")?.querySelectorAll(".gallery-dot")
     .forEach((d,i)=>d.classList.toggle("active",i===carouselIdx));
 }
 
 function refreshModalScore(modId) {
-  if (!currentModalMod || currentModalMod.id!==modId) return;
+  if(!currentModalMod||currentModalMod.id!==modId) return;
   const score=localVotes[modId]??0;
-  const cls = score>0?" pos":score<0?" neg":"";
-  const el  = document.getElementById("modal-vote-score");
-  const elm = document.getElementById("modal-vote-score-m");
-  if (el)  { el.textContent=score;  el.className=`modal-score-number${cls}`; }
-  if (elm) elm.textContent=score;
+  const cls=score>0?" pos":score<0?" neg":"";
+  const el=document.getElementById("modal-vote-score");
+  const elm=document.getElementById("modal-vote-score-m");
+  if(el){el.textContent=score; el.className=`modal-score-number${cls}`;}
+  if(elm) elm.textContent=score;
 }
 
 function refreshModalButtons() {
-  if (!currentModalMod) return;
-  const myVote = userVotes[currentModalMod.id]??0;
-  const upBtn  = document.getElementById("modal-upvote-btn");
-  const dnBtn  = document.getElementById("modal-downvote-btn");
-  const upBtnM = document.getElementById("modal-upvote-btn-m");
-  const dnBtnM = document.getElementById("modal-downvote-btn-m");
-  [upBtn,upBtnM].forEach(b=>{if(!b)return; b.disabled=!currentUser; b.classList.toggle("active",myVote===1);});
-  [dnBtn,dnBtnM].forEach(b=>{if(!b)return; b.disabled=!currentUser; b.classList.toggle("active",myVote===-1);});
+  if(!currentModalMod) return;
+  const myVote=userVotes[currentModalMod.id]??0;
+  [["modal-upvote-btn",1],["modal-downvote-btn",-1],["modal-upvote-btn-m",1],["modal-downvote-btn-m",-1]].forEach(([id,dir])=>{
+    const b=document.getElementById(id); if(!b) return;
+    b.disabled=!currentUser; b.classList.toggle("active",myVote===dir);
+  });
 }
 
 // ══════════════════════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════════════════════
-function scoreClass(s) { return s>0?"pos":s<0?"neg":""; }
+function scoreClass(s){ return s>0?"pos":s<0?"neg":""; }
 
 function updateStatsBar() {
-  if (!modData) return;
+  if(!modData) return;
   const totalMods  = modData.sections.reduce((a,s)=>a+s.mods.length,0);
   const totalVotes = Object.values(localVotes).reduce((a,v)=>a+Math.abs(v),0);
-  // Compat IDs (sr-only)
-  const sm=document.getElementById("stat-mods");
-  const sv=document.getElementById("stat-votes");
-  const ss=document.getElementById("stat-sections");
-  if(sm) sm.textContent=`${totalMods} mods`;
-  if(sv) sv.textContent=`${totalVotes} votos`;
-  if(ss) ss.textContent=`${modData.sections.length} secciones`;
-  // Visible header stats
-  const smv=document.getElementById("stat-mods-val");
-  const svv=document.getElementById("stat-votes-val");
-  const ssv=document.getElementById("stat-sections-val");
-  if(smv) smv.textContent=totalMods;
-  if(svv) svv.textContent=totalVotes;
-  if(ssv) ssv.textContent=modData.sections.length;
+  const sm=document.getElementById("stat-mods-val");   if(sm) sm.textContent=totalMods;
+  const sv=document.getElementById("stat-votes-val");  if(sv) sv.textContent=totalVotes;
+  const ss=document.getElementById("stat-sections-val"); if(ss) ss.textContent=modData.sections.length;
+  const smh=document.getElementById("stat-mods");   if(smh) smh.textContent=`${totalMods} mods`;
+  const svh=document.getElementById("stat-votes");  if(svh) svh.textContent=`${totalVotes} votos`;
+  const ssh=document.getElementById("stat-sections"); if(ssh) ssh.textContent=`${modData.sections.length} secciones`;
 }
 
-function hideLoading() { document.getElementById("loading-screen")?.remove(); }
-function showErrorState(err) {
-  document.getElementById("app").innerHTML =
+function hideLoading(){ document.getElementById("loading-screen")?.remove(); }
+function showErrorState(err){
+  document.getElementById("app").innerHTML=
     `<div class="error-state"><h2>⚠️ Error al cargar</h2><p>Revisa la consola (F12).</p><pre>${escapeHtml(String(err))}</pre></div>`;
 }
 
-let toastTimer = null;
-function showToast(msg) {
+let toastTimer=null;
+function showToast(msg){
   const t=document.getElementById("toast"); if(!t) return;
   t.textContent=msg; t.classList.add("show");
   clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove("show"),2800);
 }
 
-function escapeHtml(s) {
+function escapeHtml(s){
   if(typeof s!=="string") return "";
-  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
-          .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 }
 
 // ── Boot ──────────────────────────────────────────────────────

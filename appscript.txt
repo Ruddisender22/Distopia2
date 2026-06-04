@@ -54,7 +54,7 @@ function respond(data) {
 }
 
 // ══════════════════════════════════════════════════════════════
-//  doGet — ?action=getVotes | getUserVotes | ping
+//  doGet — ?action=getVotes | getUserVotes | ping | debug
 // ══════════════════════════════════════════════════════════════
 function doGet(e) {
   const action = (e.parameter && e.parameter.action) || "getVotes";
@@ -63,6 +63,20 @@ function doGet(e) {
   try {
     if (action === "ping") {
       return respond({ ok: true, timestamp: new Date().toISOString() });
+    }
+
+    // ── DEBUG: devuelve el contenido RAW de ambas hojas ──────────
+    if (action === "debug") {
+      const ss      = SpreadsheetApp.openById(SHEET_ID);
+      const shV     = ss.getSheetByName(SHEET_VOTES);
+      const shU     = ss.getSheetByName(SHEET_USERS);
+      return respond({
+        sheetId:      SHEET_ID,
+        spreadsheetName: ss.getName(),
+        votos:        shV ? shV.getDataRange().getValues() : "hoja no existe",
+        votosUsuarios:shU ? shU.getDataRange().getValues() : "hoja no existe",
+        timestamp:    new Date().toISOString()
+      });
     }
 
     if (action === "getVotes") {
@@ -104,6 +118,7 @@ function doGet(e) {
     return respond({ error: err.message });
   }
 }
+
 
 // ══════════════════════════════════════════════════════════════
 //  doPost — Registrar / cambiar / retirar un voto

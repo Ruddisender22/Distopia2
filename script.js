@@ -23,6 +23,8 @@ let userVotes = {};
 let modData = null;
 let currentUser = null;
 const votingLocked = new Set();
+let userVotesReady = false; // evita votos duplicados mientras carga
+
 
 // ══════════════════════════════════════════════════════════════
 //  FONDO — Blobs flotantes (estilo iOS/macOS Sonoma)
@@ -127,6 +129,7 @@ function handleCredentialResponse(response) {
   };
 
   updateAuthUI(true);
+  userVotesReady = false; // bloquea votos hasta que carguemos los del servidor
   refreshCardStates();   // desbloqueo inmediato
   refreshModalButtons(); // actualizar modal si estaba abierto
   document.getElementById("stat-hint")?.classList.add("hidden");
@@ -136,7 +139,7 @@ function handleCredentialResponse(response) {
 
 function logout() {
   if (typeof google !== "undefined") google.accounts.id.disableAutoSelect();
-  currentUser = null; userVotes = {}; votingLocked.clear();
+  currentUser = null; userVotes = {}; votingLocked.clear(); userVotesReady = false;
   updateAuthUI(false);
   refreshCardStates();
   refreshModalButtons();
@@ -240,9 +243,14 @@ async function loadUserVotesFromServer() {
     if (data.error) throw new Error(data.error);
     userVotes = data;
     console.log("[Distopia2] Votos usuario cargados:", data);
+  } catch (e) {
+    console.warn("[Distopia2] getUserVotes:", e.message);
+    // Aunque falle, marcamos como listo para no bloquear indefinidamente
+  } finally {
+    userVotesReady = true;
     refreshCardStates();
     refreshModalButtons();
-  } catch (e) { console.warn("[Distopia2] getUserVotes:", e.message); }
+  }
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -340,14 +348,15 @@ function buildCardBtn(modId, dir, myVote) {
   const dnSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>`;
   const lockSVG = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
 
+  // Siempre usar onclick (no addEventListener) para que refreshCardStates lo sobrescriba limpiamente
   if (!currentUser) {
     btn.className = "vote-btn-card locked"; btn.innerHTML = lockSVG;
     btn.title = "Inicia sesión para votar";
-    btn.addEventListener("click", e => { e.stopPropagation(); showToast("🔐 Inicia sesión para votar"); });
+    btn.onclick = e => { e.stopPropagation(); showToast("🔐 Inicia sesión para votar"); };
   } else {
     btn.className = `vote-btn-card ${dir === 1 ? "up" : "dn"}${myVote === dir ? " active" : ""}`;
     btn.innerHTML = dir === 1 ? upSVG : dnSVG;
-    btn.addEventListener("click", e => { e.stopPropagation(); handleVote(modId, dir); });
+    btn.onclick = e => { e.stopPropagation(); handleVote(modId, dir); };
   }
   return btn;
 }
@@ -364,15 +373,18 @@ function refreshCardStates() {
     if (!upBtn || !dnBtn) return;
     const myVote = userVotes[mod.id] ?? 0;
 
-    // Badge "sin votar"
+    // Badge "sin votar" — mostrar solo si logueado, votes listos y sin voto
     const badge = document.getElementById(`badge-${mod.id}`);
-    if (badge) badge.classList.toggle("hidden", !currentUser || myVote !== 0);
+    const shouldShowBadge = currentUser && userVotesReady && myVote === 0;
+    if (badge) badge.classList.toggle("hidden", !shouldShowBadge);
 
     if (currentUser) {
+      // Si los votos del usuario aún no han cargado, deshabilitar para evitar duplicados
+      const waitingLoad = !userVotesReady;
       [[upBtn, 1, "up", upSVG], [dnBtn, -1, "dn", dnSVG]].forEach(([btn, dir, cls, svg]) => {
-        btn.className = `vote-btn-card ${cls}${myVote === dir ? " active" : ""}`;
-        btn.innerHTML = svg; btn.title = ""; btn.disabled = false;
-        btn.onclick = e => { e.stopPropagation(); handleVote(mod.id, dir); };
+        btn.className = `vote-btn-card ${cls}${myVote === dir ? " active" : ""}${waitingLoad ? " loading" : ""}`;
+        btn.innerHTML = svg; btn.title = waitingLoad ? "Cargando votos..." : ""; btn.disabled = waitingLoad;
+        btn.onclick = waitingLoad ? null : (e => { e.stopPropagation(); handleVote(mod.id, dir); });
       });
     } else {
       [upBtn, dnBtn].forEach(btn => {
@@ -389,6 +401,7 @@ function refreshCardStates() {
 // ══════════════════════════════════════════════════════════════
 async function handleVote(modId, direction) {
   if (!currentUser) { showToast("🔐 Inicia sesión para votar"); return; }
+  if (!userVotesReady) { showToast("⏳ Cargando tus votos, espera..."); return; }
   if (votingLocked.has(modId)) return;
   votingLocked.add(modId);
 
@@ -420,6 +433,16 @@ async function handleVote(modId, direction) {
   const dnBtn = document.getElementById(`dn-${modId}`);
   upBtn?.classList.toggle("active", newMyVote === 1);
   dnBtn?.classList.toggle("active", newMyVote === -1);
+
+  // Badge: ocultar con animación si ya ha votado
+  const badge = document.getElementById(`badge-${modId}`);
+  if (badge && newMyVote !== 0 && !badge.classList.contains("hidden")) {
+    badge.classList.add("hiding");
+    setTimeout(() => { badge.classList.add("hidden"); badge.classList.remove("hiding"); }, 420);
+  } else if (badge && newMyVote === 0) {
+    // Retiró el voto — mostrar badge de nuevo
+    badge.classList.remove("hidden", "hiding");
+  }
 
   // Modal
   refreshModalScore(modId);

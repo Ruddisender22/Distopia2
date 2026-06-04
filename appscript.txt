@@ -11,7 +11,7 @@
 //   7. Copia la URL de la aplicación web y pégala en script.js.
 // ================================================================
 
-const SHEET_ID   = "TU_SHEET_ID_AQUI";   // ← Reemplaza esto
+const SHEET_ID   = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";   // ← Reemplaza esto
 const SHEET_NAME = "Votos";              // ← Nombre de tu hoja
 
 // ── Función auxiliar: headers CORS ─────────────────────────────

@@ -9,7 +9,7 @@
 // Pega aquí la URL de tu Web App de Google Apps Script
 // (Desplegar > Implementar como aplicación web > URL)
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyTn0kvhWm6Jk-qQAHg__HSaZ8D5C5cb_EFEcUjWLXH3EafZGxz7ymrxgYCZBupkP_8/exec";
+  "https://script.google.com/macros/s/AKfycbzvKM00NP_Ise1FRdubQY6TY6EhFIAeNLV3-Z3Omas4PcY6WZRLS3Bt9MJzMb8n3zU/exec";
 
 // corsproxy.io sólo se usa para el GET (leer votos).
 // Para el POST usamos no-cors directamente (el Apps Script no bloquea POST).

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+        .card { border: 1px solid #ccc; padding: 15px; border-radius: 8px; text-align: center; }
+        img { width: 100px; height: 100px; object-fit: cover; }
+        button { margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div id="app" class="grid"></div>
+
+    <script>
+        const API_URL = "https://script.google.com/macros/s/AKfycbyTn0kvhWm6Jk-qQAHg__HSaZ8D5C5cb_EFEcUjWLXH3EafZGxz7ymrxgYCZBupkP_8/exec"; // Pega aquí la URL del paso 2
+
+        async function loadMods() {
+            const response = await fetch(API_URL);
+            const data = await response.json();
+            const container = document.getElementById('app');
+            
+            data.slice(1).forEach(row => {
+                const [id, name, img, desc, votes] = row;
+                container.innerHTML += `
+                    <div class="card">
+                        <img src="${img}">
+                        <h3>${name}</h3>
+                        <p>${desc}</p>
+                        <p>Votos: <strong>${votes}</strong></p>
+                        <button onclick="vote('${id}', 1)">👍</button>
+                        <button onclick="vote('${id}', -1)">👎</button>
+                    </div>`;
+            });
+        }
+
+        function vote(id, change) {
+            fetch(API_URL, {
+                method: 'POST',
+                body: JSON.stringify({id, change})
+            }).then(() => location.reload());
+        }
+
+        loadMods();
+    </script>
+</body>
+</html>

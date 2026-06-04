@@ -252,12 +252,7 @@ function openAuthModal() {
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
 
-  // STRATEGY 1: Fire FedCM/One-Tap prompt immediately (fastest path)
-  if (gisReady) {
-    try { google.accounts.id.prompt(); } catch(e) { console.warn("[Distopia2] prompt() error:", e); }
-  }
-
-  // STRATEGY 2: Also render GIS button in modal as visual backup
+  // Render GIS button in modal as visual backup (no prompt() - causes FedCM loop)
   requestAnimationFrame(() => {
     requestAnimationFrame(() => renderGisModalButton());
   });
@@ -307,27 +302,11 @@ function initAuthModal() {
     }
   });
 
-  // STRATEGY 3: Custom button fallback — OAuth2 redirect (always works)
+  // Custom button: go DIRECTLY to OAuth2 redirect — no prompt(), no FedCM issues
   const authGoogleBtn = document.getElementById("auth-google-btn");
   if (authGoogleBtn) {
     authGoogleBtn.addEventListener("click", () => {
-      if (!gisReady) {
-        // GIS not loaded yet — go straight to OAuth redirect
-        googleLoginRedirect();
-        return;
-      }
-      // Try prompt() one more time, fall back to redirect if blocked
-      let promptShown = false;
-      google.accounts.id.prompt((notification) => {
-        if (notification.isDisplayed()) {
-          promptShown = true;
-        } else if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
-          if (!promptShown) {
-            console.warn("[Distopia2] prompt() blocked, falling back to OAuth redirect");
-            googleLoginRedirect();
-          }
-        }
-      });
+      googleLoginRedirect();
     });
   }
 }

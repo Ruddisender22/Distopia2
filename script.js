@@ -242,13 +242,10 @@ function openAuthModal() {
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
 
-  // Wire the custom button (idempotent — remove+add to avoid duplicate listeners)
-  wireCustomGoogleButton();
-
-  // ALSO attempt lazy GIS render as enhancement:
-  // double rAF ensures element is fully painted before GIS measures it
+  // Position the always-functional corner GIS iframe OVER the modal button.
+  // Two rAFs guarantee the modal is painted and the button has real coordinates.
   requestAnimationFrame(() => {
-    requestAnimationFrame(renderGisModalButton);
+    requestAnimationFrame(overlayCornerGisOnModalButton);
   });
 }
 
@@ -256,6 +253,9 @@ function closeAuthModal() {
   const overlay = document.getElementById("auth-modal-overlay");
   const sheet   = document.getElementById("auth-modal-panel");
   if (!overlay || overlay.hidden) return;
+
+  // ── Restore corner GIS button immediately (don't wait for animation) ──
+  restoreCornerGis();
 
   overlay.classList.add("closing");
   sheet?.classList.add("auth-modal-closing");
@@ -274,24 +274,63 @@ function closeAuthModal() {
   }, 260);
 }
 
-// ── Wire custom Google button — calls prompt() which ALWAYS works ──
-let _customBtnWired = false;
-function wireCustomGoogleButton() {
-  const btn = document.getElementById("auth-google-btn");
-  if (!btn) return;
-  // Replace to drop old listeners
-  const fresh = btn.cloneNode(true);
-  btn.parentNode.replaceChild(fresh, btn);
-  fresh.addEventListener("click", () => {
-    if (!gisReady) { showToast("⚠️ Google no disponible. Recarga la página."); return; }
-    // google.accounts.id.prompt() opens Google's account chooser reliably
-    google.accounts.id.prompt(notification => {
-      if (notification.isNotDisplayed()) {
-        // One-Tap suppressed — try the corner button as fallback
-        showToast("⚠️ Usa el botón de Google de la esquina si no abre el selector");
-      }
-    });
+// ══════════════════════════════════════════════════════════════
+//  GIS OVERLAY TRICK — The only 100% reliable Google login method
+//
+//  google.accounts.id.prompt() can be suppressed by Google when:
+//  • User dismissed One-Tap ≥2 times in 24h (cooldown)
+//  • FedCM / third-party cookies blocked
+//  • Browser privacy settings
+//
+//  Solution: take the corner GIS iframe (rendered correctly at boot,
+//  always functional) and position it invisibly OVER the modal button.
+//  Clicking the pretty button → clicks the real GIS iframe → Google
+//  account chooser opens. Cannot be blocked.
+// ══════════════════════════════════════════════════════════════
+function overlayCornerGisOnModalButton() {
+  const wrapper = document.getElementById("login-wrapper");
+  const target  = document.getElementById("auth-google-btn");
+  if (!wrapper || !target) return;
+
+  const rect = target.getBoundingClientRect();
+  // Bail if modal isn't painted yet (coords would be 0)
+  if (rect.width < 10 || rect.height < 10) {
+    setTimeout(overlayCornerGisOnModalButton, 60);
+    return;
+  }
+
+  // Place the GIS wrapper exactly over the modal button, invisible but clickable
+  Object.assign(wrapper.style, {
+    position:     "fixed",
+    left:         rect.left   + "px",
+    top:          rect.top    + "px",
+    width:        rect.width  + "px",
+    height:       rect.height + "px",
+    opacity:      "0.001",           // invisible yet the iframe captures clicks
+    zIndex:       "220",             // above auth modal (z-index: 210)
+    borderRadius: "8px",
+    overflow:     "hidden",
+    pointerEvents:"all",
+    transform:    "none",
   });
+
+  // Make the inner GIS overlay fill the new size
+  const gisInner = document.getElementById("google-login-btn");
+  if (gisInner) {
+    Object.assign(gisInner.style, {
+      position: "absolute", inset: "0",
+      width: "100%", height: "100%",
+    });
+  }
+}
+
+function restoreCornerGis() {
+  const wrapper = document.getElementById("login-wrapper");
+  if (!wrapper) return;
+  // Clear all inline styles — CSS rules take over again
+  wrapper.removeAttribute("style");
+  const gisInner = document.getElementById("google-login-btn");
+  if (gisInner) gisInner.removeAttribute("style");
 }
 
 function initAuthModal() {

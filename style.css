@@ -53,9 +53,9 @@
   --r-pill: 999px;
 
   /* ── Typography ── */
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-head: 'Space Grotesk', 'Inter', system-ui, sans-serif;
-  --font-mc:   'Press Start 2P', monospace;
+  --font-body: 'Minecraft', 'Inter', system-ui, sans-serif;
+  --font-head: 'Minecraft', 'Space Grotesk', system-ui, sans-serif;
+  --font-mc:   'Minecraft', monospace;
 
   /* ── Blur ── */
   --blur-sm: blur(12px);
@@ -319,7 +319,8 @@ body {
 
 .slider-track {
   display: flex; gap: 1.1rem;
-  padding: 0.75rem 2rem 1.5rem;
+  padding: 0.75rem 3.5rem 1.5rem;
+  scroll-padding-inline: 3.5rem;
   scroll-snap-type: x mandatory; overflow-x: auto; scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; scrollbar-width: none;
 }
@@ -581,7 +582,7 @@ body {
 @keyframes backdropIn { from{opacity:0} to{opacity:1} }
 
 .modal-sheet {
-  position: relative; width: 100%; max-width: 1060px; max-height: 88vh;
+  position: relative; width: 96%; max-width: 1500px; height: 92vh; max-height: 92vh;
   background: linear-gradient(145deg, rgba(10,6,28,0.97), rgba(6,4,18,0.99));
   border: 1px solid var(--border);
   border-radius: var(--r-2xl);
@@ -602,7 +603,7 @@ body {
 .modal-close-btn:hover { background: rgba(248,113,113,0.18); border-color: rgba(248,113,113,0.5); color: var(--red); }
 
 .modal-split {
-  display: grid; grid-template-columns: 1fr 1.12fr;
+  display: grid; grid-template-columns: clamp(320px, 28%, 420px) 1fr;
   flex: 1; overflow: hidden; min-height: 0;
 }
 .modal-left {
@@ -666,8 +667,8 @@ body {
   transition: transform 0.32s cubic-bezier(0.25,0.46,0.45,0.94);
   will-change: transform;
 }
-.gallery-slide { flex: 0 0 100%; height: 100%; }
-.gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-slide { flex: 0 0 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.gallery-slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .gallery-nav {
   position: absolute; top: 50%; transform: translateY(-50%);
   background: rgba(0,0,0,0.55); border: 1px solid var(--border-h); border-radius: 50%;

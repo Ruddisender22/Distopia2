@@ -1,102 +1,246 @@
 // ================================================================
-// DISTOPIA 2 — Google Apps Script (pegar en script.google.com)
+// DISTOPIA 2 — Google Apps Script v3
+// Soporte: Google Login (JWT) + votos por usuario
 // ================================================================
-// Instrucciones de despliegue:
-//   1. Ve a https://script.google.com y abre tu proyecto.
-//   2. Reemplaza TODO el contenido con este código.
-//   3. Ve a Desplegar > Administrar implementaciones > editar la
-//      existente (o crear nueva) > Guardar > Copiar nueva URL.
-//   4. "Ejecutar como": Tu cuenta.
-//   5. "Acceso": Cualquier usuario (incluso anónimo).
+// Instrucciones:
+//   1. Pega este código en script.google.com (tu proyecto)
+//   2. Cambia SHEET_ID, SHEET_NAME_VOTES, SHEET_NAME_USERS y CLIENT_ID
+//   3. Desplegar > Administrar implementaciones > Nueva versión
+//   4. Ejecutar como: Tu cuenta | Acceso: Cualquier usuario
 // ================================================================
 
-const SHEET_ID   = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";
-const SHEET_NAME = "Votos";
+const SHEET_ID          = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";
+const SHEET_NAME_VOTES  = "Votos";        // Hoja 1: totales agregados
+const SHEET_NAME_USERS  = "VotosUsuarios"; // Hoja 2: votos por usuario
+// Tu Client ID de Google Cloud (debe coincidir con el del frontend)
+const OAUTH_CLIENT_ID   = "TU_CLIENT_ID.apps.googleusercontent.com";
 
-// ── Helper: obtiene (o crea) la hoja automáticamente ───────────
-// Esto soluciona el error "Cannot read properties of null"
-function getOrCreateSheet() {
+// ── Obtiene o crea una hoja por nombre ─────────────────────────
+function getOrCreate(name) {
   const ss = SpreadsheetApp.openById(SHEET_ID);
-  let sheet = ss.getSheetByName(SHEET_NAME);
-
+  let sheet = ss.getSheetByName(name);
   if (!sheet) {
-    // La hoja no existe → la creamos con cabecera
-    sheet = ss.insertSheet(SHEET_NAME);
-    sheet.getRange(1, 1, 1, 2).setValues([["ModID", "Votos"]]);
+    sheet = ss.insertSheet(name);
+    if (name === SHEET_NAME_VOTES) {
+      sheet.getRange(1,1,1,2).setValues([["ModID","Score"]]);
+    } else {
+      sheet.getRange(1,1,1,5).setValues([["UserSub","ModID","Vote","Email","Timestamp"]]);
+    }
     SpreadsheetApp.flush();
-    Logger.log("✅ Hoja '" + SHEET_NAME + "' creada automáticamente.");
+    Logger.log("Hoja creada: " + name);
   }
-
   return sheet;
 }
 
-// ── GET: devuelve objeto { modId: count } ───────────────────────
-function doGet(e) {
+// ── Decodifica el payload de un JWT ────────────────────────────
+function decodeJWT(token) {
   try {
-    const sheet  = getOrCreateSheet();
-    const data   = sheet.getDataRange().getValues();
-    const result = {};
-
-    // Columnas: A=modId, B=count  (fila 1 es cabecera)
-    for (let i = 1; i < data.length; i++) {
-      const id    = String(data[i][0]).trim();
-      const count = Number(data[i][1]) || 0;
-      if (id) result[id] = count;
-    }
-
-    return ContentService
-      .createTextOutput(JSON.stringify(result))
-      .setMimeType(ContentService.MimeType.JSON);
-
-  } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ error: err.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    const parts = token.split(".");
+    if (parts.length !== 3) throw new Error("JWT inválido");
+    const padded = parts[1].replace(/-/g, "+").replace(/_/g, "/");
+    const decoded = Utilities.base64Decode(padded, Utilities.Charset.UTF_8);
+    return JSON.parse(decoded);
+  } catch (e) {
+    Logger.log("Error decodificando JWT: " + e.message);
+    return null;
   }
 }
 
-// ── POST: incrementa el voto de un mod ─────────────────────────
-// Body esperado: { "id": "create", "change": 1 }
+// ── Verifica un token JWT de Google ───────────────────────────
+// Comprueba: expiración, emisor, audiencia (client_id)
+function verifyToken(token) {
+  const payload = decodeJWT(token);
+  if (!payload) return { ok: false, error: "Token indecodificable" };
+
+  const now = Math.floor(Date.now() / 1000);
+  if (payload.exp < now) return { ok: false, error: "Token expirado" };
+
+  const validIssuers = ["accounts.google.com", "https://accounts.google.com"];
+  if (!validIssuers.includes(payload.iss)) return { ok: false, error: "Emisor inválido: " + payload.iss };
+
+  // Opcional: comprobar audience (client_id) si OAUTH_CLIENT_ID está configurado
+  if (OAUTH_CLIENT_ID && !OAUTH_CLIENT_ID.startsWith("TU_CLIENT")) {
+    if (payload.aud !== OAUTH_CLIENT_ID) return { ok: false, error: "Audiencia inválida" };
+  }
+
+  return { ok: true, payload };
+}
+
+// ── Respuesta JSON estándar ─────────────────────────────────────
+function respond(data) {
+  return ContentService
+    .createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// ══════════════════════════════════════════════════════
+// doGet — Maneja dos acciones:
+//   ?action=getVotes        → { modId: score }  (público)
+//   ?action=getUserVotes&token=JWT → { modId: 1|-1 } (privado)
+// ══════════════════════════════════════════════════════
+function doGet(e) {
+  const action = (e.parameter && e.parameter.action) || "getVotes";
+
+  try {
+    if (action === "getVotes") {
+      return handleGetVotes();
+    }
+
+    if (action === "getUserVotes") {
+      const token = e.parameter && e.parameter.token;
+      if (!token) return respond({ error: "Token requerido" });
+
+      const verify = verifyToken(token);
+      if (!verify.ok) return respond({ error: verify.error });
+
+      return handleGetUserVotes(verify.payload.sub);
+    }
+
+    return respond({ error: "Acción desconocida: " + action });
+
+  } catch (err) {
+    Logger.log("doGet error: " + err.message);
+    return respond({ error: err.message });
+  }
+}
+
+// ── Devuelve totales agregados { modId: score } ────────────────
+function handleGetVotes() {
+  const sheet  = getOrCreate(SHEET_NAME_VOTES);
+  const data   = sheet.getDataRange().getValues();
+  const result = {};
+  for (let i = 1; i < data.length; i++) {
+    const id    = String(data[i][0]).trim();
+    const score = Number(data[i][1]) || 0;
+    if (id) result[id] = score;
+  }
+  return respond(result);
+}
+
+// ── Devuelve votos del usuario { modId: 1 | -1 } ──────────────
+function handleGetUserVotes(userSub) {
+  const sheet  = getOrCreate(SHEET_NAME_USERS);
+  const data   = sheet.getDataRange().getValues();
+  const result = {};
+  for (let i = 1; i < data.length; i++) {
+    if (String(data[i][0]).trim() === userSub) {
+      const modId = String(data[i][1]).trim();
+      const vote  = Number(data[i][2]) || 0;
+      if (modId && vote !== 0) result[modId] = vote;
+    }
+  }
+  return respond(result);
+}
+
+// ══════════════════════════════════════════════════════
+// doPost — Registra / actualiza / retira un voto
+// Body: { id: "modId", delta: 1 | -1 | 0, token: "JWT" }
+//   delta  1 = votar positivo
+//   delta -1 = votar negativo
+//   delta  0 = retirar voto (o calculado dinámicamente)
+// ══════════════════════════════════════════════════════
 function doPost(e) {
   try {
     let body;
-    try {
-      body = JSON.parse(e.postData.contents);
-    } catch (_) {
-      throw new Error("JSON inválido en el body");
-    }
+    try { body = JSON.parse(e.postData.contents); }
+    catch (_) { return respond({ error: "JSON inválido" }); }
 
-    const modId  = String(body.id || "").trim();
-    const change = Number(body.change) || 1;
+    const token = body.token;
+    if (!token) return respond({ error: "Token requerido" });
 
-    if (!modId) throw new Error("Falta el campo 'id'");
+    const verify = verifyToken(token);
+    if (!verify.ok) return respond({ error: "Auth: " + verify.error });
 
-    const sheet = getOrCreateSheet();
-    const data  = sheet.getDataRange().getValues();
+    const userSub = verify.payload.sub;
+    const email   = verify.payload.email || "";
+    const modId   = String(body.id || "").trim();
+    const delta   = Number(body.delta) || 0;
 
-    // Buscar fila existente
-    let found = false;
-    for (let i = 1; i < data.length; i++) {
-      if (String(data[i][0]).trim() === modId) {
-        const currentCount = Number(data[i][1]) || 0;
-        sheet.getRange(i + 1, 2).setValue(currentCount + change);
-        found = true;
-        break;
-      }
-    }
+    if (!modId) return respond({ error: "Falta campo 'id'" });
+    if (delta === 0) return respond({ error: "delta no puede ser 0" });
 
-    // Si el mod no existía en la hoja, crear fila nueva
-    if (!found) {
-      sheet.appendRow([modId, change]);
-    }
-
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true, id: modId }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return handleRegisterVote(userSub, email, modId, delta);
 
   } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ error: err.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    Logger.log("doPost error: " + err.message);
+    return respond({ error: err.message });
   }
+}
+
+// ── Registra / actualiza el voto del usuario para un mod ───────
+function handleRegisterVote(userSub, email, modId, delta) {
+  const usersSheet = getOrCreate(SHEET_NAME_USERS);
+  const votesSheet = getOrCreate(SHEET_NAME_VOTES);
+
+  const usersData = usersSheet.getDataRange().getValues();
+  const votesData = votesSheet.getDataRange().getValues();
+
+  // Buscar voto previo del usuario para este mod
+  let userRowIdx   = -1;
+  let previousVote = 0;
+
+  for (let i = 1; i < usersData.length; i++) {
+    if (String(usersData[i][0]).trim() === userSub && String(usersData[i][1]).trim() === modId) {
+      userRowIdx   = i + 1; // 1-indexed para getRange
+      previousVote = Number(usersData[i][2]) || 0;
+      break;
+    }
+  }
+
+  // Calcular el nuevo voto del usuario
+  let newUserVote;
+  if (previousVote !== 0 && Math.sign(delta) === Math.sign(previousVote)) {
+    // Misma dirección → retirar voto
+    newUserVote = 0;
+  } else {
+    // Nuevo voto o cambio de dirección
+    // delta puede ser 2 (de -1 a +1) o -2 (de +1 a -1) o ±1 (nuevo)
+    newUserVote = previousVote + delta;
+    // Clamp a [-1, 0, 1]
+    newUserVote = Math.max(-1, Math.min(1, newUserVote));
+  }
+
+  // Actualizar o insertar en VotosUsuarios
+  const now = new Date().toISOString();
+  if (userRowIdx !== -1) {
+    usersSheet.getRange(userRowIdx, 3, 1, 3).setValues([[newUserVote, email, now]]);
+  } else {
+    usersSheet.appendRow([userSub, modId, newUserVote, email, now]);
+  }
+
+  // Recalcular el total del mod en la hoja Votos
+  const actualDelta = newUserVote - previousVote;
+
+  let votesRowIdx = -1;
+  let currentScore = 0;
+
+  for (let i = 1; i < votesData.length; i++) {
+    if (String(votesData[i][0]).trim() === modId) {
+      votesRowIdx  = i + 1;
+      currentScore = Number(votesData[i][1]) || 0;
+      break;
+    }
+  }
+
+  const newScore = currentScore + actualDelta;
+
+  if (votesRowIdx !== -1) {
+    votesSheet.getRange(votesRowIdx, 2).setValue(newScore);
+  } else {
+    votesSheet.appendRow([modId, newScore]);
+  }
+
+  SpreadsheetApp.flush();
+
+  return respond({ success: true, modId, newScore, userVote: newUserVote });
+}
+
+// ══════════════════════════════════════════════════════
+// setupSheets — Ejecutar UNA VEZ manualmente desde el editor
+// Crea las dos hojas con sus cabeceras si no existen
+// ══════════════════════════════════════════════════════
+function setupSheets() {
+  getOrCreate(SHEET_NAME_VOTES);
+  getOrCreate(SHEET_NAME_USERS);
+  Logger.log("✅ Hojas configuradas correctamente.");
 }

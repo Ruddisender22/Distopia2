@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sistema de votaciones para el modpack de Minecraft Distopia 2. Vota tus mods favoritos y ayuda a decidir el contenido del servidor.">
-    <meta property="og:title" content="Votaciones · Distopia 2 Modpack">
-    <meta property="og:description" content="Vota los mods que quieres ver en Distopia 2.">
+    <meta name="description" content="Sistema de votaciones para el modpack de Minecraft Distopia 2. Inicia sesión con Google y vota tus mods favoritos.">
+    <meta property="og:title" content="Votaciones · Distopia 2">
     <meta property="og:image" content="Recursos/distopia logo fixed 2.png">
     <title>Votaciones · Distopia 2</title>
 
@@ -14,38 +13,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Identity Services (Sign-In con Google) -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
-    <!-- Canvas de partículas animadas (fondo) -->
+    <!-- Canvas de ondas de arena (fondo) -->
     <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-    <!-- ══════════════════ HEADER ══════════════════ -->
+    <!-- ══════ HEADER ══════ -->
     <header class="site-header" role="banner">
         <div class="header-bg-overlay" aria-hidden="true"></div>
         <div class="header-inner">
             <img
                 src="Recursos/DISTOPIA-22-12-2024 (1).png"
-                alt="Distopia — Logo del servidor"
+                alt="Distopia — logo del servidor"
                 class="header-logo-img"
             >
             <p class="header-tagline">🗳️ Sistema de Votaciones · Modpack Minecraft</p>
-            <p class="header-desc">Vota los mods que quieres ver en el servidor.<br>Cada jugador puede dar <strong>+1</strong> o <strong>-1</strong> por mod.</p>
+            <p class="header-desc">Inicia sesión con tu cuenta Google y vota los mods.<br>
+            Máximo <strong>+1 / −1</strong> por mod · Puedes retirar tu voto en cualquier momento.</p>
+
+            <!-- Área de autenticación -->
+            <div class="auth-area" id="auth-area">
+                <!-- Mostrado cuando NO hay sesión -->
+                <div id="login-prompt" class="login-prompt">
+                    <p class="login-prompt-text">Inicia sesión para poder votar</p>
+                    <!-- Google renderiza el botón aquí automáticamente -->
+                    <div id="google-login-btn"></div>
+                </div>
+
+                <!-- Mostrado cuando SÍ hay sesión (oculto por defecto) -->
+                <div id="user-chip" class="user-chip" hidden>
+                    <img id="user-avatar" src="" alt="Avatar" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name" id="user-name"></span>
+                        <span class="user-email" id="user-email"></span>
+                    </div>
+                    <button class="logout-btn" id="logout-btn" aria-label="Cerrar sesión" title="Cerrar sesión">✕</button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- ══════════════════ STATS BAR ══════════════════ -->
+    <!-- ══════ STATS BAR ══════ -->
     <div class="stats-bar" id="stats-bar" aria-live="polite">
         <div class="stats-inner">
-            <span id="stat-mods">⬛ Cargando…</span>
-            <span class="stats-sep">·</span>
-            <span id="stat-votes">🗳️ —</span>
-            <span class="stats-sep">·</span>
-            <span id="stat-sections">📂 —</span>
+            <span id="stat-mods"  class="stat-badge">📦 Cargando…</span>
+            <span id="stat-votes" class="stat-badge">🗳️ —</span>
+            <span id="stat-sections" class="stat-badge">📂 —</span>
         </div>
     </div>
 
-    <!-- ══════════════════ APP ══════════════════ -->
+    <!-- ══════ APP ══════ -->
     <main id="app" role="main" aria-label="Lista de mods para votar">
         <div class="loading-screen" id="loading-screen" aria-busy="true">
             <div class="loading-cubes" aria-hidden="true">
@@ -57,12 +78,11 @@
         </div>
     </main>
 
-    <!-- ══════════════════ MODAL DE DETALLE ══════════════════ -->
+    <!-- ══════ MODAL DE DETALLE ══════ -->
     <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Detalle del mod" hidden>
-        <div class="modal-panel" id="modal-panel">
-            <button class="modal-close" id="modal-close" aria-label="Cerrar detalle">✕</button>
+        <div class="modal-panel" id="modal-panel" tabindex="-1">
+            <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
 
-            <!-- Carrusel -->
             <div class="modal-carousel" id="modal-carousel">
                 <div class="modal-carousel-track" id="modal-carousel-track"></div>
                 <button class="carousel-nav prev" id="carousel-prev" aria-label="Imagen anterior">‹</button>
@@ -71,7 +91,6 @@
                 <div class="carousel-counter" id="carousel-counter"></div>
             </div>
 
-            <!-- Info del mod -->
             <div class="modal-body">
                 <div class="modal-header-row">
                     <h2 class="modal-mod-name" id="modal-mod-name"></h2>
@@ -79,29 +98,24 @@
                 </div>
                 <div class="modal-description" id="modal-description"></div>
 
-                <!-- Votación dentro del modal -->
                 <div class="modal-voting" id="modal-voting">
                     <div class="vote-score-wrap">
                         <span class="vote-score-label">Puntuación</span>
                         <span class="vote-score" id="modal-vote-score">0</span>
                     </div>
                     <div class="modal-vote-btns">
-                        <button class="vote-btn upvote" id="modal-upvote-btn" aria-label="Votar positivo">
-                            ▲ <span>Apoyar</span>
-                        </button>
-                        <button class="vote-btn downvote" id="modal-downvote-btn" aria-label="Votar negativo">
-                            ▼ <span>Rechazar</span>
-                        </button>
+                        <button class="vote-btn upvote"   id="modal-upvote-btn"   aria-label="Votar positivo">▲ Apoyar</button>
+                        <button class="vote-btn downvote" id="modal-downvote-btn" aria-label="Votar negativo">▼ Rechazar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ══════════════════ TOAST ══════════════════ -->
+    <!-- ══════ TOAST ══════ -->
     <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
 
-    <!-- ══════════════════ FOOTER ══════════════════ -->
+    <!-- ══════ FOOTER ══════ -->
     <footer class="site-footer">
         <img src="Recursos/distopia logo resized.png" alt="Distopia" class="footer-logo">
         <p>Distopia 2 · Modpack Minecraft · Votaciones en tiempo real</p>

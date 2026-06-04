@@ -397,13 +397,13 @@ async function handleVote(modId, direction) {
 
   // Enviar al servidor
   // IMPORTANTE: text/plain evita el preflight CORS con no-cors
-  // El Apps Script puede parsear el JSON desde e.postData.contents igualmente
+  // Enviamos 'vote' (valor final: 1, -1 o 0) para que el servidor calcule el delta real
   try {
     await fetch(APPS_SCRIPT_URL, {
       method: "POST",
       mode: "no-cors",
       headers: { "Content-Type": "text/plain" },
-      body: JSON.stringify({ id: modId, delta, token: currentUser.token, sub: currentUser.sub, email: currentUser.email }),
+      body: JSON.stringify({ id: modId, vote: newMyVote, token: currentUser.token, sub: currentUser.sub, email: currentUser.email }),
     });
   } catch (e) { console.warn("[Distopia2] POST:", e.message); }
 

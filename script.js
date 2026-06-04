@@ -416,8 +416,10 @@ async function loadUserVotesFromServer() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = JSON.parse(await res.text());
     if (data.error) throw new Error(data.error);
-    userVotes = data;
-    lsSaveVotes(currentUser.sub, data);
+    // IMPORTANT: Only update entries from server — don't overwrite votes the user
+    // placed in this session that haven't propagated to the server yet.
+    Object.assign(userVotes, data);
+    lsSaveVotes(currentUser.sub, userVotes);
     console.log("[Distopia2] Votos sincronizados:", data);
   } catch (e) {
     console.warn("[Distopia2] getUserVotes (caché):", e.message);
@@ -582,6 +584,22 @@ function buildCard(mod) {
   body.appendChild(voteRow);
   card.appendChild(body);
 
+  // Status badge (CONFIRMADO / NO DEFINITIVO / ELIMINADO)
+  if (mod.status) {
+    const statusMap = {
+      "CONFIRMADO":    { cls: "status-confirmed", label: "CONFIRMADO" },
+      "NO DEFINITIVO": { cls: "status-pending",   label: "NO DEFINITIVO" },
+      "ELIMINADO":     { cls: "status-removed",   label: "ELIMINADO" },
+    };
+    const s = statusMap[mod.status];
+    if (s) {
+      const statusBadge = document.createElement("div");
+      statusBadge.className = `mod-status-badge ${s.cls}`;
+      statusBadge.textContent = s.label;
+      card.appendChild(statusBadge);
+    }
+  }
+
   const badge = document.createElement("div");
   badge.className = `unvoted-badge${(currentUser && userVotesReady && myVote===0) ? "" : " hidden"}`;
   badge.id = `badge-${mod.id}`;
@@ -624,10 +642,7 @@ function refreshCardStates() {
     const myVote = userVotes[mod.id] ?? 0;
 
     const badge = document.getElementById(`badge-${mod.id}`);
-    // Only show "Vota" badges if user has voted at least 1 mod
-    // (flooding ALL cards with badges when none are voted is confusing)
-    const hasAnyVotes = Object.values(userVotes).some(v => v !== 0);
-    if (badge) badge.classList.toggle("hidden", !(currentUser && userVotesReady && hasAnyVotes && myVote===0));
+    if (badge) badge.classList.toggle("hidden", !(currentUser && userVotesReady && myVote===0));
 
     const card = document.getElementById(`card-${mod.id}`);
     if (card) {

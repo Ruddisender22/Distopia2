@@ -13,7 +13,8 @@
           "paragraphs": [
             "El mod de automatización más popular de Minecraft. Permite construir fábricas, trenes, maquinaria rotacional y contraptions increíblemente complejas.",
             "Incluye engranajes, correas, pistones mecánicos, elevadores, prensas y mucho más. Totalmente compatible con otros mods de tecnología."
-          ]
+          ],
+          "status": "CONFIRMADO"
         },
         {
           "id": "ae2",
@@ -25,7 +26,8 @@
           "paragraphs": [
             "Sistema de almacenamiento digital avanzado. Guarda miles de ítems en discos de almacenamiento y accede a todo desde terminales ME.",
             "Permite automatizar crafting complejos, ordenar inventarios masivos y transferir ítems con canales de energía."
-          ]
+          ],
+          "status": "NO DEFINITIVO"
         },
         {
           "id": "mekanism",

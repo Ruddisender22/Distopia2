@@ -6,9 +6,8 @@
         {
           "id": "create",
           "name": "Create",
-          "images": ["url_imagen1.jpg"],
-          "paragraphs": ["El mod principal de nuestra automatización.", "Añade cintas, motores y trenes."],
-          "votes": 0
+          "images": ["https://via.placeholder.com/150"],
+          "paragraphs": ["Mod increíble de automatización.", "Esencial para el servidor."]
         }
       ]
     }

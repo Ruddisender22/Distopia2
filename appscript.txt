@@ -2,37 +2,43 @@
 // DISTOPIA 2 — Google Apps Script (pegar en script.google.com)
 // ================================================================
 // Instrucciones de despliegue:
-//   1. Ve a https://script.google.com y crea un proyecto nuevo.
-//   2. Reemplaza todo el contenido con este código.
-//   3. Cambia SHEET_ID por el ID de tu Google Sheet.
-//   4. Ve a Desplegar > Nueva implementación > Aplicación web.
-//   5. "Ejecutar como": Tu cuenta.
-//   6. "Acceso": Cualquier usuario (incluso anónimo).
-//   7. Copia la URL de la aplicación web y pégala en script.js.
+//   1. Ve a https://script.google.com y abre tu proyecto.
+//   2. Reemplaza TODO el contenido con este código.
+//   3. Ve a Desplegar > Administrar implementaciones > editar la
+//      existente (o crear nueva) > Guardar > Copiar nueva URL.
+//   4. "Ejecutar como": Tu cuenta.
+//   5. "Acceso": Cualquier usuario (incluso anónimo).
 // ================================================================
 
-const SHEET_ID   = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";   // ← Reemplaza esto
-const SHEET_NAME = "Votos";              // ← Nombre de tu hoja
+const SHEET_ID   = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";
+const SHEET_NAME = "Votos";
 
-// ── Función auxiliar: headers CORS ─────────────────────────────
-function getCorsHeaders() {
-  return {
-    "Access-Control-Allow-Origin":  "*",
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    "Content-Type":                 "application/json"
-  };
+// ── Helper: obtiene (o crea) la hoja automáticamente ───────────
+// Esto soluciona el error "Cannot read properties of null"
+function getOrCreateSheet() {
+  const ss = SpreadsheetApp.openById(SHEET_ID);
+  let sheet = ss.getSheetByName(SHEET_NAME);
+
+  if (!sheet) {
+    // La hoja no existe → la creamos con cabecera
+    sheet = ss.insertSheet(SHEET_NAME);
+    sheet.getRange(1, 1, 1, 2).setValues([["ModID", "Votos"]]);
+    SpreadsheetApp.flush();
+    Logger.log("✅ Hoja '" + SHEET_NAME + "' creada automáticamente.");
+  }
+
+  return sheet;
 }
 
 // ── GET: devuelve objeto { modId: count } ───────────────────────
 function doGet(e) {
   try {
-    const sheet  = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+    const sheet  = getOrCreateSheet();
     const data   = sheet.getDataRange().getValues();
     const result = {};
 
-    // Esperamos columnas: A=modId, B=count
-    for (let i = 1; i < data.length; i++) {       // i=1 para saltar cabecera
+    // Columnas: A=modId, B=count  (fila 1 es cabecera)
+    for (let i = 1; i < data.length; i++) {
       const id    = String(data[i][0]).trim();
       const count = Number(data[i][1]) || 0;
       if (id) result[id] = count;
@@ -65,8 +71,8 @@ function doPost(e) {
 
     if (!modId) throw new Error("Falta el campo 'id'");
 
-    const sheet  = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
-    const data   = sheet.getDataRange().getValues();
+    const sheet = getOrCreateSheet();
+    const data  = sheet.getDataRange().getValues();
 
     // Buscar fila existente
     let found = false;
@@ -79,7 +85,7 @@ function doPost(e) {
       }
     }
 
-    // Si no existe, crear fila nueva
+    // Si el mod no existía en la hoja, crear fila nueva
     if (!found) {
       sheet.appendRow([modId, change]);
     }
@@ -93,19 +99,4 @@ function doPost(e) {
       .createTextOutput(JSON.stringify({ error: err.message }))
       .setMimeType(ContentService.MimeType.JSON);
   }
-}
-
-// ── Estructura de la hoja (ejecutar una vez manualmente) ────────
-function setupSheet() {
-  const ss    = SpreadsheetApp.openById(SHEET_ID);
-  let sheet   = ss.getSheetByName(SHEET_NAME);
-
-  if (!sheet) {
-    sheet = ss.insertSheet(SHEET_NAME);
-  }
-
-  // Cabecera
-  sheet.getRange(1, 1, 1, 2).setValues([["ModID", "Votos"]]);
-  SpreadsheetApp.flush();
-  Logger.log("✅ Hoja configurada correctamente.");
 }

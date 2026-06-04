@@ -2,12 +2,61 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Votaciones Distopia 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de votaciones para el modpack de Minecraft Distopia 2. Vota tus mods favoritos y ayuda a elegir el contenido del servidor.">
+    <meta property="og:title" content="Votaciones · Distopia 2 Modpack">
+    <meta property="og:description" content="Vota los mods que quieres ver en el modpack Distopia 2 de Minecraft.">
+    <title>Votaciones · Distopia 2 Modpack</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>Votaciones Modpack Distopia 2</h1></header>
-    <div id="app">Cargando mods...</div>
+
+    <!-- Partículas de fondo animadas -->
+    <div class="bg-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Header principal -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-logo" aria-label="Distopia 2">
+                <span class="logo-icon">⚙️</span>
+                <span class="logo-text">Distopia <em>2</em></span>
+            </div>
+            <div class="header-subtitle">Sistema de Votaciones · Modpack Minecraft</div>
+        </div>
+        <div class="header-wave" aria-hidden="true"></div>
+    </header>
+
+    <!-- Barra de estado / contador -->
+    <div class="stats-bar" id="stats-bar" aria-live="polite">
+        <div class="stats-inner">
+            <span id="stats-mods">Cargando mods…</span>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main id="app" role="main" aria-label="Lista de mods para votar">
+        <div class="loading-screen" id="loading-screen" aria-busy="true">
+            <div class="loading-spinner"></div>
+            <p>Cargando el modpack…</p>
+        </div>
+    </main>
+
+    <!-- Toast de confirmación de voto -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <footer class="site-footer">
+        <p>Distopia 2 · Modpack Minecraft · Los votos se actualizan en tiempo real</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

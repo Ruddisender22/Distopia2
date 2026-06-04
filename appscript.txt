@@ -1,0 +1,111 @@
+// ================================================================
+// DISTOPIA 2 — Google Apps Script (pegar en script.google.com)
+// ================================================================
+// Instrucciones de despliegue:
+//   1. Ve a https://script.google.com y crea un proyecto nuevo.
+//   2. Reemplaza todo el contenido con este código.
+//   3. Cambia SHEET_ID por el ID de tu Google Sheet.
+//   4. Ve a Desplegar > Nueva implementación > Aplicación web.
+//   5. "Ejecutar como": Tu cuenta.
+//   6. "Acceso": Cualquier usuario (incluso anónimo).
+//   7. Copia la URL de la aplicación web y pégala en script.js.
+// ================================================================
+
+const SHEET_ID   = "TU_SHEET_ID_AQUI";   // ← Reemplaza esto
+const SHEET_NAME = "Votos";              // ← Nombre de tu hoja
+
+// ── Función auxiliar: headers CORS ─────────────────────────────
+function getCorsHeaders() {
+  return {
+    "Access-Control-Allow-Origin":  "*",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Content-Type":                 "application/json"
+  };
+}
+
+// ── GET: devuelve objeto { modId: count } ───────────────────────
+function doGet(e) {
+  try {
+    const sheet  = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+    const data   = sheet.getDataRange().getValues();
+    const result = {};
+
+    // Esperamos columnas: A=modId, B=count
+    for (let i = 1; i < data.length; i++) {       // i=1 para saltar cabecera
+      const id    = String(data[i][0]).trim();
+      const count = Number(data[i][1]) || 0;
+      if (id) result[id] = count;
+    }
+
+    return ContentService
+      .createTextOutput(JSON.stringify(result))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ error: err.message }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+// ── POST: incrementa el voto de un mod ─────────────────────────
+// Body esperado: { "id": "create", "change": 1 }
+function doPost(e) {
+  try {
+    let body;
+    try {
+      body = JSON.parse(e.postData.contents);
+    } catch (_) {
+      throw new Error("JSON inválido en el body");
+    }
+
+    const modId  = String(body.id || "").trim();
+    const change = Number(body.change) || 1;
+
+    if (!modId) throw new Error("Falta el campo 'id'");
+
+    const sheet  = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+    const data   = sheet.getDataRange().getValues();
+
+    // Buscar fila existente
+    let found = false;
+    for (let i = 1; i < data.length; i++) {
+      if (String(data[i][0]).trim() === modId) {
+        const currentCount = Number(data[i][1]) || 0;
+        sheet.getRange(i + 1, 2).setValue(currentCount + change);
+        found = true;
+        break;
+      }
+    }
+
+    // Si no existe, crear fila nueva
+    if (!found) {
+      sheet.appendRow([modId, change]);
+    }
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ success: true, id: modId }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ error: err.message }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+// ── Estructura de la hoja (ejecutar una vez manualmente) ────────
+function setupSheet() {
+  const ss    = SpreadsheetApp.openById(SHEET_ID);
+  let sheet   = ss.getSheetByName(SHEET_NAME);
+
+  if (!sheet) {
+    sheet = ss.insertSheet(SHEET_NAME);
+  }
+
+  // Cabecera
+  sheet.getRange(1, 1, 1, 2).setValues([["ModID", "Votos"]]);
+  SpreadsheetApp.flush();
+  Logger.log("✅ Hoja configurada correctamente.");
+}

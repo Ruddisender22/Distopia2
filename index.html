@@ -3,58 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sistema de votaciones para el modpack de Minecraft Distopia 2. Vota tus mods favoritos y ayuda a elegir el contenido del servidor.">
+    <meta name="description" content="Sistema de votaciones para el modpack de Minecraft Distopia 2. Vota tus mods favoritos y ayuda a decidir el contenido del servidor.">
     <meta property="og:title" content="Votaciones · Distopia 2 Modpack">
-    <meta property="og:description" content="Vota los mods que quieres ver en el modpack Distopia 2 de Minecraft.">
-    <title>Votaciones · Distopia 2 Modpack</title>
+    <meta property="og:description" content="Vota los mods que quieres ver en Distopia 2.">
+    <meta property="og:image" content="Recursos/distopia logo fixed 2.png">
+    <title>Votaciones · Distopia 2</title>
 
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="Recursos/distopia logo resized.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Partículas de fondo animadas -->
-    <div class="bg-particles" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
-    </div>
+    <!-- Canvas de partículas animadas (fondo) -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-    <!-- Header principal -->
-    <header class="site-header">
+    <!-- ══════════════════ HEADER ══════════════════ -->
+    <header class="site-header" role="banner">
+        <div class="header-bg-overlay" aria-hidden="true"></div>
         <div class="header-inner">
-            <div class="header-logo" aria-label="Distopia 2">
-                <span class="logo-icon">⚙️</span>
-                <span class="logo-text">Distopia <em>2</em></span>
-            </div>
-            <div class="header-subtitle">Sistema de Votaciones · Modpack Minecraft</div>
+            <img
+                src="Recursos/DISTOPIA-22-12-2024 (1).png"
+                alt="Distopia — Logo del servidor"
+                class="header-logo-img"
+            >
+            <p class="header-tagline">🗳️ Sistema de Votaciones · Modpack Minecraft</p>
+            <p class="header-desc">Vota los mods que quieres ver en el servidor.<br>Cada jugador puede dar <strong>+1</strong> o <strong>-1</strong> por mod.</p>
         </div>
-        <div class="header-wave" aria-hidden="true"></div>
     </header>
 
-    <!-- Barra de estado / contador -->
+    <!-- ══════════════════ STATS BAR ══════════════════ -->
     <div class="stats-bar" id="stats-bar" aria-live="polite">
         <div class="stats-inner">
-            <span id="stats-mods">Cargando mods…</span>
+            <span id="stat-mods">⬛ Cargando…</span>
+            <span class="stats-sep">·</span>
+            <span id="stat-votes">🗳️ —</span>
+            <span class="stats-sep">·</span>
+            <span id="stat-sections">📂 —</span>
         </div>
     </div>
 
-    <!-- Contenido principal -->
+    <!-- ══════════════════ APP ══════════════════ -->
     <main id="app" role="main" aria-label="Lista de mods para votar">
         <div class="loading-screen" id="loading-screen" aria-busy="true">
-            <div class="loading-spinner"></div>
+            <div class="loading-cubes" aria-hidden="true">
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+            </div>
             <p>Cargando el modpack…</p>
         </div>
     </main>
 
-    <!-- Toast de confirmación de voto -->
+    <!-- ══════════════════ MODAL DE DETALLE ══════════════════ -->
+    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Detalle del mod" hidden>
+        <div class="modal-panel" id="modal-panel">
+            <button class="modal-close" id="modal-close" aria-label="Cerrar detalle">✕</button>
+
+            <!-- Carrusel -->
+            <div class="modal-carousel" id="modal-carousel">
+                <div class="modal-carousel-track" id="modal-carousel-track"></div>
+                <button class="carousel-nav prev" id="carousel-prev" aria-label="Imagen anterior">‹</button>
+                <button class="carousel-nav next" id="carousel-next" aria-label="Imagen siguiente">›</button>
+                <div class="carousel-dots" id="carousel-dots"></div>
+                <div class="carousel-counter" id="carousel-counter"></div>
+            </div>
+
+            <!-- Info del mod -->
+            <div class="modal-body">
+                <div class="modal-header-row">
+                    <h2 class="modal-mod-name" id="modal-mod-name"></h2>
+                    <span class="modal-badge">MOD</span>
+                </div>
+                <div class="modal-description" id="modal-description"></div>
+
+                <!-- Votación dentro del modal -->
+                <div class="modal-voting" id="modal-voting">
+                    <div class="vote-score-wrap">
+                        <span class="vote-score-label">Puntuación</span>
+                        <span class="vote-score" id="modal-vote-score">0</span>
+                    </div>
+                    <div class="modal-vote-btns">
+                        <button class="vote-btn upvote" id="modal-upvote-btn" aria-label="Votar positivo">
+                            ▲ <span>Apoyar</span>
+                        </button>
+                        <button class="vote-btn downvote" id="modal-downvote-btn" aria-label="Votar negativo">
+                            ▼ <span>Rechazar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════ TOAST ══════════════════ -->
     <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
 
+    <!-- ══════════════════ FOOTER ══════════════════ -->
     <footer class="site-footer">
-        <p>Distopia 2 · Modpack Minecraft · Los votos se actualizan en tiempo real</p>
+        <img src="Recursos/distopia logo resized.png" alt="Distopia" class="footer-logo">
+        <p>Distopia 2 · Modpack Minecraft · Votaciones en tiempo real</p>
     </footer>
 
     <script src="script.js"></script>

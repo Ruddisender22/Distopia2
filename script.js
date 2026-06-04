@@ -1,5 +1,5 @@
 // REEMPLAZA ESTO POR TU URL REAL
-const SHEET_URL = "AKfycbyTn0kvhWm6Jk-qQAHg__HSaZ8D5C5cb_EFEcUjWLXH3EafZGxz7ymrxgYCZBupkP_8";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbyTn0kvhWm6Jk-qQAHg__HSaZ8D5C5cb_EFEcUjWLXH3EafZGxz7ymrxgYCZBupkP_8/exec";
 
 async function init() {
     try {

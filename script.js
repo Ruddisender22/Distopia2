@@ -57,36 +57,22 @@ function initBlobBg() {
   ];
 
   let W = 0, H = 0;
-  // Mouse tracking — normalized 0–1, smoothly lerped
-  let mouseNX = 0.5, mouseNY = 0.5;
-  let targetMX = 0.5, targetMY = 0.5;
 
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   window.addEventListener("resize", resize); resize();
-
-  window.addEventListener("mousemove", e => {
-    targetMX = e.clientX / window.innerWidth;
-    targetMY = e.clientY / window.innerHeight;
-  });
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
     const R = Math.min(W, H);
 
-    // Smooth mouse lerp (lazy follow)
-    mouseNX += (targetMX - mouseNX) * 0.025;
-    mouseNY += (targetMY - mouseNY) * 0.025;
-
     BLOBS.forEach(b => {
       b.x += b.vx; b.y += b.vy;
-      // Gentle attraction toward mouse cursor (each blob moves slightly toward it)
-      b.x += (mouseNX - b.x) * 0.0005;
-      b.y += (mouseNY - b.y) * 0.0005;
-      // Boundary bounce
-      if (b.x < 0.05) b.vx = Math.abs(b.vx);
-      if (b.x > 0.95) b.vx = -Math.abs(b.vx);
-      if (b.y < 0.02) b.vy = Math.abs(b.vy);
-      if (b.y > 0.98) b.vy = -Math.abs(b.vy);
+      
+      // Boundary bounce (allow them to float slightly off-screen before bouncing)
+      if (b.x < -0.1) b.vx = Math.abs(b.vx);
+      if (b.x > 1.1)  b.vx = -Math.abs(b.vx);
+      if (b.y < -0.1) b.vy = Math.abs(b.vy);
+      if (b.y > 1.1)  b.vy = -Math.abs(b.vy);
       const cx = b.x*W, cy = b.y*H, radius = b.r*R;
       const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
       g.addColorStop(0,   `hsla(${b.h},${b.s}%,${b.l}%,${b.a})`);

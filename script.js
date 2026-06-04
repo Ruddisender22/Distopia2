@@ -397,11 +397,13 @@ async function handleVote(modId, direction) {
   updateStatsBar();
 
   // Enviar al servidor
+  // IMPORTANTE: text/plain evita el preflight CORS con no-cors
+  // El Apps Script puede parsear el JSON desde e.postData.contents igualmente
   try {
     await fetch(APPS_SCRIPT_URL, {
       method:  "POST",
       mode:    "no-cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "text/plain" },
       body:    JSON.stringify({ id: modId, delta, token: currentUser.token, sub: currentUser.sub, email: currentUser.email }),
     });
   } catch (e) { console.warn("[Distopia2] POST:", e.message); }

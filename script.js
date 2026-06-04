@@ -9,7 +9,7 @@
 // ─── ⚙️  CONFIGURACIÓN ─────────────────────────────────────────
 // 1. Pega aquí tu Client ID de Google Cloud Console:
 //    console.cloud.google.com → APIs y servicios → Credenciales → OAuth 2.0
-const GOOGLE_CLIENT_ID = "TU_CLIENT_ID.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "913594462364-gertg3gi5104bfdv0onr9km4rvtg4p5s.apps.googleusercontent.com";
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbxrSAX-G-RsOJrvjyStydqKd36SEiSg_NEKoSmx4lt9B7Tv-QnNOc4ClvberNYj0GsI/exec";

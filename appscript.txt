@@ -13,7 +13,7 @@ const SHEET_ID          = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";
 const SHEET_NAME_VOTES  = "Votos";        // Hoja 1: totales agregados
 const SHEET_NAME_USERS  = "VotosUsuarios"; // Hoja 2: votos por usuario
 // Tu Client ID de Google Cloud (debe coincidir con el del frontend)
-const OAUTH_CLIENT_ID   = "TU_CLIENT_ID.apps.googleusercontent.com";
+const OAUTH_CLIENT_ID   = "913594462364-gertg3gi5104bfdv0onr9km4rvtg4p5s.apps.googleusercontent.com";
 
 // ── Obtiene o crea una hoja por nombre ─────────────────────────
 function getOrCreate(name) {
@@ -244,3 +244,36 @@ function setupSheets() {
   getOrCreate(SHEET_NAME_USERS);
   Logger.log("✅ Hojas configuradas correctamente.");
 }
+
+// ══════════════════════════════════════════════════════
+// resetAllVotes — BORRA todos los votos (usuarios y totales)
+// ⚠️  EJECUTAR SOLO DESDE EL EDITOR — acción irreversible
+// Conserva las cabeceras de ambas hojas.
+// ══════════════════════════════════════════════════════
+function resetAllVotes() {
+  const ss = SpreadsheetApp.openById(SHEET_ID);
+
+  // ── Limpiar hoja Votos (totales) ──────────────────────
+  const votesSheet = ss.getSheetByName(SHEET_NAME_VOTES);
+  if (votesSheet) {
+    const lastRow = votesSheet.getLastRow();
+    if (lastRow > 1) {
+      votesSheet.deleteRows(2, lastRow - 1);
+    }
+    Logger.log("✅ Hoja '" + SHEET_NAME_VOTES + "' limpiada.");
+  }
+
+  // ── Limpiar hoja VotosUsuarios ─────────────────────────
+  const usersSheet = ss.getSheetByName(SHEET_NAME_USERS);
+  if (usersSheet) {
+    const lastRow = usersSheet.getLastRow();
+    if (lastRow > 1) {
+      usersSheet.deleteRows(2, lastRow - 1);
+    }
+    Logger.log("✅ Hoja '" + SHEET_NAME_USERS + "' limpiada.");
+  }
+
+  SpreadsheetApp.flush();
+  Logger.log("🗑️  Todos los votos han sido eliminados. Tablas en blanco.");
+}
+

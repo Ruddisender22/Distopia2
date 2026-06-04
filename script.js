@@ -12,8 +12,10 @@ const GOOGLE_CLIENT_ID =
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbz2RtSxsb_HwurxvKLSXaz2wLin50Wf2Wx2L8y2FIl7r-mMdTh1rklIER9mnTb-Y0I/exec";
-const PROXY = "https://corsproxy.io/?";
-// GET_URL se construye dinámicamente según la acción (ver fetchAggregateVotes / loadUserVotesFromServer)
+// POST usa corsproxy (sin-cors requiere proxy para leer respuesta)
+const PROXY_POST = "https://corsproxy.io/?";
+// GET usa allorigins que sí sigue los redirects 302 de Google Apps Script
+const PROXY_GET  = "https://api.allorigins.win/raw?url=";
 
 // ─── ESTADO ────────────────────────────────────────────────────
 let localVotes = {};
@@ -199,24 +201,25 @@ async function init() {
 
 // ── Votos agregados (público) ─────────────────────────────
 async function fetchAggregateVotes() {
-  // La URL completa (con ?action=getVotes) debe codificarse antes de pasarla al proxy
   const targetUrl = `${APPS_SCRIPT_URL}?action=getVotes`;
+  // allorigins.win sigue los redirects 302 que hace Google Apps Script
   const urls = [
-    PROXY + encodeURIComponent(targetUrl),
-    targetUrl, // fallback directo (puede fallar por CORS)
+    PROXY_GET + encodeURIComponent(targetUrl),
+    targetUrl, // fallback directo (CORS error esperado, pero a veces funciona)
   ];
   for (const url of urls) {
     try {
       const res = await fetch(url, {
         headers: { Accept: "application/json" },
-        signal: AbortSignal.timeout(7000),
+        signal: AbortSignal.timeout(10000),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
+      const text = await res.text();
+      const data = JSON.parse(text);
       if (data.error) throw new Error(data.error);
       console.log("[Distopia2] Votos cargados:", data);
       return data;
-    } catch (e) { console.warn("[Distopia2] GET:", e.message); }
+    } catch (e) { console.warn("[Distopia2] GET votos:", e.message); }
   }
   return {};
 }
@@ -225,15 +228,15 @@ async function fetchAggregateVotes() {
 async function loadUserVotesFromServer() {
   if (!currentUser) return;
   try {
-    // La URL completa con params debe codificarse antes de pasarla al proxy
     const params = new URLSearchParams({ action: "getUserVotes", token: currentUser.token });
     const targetUrl = `${APPS_SCRIPT_URL}?${params}`;
-    const res = await fetch(PROXY + encodeURIComponent(targetUrl), {
+    const res = await fetch(PROXY_GET + encodeURIComponent(targetUrl), {
       headers: { Accept: "application/json" },
-      signal: AbortSignal.timeout(8000),
+      signal: AbortSignal.timeout(10000),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    const text = await res.text();
+    const data = JSON.parse(text);
     if (data.error) throw new Error(data.error);
     userVotes = data;
     console.log("[Distopia2] Votos usuario cargados:", data);
@@ -253,6 +256,9 @@ function renderAll() {
 
 function buildSection(section) {
   const block = document.createElement("div"); block.className = "section-block";
+  // Divisor luminoso antes del header
+  const divider = document.createElement("div"); divider.className = "section-divider";
+  block.appendChild(divider);
   const header = document.createElement("div"); header.className = "section-header";
   const label = document.createElement("h2"); label.className = "section-label"; label.textContent = section.name;
   const tag = document.createElement("span"); tag.className = "section-tag";
@@ -301,6 +307,20 @@ function buildCard(mod) {
     body.appendChild(ex);
   }
 
+  // Badge "sin votar" — naranja glassmorph, solo si logueado y sin voto
+  if (currentUser && myVote === 0) {
+    const badge = document.createElement("div");
+    badge.className = "unvoted-badge"; badge.id = `badge-${mod.id}`;
+    badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Vota este mod</span>`;
+    card.appendChild(badge);
+  } else {
+    // placeholder oculto para poder actualizarlo luego
+    const badge = document.createElement("div");
+    badge.className = "unvoted-badge hidden"; badge.id = `badge-${mod.id}`;
+    badge.innerHTML = `<span class="unvoted-bang">!!</span><span class="unvoted-text">Vota este mod</span>`;
+    card.appendChild(badge);
+  }
+
   const voteRow = document.createElement("div"); voteRow.className = "vote-row";
   const scorePill = document.createElement("div"); scorePill.className = "score-pill";
   scorePill.innerHTML = `<span class="score-val ${scoreClass(score)}" id="score-${mod.id}">${score}</span><span class="score-lbl">pts</span>`;
@@ -343,6 +363,11 @@ function refreshCardStates() {
     const dnBtn = document.getElementById(`dn-${mod.id}`);
     if (!upBtn || !dnBtn) return;
     const myVote = userVotes[mod.id] ?? 0;
+
+    // Badge "sin votar"
+    const badge = document.getElementById(`badge-${mod.id}`);
+    if (badge) badge.classList.toggle("hidden", !currentUser || myVote !== 0);
+
     if (currentUser) {
       [[upBtn, 1, "up", upSVG], [dnBtn, -1, "dn", dnSVG]].forEach(([btn, dir, cls, svg]) => {
         btn.className = `vote-btn-card ${cls}${myVote === dir ? " active" : ""}`;
@@ -401,11 +426,11 @@ async function handleVote(modId, direction) {
   refreshModalButtons();
   updateStatsBar();
 
-  // Enviar al servidor a través del proxy CORS para poder leer la respuesta
+  // Enviar al servidor — corsproxy para POST (sigue funcionando bien)
   try {
     const postBody = JSON.stringify({ id: modId, vote: newMyVote, token: currentUser.token, sub: currentUser.sub, email: currentUser.email });
     console.log("[Distopia2] POST enviando:", { modId, vote: newMyVote, sub: currentUser.sub });
-    const res = await fetch(PROXY + encodeURIComponent(APPS_SCRIPT_URL), {
+    const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
       method: "POST",
       headers: { "Content-Type": "text/plain" },
       body: postBody,

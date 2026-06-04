@@ -120,30 +120,38 @@ function initGIS() {
   // which means GIS cannot measure it → button renders broken.
 }
 
-// ── THE FIX: lazy-render GIS button when auth modal becomes visible ──
+// ── Render GIS sign-in button directly inside the auth modal ──
+// Previous "overlay trick" (repositioning the corner GIS iframe over the modal
+// button) fails because .auth-corner creates a stacking context at z-index:100,
+// which is below the auth modal at z-index:210. The iframe is trapped behind it.
+// Fix: render a second independent GIS button inside the modal container.
 function renderGisModalButton() {
   if (!gisReady) return;
   const container = document.getElementById("google-login-btn-modal");
   if (!container) return;
-  // Clear any previous render attempt
+
+  // Show container BEFORE renderButton so it has real layout dimensions
+  container.style.display = "block";
   container.innerHTML = "";
-  // Use measured width after element is painted
-  const w = Math.min(container.clientWidth || 280, 320);
-  try {
-    google.accounts.id.renderButton(container, {
-      theme: "filled_black", size: "large", shape: "rectangular",
-      text: "signin_with", width: w,
-    });
-    // If we get here without throwing, show the GIS slot and hide the custom button
-    // (GIS button is more polished when it renders correctly)
-    container.style.display = "block";
-    const customBtn = document.getElementById("auth-google-btn");
-    if (customBtn) customBtn.style.display = "none";
-    console.log("[Distopia2] GIS modal button rendered OK");
-  } catch (e) {
-    console.warn("[Distopia2] GIS renderButton failed, using custom button:", e.message);
-    // Custom button remains visible as fallback
-  }
+
+  // One rAF to guarantee the container has been painted with real size
+  requestAnimationFrame(() => {
+    const w = Math.min(container.clientWidth || 280, 400);
+    try {
+      google.accounts.id.renderButton(container, {
+        theme: "filled_black", size: "large", shape: "rectangular",
+        text: "signin_with", width: w,
+      });
+      // Hide the custom fallback button — the real GIS button works
+      const customBtn = document.getElementById("auth-google-btn");
+      if (customBtn) customBtn.style.display = "none";
+      console.log("[Distopia2] GIS modal button rendered OK, width:", w);
+    } catch (e) {
+      console.warn("[Distopia2] GIS renderButton failed, using custom button:", e.message);
+      container.style.display = "none";
+      // Custom button stays visible — its click handler will try prompt()
+    }
+  });
 }
 
 // ── Called by GIS when login completes (from corner OR modal button) ──
@@ -242,10 +250,9 @@ function openAuthModal() {
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
 
-  // Position the always-functional corner GIS iframe OVER the modal button.
-  // Two rAFs guarantee the modal is painted and the button has real coordinates.
+  // After the modal is painted, render the GIS button directly inside it
   requestAnimationFrame(() => {
-    requestAnimationFrame(overlayCornerGisOnModalButton);
+    requestAnimationFrame(() => renderGisModalButton());
   });
 }
 
@@ -254,8 +261,6 @@ function closeAuthModal() {
   const sheet   = document.getElementById("auth-modal-panel");
   if (!overlay || overlay.hidden) return;
 
-  // ── Restore corner GIS button immediately (don't wait for animation) ──
-  restoreCornerGis();
 
   overlay.classList.add("closing");
   sheet?.classList.add("auth-modal-closing");
@@ -274,64 +279,6 @@ function closeAuthModal() {
   }, 260);
 }
 
-// ══════════════════════════════════════════════════════════════
-//  GIS OVERLAY TRICK — The only 100% reliable Google login method
-//
-//  google.accounts.id.prompt() can be suppressed by Google when:
-//  • User dismissed One-Tap ≥2 times in 24h (cooldown)
-//  • FedCM / third-party cookies blocked
-//  • Browser privacy settings
-//
-//  Solution: take the corner GIS iframe (rendered correctly at boot,
-//  always functional) and position it invisibly OVER the modal button.
-//  Clicking the pretty button → clicks the real GIS iframe → Google
-//  account chooser opens. Cannot be blocked.
-// ══════════════════════════════════════════════════════════════
-function overlayCornerGisOnModalButton() {
-  const wrapper = document.getElementById("login-wrapper");
-  const target  = document.getElementById("auth-google-btn");
-  if (!wrapper || !target) return;
-
-  const rect = target.getBoundingClientRect();
-  // Bail if modal isn't painted yet (coords would be 0)
-  if (rect.width < 10 || rect.height < 10) {
-    setTimeout(overlayCornerGisOnModalButton, 60);
-    return;
-  }
-
-  // Place the GIS wrapper exactly over the modal button, invisible but clickable
-  Object.assign(wrapper.style, {
-    position:     "fixed",
-    left:         rect.left   + "px",
-    top:          rect.top    + "px",
-    width:        rect.width  + "px",
-    height:       rect.height + "px",
-    opacity:      "0.001",           // invisible yet the iframe captures clicks
-    zIndex:       "220",             // above auth modal (z-index: 210)
-    borderRadius: "8px",
-    overflow:     "hidden",
-    pointerEvents:"all",
-    transform:    "none",
-  });
-
-  // Make the inner GIS overlay fill the new size
-  const gisInner = document.getElementById("google-login-btn");
-  if (gisInner) {
-    Object.assign(gisInner.style, {
-      position: "absolute", inset: "0",
-      width: "100%", height: "100%",
-    });
-  }
-}
-
-function restoreCornerGis() {
-  const wrapper = document.getElementById("login-wrapper");
-  if (!wrapper) return;
-  // Clear all inline styles — CSS rules take over again
-  wrapper.removeAttribute("style");
-  const gisInner = document.getElementById("google-login-btn");
-  if (gisInner) gisInner.removeAttribute("style");
-}
 
 function initAuthModal() {
   const overlay  = document.getElementById("auth-modal-overlay");
@@ -352,6 +299,26 @@ function initAuthModal() {
       closeAuthModal();
     }
   });
+
+  // Custom button fallback — if GIS renderButton failed, this button stays visible.
+  // Clicking it tries google.accounts.id.prompt() as a last resort.
+  const authGoogleBtn = document.getElementById("auth-google-btn");
+  if (authGoogleBtn) {
+    authGoogleBtn.addEventListener("click", () => {
+      if (!gisReady) {
+        showToast("⏳ Cargando Google Sign-In...");
+        return;
+      }
+      google.accounts.id.prompt((notification) => {
+        if (notification.isNotDisplayed()) {
+          showToast("⚠️ No se pudo abrir Google Sign-In. Prueba el botón de la esquina superior.");
+          console.warn("[Distopia2] prompt() blocked:", notification.getNotDisplayedReason());
+        } else if (notification.isSkippedMoment()) {
+          console.warn("[Distopia2] prompt() skipped:", notification.getSkippedReason());
+        }
+      });
+    });
+  }
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -631,7 +598,10 @@ function refreshCardStates() {
     const myVote = userVotes[mod.id] ?? 0;
 
     const badge = document.getElementById(`badge-${mod.id}`);
-    if (badge) badge.classList.toggle("hidden", !(currentUser && userVotesReady && myVote===0));
+    // Only show "Vota" badges if user has voted at least 1 mod
+    // (flooding ALL cards with badges when none are voted is confusing)
+    const hasAnyVotes = Object.values(userVotes).some(v => v !== 0);
+    if (badge) badge.classList.toggle("hidden", !(currentUser && userVotesReady && hasAnyVotes && myVote===0));
 
     const card = document.getElementById(`card-${mod.id}`);
     if (card) {

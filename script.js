@@ -9,7 +9,7 @@
 
 // ─── CONFIG ────────────────────────────────────────────────────
 const GOOGLE_CLIENT_ID =
-  "913594462364-gertg3gi5104bfdv0onr9km4rvtg4p5s.apps.googleusercontent.com";
+  "194340111267-kbvmanubn0b9ce6bajefq4t0v8g5tnt9.apps.googleusercontent.com";
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbz2RtSxsb_HwurxvKLSXaz2wLin50Wf2Wx2L8y2FIl7r-mMdTh1rklIER9mnTb-Y0I/exec";

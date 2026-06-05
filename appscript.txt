@@ -1,6 +1,7 @@
 // ================================================================
-// DISTOPIA 2 — Google Apps Script v4
-// · Acepta votos con o sin token JWT
+// DISTOPIA 2 — Google Apps Script v5
+// · Autenticación personalizada (Email + Password no real)
+// · Acepta votos con el 'sub' (UUID) generado por el backend
 // · Crea las hojas automáticamente si no existen
 // · Endpoint ping para verificar conexión
 // ================================================================
@@ -14,7 +15,7 @@
 const SHEET_ID         = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";
 const SHEET_VOTES      = "Votos";         // Hoja 1: totales por mod { ModID, Score }
 const SHEET_USERS      = "VotosUsuarios"; // Hoja 2: votos por usuario
-const OAUTH_CLIENT_ID  = "913594462364-gertg3gi5104bfdv0onr9km4rvtg4p5s.apps.googleusercontent.com";
+const SHEET_AUTH       = "UsuariosAuth";  // Hoja 3: registro de cuentas (Email, Password, Sub)
 
 // ── Obtiene o crea una hoja por nombre ─────────────────────────
 function getSheet(name) {
@@ -24,26 +25,15 @@ function getSheet(name) {
     sh = ss.insertSheet(name);
     if (name === SHEET_VOTES) {
       sh.getRange(1,1,1,2).setValues([["ModID","Score"]]);
-    } else {
+    } else if (name === SHEET_USERS) {
       sh.getRange(1,1,1,5).setValues([["UserSub","ModID","Vote","Email","Timestamp"]]);
+    } else if (name === SHEET_AUTH) {
+      sh.getRange(1,1,1,4).setValues([["Email","Password","Sub","Timestamp"]]);
     }
     SpreadsheetApp.flush();
     Logger.log("Hoja creada: " + name);
   }
   return sh;
-}
-
-// ── Decodifica JWT sin verificar firma ─────────────────────────
-// (La firma la garantiza Google — nosotros solo leemos el payload)
-function decodeJWT(token) {
-  try {
-    const padded = token.split(".")[1].replace(/-/g,"+").replace(/_/g,"/");
-    const decoded = Utilities.base64Decode(padded, Utilities.Charset.UTF_8);
-    return JSON.parse(decoded);
-  } catch(e) {
-    Logger.log("decodeJWT error: " + e.message);
-    return null;
-  }
 }
 
 // ── Respuesta JSON estándar ─────────────────────────────────────
@@ -65,16 +55,18 @@ function doGet(e) {
       return respond({ ok: true, timestamp: new Date().toISOString() });
     }
 
-    // ── DEBUG: devuelve el contenido RAW de ambas hojas ──────────
+    // ── DEBUG: devuelve el contenido RAW de las hojas ──────────
     if (action === "debug") {
       const ss      = SpreadsheetApp.openById(SHEET_ID);
       const shV     = ss.getSheetByName(SHEET_VOTES);
       const shU     = ss.getSheetByName(SHEET_USERS);
+      const shA     = ss.getSheetByName(SHEET_AUTH);
       return respond({
         sheetId:      SHEET_ID,
         spreadsheetName: ss.getName(),
         votos:        shV ? shV.getDataRange().getValues() : "hoja no existe",
         votosUsuarios:shU ? shU.getDataRange().getValues() : "hoja no existe",
+        auth:         shA ? shA.getDataRange().getValues() : "hoja no existe",
         timestamp:    new Date().toISOString()
       });
     }
@@ -92,16 +84,8 @@ function doGet(e) {
     }
 
     if (action === "getUserVotes") {
-      // Acepta 'sub' directamente (más corto que el token completo)
-      // o extrae del token JWT si se prefiere
       let userSub = e.parameter && e.parameter.sub;
-      if (!userSub) {
-        const token = e.parameter && e.parameter.token;
-        if (!token) return respond({ error: "Se requiere sub o token" });
-        const payload = decodeJWT(token);
-        if (!payload || !payload.sub) return respond({ error: "Token inválido" });
-        userSub = payload.sub;
-      }
+      if (!userSub) return respond({ error: "Se requiere sub" });
 
       const sh   = getSheet(SHEET_USERS);
       const rows = sh.getDataRange().getValues();
@@ -126,11 +110,7 @@ function doGet(e) {
 
 
 // ══════════════════════════════════════════════════════════════
-//  doPost — Registrar / cambiar / retirar un voto
-//  Body esperado: { id, vote, token?, sub?, email? }
-//    vote  =  1  → voto positivo
-//    vote  = -1  → voto negativo
-//    vote  =  0  → retirar voto
+//  doPost — Registrar usuario, iniciar sesión o registrar voto
 // ══════════════════════════════════════════════════════════════
 function doPost(e) {
   Logger.log("=== doPost llamado ===");
@@ -146,8 +126,81 @@ function doPost(e) {
     return respond({ error: "JSON inválido" });
   }
 
+  const action = body.action;
+
+  try {
+    if (action === "register") {
+      return handleRegisterUser(body.email, body.password);
+    } else if (action === "login") {
+      return handleLoginUser(body.email, body.password);
+    } else if (action === "vote" || body.id) {
+      // Legacy check: if body.id exists, it's a vote
+      return handleVote(body);
+    } else {
+      return respond({ error: "Acción desconocida en POST" });
+    }
+  } catch (err) {
+    Logger.log("Error en doPost: " + err.message + "\n" + err.stack);
+    return respond({ error: err.message });
+  }
+}
+
+// ── Registro de usuario ──────────────────────────────────────────
+function handleRegisterUser(email, password) {
+  if (!email || !password) {
+    return respond({ error: "Email y contraseña son obligatorios" });
+  }
+  
+  const authSh = getSheet(SHEET_AUTH);
+  const authData = authSh.getDataRange().getValues();
+  
+  const formattedEmail = String(email).trim().toLowerCase();
+  
+  // Check if email exists
+  for (let i = 1; i < authData.length; i++) {
+    if (String(authData[i][0]).trim().toLowerCase() === formattedEmail) {
+      return respond({ error: "El email ya está registrado" });
+    }
+  }
+  
+  // Create user
+  const newSub = Utilities.getUuid();
+  const now = new Date().toISOString();
+  
+  authSh.appendRow([formattedEmail, password, newSub, now]);
+  SpreadsheetApp.flush();
+  
+  return respond({ success: true, email: formattedEmail, sub: newSub });
+}
+
+// ── Inicio de sesión ──────────────────────────────────────────────
+function handleLoginUser(email, password) {
+  if (!email || !password) {
+    return respond({ error: "Email y contraseña son obligatorios" });
+  }
+  
+  const authSh = getSheet(SHEET_AUTH);
+  const authData = authSh.getDataRange().getValues();
+  
+  const formattedEmail = String(email).trim().toLowerCase();
+  
+  for (let i = 1; i < authData.length; i++) {
+    if (String(authData[i][0]).trim().toLowerCase() === formattedEmail) {
+      if (String(authData[i][1]) === String(password)) {
+        const sub = String(authData[i][2]);
+        return respond({ success: true, email: formattedEmail, sub: sub });
+      } else {
+        return respond({ error: "Contraseña incorrecta" });
+      }
+    }
+  }
+  
+  return respond({ error: "Usuario no encontrado" });
+}
+
+// ── Procesa la acción de votar ─────────────────────────────────────
+function handleVote(body) {
   const modId    = String(body.id || "").trim();
-  // Aceptamos 'vote' (nuevo) o 'delta' (legado) para compatibilidad
   const hasVote  = body.vote !== undefined && body.vote !== null;
   const vote     = hasVote ? Math.max(-1, Math.min(1, Number(body.vote))) : null;
   Logger.log("modId=" + modId + " vote=" + vote);
@@ -155,37 +208,17 @@ function doPost(e) {
   if (!modId) return respond({ error: "Falta 'id'" });
   if (vote === null) return respond({ error: "Falta 'vote'" });
 
-  // Identificar usuario
-  let userSub = "anon_" + Utilities.getUuid().substring(0,8);
+  let userSub = body.sub;
   let email   = body.email || "";
 
-  if (body.token) {
-    const payload = decodeJWT(body.token);
-    if (payload && payload.sub) {
-      userSub = payload.sub;
-      email   = payload.email || email;
-      Logger.log("Usuario autenticado: " + email);
-    } else {
-      Logger.log("Token no decodificable — usando sub del body si existe");
-      if (body.sub) userSub = body.sub;
-    }
-  } else if (body.sub) {
-    userSub = body.sub;
-    Logger.log("Sin token — usando sub: " + userSub);
+  if (!userSub) {
+    return respond({ error: "Se requiere sub para votar" });
   }
 
-  Logger.log("userSub=" + userSub);
-
-  try {
-    return handleRegisterVote(userSub, email, modId, vote);
-  } catch(err) {
-    Logger.log("handleRegisterVote error: " + err.message + "\n" + err.stack);
-    return respond({ error: err.message });
-  }
+  return handleRegisterVote(userSub, email, modId, vote);
 }
 
 // ── Registra el voto del usuario para un mod ───────────────────
-// newVote: valor deseado final → 1 (up), -1 (down), 0 (retirar)
 function handleRegisterVote(userSub, email, modId, newVote) {
   const usersSh = getSheet(SHEET_USERS);
   const votesSh = getSheet(SHEET_VOTES);
@@ -249,10 +282,11 @@ function handleRegisterVote(userSub, email, modId, newVote) {
 //  FUNCIONES MANUALES (ejecutar desde el editor)
 // ══════════════════════════════════════════════════════════════
 
-// Crear las dos hojas con cabeceras
+// Crear las tres hojas con cabeceras
 function setupSheets() {
   getSheet(SHEET_VOTES);
   getSheet(SHEET_USERS);
+  getSheet(SHEET_AUTH);
   Logger.log("✅ Hojas creadas/verificadas.");
 }
 
@@ -269,18 +303,4 @@ function resetAllVotes() {
   });
   SpreadsheetApp.flush();
   Logger.log("🗑️ Todos los votos eliminados.");
-}
-
-// Test de escritura en hoja
-function testPost() {
-  const result = handleRegisterVote("test-user-123", "test@test.com", "createmod", 1);
-  Logger.log("testPost resultado: " + result.getContent());
-}
-
-// Verificar que el script puede leer la hoja
-function testRead() {
-  const sh = getSheet(SHEET_VOTES);
-  const rows = sh.getDataRange().getValues();
-  Logger.log("Filas en Votos: " + rows.length);
-  Logger.log("Contenido: " + JSON.stringify(rows));
 }

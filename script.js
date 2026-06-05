@@ -8,8 +8,6 @@
    ================================================================ */
 
 // ─── CONFIG ────────────────────────────────────────────────────
-const GOOGLE_CLIENT_ID =
-  "194340111267-kbvmanubn0b9ce6bajefq4t0v8g5tnt9.apps.googleusercontent.com";
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbz2RtSxsb_HwurxvKLSXaz2wLin50Wf2Wx2L8y2FIl7r-mMdTh1rklIER9mnTb-Y0I/exec";
@@ -98,110 +96,84 @@ function initBlobBg() {
 
 
 // ══════════════════════════════════════════════════════════════
-//  GOOGLE SIGN-IN
+//  CUSTOM AUTHENTICATION
 // ══════════════════════════════════════════════════════════════
-function waitForGis() {
-  if (typeof google !== "undefined" && google.accounts) {
-    gisReady = true;
-    initGIS();
-  } else {
-    setTimeout(waitForGis, 200);
-  }
-}
-
-function initGIS() {
-  // Only initialize once
-  google.accounts.id.initialize({
-    client_id: GOOGLE_CLIENT_ID,
-    callback: handleCredentialResponse,
-    auto_select: false,
-    cancel_on_tap_outside: true,
-    use_fedcm_for_prompt: true,
-  });
-
-  // CRITICAL: cancel any auto One-Tap prompt
-  // (prevents modal from appearing on its own at page load)
-  google.accounts.id.cancel();
-
-  // Corner button: clicking it opens the auth modal instead of relying
-  // on GIS iframe overlay (which breaks due to FedCM/stacking context issues)
-  document.getElementById("login-wrapper")?.addEventListener("click", openAuthModal);
-  // NOTE: The auth modal button is rendered lazily in openAuthModal()
-  // because the element is hidden (display:none) at init time,
-  // which means GIS cannot measure it → button renders broken.
-}
-
-// ── Render GIS sign-in button directly inside the auth modal ──
-// Previous "overlay trick" (repositioning the corner GIS iframe over the modal
-// button) fails because .auth-corner creates a stacking context at z-index:100,
-// which is below the auth modal at z-index:210. The iframe is trapped behind it.
-// Fix: render a second independent GIS button inside the modal container.
-function renderGisModalButton() {
-  if (!gisReady) return;
-  const container = document.getElementById("google-login-btn-modal");
-  if (!container) return;
-
-  // Show container BEFORE renderButton so it has real layout dimensions
-  container.style.display = "block";
-  container.innerHTML = "";
-
-  // One rAF to guarantee the container has been painted with real size
-  requestAnimationFrame(() => {
-    const w = Math.min(container.clientWidth || 280, 400);
+function loadSession() {
+  const sessionData = localStorage.getItem("distopia2_session");
+  if (sessionData) {
     try {
-      google.accounts.id.renderButton(container, {
-        theme: "filled_black", size: "large", shape: "rectangular",
-        text: "signin_with", width: w,
-      });
-      // Hide the custom fallback button — the real GIS button works
-      const customBtn = document.getElementById("auth-google-btn");
-      if (customBtn) customBtn.style.display = "none";
-      console.log("[Distopia2] GIS modal button rendered OK, width:", w);
+      currentUser = JSON.parse(sessionData);
+      
+      const cached = lsGetVotes(currentUser.sub);
+      if (Object.keys(cached).length > 0) {
+        userVotes = cached;
+        userVotesReady = true;
+      } else {
+        userVotesReady = false;
+      }
+
+      updateAuthUI(true);
+      refreshCardStates();
+      refreshModalButtons();
+      
+      loadUserVotesFromServer();
     } catch (e) {
-      console.warn("[Distopia2] GIS renderButton failed, using custom button:", e.message);
-      container.style.display = "none";
-      // Custom button stays visible — its click handler will try prompt()
+      logout();
     }
-  });
+  }
 }
 
-// ── Called by GIS when login completes (from corner OR modal button) ──
-function handleCredentialResponse(response) {
-  const payload = parseJWT(response.credential);
-  if (!payload) { showToast("⚠️ Error al procesar el token"); return; }
+async function handleCustomAuth(action, email, password) {
+  try {
+    const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({ action: action, email: email, password: password })
+    });
+    
+    const data = JSON.parse(await res.text());
+    
+    if (data.error) {
+      showToast("⚠️ " + data.error);
+      return false;
+    }
+    
+    if (data.success) {
+      currentUser = {
+        sub: data.sub,
+        email: data.email,
+        name: data.email.split('@')[0],
+        picture: ""
+      };
+      
+      localStorage.setItem("distopia2_session", JSON.stringify(currentUser));
+      
+      const cached = lsGetVotes(currentUser.sub);
+      if (Object.keys(cached).length > 0) {
+        userVotes = cached;
+        userVotesReady = true;
+      } else {
+        userVotesReady = false;
+      }
 
-  currentUser = {
-    token: response.credential,
-    sub: payload.sub,
-    email: payload.email || "",
-    name: payload.given_name || payload.name || "Jugador",
-    picture: payload.picture || "",
-    exp: payload.exp,
-  };
-
-  // Load cached votes immediately for instant UI update
-  const cached = lsGetVotes(currentUser.sub);
-  if (Object.keys(cached).length > 0) {
-    userVotes = cached;
-    userVotesReady = true;
-  } else {
-    userVotesReady = false;
+      closeAuthModal();
+      updateAuthUI(true);
+      refreshCardStates();
+      refreshModalButtons();
+      showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
+      
+      loadUserVotesFromServer();
+      return true;
+    }
+  } catch (err) {
+    showToast("⚠️ Error de conexión");
+    console.error(err);
+    return false;
   }
-
-  // ── AUTO-CLOSE AUTH MODAL with fade-out animation ──
-  // This runs whether the user clicked the modal button OR the corner button.
-  closeAuthModal();
-
-  updateAuthUI(true);
-  refreshCardStates();
-  refreshModalButtons();
-  showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
-  // Sync votes from server in background
-  loadUserVotesFromServer();
 }
 
 function logout() {
-  if (typeof google !== "undefined") google.accounts.id.disableAutoSelect();
+  localStorage.removeItem("distopia2_session");
   currentUser = null; userVotes = {}; votingLocked.clear(); userVotesReady = false;
   updateAuthUI(false);
   refreshCardStates();
@@ -220,26 +192,15 @@ function updateAuthUI(loggedIn) {
     chipEl?.removeAttribute("hidden");
     if (nameEl)  nameEl.textContent  = currentUser.name;
     if (emailEl) emailEl.textContent = currentUser.email;
-    if (avatarEl && currentUser.picture) { avatarEl.src = currentUser.picture; avatarEl.alt = currentUser.name; }
+    if (avatarEl) { avatarEl.src = "Recursos/Icon.png"; avatarEl.alt = currentUser.name; }
   } else {
     wrapperEl?.removeAttribute("hidden");
     chipEl?.setAttribute("hidden","");
   }
 }
 
-function parseJWT(token) {
-  try {
-    const b64 = token.split(".")[1].replace(/-/g,"+").replace(/_/g,"/");
-    return JSON.parse(decodeURIComponent(
-      atob(b64).split("").map(c => "%" + ("00"+c.charCodeAt(0).toString(16)).slice(-2)).join("")
-    ));
-  } catch { return null; }
-}
-
 // ══════════════════════════════════════════════════════════════
 //  AUTH MODAL
-//  RULE: NEVER opens automatically on page load.
-//        ONLY opens when unauthenticated user tries to vote.
 // ══════════════════════════════════════════════════════════════
 let authModalCloseTimer = null;
 
@@ -247,32 +208,26 @@ function openAuthModal() {
   const overlay = document.getElementById("auth-modal-overlay");
   if (!overlay) return;
 
-  // Remove stale animation classes if re-opening quickly
   overlay.classList.remove("closing");
   const sheet = document.getElementById("auth-modal-panel");
   sheet?.classList.remove("auth-modal-closing");
 
-  // Make sure custom button is visible (reset from previous close)
-  const customBtn = document.getElementById("auth-google-btn");
-  if (customBtn) customBtn.style.display = "";
-  const gisContainer = document.getElementById("google-login-btn-modal");
-  if (gisContainer) { gisContainer.style.display = "none"; gisContainer.innerHTML = ""; }
-
-  // Show the modal
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
-
-  // Render GIS button in modal as visual backup (no prompt() - causes FedCM loop)
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => renderGisModalButton());
-  });
+  
+  // Switch to login tab by default
+  const tabLogin = document.getElementById("tab-login");
+  if (tabLogin) tabLogin.click();
+  const authEmail = document.getElementById("auth-email");
+  if (authEmail) authEmail.value = "";
+  const authPassword = document.getElementById("auth-password");
+  if (authPassword) authPassword.value = "";
 }
 
 function closeAuthModal() {
   const overlay = document.getElementById("auth-modal-overlay");
   const sheet   = document.getElementById("auth-modal-panel");
   if (!overlay || overlay.hidden) return;
-
 
   overlay.classList.add("closing");
   sheet?.classList.add("auth-modal-closing");
@@ -283,77 +238,60 @@ function closeAuthModal() {
     overlay.classList.remove("closing");
     sheet?.classList.remove("auth-modal-closing");
     document.body.style.overflow = "";
-    // Reset GIS container + restore custom button for next open
-    const container = document.getElementById("google-login-btn-modal");
-    if (container) { container.innerHTML = ""; container.style.display = "none"; }
-    const customBtn = document.getElementById("auth-google-btn");
-    if (customBtn) customBtn.style.display = "";
   }, 260);
 }
-
 
 function initAuthModal() {
   const overlay  = document.getElementById("auth-modal-overlay");
   const closeBtn = document.getElementById("auth-modal-close");
   if (!overlay || !closeBtn) return;
 
-  // X button — always functional
   closeBtn.addEventListener("click", closeAuthModal);
-
-  // Click outside sheet to close
-  overlay.addEventListener("click", e => {
-    if (e.target === overlay) closeAuthModal();
-  });
-
-  // Escape key
+  overlay.addEventListener("click", e => { if (e.target === overlay) closeAuthModal(); });
   document.addEventListener("keydown", e => {
-    if (overlay && !overlay.hidden && !overlay.classList.contains("closing") && e.key==="Escape") {
-      closeAuthModal();
-    }
+    if (overlay && !overlay.hidden && !overlay.classList.contains("closing") && e.key==="Escape") closeAuthModal();
   });
 
-  // Custom button: go DIRECTLY to OAuth2 redirect — no prompt(), no FedCM issues
-  const authGoogleBtn = document.getElementById("auth-google-btn");
-  if (authGoogleBtn) {
-    authGoogleBtn.addEventListener("click", () => {
-      googleLoginRedirect();
+  const tabLogin = document.getElementById("tab-login");
+  const tabRegister = document.getElementById("tab-register");
+  const submitBtn = document.getElementById("custom-auth-submit");
+  const form = document.getElementById("custom-auth-form");
+  
+  let currentAction = "login";
+
+  if (tabLogin && tabRegister) {
+    tabLogin.addEventListener("click", () => {
+      tabLogin.classList.add("active");
+      tabRegister.classList.remove("active");
+      submitBtn.textContent = "Iniciar sesión";
+      currentAction = "login";
+    });
+    
+    tabRegister.addEventListener("click", () => {
+      tabRegister.classList.add("active");
+      tabLogin.classList.remove("active");
+      submitBtn.textContent = "Crear cuenta";
+      currentAction = "register";
     });
   }
-}
 
-// ══════════════════════════════════════════════════════════════
-//  OAUTH2 REDIRECT FALLBACK
-//  This is the nuclear option that ALWAYS works.
-//  Opens Google's OAuth page → user picks account → redirects back
-//  with id_token in URL hash → checkOAuthRedirect() picks it up.
-// ══════════════════════════════════════════════════════════════
-function googleLoginRedirect() {
-  const nonce = Math.random().toString(36).substring(2) + Date.now().toString(36);
-  const redirectUri = window.location.origin + window.location.pathname;
-  const params = new URLSearchParams({
-    client_id: GOOGLE_CLIENT_ID,
-    redirect_uri: redirectUri,
-    response_type: 'id_token',
-    scope: 'openid email profile',
-    nonce: nonce,
-    prompt: 'select_account',
-  });
-  window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?${params}`;
-}
-
-function checkOAuthRedirect() {
-  const hash = window.location.hash.substring(1);
-  if (!hash) return false;
-  const params = new URLSearchParams(hash);
-  const idToken = params.get('id_token');
-  if (idToken) {
-    // Clean the URL hash so it doesn't persist
-    history.replaceState(null, '', window.location.pathname + window.location.search);
-    // Process the token exactly like GIS would
-    handleCredentialResponse({ credential: idToken });
-    return true;
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("auth-email").value.trim();
+      const password = document.getElementById("auth-password").value;
+      if (!email || !password) return;
+      
+      submitBtn.disabled = true;
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Cargando...";
+      
+      await handleCustomAuth(currentAction, email, password);
+      
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
   }
-  return false;
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -361,13 +299,11 @@ function checkOAuthRedirect() {
 // ══════════════════════════════════════════════════════════════
 async function init() {
   initBlobBg();
-  waitForGis();
   document.getElementById("logout-btn")?.addEventListener("click", logout);
   document.getElementById("login-wrapper")?.addEventListener("click", openAuthModal);
   initAuthModal();
 
-  // Check if returning from OAuth redirect (user just logged in via Google)
-  checkOAuthRedirect();
+  loadSession();
 
   try {
     const [dataRes, votes] = await Promise.all([
@@ -772,7 +708,7 @@ async function handleVote(modId, direction) {
   updateStatsBar();
 
   try {
-    const body = JSON.stringify({ id:modId, vote:newMyVote, token:currentUser.token, sub:currentUser.sub, email:currentUser.email });
+    const body = JSON.stringify({ id:modId, vote:newMyVote, sub:currentUser.sub, email:currentUser.email });
     const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
       method:"POST", headers:{"Content-Type":"text/plain"}, body,
     });

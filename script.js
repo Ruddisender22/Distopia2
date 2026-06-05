@@ -581,7 +581,10 @@ function buildCard(mod) {
   if (mod.status) {
     const statusClsMap = { "CONFIRMADO": "status-confirmed", "NO DEFINITIVO": "status-pending", "ELIMINADO": "status-removed" };
     typeTag.className = `mod-type-tag status-inline ${statusClsMap[mod.status] || ""}`;
-    typeTag.textContent = mod.status === "NO DEFINITIVO" ? "NO DEF." : mod.status;
+    let displayStatus = mod.status;
+    if (mod.status === "CONFIRMADO") displayStatus = "SELECCIÓN DEL AUTOR";
+    if (mod.status === "NO DEFINITIVO") displayStatus = "REVISIÓN";
+    typeTag.textContent = displayStatus;
   } else {
     typeTag.className = "mod-type-tag";
     typeTag.textContent = "MOD";

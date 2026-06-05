@@ -278,6 +278,7 @@ async function init() {
     updateStatsBar();
     hideLoading();
     initModal();
+    startVotePolling();
   } catch (err) {
     console.error("[Distopia2]", err);
     hideLoading();
@@ -390,6 +391,7 @@ function buildSection(section) {
     });
 
   const scoreChip = document.createElement("div"); scoreChip.className = "section-score-chip";
+  scoreChip.id = `section-score-${section.name.replace(/\s+/g, '-')}`;
   scoreChip.innerHTML = `
       <span class="sscore-up">+${sectionUp}</span>
       <span class="sscore-down">-${sectionDown}</span>
@@ -470,6 +472,71 @@ function buildSection(section) {
 
   scrollTo(0);
   return block;
+}
+
+
+
+// ── Polling & Secciones ─────────────────────────────────────────
+
+function updateSectionHeaders() {
+  if (!modData || !modData.sections) return;
+  modData.sections.forEach(section => {
+    const chip = document.getElementById(`section-score-${section.name.replace(/\s+/g, '-')}`);
+    if (!chip) return;
+    let sectionUp = 0, sectionDown = 0;
+    section.mods.forEach(m => {
+      const sv = localVotes[m.id] || {up:0, down:0};
+      if (typeof sv === 'object') {
+        sectionUp += sv.up || 0; sectionDown += sv.down || 0;
+      } else if (typeof sv === 'number') {
+        if (sv > 0) sectionUp += sv;
+        else if (sv < 0) sectionDown += Math.abs(sv);
+      }
+    });
+    chip.innerHTML = `
+      <span class="sscore-up">+${sectionUp}</span>
+      <span class="sscore-down">-${sectionDown}</span>
+    `;
+  });
+}
+
+function startVotePolling() {
+  setInterval(async () => {
+    try {
+      const newVotes = await fetchAggregateVotes();
+      if (Object.keys(newVotes).length > 0) {
+        let changed = false;
+        for (const [modId, scoreObj] of Object.entries(newVotes)) {
+          if (typeof scoreObj !== 'object') continue;
+          
+          const old = localVotes[modId] || {up:0, down:0};
+          const oldUp = typeof old === 'object' ? (old.up||0) : (old>0?old:0);
+          const oldDown = typeof old === 'object' ? (old.down||0) : (old<0?Math.abs(old):0);
+          
+          if (oldUp !== scoreObj.up || oldDown !== scoreObj.down) {
+            changed = true;
+            localVotes[modId] = scoreObj;
+            
+            const upEl = document.getElementById(`score-up-${modId}`);
+            const dnEl = document.getElementById(`score-down-${modId}`);
+            if (upEl && parseInt(upEl.textContent) !== scoreObj.up) {
+              animateValue(upEl, parseInt(upEl.textContent)||0, scoreObj.up, 400);
+            }
+            if (dnEl && parseInt(dnEl.textContent) !== scoreObj.down) {
+              animateValue(dnEl, parseInt(dnEl.textContent)||0, scoreObj.down, 400);
+            }
+            refreshModalScore(modId);
+          }
+        }
+        if (changed) {
+          updateStatsBar();
+          updateSectionHeaders();
+        }
+      }
+    } catch (e) {
+      console.warn("[Distopia2] Polling error:", e);
+    }
+  }, 30000); // 30 seconds polling
 }
 
 // ── Mod Card ────────────────────────────────────────────────────
@@ -656,8 +723,12 @@ async function handleVote(modId, direction) {
   // Score UI update
   const upEl = document.getElementById(`score-up-${modId}`);
   const dnEl = document.getElementById(`score-down-${modId}`);
-  if(upEl) upEl.textContent = val.up;
-  if(dnEl) dnEl.textContent = val.down;
+  if(upEl) { upEl.textContent = val.up; upEl.classList.add("bump"); setTimeout(()=>upEl.classList.remove("bump"), 320); }
+  if(dnEl) { dnEl.textContent = val.down; dnEl.classList.add("bump"); setTimeout(()=>dnEl.classList.remove("bump"), 320); }
+  
+  refreshModalScore(modId);
+  updateStatsBar();
+  updateSectionHeaders();
 
   // Button states
   const upBtn = document.getElementById(`up-${modId}`);
@@ -912,7 +983,13 @@ function updateStatsBar() {
   const ssh=document.getElementById("stat-sections"); if(ssh) ssh.textContent=`${modData.sections.length - 1} secciones`;
 }
 
-function hideLoading(){ document.getElementById("loading-screen")?.remove(); }
+function hideLoading() {
+  const loading = document.getElementById("loading-screen");
+  if (loading) {
+    loading.style.opacity = "0";
+    setTimeout(() => loading.remove(), 400);
+  }
+}
 function showErrorState(err){
   document.getElementById("app").innerHTML=
     `<div class="error-state"><h2>⚠️ Error al cargar</h2><p>Revisa la consola (F12).</p><pre>${escapeHtml(String(err))}</pre></div>`;

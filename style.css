@@ -268,12 +268,19 @@ body {
   align-items: center; 
   justify-content: center;
   gap: 0.75rem; 
-  padding: 0.7rem 2.5rem;
+  padding: 0.8rem 2.8rem;
   z-index: 1;
-  background: linear-gradient(135deg, #990000 0%, #e62e00 100%);
-  border: 3px solid #ffcc00;
-  border-radius: var(--r-md);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.6), 0 0 30px rgba(255,68,0,0.5), inset 0 0 15px rgba(255,204,0,0.4);
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.8)) drop-shadow(0 0 15px rgba(255,204,0,0.3));
+}
+.section-label-wrap::before {
+  content: ""; position: absolute; inset: 0; z-index: -2;
+  background: linear-gradient(135deg, #ffcc00 0%, #00ccff 50%, #ffcc00 100%);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+.section-label-wrap::after {
+  content: ""; position: absolute; inset: 3px; z-index: -1;
+  background: linear-gradient(145deg, #3a0000 0%, #7a0000 100%);
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
 }
 .section-label {
   font-family: var(--font-head);

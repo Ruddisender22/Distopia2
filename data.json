@@ -65,13 +65,18 @@
       "icon": "🌿",
       "mods": [
         {
-          "id": "mods-primal",
-          "name": "Mods Primal",
+          "id": "primal",
+          "name": "Primal",
           "images": [
-            "https://placehold.co/800x450/001a08/4ade80?text=Mods+Primal"
+            "https://cdn.modrinth.com/data/cached_images/cf4195afe91c34d812b70668566480dd7db064bc.png",
+            "https://cdn.modrinth.com/data/cached_images/d35b44870d11d133ae66a8319a3684f1792d28be.jpeg",
+            "https://cdn.modrinth.com/data/cached_images/3279725dd2b3374ec08485a71cdefa5eab5e7299.jpeg",
+            "https://media.forgecdn.net/attachments/1600/568/2026-03-27_01-16-28-png.png"
           ],
           "paragraphs": [
-            "Añade criaturas primitivas y biomas salvajes inspirados en épocas prehistóricas."
+            "Primal es un mod para Forge/NeoForge que mejora el entorno salvaje de Minecraft, ¡haciendo que la supervivencia sea más inmersiva y emocionante!.",
+
+            "Se centra en añadir nuevos animales con un estilo similar al del juego original, con mecánicas únicas, ¡además de nuevos y emocionantes bloques y objetos!\n\nTambién mejora algunos aspectos básicos del juego, ¡así que prepárate para ver entidades del juego base con nuevos modelos!"
           ],
           "status": "CONFIRMADO"
         },
@@ -79,10 +84,16 @@
           "id": "no-mans-land",
           "name": "No Man's Land",
           "images": [
-            "https://placehold.co/800x450/0a1a00/86efac?text=No+Mans+Land"
+            "https://i.ytimg.com/vi/RduumoQJqpk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCjJlCPWYarijJXoVwat1rh54Mxag",
+            "https://i.ytimg.com/vi/w0pTLLgZR6k/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1112/294/inside-an-old-growth-forest_12.png",
+            "https://media.forgecdn.net/attachments/1112/284/beach_2.png",
+            "https://media.forgecdn.net/attachments/1112/301/river-along-an-old-growth-forest_19.png"
           ],
           "paragraphs": [
-            "Nuevas tierras yermas y biomas hostiles con fauna única y recursos exclusivos."
+            "Una revisión integral del mundo del juego, sin concesiones, que mejora la generación de mundos en todos los biomas y entornos.",
+
+            "No Man's Land es una modificación compatible con la versión original del juego que mejora tu mundo principal, optimizando los biomas existentes y añadiendo otros nuevos, transformando el mundo con gran atención al detalle en cada uno de sus aspectos.\n\nDesde las cumbres más altas de las montañas hasta las fosas oceánicas más profundas, No Man's Land busca ofrecer un entorno con la misma calidad y atención al detalle. Este mod, en esencia, mejora la experiencia de juego y, por ello, todas sus características están diseñadas para ser altamente interactivas y permitir una gran libertad creativa.\n\nTodo en la creación está bendecido por la belleza, y tú eres parte inseparable de ella. Así que explora y ama como este mundo te ama."
           ],
           "status": "CONFIRMADO"
         },
@@ -90,10 +101,13 @@
           "id": "ecologics",
           "name": "Ecologics",
           "images": [
-            "https://placehold.co/800x450/001208/22c55e?text=Ecologics"
+            "https://media.forgecdn.net/attachments/424/77/crabncastle.jpg",
+            "https://media.forgecdn.net/attachments/432/858/desertstuff.png",
+            "https://media.forgecdn.net/attachments/439/748/snowyupdate.png",
+            "https://media.forgecdn.net/attachments/443/775/squirrels.png"
           ],
           "paragraphs": [
-            "Mejora los biomas existentes de Minecraft con flora, fauna y detalles ambientales adicionales para hacer el mundo más vivo."
+            "¡Actualizaciones sencillas de biomas clásicos, con criaturas divertidas, bloques y mucho más!"
           ],
           "status": "NO DEFINITIVO"
         },
@@ -149,6 +163,7 @@
           "id": "cataclysm",
           "name": "L_Ender 's Cataclysm",
           "images": [
+            "https://cdn.minecraftstorage.com/posts/469649dc-91fc-40b3-8c67-c46276c656a1/mainphoto/full/l-ender-s-cataclysm.webp",
             "Recursos/Cataclysm/CursedDesert.png",
             "Recursos/Cataclysm/EndCity.png",
             "Recursos/Cataclysm/Ignis.png",
@@ -167,10 +182,15 @@
           "id": "royal-variations",
           "name": "Royal Variations",
           "images": [
-            "https://placehold.co/800x450/1a0010/f472b6?text=Royal+Variations"
+            "https://i.ytimg.com/vi/SIy9yi7BN3Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAmXbS-Hv4d9oYlIH_Lf88Ep61Cxg",
+            "https://media.forgecdn.net/attachments/1343/722/2025-09-23_04.png",
+            "https://media.forgecdn.net/attachments/1343/721/2025-09-23_04.png",
+            "https://media.forgecdn.net/attachments/1343/724/2025-10-02_02.png",
+            "https://media.forgecdn.net/attachments/1343/725/2025-09-23_04.png"
           ],
           "paragraphs": [
-            "Añade variantes únicas de mobs existentes con nuevas apariencias, comportamientos y loot especial."
+            "Añade variaciones reales mejoradas de las criaturas originales del juego, con características propias.",
+            "Todas las criaturas que encontrarás periódicamente en el mundo tienen sus propias habilidades y una mayor cantidad de experiencia y botines, incluyendo nuevos objetos con su propia utilidad. Este mod diversificará y complicará ligeramente tu supervivencia sin sobrecargar el juego con demasiadas mecánicas."
           ],
           "status": "NO DEFINITIVO"
         },
@@ -307,10 +327,17 @@
           "id": "starcatcher",
           "name": "Starcatcher",
           "images": [
-            "https://placehold.co/800x450/00001a/818cf8?text=Starcatcher"
+            "https://i.ytimg.com/vi/jRNG5cYSqpg/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1344/608/minigame-png.png",
+            "https://media.forgecdn.net/attachments/1397/874/b94b8c911433e0a25eafd0fcecad6c6e4a1fea2e-png.png",
+            "https://media.forgecdn.net/attachments/1643/456/description_4bbc8f21-1912-44e5-a865-4ec0388b4548.png",
+            "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
           ],
           "paragraphs": [
-            "Mod de aventura y exploración con un toque mágico y amigable para todos los públicos."
+            "Un mod que renueva por completo el sistema de pesca, con más de 100 peces y un montón de contenido nuevo relacionado con la pesca.",
+
+            "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
+            "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
           ],
           "status": "NO DEFINITIVO"
         },
@@ -678,9 +705,13 @@
           "id": "tempad",
           "name": "Tempad",
           "images": [
-            "https://placehold.co/800x450/001a1a/2dd4bf?text=Tempad"
+            "https://www.minecraft-guides.com/wp-content/uploads/2026/04/Tempad.png",
+            "https://cdn.modrinth.com/data/cached_images/664b01058c20fdc19d4fef353f986b90249ff89e.png",
+            "https://preview.redd.it/minecraft-tempad-mod-gui-v0-1o7p9gaqta0d1.png?width=1080&crop=smart&auto=webp&s=cb69a8658ced7cb46d533c267851280b6be53d4e",
+            "https://www.9minecraft.net/wp-content/uploads/2025/03/Tempad-With-Shaders-Mod-Screenshots-8.jpg"
           ],
           "paragraphs": [
+            "¡Crea un portal a cualquier lugar desde cualquier lugar!",
             "Inspirado en la serie Loki de Marvel, el TemPad permite abrir portales a ubicaciones guardadas para teletransportarse al instante."
           ]
         },

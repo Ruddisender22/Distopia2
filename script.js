@@ -952,14 +952,16 @@ function scoreClass(s){ return s>0?"pos":s<0?"neg":""; }
 
 function updateStatsBar() {
   if(!modData) return;
-  const totalMods  = modData.sections.reduce((a,s)=>a+s.mods.length,0);
+  const totalMods  = modData.sections.filter(s => s.name !== "Resource Packs").reduce((a,s)=>a+s.mods.length,0);
+  const totalRP    = modData.sections.find(s => s.name === "Resource Packs")?.mods.length || 0;
   const totalVotes = Object.values(localVotes).reduce((a,v)=>a+Math.abs(v),0);
   const sm=document.getElementById("stat-mods-val");   if(sm) sm.textContent=totalMods;
+  const srp=document.getElementById("stat-rp-val");    if(srp) srp.textContent=totalRP;
   const sv=document.getElementById("stat-votes-val");  if(sv) sv.textContent=totalVotes;
-  const ss=document.getElementById("stat-sections-val"); if(ss) ss.textContent=modData.sections.length;
+  const ss=document.getElementById("stat-sections-val"); if(ss) ss.textContent=modData.sections.length - 1; // Exclude RP section from count
   const smh=document.getElementById("stat-mods");   if(smh) smh.textContent=`${totalMods} mods`;
   const svh=document.getElementById("stat-votes");  if(svh) svh.textContent=`${totalVotes} votos`;
-  const ssh=document.getElementById("stat-sections"); if(ssh) ssh.textContent=`${modData.sections.length} secciones`;
+  const ssh=document.getElementById("stat-sections"); if(ssh) ssh.textContent=`${modData.sections.length - 1} secciones`;
 }
 
 function hideLoading(){ document.getElementById("loading-screen")?.remove(); }

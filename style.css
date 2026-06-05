@@ -157,7 +157,7 @@ body {
 }
 .header-brand { display: flex; align-items: center; gap: 1.5rem; }
 .header-logo {
-  height: 140px; width: auto;
+  height: 220px; width: auto;
   border-radius: 12%;
   filter: drop-shadow(0 0 22px rgba(255,204,0,0.4));
   flex-shrink: 0; transition: filter 0.3s, transform 0.3s;
@@ -911,7 +911,7 @@ body {
   .site-header { padding: 4rem 1rem 1.5rem; }
   .header-inner { flex-direction: column; align-items: flex-start; gap: 1.1rem; }
   .header-brand { flex-direction: column; gap: 0.75rem; }
-  .header-logo { height: 44px; }
+  .header-logo { height: 80px; }
   .header-stats { width: 100%; justify-content: space-around; }
   .hstat-val { font-size: 1.2rem; }
 

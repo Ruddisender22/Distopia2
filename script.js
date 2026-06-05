@@ -312,7 +312,7 @@ function switchTab(tab) {
 
 // ── Aggregate votes ─────────────────────────────────────────────
 async function fetchAggregateVotes() {
-  const targetUrl = `${APPS_SCRIPT_URL}?action=getVotes`;
+  const targetUrl = `${APPS_SCRIPT_URL}?action=getVotes&t=${Date.now()}`;
   const urls = [PROXY_GET + encodeURIComponent(targetUrl), targetUrl];
   for (const url of urls) {
     try {
@@ -330,7 +330,7 @@ async function fetchAggregateVotes() {
 async function loadUserVotesFromServer() {
   if (!currentUser) return;
   try {
-    const params = new URLSearchParams({ action:"getUserVotes", sub:currentUser.sub });
+    const params = new URLSearchParams({ action:"getUserVotes", sub:currentUser.sub, t:Date.now() });
     const res = await fetch(PROXY_GET + encodeURIComponent(`${APPS_SCRIPT_URL}?${params}`), {
       headers:{Accept:"application/json"}, signal:AbortSignal.timeout(10000),
     });

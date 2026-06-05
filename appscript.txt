@@ -157,7 +157,7 @@ function handleRegisterUser(email, password) {
   const formattedEmail = String(email).trim().toLowerCase();
   
   // Check if email exists
-  for (let i = 1; i < authData.length; i++) {
+  for (let i = 0; i < authData.length; i++) {
     if (String(authData[i][0]).trim().toLowerCase() === formattedEmail) {
       return respond({ error: "El email ya está registrado" });
     }
@@ -184,7 +184,7 @@ function handleLoginUser(email, password) {
   
   const formattedEmail = String(email).trim().toLowerCase();
   
-  for (let i = 1; i < authData.length; i++) {
+  for (let i = 0; i < authData.length; i++) {
     if (String(authData[i][0]).trim().toLowerCase() === formattedEmail) {
       if (String(authData[i][1]) === String(password)) {
         const sub = String(authData[i][2]);
@@ -230,7 +230,7 @@ function handleRegisterVote(userSub, email, modId, newVote) {
   let userRowIdx   = -1;
   let previousVote = 0;
 
-  for (let i = 1; i < usersData.length; i++) {
+  for (let i = 0; i < usersData.length; i++) {
     if (String(usersData[i][0]).trim() === userSub &&
         String(usersData[i][1]).trim() === modId) {
       userRowIdx   = i + 1;
@@ -259,7 +259,7 @@ function handleRegisterVote(userSub, email, modId, newVote) {
   // Actualizar total en Votos (delta real = diferencia entre nuevo y anterior)
   const actualDelta = newVote - previousVote;
   let votesRowIdx = -1, currentScore = 0;
-  for (let i = 1; i < votesData.length; i++) {
+  for (let i = 0; i < votesData.length; i++) {
     if (String(votesData[i][0]).trim() === modId) {
       votesRowIdx  = i + 1;
       currentScore = Number(votesData[i][1]) || 0;

@@ -275,6 +275,24 @@ function initAuthModal() {
     });
   }
 
+  const togglePasswordBtn = document.getElementById("toggle-password");
+  const authPassword = document.getElementById("auth-password");
+  if (togglePasswordBtn && authPassword) {
+    togglePasswordBtn.addEventListener("click", () => {
+      const type = authPassword.getAttribute("type") === "password" ? "text" : "password";
+      authPassword.setAttribute("type", type);
+      const eyeIcon = togglePasswordBtn.querySelector(".eye-icon");
+      const eyeOffIcon = togglePasswordBtn.querySelector(".eye-off-icon");
+      if (type === "password") {
+        if (eyeIcon) eyeIcon.style.display = "block";
+        if (eyeOffIcon) eyeOffIcon.style.display = "none";
+      } else {
+        if (eyeIcon) eyeIcon.style.display = "none";
+        if (eyeOffIcon) eyeOffIcon.style.display = "block";
+      }
+    });
+  }
+
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();

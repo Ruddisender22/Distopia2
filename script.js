@@ -941,7 +941,7 @@ function refreshModalButtons() {
   const myVote=userVotes[currentModalMod.id]??0;
   [["modal-upvote-btn",1],["modal-downvote-btn",-1],["modal-upvote-btn-m",1],["modal-downvote-btn-m",-1]].forEach(([id,dir])=>{
     const b=document.getElementById(id); if(!b) return;
-    b.disabled=!currentUser; b.classList.toggle("active",myVote===dir);
+    b.disabled=false; b.classList.toggle("active",myVote===dir);
   });
 }
 

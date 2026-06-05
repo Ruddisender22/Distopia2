@@ -1033,3 +1033,26 @@ body {
   font-size: 0.57rem; font-weight: 700; color: var(--violet);
   letter-spacing: 0.1em; text-transform: uppercase;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .modal-split {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .modal-right {
+    flex: none;
+    height: 40vh;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  .modal-left {
+    flex: 1;
+    border-right: none;
+    box-shadow: none;
+  }
+  .modal-gallery {
+    height: 100%;
+  }
+}

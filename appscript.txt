@@ -13,8 +13,7 @@
 // ================================================================
 
 const SHEET_ID         = "1FfkT9hpF9xJaDElfymPlRNu8uq2mDMdk_xQcPNqmcoo";
-const SHEET_VOTES      = "Votos";         // Hoja 1: totales por mod { ModID, Score }
-const SHEET_USERS      = "VotosUsuarios"; // Hoja 2: votos por usuario
+const SHEET_USERS      = "VotosUsuarios"; // Hoja: votos por usuario
 
 // ── Obtiene o crea una hoja por nombre ─────────────────────────
 function getSheet(name) {
@@ -22,9 +21,7 @@ function getSheet(name) {
   let sh = ss.getSheetByName(name);
   if (!sh) {
     sh = ss.insertSheet(name);
-    if (name === SHEET_VOTES) {
-      sh.getRange(1,1,1,2).setValues([["ModID","Score"]]);
-    } else if (name === SHEET_USERS) {
+    if (name === SHEET_USERS) {
       sh.getRange(1,1,1,5).setValues([["UserSub","ModID","Vote","Email","Timestamp"]]);
     }
     SpreadsheetApp.flush();
@@ -54,25 +51,27 @@ function doGet(e) {
 
     if (action === "debug") {
       const ss      = SpreadsheetApp.openById(SHEET_ID);
-      const shV     = ss.getSheetByName(SHEET_VOTES);
       const shU     = ss.getSheetByName(SHEET_USERS);
       return respond({
         sheetId:      SHEET_ID,
         spreadsheetName: ss.getName(),
-        votos:        shV ? shV.getDataRange().getValues() : "hoja no existe",
         votosUsuarios:shU ? shU.getDataRange().getValues() : "hoja no existe",
         timestamp:    new Date().toISOString()
       });
     }
 
     if (action === "getVotes") {
-      const sh   = getSheet(SHEET_VOTES);
+      const sh   = getSheet(SHEET_USERS);
       const rows = sh.getDataRange().getValues();
       const out  = {};
       for (let i = 1; i < rows.length; i++) {
-        const id    = String(rows[i][0]).trim();
-        const score = Number(rows[i][1]) || 0;
-        if (id) out[id] = score;
+        const modId = String(rows[i][1]).trim();
+        const vote  = Number(rows[i][2]) || 0;
+        if (modId) {
+          if (!out[modId]) out[modId] = { up: 0, down: 0 };
+          if (vote === 1) out[modId].up++;
+          else if (vote === -1) out[modId].down++;
+        }
       }
       return respond(out);
     }
@@ -160,10 +159,8 @@ function handleVote(body) {
 // ── Registra el voto del usuario para un mod ───────────────────
 function handleRegisterVote(userSub, email, modId, newVote) {
   const usersSh = getSheet(SHEET_USERS);
-  const votesSh = getSheet(SHEET_VOTES);
 
   const usersData = usersSh.getDataRange().getValues();
-  const votesData = votesSh.getDataRange().getValues();
 
   // Buscar voto previo de este usuario para este mod
   let userRowIdx   = -1;
@@ -197,26 +194,9 @@ function handleRegisterVote(userSub, email, modId, newVote) {
     usersSh.appendRow([userSub, modId, newVote, email, now]);
   }
 
-  // Actualizar total en Votos (delta real = diferencia entre nuevo y anterior)
-  const actualDelta = newVote - previousVote;
-  let votesRowIdx = -1, currentScore = 0;
-  for (let i = 0; i < votesData.length; i++) {
-    if (String(votesData[i][0]).trim() === modId) {
-      votesRowIdx  = i + 1;
-      currentScore = Number(votesData[i][1]) || 0;
-      break;
-    }
-  }
-  const newScore = currentScore + actualDelta;
-  if (votesRowIdx !== -1) {
-    votesSh.getRange(votesRowIdx, 2).setValue(newScore);
-  } else {
-    votesSh.appendRow([modId, newScore]);
-  }
-
   SpreadsheetApp.flush();
-  Logger.log("Voto registrado. newScore=" + newScore);
-  return respond({ success: true, modId, newScore, userVote: newVote });
+  Logger.log("Voto registrado. userVote=" + newVote);
+  return respond({ success: true, modId, userVote: newVote });
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -225,7 +205,6 @@ function handleRegisterVote(userSub, email, modId, newVote) {
 
 // Crear las tres hojas con cabeceras
 function setupSheets() {
-  getSheet(SHEET_VOTES);
   getSheet(SHEET_USERS);
   Logger.log("✅ Hojas creadas/verificadas.");
 }
@@ -233,7 +212,7 @@ function setupSheets() {
 // Borrar todos los votos (irreversible)
 function resetAllVotes() {
   const ss = SpreadsheetApp.openById(SHEET_ID);
-  [SHEET_VOTES, SHEET_USERS].forEach(name => {
+  [SHEET_USERS].forEach(name => {
     const sh = ss.getSheetByName(name);
     if (sh) {
       const last = sh.getLastRow();

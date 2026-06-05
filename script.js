@@ -378,10 +378,22 @@ function buildSection(section) {
   labelWrap.appendChild(label); labelWrap.appendChild(tag);
 
   const right = document.createElement("div"); right.className = "section-right";
-  const sectionScore = section.mods.reduce((acc, m) => acc + (localVotes[m.id] ?? 0), 0);
+  let sectionUp = 0, sectionDown = 0;
+    section.mods.forEach(m => {
+      const sv = localVotes[m.id] || {up:0, down:0};
+      if (typeof sv === 'object') {
+        sectionUp += sv.up || 0; sectionDown += sv.down || 0;
+      } else if (typeof sv === 'number') {
+        if (sv > 0) sectionUp += sv;
+        else if (sv < 0) sectionDown += Math.abs(sv);
+      }
+    });
+
   const scoreChip = document.createElement("div"); scoreChip.className = "section-score-chip";
-  scoreChip.id = `section-score-${section.mods.map(m=>m.id).join('-').substring(0,20)}`;
-  scoreChip.innerHTML = `<span class="sscore-val ${sectionScore > 0 ? 'pos' : sectionScore < 0 ? 'neg' : ''}">${sectionScore > 0 ? '+' : ''}${sectionScore}</span><span class="sscore-lbl">pts totales</span>`;
+  scoreChip.innerHTML = `
+      <span class="sscore-up">+${sectionUp}</span>
+      <span class="sscore-down">-${sectionDown}</span>
+  `;
   const counter = document.createElement("span"); counter.className = "section-counter";
   counter.textContent = `01 / ${String(section.mods.length).padStart(2,"0")}`;
   right.appendChild(scoreChip); right.appendChild(counter);
@@ -462,7 +474,9 @@ function buildSection(section) {
 
 // ── Mod Card ────────────────────────────────────────────────────
 function buildCard(mod) {
-  const score  = localVotes[mod.id] ?? 0;
+  const scoreObj = localVotes[mod.id] || {up:0, down:0};
+  const upvotes = typeof scoreObj === 'object' ? (scoreObj.up || 0) : (scoreObj > 0 ? scoreObj : 0);
+  const downvotes = typeof scoreObj === 'object' ? (scoreObj.down || 0) : (scoreObj < 0 ? Math.abs(scoreObj) : 0);
   const myVote = userVotes[mod.id] ?? 0;
   const card = document.createElement("article");
   card.className = "mod-card"; card.id = `card-${mod.id}`;
@@ -513,12 +527,21 @@ function buildCard(mod) {
   }
 
   const voteRow = document.createElement("div"); voteRow.className = "vote-row";
-  const scorePill = document.createElement("div"); scorePill.className = "score-pill";
-  scorePill.innerHTML = `<span class="score-val ${scoreClass(score)}" id="score-${mod.id}">${score}</span><span class="score-lbl">pts</span>`;
+  const scoreSplit = document.createElement("div"); scoreSplit.className = "score-split";
+  scoreSplit.innerHTML = `
+    <div class="score-pill score-up">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+      <span class="score-val" id="score-up-${mod.id}">${upvotes}</span>
+    </div>
+    <div class="score-pill score-down">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      <span class="score-val" id="score-down-${mod.id}">${downvotes}</span>
+    </div>
+  `;
   const group = document.createElement("div"); group.className = "vote-group";
   group.appendChild(buildCardBtn(mod.id, 1, myVote));
   group.appendChild(buildCardBtn(mod.id, -1, myVote));
-  voteRow.appendChild(scorePill); voteRow.appendChild(group);
+  voteRow.appendChild(scoreSplit); voteRow.appendChild(group);
   body.appendChild(voteRow);
   card.appendChild(body);
 
@@ -610,49 +633,44 @@ async function handleVote(modId, direction) {
   votingLocked.add(modId);
 
   const current = userVotes[modId] ?? 0;
-  let delta, newMyVote;
+  let newMyVote;
   if (current === direction) {
-    delta = -direction; newMyVote = 0; delete userVotes[modId]; showToast("↩ Voto retirado");
-  } else if (current === 0) {
-    delta = direction; newMyVote = direction; userVotes[modId] = direction;
-    showToast(direction===1 ? "✓ Voto positivo" : "✗ Voto negativo");
+    newMyVote = 0; delete userVotes[modId]; showToast("↩ Voto retirado");
   } else {
-    delta = direction - current; newMyVote = direction; userVotes[modId] = direction;
-    showToast(direction===1 ? "✓ Cambiado a positivo" : "✗ Cambiado a negativo");
+    newMyVote = direction; userVotes[modId] = direction;
+    showToast(direction===1 ? "✓ Voto positivo" : "✗ Voto negativo");
   }
 
-  localVotes[modId] = (localVotes[modId] ?? 0) + delta;
-  const newScore = localVotes[modId];
-
-  // Score
-  const scoreEl = document.getElementById(`score-${modId}`);
-  if (scoreEl) {
-    scoreEl.textContent = newScore;
-    scoreEl.className = `score-val ${scoreClass(newScore)} bump`;
-    setTimeout(() => scoreEl.classList.remove("bump"), 320);
+  // Update local votes count object
+  const oldVal = localVotes[modId] || {up:0, down:0};
+  const val = typeof oldVal === 'object' ? oldVal : (oldVal > 0 ? {up:oldVal, down:0} : {up:0, down:Math.abs(oldVal)});
+  
+  if (current !== 0) { // Removing old vote from counter
+    if (current === 1) val.up--; else val.down--;
   }
+  if (newMyVote !== 0) { // Adding new vote to counter
+    if (newMyVote === 1) val.up++; else val.down++;
+  }
+  localVotes[modId] = val;
 
-  // Button states + stamp press
+  // Score UI update
+  const upEl = document.getElementById(`score-up-${modId}`);
+  const dnEl = document.getElementById(`score-down-${modId}`);
+  if(upEl) upEl.textContent = val.up;
+  if(dnEl) dnEl.textContent = val.down;
+
+  // Button states
   const upBtn = document.getElementById(`up-${modId}`);
   const dnBtn = document.getElementById(`dn-${modId}`);
   upBtn?.classList.toggle("active", newMyVote===1);
   dnBtn?.classList.toggle("active", newMyVote===-1);
-  const pressedBtn = direction===1 ? upBtn : dnBtn;
-  if (pressedBtn) {
-    pressedBtn.classList.add("stamp");
-    setTimeout(() => pressedBtn.classList.remove("stamp"), 240);
-  }
 
-  // Card tint + shake
+  // Card classes
   const card = document.getElementById(`card-${modId}`);
   if (card) {
-    card.classList.remove("voted-up","voted-down","shake");
+    card.classList.remove("voted-up","voted-down");
     if (newMyVote === 1)  card.classList.add("voted-up");
     if (newMyVote === -1) card.classList.add("voted-down");
-    requestAnimationFrame(() => {
-      card.classList.add("shake");
-      setTimeout(() => card.classList.remove("shake"), 340);
-    });
   }
 
   // Badge particles
@@ -756,6 +774,7 @@ function openModal(mod) {
   document.getElementById("modal-mod-name").textContent = mod.name;
   document.getElementById("modal-description").innerHTML =
     (mod.paragraphs||[]).map(p=>`<p>${escapeHtml(p)}</p>`).join("");
+  buildBentoGrid(mod);
   buildCarousel(mod);
   refreshModalScore(mod.id);
   refreshModalButtons();
@@ -825,12 +844,33 @@ function carouselGo(idx) {
 
 function refreshModalScore(modId) {
   if(!currentModalMod||currentModalMod.id!==modId) return;
-  const score=localVotes[modId]??0;
-  const cls=score>0?" pos":score<0?" neg":"";
-  const el=document.getElementById("modal-vote-score");
-  const elm=document.getElementById("modal-vote-score-m");
-  if(el){el.textContent=score; el.className=`modal-score-number${cls}`;}
-  if(elm) elm.textContent=score;
+  const sv = localVotes[modId] || {up:0, down:0};
+  const upvotes = typeof sv === 'object' ? (sv.up || 0) : (sv > 0 ? sv : 0);
+  const downvotes = typeof sv === 'object' ? (sv.down || 0) : (sv < 0 ? Math.abs(sv) : 0);
+  
+  const modalScoreRow = document.querySelector(".modal-score-row");
+  if (modalScoreRow) {
+    modalScoreRow.innerHTML = `
+      <div class="modal-score-card score-up">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+        <span class="modal-score-number" id="modal-vote-score-up">${upvotes}</span>
+        <span class="modal-score-label">a favor</span>
+      </div>
+      <div class="modal-score-card score-down">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <span class="modal-score-number" id="modal-vote-score-down">${downvotes}</span>
+        <span class="modal-score-label">en contra</span>
+      </div>
+    `;
+  }
+
+  const mobileScoreRow = document.querySelector(".mmv-score");
+  if (mobileScoreRow) {
+    mobileScoreRow.innerHTML = `
+      <span class="m-score-up">+<span id="modal-vote-score-up-m">${upvotes}</span></span>
+      <span class="m-score-down">-<span id="modal-vote-score-down-m">${downvotes}</span></span>
+    `;
+  }
 }
 
 function refreshModalButtons() {
@@ -851,13 +891,24 @@ function updateStatsBar() {
   if(!modData) return;
   const totalMods  = modData.sections.filter(s => s.name !== "Resource Packs").reduce((a,s)=>a+s.mods.length,0);
   const totalRP    = modData.sections.find(s => s.name === "Resource Packs")?.mods.length || 0;
-  const totalVotes = Object.values(localVotes).reduce((a,v)=>a+Math.abs(v),0);
+  
+  let totalUp = 0, totalDown = 0;
+  Object.values(localVotes).forEach(v => {
+    if (typeof v === 'object' && v !== null) {
+      totalUp += v.up || 0;
+      totalDown += v.down || 0;
+    } else if (typeof v === 'number') {
+      if (v > 0) totalUp += v;
+      else if (v < 0) totalDown += Math.abs(v);
+    }
+  });
+
   const sm=document.getElementById("stat-mods-val");   if(sm) sm.textContent=totalMods;
   const srp=document.getElementById("stat-rp-val");    if(srp) srp.textContent=totalRP;
-  const sv=document.getElementById("stat-votes-val");  if(sv) sv.textContent=totalVotes;
-  const ss=document.getElementById("stat-sections-val"); if(ss) ss.textContent=modData.sections.length - 1; // Exclude RP section from count
+  const sv=document.getElementById("stat-votes-val");  if(sv) sv.textContent=(totalUp + totalDown);
+  const ss=document.getElementById("stat-sections-val"); if(ss) ss.textContent=modData.sections.length - 1;
   const smh=document.getElementById("stat-mods");   if(smh) smh.textContent=`${totalMods} mods`;
-  const svh=document.getElementById("stat-votes");  if(svh) svh.textContent=`${totalVotes} votos`;
+  const svh=document.getElementById("stat-votes");  if(svh) svh.textContent=`${totalUp + totalDown} votos`;
   const ssh=document.getElementById("stat-sections"); if(ssh) ssh.textContent=`${modData.sections.length - 1} secciones`;
 }
 

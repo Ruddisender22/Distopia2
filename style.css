@@ -53,9 +53,9 @@
   --r-pill: 999px;
 
   /* ── Typography ── */
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-head: 'Space Grotesk', system-ui, sans-serif;
-  --font-mc:   'Space Grotesk', sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+  --font-head: 'Nunito', system-ui, sans-serif;
+  --font-mc:   'Nunito', sans-serif;
 
   /* ── Blur ── */
   --blur-sm: blur(12px);
@@ -270,28 +270,27 @@ body {
   gap: 0.75rem; 
   padding: 0.7rem 2.5rem;
   z-index: 1;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.8)) drop-shadow(0 0 20px rgba(255,204,0,0.2));
-}
-.section-label-wrap::before {
-  content: ""; position: absolute; inset: 0;
-  background: #ffcc00; /* Gold border */
-  clip-path: polygon(0% 0%, 100% 0%, 96% 100%, 4% 100%);
-  z-index: -2;
-}
-.section-label-wrap::after {
-  content: ""; position: absolute; inset: 3px;
-  background: #4a0404; /* Dark red interior */
-  clip-path: polygon(0% 0%, 100% 0%, 96% 100%, 4% 100%);
-  z-index: -1;
+  background: #4a0404;
+  border: 3px solid #ffcc00;
+  border-radius: var(--r-md);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.8), 0 0 20px rgba(255,204,0,0.2), inset 0 0 10px rgba(255,204,0,0.15);
 }
 .section-label {
   font-family: var(--font-head);
-  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
   font-weight: 900; letter-spacing: 0.05em;
   line-height: 1;
-  color: #ffcc00;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+  background: linear-gradient(110deg, #ffaa00 0%, #ffcc00 30%, #ffffff 50%, #ffcc00 70%, #ffaa00 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShine 3.5s linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
   text-transform: uppercase;
+}
+@keyframes goldShine {
+  to { background-position: 200% center; }
 }
 .section-tag {
   padding: 0.18rem 0.65rem;

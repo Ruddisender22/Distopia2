@@ -12,7 +12,7 @@
 //   4. Desplegar → Nueva versión → Ejecutar como: TÚ → Acceso: Cualquier usuario
 // ================================================================
 
-const SHEET_ID         = "1RkFUV_MHuDzIemnt88ivQw_1oCvEofHsbBOiIyhWNxM";
+const SHEET_ID         = "1FfkT9hpF9xJaDElfymPlRNu8uq2mDMdk_xQcPNqmcoo";
 const SHEET_VOTES      = "Votos";         // Hoja 1: totales por mod { ModID, Score }
 const SHEET_USERS      = "VotosUsuarios"; // Hoja 2: votos por usuario
 const SHEET_AUTH       = "UsuariosAuth";  // Hoja 3: registro de cuentas (Email, Password, Sub)

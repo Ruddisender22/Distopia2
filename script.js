@@ -337,9 +337,8 @@ async function loadUserVotesFromServer() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = JSON.parse(await res.text());
     if (data.error) throw new Error(data.error);
-    // IMPORTANT: Only update entries from server — don't overwrite votes the user
-    // placed in this session that haven't propagated to the server yet.
-    Object.assign(userVotes, data);
+    // IMPORTANT: Actualizamos los votos locales con los del servidor
+    userVotes = data;
     lsSaveVotes(currentUser.sub, userVotes);
     console.log("[Distopia2] Votos sincronizados:", data);
   } catch (e) {

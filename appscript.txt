@@ -85,7 +85,9 @@ function doGet(e) {
       const rows = sh.getDataRange().getValues();
       const out  = {};
       for (let i = 1; i < rows.length; i++) {
-        if (String(rows[i][0]).trim() === userSub) {
+        let rowSub = String(rows[i][0]).trim();
+        let rowEmail = String(rows[i][3]).trim();
+        if (rowSub === userSub || rowEmail === userSub) {
           const modId = String(rows[i][1]).trim();
           const vote  = Number(rows[i][2]) || 0;
           if (modId && vote !== 0) out[modId] = vote;
@@ -168,7 +170,9 @@ function handleRegisterVote(userSub, email, modId, newVote) {
   let previousVote = 0;
 
   for (let i = 0; i < usersData.length; i++) {
-    if (String(usersData[i][0]).trim() === userSub &&
+    let rowSub = String(usersData[i][0]).trim();
+    let rowEmail = String(usersData[i][3]).trim();
+    if ((rowSub === userSub || rowEmail === userSub) &&
         String(usersData[i][1]).trim() === modId) {
       userRowIdx   = i + 1;
       previousVote = Number(usersData[i][2]) || 0;

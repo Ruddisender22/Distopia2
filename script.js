@@ -125,13 +125,20 @@ function loadSession() {
 
 async function handleCustomAuth(action, email, password) {
   try {
+    console.log(`[Distopia2 Auth] Iniciando '${action}' con correo: ${email}`);
+    console.log(`[Distopia2 Auth] URL destino:`, APPS_SCRIPT_URL);
+    
     const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
       method: "POST",
       headers: { "Content-Type": "text/plain" },
       body: JSON.stringify({ action: action, email: email, password: password })
     });
     
-    const data = JSON.parse(await res.text());
+    const rawText = await res.text();
+    console.log(`[Distopia2 Auth] Respuesta cruda (status ${res.status}):`, rawText);
+    
+    const data = JSON.parse(rawText);
+    console.log(`[Distopia2 Auth] Objeto JSON recibido:`, data);
     
     if (data.error) {
       showToast("⚠️ " + data.error);

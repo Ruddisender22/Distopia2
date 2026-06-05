@@ -857,6 +857,8 @@ body {
 .toggle-password-btn { position: absolute; right: 10px; background: none; border: none; color: rgba(255,255,255,0.6); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s; outline: none; z-index: 10; }
 .toggle-password-btn svg { width: 20px; height: 20px; }
 .toggle-password-btn:hover { color: #fff; }
+.form-group input:-webkit-autofill + .toggle-password-btn { color: #000; }
+.form-group input:-webkit-autofill + .toggle-password-btn:hover { color: #333; }
 .form-group input:focus { border-color: var(--violet); background: rgba(0,0,0,0.5); }
 .password-warning { font-size: 0.65rem; color: var(--orange); margin-top: 0.3rem; line-height: 1.4; background: rgba(251,146,60,0.1); padding: 0.5rem; border-radius: var(--r-sm); border: 1px solid rgba(251,146,60,0.2); }
 .custom-auth-btn { padding: 0.8rem; border-radius: var(--r-md); background: var(--violet-d); border: 1px solid var(--violet-r); color: var(--violet); font-weight: 700; cursor: pointer; transition: all 0.2s; margin-top: 0.5rem; }

@@ -270,11 +270,13 @@ body {
   gap: 0.75rem; 
   padding: 0.8rem 2.8rem;
   z-index: 1;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.8)) drop-shadow(0 0 15px rgba(255,204,0,0.3));
+  animation: badgeGlowPulse 4s infinite alternate;
 }
 .section-label-wrap::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
-  background: linear-gradient(135deg, #ffcc00 0%, #00ccff 50%, #ffcc00 100%);
+  background: linear-gradient(135deg, #ffcc00 0%, #ffcc00 20%, #0022cc 50%, #ffcc00 80%, #ffcc00 100%);
+  background-size: 300% 300%;
+  animation: borderShimmer 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
 }
 .section-label-wrap::after {
@@ -298,6 +300,15 @@ body {
 }
 @keyframes goldShine {
   to { background-position: 200% center; }
+}
+@keyframes borderShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes badgeGlowPulse {
+  0% { filter: drop-shadow(0 8px 16px rgba(0,0,0,0.8)) drop-shadow(0 0 10px rgba(0,34,204,0.3)); }
+  100% { filter: drop-shadow(0 8px 16px rgba(0,0,0,0.8)) drop-shadow(0 0 25px rgba(255,204,0,0.5)); }
 }
 .section-tag {
   padding: 0.18rem 0.65rem;

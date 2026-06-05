@@ -123,38 +123,57 @@ function loadSession() {
   }
 }
 
-async function handleCustomAuth(email) {
+async function handleCustomAuth(action, email, password) {
   try {
-    console.log(`[Distopia2 Auth] Identificando con correo: ${email}`);
+    console.log(`[Distopia2 Auth] Iniciando '${action}' con correo: ${email}`);
+    console.log(`[Distopia2 Auth] URL destino:`, APPS_SCRIPT_URL);
     
-    // Simplemente usamos el email como 'sub' para identificar de forma única
-    currentUser = {
-      sub: email.toLowerCase(),
-      email: email.toLowerCase(),
-      name: email.split('@')[0],
-      picture: ""
-    };
+    const res = await fetch(PROXY_POST + encodeURIComponent(APPS_SCRIPT_URL), {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({ action: action, email: email, password: password })
+    });
     
-    localStorage.setItem("distopia2_session", JSON.stringify(currentUser));
+    const rawText = await res.text();
+    console.log(`[Distopia2 Auth] Respuesta cruda (status ${res.status}):`, rawText);
     
-    const cached = lsGetVotes(currentUser.sub);
-    if (Object.keys(cached).length > 0) {
-      userVotes = cached;
-      userVotesReady = true;
-    } else {
-      userVotesReady = false;
+    const data = JSON.parse(rawText);
+    console.log(`[Distopia2 Auth] Objeto JSON recibido:`, data);
+    
+    if (data.error) {
+      showToast("⚠️ " + data.error);
+      return false;
     }
-
-    closeAuthModal();
-    updateAuthUI(true);
-    refreshCardStates();
-    refreshModalButtons();
-    showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
     
-    loadUserVotesFromServer();
-    return true;
+    if (data.success) {
+      currentUser = {
+        sub: data.sub,
+        email: data.email,
+        name: data.email.split('@')[0],
+        picture: ""
+      };
+      
+      localStorage.setItem("distopia2_session", JSON.stringify(currentUser));
+      
+      const cached = lsGetVotes(currentUser.sub);
+      if (Object.keys(cached).length > 0) {
+        userVotes = cached;
+        userVotesReady = true;
+      } else {
+        userVotesReady = false;
+      }
+
+      closeAuthModal();
+      updateAuthUI(true);
+      refreshCardStates();
+      refreshModalButtons();
+      showToast(`👋 ¡Bienvenido, ${currentUser.name}!`);
+      
+      loadUserVotesFromServer();
+      return true;
+    }
   } catch (err) {
-    showToast("⚠️ Error de autenticación local");
+    showToast("⚠️ Error de conexión");
     console.error(err);
     return false;
   }
@@ -203,8 +222,13 @@ function openAuthModal() {
   overlay.removeAttribute("hidden");
   document.body.style.overflow = "hidden";
   
+  // Switch to login tab by default
+  const tabLogin = document.getElementById("tab-login");
+  if (tabLogin) tabLogin.click();
   const authEmail = document.getElementById("auth-email");
   if (authEmail) authEmail.value = "";
+  const authPassword = document.getElementById("auth-password");
+  if (authPassword) authPassword.value = "";
 }
 
 function closeAuthModal() {
@@ -235,20 +259,59 @@ function initAuthModal() {
     if (overlay && !overlay.hidden && !overlay.classList.contains("closing") && e.key==="Escape") closeAuthModal();
   });
 
+  const tabLogin = document.getElementById("tab-login");
+  const tabRegister = document.getElementById("tab-register");
   const submitBtn = document.getElementById("custom-auth-submit");
   const form = document.getElementById("custom-auth-form");
+  
+  let currentAction = "login";
+
+  if (tabLogin && tabRegister) {
+    tabLogin.addEventListener("click", () => {
+      tabLogin.classList.add("active");
+      tabRegister.classList.remove("active");
+      submitBtn.textContent = "Iniciar sesión";
+      currentAction = "login";
+    });
+    
+    tabRegister.addEventListener("click", () => {
+      tabRegister.classList.add("active");
+      tabLogin.classList.remove("active");
+      submitBtn.textContent = "Crear cuenta";
+      currentAction = "register";
+    });
+  }
+
+  const togglePasswordBtn = document.getElementById("toggle-password");
+  const authPassword = document.getElementById("auth-password");
+  if (togglePasswordBtn && authPassword) {
+    togglePasswordBtn.addEventListener("click", () => {
+      const type = authPassword.getAttribute("type") === "password" ? "text" : "password";
+      authPassword.setAttribute("type", type);
+      const eyeIcon = togglePasswordBtn.querySelector(".eye-icon");
+      const eyeOffIcon = togglePasswordBtn.querySelector(".eye-off-icon");
+      if (type === "password") {
+        if (eyeIcon) eyeIcon.style.display = "block";
+        if (eyeOffIcon) eyeOffIcon.style.display = "none";
+      } else {
+        if (eyeIcon) eyeIcon.style.display = "none";
+        if (eyeOffIcon) eyeOffIcon.style.display = "block";
+      }
+    });
+  }
 
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const email = document.getElementById("auth-email").value.trim();
-      if (!email) return;
+      const password = document.getElementById("auth-password").value;
+      if (!email || !password) return;
       
       submitBtn.disabled = true;
       const originalText = submitBtn.textContent;
       submitBtn.textContent = "Cargando...";
       
-      await handleCustomAuth(email);
+      await handleCustomAuth(currentAction, email, password);
       
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;

@@ -12,7 +12,7 @@
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbz2RtSxsb_HwurxvKLSXaz2wLin50Wf2Wx2L8y2FIl7r-mMdTh1rklIER9mnTb-Y0I/exec";
 const PROXY_POST = "https://corsproxy.io/?";
-const PROXY_GET  = "https://api.allorigins.win/raw?url=";
+const PROXY_GET  = "https://corsproxy.io/?";
 
 // ─── STATE ─────────────────────────────────────────────────────
 let localVotes  = {};

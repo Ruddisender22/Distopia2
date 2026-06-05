@@ -15,7 +15,6 @@
 const SHEET_ID         = "1FfkT9hpF9xJaDElfymPlRNu8uq2mDMdk_xQcPNqmcoo";
 const SHEET_VOTES      = "Votos";         // Hoja 1: totales por mod { ModID, Score }
 const SHEET_USERS      = "VotosUsuarios"; // Hoja 2: votos por usuario
-const SHEET_AUTH       = "UsuariosAuth";  // Hoja 3: registro de cuentas (Email, Password, Sub)
 
 // ── Obtiene o crea una hoja por nombre ─────────────────────────
 function getSheet(name) {
@@ -27,8 +26,6 @@ function getSheet(name) {
       sh.getRange(1,1,1,2).setValues([["ModID","Score"]]);
     } else if (name === SHEET_USERS) {
       sh.getRange(1,1,1,5).setValues([["UserSub","ModID","Vote","Email","Timestamp"]]);
-    } else if (name === SHEET_AUTH) {
-      sh.getRange(1,1,1,4).setValues([["Email","Password","Sub","Timestamp"]]);
     }
     SpreadsheetApp.flush();
     Logger.log("Hoja creada: " + name);
@@ -55,18 +52,15 @@ function doGet(e) {
       return respond({ ok: true, timestamp: new Date().toISOString() });
     }
 
-    // ── DEBUG: devuelve el contenido RAW de las hojas ──────────
     if (action === "debug") {
       const ss      = SpreadsheetApp.openById(SHEET_ID);
       const shV     = ss.getSheetByName(SHEET_VOTES);
       const shU     = ss.getSheetByName(SHEET_USERS);
-      const shA     = ss.getSheetByName(SHEET_AUTH);
       return respond({
         sheetId:      SHEET_ID,
         spreadsheetName: ss.getName(),
         votos:        shV ? shV.getDataRange().getValues() : "hoja no existe",
         votosUsuarios:shU ? shU.getDataRange().getValues() : "hoja no existe",
-        auth:         shA ? shA.getDataRange().getValues() : "hoja no existe",
         timestamp:    new Date().toISOString()
       });
     }
@@ -129,11 +123,7 @@ function doPost(e) {
   const action = body.action;
 
   try {
-    if (action === "register") {
-      return handleRegisterUser(body.email, body.password);
-    } else if (action === "login") {
-      return handleLoginUser(body.email, body.password);
-    } else if (action === "vote" || body.id) {
+    if (action === "vote" || body.id) {
       // Legacy check: if body.id exists, it's a vote
       return handleVote(body);
     } else {
@@ -143,59 +133,6 @@ function doPost(e) {
     Logger.log("Error en doPost: " + err.message + "\n" + err.stack);
     return respond({ error: err.message });
   }
-}
-
-// ── Registro de usuario ──────────────────────────────────────────
-function handleRegisterUser(email, password) {
-  if (!email || !password) {
-    return respond({ error: "Email y contraseña son obligatorios" });
-  }
-  
-  const authSh = getSheet(SHEET_AUTH);
-  const authData = authSh.getDataRange().getValues();
-  
-  const formattedEmail = String(email).trim().toLowerCase();
-  
-  // Check if email exists
-  for (let i = 0; i < authData.length; i++) {
-    if (String(authData[i][0]).trim().toLowerCase() === formattedEmail) {
-      return respond({ error: "El email ya está registrado" });
-    }
-  }
-  
-  // Create user
-  const newSub = Utilities.getUuid();
-  const now = new Date().toISOString();
-  
-  authSh.appendRow([formattedEmail, password, newSub, now]);
-  SpreadsheetApp.flush();
-  
-  return respond({ success: true, email: formattedEmail, sub: newSub });
-}
-
-// ── Inicio de sesión ──────────────────────────────────────────────
-function handleLoginUser(email, password) {
-  if (!email || !password) {
-    return respond({ error: "Email y contraseña son obligatorios" });
-  }
-  
-  const authSh = getSheet(SHEET_AUTH);
-  const authData = authSh.getDataRange().getValues();
-  
-  const formattedEmail = String(email).trim().toLowerCase();
-  
-  for (let i = 0; i < authData.length; i++) {
-    if (String(authData[i][0]).trim().toLowerCase() === formattedEmail) {
-      if (String(authData[i][1]) === String(password)) {
-        const sub = String(authData[i][2]);
-        return respond({ success: true, email: formattedEmail, sub: sub });
-      } else {
-        return respond({ error: "Contraseña incorrecta" });
-      }
-    }
-  }
-  
-  return respond({ error: "Usuario no encontrado" });
 }
 
 // ── Procesa la acción de votar ─────────────────────────────────────
@@ -286,7 +223,6 @@ function handleRegisterVote(userSub, email, modId, newVote) {
 function setupSheets() {
   getSheet(SHEET_VOTES);
   getSheet(SHEET_USERS);
-  getSheet(SHEET_AUTH);
   Logger.log("✅ Hojas creadas/verificadas.");
 }
 

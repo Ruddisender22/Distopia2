@@ -3,29 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Distopia 2</title>
-    <style>
-        body { font-family: sans-serif; background: #0d000a; color: #fff; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
-        h1 { color: #ffcc00; }
-        a { color: #00ccff; }
-    </style>
+    <title>Política de Privacidad - Distopia 2: Requiem</title>
+    <link rel="icon" type="image/png" href="Recursos/Icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
-    <h1>Política de Privacidad</h1>
-    <p>Última actualización: Junio de 2026</p>
-    
-    <h2>1. Información que recopilamos</h2>
-    <p>Al iniciar sesión mediante Google, únicamente recibimos tu nombre público, foto de perfil y dirección de correo electrónico básica para identificarte en el sistema de votaciones del servidor de Minecraft Distopia 2.</p>
-    
-    <h2>2. Uso de la información</h2>
-    <p>Utilizamos tu información exclusivamente para gestionar tus votos en los mods del servidor y asegurar que cada persona solo vote una vez por mod. No vendemos, compartimos ni usamos tus datos para ningún fin publicitario.</p>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-    <h2>3. Almacenamiento</h2>
-    <p>Tus votos y perfil de identificación se almacenan temporalmente en una base de datos privada en Google Sheets, a la que solo tienen acceso los administradores del servidor Distopia 2.</p>
+    <div class="legal-wrap">
+        <header class="legal-header">
+            <img src="Recursos/Distopia2_titulo.png" alt="Distopia 2 Logo" class="legal-logo">
+            <h1 class="legal-title">Política de Privacidad</h1>
+        </header>
 
-    <h2>4. Contacto</h2>
-    <p>Si deseas que eliminemos tu registro de votos o tu información, contacta con los administradores del servidor a través de Discord.</p>
-    
-    <p><br><a href="./index.html">Volver al inicio</a></p>
+        <div class="legal-content">
+            <p>Última actualización: Junio de 2026</p>
+            
+            <h2>1. Información que recopilamos</h2>
+            <p>Al iniciar sesión mediante Google, únicamente recibimos tu nombre público, foto de perfil y dirección de correo electrónico básica para identificarte en el sistema de votaciones del servidor de Minecraft Distopia 2.</p>
+            
+            <h2>2. Uso de la información</h2>
+            <p>Utilizamos tu información exclusivamente para gestionar tus votos en los mods del servidor y asegurar que cada persona solo vote una vez por mod. No vendemos, compartimos ni usamos tus datos para ningún fin publicitario.</p>
+
+            <h2>3. Almacenamiento</h2>
+            <p>Tus votos y perfil de identificación se almacenan temporalmente en una base de datos privada en Google Sheets, a la que solo tienen acceso los administradores del servidor Distopia 2.</p>
+
+            <h2>4. Contacto</h2>
+            <p>Si deseas que eliminemos tu registro de votos o tu información, contacta con los administradores del servidor a través de Discord.</p>
+            
+            <a href="./index.html" class="legal-back">← Volver al inicio</a>
+        </div>
+    </div>
+
+    <!-- Script for background canvas only -->
+    <script>
+        function initBlobBg() {
+          const canvas = document.getElementById("bg-canvas");
+          if (!canvas) return;
+          const ctx = canvas.getContext("2d");
+        
+          let W = 0, H = 0;
+          function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+          window.addEventListener("resize", resize); resize();
+        
+          const sparks = [];
+          const numSparks = 85;
+        
+          for (let i = 0; i < numSparks; i++) {
+            sparks.push({
+              x: Math.random() * W,
+              y: Math.random() * H,
+              vx: (Math.random() - 0.5) * 1.2,
+              vy: -(Math.random() * 1.5 + 0.5),
+              radius: Math.random() * 2.5 + 0.5,
+              alpha: Math.random() * 0.8 + 0.2,
+              fadeRate: Math.random() * 0.008 + 0.002,
+              hue: Math.random() < 0.5 ? 35 : (Math.random() < 0.5 ? 15 : 55),
+              swayOffset: Math.random() * Math.PI * 2,
+              swaySpeed: Math.random() * 0.03 + 0.01
+            });
+          }
+        
+          function draw() {
+            ctx.clearRect(0, 0, W, H);
+            sparks.forEach(s => {
+              s.x += s.vx + Math.sin(s.swayOffset) * 0.4;
+              s.swayOffset += s.swaySpeed;
+              s.y += s.vy;
+              s.alpha -= s.fadeRate;
+              if (s.alpha <= 0 || s.y < -10) {
+                s.y = H + 10;
+                s.x = Math.random() * W;
+                s.alpha = Math.random() * 0.8 + 0.2;
+                s.radius = Math.random() * 2.5 + 0.5;
+                s.vx = (Math.random() - 0.5) * 1.2;
+                s.vy = -(Math.random() * 1.5 + 0.5);
+              }
+              ctx.beginPath();
+              ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+              ctx.fillStyle = `hsla(${s.hue}, 100%, 65%, ${s.alpha})`;
+              ctx.fill();
+            });
+            requestAnimationFrame(draw);
+          }
+          draw();
+        }
+        initBlobBg();
+    </script>
 </body>
 </html>

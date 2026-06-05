@@ -8,12 +8,15 @@
           "id": "create",
           "name": "Create",
           "images": [
+            "https://i.ytimg.com/vi/G7bHeb3QyE0/maxresdefault.jpg",
             "https://static0.cbrimages.com/wordpress/wp-content/uploads/2021/11/Minecraft-Create-Mod-cover-spread-with-windmill-and-machines.jpg",
-            "https://placehold.co/800x450/0d0018/c084fc?text=Create+Mod+-+Imagen+2"
+            "https://i.ytimg.com/vi/jDIuWv7ROi8/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/2Xc7qzTgVw8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD2MtA1ABimCg0bp52kzKupPkl_Qg"
           ],
           "paragraphs": [
             "El mod de automatización más popular de Minecraft. Permite construir fábricas, trenes, maquinaria rotacional y contraptions increíblemente complejas.",
-            "Incluye engranajes, correas, pistones mecánicos, elevadores, prensas y mucho más. Totalmente compatible con otros mods de tecnología."
+            "Incluye engranajes, correas, pistones mecánicos, elevadores, prensas y mucho más. Totalmente compatible con otros mods de tecnología.",
+            "Create es un mod de tecnología para Minecraft creado por Simibubi para Forge y NeoForge. Este mod introduce la Fuerza Rotacional, que se puede conectar a diferentes máquinas que pueden:\n\n¡Crea una línea de producción automatizada, que automatice la fabricación de artículos como hierro, cuarzo, madera y más, con recetas personalizadas!\nTraslada estructuras por tu mundo con trenes, ascensores y otros artilugios.\nA diferencia de muchos otros mods tecnológicos, Create se centra en la estética visual, animando al jugador a construir por diversión en lugar de por eficiencia. Create está muy bien optimizado y se puede jugar sin problemas en casi cualquier PC o portátil fabricado en la última década. Create interactúa a la perfección con innumerables mods de Minecraft (como complementos creados por la comunidad ), por lo que es el complemento ideal para muchos paquetes de mods."
           ],
           "status": "CONFIRMADO"
         },
@@ -21,10 +24,16 @@
           "id": "create-aeronautics",
           "name": "Create Aeronautics",
           "images": [
-            "https://placehold.co/800x450/0d0018/c084fc?text=Create+Aeronautics"
+            "https://media.forgecdn.net/attachments/1635/782/airships.png",
+            "https://media.forgecdn.net/attachments/1635/780/cloud-skipper.png",
+            "https://media.forgecdn.net/attachments/1635/785/dock.png",
+            "https://media.forgecdn.net/attachments/1635/788/plane.png",
+            "https://media.forgecdn.net/attachments/1635/787/car.png"
           ],
           "paragraphs": [
-            "Expansión de Create que añade aeronaves y dirigibles construibles. Diseña y pilota tus propias aeronaves con la física de Create."
+            "Expansión de Create. Construye cualquier cosa, desde dirigibles hasta aviones y coches.",
+            "Create Aeronautics amplía los sistemas de Create para permitir a los jugadores construir todo tipo de vehículos y artilugios físicos usando Sable. Incluye contenido y bloques para construir desde aviones, drones y globos aerostáticos, hasta coches, camiones y cachivaches extravagantes.",
+            "Contiene 3 \"secciones\" de contenido:\n\nLa simulación es el núcleo del proyecto. Proporciona ensamblaje, componentes de redstone y todas las herramientas necesarias para interactuar con mecanismos simulados.\nLa aeronáutica permite la creación de todo tipo de artilugios voladores con aire caliente, hélices y rocas flotantes mágicas.\nEl motor Offroad te permite utilizar casi cualquier cosa que parezca una rueda para fabricar vehículos terrestres."
           ],
           "status": "CONFIRMADO"
         }
@@ -38,10 +47,14 @@
           "id": "pastel",
           "name": "Pastel",
           "images": [
-            "https://placehold.co/800x450/1a001a/e879f9?text=Pastel"
+            "https://media.forgecdn.net/attachments/1234/195/pastel-banner.png",
+            "https://media.forgecdn.net/attachments/1234/339/2025-06-28_09.png",
+            "https://media.forgecdn.net/attachments/1234/337/2025-06-28_10.png"
           ],
           "paragraphs": [
-            "Mod de magia con una estética suave y colorida. Añade hechizos, rituales y criaturas mágicas únicas."
+            "Un viaje de verdad, belleza y odio: descubre la magia del color. Los colores son cosas muy curiosas. Su viveza, sus significados, la forma en que conforman el mundo que nos rodea.\n\n¿Acaso no te dan ganas de agarrarlas, de tocar el color mismo, para comprender su esencia?\n\nEs posible, pero el camino es largo, si no interminable.",
+            "Pastel es un mod mágico completo centrado en la exploración del color como resonancia, como energía natural. Es un viaje largo y expansivo por el camino del artista que te permite no solo aprender, sino también descubrir más sobre la tierra; explora el mundo y observa cómo crece contigo, y descubre cosas que antes no estaban allí. Persigue el significado del arcoíris, de la naturaleza, y crea herramientas nuevas y poderosas a medida que tu nueva comprensión te permite crear obras aún más refinadas. Crea máquinas sorprendentes y, a partir de ellas, ensambla artilugios adecuados para apoyar tu marcha hacia el corazón de la magia. Y una vez que empieces a creer que comprendes las tierras y su esencia, desciende más allá del falso suelo de la tierra.\n\nDesciende más allá de la barrera que se encuentra al pie del mundo, la roca madre, y en el capítulo final descubre un mundo olvidado, un mundo que quedó atrás.\n\nDesciende más allá del velo y encuentra en el abismo más profundo la verdad anhelada. El color mismo.\n\nDesciende, artista, desciende...",
+            "Características:\n- 2 conjuntos de armadura\n- 40 horas de contenido\n- Varias máquinas\n- Más de 30 herramientas\n- Demasiada comida\n- Como una cantidad injustificable\n- Se añadirán más\n- Casi 30 curiosidades\n- Un sistema logístico completo\n- Una dimensión en toda regla\n- Hay más mecánicos de los que caben aquí.\n- Bloques que abarcan varias pestañas creativas\n- Un mundo que cambia a medida que avanzas.\ny mucho más"
           ],
           "status": "NO DEFINITIVO"
         }
@@ -486,10 +499,17 @@
           "id": "eternal-starlight",
           "name": "Eternal Starlight",
           "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=Eternal+Starlight"
+            "https://cdn.modrinth.com/data/cached_images/5b5fd13a601ae8013f11edb1131d2ad2dd16a80c.png",
+            "https://media.forgecdn.net/attachments/936/439/2024-08-09_16.png",
+            "https://media.forgecdn.net/attachments/936/437/2024-08-09_16.png",
+            "https://cdn.modrinth.com/data/XvcfUGfB/images/1ae02b0df79edad8e5d81fe2eed0459e6d4e7b6f.png",
+            "https://www.minecraft-guides.com/wp-content/uploads/2025/06/Ruin_Common.png",
+            "https://i.ytimg.com/vi/P2O6xJjSnXU/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/936/441/2024-08-09_16.png"
           ],
           "paragraphs": [
-            "Nueva dimensión mágica bañada en luz estelar permanente con flora, fauna y mecánicas de juego únicas."
+            "Un mod que añade la mágica y misteriosa dimensión de la luz de las estrellas.",
+            "Eternal Starlight es un mod centrado en las dimensiones, que introduce un extenso mundo al estilo de los juegos de rol, repleto de nuevos biomas, criaturas únicas, jefes formidables y materiales raros.\n\nSe accede a esta dimensión a través de un portal activado por el Orbe de la Profecía. Los jugadores deben explorar y participar en combates para obtener objetos esenciales para el progreso, especialmente en los paquetes de mods que requieren la Estrella Allthemodium."
           ],
           "status": "CONFIRMADO"
         }

@@ -5,37 +5,6 @@
       "icon": "âš”ï¸",
       "mods": [
         {
-          "id": "apotheosis",
-          "name": "Apotheosis",
-          "images": [
-            "https://i.ytimg.com/vi/8WOEUL31rHg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2uog8GCmqMtzd3xA4VY5_mfqZkw",
-            "https://media.forgecdn.net/attachments/903/392/2v0ddxm.jpg",
-            "https://media.forgecdn.net/attachments/903/397/fxo6fxh.png",
-            "https://media.forgecdn.net/attachments/903/398/1098775819641434193.jpg",
-            "https://media.forgecdn.net/attachments/903/391/2024-06-29_01.jpg",
-            "https://media.forgecdn.net/attachments/1160/35/8-3-0_key_art-jpg.jpg"
-          ],
-          "paragraphs": [
-            "Apotheosis es un mod de contenido que te permite volverte más fuerte que nunca, manteniendo la esencia de las mecánicas originales del juego. Cada característica está cuidadosamente diseñada para ofrecer una experiencia coherente y completa.",
-            "Las novedades abarcan desde cambios sencillos, como la adición de amuletos de poción, hasta refactorizaciones masivas de sistemas clásicos, como el de encantamiento."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "end-remastered",
-          "name": "End Remastered",
-          "images": [
-            "https://www.minecraft-guides.com/wp-content/uploads/2022/05/PortalFrame.jpg",
-            "https://static.wikia.nocookie.net/endremastered/images/e/ed/Eyes_of_end_remastered.png/revision/latest/smart/width/250/height/250?cb=20231231130313",
-            "https://i.ytimg.com/vi/IC4ti0dGgl4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwZNWrkhEVxF33OXvfgL8AUZOAhw"
-          ],
-          "paragraphs": [
-            "¡Haz que tu viaje hacia el final sea más desafiante y emocionante con End Remastered!",
-            "La exploración es el eje central de End Remastered. Para llegar al Fin y derrotar al Ender Dragon, deberás encontrar 16 ojos personalizados explorando estructuras del juego base y combatiendo jefes del juego base. Una vez que tengas al menos 12 ojos, podrás seguirlos hasta llegar a la Fortaleza. Para abrir el portal, debes colocar los 12 ojos personalizados . Si hay un ojo de ender del juego base en uno de los marcos, puedes eliminarlo haciendo clic derecho sobre él con un ojo personalizado."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
           "id": "origins",
           "name": "Origins",
           "images": [
@@ -71,19 +40,6 @@
             "Chest Cavity Beyond añade un sistema de órganos de la cavidad torácica al juego.",
             "Chest Cavity Beyond añade un sistema de órganos de cavidad torácica al juego, con una gran variedad de tipos de órganos y órganos de criaturas. Usa el Abrecofres para extraer órganos de diversas criaturas y reemplazar los tuyos para obtener habilidades únicas.",
             "Sistema de órganos rico\nÓrganos básicos : corazón, columna vertebral, pulmones, estómago, intestinos, riñones, bazo, hígado, apéndice, costillas, músculos.\nÓrganos de animales : diversas variantes de órganos para animales terrestres y animales pequeños.\nÓrganos acuáticos : branquias, músculos, espinas, intestinos, etc., que proporcionan capacidad de respiración bajo el agua.\nÓrganos ignífugos : serie de órganos Blaze, que proporciona resistencia al fuego.\nÓrganos de Ender - Serie de órganos de Enderman, que mejoran las habilidades de teletransportación.\nMúsculos de movimiento : músculos fuertes, rápidos y ágiles para mejorar la movilidad.\nÓrganos digestivos especiales : estómago de carnívoro, estómago de herbívoro, rumen de herbívoro."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "enhanced-celestials",
-          "name": "Enhanced Celestials",
-          "images": [
-            "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
-            "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
-            "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
-          ],
-          "paragraphs": [
-            "Enhanced Celestials es un mod que busca mejorar el ambiente nocturno añadiendo eventos lunares como lunas de sangre y lunas de cosecha. ¡Prepárate para nuevo contenido lunar con cada actualización!"
           ],
           "status": "REVISIÓN"
         },
@@ -419,6 +375,86 @@
           "paragraphs": [
             "Rework completo de los Ghasts con nuevas variantes, comportamientos y la posibilidad de domesticar algunos tipos."
           ]
+        }
+      ]
+    },
+    {
+      "name": "Dificultad y ProgresiÃ³n",
+      "icon": "ðŸ“ˆ",
+      "mods": [
+        {
+          "id": "end-remastered",
+          "name": "End Remastered",
+          "images": [
+            "https://www.minecraft-guides.com/wp-content/uploads/2022/05/PortalFrame.jpg",
+            "https://static.wikia.nocookie.net/endremastered/images/e/ed/Eyes_of_end_remastered.png/revision/latest/smart/width/250/height/250?cb=20231231130313",
+            "https://i.ytimg.com/vi/IC4ti0dGgl4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwZNWrkhEVxF33OXvfgL8AUZOAhw"
+          ],
+          "paragraphs": [
+            "¡Haz que tu viaje hacia el final sea más desafiante y emocionante con End Remastered!",
+            "La exploración es el eje central de End Remastered. Para llegar al Fin y derrotar al Ender Dragon, deberás encontrar 16 ojos personalizados explorando estructuras del juego base y combatiendo jefes del juego base. Una vez que tengas al menos 12 ojos, podrás seguirlos hasta llegar a la Fortaleza. Para abrir el portal, debes colocar los 12 ojos personalizados . Si hay un ojo de ender del juego base en uno de los marcos, puedes eliminarlo haciendo clic derecho sobre él con un ojo personalizado."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "enhanced-celestials",
+          "name": "Enhanced Celestials",
+          "images": [
+            "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
+            "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
+            "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
+          ],
+          "paragraphs": [
+            "Enhanced Celestials es un mod que busca mejorar el ambiente nocturno añadiendo eventos lunares como lunas de sangre y lunas de cosecha. ¡Prepárate para nuevo contenido lunar con cada actualización!"
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "spice-of-life",
+          "name": "Spice of Life: Carrot Edition",
+          "images": [
+            "https://media.forgecdn.net/avatars/thumbnails/360/935/64/64/637525655151502872.png",
+            "https://media.forgecdn.net/attachments/248/616/2019-03-14_01.png",
+            "https://media.forgecdn.net/attachments/248/619/2019-03-14_01.png",
+            "https://media.forgecdn.net/attachments/248/618/2019-03-14_01.png"
+          ],
+          "paragraphs": [
+            "¡Un mod basado en la comida que recompensa al jugador en lugar de castigarlo por descubrir nuevos alimentos!",
+            "Este mod lleva la cuenta de cuántos alimentos únicos ha comido un jugador. Al alcanzar ciertas cantidades de alimentos únicos, gana corazones permanentemente, ¡aumentando su salud máxima! Para maximizar sus barras de HP, los jugadores tendrán que completar misiones para conseguir y elaborar alimentos exóticos."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "apotheosis",
+          "name": "Apotheosis",
+          "images": [
+            "https://i.ytimg.com/vi/8WOEUL31rHg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2uog8GCmqMtzd3xA4VY5_mfqZkw",
+            "https://media.forgecdn.net/attachments/903/392/2v0ddxm.jpg",
+            "https://media.forgecdn.net/attachments/903/397/fxo6fxh.png",
+            "https://media.forgecdn.net/attachments/903/398/1098775819641434193.jpg",
+            "https://media.forgecdn.net/attachments/903/391/2024-06-29_01.jpg",
+            "https://media.forgecdn.net/attachments/1160/35/8-3-0_key_art-jpg.jpg"
+          ],
+          "paragraphs": [
+            "Apotheosis es un mod de contenido que te permite volverte más fuerte que nunca, manteniendo la esencia de las mecánicas originales del juego. Cada característica está cuidadosamente diseñada para ofrecer una experiencia coherente y completa.",
+            "Las novedades abarcan desde cambios sencillos, como la adición de amuletos de poción, hasta refactorizaciones masivas de sistemas clásicos, como el de encantamiento."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "burnt-fire",
+          "name": "Burnt: Better Vanilla Fire",
+          "images": [
+            "https://media.forgecdn.net/attachments/840/661/title.jpg",
+            "https://media.forgecdn.net/attachments/966/159/lonelytree.jpg",
+            "https://media.forgecdn.net/attachments/966/165/mansionfire.jpg",
+            "https://media.forgecdn.net/attachments/966/166/mansionembers.jpg"
+          ],
+          "paragraphs": [
+            "Mod para mejorar el fuego en el juego base. Enciéndelo, quémalo. Propagación de fuego realista y bloques quemados.",
+            "Esto es QUEMADO. Un mod que mejora el fuego en Vanilla: si lo enciendes, arderá... No desaparecerá... ARDERÁ. A cambio, las estructuras de madera y los árboles permanecen, quemados y retorcidos, y con recursos que puedes usar.\n\nPor fin, un buen uso para el pedernal y el acero. Prende fuego a un tronco, una estructura de madera, un pueblo, incluso a la hierba, y se propaga rápidamente. El fuego se extiende de forma realista y el espectáculo es el sueño de cualquier pirómano."
+          ],
+          "status": "REVISIÓN"
         }
       ]
     },
@@ -874,21 +910,6 @@
           ]
         },
         {
-          "id": "spice-of-life",
-          "name": "Spice of Life: Carrot Edition",
-          "images": [
-            "https://media.forgecdn.net/avatars/thumbnails/360/935/64/64/637525655151502872.png",
-            "https://media.forgecdn.net/attachments/248/616/2019-03-14_01.png",
-            "https://media.forgecdn.net/attachments/248/619/2019-03-14_01.png",
-            "https://media.forgecdn.net/attachments/248/618/2019-03-14_01.png"
-          ],
-          "paragraphs": [
-            "¡Un mod basado en la comida que recompensa al jugador en lugar de castigarlo por descubrir nuevos alimentos!",
-            "Este mod lleva la cuenta de cuántos alimentos únicos ha comido un jugador. Al alcanzar ciertas cantidades de alimentos únicos, gana corazones permanentemente, ¡aumentando su salud máxima! Para maximizar sus barras de HP, los jugadores tendrán que completar misiones para conseguir y elaborar alimentos exóticos."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
           "id": "starcatcher",
           "name": "Starcatcher",
           "images": [
@@ -1020,21 +1041,6 @@
             "Se puede modificar para facilitar el talado de árboles"
           ],
           "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "burnt-fire",
-          "name": "Burnt: Better Vanilla Fire",
-          "images": [
-            "https://media.forgecdn.net/attachments/840/661/title.jpg",
-            "https://media.forgecdn.net/attachments/966/159/lonelytree.jpg",
-            "https://media.forgecdn.net/attachments/966/165/mansionfire.jpg",
-            "https://media.forgecdn.net/attachments/966/166/mansionembers.jpg"
-          ],
-          "paragraphs": [
-            "Mod para mejorar el fuego en el juego base. Enciéndelo, quémalo. Propagación de fuego realista y bloques quemados.",
-            "Esto es QUEMADO. Un mod que mejora el fuego en Vanilla: si lo enciendes, arderá... No desaparecerá... ARDERÁ. A cambio, las estructuras de madera y los árboles permanecen, quemados y retorcidos, y con recursos que puedes usar.\n\nPor fin, un buen uso para el pedernal y el acero. Prende fuego a un tronco, una estructura de madera, un pueblo, incluso a la hierba, y se propaga rápidamente. El fuego se extiende de forma realista y el espectáculo es el sueño de cualquier pirómano."
-          ],
-          "status": "REVISIÓN"
         },
         {
           "id": "repeatable-vaults",

@@ -586,8 +586,8 @@ function buildCard(mod) {
     if (mod.status === "NO DEFINITIVO") displayStatus = "REVISIÓN";
     typeTag.textContent = displayStatus;
   } else {
-    typeTag.className = "mod-type-tag";
-    typeTag.textContent = "MOD";
+    typeTag.className = "mod-type-tag status-inline status-pending";
+    typeTag.textContent = "REVISIÓN";
   }
   titleRow.appendChild(nameEl); titleRow.appendChild(typeTag); body.appendChild(titleRow);
 

@@ -35,7 +35,7 @@
             "Características:\n\nCultivos que se pueden cultivar : el tabaco, la coca, la amapola, la marihuana y los hongos alucinógenos aparecen de forma natural en el mundo y se pueden cultivar.\nCadenas de producción completas : Procese las materias primas para convertirlas en sustancias refinadas utilizando la balsa, la muela y la prensa mecánica de Create.\nTolerancia y síndrome de abstinencia : Cada fármaco genera tolerancia de forma individual. Si dejas de consumirlo, sufrirás efectos secundarios como debilidad, lentitud y náuseas.\nSistema de mezcla : combina ingredientes de Minecraft con drogas antes de consumirlas para alterar sus efectos. Más de 60 efectos posibles según lo que añadas.\nSistema de fluidos : Procesar ciertas sustancias hasta convertirlas en forma líquida (aceite de THC, aceite de DMT, nicotina líquida) y utilizar dispositivos basados en fluidos como el Yart y el Dab Pen.\nEfectos visuales : superposiciones de pantalla personalizadas y alucinaciones para ciertas sustancias.",
             "Sustancias: Marihuana, cigarrillos, puros, cocaína, crack, heroína, fentanilo, lean, LSD, metanfetamina, DMT, MDMA, setas alucinógenas, vaporizadores, snus y bolsitas de nicotina."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "CONFIRMADO"
         },
         {
           "id": "create-aeronautics",
@@ -186,11 +186,18 @@
           "id": "ht-treechop",
           "name": "HT's TreeChop",
           "images": [
-            "https://placehold.co/800x450/0d1400/84cc16?text=HT%27s+TreeChop"
+            "https://media.forgecdn.net/attachments/1300/652/mcpedl-png.png",
+            "https://i.ytimg.com/vi/NtZEakVAb6A/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/_4V1-_rNfoM/maxresdefault.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGWk0QnuONgVrZBBRy0rXnfcHqu2uPLmmeQ&s"
           ],
           "paragraphs": [
-            "Permite talar árboles enteros de un solo golpe. Hace la recolección de madera mucho más eficiente y satisfactoria."
-          ]
+            "Corta los árboles poco a poco, en lugar de hacerlo bloque a bloque.",
+            "Permite talar árboles rompiendo repetidamente un solo bloque. El árbol completo solo se romperá después de un cierto número de golpes, y los árboles más grandes requieren más golpes. Inspirado en mods como Treecapitator.",
+            "Cortar árboles no requiere un hacha, pero sin ella llevará bastante tiempo. Cortar diferentes trozos del mismo árbol contribuirá a derribarlo. Los jugadores pueden colaborar para talar esos grandes árboles. Los árboles más grandes requieren más talas en total, pero menos talas por bloque*. Mantén pulsado el botón \"sigilo\" al romper un bloque de tronco para romperlo normalmente.",
+            "Se puede modificar para facilitar el talado de árboles"
+          ],
+          "status": "CONFIRMADO"
         }
       ]
     },
@@ -237,10 +244,17 @@
           "id": "wither-wrath",
           "name": "Wither's Wrath",
           "images": [
-            "https://placehold.co/800x450/0d0010/a855f7?text=Wither%27s+Wrath"
+            "https://i.ytimg.com/vi/pA7_XPDWF7E/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1231/631/curse-gif.gif",
+            "https://static.planetminecraft.com/files/image/minecraft/data-pack/2021/017/14923277-boobs-moment_xl.webp",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDeyDmzYu_-aS15P_RGWYI26aftCWd1uAzvQ&s",
+            "https://github.com/user-attachments/assets/60f6e28e-dd9e-417c-a01c-81c8784d54bd",
+            "https://github.com/user-attachments/assets/ec368079-347f-4bff-a844-84bfd9b06268"
           ],
           "paragraphs": [
-            "Rework completo del Wither con nuevas fases, ataques y mecánicas de combate. Una batalla épica que pondrá a prueba al equipo entero."
+            "¡Una lucha renovada contra el Wither! Con características similares a las de la versión original e ideas originales para hacer que la lucha contra el Wither sea más desafiante.",
+            "Nueva versión del Wither, diseñada para que suponga un mayor desafío introduciendo nuevos patrones de ataque y aumentando su salud a 600 HP, igual que el Wither de la edición Bedrock. Como no a todos les gustan todos los cambios, se han incluido opciones para reducir el caos y ofrecer mayor flexibilidad. Sin embargo, no habrá una versión \"fácil\" de este Wither.",
+            "Este Wither fue creado como un proyecto personal para presentar una pelea más desafiante y, principalmente, para mostrárselo a mis amigos. Nunca pretendió ser perfecto, pero espero que represente un reto divertido."
           ],
           "status": "NO DEFINITIVO"
         },
@@ -248,12 +262,18 @@
           "id": "qlipoth-awakening",
           "name": "Qlipoth Awakening",
           "images": [
-            "https://placehold.co/800x450/0a0020/7c3aed?text=Qlipoth+Awakening"
+            "https://preview.redd.it/qliphoth-awakening-was-just-ported-to-1-20-1-forge-neoforge-v0-ff5ouvoiqwpf1.png?auto=webp&s=d2d113c74b61cbdd7325217e2a202771f7e9ab48",
+            "https://i.redd.it/e4dwrcvvd0cg1.png",
+            "https://i.ytimg.com/vi/3J3pmN4sURo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDVT4LSERdv75MRV7xlcxyiiiEsRQ",
+            "https://i.ytimg.com/vi/LB1QV8H9jS4/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/2rJL4voCnbU/sddefault.jpg"
           ],
           "paragraphs": [
-            "Añade entidades oscuras y bosses de otro mundo inspirados en mitología mística. Desafíos únicos para jugadores veteranos."
+            "Añade varios jefes con ataques y mecánicas únicas.",
+            "Qliphoth Awakening es un mod que se centra en añadir varios jefes, cada uno con su propio conjunto de ataques, mecánicas únicas y objetos que sueltan al derrotarlos.",
+            "Antes de invocar a un jefe, se te presentará una descripción detallada de sus ataques y mecánicas. Puedes leerla completa y prepararte, o poner a prueba tus habilidades y enfrentarte a él sin preparación."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "CONFIRMADO"
         },
         {
           "id": "piglin-proliferation",

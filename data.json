@@ -236,7 +236,7 @@
             "Añade variaciones reales mejoradas de las criaturas originales del juego, con características propias.",
             "Todas las criaturas que encontrarás periódicamente en el mundo tienen sus propias habilidades y una mayor cantidad de experiencia y botines, incluyendo nuevos objetos con su propia utilidad. Este mod diversificará y complicará ligeramente tu supervivencia sin sobrecargar el juego con demasiadas mecánicas."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "CONFIRMADO"
         },
         {
           "id": "wither-wrath",
@@ -364,20 +364,24 @@
           "id": "origins",
           "name": "Origins",
           "images": [
-            "https://placehold.co/800x450/0a001a/c084fc?text=Origins"
+            "https://minecraft.fr/wp-content/uploads/2021/12/origins-mod-minecraft.jpg",
+            "https://i.imgur.com/617o2yF.png",
+            "https://staticg.sportskeeda.com/editor/2021/10/ca86d-16333460584633-800.jpg"
           ],
           "paragraphs": [
-            "Permite elegir un origen o raza al inicio que otorga habilidades únicas y restricciones especiales. Cambia radicalmente el gameplay."
+            "Los jugadores eligen un Origen al comienzo del juego para obtener ventajas y desventajas.",
+            "Elige un Origen y comienza tu partida con habilidades especiales, algunas útiles y otras que te dificultarán el juego. Cada Origen tiene un impacto distinto en la mecánica básica. Si no te convencen, también puedes elegir el Origen \"Humano\" al jugar con amigos en un servidor."
           ]
         },
         {
           "id": "origins-classes",
           "name": "Origins: Classes",
           "images": [
-            "https://placehold.co/800x450/0d001a/a855f7?text=Origins+Classes"
+            "https://i.ytimg.com/vi/axUNBMEFTI8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAc1Or_Z9tfnPVM1ZLmAC4KZqHmQA"
           ],
           "paragraphs": [
-            "Expansión de Origins que añade un sistema de clases sobre los orígenes, con habilidades adicionales y árboles de progresión."
+            "Complemento para Origins que permite elegir clases además de los orígenes.",
+            "Además de elegir un origen, ahora también debes elegir una clase. Las clases ofrecen beneficios menores que los orígenes, pero no tienen inconvenientes.\n\nLista de clases\nArquero: tus proyectiles son más precisos; te ralentizas menos al usar un arco.\nDomador de bestias: los animales que domesticas obtienen corazones y daño adicionales de forma permanente; cuando bebes una poción, los efectos también se aplican a los animales domesticados cercanos.\nHerrero: las herramientas y armaduras que fabricas proporcionan pequeñas ventajas; puedes reparar herramientas y armaduras de forma más eficiente, tanto en un yunque como mediante la fabricación.\nClérigo: puedes duplicar la duración de las pociones; eres mejor en encantamientos.\nCocinar: los alimentos que prepares te proporcionarán más nutrientes; obtendrás puntos de experiencia adicionales al cocinar alimentos en un ahumador.\nExplorador: comienzas el juego con 9 mapas vacíos, una brújula y un reloj; no te cansas al correr.\nGranjero: la harina de huesos es el doble de efectiva cuando la usas; a veces los cultivos dan el doble de botín cuando los cosechas.\nLeñador: fabricar tablones a partir de troncos te da dos tablones adicionales; cortas árboles enteros de una vez cuando usas un hacha.\nComerciante: cuando comercias con los aldeanos, sus intercambios no se agotan; los comerciantes ambulantes te ofrecen ofertas especiales.\nMinero: rompes todos los bloques de piedra más rápido; no te cansas de minar bloques.\nTonto: no eres particularmente bueno en nada. :)\nGanadero: cuando crías animales, a veces tienen la posibilidad de producir gemelos; los animales que matas tienen la posibilidad de soltar el doble de botín.\nPícaro: tu nombre nunca es visible a través de las paredes; entras en sigilo (haciendo menos ruido y causando el doble de daño por la espalda) después de moverte sigilosamente durante 10 segundos.\nGuerrero: infliges +1 de daño de ataque con cada arma; te ralentizas menos cuando usas un escudo."
           ]
         },
         {

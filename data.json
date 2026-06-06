@@ -321,10 +321,14 @@
           "id": "piglin-proliferation",
           "name": "Piglin Proliferation",
           "images": [
-            "https://placehold.co/800x450/1a0800/fb923c?text=Piglin+Proliferation"
+            "https://media.forgecdn.net/attachments/874/341/2c67fb2f135dfe1d112ba2559cbb87e7eefade6e.webp",
+            "https://media.forgecdn.net/attachments/874/342/11d95258123964ab82fdf79e1140c782ad6b2f1d.webp",
+            "https://cdn.modrinth.com/data/cached_images/6e730067e3e640e7df9c17b544898b7b0b853751.png",
+            "https://www.minecrafteo.com/wp-content/uploads/2023/11/piglin-proliferation-mod-363x212.jpg"
           ],
           "paragraphs": [
-            "Expande la civilización piglin con nuevas variantes, jefes y estructuras en el Nether."
+            "¡Un mod que amplía las posibilidades de los piglins!",
+            "Piglin Proliferation diversifica a los Piglins al otorgarles características únicas a sus variantes originales, además de añadir nuevos tipos de Piglin para cubrir nichos de juego específicos. Junto con algunas adiciones más (y mucho contenido planeado para el futuro), este mod busca desarrollar a los Piglins y establecer su identidad única como un pueblo diverso y multifacético del Nether."
           ],
           "status": "REVISIÓN"
         },
@@ -332,10 +336,15 @@
           "id": "variants-venture",
           "name": "Variants & Venture",
           "images": [
-            "https://placehold.co/800x450/0d000d/d946ef?text=Variants+%26+Venture"
+            "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/logo.png",
+            "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/gelid.webp",
+            "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/thicket.webp",
+            "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/verdant.webp",
+            "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/murk.webp"
           ],
           "paragraphs": [
-            "Añade numerosas variantes visuales y funcionales de mobs del juego base, haciendo el mundo más diverso y sorprendente."
+            "Añade múltiples variantes de criaturas nuevas que se integran a la perfección en tu mundo de Minecraft.",
+            "Cada variante de criatura aparece de forma natural en los biomas correspondientes. También puedes encontrar sus generadores en mazmorras y cámaras de prueba, lo que añade un nivel extra de desafío y exploración."
           ]
         },
         {
@@ -569,10 +578,14 @@
           "id": "artifacts",
           "name": "Artifacts",
           "images": [
-            "https://placehold.co/800x450/0d001a/c084fc?text=Artifacts"
+            "https://i.ytimg.com/vi/hTiNWWYTnao/maxresdefault.jpg",
+            "https://zonacraft.net/wp-content/uploads/2022/07/Artifacts-Mod-2-384x216.png",
+            "https://www.40servidoresmc.es/blog/wp-content/uploads/2020/08/artifacts-mod-1-16.jpg",
+            "https://static.wikia.nocookie.net/artifacts-minecraft/images/0/01/Artifacts.png/revision/latest/smart/width/386/height/259?cb=20251008053547"
           ],
           "paragraphs": [
-            "Añade numerosos objetos especiales y artefactos con habilidades únicas que se encuentran en el mundo. Cada hallazgo es una sorpresa."
+            "Agrega varios objetos de tesoro que se pueden encontrar a través de la exploración.",
+            "Los objetos añadidos por este mod se pueden encontrar en cofres de estructuras del juego base, mediante arqueología o, muy raramente, en objetos que llevan las entidades. Todos los artefactos solo se pueden encontrar en unos pocos lugares, ¡así que sal a explorar! Además, se ha añadido una nueva estructura de campamento subterráneo. En estos campamentos aparecen mímicos ocasionalmente en lugar de cofres; son enemigos peligrosos que atacan a los jugadores que se acercan demasiado. Los mímicos siempre sueltan un artefacto aleatorio al ser derrotados."
           ],
           "status": "REVISIÓN"
         },
@@ -580,10 +593,13 @@
           "id": "dynamic-caveman",
           "name": "Dynamic Caveman",
           "images": [
-            "https://placehold.co/800x450/0d0d00/eab308?text=Dynamic+Caveman"
+            "https://media.forgecdn.net/avatars/thumbnails/1125/973/256/256/638683470246120057.png"
           ],
           "paragraphs": [
-            "Sistema de progresión de habilidades para la exploración de cuevas. Mejora tus capacidades de minería con el tiempo."
+            "Dynamic Caveman te permite usar los materiales más básicos, como palos, piedras y obsidiana, para infligir un daño mínimo a otros jugadores o entidades. Los palos y las piedras pueden dañar al jugador mediante ataques cuerpo a cuerpo, y las piedras se pueden lanzar (haz clic derecho con la mano secundaria).",
+            "Añade daño extra a palos y otros materiales básicos, y permite lanzar piedras con gran retroceso y la mitad de daño. Necesitas 4 piedras del mismo tipo para poder lanzarlas.",
+            "Además, cada elemento renovado tiene una regla de juego para que puedas elegir si quieres o no que ese elemento tenga sus características adicionales.",
+            "Lista completa de elementos dinámicos:\n\nPalos (2 de daño, tiene posibilidad de romperse)\nAdoquines y piedra (3 puntos de daño)\nPizarra profunda y pizarra profunda adoquinada (3,5 de daño)\nNetherrack (2 de daño, probabilidad de prender fuego a las entidades durante 4 segundos)\nPiedra final (4,5 de daño)\nObsidiana (5,5 de daño)\nVaras de fuego (3 de daño, posibilidad de prender fuego a las entidades durante 3 segundos, tiene posibilidad de romperse)"
           ],
           "status": "REVISIÓN"
         },
@@ -772,10 +788,15 @@
           "id": "farmers-delight",
           "name": "Farmer's Delight",
           "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Farmer%27s+Delight"
+            "https://i.ytimg.com/vi/BUI9L3yDrtc/maxresdefault.jpg",
+            "https://cdn.modrinth.com/data/R2OftAxM/images/f200944fad13f6afe5e16b6f75b8c4d947667cd8.png",
+            "https://i.ytimg.com/vi/BY-c9gAiqMM/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/456/881/kitchenware.png",
+            "https://media.forgecdn.net/attachments/456/879/basic-crops.png"
           ],
           "paragraphs": [
-            "Expansión de la agricultura y cocina con decenas de nuevos cultivos, recetas y utensilios de cocina. La experiencia gastronómica definitiva."
+            "¡Una acogedora ampliación del mundo de la agricultura y la cocina!",
+            "Farmer's Delight es un mod que amplía gradualmente las posibilidades de la agricultura y la cocina en Minecraft.\n\nUtilizando un sistema de cocina sencillo y unos pocos ingredientes comunes, podrás preparar una gran variedad de comidas sustanciosas: desde sándwiches hasta ensaladas y guisos, desde postres exquisitos hasta banquetes deliciosos, ¡ningún ingrediente se quedará sin usar en tu cocina!\n\nTambién introduce un amplio conjunto de utilidades: una forma de mejorar la tierra en la que crecen tus cultivos, un nuevo tipo de herramienta para recolectar recursos , bonitas decoraciones para tus construcciones y muchos bloques y objetos que te ayudarán en tu aventura.\n\n¡Es hora de cultivar un poco de todo!"
           ],
           "status": "SELECCIÓN DEL AUTOR"
         },

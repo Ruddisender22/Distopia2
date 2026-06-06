@@ -1,4 +1,4 @@
-﻿{
+{
   "sections": [
     {
       "name": "Industrial y Automatización",
@@ -348,11 +348,16 @@
           "id": "burnt-fire",
           "name": "Burnt: Better Vanilla Fire",
           "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=Burnt"
+            "https://media.forgecdn.net/attachments/840/661/title.jpg",
+            "https://media.forgecdn.net/attachments/966/159/lonelytree.jpg",
+            "https://media.forgecdn.net/attachments/966/165/mansionfire.jpg",
+            "https://media.forgecdn.net/attachments/966/166/mansionembers.jpg"
           ],
           "paragraphs": [
-            "Mejora visualmente el fuego de Minecraft y añade nuevas mecánicas relacionadas con el daño por fuego y la resistencia."
-          ]
+            "Mod para mejorar el fuego en el juego base. Enciéndelo, quémalo. Propagación de fuego realista y bloques quemados.",
+            "Esto es QUEMADO. Un mod que mejora el fuego en Vanilla: si lo enciendes, arderá... No desaparecerá... ARDERÁ. A cambio, las estructuras de madera y los árboles permanecen, quemados y retorcidos, y con recursos que puedes usar.\n\nPor fin, un buen uso para el pedernal y el acero. Prende fuego a un tronco, una estructura de madera, un pueblo, incluso a la hierba, y se propaga rápidamente. El fuego se extiende de forma realista y el espectáculo es el sueño de cualquier pirómano."
+          ],
+          "status": "REVISIÓN"
         }
       ]
     },

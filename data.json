@@ -996,13 +996,18 @@
         },
         {
           "id": "undopia-zombies",
-          "name": "Undopia Zombies",
+          "name": "Undopia Zombie Skins",
           "images": [
-            "https://placehold.co/800x450/001a08/4ade80?text=Undopia+Zombies"
+            "https://media.forgecdn.net/attachments/1034/992/zombiefeaturbacksmall.png",
+            "https://media.forgecdn.net/attachments/889/328/new_skins_zombies1.png",
+            "https://media.forgecdn.net/attachments/889/329/new_skins_zombies2.png",
+            "https://media.forgecdn.net/attachments/1034/996/drowned.png"
           ],
           "paragraphs": [
-            "Resource pack que añade variantes visuales de zombies con diferentes apariencias y ropa, haciendo los no-muertos más diversos."
-          ]
+            "Añade variedad de zombies sin afectar al rendimiento del server y manteniendo un estilo vanilla",
+            "Zombie Skins añade una variante de zombi, cáscara y ahogado para cada aspecto predeterminado disponible en el juego. Las variantes de Steve y Alex aparecen aproximadamente 1,5 veces más a menudo que las demás porque son los aspectos originales."
+          ],
+          "status": "CONFIRMADO"
         },
         {
           "id": "fancy-crops",

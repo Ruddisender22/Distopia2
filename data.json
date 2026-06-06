@@ -415,10 +415,12 @@
           "id": "ghast-update",
           "name": "Ghast Update",
           "images": [
-            "https://placehold.co/800x450/0a0a1a/818cf8?text=Ghast+Update"
+            "https://media.forgecdn.net/attachments/1138/815/capture-da-c-cran-2025-03-26-012539-png.png",
+            "https://media.forgecdn.net/attachments/1135/453/capture-decran-2025-03-23-184138.png",
+            "https://media.forgecdn.net/attachments/1136/845/capture-da-c-cran-2025-03-25-002740-png.png"
           ],
           "paragraphs": [
-            "Rework completo de los Ghasts con nuevas variantes, comportamientos y la posibilidad de domesticar algunos tipos."
+            "¡Un mod que añade todas las características futuras de los ghasts!"
           ]
         }
       ]

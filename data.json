@@ -537,11 +537,17 @@
           "id": "mrcrayfish-furniture",
           "name": "MrCrayfish's Furniture Mod: Refurbished",
           "images": [
-            "https://placehold.co/800x450/0d0800/fbbf24?text=MrCrayfish+Furniture"
+            "https://media.forgecdn.net/attachments/791/961/kitchendemoscreenshot.png",
+            "https://media.forgecdn.net/attachments/792/547/bedroomdemoscreenshot.png",
+            "https://media.forgecdn.net/attachments/792/665/outdoordemoscreenshot.png",
+            "https://media.forgecdn.net/attachments/793/579/bathroomdemoscreenshot.png",
+            "https://pbs.twimg.com/media/GIJ8GIya8AAbDHZ.jpg"
           ],
           "paragraphs": [
-            "Cientos de muebles decorativos: sofás, camas, lámparas, electrodomésticos y mucho más. Decora tu hogar al detalle."
-          ]
+            "¡La próxima generación del mod de muebles de MrCrayfish, rediseñado desde cero con nuevos modelos, sonidos y mucho más!",
+            "Presentamos la nueva generación del mod de muebles de MrCrayfish, creado desde cero con nuevos bloques, modelos, sonidos originales y mecánicas de juego innovadoras. Disfruta del encanto renovado y familiar del mod original y amuebla tu casa con cientos de bloques decorativos y funcionales, tanto nuevos como originales. Sumérgete en nuevas mecánicas de juego con la introducción del sistema eléctrico para alimentar todos tus electrodomésticos y dispositivos electrónicos. Toma el control del mod, ahora con integración para CraftTweaker y compatibilidad con numerosos paquetes de datos.\n\n✨ Características\n¡Añade más de 440 bloques funcionales y decorativos para adornar tu casa!\nMás de 70 efectos de sonido originales (todos grabados y producidos por MrCrayfish) para lograr una inmersión total.\nSistema eléctrico completamente nuevo para alimentar electrodomésticos y otros aparatos electrónicos. Incluye generadores eléctricos, interruptores, luces y mucho más.\nUn sistema de entrega de correo que funciona correctamente y que le permite enviar y recibir artículos en su propio buzón.\nUn módulo informático totalmente funcional con aplicaciones divertidas y útiles.\nCompatibilidad con CraftTweaker , Just Enough Items y Farmer's Delight (la olla y la sartén se pueden usar en la estufa)."
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "diagonal-fences",
@@ -861,11 +867,14 @@
           "id": "lootr",
           "name": "Lootr",
           "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Lootr"
+            "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
+            "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
           ],
           "paragraphs": [
-            "Cada jugador tiene su propio loot en los cofres de estructuras generadas. Elimina la competencia por el botín en servidores."
-          ]
+            "¡Un mod que garantiza que nadie se quede sin botín! Todos los cofres de botín son instanciados por jugador y visualmente únicos.",
+            "Lootr transforma la forma en que experimentas el botín en Minecraft. Con este mod instalado, cada jugador obtiene su propio botín individual de cofres, barriles, cajas de shulker y vagonetas. ¡Se acabaron las carreras para saquear estructuras o encontrar contenedores llenos de la basura de otro jugador!\n\nBotín personalizado: Cada jugador ve un botín único, generado específicamente para él.\nCasi universal: compatible con casi todas las funciones y estructuras, tanto del juego base como de las modificadas.\nFiel a la versión original: Utiliza exactamente el mismo código de generación de botín que la versión original.\nCompatible con servidores : Reduce el tamaño de los servidores al eliminar la necesidad de explorar constantemente nuevas estructuras."
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "more-dragon-eggs",

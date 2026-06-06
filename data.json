@@ -1,79 +1,171 @@
 {
   "sections": [
     {
-      "name": "Industrial y Automatización",
-      "icon": "⚙️",
+      "name": "QoL",
+      "icon": "🔧",
       "mods": [
         {
-          "id": "create",
-          "name": "Create",
+          "id": "lootr",
+          "name": "Lootr",
           "images": [
-            "https://i.ytimg.com/vi/G7bHeb3QyE0/maxresdefault.jpg",
-            "https://static0.cbrimages.com/wordpress/wp-content/uploads/2021/11/Minecraft-Create-Mod-cover-spread-with-windmill-and-machines.jpg",
-            "https://i.ytimg.com/vi/jDIuWv7ROi8/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/2Xc7qzTgVw8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD2MtA1ABimCg0bp52kzKupPkl_Qg"
+            "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
+            "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
           ],
           "paragraphs": [
-            "El mod de automatización más popular de Minecraft. Permite construir fábricas, trenes, maquinaria rotacional y contraptions increíblemente complejas.",
-            "Incluye engranajes, correas, pistones mecánicos, elevadores, prensas y mucho más. Totalmente compatible con otros mods de tecnología.",
-            "Create es un mod de tecnología para Minecraft creado por Simibubi para Forge y NeoForge. Este mod introduce la Fuerza Rotacional, que se puede conectar a diferentes máquinas que pueden:\n\n¡Crea una línea de producción automatizada, que automatice la fabricación de artículos como hierro, cuarzo, madera y más, con recetas personalizadas!\nTraslada estructuras por tu mundo con trenes, ascensores y otros artilugios.\nA diferencia de muchos otros mods tecnológicos, Create se centra en la estética visual, animando al jugador a construir por diversión en lugar de por eficiencia. Create está muy bien optimizado y se puede jugar sin problemas en casi cualquier PC o portátil fabricado en la última década. Create interactúa a la perfección con innumerables mods de Minecraft (como complementos creados por la comunidad ), por lo que es el complemento ideal para muchos paquetes de mods."
+            "¡Un mod que garantiza que nadie se quede sin botín! Todos los cofres de botín son instanciados por jugador y visualmente únicos.",
+            "Lootr transforma la forma en que experimentas el botín en Minecraft. Con este mod instalado, cada jugador obtiene su propio botín individual de cofres, barriles, cajas de shulker y vagonetas. ¡Se acabaron las carreras para saquear estructuras o encontrar contenedores llenos de la basura de otro jugador!\n\nBotín personalizado: Cada jugador ve un botín único, generado específicamente para él.\nCasi universal: compatible con casi todas las funciones y estructuras, tanto del juego base como de las modificadas.\nFiel a la versión original: Utiliza exactamente el mismo código de generación de botín que la versión original.\nCompatible con servidores : Reduce el tamaño de los servidores al eliminar la necesidad de explorar constantemente nuevas estructuras."
           ],
-          "status": "SELECCIÓN DEL AUTOR"
+          "status": "REVISIÓN"
         },
         {
-          "id": "create-addictives",
-          "name": "Create: Addictives",
+          "id": "more-dragon-eggs",
+          "name": "More Dragon Eggs",
           "images": [
-            "https://cdn.discordapp.com/attachments/1372350247967391887/1512620316877131846/e5cc225f-0048-407a-95d6-f6ef2abd8b19.png?ex=6a24c0f2&is=6a236f72&hm=f726b34d7956d51a252340b0a23152c397136fce82815b882681a9a122367247&",
-            "https://media.forgecdn.net/attachments/1571/29/1000711914-jpg.jpg",
-            "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg",
-            "https://media.forgecdn.net/attachments/1571/24/1000711916-jpg.jpg",
-            "https://media.forgecdn.net/attachments/1558/421/image-png.png"
+            "https://placehold.co/800x450/00001a/6366f1?text=More+Dragon+Eggs"
           ],
           "paragraphs": [
-            "Create: Addictives añade drogas totalmente interactivas",
-            "Características:\n\nCultivos que se pueden cultivar : el tabaco, la coca, la amapola, la marihuana y los hongos alucinógenos aparecen de forma natural en el mundo y se pueden cultivar.\nCadenas de producción completas : Procese las materias primas para convertirlas en sustancias refinadas utilizando la balsa, la muela y la prensa mecánica de Create.\nTolerancia y síndrome de abstinencia : Cada fármaco genera tolerancia de forma individual. Si dejas de consumirlo, sufrirás efectos secundarios como debilidad, lentitud y náuseas.\nSistema de mezcla : combina ingredientes de Minecraft con drogas antes de consumirlas para alterar sus efectos. Más de 60 efectos posibles según lo que añadas.\nSistema de fluidos : Procesar ciertas sustancias hasta convertirlas en forma líquida (aceite de THC, aceite de DMT, nicotina líquida) y utilizar dispositivos basados en fluidos como el Yart y el Dab Pen.\nEfectos visuales : superposiciones de pantalla personalizadas y alucinaciones para ciertas sustancias.",
-            "Sustancias: Marihuana, cigarrillos, puros, cocaína, crack, heroína, fentanilo, lean, LSD, metanfetamina, DMT, MDMA, setas alucinógenas, vaporizadores, snus y bolsitas de nicotina."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
+            "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
+          ]
         },
         {
-          "id": "create-aeronautics",
-          "name": "Create Aeronautics",
+          "id": "player-revive",
+          "name": "Player Revive",
           "images": [
-            "https://media.forgecdn.net/attachments/1635/782/airships.png",
-            "https://media.forgecdn.net/attachments/1635/780/cloud-skipper.png",
-            "https://media.forgecdn.net/attachments/1635/785/dock.png",
-            "https://media.forgecdn.net/attachments/1635/788/plane.png",
-            "https://media.forgecdn.net/attachments/1635/787/car.png"
+            "https://placehold.co/800x450/001a0d/4ade80?text=Player+Revive"
           ],
           "paragraphs": [
-            "Expansión de Create. Construye cualquier cosa, desde dirigibles hasta aviones y coches.",
-            "Create Aeronautics amplía los sistemas de Create para permitir a los jugadores construir todo tipo de vehículos y artilugios físicos usando Sable. Incluye contenido y bloques para construir desde aviones, drones y globos aerostáticos, hasta coches, camiones y cachivaches extravagantes.",
-            "Contiene 3 \"secciones\" de contenido:\n\nLa simulación es el núcleo del proyecto. Proporciona ensamblaje, componentes de redstone y todas las herramientas necesarias para interactuar con mecanismos simulados.\nLa aeronáutica permite la creación de todo tipo de artilugios voladores con aire caliente, hélices y rocas flotantes mágicas.\nEl motor Offroad te permite utilizar casi cualquier cosa que parezca una rueda para fabricar vehículos terrestres."
+            "Al morir, los jugadores entran en estado de agonía durante unos segundos. Sus compañeros pueden revivirse antes de morir definitivamente."
+          ]
+        },
+        {
+          "id": "simple-corpse",
+          "name": "Simple Corpse",
+          "images": [
+            "https://placehold.co/800x450/0d000d/d946ef?text=Simple+Corpse"
           ],
-          "status": "SELECCIÓN DEL AUTOR"
+          "paragraphs": [
+            "Al morir, tu inventario queda guardado en un cuerpo en el lugar de la muerte. Protege tus objetos durante un tiempo limitado."
+          ]
+        },
+        {
+          "id": "repeatable-vaults",
+          "name": "Repeatable Trial Vaults",
+          "images": [
+            "https://placehold.co/800x450/000d1a/60a5fa?text=Repeatable+Vaults"
+          ],
+          "paragraphs": [
+            "Permite que los Trial Vaults del juego base sean repetibles. Sigue obteniendo recompensas de las cámaras de prueba."
+          ]
+        },
+        {
+          "id": "villager-names",
+          "name": "Villager Names",
+          "images": [
+            "https://placehold.co/800x450/001a08/22c55e?text=Villager+Names"
+          ],
+          "paragraphs": [
+            "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
+          ]
+        },
+        {
+          "id": "piglin-names",
+          "name": "Piglin Names",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Piglin+Names"
+          ],
+          "paragraphs": [
+            "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
+          ]
+        },
+        {
+          "id": "natures-compass",
+          "name": "Nature's Compass",
+          "images": [
+            "https://placehold.co/800x450/0a1a00/86efac?text=Nature%27s+Compass"
+          ],
+          "paragraphs": [
+            "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
+          ]
+        },
+        {
+          "id": "explorers-compass",
+          "name": "Explorer's Compass",
+          "images": [
+            "https://placehold.co/800x450/001a08/4ade80?text=Explorer%27s+Compass"
+          ],
+          "paragraphs": [
+            "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
+          ]
+        },
+        {
+          "id": "easy-anvils",
+          "name": "Easy Anvils",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Easy+Anvils"
+          ],
+          "paragraphs": [
+            "Elimina el límite de coste de experiencia en los yunques y permite reparar objetos sin el fastidioso 'Too Expensive!'."
+          ]
         }
       ]
     },
     {
-      "name": "Magia",
-      "icon": "✨",
+      "name": "Dimensiones",
+      "icon": "🌌",
       "mods": [
         {
-          "id": "pastel",
-          "name": "Pastel",
+          "id": "stellarity",
+          "name": "Stellarity",
           "images": [
-            "https://media.forgecdn.net/attachments/1234/195/pastel-banner.png",
-            "https://media.forgecdn.net/attachments/1234/339/2025-06-28_09.png",
-            "https://media.forgecdn.net/attachments/1234/337/2025-06-28_10.png"
+            "https://media.forgecdn.net/attachments/1051/487/stellarity_new-1.png",
+            "https://i.imgur.com/ypTJ6bL.png",
+            "https://media.forgecdn.net/attachments/1051/474/2024-12-11_12.png",
+            "https://media.forgecdn.net/attachments/1051/482/2024-12-23_17.png",
+            "https://media.forgecdn.net/attachments/1051/485/2024-12-23_17.png",
+            "https://media.forgecdn.net/attachments/1051/477/2024-12-11_12.png",
+            "https://media.forgecdn.net/attachments/1051/478/2024-12-11_15.png",
+            "https://i.imgur.com/i520ske.png"
           ],
           "paragraphs": [
-            "Un viaje de verdad, belleza y odio: descubre la magia del color. Los colores son cosas muy curiosas. Su viveza, sus significados, la forma en que conforman el mundo que nos rodea.\n\n¿Acaso no te dan ganas de agarrarlas, de tocar el color mismo, para comprender su esencia?\n\nEs posible, pero el camino es largo, si no interminable.",
-            "Pastel es un mod mágico completo centrado en la exploración del color como resonancia, como energía natural. Es un viaje largo y expansivo por el camino del artista que te permite no solo aprender, sino también descubrir más sobre la tierra; explora el mundo y observa cómo crece contigo, y descubre cosas que antes no estaban allí. Persigue el significado del arcoíris, de la naturaleza, y crea herramientas nuevas y poderosas a medida que tu nueva comprensión te permite crear obras aún más refinadas. Crea máquinas sorprendentes y, a partir de ellas, ensambla artilugios adecuados para apoyar tu marcha hacia el corazón de la magia. Y una vez que empieces a creer que comprendes las tierras y su esencia, desciende más allá del falso suelo de la tierra.\n\nDesciende más allá de la barrera que se encuentra al pie del mundo, la roca madre, y en el capítulo final descubre un mundo olvidado, un mundo que quedó atrás.\n\nDesciende más allá del velo y encuentra en el abismo más profundo la verdad anhelada. El color mismo.\n\nDesciende, artista, desciende...",
-            "Características:\n- 2 conjuntos de armadura\n- 40 horas de contenido\n- Varias máquinas\n- Más de 30 herramientas\n- Demasiada comida\n- Como una cantidad injustificable\n- Se añadirán más\n- Casi 30 curiosidades\n- Un sistema logístico completo\n- Una dimensión en toda regla\n- Hay más mecánicos de los que caben aquí.\n- Bloques que abarcan varias pestañas creativas\n- Un mundo que cambia a medida que avanzas.\ny mucho más"
+            "Una renovación radical de The End con un estilo fantástico único, que incluye mejoras en los biomas y las estructuras, nuevos objetos, armas y mucho más contenido por descubrir.",
+            "Stellarity es un paquete de datos que renueva por completo The End, añadiéndole nuevas formas de terreno, biomas, así como objetos, armas e incluso nuevas mecánicas de juego.\n\nEn lugar de seguir la temática habitual de una expansión al estilo de 'Minecraft: Dungeons' o convertirla en una dimensión alienígena, Stellarity mezcla el motivo habitual de una dimensión desolada con temas de magia intensa y fantasía.",
+            "Se han añadido un total de 23 nuevos biomas , incluyendo 4 biomas del End del juego base renovados (técnicamente solo dos de ellos, ya que los otros dos no tienen ninguna función en el juego base) ."
           ],
-          "status": "REVISIÓN"
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "jaeden-nether",
+          "name": "Jaeden's Nether Expansion",
+          "images": [
+            "https://i.ytimg.com/vi/SGn5ZBT6lVM/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/978/919/image_2024-09-30_143655397.png",
+            "https://media.forgecdn.net/attachments/978/921/image_2024-09-30_143729089.png",
+            "https://cdn.modrinth.com/data/cached_images/785096d7cef82a540190a9b0f2671de05042197c.png",
+            "https://media.forgecdn.net/attachments/978/916/image_2024-09-30_143539190.png"
+          ],
+          "paragraphs": [
+            "Nether Expansion es un mod compatible con Vanilla que tiene como objetivo mejorar y agregar nuevo contenido a todos los aspectos de The Nether.",
+            "Jaden's Nether Expansion es un mod compatible con el juego base que busca expandir toda la dimensión del Nether, añadiendo contenido nuevo y renovando conceptos existentes del juego base. Este proyecto está en constante crecimiento y se actualiza continuamente, así que prepárate para el mod del Nether más grande hasta la fecha."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "eternal-starlight",
+          "name": "Eternal Starlight",
+          "images": [
+            "https://cdn.modrinth.com/data/cached_images/5b5fd13a601ae8013f11edb1131d2ad2dd16a80c.png",
+            "https://media.forgecdn.net/attachments/936/439/2024-08-09_16.png",
+            "https://media.forgecdn.net/attachments/936/437/2024-08-09_16.png",
+            "https://cdn.modrinth.com/data/XvcfUGfB/images/1ae02b0df79edad8e5d81fe2eed0459e6d4e7b6f.png",
+            "https://www.minecraft-guides.com/wp-content/uploads/2025/06/Ruin_Common.png",
+            "https://i.ytimg.com/vi/P2O6xJjSnXU/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/936/441/2024-08-09_16.png"
+          ],
+          "paragraphs": [
+            "Un mod que añade la mágica y misteriosa dimensión de la luz de las estrellas.",
+            "Eternal Starlight es un mod centrado en las dimensiones, que introduce un extenso mundo al estilo de los juegos de rol, repleto de nuevos biomas, criaturas únicas, jefes formidables y materiales raros.\n\nSe accede a esta dimensión a través de un portal activado por el Orbe de la Profecía. Los jugadores deben explorar y participar en combates para obtener objetos esenciales para el progreso, especialmente en los paquetes de mods que requieren la Estrella Allthemodium."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
         }
       ]
     },
@@ -196,6 +288,63 @@
             "Se puede modificar para facilitar el talado de árboles"
           ],
           "status": "SELECCIÓN DEL AUTOR"
+        }
+      ]
+    },
+    {
+      "name": "Estructuras",
+      "icon": "🏰",
+      "mods": [
+        {
+          "id": "dungeons-nether",
+          "name": "Dungeons Dimensions: Nether",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=Dungeons+Nether"
+          ],
+          "paragraphs": [
+            "Añade mazmorras y estructuras elaboradas en el Nether con puzzles, trampas y botín único para aventureros veteranos."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "better-villages",
+          "name": "Better Villages",
+          "images": [
+            "https://placehold.co/800x450/0a1a00/86efac?text=Better+Villages"
+          ],
+          "paragraphs": [
+            "Rework completo de las aldeas con diseños mucho más elaborados, nuevas variantes por bioma y mejoras de generación."
+          ]
+        },
+        {
+          "id": "illager-arena",
+          "name": "Illager Arena",
+          "images": [
+            "https://placehold.co/800x450/1a000d/f43f5e?text=Illager+Arena"
+          ],
+          "paragraphs": [
+            "Añade arenas de combate generadas en el mundo donde los Illagers organizan peleas. ¡Entra y demuestra tu valía!"
+          ]
+        },
+        {
+          "id": "nether-trials",
+          "name": "Nether Trials & Chambers",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Nether+Trials"
+          ],
+          "paragraphs": [
+            "Añade cámaras de prueba al estilo Trial Chambers pero en el Nether, con mecánicas y recompensas únicas."
+          ]
+        },
+        {
+          "id": "underwater-villages",
+          "name": "Underwater Villages",
+          "images": [
+            "https://placehold.co/800x450/00101a/38bdf8?text=Underwater+Villages"
+          ],
+          "paragraphs": [
+            "Genera aldeas submarinas habitadas por variantes acuáticas de aldeanos con comercio y estructuras adaptadas al océano."
+          ]
         }
       ]
     },
@@ -410,305 +559,6 @@
       ]
     },
     {
-      "name": "Family Friendly",
-      "icon": "🍓",
-      "mods": [
-        {
-          "id": "starcatcher",
-          "name": "Starcatcher",
-          "images": [
-            "https://i.ytimg.com/vi/jRNG5cYSqpg/maxresdefault.jpg",
-            "https://media.forgecdn.net/attachments/1344/608/minigame-png.png",
-            "https://media.forgecdn.net/attachments/1397/874/b94b8c911433e0a25eafd0fcecad6c6e4a1fea2e-png.png",
-            "https://media.forgecdn.net/attachments/1643/456/description_4bbc8f21-1912-44e5-a865-4ec0388b4548.png",
-            "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
-          ],
-          "paragraphs": [
-            "Un mod que renueva por completo el sistema de pesca, con más de 100 peces y un montón de contenido nuevo relacionado con la pesca.",
-            "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
-            "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "minecraft-comes-alive",
-          "name": "Minecraft Comes Alive",
-          "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Minecraft+Comes+Alive"
-          ],
-          "paragraphs": [
-            "Remplaza los aldeanos con NPCs con personalidades, diálogos y relaciones. Puedes casarte, tener hijos y construir una familia."
-          ]
-        },
-        {
-          "id": "farmers-delight",
-          "name": "Farmer's Delight",
-          "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Farmer%27s+Delight"
-          ],
-          "paragraphs": [
-            "Expansión de la agricultura y cocina con decenas de nuevos cultivos, recetas y utensilios de cocina. La experiencia gastronómica definitiva."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "fd-brewin-chewin",
-          "name": "Farmer's Delight: Brewin' And Chewin'",
-          "images": [
-            "https://placehold.co/800x450/1a0a00/f59e0b?text=Brewin+%26+Chewin"
-          ],
-          "paragraphs": [
-            "Addon de Farmer's Delight que añade cervecería, quesos y recetas fermentadas especiales."
-          ]
-        },
-        {
-          "id": "fd-starcatcher",
-          "name": "Farmer's Delight: Starcatcher",
-          "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=FD+Starcatcher"
-          ],
-          "paragraphs": [
-            "Compatibilidad entre Farmer's Delight y Starcatcher. Nuevas recetas que combinan ingredientes de ambos mods."
-          ]
-        },
-        {
-          "id": "fd-create",
-          "name": "Farmer's Delight: Create",
-          "images": [
-            "https://placehold.co/800x450/0d0018/c084fc?text=FD+Create"
-          ],
-          "paragraphs": [
-            "Integración entre Farmer's Delight y Create. Permite automatizar la cocina y la agricultura con maquinaria rotacional."
-          ]
-        },
-        {
-          "id": "fd-end",
-          "name": "Farmer's Delight: End",
-          "images": [
-            "https://placehold.co/800x450/000d1a/818cf8?text=FD+End"
-          ],
-          "paragraphs": [
-            "Addon de Farmer's Delight con cultivos y recetas únicas del End. Ingredientes exóticos de la dimensión final."
-          ]
-        },
-        {
-          "id": "fd-nether",
-          "name": "Farmer's Delight: Nether",
-          "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=FD+Nether"
-          ],
-          "paragraphs": [
-            "Addon de Farmer's Delight con cultivos y recetas del Nether. Cocina con ingredientes de las dimensiones infernales."
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Seguridad y Funcionalidad",
-      "icon": "🔐",
-      "mods": [
-        {
-          "id": "iron-chest",
-          "name": "Iron Chest",
-          "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Iron+Chest"
-          ],
-          "paragraphs": [
-            "Añade cofres de distintos materiales (hierro, oro, diamante, cristal...) con mayor capacidad de almacenamiento."
-          ]
-        },
-        {
-          "id": "security-craft",
-          "name": "Security Craft",
-          "images": [
-            "https://placehold.co/800x450/000d1a/38bdf8?text=Security+Craft"
-          ],
-          "paragraphs": [
-            "Mod de seguridad que añade cámaras, láseres, minas, teclados y todo tipo de sistemas de protección para tus bases."
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Construcción y Decoración",
-      "icon": "🏗️",
-      "mods": [
-        {
-          "id": "mrcrayfish-furniture",
-          "name": "MrCrayfish's Furniture Mod: Refurbished",
-          "images": [
-            "https://media.forgecdn.net/attachments/791/961/kitchendemoscreenshot.png",
-            "https://media.forgecdn.net/attachments/792/547/bedroomdemoscreenshot.png",
-            "https://media.forgecdn.net/attachments/792/665/outdoordemoscreenshot.png",
-            "https://media.forgecdn.net/attachments/793/579/bathroomdemoscreenshot.png",
-            "https://pbs.twimg.com/media/GIJ8GIya8AAbDHZ.jpg"
-          ],
-          "paragraphs": [
-            "¡La próxima generación del mod de muebles de MrCrayfish, rediseñado desde cero con nuevos modelos, sonidos y mucho más!",
-            "Presentamos la nueva generación del mod de muebles de MrCrayfish, creado desde cero con nuevos bloques, modelos, sonidos originales y mecánicas de juego innovadoras. Disfruta del encanto renovado y familiar del mod original y amuebla tu casa con cientos de bloques decorativos y funcionales, tanto nuevos como originales. Sumérgete en nuevas mecánicas de juego con la introducción del sistema eléctrico para alimentar todos tus electrodomésticos y dispositivos electrónicos. Toma el control del mod, ahora con integración para CraftTweaker y compatibilidad con numerosos paquetes de datos.\n\n✨ Características\n¡Añade más de 440 bloques funcionales y decorativos para adornar tu casa!\nMás de 70 efectos de sonido originales (todos grabados y producidos por MrCrayfish) para lograr una inmersión total.\nSistema eléctrico completamente nuevo para alimentar electrodomésticos y otros aparatos electrónicos. Incluye generadores eléctricos, interruptores, luces y mucho más.\nUn sistema de entrega de correo que funciona correctamente y que le permite enviar y recibir artículos en su propio buzón.\nUn módulo informático totalmente funcional con aplicaciones divertidas y útiles.\nCompatibilidad con CraftTweaker , Just Enough Items y Farmer's Delight (la olla y la sartén se pueden usar en la estufa)."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "diagonal-fences",
-          "name": "Diagonal Fences",
-          "images": [
-            "https://placehold.co/800x450/0d0800/d97706?text=Diagonal+Fences"
-          ],
-          "paragraphs": [
-            "Permite colocar vallas en diagonal para construir cercas más naturales y estéticamente agradables."
-          ]
-        },
-        {
-          "id": "diagonal-walls",
-          "name": "Diagonal Walls",
-          "images": [
-            "https://placehold.co/800x450/0d0900/b45309?text=Diagonal+Walls"
-          ],
-          "paragraphs": [
-            "Permite colocar muros de piedra en diagonal, ideal para diseños arquitectónicos más complejos y naturales."
-          ]
-        },
-        {
-          "id": "diagonal-windows",
-          "name": "Diagonal Windows",
-          "images": [
-            "https://placehold.co/800x450/00101a/60a5fa?text=Diagonal+Windows"
-          ],
-          "paragraphs": [
-            "Permite colocar cristales y ventanas en diagonal. Construye fachadas modernas y tejados con ángulos únicos."
-          ]
-        },
-        {
-          "id": "immersive-paintings",
-          "name": "Immersive Paintings",
-          "images": [
-            "https://placehold.co/800x450/1a001a/e879f9?text=Immersive+Paintings"
-          ],
-          "paragraphs": [
-            "Permite crear cuadros personalizados con tus propias imágenes, transformando las pinturas de Minecraft en arte real."
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Dimensiones",
-      "icon": "🌌",
-      "mods": [
-        {
-          "id": "stellarity",
-          "name": "Stellarity",
-          "images": [
-            "https://media.forgecdn.net/attachments/1051/487/stellarity_new-1.png",
-            "https://i.imgur.com/ypTJ6bL.png",
-            "https://media.forgecdn.net/attachments/1051/474/2024-12-11_12.png",
-            "https://media.forgecdn.net/attachments/1051/482/2024-12-23_17.png",
-            "https://media.forgecdn.net/attachments/1051/485/2024-12-23_17.png",
-            "https://media.forgecdn.net/attachments/1051/477/2024-12-11_12.png",
-            "https://media.forgecdn.net/attachments/1051/478/2024-12-11_15.png",
-            "https://i.imgur.com/i520ske.png"
-          ],
-          "paragraphs": [
-            "Una renovación radical de The End con un estilo fantástico único, que incluye mejoras en los biomas y las estructuras, nuevos objetos, armas y mucho más contenido por descubrir.",
-            "Stellarity es un paquete de datos que renueva por completo The End, añadiéndole nuevas formas de terreno, biomas, así como objetos, armas e incluso nuevas mecánicas de juego.\n\nEn lugar de seguir la temática habitual de una expansión al estilo de 'Minecraft: Dungeons' o convertirla en una dimensión alienígena, Stellarity mezcla el motivo habitual de una dimensión desolada con temas de magia intensa y fantasía.",
-            "Se han añadido un total de 23 nuevos biomas , incluyendo 4 biomas del End del juego base renovados (técnicamente solo dos de ellos, ya que los otros dos no tienen ninguna función en el juego base) ."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "jaeden-nether",
-          "name": "Jaeden's Nether Expansion",
-          "images": [
-            "https://i.ytimg.com/vi/SGn5ZBT6lVM/maxresdefault.jpg",
-            "https://media.forgecdn.net/attachments/978/919/image_2024-09-30_143655397.png",
-            "https://media.forgecdn.net/attachments/978/921/image_2024-09-30_143729089.png",
-            "https://cdn.modrinth.com/data/cached_images/785096d7cef82a540190a9b0f2671de05042197c.png",
-            "https://media.forgecdn.net/attachments/978/916/image_2024-09-30_143539190.png"
-          ],
-          "paragraphs": [
-            "Nether Expansion es un mod compatible con Vanilla que tiene como objetivo mejorar y agregar nuevo contenido a todos los aspectos de The Nether.",
-            "Jaden's Nether Expansion es un mod compatible con el juego base que busca expandir toda la dimensión del Nether, añadiendo contenido nuevo y renovando conceptos existentes del juego base. Este proyecto está en constante crecimiento y se actualiza continuamente, así que prepárate para el mod del Nether más grande hasta la fecha."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "eternal-starlight",
-          "name": "Eternal Starlight",
-          "images": [
-            "https://cdn.modrinth.com/data/cached_images/5b5fd13a601ae8013f11edb1131d2ad2dd16a80c.png",
-            "https://media.forgecdn.net/attachments/936/439/2024-08-09_16.png",
-            "https://media.forgecdn.net/attachments/936/437/2024-08-09_16.png",
-            "https://cdn.modrinth.com/data/XvcfUGfB/images/1ae02b0df79edad8e5d81fe2eed0459e6d4e7b6f.png",
-            "https://www.minecraft-guides.com/wp-content/uploads/2025/06/Ruin_Common.png",
-            "https://i.ytimg.com/vi/P2O6xJjSnXU/maxresdefault.jpg",
-            "https://media.forgecdn.net/attachments/936/441/2024-08-09_16.png"
-          ],
-          "paragraphs": [
-            "Un mod que añade la mágica y misteriosa dimensión de la luz de las estrellas.",
-            "Eternal Starlight es un mod centrado en las dimensiones, que introduce un extenso mundo al estilo de los juegos de rol, repleto de nuevos biomas, criaturas únicas, jefes formidables y materiales raros.\n\nSe accede a esta dimensión a través de un portal activado por el Orbe de la Profecía. Los jugadores deben explorar y participar en combates para obtener objetos esenciales para el progreso, especialmente en los paquetes de mods que requieren la Estrella Allthemodium."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        }
-      ]
-    },
-    {
-      "name": "Estructuras",
-      "icon": "🏰",
-      "mods": [
-        {
-          "id": "dungeons-nether",
-          "name": "Dungeons Dimensions: Nether",
-          "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=Dungeons+Nether"
-          ],
-          "paragraphs": [
-            "Añade mazmorras y estructuras elaboradas en el Nether con puzzles, trampas y botín único para aventureros veteranos."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "better-villages",
-          "name": "Better Villages",
-          "images": [
-            "https://placehold.co/800x450/0a1a00/86efac?text=Better+Villages"
-          ],
-          "paragraphs": [
-            "Rework completo de las aldeas con diseños mucho más elaborados, nuevas variantes por bioma y mejoras de generación."
-          ]
-        },
-        {
-          "id": "illager-arena",
-          "name": "Illager Arena",
-          "images": [
-            "https://placehold.co/800x450/1a000d/f43f5e?text=Illager+Arena"
-          ],
-          "paragraphs": [
-            "Añade arenas de combate generadas en el mundo donde los Illagers organizan peleas. ¡Entra y demuestra tu valía!"
-          ]
-        },
-        {
-          "id": "nether-trials",
-          "name": "Nether Trials & Chambers",
-          "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Nether+Trials"
-          ],
-          "paragraphs": [
-            "Añade cámaras de prueba al estilo Trial Chambers pero en el Nether, con mecánicas y recompensas únicas."
-          ]
-        },
-        {
-          "id": "underwater-villages",
-          "name": "Underwater Villages",
-          "images": [
-            "https://placehold.co/800x450/00101a/38bdf8?text=Underwater+Villages"
-          ],
-          "paragraphs": [
-            "Genera aldeas submarinas habitadas por variantes acuáticas de aldeanos con comercio y estructuras adaptadas al océano."
-          ]
-        }
-      ]
-    },
-    {
       "name": "Equipamiento y Utilidades",
       "icon": "🎒",
       "mods": [
@@ -860,50 +710,140 @@
       ]
     },
     {
-      "name": "QoL",
-      "icon": "🔧",
+      "name": "Industrial y Automatización",
+      "icon": "⚙️",
       "mods": [
         {
-          "id": "lootr",
-          "name": "Lootr",
+          "id": "create",
+          "name": "Create",
           "images": [
-            "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
-            "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
+            "https://i.ytimg.com/vi/G7bHeb3QyE0/maxresdefault.jpg",
+            "https://static0.cbrimages.com/wordpress/wp-content/uploads/2021/11/Minecraft-Create-Mod-cover-spread-with-windmill-and-machines.jpg",
+            "https://i.ytimg.com/vi/jDIuWv7ROi8/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/2Xc7qzTgVw8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD2MtA1ABimCg0bp52kzKupPkl_Qg"
           ],
           "paragraphs": [
-            "¡Un mod que garantiza que nadie se quede sin botín! Todos los cofres de botín son instanciados por jugador y visualmente únicos.",
-            "Lootr transforma la forma en que experimentas el botín en Minecraft. Con este mod instalado, cada jugador obtiene su propio botín individual de cofres, barriles, cajas de shulker y vagonetas. ¡Se acabaron las carreras para saquear estructuras o encontrar contenedores llenos de la basura de otro jugador!\n\nBotín personalizado: Cada jugador ve un botín único, generado específicamente para él.\nCasi universal: compatible con casi todas las funciones y estructuras, tanto del juego base como de las modificadas.\nFiel a la versión original: Utiliza exactamente el mismo código de generación de botín que la versión original.\nCompatible con servidores : Reduce el tamaño de los servidores al eliminar la necesidad de explorar constantemente nuevas estructuras."
+            "El mod de automatización más popular de Minecraft. Permite construir fábricas, trenes, maquinaria rotacional y contraptions increíblemente complejas.",
+            "Incluye engranajes, correas, pistones mecánicos, elevadores, prensas y mucho más. Totalmente compatible con otros mods de tecnología.",
+            "Create es un mod de tecnología para Minecraft creado por Simibubi para Forge y NeoForge. Este mod introduce la Fuerza Rotacional, que se puede conectar a diferentes máquinas que pueden:\n\n¡Crea una línea de producción automatizada, que automatice la fabricación de artículos como hierro, cuarzo, madera y más, con recetas personalizadas!\nTraslada estructuras por tu mundo con trenes, ascensores y otros artilugios.\nA diferencia de muchos otros mods tecnológicos, Create se centra en la estética visual, animando al jugador a construir por diversión en lugar de por eficiencia. Create está muy bien optimizado y se puede jugar sin problemas en casi cualquier PC o portátil fabricado en la última década. Create interactúa a la perfección con innumerables mods de Minecraft (como complementos creados por la comunidad ), por lo que es el complemento ideal para muchos paquetes de mods."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "create-addictives",
+          "name": "Create: Addictives",
+          "images": [
+            "https://cdn.discordapp.com/attachments/1372350247967391887/1512620316877131846/e5cc225f-0048-407a-95d6-f6ef2abd8b19.png?ex=6a24c0f2&is=6a236f72&hm=f726b34d7956d51a252340b0a23152c397136fce82815b882681a9a122367247&",
+            "https://media.forgecdn.net/attachments/1571/29/1000711914-jpg.jpg",
+            "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg",
+            "https://media.forgecdn.net/attachments/1571/24/1000711916-jpg.jpg",
+            "https://media.forgecdn.net/attachments/1558/421/image-png.png"
+          ],
+          "paragraphs": [
+            "Create: Addictives añade drogas totalmente interactivas",
+            "Características:\n\nCultivos que se pueden cultivar : el tabaco, la coca, la amapola, la marihuana y los hongos alucinógenos aparecen de forma natural en el mundo y se pueden cultivar.\nCadenas de producción completas : Procese las materias primas para convertirlas en sustancias refinadas utilizando la balsa, la muela y la prensa mecánica de Create.\nTolerancia y síndrome de abstinencia : Cada fármaco genera tolerancia de forma individual. Si dejas de consumirlo, sufrirás efectos secundarios como debilidad, lentitud y náuseas.\nSistema de mezcla : combina ingredientes de Minecraft con drogas antes de consumirlas para alterar sus efectos. Más de 60 efectos posibles según lo que añadas.\nSistema de fluidos : Procesar ciertas sustancias hasta convertirlas en forma líquida (aceite de THC, aceite de DMT, nicotina líquida) y utilizar dispositivos basados en fluidos como el Yart y el Dab Pen.\nEfectos visuales : superposiciones de pantalla personalizadas y alucinaciones para ciertas sustancias.",
+            "Sustancias: Marihuana, cigarrillos, puros, cocaína, crack, heroína, fentanilo, lean, LSD, metanfetamina, DMT, MDMA, setas alucinógenas, vaporizadores, snus y bolsitas de nicotina."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "create-aeronautics",
+          "name": "Create Aeronautics",
+          "images": [
+            "https://media.forgecdn.net/attachments/1635/782/airships.png",
+            "https://media.forgecdn.net/attachments/1635/780/cloud-skipper.png",
+            "https://media.forgecdn.net/attachments/1635/785/dock.png",
+            "https://media.forgecdn.net/attachments/1635/788/plane.png",
+            "https://media.forgecdn.net/attachments/1635/787/car.png"
+          ],
+          "paragraphs": [
+            "Expansión de Create. Construye cualquier cosa, desde dirigibles hasta aviones y coches.",
+            "Create Aeronautics amplía los sistemas de Create para permitir a los jugadores construir todo tipo de vehículos y artilugios físicos usando Sable. Incluye contenido y bloques para construir desde aviones, drones y globos aerostáticos, hasta coches, camiones y cachivaches extravagantes.",
+            "Contiene 3 \"secciones\" de contenido:\n\nLa simulación es el núcleo del proyecto. Proporciona ensamblaje, componentes de redstone y todas las herramientas necesarias para interactuar con mecanismos simulados.\nLa aeronáutica permite la creación de todo tipo de artilugios voladores con aire caliente, hélices y rocas flotantes mágicas.\nEl motor Offroad te permite utilizar casi cualquier cosa que parezca una rueda para fabricar vehículos terrestres."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        }
+      ]
+    },
+    {
+      "name": "Magia",
+      "icon": "✨",
+      "mods": [
+        {
+          "id": "pastel",
+          "name": "Pastel",
+          "images": [
+            "https://media.forgecdn.net/attachments/1234/195/pastel-banner.png",
+            "https://media.forgecdn.net/attachments/1234/339/2025-06-28_09.png",
+            "https://media.forgecdn.net/attachments/1234/337/2025-06-28_10.png"
+          ],
+          "paragraphs": [
+            "Un viaje de verdad, belleza y odio: descubre la magia del color. Los colores son cosas muy curiosas. Su viveza, sus significados, la forma en que conforman el mundo que nos rodea.\n\n¿Acaso no te dan ganas de agarrarlas, de tocar el color mismo, para comprender su esencia?\n\nEs posible, pero el camino es largo, si no interminable.",
+            "Pastel es un mod mágico completo centrado en la exploración del color como resonancia, como energía natural. Es un viaje largo y expansivo por el camino del artista que te permite no solo aprender, sino también descubrir más sobre la tierra; explora el mundo y observa cómo crece contigo, y descubre cosas que antes no estaban allí. Persigue el significado del arcoíris, de la naturaleza, y crea herramientas nuevas y poderosas a medida que tu nueva comprensión te permite crear obras aún más refinadas. Crea máquinas sorprendentes y, a partir de ellas, ensambla artilugios adecuados para apoyar tu marcha hacia el corazón de la magia. Y una vez que empieces a creer que comprendes las tierras y su esencia, desciende más allá del falso suelo de la tierra.\n\nDesciende más allá de la barrera que se encuentra al pie del mundo, la roca madre, y en el capítulo final descubre un mundo olvidado, un mundo que quedó atrás.\n\nDesciende más allá del velo y encuentra en el abismo más profundo la verdad anhelada. El color mismo.\n\nDesciende, artista, desciende...",
+            "Características:\n- 2 conjuntos de armadura\n- 40 horas de contenido\n- Varias máquinas\n- Más de 30 herramientas\n- Demasiada comida\n- Como una cantidad injustificable\n- Se añadirán más\n- Casi 30 curiosidades\n- Un sistema logístico completo\n- Una dimensión en toda regla\n- Hay más mecánicos de los que caben aquí.\n- Bloques que abarcan varias pestañas creativas\n- Un mundo que cambia a medida que avanzas.\ny mucho más"
+          ],
+          "status": "REVISIÓN"
+        }
+      ]
+    },
+    {
+      "name": "Construcción y Decoración",
+      "icon": "🏗️",
+      "mods": [
+        {
+          "id": "mrcrayfish-furniture",
+          "name": "MrCrayfish's Furniture Mod: Refurbished",
+          "images": [
+            "https://media.forgecdn.net/attachments/791/961/kitchendemoscreenshot.png",
+            "https://media.forgecdn.net/attachments/792/547/bedroomdemoscreenshot.png",
+            "https://media.forgecdn.net/attachments/792/665/outdoordemoscreenshot.png",
+            "https://media.forgecdn.net/attachments/793/579/bathroomdemoscreenshot.png",
+            "https://pbs.twimg.com/media/GIJ8GIya8AAbDHZ.jpg"
+          ],
+          "paragraphs": [
+            "¡La próxima generación del mod de muebles de MrCrayfish, rediseñado desde cero con nuevos modelos, sonidos y mucho más!",
+            "Presentamos la nueva generación del mod de muebles de MrCrayfish, creado desde cero con nuevos bloques, modelos, sonidos originales y mecánicas de juego innovadoras. Disfruta del encanto renovado y familiar del mod original y amuebla tu casa con cientos de bloques decorativos y funcionales, tanto nuevos como originales. Sumérgete en nuevas mecánicas de juego con la introducción del sistema eléctrico para alimentar todos tus electrodomésticos y dispositivos electrónicos. Toma el control del mod, ahora con integración para CraftTweaker y compatibilidad con numerosos paquetes de datos.\n\n✨ Características\n¡Añade más de 440 bloques funcionales y decorativos para adornar tu casa!\nMás de 70 efectos de sonido originales (todos grabados y producidos por MrCrayfish) para lograr una inmersión total.\nSistema eléctrico completamente nuevo para alimentar electrodomésticos y otros aparatos electrónicos. Incluye generadores eléctricos, interruptores, luces y mucho más.\nUn sistema de entrega de correo que funciona correctamente y que le permite enviar y recibir artículos en su propio buzón.\nUn módulo informático totalmente funcional con aplicaciones divertidas y útiles.\nCompatibilidad con CraftTweaker , Just Enough Items y Farmer's Delight (la olla y la sartén se pueden usar en la estufa)."
           ],
           "status": "REVISIÓN"
         },
         {
-          "id": "more-dragon-eggs",
-          "name": "More Dragon Eggs",
+          "id": "diagonal-fences",
+          "name": "Diagonal Fences",
           "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=More+Dragon+Eggs"
+            "https://placehold.co/800x450/0d0800/d97706?text=Diagonal+Fences"
           ],
           "paragraphs": [
-            "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
+            "Permite colocar vallas en diagonal para construir cercas más naturales y estéticamente agradables."
           ]
         },
         {
-          "id": "player-revive",
-          "name": "Player Revive",
+          "id": "diagonal-walls",
+          "name": "Diagonal Walls",
           "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Player+Revive"
+            "https://placehold.co/800x450/0d0900/b45309?text=Diagonal+Walls"
           ],
           "paragraphs": [
-            "Al morir, los jugadores entran en estado de agonía durante unos segundos. Sus compañeros pueden revivirse antes de morir definitivamente."
+            "Permite colocar muros de piedra en diagonal, ideal para diseños arquitectónicos más complejos y naturales."
           ]
         },
         {
-          "id": "simple-corpse",
-          "name": "Simple Corpse",
+          "id": "diagonal-windows",
+          "name": "Diagonal Windows",
           "images": [
-            "https://placehold.co/800x450/0d000d/d946ef?text=Simple+Corpse"
+            "https://placehold.co/800x450/00101a/60a5fa?text=Diagonal+Windows"
           ],
           "paragraphs": [
-            "Al morir, tu inventario queda guardado en un cuerpo en el lugar de la muerte. Protege tus objetos durante un tiempo limitado."
+            "Permite colocar cristales y ventanas en diagonal. Construye fachadas modernas y tejados con ángulos únicos."
+          ]
+        },
+        {
+          "id": "immersive-paintings",
+          "name": "Immersive Paintings",
+          "images": [
+            "https://placehold.co/800x450/1a001a/e879f9?text=Immersive+Paintings"
+          ],
+          "paragraphs": [
+            "Permite crear cuadros personalizados con tus propias imágenes, transformando las pinturas de Minecraft en arte real."
           ]
         },
         {
@@ -935,65 +875,125 @@
           "paragraphs": [
             "Addon de Supplementaries que añade aún más bloques y objetos decorativos integrados con el estilo del mod principal."
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Seguridad y Funcionalidad",
+      "icon": "🔐",
+      "mods": [
         {
-          "id": "repeatable-vaults",
-          "name": "Repeatable Trial Vaults",
+          "id": "iron-chest",
+          "name": "Iron Chest",
           "images": [
-            "https://placehold.co/800x450/000d1a/60a5fa?text=Repeatable+Vaults"
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Iron+Chest"
           ],
           "paragraphs": [
-            "Permite que los Trial Vaults del juego base sean repetibles. Sigue obteniendo recompensas de las cámaras de prueba."
+            "Añade cofres de distintos materiales (hierro, oro, diamante, cristal...) con mayor capacidad de almacenamiento."
           ]
         },
         {
-          "id": "villager-names",
-          "name": "Villager Names",
+          "id": "security-craft",
+          "name": "Security Craft",
           "images": [
-            "https://placehold.co/800x450/001a08/22c55e?text=Villager+Names"
+            "https://placehold.co/800x450/000d1a/38bdf8?text=Security+Craft"
           ],
           "paragraphs": [
-            "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
+            "Mod de seguridad que añade cámaras, láseres, minas, teclados y todo tipo de sistemas de protección para tus bases."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Family Friendly",
+      "icon": "🍓",
+      "mods": [
+        {
+          "id": "starcatcher",
+          "name": "Starcatcher",
+          "images": [
+            "https://i.ytimg.com/vi/jRNG5cYSqpg/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1344/608/minigame-png.png",
+            "https://media.forgecdn.net/attachments/1397/874/b94b8c911433e0a25eafd0fcecad6c6e4a1fea2e-png.png",
+            "https://media.forgecdn.net/attachments/1643/456/description_4bbc8f21-1912-44e5-a865-4ec0388b4548.png",
+            "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
+          ],
+          "paragraphs": [
+            "Un mod que renueva por completo el sistema de pesca, con más de 100 peces y un montón de contenido nuevo relacionado con la pesca.",
+            "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
+            "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "minecraft-comes-alive",
+          "name": "Minecraft Comes Alive",
+          "images": [
+            "https://placehold.co/800x450/001a0d/4ade80?text=Minecraft+Comes+Alive"
+          ],
+          "paragraphs": [
+            "Remplaza los aldeanos con NPCs con personalidades, diálogos y relaciones. Puedes casarte, tener hijos y construir una familia."
           ]
         },
         {
-          "id": "piglin-names",
-          "name": "Piglin Names",
+          "id": "farmers-delight",
+          "name": "Farmer's Delight",
           "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Piglin+Names"
+            "https://placehold.co/800x450/1a0800/f97316?text=Farmer%27s+Delight"
           ],
           "paragraphs": [
-            "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
+            "Expansión de la agricultura y cocina con decenas de nuevos cultivos, recetas y utensilios de cocina. La experiencia gastronómica definitiva."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "fd-brewin-chewin",
+          "name": "Farmer's Delight: Brewin' And Chewin'",
+          "images": [
+            "https://placehold.co/800x450/1a0a00/f59e0b?text=Brewin+%26+Chewin"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight que añade cervecería, quesos y recetas fermentadas especiales."
           ]
         },
         {
-          "id": "natures-compass",
-          "name": "Nature's Compass",
+          "id": "fd-starcatcher",
+          "name": "Farmer's Delight: Starcatcher",
           "images": [
-            "https://placehold.co/800x450/0a1a00/86efac?text=Nature%27s+Compass"
+            "https://placehold.co/800x450/00001a/6366f1?text=FD+Starcatcher"
           ],
           "paragraphs": [
-            "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
+            "Compatibilidad entre Farmer's Delight y Starcatcher. Nuevas recetas que combinan ingredientes de ambos mods."
           ]
         },
         {
-          "id": "explorers-compass",
-          "name": "Explorer's Compass",
+          "id": "fd-create",
+          "name": "Farmer's Delight: Create",
           "images": [
-            "https://placehold.co/800x450/001a08/4ade80?text=Explorer%27s+Compass"
+            "https://placehold.co/800x450/0d0018/c084fc?text=FD+Create"
           ],
           "paragraphs": [
-            "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
+            "Integración entre Farmer's Delight y Create. Permite automatizar la cocina y la agricultura con maquinaria rotacional."
           ]
         },
         {
-          "id": "easy-anvils",
-          "name": "Easy Anvils",
+          "id": "fd-end",
+          "name": "Farmer's Delight: End",
           "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Easy+Anvils"
+            "https://placehold.co/800x450/000d1a/818cf8?text=FD+End"
           ],
           "paragraphs": [
-            "Elimina el límite de coste de experiencia en los yunques y permite reparar objetos sin el fastidioso 'Too Expensive!'."
+            "Addon de Farmer's Delight con cultivos y recetas únicas del End. Ingredientes exóticos de la dimensión final."
+          ]
+        },
+        {
+          "id": "fd-nether",
+          "name": "Farmer's Delight: Nether",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=FD+Nether"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight con cultivos y recetas del Nether. Cocina con ingredientes de las dimensiones infernales."
           ]
         }
       ]

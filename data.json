@@ -21,6 +21,23 @@
           "status": "CONFIRMADO"
         },
         {
+          "id": "create-addictives",
+          "name": "Create: Addictives",
+          "images": [
+            "https://springhillrecovery.com/wp-content/uploads/What-Is-Blue-Meth-Is-It-Real-.jpg.webp",
+            "https://media.forgecdn.net/attachments/1571/29/1000711914-jpg.jpg",
+            "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg",
+            "https://media.forgecdn.net/attachments/1571/24/1000711916-jpg.jpg",
+            "https://media.forgecdn.net/attachments/1558/421/image-png.png"
+          ],
+          "paragraphs": [
+            "Create: Addictives añade drogas totalmente interactivas",
+            "Características:\n\nCultivos que se pueden cultivar : el tabaco, la coca, la amapola, la marihuana y los hongos alucinógenos aparecen de forma natural en el mundo y se pueden cultivar.\nCadenas de producción completas : Procese las materias primas para convertirlas en sustancias refinadas utilizando la balsa, la muela y la prensa mecánica de Create.\nTolerancia y síndrome de abstinencia : Cada fármaco genera tolerancia de forma individual. Si dejas de consumirlo, sufrirás efectos secundarios como debilidad, lentitud y náuseas.\nSistema de mezcla : combina ingredientes de Minecraft con drogas antes de consumirlas para alterar sus efectos. Más de 60 efectos posibles según lo que añadas.\nSistema de fluidos : Procesar ciertas sustancias hasta convertirlas en forma líquida (aceite de THC, aceite de DMT, nicotina líquida) y utilizar dispositivos basados en fluidos como el Yart y el Dab Pen.\nEfectos visuales : superposiciones de pantalla personalizadas y alucinaciones para ciertas sustancias.",
+            "Sustancias: Marihuana, cigarrillos, puros, cocaína, crack, heroína, fentanilo, lean, LSD, metanfetamina, DMT, MDMA, setas alucinógenas, vaporizadores, snus y bolsitas de nicotina."
+          ],
+          "status": "NO DEFINITIVO"
+        },
+        {
           "id": "create-aeronautics",
           "name": "Create Aeronautics",
           "images": [
@@ -153,12 +170,16 @@
         },
         {
           "id": "pale-garden",
-          "name": "Pale Garden",
+          "name": "Perfect Parity Neo: Pale Garden Awakens",
           "images": [
-            "https://placehold.co/800x450/0d1a0d/a3e635?text=Pale+Garden"
+            "https://lionsdigest1.com/wp-content/uploads/2024/12/IMG_6934.jpeg",
+            "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/MC_HolidayPreRelease_BlogEditorial_ArticleImage_01_1280x720.jpg",
+            "https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b3/Pale_Garden_Vibrant.png/revision/latest?cb=20250607021259",
+            "https://media.forgecdn.net/attachments/978/29/2024-09-28_22.png"
           ],
           "paragraphs": [
-            "Añade un nuevo bioma de jardín pálido con flora etérea y criaturas misteriosas."
+            "Backport del Pale Garden a 1:1",
+            "Se añade el Creaking, el bioma Jardín pálido, el árbol Roble pálido, el bloque Musgo pálido, la alfombra Musgo pálido, el Musgo colgante pálido y el conjunto de madera de Roble pálido."
           ]
         },
         {
@@ -314,7 +335,13 @@
           "paragraphs": [
             "Mejora visualmente el fuego de Minecraft y añade nuevas mecánicas relacionadas con el daño por fuego y la resistencia."
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Origen y Genética",
+      "icon": "🧬",
+      "mods": [
         {
           "id": "origins",
           "name": "Origins",
@@ -334,6 +361,21 @@
           "paragraphs": [
             "Expansión de Origins que añade un sistema de clases sobre los orígenes, con habilidades adicionales y árboles de progresión."
           ]
+        },
+        {
+          "id": "chest-cavity-beyond",
+          "name": "Chest Cavity Beyond",
+          "images": [
+            "https://i.ytimg.com/vi/9QFp7WpC838/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6L3FrUtRKEInrtftWadeELQNq2Q",
+            "https://cdn.modrinth.com/data/cached_images/c9ff1f33a9388e153ff5427bc4c4d93ea2347a61.webp",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2021/04/Enderman-Chest-Cavity-mod.jpg?q=50&fit=crop&w=825&dpr=1.5"
+          ],
+          "paragraphs": [
+            "Chest Cavity Beyond añade un sistema de órganos de la cavidad torácica al juego.",
+            "Chest Cavity Beyond añade un sistema de órganos de cavidad torácica al juego, con una gran variedad de tipos de órganos y órganos de criaturas. Usa el Abrecofres para extraer órganos de diversas criaturas y reemplazar los tuyos para obtener habilidades únicas.",
+            "Sistema de órganos rico\nÓrganos básicos : corazón, columna vertebral, pulmones, estómago, intestinos, riñones, bazo, hígado, apéndice, costillas, músculos.\nÓrganos de animales : diversas variantes de órganos para animales terrestres y animales pequeños.\nÓrganos acuáticos : branquias, músculos, espinas, intestinos, etc., que proporcionan capacidad de respiración bajo el agua.\nÓrganos ignífugos : serie de órganos Blaze, que proporciona resistencia al fuego.\nÓrganos de Ender - Serie de órganos de Enderman, que mejoran las habilidades de teletransportación.\nMúsculos de movimiento : músculos fuertes, rápidos y ágiles para mejorar la movilidad.\nÓrganos digestivos especiales : estómago de carnívoro, estómago de herbívoro, rumen de herbívoro."
+          ],
+          "status": "NO DEFINITIVO"
         }
       ]
     },

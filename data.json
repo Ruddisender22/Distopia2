@@ -796,13 +796,18 @@
       "mods": [
         {
           "id": "dragon-mounts",
-          "name": "Dragon Mounts",
+          "name": "Dragon Mounts Remastered",
           "images": [
-            "https://placehold.co/800x450/000d1a/38bdf8?text=Dragon+Mounts"
+            "https://i.ytimg.com/vi/9M1fsWKHWgg/mqdefault.jpg",
+            "https://media.forgecdn.net/attachments/820/393/java_ra721d9cww.png",
+            "https://i.imgur.com/m7nFsOa.png",
+            "https://media.forgecdn.net/attachments/820/394/java_qodmujg1sl.png"
           ],
           "paragraphs": [
-            "Permite criar y montar dragones del End. Vuela sobre el mundo en una de las monturas más icónicas de los mods de Minecraft."
-          ]
+            "Dragon Mounts Remastered es la última versión que busca recuperar la esencia del querido Dragon Mounts Mod original.",
+            "🐉 Modelos y animaciones de dragones actualizados\nDMR introduce dragones con modelos y animaciones mejorados, ofreciendo una apariencia pulida a la vez que mantienen la coherencia con el estilo de Minecraft.\n\n✨ Invoca a tu dragón con un silbido\nCrea un silbato y vincúlalo a un dragón específico. Esto te permitirá invocar a ese dragón a tu ubicación, incluso a través de dimensiones, lo que te dará mayor control sobre tus compañeros.\n\n🛠️ Comandos de comportamiento del dragón\nControla el comportamiento de tu dragón:\n\nSiéntese para mantenerlo inmóvil.\nTe siguen por tierra o por aire.\nDéjelo moverse libremente dentro de un radio determinado.\n📦 Inventario de dragones\nLos dragones pueden transportar cofres, lo que los convierte en compañeros útiles para viajes largos cuando se necesita espacio de almacenamiento adicional.\n\n🧬 Cría de dragones e híbridos\nPuedes criar dragones para crear híbridos que combinen rasgos de diferentes tipos. Experimenta para descubrir combinaciones y habilidades únicas.\n\n🌍 Cría basada en biomas\nCiertos dragones requieren biomas específicos para reproducirse, lo que fomenta la exploración y añade un nivel de desafío a la hora de desbloquear nuevos tipos.\n\n🔧 Tipos de dragones personalizados\nGracias a la compatibilidad con paquetes de datos, puedes crear tus propios tipos de dragones para personalizar aún más la experiencia.\n\n🏔️ Nuevas variantes de dragones\nDMR añade una selección de nuevos dragones inspirados en las actualizaciones modernas de Minecraft, ofreciendo nuevas opciones para descubrir y domesticar."
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "tempad",
@@ -832,11 +837,19 @@
           "id": "wings-of-fire",
           "name": "Wings Of Fire!",
           "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=Wings+of+Fire"
+            "https://i.imgur.com/BhRStvf.png",
+            "https://cdn.modrinth.com/data/cached_images/97341ce45b01f4668bafeb1b957c3d2f46476442.png",
+            "https://i.imgur.com/soA44nB.png",
+            "https://i.imgur.com/DJVH3qv.png"
           ],
           "paragraphs": [
-            "Añade dragones de distintas tribus inspirados en la serie Wings of Fire, cada uno con habilidades únicas y domesticables."
-          ]
+            "¿Alguna vez has querido montar un fénix? ¡Ahora puedes! Encuentra 6 huevos de fénix diferentes en tu mundo y dales un buen trato para que nazca tu nueva montura.",
+            "WINGS OF FIRE es un mod que añade SEIS razas diferentes de fénix a Minecraft. ¡Encuentra huevos por todo tu mundo y eclosiona para crear nuevas y poderosas monturas!",
+            "Encuentra huevos de fénix petrificados en diferentes estructuras de tu mundo y caliéntalos dentro del nuevo bloque CUNA INFERNAL . ¡Después de 15 minutos, tu huevo de fénix estará caliente!\n\n(Usar crema de magma sobre una base de fuego sin encender permite encenderla con fines decorativos).",
+            "¡ Al combinar tus Huevos de Fénix recién calentados con las LINTERNAS TEMPLADAS , un nuevo objeto, se vincularán la linterna y el huevo, dándote el objeto capaz de invocar al legendario fénix!",
+            "¡Haz clic derecho en tu linterna vinculada para invocar a tu Fénix! Una vez invocado, comenzarás a montar automáticamente en el Fénix, y cuando te bajes, ¡ PUM! (¡Cuidado con el daño por caída!)"
+          ],
+          "status": "REVISIÓN"
         }
       ]
     },
@@ -888,11 +901,21 @@
           "id": "supplementaries",
           "name": "Supplementaries",
           "images": [
-            "https://placehold.co/800x450/0d0800/fbbf24?text=Supplementaries"
+            "https://media.forgecdn.net/attachments/401/408/supp_logo2.png",
+            "https://media.forgecdn.net/attachments/413/33/2021-12-06_18.png",
+            "https://media.forgecdn.net/attachments/619/842/2021-02-14-18-22-45.png",
+            "https://media.forgecdn.net/attachments/334/226/2021-01-14_02.png",
+            "https://media.forgecdn.net/attachments/402/106/2021-09-09_03.png",
+            "https://media.forgecdn.net/attachments/497/780/candles.png",
+            "https://media.forgecdn.net/attachments/619/841/ktmc9fp.png",
+            "https://media.forgecdn.net/attachments/619/845/ybsafhl.png",
+            "https://media.forgecdn.net/attachments/619/846/way-sign.png"
           ],
           "paragraphs": [
-            "Añade decenas de bloques decorativos y funcionales que complementan el estilo vanilla de Minecraft de forma elegante."
-          ]
+            "Complementos de Vanilla+: Tarros, letreros, grifos, veletas, lanzadores de resortes, apliques, macetas, luces, decoración y automatización.",
+            "Supplementaries es un mod de Forge altamente configurable que se centra en añadir contenido valioso para cubrir las carencias del juego base. Sus características están diseñadas para ser funcionales, estéticamente atractivas y complementarias al contenido preexistente, ofreciendo muchas maneras nuevas de mejorar tu experiencia Vanilla+."
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "amendments",
@@ -995,31 +1018,41 @@
           "id": "farcr-recrafted",
           "name": "Farcr's Re-Crafted",
           "images": [
-            "https://placehold.co/800x450/0d0900/d97706?text=Farcr%27s+Re-Crafted"
+            "https://media.forgecdn.net/attachments/786/616/tachis.png",
+            "https://media.forgecdn.net/attachments/737/143/2023-10-01_19.png",
+            "https://media.forgecdn.net/attachments/737/130/2023-10-01_18.png",
+            "https://media.forgecdn.net/attachments/737/138/2023-10-01_19.png",
+            "https://media.forgecdn.net/attachments/1639/64/2026-04-19_17-19-27-png.png",
+            "https://media.forgecdn.net/attachments/737/152/2023-10-01_19.png",
+            "https://media.forgecdn.net/attachments/745/244/2023-10-19_14.png"
           ],
           "paragraphs": [
-            "Resource pack completo que rediseña numerosas texturas del juego base manteniendo la estética pixel art de Minecraft."
-          ]
+            "Una pequeña reinterpretación de Minecraft, Busca darle al juego un aspecto más sobrio y pulido, y con suerte, mayor cohesión y una experiencia más fluida."
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "low-on-fire",
           "name": "Low On Fire",
           "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=Low+On+Fire"
+            "https://media.forgecdn.net/avatars/thumbnails/494/548/64/64/637806308919001110.png",
+            "https://media.forgecdn.net/attachments/433/29/half.png"
           ],
           "paragraphs": [
-            "Baja la posición de las llamas en pantalla cuando el jugador está ardiendo, mejorando la visibilidad en combate."
-          ]
+            "Cuando estás en llamas, las llamas no cubren toda la pantalla, sino solo una pequeña fracción de ella."
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "lower-shield",
           "name": "Lower Shield",
           "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Lower+Shield"
+            "https://media.forgecdn.net/attachments/1068/555/2025-01-16_15.png"
           ],
           "paragraphs": [
             "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
-          ]
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "undopia-zombies",

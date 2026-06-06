@@ -467,10 +467,12 @@
           "id": "enhanced-celestials",
           "name": "Enhanced Celestials",
           "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=Enhanced+Celestials"
+            "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
+            "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
+            "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
           ],
           "paragraphs": [
-            "Mejora los eventos celestiales como la luna llena con nuevos efectos, bonificaciones y peligros."
+            "Enhanced Celestials es un mod que busca mejorar el ambiente nocturno añadiendo eventos lunares como lunas de sangre y lunas de cosecha. ¡Prepárate para nuevo contenido lunar con cada actualización!"
           ],
           "status": "REVISIÓN"
         },
@@ -478,10 +480,14 @@
           "id": "spice-of-life",
           "name": "Spice of Life: Carrot Edition",
           "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Spice+of+Life"
+            "https://media.forgecdn.net/avatars/thumbnails/360/935/64/64/637525655151502872.png",
+            "https://media.forgecdn.net/attachments/248/616/2019-03-14_01.png",
+            "https://media.forgecdn.net/attachments/248/619/2019-03-14_01.png",
+            "https://media.forgecdn.net/attachments/248/618/2019-03-14_01.png"
           ],
           "paragraphs": [
-            "Recompensa la variedad dietética dando bonificaciones por comer alimentos diferentes. Comer siempre lo mismo tiene penalizaciones."
+            "¡Un mod basado en la comida que recompensa al jugador en lugar de castigarlo por descubrir nuevos alimentos!",
+            "Este mod lleva la cuenta de cuántos alimentos únicos ha comido un jugador. Al alcanzar ciertas cantidades de alimentos únicos, gana corazones permanentemente, ¡aumentando su salud máxima! Para maximizar sus barras de HP, los jugadores tendrán que completar misiones para conseguir y elaborar alimentos exóticos."
           ],
           "status": "SELECCIÓN DEL AUTOR"
         },
@@ -489,10 +495,16 @@
           "id": "apotheosis",
           "name": "Apotheosis",
           "images": [
-            "https://placehold.co/800x450/0d001a/9333ea?text=Apotheosis"
+            "https://i.ytimg.com/vi/8WOEUL31rHg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2uog8GCmqMtzd3xA4VY5_mfqZkw",
+            "https://media.forgecdn.net/attachments/903/392/2v0ddxm.jpg",
+            "https://media.forgecdn.net/attachments/903/397/fxo6fxh.png",
+            "https://media.forgecdn.net/attachments/903/398/1098775819641434193.jpg",
+            "https://media.forgecdn.net/attachments/903/391/2024-06-29_01.jpg",
+            "https://media.forgecdn.net/attachments/1160/35/8-3-0_key_art-jpg.jpg"
           ],
           "paragraphs": [
-            "Amplía enormemente los sistemas de encantamientos, pociones, generadores y jefes. Añade profundidad de progresión end-game."
+            "Apotheosis es un mod de contenido que te permite volverte más fuerte que nunca, manteniendo la esencia de las mecánicas originales del juego. Cada característica está cuidadosamente diseñada para ofrecer una experiencia coherente y completa.",
+            "Las novedades abarcan desde cambios sencillos, como la adición de amuletos de poción, hasta refactorizaciones masivas de sistemas clásicos, como el de encantamiento."
           ],
           "status": "SELECCIÓN DEL AUTOR"
         },
@@ -927,13 +939,19 @@
         },
         {
           "id": "minecraft-comes-alive",
-          "name": "Minecraft Comes Alive",
+          "name": "MCA Reborn",
           "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Minecraft+Comes+Alive"
+            "https://i.ytimg.com/vi/71G3y16so6s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC6oqqL-oSDKZAKcoyqWBiwp9vAQg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsJ0cYGQ7y3HdMrQaI3mz5WXPByoU1F5jWrg&s",
+            "https://media.forgecdn.net/attachments/22/106/mca-2.png"
           ],
           "paragraphs": [
-            "Remplaza los aldeanos con NPCs con personalidades, diálogos y relaciones. Puedes casarte, tener hijos y construir una familia."
-          ]
+            "¡Ya no hay gente calamar, ahora son humanos y se puede interactuar con ellos!",
+            "¡Hay muchas opciones para interactuar con los aldeanos, como enviar regalos, charlar y mucho más! Puedes entablar relaciones interactuando con los aldeanos, cada uno con su propia personalidad y estado de ánimo.",
+            "¡Una vez que tengas suficientes corazones, podrás casarte con ellos! Después del matrimonio, puedes tener hijos con los que tendrás que hacer tareas como trabajar en la granja, talar árboles, ¡y mucho más! Sus hijos crecerán y vivirán sus propias vidas.",
+            "Puedes casarte con otros jugadores en un servidor LAN o SMP. ¡Ayuda a expandir una aldea y aumenta tu rango, hasta convertirte finalmente en rey!"
+          ],
+          "status": "REVISIÓN"
         },
         {
           "id": "farmers-delight",

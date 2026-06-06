@@ -115,10 +115,20 @@
           "id": "alexs-caves",
           "name": "Alex's Caves",
           "images": [
-            "https://placehold.co/800x450/000d0a/34d399?text=Alex%27s+Caves"
+            "https://i.ytimg.com/vi/pEeaVttRo18/maxresdefault.jpg",
+            "https://cdn.modrinth.com/data/cached_images/6bea1f277d234f4ed385dc9cd1bf9855876391fd.jpeg",
+            "https://cdn.modrinth.com/data/U6GY0xp0/images/e2e859f9dfba2a5b0e52cabb51b8916d6cce9278.jpeg",
+            "https://cdn.modrinth.com/data/U6GY0xp0/images/50ed8746315312c1702746d23ff357d7ea326aec.jpeg",
+            "https://cdn.modrinth.com/data/U6GY0xp0/images/8ecd2a55f8b2f42babacb31c0f771be434a8c6cc.jpeg",
+            "https://cdn.modrinth.com/data/U6GY0xp0/images/6dfd473407ad68950ad95c1e6b9d9c127e387df5.jpeg",
+            "https://cdn.modrinth.com/data/U6GY0xp0/images/8b8bca522ee76b34e5e55a0e80ba49313db6fc5b.jpeg",
+            "https://cdn.modrinth.com/data/U6GY0xp0/images/6148dcac7cf47f4f609eb3c0027ae95c24f10d8a.jpeg"
           ],
           "paragraphs": [
-            "Añade biomas de cuevas totalmente nuevos llenos de criaturas únicas, flora subterránea y recursos especiales."
+            "Explora seis nuevos y raros biomas de cuevas ocultos bajo la superficie del Mundo Superior...",
+            "Alex's Caves es un mod de Forge para Minecraft 1.20.1 que añade 6 nuevos biomas de cuevas al mundo principal. A diferencia de la mayoría de los biomas normales, estas cuevas son extremadamente raras, pero todas contienen una variedad de bloques, objetos, criaturas y mecánicas únicas que las convierten en destinos subterráneos de gran interés. Estos seis biomas son las Cuevas Magnéticas, las Cuevas Primordiales, las Cuevas Tóxicas, el Abismo Abisal, los Valles Desolados y la Cavidad de Caramelos.",
+            "Para encontrar cualquiera de estos biomas de cuevas, tendrás que descubrir una Cabaña Subterránea en cualquier lugar del mundo exterior. Allí encontrarás barriles con tablillas de cuevas y un Compendio de Cuevas, una guía de las Cuevas de Alex que te proporcionará todo el conocimiento necesario para encontrar y explorar cualquier bioma añadido por el mod. Para más información sobre cómo empezar, consulta la sección « Primeros pasos » en la wiki del mod.",
+            "Alex's Caves es un mod muy extenso que ha dedicado mucho esfuerzo al aspecto y la ambientación de cada nuevo bioma. Cada bioma añadido puede tener sus propias partículas ambientales, niebla, brillo, color de luz y más. Por ello, se recomienda jugar a este mod sin shaders, ya que muchos de ellos pueden alterar o empeorar el aspecto único de varios biomas. El mod también es compatible con Just Enough Items y Alex's Mobs."
           ],
           "status": "NO DEFINITIVO"
         },
@@ -126,10 +136,18 @@
           "id": "spawn",
           "name": "Spawn",
           "images": [
-            "https://placehold.co/800x450/001a0a/4ade80?text=Spawn"
+            "https://i.ytimg.com/vi/dedPNkX38Ok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1EYGcfin27Hi4x4XP_POSZAUd2A",
+            "https://i.ytimg.com/vi/f7tAHa8yA9A/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/N_kGvDJXcf0/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1405/348/2025-11-26_16-57-49-copy-png.png",
+            "https://media.forgecdn.net/attachments/1405/335/2025-11-26_16-53-11-png.png",
+            "https://media.forgecdn.net/attachments/1405/349/2025-11-26_17-14-36-copy-png.png",
+            "https://media.forgecdn.net/attachments/1405/342/2025-11-26_17-27-22-png.png"
           ],
           "paragraphs": [
-            "Mod que mejora y expande el sistema de spawning de criaturas en el mundo."
+            "Spawn es un mod que planea añadir más animales al juego, ¡y con ellos nuevos bloques, mecánicas e incluso biomas! Prepárate para ver todo tipo de criaturas, desde pequeñas hasta grandes, deambulando por tu mundo de Minecraft.",
+            "Este mod se está desarrollando para Forge 1.20.1. No se planean adaptaciones a versiones anteriores. A partir de la versión 1.21.1, el mod utilizará Neoforge.",
+            "Spawn no tiene una configuración nativa, sin embargo, es extremadamente personalizable a través de paquetes de datos, lo que permite agregar más variantes de animales, cambiar si los animales o variantes aparecen y dónde, e incluso ajustar o expandir con nuevos sistemas de recetas."
           ],
           "status": "NO DEFINITIVO"
         },

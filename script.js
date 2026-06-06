@@ -592,12 +592,9 @@ function buildCard(mod) {
   // Status replaces generic "MOD" tag when present
   const typeTag = document.createElement("span");
   if (mod.status) {
-    const statusClsMap = { "CONFIRMADO": "status-confirmed", "NO DEFINITIVO": "status-pending", "ELIMINADO": "status-removed" };
+    const statusClsMap = { "SELECCIÓN DEL AUTOR": "status-confirmed", "REVISIÓN": "status-pending", "ELIMINADO": "status-removed" };
     typeTag.className = `mod-type-tag status-inline ${statusClsMap[mod.status] || ""}`;
-    let displayStatus = mod.status;
-    if (mod.status === "CONFIRMADO") displayStatus = "SELECCIÓN DEL AUTOR";
-    if (mod.status === "NO DEFINITIVO") displayStatus = "REVISIÓN";
-    typeTag.textContent = displayStatus;
+    typeTag.textContent = mod.status;
   } else {
     typeTag.className = "mod-type-tag status-inline status-pending";
     typeTag.textContent = "REVISIÓN";

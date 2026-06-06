@@ -1,4 +1,4 @@
-{
+﻿{
   "sections": [
     {
       "name": "Industrial y Automatización",
@@ -18,7 +18,7 @@
             "Incluye engranajes, correas, pistones mecánicos, elevadores, prensas y mucho más. Totalmente compatible con otros mods de tecnología.",
             "Create es un mod de tecnología para Minecraft creado por Simibubi para Forge y NeoForge. Este mod introduce la Fuerza Rotacional, que se puede conectar a diferentes máquinas que pueden:\n\n¡Crea una línea de producción automatizada, que automatice la fabricación de artículos como hierro, cuarzo, madera y más, con recetas personalizadas!\nTraslada estructuras por tu mundo con trenes, ascensores y otros artilugios.\nA diferencia de muchos otros mods tecnológicos, Create se centra en la estética visual, animando al jugador a construir por diversión en lugar de por eficiencia. Create está muy bien optimizado y se puede jugar sin problemas en casi cualquier PC o portátil fabricado en la última década. Create interactúa a la perfección con innumerables mods de Minecraft (como complementos creados por la comunidad ), por lo que es el complemento ideal para muchos paquetes de mods."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "create-addictives",
@@ -35,7 +35,7 @@
             "Características:\n\nCultivos que se pueden cultivar : el tabaco, la coca, la amapola, la marihuana y los hongos alucinógenos aparecen de forma natural en el mundo y se pueden cultivar.\nCadenas de producción completas : Procese las materias primas para convertirlas en sustancias refinadas utilizando la balsa, la muela y la prensa mecánica de Create.\nTolerancia y síndrome de abstinencia : Cada fármaco genera tolerancia de forma individual. Si dejas de consumirlo, sufrirás efectos secundarios como debilidad, lentitud y náuseas.\nSistema de mezcla : combina ingredientes de Minecraft con drogas antes de consumirlas para alterar sus efectos. Más de 60 efectos posibles según lo que añadas.\nSistema de fluidos : Procesar ciertas sustancias hasta convertirlas en forma líquida (aceite de THC, aceite de DMT, nicotina líquida) y utilizar dispositivos basados en fluidos como el Yart y el Dab Pen.\nEfectos visuales : superposiciones de pantalla personalizadas y alucinaciones para ciertas sustancias.",
             "Sustancias: Marihuana, cigarrillos, puros, cocaína, crack, heroína, fentanilo, lean, LSD, metanfetamina, DMT, MDMA, setas alucinógenas, vaporizadores, snus y bolsitas de nicotina."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "create-aeronautics",
@@ -52,7 +52,7 @@
             "Create Aeronautics amplía los sistemas de Create para permitir a los jugadores construir todo tipo de vehículos y artilugios físicos usando Sable. Incluye contenido y bloques para construir desde aviones, drones y globos aerostáticos, hasta coches, camiones y cachivaches extravagantes.",
             "Contiene 3 \"secciones\" de contenido:\n\nLa simulación es el núcleo del proyecto. Proporciona ensamblaje, componentes de redstone y todas las herramientas necesarias para interactuar con mecanismos simulados.\nLa aeronáutica permite la creación de todo tipo de artilugios voladores con aire caliente, hélices y rocas flotantes mágicas.\nEl motor Offroad te permite utilizar casi cualquier cosa que parezca una rueda para fabricar vehículos terrestres."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         }
       ]
     },
@@ -73,7 +73,7 @@
             "Pastel es un mod mágico completo centrado en la exploración del color como resonancia, como energía natural. Es un viaje largo y expansivo por el camino del artista que te permite no solo aprender, sino también descubrir más sobre la tierra; explora el mundo y observa cómo crece contigo, y descubre cosas que antes no estaban allí. Persigue el significado del arcoíris, de la naturaleza, y crea herramientas nuevas y poderosas a medida que tu nueva comprensión te permite crear obras aún más refinadas. Crea máquinas sorprendentes y, a partir de ellas, ensambla artilugios adecuados para apoyar tu marcha hacia el corazón de la magia. Y una vez que empieces a creer que comprendes las tierras y su esencia, desciende más allá del falso suelo de la tierra.\n\nDesciende más allá de la barrera que se encuentra al pie del mundo, la roca madre, y en el capítulo final descubre un mundo olvidado, un mundo que quedó atrás.\n\nDesciende más allá del velo y encuentra en el abismo más profundo la verdad anhelada. El color mismo.\n\nDesciende, artista, desciende...",
             "Características:\n- 2 conjuntos de armadura\n- 40 horas de contenido\n- Varias máquinas\n- Más de 30 herramientas\n- Demasiada comida\n- Como una cantidad injustificable\n- Se añadirán más\n- Casi 30 curiosidades\n- Un sistema logístico completo\n- Una dimensión en toda regla\n- Hay más mecánicos de los que caben aquí.\n- Bloques que abarcan varias pestañas creativas\n- Un mundo que cambia a medida que avanzas.\ny mucho más"
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         }
       ]
     },
@@ -94,7 +94,7 @@
             "Primal es un mod para Forge/NeoForge que mejora el entorno salvaje de Minecraft, ¡haciendo que la supervivencia sea más inmersiva y emocionante!.",
             "Se centra en añadir nuevos animales con un estilo similar al del juego original, con mecánicas únicas, ¡además de nuevos y emocionantes bloques y objetos!\n\nTambién mejora algunos aspectos básicos del juego, ¡así que prepárate para ver entidades del juego base con nuevos modelos!"
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "no-mans-land",
@@ -110,7 +110,7 @@
             "Una revisión integral del mundo del juego, sin concesiones, que mejora la generación de mundos en todos los biomas y entornos.",
             "No Man's Land es una modificación compatible con la versión original del juego que mejora tu mundo principal, optimizando los biomas existentes y añadiendo otros nuevos, transformando el mundo con gran atención al detalle en cada uno de sus aspectos.\n\nDesde las cumbres más altas de las montañas hasta las fosas oceánicas más profundas, No Man's Land busca ofrecer un entorno con la misma calidad y atención al detalle. Este mod, en esencia, mejora la experiencia de juego y, por ello, todas sus características están diseñadas para ser altamente interactivas y permitir una gran libertad creativa.\n\nTodo en la creación está bendecido por la belleza, y tú eres parte inseparable de ella. Así que explora y ama como este mundo te ama."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "ecologics",
@@ -124,7 +124,7 @@
           "paragraphs": [
             "¡Actualizaciones sencillas de biomas clásicos, con criaturas divertidas, bloques y mucho más!"
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "alexs-caves",
@@ -145,7 +145,7 @@
             "Para encontrar cualquiera de estos biomas de cuevas, tendrás que descubrir una Cabaña Subterránea en cualquier lugar del mundo exterior. Allí encontrarás barriles con tablillas de cuevas y un Compendio de Cuevas, una guía de las Cuevas de Alex que te proporcionará todo el conocimiento necesario para encontrar y explorar cualquier bioma añadido por el mod. Para más información sobre cómo empezar, consulta la sección « Primeros pasos » en la wiki del mod.",
             "Alex's Caves es un mod muy extenso que ha dedicado mucho esfuerzo al aspecto y la ambientación de cada nuevo bioma. Cada bioma añadido puede tener sus propias partículas ambientales, niebla, brillo, color de luz y más. Por ello, se recomienda jugar a este mod sin shaders, ya que muchos de ellos pueden alterar o empeorar el aspecto único de varios biomas. El mod también es compatible con Just Enough Items y Alex's Mobs."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "spawn",
@@ -164,7 +164,7 @@
             "Este mod se está desarrollando para Forge 1.20.1. No se planean adaptaciones a versiones anteriores. A partir de la versión 1.21.1, el mod utilizará Neoforge.",
             "Spawn no tiene una configuración nativa, sin embargo, es extremadamente personalizable a través de paquetes de datos, lo que permite agregar más variantes de animales, cambiar si los animales o variantes aparecen y dónde, e incluso ajustar o expandir con nuevos sistemas de recetas."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "pale-garden",
@@ -195,7 +195,7 @@
             "Cortar árboles no requiere un hacha, pero sin ella llevará bastante tiempo. Cortar diferentes trozos del mismo árbol contribuirá a derribarlo. Los jugadores pueden colaborar para talar esos grandes árboles. Los árboles más grandes requieren más talas en total, pero menos talas por bloque*. Mantén pulsado el botón \"sigilo\" al romper un bloque de tronco para romperlo normalmente.",
             "Se puede modificar para facilitar el talado de árboles"
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         }
       ]
     },
@@ -220,7 +220,7 @@
             "Descubre estructuras míticas a través de dimensiones, que albergan enemigos desafiantes, jefes finales y poderosos equipos.",
             "L'Ender's Cataclysm es un mod de Minecraft inspirado en Minecraft Dungeons, que introduce peligrosas mazmorras. Cada estructura presenta encuentros únicos con jefes, criaturas hostiles y valiosos botines que proporcionan a los jugadores poderosas armas, armaduras y equipo para mejorar su experiencia de juego."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "royal-variations",
@@ -236,7 +236,7 @@
             "Añade variaciones reales mejoradas de las criaturas originales del juego, con características propias.",
             "Todas las criaturas que encontrarás periódicamente en el mundo tienen sus propias habilidades y una mayor cantidad de experiencia y botines, incluyendo nuevos objetos con su propia utilidad. Este mod diversificará y complicará ligeramente tu supervivencia sin sobrecargar el juego con demasiadas mecánicas."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "wither-wrath",
@@ -254,7 +254,7 @@
             "Nueva versión del Wither, diseñada para que suponga un mayor desafío introduciendo nuevos patrones de ataque y aumentando su salud a 600 HP, igual que el Wither de la edición Bedrock. Como no a todos les gustan todos los cambios, se han incluido opciones para reducir el caos y ofrecer mayor flexibilidad. Sin embargo, no habrá una versión \"fácil\" de este Wither.",
             "Este Wither fue creado como un proyecto personal para presentar una pelea más desafiante y, principalmente, para mostrárselo a mis amigos. Nunca pretendió ser perfecto, pero espero que represente un reto divertido."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "qlipoth-awakening",
@@ -271,7 +271,7 @@
             "Qliphoth Awakening es un mod que se centra en añadir varios jefes, cada uno con su propio conjunto de ataques, mecánicas únicas y objetos que sueltan al derrotarlos.",
             "Antes de invocar a un jefe, se te presentará una descripción detallada de sus ataques y mecánicas. Puedes leerla completa y prepararte, o poner a prueba tus habilidades y enfrentarte a él sin preparación."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "piglin-proliferation",
@@ -282,7 +282,7 @@
           "paragraphs": [
             "Expande la civilización piglin con nuevas variantes, jefes y estructuras en el Nether."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "variants-venture",
@@ -309,7 +309,7 @@
           "paragraphs": [
             "Reemplaza el sistema de portal del End con un proceso de progresión mucho más elaborado que requiere exploración activa."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "enhanced-celestials",
@@ -320,7 +320,7 @@
           "paragraphs": [
             "Mejora los eventos celestiales como la luna llena con nuevos efectos, bonificaciones y peligros."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "spice-of-life",
@@ -331,7 +331,7 @@
           "paragraphs": [
             "Recompensa la variedad dietética dando bonificaciones por comer alimentos diferentes. Comer siempre lo mismo tiene penalizaciones."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "apotheosis",
@@ -342,7 +342,7 @@
           "paragraphs": [
             "Amplía enormemente los sistemas de encantamientos, pociones, generadores y jefes. Añade profundidad de progresión end-game."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "burnt-fire",
@@ -397,7 +397,7 @@
             "Chest Cavity Beyond añade un sistema de órganos de cavidad torácica al juego, con una gran variedad de tipos de órganos y órganos de criaturas. Usa el Abrecofres para extraer órganos de diversas criaturas y reemplazar los tuyos para obtener habilidades únicas.",
             "Sistema de órganos rico\nÓrganos básicos : corazón, columna vertebral, pulmones, estómago, intestinos, riñones, bazo, hígado, apéndice, costillas, músculos.\nÓrganos de animales : diversas variantes de órganos para animales terrestres y animales pequeños.\nÓrganos acuáticos : branquias, músculos, espinas, intestinos, etc., que proporcionan capacidad de respiración bajo el agua.\nÓrganos ignífugos : serie de órganos Blaze, que proporciona resistencia al fuego.\nÓrganos de Ender - Serie de órganos de Enderman, que mejoran las habilidades de teletransportación.\nMúsculos de movimiento : músculos fuertes, rápidos y ágiles para mejorar la movilidad.\nÓrganos digestivos especiales : estómago de carnívoro, estómago de herbívoro, rumen de herbívoro."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         }
       ]
     },
@@ -420,7 +420,7 @@
             "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
             "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "minecraft-comes-alive",
@@ -441,7 +441,7 @@
           "paragraphs": [
             "Expansión de la agricultura y cocina con decenas de nuevos cultivos, recetas y utensilios de cocina. La experiencia gastronómica definitiva."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "fd-brewin-chewin",
@@ -590,7 +590,7 @@
           "paragraphs": [
             "Transforma el End en una dimensión masiva con nuevos biomas, estructuras, jefes y una historia propia que explorar."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "jaeden-nether",
@@ -601,7 +601,7 @@
           "paragraphs": [
             "Expansión masiva del Nether con nuevos biomas, estructuras y criaturas que hacen la dimensión infernal mucho más rica."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "eternal-starlight",
@@ -619,7 +619,7 @@
             "Un mod que añade la mágica y misteriosa dimensión de la luz de las estrellas.",
             "Eternal Starlight es un mod centrado en las dimensiones, que introduce un extenso mundo al estilo de los juegos de rol, repleto de nuevos biomas, criaturas únicas, jefes formidables y materiales raros.\n\nSe accede a esta dimensión a través de un portal activado por el Orbe de la Profecía. Los jugadores deben explorar y participar en combates para obtener objetos esenciales para el progreso, especialmente en los paquetes de mods que requieren la Estrella Allthemodium."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         }
       ]
     },
@@ -636,7 +636,7 @@
           "paragraphs": [
             "Añade mazmorras y estructuras elaboradas en el Nether con puzzles, trampas y botín único para aventureros veteranos."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "better-villages",
@@ -693,7 +693,7 @@
           "paragraphs": [
             "Añade numerosos objetos especiales y artefactos con habilidades únicas que se encuentran en el mundo. Cada hallazgo es una sorpresa."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "dynamic-caveman",
@@ -704,7 +704,7 @@
           "paragraphs": [
             "Sistema de progresión de habilidades para la exploración de cuevas. Mejora tus capacidades de minería con el tiempo."
           ],
-          "status": "NO DEFINITIVO"
+          "status": "REVISIÓN"
         },
         {
           "id": "backported-spears",
@@ -952,10 +952,11 @@
           "id": "alternative-rain",
           "name": "Alternative Rain Sounds",
           "images": [
-            "https://placehold.co/800x450/001020/38bdf8?text=Alternative+Rain"
+            "https://i.ytimg.com/vi/fcgwZZjIG8c/maxresdefault.jpg"
           ],
           "paragraphs": [
-            "Reemplaza los sonidos de lluvia de Minecraft por grabaciones de lluvia real de alta calidad. Inmersión sonora total."
+            "Nuevos sonidos para la lluvia y el trueno.",
+            "El paquete de recursos Sonidos Alternativos de Lluvia reemplaza los sonidos predeterminados de lluvia y truenos con sonidos más realistas y atmosféricos. Ahora la lluvia suena mucho mejor que los sonidos predeterminados de Minecraft. Los truenos también se han actualizado, con sonidos más dramáticos y potentes. Con este paquete de recursos, podrás sumergirte aún más en el juego. ¡Espero que lo disfrutes!"
           ]
         },
         {
@@ -1011,7 +1012,7 @@
             "Añade variedad de zombies sin afectar al rendimiento del server y manteniendo un estilo vanilla",
             "Zombie Skins añade una variante de zombi, cáscara y ahogado para cada aspecto predeterminado disponible en el juego. Las variantes de Steve y Alex aparecen aproximadamente 1,5 veces más a menudo que las demás porque son los aspectos originales."
           ],
-          "status": "CONFIRMADO"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "fancy-crops",

@@ -563,20 +563,23 @@
           "id": "security-craft",
           "name": "Security Craft",
           "images": [
-            "https://placehold.co/800x450/000d1a/38bdf8?text=Security+Craft"
+            "https://media.forgecdn.net/attachments/647/279/item-security.png",
+            "https://media.forgecdn.net/attachments/647/278/explosives.png",
+            "https://media.forgecdn.net/attachments/647/276/defense.png"
           ],
           "paragraphs": [
-            "Mod de seguridad que añade cámaras, láseres, minas, teclados y todo tipo de sistemas de protección para tus bases."
+            "Ya todos lo conocéis",
+            "Añade multitud de bloques y objetos para defender y asegurar tu base."
           ]
         },
         {
           "id": "iron-chest",
           "name": "Iron Chest",
           "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Iron+Chest"
+            "https://i.imgur.com/Kz3AG9B.png"
           ],
           "paragraphs": [
-            "Añade cofres de distintos materiales (hierro, oro, diamante, cristal...) con mayor capacidad de almacenamiento."
+            "El mod Iron Chests incluye cofres para los distintos metales del Minecraft original, ¡con diferentes tamaños!"
           ]
         }
       ]
@@ -639,30 +642,33 @@
           "id": "backported-spears",
           "name": "Backported Spears",
           "images": [
-            "https://placehold.co/800x450/0a0d00/a3e635?text=Backported+Spears"
+            "https://www.wooco.de/wp-content/uploads/2025/12/Minecraft-Update-3-27-Mounts-of-Mayhem-1200x729.webp",
+            "https://www.thespike.gg/_next/image?url=https%3A%2F%2Fthespike-strapi-cms.s3.us-east-1.amazonaws.com%2F16_d6cc953921.jpg&w=3840&q=75",
+            "https://i.ytimg.com/vi/-EvadH1KctE/maxresdefault.jpg"
           ],
           "paragraphs": [
-            "Añade lanzas al juego, trayendo de vuelta un arma clásica con físicas de lanzamiento únicas."
+            "Un mod que intenta adaptar las lanzas a versiones anteriores con la mayor precisión posible."
           ]
         },
         {
           "id": "just-hammers",
           "name": "Just Hammers",
           "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Just+Hammers"
+            "https://i.ytimg.com/vi/o1vazgPgX70/maxresdefault.jpg",
+            "https://i.tlauncher.org/images/justhammers-mod-screenshots-04.jpg"
           ],
           "paragraphs": [
-            "Añade martillos que minan en área 3x3, haciendo la minería en masa mucho más eficiente."
+            "Añade martillos al juego que pueden minar en cuadrículas de 3x3, 3x3x3, 5x5x1, 5x5x3 y, finalmente, ¡5x5x5! Son geniales."
           ]
         },
         {
           "id": "grappling-hooks",
           "name": "Yori3o's Grappling Hooks",
           "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Grappling+Hooks"
+            "https://media.forgecdn.net/attachments/1376/879/video_2025-10-31_16-15-26-ezgif-com-video-to-webp.webp"
           ],
           "paragraphs": [
-            "Garfios de distintos materiales para escalar paredes y columpiarse entre edificios. Exploración vertical al siguiente nivel."
+            "Añade ganchos de agarre realistas y con un aspecto similar al del juego base."
           ]
         }
       ]

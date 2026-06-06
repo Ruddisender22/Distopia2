@@ -123,7 +123,7 @@
     },
     {
       "name": "Generación de Mundo",
-      "icon": "ðŸŒ",
+      "icon": "🌍",
       "mods": [
         {
           "id": "no-mans-land",
@@ -386,7 +386,7 @@
     },
     {
       "name": "Dificultad y Progresión",
-      "icon": "ðŸ“ˆ",
+      "icon": "📈",
       "mods": [
         {
           "id": "end-remastered",
@@ -466,7 +466,7 @@
     },
     {
       "name": "Tecnología y Almacenaje",
-      "icon": "âš™ï¸",
+      "icon": "⚙️",
       "mods": [
         {
           "id": "create",
@@ -674,7 +674,7 @@
     },
     {
       "name": "Decoración y Cosméticos",
-      "icon": "ðŸŽ¨",
+      "icon": "🎨",
       "mods": [
         {
           "id": "mrcrayfish-furniture",

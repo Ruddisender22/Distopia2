@@ -1,117 +1,113 @@
 {
   "sections": [
     {
-      "name": "QoL",
-      "icon": "🔧",
+      "name": "Aventura y Rol",
+      "icon": "âš”ï¸",
       "mods": [
         {
-          "id": "lootr",
-          "name": "Lootr",
+          "id": "apotheosis",
+          "name": "Apotheosis",
           "images": [
-            "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
-            "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
+            "https://i.ytimg.com/vi/8WOEUL31rHg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2uog8GCmqMtzd3xA4VY5_mfqZkw",
+            "https://media.forgecdn.net/attachments/903/392/2v0ddxm.jpg",
+            "https://media.forgecdn.net/attachments/903/397/fxo6fxh.png",
+            "https://media.forgecdn.net/attachments/903/398/1098775819641434193.jpg",
+            "https://media.forgecdn.net/attachments/903/391/2024-06-29_01.jpg",
+            "https://media.forgecdn.net/attachments/1160/35/8-3-0_key_art-jpg.jpg"
           ],
           "paragraphs": [
-            "¡Un mod que garantiza que nadie se quede sin botín! Todos los cofres de botín son instanciados por jugador y visualmente únicos.",
-            "Lootr transforma la forma en que experimentas el botín en Minecraft. Con este mod instalado, cada jugador obtiene su propio botín individual de cofres, barriles, cajas de shulker y vagonetas. ¡Se acabaron las carreras para saquear estructuras o encontrar contenedores llenos de la basura de otro jugador!\n\nBotín personalizado: Cada jugador ve un botín único, generado específicamente para él.\nCasi universal: compatible con casi todas las funciones y estructuras, tanto del juego base como de las modificadas.\nFiel a la versión original: Utiliza exactamente el mismo código de generación de botín que la versión original.\nCompatible con servidores : Reduce el tamaño de los servidores al eliminar la necesidad de explorar constantemente nuevas estructuras."
+            "Apotheosis es un mod de contenido que te permite volverte más fuerte que nunca, manteniendo la esencia de las mecánicas originales del juego. Cada característica está cuidadosamente diseñada para ofrecer una experiencia coherente y completa.",
+            "Las novedades abarcan desde cambios sencillos, como la adición de amuletos de poción, hasta refactorizaciones masivas de sistemas clásicos, como el de encantamiento."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "end-remastered",
+          "name": "End Remastered",
+          "images": [
+            "https://www.minecraft-guides.com/wp-content/uploads/2022/05/PortalFrame.jpg",
+            "https://static.wikia.nocookie.net/endremastered/images/e/ed/Eyes_of_end_remastered.png/revision/latest/smart/width/250/height/250?cb=20231231130313",
+            "https://i.ytimg.com/vi/IC4ti0dGgl4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwZNWrkhEVxF33OXvfgL8AUZOAhw"
+          ],
+          "paragraphs": [
+            "¡Haz que tu viaje hacia el final sea más desafiante y emocionante con End Remastered!",
+            "La exploración es el eje central de End Remastered. Para llegar al Fin y derrotar al Ender Dragon, deberás encontrar 16 ojos personalizados explorando estructuras del juego base y combatiendo jefes del juego base. Una vez que tengas al menos 12 ojos, podrás seguirlos hasta llegar a la Fortaleza. Para abrir el portal, debes colocar los 12 ojos personalizados . Si hay un ojo de ender del juego base en uno de los marcos, puedes eliminarlo haciendo clic derecho sobre él con un ojo personalizado."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "origins",
+          "name": "Origins",
+          "images": [
+            "https://minecraft.fr/wp-content/uploads/2021/12/origins-mod-minecraft.jpg",
+            "https://i.imgur.com/617o2yF.png",
+            "https://staticg.sportskeeda.com/editor/2021/10/ca86d-16333460584633-800.jpg"
+          ],
+          "paragraphs": [
+            "Los jugadores eligen un Origen al comienzo del juego para obtener ventajas y desventajas.",
+            "Elige un Origen y comienza tu partida con habilidades especiales, algunas útiles y otras que te dificultarán el juego. Cada Origen tiene un impacto distinto en la mecánica básica. Si no te convencen, también puedes elegir el Origen \"Humano\" al jugar con amigos en un servidor."
+          ]
+        },
+        {
+          "id": "origins-classes",
+          "name": "Origins: Classes",
+          "images": [
+            "https://i.ytimg.com/vi/axUNBMEFTI8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAc1Or_Z9tfnPVM1ZLmAC4KZqHmQA"
+          ],
+          "paragraphs": [
+            "Complemento para Origins que permite elegir clases además de los orígenes.",
+            "Además de elegir un origen, ahora también debes elegir una clase. Las clases ofrecen beneficios menores que los orígenes, pero no tienen inconvenientes.\n\nLista de clases\nArquero: tus proyectiles son más precisos; te ralentizas menos al usar un arco.\nDomador de bestias: los animales que domesticas obtienen corazones y daño adicionales de forma permanente; cuando bebes una poción, los efectos también se aplican a los animales domesticados cercanos.\nHerrero: las herramientas y armaduras que fabricas proporcionan pequeñas ventajas; puedes reparar herramientas y armaduras de forma más eficiente, tanto en un yunque como mediante la fabricación.\nClérigo: puedes duplicar la duración de las pociones; eres mejor en encantamientos.\nCocinar: los alimentos que prepares te proporcionarán más nutrientes; obtendrás puntos de experiencia adicionales al cocinar alimentos en un ahumador.\nExplorador: comienzas el juego con 9 mapas vacíos, una brújula y un reloj; no te cansas al correr.\nGranjero: la harina de huesos es el doble de efectiva cuando la usas; a veces los cultivos dan el doble de botín cuando los cosechas.\nLeñador: fabricar tablones a partir de troncos te da dos tablones adicionales; cortas árboles enteros de una vez cuando usas un hacha.\nComerciante: cuando comercias con los aldeanos, sus intercambios no se agotan; los comerciantes ambulantes te ofrecen ofertas especiales.\nMinero: rompes todos los bloques de piedra más rápido; no te cansas de minar bloques.\nTonto: no eres particularmente bueno en nada. :)\nGanadero: cuando crías animales, a veces tienen la posibilidad de producir gemelos; los animales que matas tienen la posibilidad de soltar el doble de botín.\nPícaro: tu nombre nunca es visible a través de las paredes; entras en sigilo (haciendo menos ruido y causando el doble de daño por la espalda) después de moverte sigilosamente durante 10 segundos.\nGuerrero: infliges +1 de daño de ataque con cada arma; te ralentizas menos cuando usas un escudo."
+          ]
+        },
+        {
+          "id": "chest-cavity-beyond",
+          "name": "Chest Cavity Beyond",
+          "images": [
+            "https://i.ytimg.com/vi/9QFp7WpC838/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6L3FrUtRKEInrtftWadeELQNq2Q",
+            "https://cdn.modrinth.com/data/cached_images/c9ff1f33a9388e153ff5427bc4c4d93ea2347a61.webp",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2021/04/Enderman-Chest-Cavity-mod.jpg?q=50&fit=crop&w=825&dpr=1.5"
+          ],
+          "paragraphs": [
+            "Chest Cavity Beyond añade un sistema de órganos de la cavidad torácica al juego.",
+            "Chest Cavity Beyond añade un sistema de órganos de cavidad torácica al juego, con una gran variedad de tipos de órganos y órganos de criaturas. Usa el Abrecofres para extraer órganos de diversas criaturas y reemplazar los tuyos para obtener habilidades únicas.",
+            "Sistema de órganos rico\nÓrganos básicos : corazón, columna vertebral, pulmones, estómago, intestinos, riñones, bazo, hígado, apéndice, costillas, músculos.\nÓrganos de animales : diversas variantes de órganos para animales terrestres y animales pequeños.\nÓrganos acuáticos : branquias, músculos, espinas, intestinos, etc., que proporcionan capacidad de respiración bajo el agua.\nÓrganos ignífugos : serie de órganos Blaze, que proporciona resistencia al fuego.\nÓrganos de Ender - Serie de órganos de Enderman, que mejoran las habilidades de teletransportación.\nMúsculos de movimiento : músculos fuertes, rápidos y ágiles para mejorar la movilidad.\nÓrganos digestivos especiales : estómago de carnívoro, estómago de herbívoro, rumen de herbívoro."
           ],
           "status": "REVISIÓN"
         },
         {
-          "id": "more-dragon-eggs",
-          "name": "More Dragon Eggs",
+          "id": "enhanced-celestials",
+          "name": "Enhanced Celestials",
           "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=More+Dragon+Eggs"
+            "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
+            "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
+            "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
           ],
           "paragraphs": [
-            "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
-          ]
+            "Enhanced Celestials es un mod que busca mejorar el ambiente nocturno añadiendo eventos lunares como lunas de sangre y lunas de cosecha. ¡Prepárate para nuevo contenido lunar con cada actualización!"
+          ],
+          "status": "REVISIÓN"
         },
         {
-          "id": "player-revive",
-          "name": "Player Revive",
+          "id": "minecraft-comes-alive",
+          "name": "MCA Reborn",
           "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Player+Revive"
+            "https://i.ytimg.com/vi/71G3y16so6s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC6oqqL-oSDKZAKcoyqWBiwp9vAQg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsJ0cYGQ7y3HdMrQaI3mz5WXPByoU1F5jWrg&s",
+            "https://media.forgecdn.net/attachments/22/106/mca-2.png"
           ],
           "paragraphs": [
-            "Al morir, los jugadores entran en estado de agonía durante unos segundos. Sus compañeros pueden revivirse antes de morir definitivamente."
-          ]
-        },
-        {
-          "id": "simple-corpse",
-          "name": "Simple Corpse",
-          "images": [
-            "https://placehold.co/800x450/0d000d/d946ef?text=Simple+Corpse"
+            "¡Ya no hay gente calamar, ahora son humanos y se puede interactuar con ellos!",
+            "¡Hay muchas opciones para interactuar con los aldeanos, como enviar regalos, charlar y mucho más! Puedes entablar relaciones interactuando con los aldeanos, cada uno con su propia personalidad y estado de ánimo.",
+            "¡Una vez que tengas suficientes corazones, podrás casarte con ellos! Después del matrimonio, puedes tener hijos con los que tendrás que hacer tareas como trabajar en la granja, talar árboles, ¡y mucho más! Sus hijos crecerán y vivirán sus propias vidas.",
+            "Puedes casarte con otros jugadores en un servidor LAN o SMP. ¡Ayuda a expandir una aldea y aumenta tu rango, hasta convertirte finalmente en rey!"
           ],
-          "paragraphs": [
-            "Al morir, tu inventario queda guardado en un cuerpo en el lugar de la muerte. Protege tus objetos durante un tiempo limitado."
-          ]
-        },
-        {
-          "id": "repeatable-vaults",
-          "name": "Repeatable Trial Vaults",
-          "images": [
-            "https://placehold.co/800x450/000d1a/60a5fa?text=Repeatable+Vaults"
-          ],
-          "paragraphs": [
-            "Permite que los Trial Vaults del juego base sean repetibles. Sigue obteniendo recompensas de las cámaras de prueba."
-          ]
-        },
-        {
-          "id": "villager-names",
-          "name": "Villager Names",
-          "images": [
-            "https://placehold.co/800x450/001a08/22c55e?text=Villager+Names"
-          ],
-          "paragraphs": [
-            "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
-          ]
-        },
-        {
-          "id": "piglin-names",
-          "name": "Piglin Names",
-          "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Piglin+Names"
-          ],
-          "paragraphs": [
-            "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
-          ]
-        },
-        {
-          "id": "natures-compass",
-          "name": "Nature's Compass",
-          "images": [
-            "https://placehold.co/800x450/0a1a00/86efac?text=Nature%27s+Compass"
-          ],
-          "paragraphs": [
-            "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
-          ]
-        },
-        {
-          "id": "explorers-compass",
-          "name": "Explorer's Compass",
-          "images": [
-            "https://placehold.co/800x450/001a08/4ade80?text=Explorer%27s+Compass"
-          ],
-          "paragraphs": [
-            "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
-          ]
-        },
-        {
-          "id": "easy-anvils",
-          "name": "Easy Anvils",
-          "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Easy+Anvils"
-          ],
-          "paragraphs": [
-            "Elimina el límite de coste de experiencia en los yunques y permite reparar objetos sin el fastidioso 'Too Expensive!'."
-          ]
+          "status": "REVISIÓN"
         }
       ]
     },
     {
-      "name": "Dimensiones",
-      "icon": "🌌",
+      "name": "GeneraciÃ³n de Mundo",
+      "icon": "ðŸŒ",
       "mods": [
         {
           "id": "stellarity",
@@ -164,27 +160,6 @@
           "paragraphs": [
             "Un mod que añade la mágica y misteriosa dimensión de la luz de las estrellas.",
             "Eternal Starlight es un mod centrado en las dimensiones, que introduce un extenso mundo al estilo de los juegos de rol, repleto de nuevos biomas, criaturas únicas, jefes formidables y materiales raros.\n\nSe accede a esta dimensión a través de un portal activado por el Orbe de la Profecía. Los jugadores deben explorar y participar en combates para obtener objetos esenciales para el progreso, especialmente en los paquetes de mods que requieren la Estrella Allthemodium."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        }
-      ]
-    },
-    {
-      "name": "Biomas y Fauna",
-      "icon": "🌿",
-      "mods": [
-        {
-          "id": "primal",
-          "name": "Primal",
-          "images": [
-            "https://cdn.modrinth.com/data/cached_images/cf4195afe91c34d812b70668566480dd7db064bc.png",
-            "https://cdn.modrinth.com/data/cached_images/d35b44870d11d133ae66a8319a3684f1792d28be.jpeg",
-            "https://cdn.modrinth.com/data/cached_images/3279725dd2b3374ec08485a71cdefa5eab5e7299.jpeg",
-            "https://media.forgecdn.net/attachments/1600/568/2026-03-27_01-16-28-png.png"
-          ],
-          "paragraphs": [
-            "Primal es un mod para Forge/NeoForge que mejora el entorno salvaje de Minecraft, ¡haciendo que la supervivencia sea más inmersiva y emocionante!.",
-            "Se centra en añadir nuevos animales con un estilo similar al del juego original, con mecánicas únicas, ¡además de nuevos y emocionantes bloques y objetos!\n\nTambién mejora algunos aspectos básicos del juego, ¡así que prepárate para ver entidades del juego base con nuevos modelos!"
           ],
           "status": "SELECCIÓN DEL AUTOR"
         },
@@ -240,25 +215,6 @@
           "status": "REVISIÓN"
         },
         {
-          "id": "spawn",
-          "name": "Spawn",
-          "images": [
-            "https://i.ytimg.com/vi/dedPNkX38Ok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1EYGcfin27Hi4x4XP_POSZAUd2A",
-            "https://i.ytimg.com/vi/f7tAHa8yA9A/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/N_kGvDJXcf0/maxresdefault.jpg",
-            "https://media.forgecdn.net/attachments/1405/348/2025-11-26_16-57-49-copy-png.png",
-            "https://media.forgecdn.net/attachments/1405/335/2025-11-26_16-53-11-png.png",
-            "https://media.forgecdn.net/attachments/1405/349/2025-11-26_17-14-36-copy-png.png",
-            "https://media.forgecdn.net/attachments/1405/342/2025-11-26_17-27-22-png.png"
-          ],
-          "paragraphs": [
-            "Spawn es un mod que planea añadir más animales al juego, ¡y con ellos nuevos bloques, mecánicas e incluso biomas! Prepárate para ver todo tipo de criaturas, desde pequeñas hasta grandes, deambulando por tu mundo de Minecraft.",
-            "Este mod se está desarrollando para Forge 1.20.1. No se planean adaptaciones a versiones anteriores. A partir de la versión 1.21.1, el mod utilizará Neoforge.",
-            "Spawn no tiene una configuración nativa, sin embargo, es extremadamente personalizable a través de paquetes de datos, lo que permite agregar más variantes de animales, cambiar si los animales o variantes aparecen y dónde, e incluso ajustar o expandir con nuevos sistemas de recetas."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
           "id": "pale-garden",
           "name": "Perfect Parity Neo: Pale Garden Awakens",
           "images": [
@@ -273,28 +229,15 @@
           ]
         },
         {
-          "id": "ht-treechop",
-          "name": "HT's TreeChop",
+          "id": "better-villages",
+          "name": "Better Villages",
           "images": [
-            "https://media.forgecdn.net/attachments/1300/652/mcpedl-png.png",
-            "https://i.ytimg.com/vi/NtZEakVAb6A/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/_4V1-_rNfoM/maxresdefault.jpg",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGWk0QnuONgVrZBBRy0rXnfcHqu2uPLmmeQ&s"
+            "https://placehold.co/800x450/0a1a00/86efac?text=Better+Villages"
           ],
           "paragraphs": [
-            "Corta los árboles poco a poco, en lugar de hacerlo bloque a bloque.",
-            "Permite talar árboles rompiendo repetidamente un solo bloque. El árbol completo solo se romperá después de un cierto número de golpes, y los árboles más grandes requieren más golpes. Inspirado en mods como Treecapitator.",
-            "Cortar árboles no requiere un hacha, pero sin ella llevará bastante tiempo. Cortar diferentes trozos del mismo árbol contribuirá a derribarlo. Los jugadores pueden colaborar para talar esos grandes árboles. Los árboles más grandes requieren más talas en total, pero menos talas por bloque*. Mantén pulsado el botón \"sigilo\" al romper un bloque de tronco para romperlo normalmente.",
-            "Se puede modificar para facilitar el talado de árboles"
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        }
-      ]
-    },
-    {
-      "name": "Estructuras",
-      "icon": "🏰",
-      "mods": [
+            "Rework completo de las aldeas con diseños mucho más elaborados, nuevas variantes por bioma y mejoras de generación."
+          ]
+        },
         {
           "id": "dungeons-nether",
           "name": "Dungeons Dimensions: Nether",
@@ -305,16 +248,6 @@
             "Añade mazmorras y estructuras elaboradas en el Nether con puzzles, trampas y botín único para aventureros veteranos."
           ],
           "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "better-villages",
-          "name": "Better Villages",
-          "images": [
-            "https://placehold.co/800x450/0a1a00/86efac?text=Better+Villages"
-          ],
-          "paragraphs": [
-            "Rework completo de las aldeas con diseños mucho más elaborados, nuevas variantes por bioma y mejoras de generación."
-          ]
         },
         {
           "id": "illager-arena",
@@ -349,8 +282,8 @@
       ]
     },
     {
-      "name": "Enemigos y Bosses",
-      "icon": "☠️",
+      "name": "Criaturas y Enemigos",
+      "icon": "â˜ ï¸",
       "mods": [
         {
           "id": "cataclysm",
@@ -368,22 +301,6 @@
           "paragraphs": [
             "Descubre estructuras míticas a través de dimensiones, que albergan enemigos desafiantes, jefes finales y poderosos equipos.",
             "L'Ender's Cataclysm es un mod de Minecraft inspirado en Minecraft Dungeons, que introduce peligrosas mazmorras. Cada estructura presenta encuentros únicos con jefes, criaturas hostiles y valiosos botines que proporcionan a los jugadores poderosas armas, armaduras y equipo para mejorar su experiencia de juego."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "royal-variations",
-          "name": "Royal Variations",
-          "images": [
-            "https://i.ytimg.com/vi/SIy9yi7BN3Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAmXbS-Hv4d9oYlIH_Lf88Ep61Cxg",
-            "https://media.forgecdn.net/attachments/1343/722/2025-09-23_04.png",
-            "https://media.forgecdn.net/attachments/1343/721/2025-09-23_04.png",
-            "https://media.forgecdn.net/attachments/1343/724/2025-10-02_02.png",
-            "https://media.forgecdn.net/attachments/1343/725/2025-09-23_04.png"
-          ],
-          "paragraphs": [
-            "Añade variaciones reales mejoradas de las criaturas originales del juego, con características propias.",
-            "Todas las criaturas que encontrarás periódicamente en el mundo tienen sus propias habilidades y una mayor cantidad de experiencia y botines, incluyendo nuevos objetos con su propia utilidad. Este mod diversificará y complicará ligeramente tu supervivencia sin sobrecargar el juego con demasiadas mecánicas."
           ],
           "status": "SELECCIÓN DEL AUTOR"
         },
@@ -423,6 +340,22 @@
           "status": "SELECCIÓN DEL AUTOR"
         },
         {
+          "id": "royal-variations",
+          "name": "Royal Variations",
+          "images": [
+            "https://i.ytimg.com/vi/SIy9yi7BN3Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAmXbS-Hv4d9oYlIH_Lf88Ep61Cxg",
+            "https://media.forgecdn.net/attachments/1343/722/2025-09-23_04.png",
+            "https://media.forgecdn.net/attachments/1343/721/2025-09-23_04.png",
+            "https://media.forgecdn.net/attachments/1343/724/2025-10-02_02.png",
+            "https://media.forgecdn.net/attachments/1343/725/2025-09-23_04.png"
+          ],
+          "paragraphs": [
+            "Añade variaciones reales mejoradas de las criaturas originales del juego, con características propias.",
+            "Todas las criaturas que encontrarás periódicamente en el mundo tienen sus propias habilidades y una mayor cantidad de experiencia y botines, incluyendo nuevos objetos con su propia utilidad. Este mod diversificará y complicará ligeramente tu supervivencia sin sobrecargar el juego con demasiadas mecánicas."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
           "id": "piglin-proliferation",
           "name": "Piglin Proliferation",
           "images": [
@@ -442,254 +375,40 @@
           "paragraphs": [
             "Añade numerosas variantes visuales y funcionales de mobs del juego base, haciendo el mundo más diverso y sorprendente."
           ]
-        }
-      ]
-    },
-    {
-      "name": "Dificultad y Progresión",
-      "icon": "⚔️",
-      "mods": [
+        },
         {
-          "id": "end-remastered",
-          "name": "End Remastered",
+          "id": "primal",
+          "name": "Primal",
           "images": [
-            "https://www.minecraft-guides.com/wp-content/uploads/2022/05/PortalFrame.jpg",
-            "https://static.wikia.nocookie.net/endremastered/images/e/ed/Eyes_of_end_remastered.png/revision/latest/smart/width/250/height/250?cb=20231231130313",
-            "https://i.ytimg.com/vi/IC4ti0dGgl4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwZNWrkhEVxF33OXvfgL8AUZOAhw"
+            "https://cdn.modrinth.com/data/cached_images/cf4195afe91c34d812b70668566480dd7db064bc.png",
+            "https://cdn.modrinth.com/data/cached_images/d35b44870d11d133ae66a8319a3684f1792d28be.jpeg",
+            "https://cdn.modrinth.com/data/cached_images/3279725dd2b3374ec08485a71cdefa5eab5e7299.jpeg",
+            "https://media.forgecdn.net/attachments/1600/568/2026-03-27_01-16-28-png.png"
           ],
           "paragraphs": [
-            "¡Haz que tu viaje hacia el final sea más desafiante y emocionante con End Remastered!",
-            "La exploración es el eje central de End Remastered. Para llegar al Fin y derrotar al Ender Dragon, deberás encontrar 16 ojos personalizados explorando estructuras del juego base y combatiendo jefes del juego base. Una vez que tengas al menos 12 ojos, podrás seguirlos hasta llegar a la Fortaleza. Para abrir el portal, debes colocar los 12 ojos personalizados . Si hay un ojo de ender del juego base en uno de los marcos, puedes eliminarlo haciendo clic derecho sobre él con un ojo personalizado."
+            "Primal es un mod para Forge/NeoForge que mejora el entorno salvaje de Minecraft, ¡haciendo que la supervivencia sea más inmersiva y emocionante!.",
+            "Se centra en añadir nuevos animales con un estilo similar al del juego original, con mecánicas únicas, ¡además de nuevos y emocionantes bloques y objetos!\n\nTambién mejora algunos aspectos básicos del juego, ¡así que prepárate para ver entidades del juego base con nuevos modelos!"
           ],
           "status": "SELECCIÓN DEL AUTOR"
         },
         {
-          "id": "enhanced-celestials",
-          "name": "Enhanced Celestials",
+          "id": "spawn",
+          "name": "Spawn",
           "images": [
-            "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
-            "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
-            "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
+            "https://i.ytimg.com/vi/dedPNkX38Ok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1EYGcfin27Hi4x4XP_POSZAUd2A",
+            "https://i.ytimg.com/vi/f7tAHa8yA9A/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/N_kGvDJXcf0/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1405/348/2025-11-26_16-57-49-copy-png.png",
+            "https://media.forgecdn.net/attachments/1405/335/2025-11-26_16-53-11-png.png",
+            "https://media.forgecdn.net/attachments/1405/349/2025-11-26_17-14-36-copy-png.png",
+            "https://media.forgecdn.net/attachments/1405/342/2025-11-26_17-27-22-png.png"
           ],
           "paragraphs": [
-            "Enhanced Celestials es un mod que busca mejorar el ambiente nocturno añadiendo eventos lunares como lunas de sangre y lunas de cosecha. ¡Prepárate para nuevo contenido lunar con cada actualización!"
+            "Spawn es un mod que planea añadir más animales al juego, ¡y con ellos nuevos bloques, mecánicas e incluso biomas! Prepárate para ver todo tipo de criaturas, desde pequeñas hasta grandes, deambulando por tu mundo de Minecraft.",
+            "Este mod se está desarrollando para Forge 1.20.1. No se planean adaptaciones a versiones anteriores. A partir de la versión 1.21.1, el mod utilizará Neoforge.",
+            "Spawn no tiene una configuración nativa, sin embargo, es extremadamente personalizable a través de paquetes de datos, lo que permite agregar más variantes de animales, cambiar si los animales o variantes aparecen y dónde, e incluso ajustar o expandir con nuevos sistemas de recetas."
           ],
           "status": "REVISIÓN"
-        },
-        {
-          "id": "spice-of-life",
-          "name": "Spice of Life: Carrot Edition",
-          "images": [
-            "https://media.forgecdn.net/avatars/thumbnails/360/935/64/64/637525655151502872.png",
-            "https://media.forgecdn.net/attachments/248/616/2019-03-14_01.png",
-            "https://media.forgecdn.net/attachments/248/619/2019-03-14_01.png",
-            "https://media.forgecdn.net/attachments/248/618/2019-03-14_01.png"
-          ],
-          "paragraphs": [
-            "¡Un mod basado en la comida que recompensa al jugador en lugar de castigarlo por descubrir nuevos alimentos!",
-            "Este mod lleva la cuenta de cuántos alimentos únicos ha comido un jugador. Al alcanzar ciertas cantidades de alimentos únicos, gana corazones permanentemente, ¡aumentando su salud máxima! Para maximizar sus barras de HP, los jugadores tendrán que completar misiones para conseguir y elaborar alimentos exóticos."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "apotheosis",
-          "name": "Apotheosis",
-          "images": [
-            "https://i.ytimg.com/vi/8WOEUL31rHg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2uog8GCmqMtzd3xA4VY5_mfqZkw",
-            "https://media.forgecdn.net/attachments/903/392/2v0ddxm.jpg",
-            "https://media.forgecdn.net/attachments/903/397/fxo6fxh.png",
-            "https://media.forgecdn.net/attachments/903/398/1098775819641434193.jpg",
-            "https://media.forgecdn.net/attachments/903/391/2024-06-29_01.jpg",
-            "https://media.forgecdn.net/attachments/1160/35/8-3-0_key_art-jpg.jpg"
-          ],
-          "paragraphs": [
-            "Apotheosis es un mod de contenido que te permite volverte más fuerte que nunca, manteniendo la esencia de las mecánicas originales del juego. Cada característica está cuidadosamente diseñada para ofrecer una experiencia coherente y completa.",
-            "Las novedades abarcan desde cambios sencillos, como la adición de amuletos de poción, hasta refactorizaciones masivas de sistemas clásicos, como el de encantamiento."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "burnt-fire",
-          "name": "Burnt: Better Vanilla Fire",
-          "images": [
-            "https://media.forgecdn.net/attachments/840/661/title.jpg",
-            "https://media.forgecdn.net/attachments/966/159/lonelytree.jpg",
-            "https://media.forgecdn.net/attachments/966/165/mansionfire.jpg",
-            "https://media.forgecdn.net/attachments/966/166/mansionembers.jpg"
-          ],
-          "paragraphs": [
-            "Mod para mejorar el fuego en el juego base. Enciéndelo, quémalo. Propagación de fuego realista y bloques quemados.",
-            "Esto es QUEMADO. Un mod que mejora el fuego en Vanilla: si lo enciendes, arderá... No desaparecerá... ARDERÁ. A cambio, las estructuras de madera y los árboles permanecen, quemados y retorcidos, y con recursos que puedes usar.\n\nPor fin, un buen uso para el pedernal y el acero. Prende fuego a un tronco, una estructura de madera, un pueblo, incluso a la hierba, y se propaga rápidamente. El fuego se extiende de forma realista y el espectáculo es el sueño de cualquier pirómano."
-          ],
-          "status": "REVISIÓN"
-        }
-      ]
-    },
-    {
-      "name": "Origen y Genética",
-      "icon": "🧬",
-      "mods": [
-        {
-          "id": "origins",
-          "name": "Origins",
-          "images": [
-            "https://minecraft.fr/wp-content/uploads/2021/12/origins-mod-minecraft.jpg",
-            "https://i.imgur.com/617o2yF.png",
-            "https://staticg.sportskeeda.com/editor/2021/10/ca86d-16333460584633-800.jpg"
-          ],
-          "paragraphs": [
-            "Los jugadores eligen un Origen al comienzo del juego para obtener ventajas y desventajas.",
-            "Elige un Origen y comienza tu partida con habilidades especiales, algunas útiles y otras que te dificultarán el juego. Cada Origen tiene un impacto distinto en la mecánica básica. Si no te convencen, también puedes elegir el Origen \"Humano\" al jugar con amigos en un servidor."
-          ]
-        },
-        {
-          "id": "origins-classes",
-          "name": "Origins: Classes",
-          "images": [
-            "https://i.ytimg.com/vi/axUNBMEFTI8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAc1Or_Z9tfnPVM1ZLmAC4KZqHmQA"
-          ],
-          "paragraphs": [
-            "Complemento para Origins que permite elegir clases además de los orígenes.",
-            "Además de elegir un origen, ahora también debes elegir una clase. Las clases ofrecen beneficios menores que los orígenes, pero no tienen inconvenientes.\n\nLista de clases\nArquero: tus proyectiles son más precisos; te ralentizas menos al usar un arco.\nDomador de bestias: los animales que domesticas obtienen corazones y daño adicionales de forma permanente; cuando bebes una poción, los efectos también se aplican a los animales domesticados cercanos.\nHerrero: las herramientas y armaduras que fabricas proporcionan pequeñas ventajas; puedes reparar herramientas y armaduras de forma más eficiente, tanto en un yunque como mediante la fabricación.\nClérigo: puedes duplicar la duración de las pociones; eres mejor en encantamientos.\nCocinar: los alimentos que prepares te proporcionarán más nutrientes; obtendrás puntos de experiencia adicionales al cocinar alimentos en un ahumador.\nExplorador: comienzas el juego con 9 mapas vacíos, una brújula y un reloj; no te cansas al correr.\nGranjero: la harina de huesos es el doble de efectiva cuando la usas; a veces los cultivos dan el doble de botín cuando los cosechas.\nLeñador: fabricar tablones a partir de troncos te da dos tablones adicionales; cortas árboles enteros de una vez cuando usas un hacha.\nComerciante: cuando comercias con los aldeanos, sus intercambios no se agotan; los comerciantes ambulantes te ofrecen ofertas especiales.\nMinero: rompes todos los bloques de piedra más rápido; no te cansas de minar bloques.\nTonto: no eres particularmente bueno en nada. :)\nGanadero: cuando crías animales, a veces tienen la posibilidad de producir gemelos; los animales que matas tienen la posibilidad de soltar el doble de botín.\nPícaro: tu nombre nunca es visible a través de las paredes; entras en sigilo (haciendo menos ruido y causando el doble de daño por la espalda) después de moverte sigilosamente durante 10 segundos.\nGuerrero: infliges +1 de daño de ataque con cada arma; te ralentizas menos cuando usas un escudo."
-          ]
-        },
-        {
-          "id": "chest-cavity-beyond",
-          "name": "Chest Cavity Beyond",
-          "images": [
-            "https://i.ytimg.com/vi/9QFp7WpC838/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6L3FrUtRKEInrtftWadeELQNq2Q",
-            "https://cdn.modrinth.com/data/cached_images/c9ff1f33a9388e153ff5427bc4c4d93ea2347a61.webp",
-            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2021/04/Enderman-Chest-Cavity-mod.jpg?q=50&fit=crop&w=825&dpr=1.5"
-          ],
-          "paragraphs": [
-            "Chest Cavity Beyond añade un sistema de órganos de la cavidad torácica al juego.",
-            "Chest Cavity Beyond añade un sistema de órganos de cavidad torácica al juego, con una gran variedad de tipos de órganos y órganos de criaturas. Usa el Abrecofres para extraer órganos de diversas criaturas y reemplazar los tuyos para obtener habilidades únicas.",
-            "Sistema de órganos rico\nÓrganos básicos : corazón, columna vertebral, pulmones, estómago, intestinos, riñones, bazo, hígado, apéndice, costillas, músculos.\nÓrganos de animales : diversas variantes de órganos para animales terrestres y animales pequeños.\nÓrganos acuáticos : branquias, músculos, espinas, intestinos, etc., que proporcionan capacidad de respiración bajo el agua.\nÓrganos ignífugos : serie de órganos Blaze, que proporciona resistencia al fuego.\nÓrganos de Ender - Serie de órganos de Enderman, que mejoran las habilidades de teletransportación.\nMúsculos de movimiento : músculos fuertes, rápidos y ágiles para mejorar la movilidad.\nÓrganos digestivos especiales : estómago de carnívoro, estómago de herbívoro, rumen de herbívoro."
-          ],
-          "status": "REVISIÓN"
-        }
-      ]
-    },
-    {
-      "name": "Equipamiento y Utilidades",
-      "icon": "🎒",
-      "mods": [
-        {
-          "id": "artifacts",
-          "name": "Artifacts",
-          "images": [
-            "https://placehold.co/800x450/0d001a/c084fc?text=Artifacts"
-          ],
-          "paragraphs": [
-            "Añade numerosos objetos especiales y artefactos con habilidades únicas que se encuentran en el mundo. Cada hallazgo es una sorpresa."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "dynamic-caveman",
-          "name": "Dynamic Caveman",
-          "images": [
-            "https://placehold.co/800x450/0d0d00/eab308?text=Dynamic+Caveman"
-          ],
-          "paragraphs": [
-            "Sistema de progresión de habilidades para la exploración de cuevas. Mejora tus capacidades de minería con el tiempo."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "backported-spears",
-          "name": "Backported Spears",
-          "images": [
-            "https://placehold.co/800x450/0a0d00/a3e635?text=Backported+Spears"
-          ],
-          "paragraphs": [
-            "Añade lanzas al juego, trayendo de vuelta un arma clásica con físicas de lanzamiento únicas."
-          ]
-        },
-        {
-          "id": "just-hammers",
-          "name": "Just Hammers",
-          "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Just+Hammers"
-          ],
-          "paragraphs": [
-            "Añade martillos que minan en área 3x3, haciendo la minería en masa mucho más eficiente."
-          ]
-        },
-        {
-          "id": "mob-lassos",
-          "name": "Mob Lassos",
-          "images": [
-            "https://placehold.co/800x450/0d1400/84cc16?text=Mob+Lassos"
-          ],
-          "paragraphs": [
-            "Permite capturar criaturas con un lazo para transportarlas y soltarlas donde quieras. Ideal para crear granjas de mobs."
-          ]
-        },
-        {
-          "id": "grappling-hooks",
-          "name": "Yori3o's Grappling Hooks",
-          "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Grappling+Hooks"
-          ],
-          "paragraphs": [
-            "Garfios de distintos materiales para escalar paredes y columpiarse entre edificios. Exploración vertical al siguiente nivel."
-          ]
-        },
-        {
-          "id": "traveler-toolbelt",
-          "name": "Traveler Toolbelt",
-          "images": [
-            "https://placehold.co/800x450/0d0800/fbbf24?text=Traveler+Toolbelt"
-          ],
-          "paragraphs": [
-            "Añade un cinturón de herramientas con slots rápidos de acceso para tus utensilios favoritos sin llenar el inventario."
-          ]
-        },
-        {
-          "id": "travelers-backpack",
-          "name": "Traveler's Backpack",
-          "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Traveler%27s+Backpack"
-          ],
-          "paragraphs": [
-            "Mochilas personalizables con almacenamiento extra, tanques de fluidos y herramientas integradas. El compañero perfecto de exploración."
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Transporte",
-      "icon": "🐉",
-      "mods": [
-        {
-          "id": "dragon-mounts",
-          "name": "Dragon Mounts Remastered",
-          "images": [
-            "https://i.ytimg.com/vi/9M1fsWKHWgg/mqdefault.jpg",
-            "https://media.forgecdn.net/attachments/820/393/java_ra721d9cww.png",
-            "https://i.imgur.com/m7nFsOa.png",
-            "https://media.forgecdn.net/attachments/820/394/java_qodmujg1sl.png"
-          ],
-          "paragraphs": [
-            "Dragon Mounts Remastered es la última versión que busca recuperar la esencia del querido Dragon Mounts Mod original.",
-            "🐉 Modelos y animaciones de dragones actualizados\nDMR introduce dragones con modelos y animaciones mejorados, ofreciendo una apariencia pulida a la vez que mantienen la coherencia con el estilo de Minecraft.\n\n✨ Invoca a tu dragón con un silbido\nCrea un silbato y vincúlalo a un dragón específico. Esto te permitirá invocar a ese dragón a tu ubicación, incluso a través de dimensiones, lo que te dará mayor control sobre tus compañeros.\n\n🛠️ Comandos de comportamiento del dragón\nControla el comportamiento de tu dragón:\n\nSiéntese para mantenerlo inmóvil.\nTe siguen por tierra o por aire.\nDéjelo moverse libremente dentro de un radio determinado.\n📦 Inventario de dragones\nLos dragones pueden transportar cofres, lo que los convierte en compañeros útiles para viajes largos cuando se necesita espacio de almacenamiento adicional.\n\n🧬 Cría de dragones e híbridos\nPuedes criar dragones para crear híbridos que combinen rasgos de diferentes tipos. Experimenta para descubrir combinaciones y habilidades únicas.\n\n🌍 Cría basada en biomas\nCiertos dragones requieren biomas específicos para reproducirse, lo que fomenta la exploración y añade un nivel de desafío a la hora de desbloquear nuevos tipos.\n\n🔧 Tipos de dragones personalizados\nGracias a la compatibilidad con paquetes de datos, puedes crear tus propios tipos de dragones para personalizar aún más la experiencia.\n\n🏔️ Nuevas variantes de dragones\nDMR añade una selección de nuevos dragones inspirados en las actualizaciones modernas de Minecraft, ofreciendo nuevas opciones para descubrir y domesticar."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "tempad",
-          "name": "Tempad",
-          "images": [
-            "https://www.minecraft-guides.com/wp-content/uploads/2026/04/Tempad.png",
-            "https://cdn.modrinth.com/data/cached_images/664b01058c20fdc19d4fef353f986b90249ff89e.png",
-            "https://preview.redd.it/minecraft-tempad-mod-gui-v0-1o7p9gaqta0d1.png?width=1080&crop=smart&auto=webp&s=cb69a8658ced7cb46d533c267851280b6be53d4e",
-            "https://www.9minecraft.net/wp-content/uploads/2025/03/Tempad-With-Shaders-Mod-Screenshots-8.jpg"
-          ],
-          "paragraphs": [
-            "¡Crea un portal a cualquier lugar desde cualquier lugar!",
-            "Inspirado en la serie Loki de Marvel, el TemPad permite abrir portales a ubicaciones guardadas para teletransportarse al instante."
-          ]
         },
         {
           "id": "ghast-update",
@@ -700,30 +419,12 @@
           "paragraphs": [
             "Rework completo de los Ghasts con nuevas variantes, comportamientos y la posibilidad de domesticar algunos tipos."
           ]
-        },
-        {
-          "id": "wings-of-fire",
-          "name": "Wings Of Fire!",
-          "images": [
-            "https://i.imgur.com/BhRStvf.png",
-            "https://cdn.modrinth.com/data/cached_images/97341ce45b01f4668bafeb1b957c3d2f46476442.png",
-            "https://i.imgur.com/soA44nB.png",
-            "https://i.imgur.com/DJVH3qv.png"
-          ],
-          "paragraphs": [
-            "¿Alguna vez has querido montar un fénix? ¡Ahora puedes! Encuentra 6 huevos de fénix diferentes en tu mundo y dales un buen trato para que nazca tu nueva montura.",
-            "WINGS OF FIRE es un mod que añade SEIS razas diferentes de fénix a Minecraft. ¡Encuentra huevos por todo tu mundo y eclosiona para crear nuevas y poderosas monturas!",
-            "Encuentra huevos de fénix petrificados en diferentes estructuras de tu mundo y caliéntalos dentro del nuevo bloque CUNA INFERNAL . ¡Después de 15 minutos, tu huevo de fénix estará caliente!\n\n(Usar crema de magma sobre una base de fuego sin encender permite encenderla con fines decorativos).",
-            "¡ Al combinar tus Huevos de Fénix recién calentados con las LINTERNAS TEMPLADAS , un nuevo objeto, se vincularán la linterna y el huevo, dándote el objeto capaz de invocar al legendario fénix!",
-            "¡Haz clic derecho en tu linterna vinculada para invocar a tu Fénix! Una vez invocado, comenzarás a montar automáticamente en el Fénix, y cuando te bajes, ¡ PUM! (¡Cuidado con el daño por caída!)"
-          ],
-          "status": "REVISIÓN"
         }
       ]
     },
     {
-      "name": "Industrial y Automatización",
-      "icon": "⚙️",
+      "name": "TecnologÃ­a y Almacenaje",
+      "icon": "âš™ï¸",
       "mods": [
         {
           "id": "create",
@@ -774,12 +475,32 @@
             "Contiene 3 \"secciones\" de contenido:\n\nLa simulación es el núcleo del proyecto. Proporciona ensamblaje, componentes de redstone y todas las herramientas necesarias para interactuar con mecanismos simulados.\nLa aeronáutica permite la creación de todo tipo de artilugios voladores con aire caliente, hélices y rocas flotantes mágicas.\nEl motor Offroad te permite utilizar casi cualquier cosa que parezca una rueda para fabricar vehículos terrestres."
           ],
           "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "security-craft",
+          "name": "Security Craft",
+          "images": [
+            "https://placehold.co/800x450/000d1a/38bdf8?text=Security+Craft"
+          ],
+          "paragraphs": [
+            "Mod de seguridad que añade cámaras, láseres, minas, teclados y todo tipo de sistemas de protección para tus bases."
+          ]
+        },
+        {
+          "id": "iron-chest",
+          "name": "Iron Chest",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Iron+Chest"
+          ],
+          "paragraphs": [
+            "Añade cofres de distintos materiales (hierro, oro, diamante, cristal...) con mayor capacidad de almacenamiento."
+          ]
         }
       ]
     },
     {
       "name": "Magia",
-      "icon": "✨",
+      "icon": "ðŸ”®",
       "mods": [
         {
           "id": "pastel",
@@ -799,8 +520,119 @@
       ]
     },
     {
-      "name": "Construcción y Decoración",
-      "icon": "🏗️",
+      "name": "Equipamiento y Armas",
+      "icon": "ðŸ›¡ï¸",
+      "mods": [
+        {
+          "id": "artifacts",
+          "name": "Artifacts",
+          "images": [
+            "https://placehold.co/800x450/0d001a/c084fc?text=Artifacts"
+          ],
+          "paragraphs": [
+            "Añade numerosos objetos especiales y artefactos con habilidades únicas que se encuentran en el mundo. Cada hallazgo es una sorpresa."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "dynamic-caveman",
+          "name": "Dynamic Caveman",
+          "images": [
+            "https://placehold.co/800x450/0d0d00/eab308?text=Dynamic+Caveman"
+          ],
+          "paragraphs": [
+            "Sistema de progresión de habilidades para la exploración de cuevas. Mejora tus capacidades de minería con el tiempo."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "backported-spears",
+          "name": "Backported Spears",
+          "images": [
+            "https://placehold.co/800x450/0a0d00/a3e635?text=Backported+Spears"
+          ],
+          "paragraphs": [
+            "Añade lanzas al juego, trayendo de vuelta un arma clásica con físicas de lanzamiento únicas."
+          ]
+        },
+        {
+          "id": "just-hammers",
+          "name": "Just Hammers",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Just+Hammers"
+          ],
+          "paragraphs": [
+            "Añade martillos que minan en área 3x3, haciendo la minería en masa mucho más eficiente."
+          ]
+        },
+        {
+          "id": "grappling-hooks",
+          "name": "Yori3o's Grappling Hooks",
+          "images": [
+            "https://placehold.co/800x450/001a0d/4ade80?text=Grappling+Hooks"
+          ],
+          "paragraphs": [
+            "Garfios de distintos materiales para escalar paredes y columpiarse entre edificios. Exploración vertical al siguiente nivel."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transporte de Jugadores",
+      "icon": "ðŸš€",
+      "mods": [
+        {
+          "id": "dragon-mounts",
+          "name": "Dragon Mounts Remastered",
+          "images": [
+            "https://i.ytimg.com/vi/9M1fsWKHWgg/mqdefault.jpg",
+            "https://media.forgecdn.net/attachments/820/393/java_ra721d9cww.png",
+            "https://i.imgur.com/m7nFsOa.png",
+            "https://media.forgecdn.net/attachments/820/394/java_qodmujg1sl.png"
+          ],
+          "paragraphs": [
+            "Dragon Mounts Remastered es la última versión que busca recuperar la esencia del querido Dragon Mounts Mod original.",
+            "🐉 Modelos y animaciones de dragones actualizados\nDMR introduce dragones con modelos y animaciones mejorados, ofreciendo una apariencia pulida a la vez que mantienen la coherencia con el estilo de Minecraft.\n\n✨ Invoca a tu dragón con un silbido\nCrea un silbato y vincúlalo a un dragón específico. Esto te permitirá invocar a ese dragón a tu ubicación, incluso a través de dimensiones, lo que te dará mayor control sobre tus compañeros.\n\n🛠️ Comandos de comportamiento del dragón\nControla el comportamiento de tu dragón:\n\nSiéntese para mantenerlo inmóvil.\nTe siguen por tierra o por aire.\nDéjelo moverse libremente dentro de un radio determinado.\n📦 Inventario de dragones\nLos dragones pueden transportar cofres, lo que los convierte en compañeros útiles para viajes largos cuando se necesita espacio de almacenamiento adicional.\n\n🧬 Cría de dragones e híbridos\nPuedes criar dragones para crear híbridos que combinen rasgos de diferentes tipos. Experimenta para descubrir combinaciones y habilidades únicas.\n\n🌍 Cría basada en biomas\nCiertos dragones requieren biomas específicos para reproducirse, lo que fomenta la exploración y añade un nivel de desafío a la hora de desbloquear nuevos tipos.\n\n🔧 Tipos de dragones personalizados\nGracias a la compatibilidad con paquetes de datos, puedes crear tus propios tipos de dragones para personalizar aún más la experiencia.\n\n🏔️ Nuevas variantes de dragones\nDMR añade una selección de nuevos dragones inspirados en las actualizaciones modernas de Minecraft, ofreciendo nuevas opciones para descubrir y domesticar."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "wings-of-fire",
+          "name": "Wings Of Fire!",
+          "images": [
+            "https://i.imgur.com/BhRStvf.png",
+            "https://cdn.modrinth.com/data/cached_images/97341ce45b01f4668bafeb1b957c3d2f46476442.png",
+            "https://i.imgur.com/soA44nB.png",
+            "https://i.imgur.com/DJVH3qv.png"
+          ],
+          "paragraphs": [
+            "¿Alguna vez has querido montar un fénix? ¡Ahora puedes! Encuentra 6 huevos de fénix diferentes en tu mundo y dales un buen trato para que nazca tu nueva montura.",
+            "WINGS OF FIRE es un mod que añade SEIS razas diferentes de fénix a Minecraft. ¡Encuentra huevos por todo tu mundo y eclosiona para crear nuevas y poderosas monturas!",
+            "Encuentra huevos de fénix petrificados en diferentes estructuras de tu mundo y caliéntalos dentro del nuevo bloque CUNA INFERNAL . ¡Después de 15 minutos, tu huevo de fénix estará caliente!\n\n(Usar crema de magma sobre una base de fuego sin encender permite encenderla con fines decorativos).",
+            "¡ Al combinar tus Huevos de Fénix recién calentados con las LINTERNAS TEMPLADAS , un nuevo objeto, se vincularán la linterna y el huevo, dándote el objeto capaz de invocar al legendario fénix!",
+            "¡Haz clic derecho en tu linterna vinculada para invocar a tu Fénix! Una vez invocado, comenzarás a montar automáticamente en el Fénix, y cuando te bajes, ¡ PUM! (¡Cuidado con el daño por caída!)"
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "tempad",
+          "name": "Tempad",
+          "images": [
+            "https://www.minecraft-guides.com/wp-content/uploads/2026/04/Tempad.png",
+            "https://cdn.modrinth.com/data/cached_images/664b01058c20fdc19d4fef353f986b90249ff89e.png",
+            "https://preview.redd.it/minecraft-tempad-mod-gui-v0-1o7p9gaqta0d1.png?width=1080&crop=smart&auto=webp&s=cb69a8658ced7cb46d533c267851280b6be53d4e",
+            "https://www.9minecraft.net/wp-content/uploads/2025/03/Tempad-With-Shaders-Mod-Screenshots-8.jpg"
+          ],
+          "paragraphs": [
+            "¡Crea un portal a cualquier lugar desde cualquier lugar!",
+            "Inspirado en la serie Loki de Marvel, el TemPad permite abrir portales a ubicaciones guardadas para teletransportarse al instante."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DecoraciÃ³n y CosmÃ©ticos",
+      "icon": "ðŸŽ¨",
       "mods": [
         {
           "id": "mrcrayfish-furniture",
@@ -887,139 +719,7 @@
           "paragraphs": [
             "Addon de Supplementaries que añade aún más bloques y objetos decorativos integrados con el estilo del mod principal."
           ]
-        }
-      ]
-    },
-    {
-      "name": "Seguridad y Funcionalidad",
-      "icon": "🔐",
-      "mods": [
-        {
-          "id": "iron-chest",
-          "name": "Iron Chest",
-          "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Iron+Chest"
-          ],
-          "paragraphs": [
-            "Añade cofres de distintos materiales (hierro, oro, diamante, cristal...) con mayor capacidad de almacenamiento."
-          ]
         },
-        {
-          "id": "security-craft",
-          "name": "Security Craft",
-          "images": [
-            "https://placehold.co/800x450/000d1a/38bdf8?text=Security+Craft"
-          ],
-          "paragraphs": [
-            "Mod de seguridad que añade cámaras, láseres, minas, teclados y todo tipo de sistemas de protección para tus bases."
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Family Friendly",
-      "icon": "🍓",
-      "mods": [
-        {
-          "id": "starcatcher",
-          "name": "Starcatcher",
-          "images": [
-            "https://i.ytimg.com/vi/jRNG5cYSqpg/maxresdefault.jpg",
-            "https://media.forgecdn.net/attachments/1344/608/minigame-png.png",
-            "https://media.forgecdn.net/attachments/1397/874/b94b8c911433e0a25eafd0fcecad6c6e4a1fea2e-png.png",
-            "https://media.forgecdn.net/attachments/1643/456/description_4bbc8f21-1912-44e5-a865-4ec0388b4548.png",
-            "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
-          ],
-          "paragraphs": [
-            "Un mod que renueva por completo el sistema de pesca, con más de 100 peces y un montón de contenido nuevo relacionado con la pesca.",
-            "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
-            "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "minecraft-comes-alive",
-          "name": "MCA Reborn",
-          "images": [
-            "https://i.ytimg.com/vi/71G3y16so6s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC6oqqL-oSDKZAKcoyqWBiwp9vAQg",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsJ0cYGQ7y3HdMrQaI3mz5WXPByoU1F5jWrg&s",
-            "https://media.forgecdn.net/attachments/22/106/mca-2.png"
-          ],
-          "paragraphs": [
-            "¡Ya no hay gente calamar, ahora son humanos y se puede interactuar con ellos!",
-            "¡Hay muchas opciones para interactuar con los aldeanos, como enviar regalos, charlar y mucho más! Puedes entablar relaciones interactuando con los aldeanos, cada uno con su propia personalidad y estado de ánimo.",
-            "¡Una vez que tengas suficientes corazones, podrás casarte con ellos! Después del matrimonio, puedes tener hijos con los que tendrás que hacer tareas como trabajar en la granja, talar árboles, ¡y mucho más! Sus hijos crecerán y vivirán sus propias vidas.",
-            "Puedes casarte con otros jugadores en un servidor LAN o SMP. ¡Ayuda a expandir una aldea y aumenta tu rango, hasta convertirte finalmente en rey!"
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "farmers-delight",
-          "name": "Farmer's Delight",
-          "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Farmer%27s+Delight"
-          ],
-          "paragraphs": [
-            "Expansión de la agricultura y cocina con decenas de nuevos cultivos, recetas y utensilios de cocina. La experiencia gastronómica definitiva."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "fd-brewin-chewin",
-          "name": "Farmer's Delight: Brewin' And Chewin'",
-          "images": [
-            "https://placehold.co/800x450/1a0a00/f59e0b?text=Brewin+%26+Chewin"
-          ],
-          "paragraphs": [
-            "Addon de Farmer's Delight que añade cervecería, quesos y recetas fermentadas especiales."
-          ]
-        },
-        {
-          "id": "fd-starcatcher",
-          "name": "Farmer's Delight: Starcatcher",
-          "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=FD+Starcatcher"
-          ],
-          "paragraphs": [
-            "Compatibilidad entre Farmer's Delight y Starcatcher. Nuevas recetas que combinan ingredientes de ambos mods."
-          ]
-        },
-        {
-          "id": "fd-create",
-          "name": "Farmer's Delight: Create",
-          "images": [
-            "https://placehold.co/800x450/0d0018/c084fc?text=FD+Create"
-          ],
-          "paragraphs": [
-            "Integración entre Farmer's Delight y Create. Permite automatizar la cocina y la agricultura con maquinaria rotacional."
-          ]
-        },
-        {
-          "id": "fd-end",
-          "name": "Farmer's Delight: End",
-          "images": [
-            "https://placehold.co/800x450/000d1a/818cf8?text=FD+End"
-          ],
-          "paragraphs": [
-            "Addon de Farmer's Delight con cultivos y recetas únicas del End. Ingredientes exóticos de la dimensión final."
-          ]
-        },
-        {
-          "id": "fd-nether",
-          "name": "Farmer's Delight: Nether",
-          "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=FD+Nether"
-          ],
-          "paragraphs": [
-            "Addon de Farmer's Delight con cultivos y recetas del Nether. Cocina con ingredientes de las dimensiones infernales."
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Resource Packs",
-      "icon": "🎨",
-      "mods": [
         {
           "id": "alternative-rain",
           "name": "Alternative Rain Sounds",
@@ -1104,6 +804,276 @@
           ],
           "paragraphs": [
             "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Comida y Cultivos",
+      "icon": "ðŸŒ¾",
+      "mods": [
+        {
+          "id": "farmers-delight",
+          "name": "Farmer's Delight",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Farmer%27s+Delight"
+          ],
+          "paragraphs": [
+            "Expansión de la agricultura y cocina con decenas de nuevos cultivos, recetas y utensilios de cocina. La experiencia gastronómica definitiva."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "fd-brewin-chewin",
+          "name": "Farmer's Delight: Brewin' And Chewin'",
+          "images": [
+            "https://placehold.co/800x450/1a0a00/f59e0b?text=Brewin+%26+Chewin"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight que añade cervecería, quesos y recetas fermentadas especiales."
+          ]
+        },
+        {
+          "id": "fd-starcatcher",
+          "name": "Farmer's Delight: Starcatcher",
+          "images": [
+            "https://placehold.co/800x450/00001a/6366f1?text=FD+Starcatcher"
+          ],
+          "paragraphs": [
+            "Compatibilidad entre Farmer's Delight y Starcatcher. Nuevas recetas que combinan ingredientes de ambos mods."
+          ]
+        },
+        {
+          "id": "fd-create",
+          "name": "Farmer's Delight: Create",
+          "images": [
+            "https://placehold.co/800x450/0d0018/c084fc?text=FD+Create"
+          ],
+          "paragraphs": [
+            "Integración entre Farmer's Delight y Create. Permite automatizar la cocina y la agricultura con maquinaria rotacional."
+          ]
+        },
+        {
+          "id": "fd-end",
+          "name": "Farmer's Delight: End",
+          "images": [
+            "https://placehold.co/800x450/000d1a/818cf8?text=FD+End"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight con cultivos y recetas únicas del End. Ingredientes exóticos de la dimensión final."
+          ]
+        },
+        {
+          "id": "fd-nether",
+          "name": "Farmer's Delight: Nether",
+          "images": [
+            "https://placehold.co/800x450/1a0500/ef4444?text=FD+Nether"
+          ],
+          "paragraphs": [
+            "Addon de Farmer's Delight con cultivos y recetas del Nether. Cocina con ingredientes de las dimensiones infernales."
+          ]
+        },
+        {
+          "id": "spice-of-life",
+          "name": "Spice of Life: Carrot Edition",
+          "images": [
+            "https://media.forgecdn.net/avatars/thumbnails/360/935/64/64/637525655151502872.png",
+            "https://media.forgecdn.net/attachments/248/616/2019-03-14_01.png",
+            "https://media.forgecdn.net/attachments/248/619/2019-03-14_01.png",
+            "https://media.forgecdn.net/attachments/248/618/2019-03-14_01.png"
+          ],
+          "paragraphs": [
+            "¡Un mod basado en la comida que recompensa al jugador en lugar de castigarlo por descubrir nuevos alimentos!",
+            "Este mod lleva la cuenta de cuántos alimentos únicos ha comido un jugador. Al alcanzar ciertas cantidades de alimentos únicos, gana corazones permanentemente, ¡aumentando su salud máxima! Para maximizar sus barras de HP, los jugadores tendrán que completar misiones para conseguir y elaborar alimentos exóticos."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "starcatcher",
+          "name": "Starcatcher",
+          "images": [
+            "https://i.ytimg.com/vi/jRNG5cYSqpg/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1344/608/minigame-png.png",
+            "https://media.forgecdn.net/attachments/1397/874/b94b8c911433e0a25eafd0fcecad6c6e4a1fea2e-png.png",
+            "https://media.forgecdn.net/attachments/1643/456/description_4bbc8f21-1912-44e5-a865-4ec0388b4548.png",
+            "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
+          ],
+          "paragraphs": [
+            "Un mod que renueva por completo el sistema de pesca, con más de 100 peces y un montón de contenido nuevo relacionado con la pesca.",
+            "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
+            "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        }
+      ]
+    },
+    {
+      "name": "Utilidades y Calidad de Vida",
+      "icon": "ðŸ”§",
+      "mods": [
+        {
+          "id": "lootr",
+          "name": "Lootr",
+          "images": [
+            "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
+            "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
+          ],
+          "paragraphs": [
+            "¡Un mod que garantiza que nadie se quede sin botín! Todos los cofres de botín son instanciados por jugador y visualmente únicos.",
+            "Lootr transforma la forma en que experimentas el botín en Minecraft. Con este mod instalado, cada jugador obtiene su propio botín individual de cofres, barriles, cajas de shulker y vagonetas. ¡Se acabaron las carreras para saquear estructuras o encontrar contenedores llenos de la basura de otro jugador!\n\nBotín personalizado: Cada jugador ve un botín único, generado específicamente para él.\nCasi universal: compatible con casi todas las funciones y estructuras, tanto del juego base como de las modificadas.\nFiel a la versión original: Utiliza exactamente el mismo código de generación de botín que la versión original.\nCompatible con servidores : Reduce el tamaño de los servidores al eliminar la necesidad de explorar constantemente nuevas estructuras."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "player-revive",
+          "name": "Player Revive",
+          "images": [
+            "https://placehold.co/800x450/001a0d/4ade80?text=Player+Revive"
+          ],
+          "paragraphs": [
+            "Al morir, los jugadores entran en estado de agonía durante unos segundos. Sus compañeros pueden revivirse antes de morir definitivamente."
+          ]
+        },
+        {
+          "id": "simple-corpse",
+          "name": "Simple Corpse",
+          "images": [
+            "https://placehold.co/800x450/0d000d/d946ef?text=Simple+Corpse"
+          ],
+          "paragraphs": [
+            "Al morir, tu inventario queda guardado en un cuerpo en el lugar de la muerte. Protege tus objetos durante un tiempo limitado."
+          ]
+        },
+        {
+          "id": "easy-anvils",
+          "name": "Easy Anvils",
+          "images": [
+            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Easy+Anvils"
+          ],
+          "paragraphs": [
+            "Elimina el límite de coste de experiencia en los yunques y permite reparar objetos sin el fastidioso 'Too Expensive!'."
+          ]
+        },
+        {
+          "id": "natures-compass",
+          "name": "Nature's Compass",
+          "images": [
+            "https://placehold.co/800x450/0a1a00/86efac?text=Nature%27s+Compass"
+          ],
+          "paragraphs": [
+            "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
+          ]
+        },
+        {
+          "id": "explorers-compass",
+          "name": "Explorer's Compass",
+          "images": [
+            "https://placehold.co/800x450/001a08/4ade80?text=Explorer%27s+Compass"
+          ],
+          "paragraphs": [
+            "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
+          ]
+        },
+        {
+          "id": "traveler-toolbelt",
+          "name": "Traveler Toolbelt",
+          "images": [
+            "https://placehold.co/800x450/0d0800/fbbf24?text=Traveler+Toolbelt"
+          ],
+          "paragraphs": [
+            "Añade un cinturón de herramientas con slots rápidos de acceso para tus utensilios favoritos sin llenar el inventario."
+          ]
+        },
+        {
+          "id": "travelers-backpack",
+          "name": "Traveler's Backpack",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Traveler%27s+Backpack"
+          ],
+          "paragraphs": [
+            "Mochilas personalizables con almacenamiento extra, tanques de fluidos y herramientas integradas. El compañero perfecto de exploración."
+          ]
+        },
+        {
+          "id": "mob-lassos",
+          "name": "Mob Lassos",
+          "images": [
+            "https://placehold.co/800x450/0d1400/84cc16?text=Mob+Lassos"
+          ],
+          "paragraphs": [
+            "Permite capturar criaturas con un lazo para transportarlas y soltarlas donde quieras. Ideal para crear granjas de mobs."
+          ]
+        },
+        {
+          "id": "ht-treechop",
+          "name": "HT's TreeChop",
+          "images": [
+            "https://media.forgecdn.net/attachments/1300/652/mcpedl-png.png",
+            "https://i.ytimg.com/vi/NtZEakVAb6A/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/_4V1-_rNfoM/maxresdefault.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGWk0QnuONgVrZBBRy0rXnfcHqu2uPLmmeQ&s"
+          ],
+          "paragraphs": [
+            "Corta los árboles poco a poco, en lugar de hacerlo bloque a bloque.",
+            "Permite talar árboles rompiendo repetidamente un solo bloque. El árbol completo solo se romperá después de un cierto número de golpes, y los árboles más grandes requieren más golpes. Inspirado en mods como Treecapitator.",
+            "Cortar árboles no requiere un hacha, pero sin ella llevará bastante tiempo. Cortar diferentes trozos del mismo árbol contribuirá a derribarlo. Los jugadores pueden colaborar para talar esos grandes árboles. Los árboles más grandes requieren más talas en total, pero menos talas por bloque*. Mantén pulsado el botón \"sigilo\" al romper un bloque de tronco para romperlo normalmente.",
+            "Se puede modificar para facilitar el talado de árboles"
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "burnt-fire",
+          "name": "Burnt: Better Vanilla Fire",
+          "images": [
+            "https://media.forgecdn.net/attachments/840/661/title.jpg",
+            "https://media.forgecdn.net/attachments/966/159/lonelytree.jpg",
+            "https://media.forgecdn.net/attachments/966/165/mansionfire.jpg",
+            "https://media.forgecdn.net/attachments/966/166/mansionembers.jpg"
+          ],
+          "paragraphs": [
+            "Mod para mejorar el fuego en el juego base. Enciéndelo, quémalo. Propagación de fuego realista y bloques quemados.",
+            "Esto es QUEMADO. Un mod que mejora el fuego en Vanilla: si lo enciendes, arderá... No desaparecerá... ARDERÁ. A cambio, las estructuras de madera y los árboles permanecen, quemados y retorcidos, y con recursos que puedes usar.\n\nPor fin, un buen uso para el pedernal y el acero. Prende fuego a un tronco, una estructura de madera, un pueblo, incluso a la hierba, y se propaga rápidamente. El fuego se extiende de forma realista y el espectáculo es el sueño de cualquier pirómano."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "repeatable-vaults",
+          "name": "Repeatable Trial Vaults",
+          "images": [
+            "https://placehold.co/800x450/000d1a/60a5fa?text=Repeatable+Vaults"
+          ],
+          "paragraphs": [
+            "Permite que los Trial Vaults del juego base sean repetibles. Sigue obteniendo recompensas de las cámaras de prueba."
+          ]
+        },
+        {
+          "id": "villager-names",
+          "name": "Villager Names",
+          "images": [
+            "https://placehold.co/800x450/001a08/22c55e?text=Villager+Names"
+          ],
+          "paragraphs": [
+            "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
+          ]
+        },
+        {
+          "id": "piglin-names",
+          "name": "Piglin Names",
+          "images": [
+            "https://placehold.co/800x450/1a0800/f97316?text=Piglin+Names"
+          ],
+          "paragraphs": [
+            "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
+          ]
+        },
+        {
+          "id": "more-dragon-eggs",
+          "name": "More Dragon Eggs",
+          "images": [
+            "https://placehold.co/800x450/00001a/6366f1?text=More+Dragon+Eggs"
+          ],
+          "paragraphs": [
+            "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
           ]
         }
       ]

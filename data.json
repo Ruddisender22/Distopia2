@@ -24,7 +24,7 @@
           "id": "create-addictives",
           "name": "Create: Addictives",
           "images": [
-            "https://springhillrecovery.com/wp-content/uploads/What-Is-Blue-Meth-Is-It-Real-.jpg.webp",
+            "blob:https://gemini.google.com/e5cc225f-0048-407a-95d6-f6ef2abd8b19",
             "https://media.forgecdn.net/attachments/1571/29/1000711914-jpg.jpg",
             "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg",
             "https://media.forgecdn.net/attachments/1571/24/1000711916-jpg.jpg",
@@ -92,7 +92,6 @@
           ],
           "paragraphs": [
             "Primal es un mod para Forge/NeoForge que mejora el entorno salvaje de Minecraft, ¡haciendo que la supervivencia sea más inmersiva y emocionante!.",
-
             "Se centra en añadir nuevos animales con un estilo similar al del juego original, con mecánicas únicas, ¡además de nuevos y emocionantes bloques y objetos!\n\nTambién mejora algunos aspectos básicos del juego, ¡así que prepárate para ver entidades del juego base con nuevos modelos!"
           ],
           "status": "CONFIRMADO"
@@ -109,7 +108,6 @@
           ],
           "paragraphs": [
             "Una revisión integral del mundo del juego, sin concesiones, que mejora la generación de mundos en todos los biomas y entornos.",
-
             "No Man's Land es una modificación compatible con la versión original del juego que mejora tu mundo principal, optimizando los biomas existentes y añadiendo otros nuevos, transformando el mundo con gran atención al detalle en cada uno de sus aspectos.\n\nDesde las cumbres más altas de las montañas hasta las fosas oceánicas más profundas, No Man's Land busca ofrecer un entorno con la misma calidad y atención al detalle. Este mod, en esencia, mejora la experiencia de juego y, por ello, todas sus características están diseñadas para ser altamente interactivas y permitir una gran libertad creativa.\n\nTodo en la creación está bendecido por la belleza, y tú eres parte inseparable de ella. Así que explora y ama como este mundo te ama."
           ],
           "status": "CONFIRMADO"
@@ -415,7 +413,6 @@
           ],
           "paragraphs": [
             "Un mod que renueva por completo el sistema de pesca, con más de 100 peces y un montón de contenido nuevo relacionado con la pesca.",
-
             "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
             "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
           ],

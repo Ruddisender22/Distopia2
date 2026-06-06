@@ -194,20 +194,34 @@
           "id": "better-villages",
           "name": "Better Villages",
           "images": [
-            "https://placehold.co/800x450/0a1a00/86efac?text=Better+Villages"
+            "https://media.forgecdn.net/attachments/645/628/savanna_3.png",
+            "https://media.forgecdn.net/attachments/645/624/savanna_1.png",
+            "https://media.forgecdn.net/attachments/466/401/snow_1.png",
+            "https://media.forgecdn.net/attachments/458/251/2.png",
+            "https://media.forgecdn.net/attachments/458/247/0.png",
+            "https://media.forgecdn.net/attachments/458/136/ethandstrue.png",
+            "https://media.forgecdn.net/attachments/648/629/example_bounti.png",
+            "https://media.forgecdn.net/attachments/645/626/savanna_2.png"
           ],
           "paragraphs": [
-            "Rework completo de las aldeas con diseños mucho más elaborados, nuevas variantes por bioma y mejoras de generación."
+            "Este mod mejora las aldeas de Minecraft optimizando la estructura existente, lo que las hace sentir más vivas y atractivas para explorar.",
+            "Better Villages mejora la apariencia y el diseño general de las aldeas, añadiendo nuevos diseños de casas. El mod busca crear una experiencia más inmersiva y realista para los jugadores.\n\nBetter Villages es un excelente mod para quienes disfrutan explorando e interactuando con las aldeas en Minecraft, y ofrece nuevas opciones de juego y desafíos para quienes buscan añadir variedad a su experiencia. Si quieres mejorar tu experiencia de juego en Minecraft, ¡Better Villages es sin duda un mod que vale la pena probar!"
           ]
         },
         {
           "id": "dungeons-nether",
           "name": "Dungeons Dimensions: Nether",
           "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=Dungeons+Nether"
+            "https://media.forgecdn.net/attachments/1545/158/518a27c9817ad4976a4d51b0eda2e2a92dab7371-png.png",
+            "https://media.forgecdn.net/attachments/1545/145/08ff5807732cce17d1a779556cad1698ff9241ef-png.png",
+            "https://media.forgecdn.net/attachments/1545/162/ca55e4e0b141bf4eaaf35805bbfd2bca833fc13d-png.png",
+            "https://media.forgecdn.net/attachments/1545/150/8aeaa050f1ab553b45a10d82f76f8e8758f72893-png.png",
+            "https://media.forgecdn.net/attachments/1545/153/5eca9cb7c9e930b0ae1c18e96920b6655760ba7d-png.png",
+            "https://media.forgecdn.net/attachments/1545/154/6e939e052809c6b0d96ccb176b882c05bd1d4b98-png.png"
           ],
           "paragraphs": [
-            "Añade mazmorras y estructuras elaboradas en el Nether con puzzles, trampas y botín único para aventureros veteranos."
+            "Agrega contenido de terreno de Minecraft Dungeons para el Nether.",
+            "Dungeons Dimensions: Nether añade nuevos bloques y vegetación, actualiza los modelos y texturas de bloques existentes y añade una nueva generación de mundos, todo ello basado en su apariencia en Minecraft: Dungeons."
           ],
           "status": "SELECCIÓN DEL AUTOR"
         },
@@ -215,30 +229,46 @@
           "id": "illager-arena",
           "name": "Illager Arena",
           "images": [
-            "https://placehold.co/800x450/1a000d/f43f5e?text=Illager+Arena"
+            "https://media.forgecdn.net/attachments/1350/25/arena.png",
+            "https://media.forgecdn.net/attachments/1350/24/battleground.png",
+            "https://media.forgecdn.net/attachments/1349/506/2025-10-07_04.png"
           ],
           "paragraphs": [
-            "Añade arenas de combate generadas en el mundo donde los Illagers organizan peleas. ¡Entra y demuestra tu valía!"
+            "Añade una gigantesca arena de Illagers en el desierto, repleta de todo tipo de Illagers y valioso botín.",
+            "La arena tiene varias secciones: el campo de batalla en el centro, gradas para espectadores, zonas de preparación, dormitorios, una pequeña herrería y la habitación del Ilusionista con la mejor recompensa."
           ]
         },
         {
           "id": "nether-trials",
           "name": "Nether Trials & Chambers",
           "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Nether+Trials"
+            "https://i.postimg.cc/HxQBWpY1/hellish_trials_banner.png",
+            "https://i.postimg.cc/y6SCC945/2025_12_27_16_44_36.png",
+            "https://i.postimg.cc/9096P3YF/2025_12_28_00_20_50.png",
+            "https://i.postimg.cc/d3CbRMjJ/2025_12_28_00_22_39.png",
+            "https://i.postimg.cc/fTgb1v2y/2025_12_28_16_38_37.png",
+            "https://i.postimg.cc/gk0JM7DL/2025_12_28_00_45_31_(1).png",
+            "https://i.postimg.cc/x8mwGr3H/2025_12_28_00_15_59.png"
           ],
           "paragraphs": [
-            "Añade cámaras de prueba al estilo Trial Chambers pero en el Nether, con mecánicas y recompensas únicas."
+            "¡Genera cámaras de prueba únicas en la dimensión del Nether!",
+            "Hellish Trials genera mazmorras de prueba únicas en la dimensión del Nether. Estas mazmorras incluyen características de la actualización Tricky Trials, como bóvedas, generadores de pruebas, la Brisa y ¡muchísimas cargas de viento!\n\nCompatible con mods que añaden biomas y estructuras del Nether."
           ]
         },
         {
           "id": "underwater-villages",
           "name": "Underwater Villages",
           "images": [
-            "https://placehold.co/800x450/00101a/38bdf8?text=Underwater+Villages"
+            "https://media.forgecdn.net/attachments/1138/519/2025-03-25_19.png",
+            "https://media.forgecdn.net/attachments/1138/520/2025-03-25_19.png",
+            "https://media.forgecdn.net/attachments/1138/521/2025-03-25_19.png",
+            "https://media.forgecdn.net/attachments/1138/522/2025-03-25_19.png",
+            "https://media.forgecdn.net/attachments/1138/523/2025-03-25_19.png",
+            "https://media.forgecdn.net/attachments/1138/524/2025-03-25_19.png"
           ],
           "paragraphs": [
-            "Genera aldeas submarinas habitadas por variantes acuáticas de aldeanos con comercio y estructuras adaptadas al océano."
+            "¡Descubre un montón de nuevas estructuras oceánicas!",
+            "Todas las estructuras son compatibles con el juego base, así que no deberías tener ningún problema para añadirlas a tu mundo. Por ahora, hemos añadido más de una docena de estructuras nuevas, ¡y habrá más actualizaciones en el futuro!"
           ]
         }
       ]
@@ -379,7 +409,7 @@
             "Este mod se está desarrollando para Forge 1.20.1. No se planean adaptaciones a versiones anteriores. A partir de la versión 1.21.1, el mod utilizará Neoforge.",
             "Spawn no tiene una configuración nativa, sin embargo, es extremadamente personalizable a través de paquetes de datos, lo que permite agregar más variantes de animales, cambiar si los animales o variantes aparecen y dónde, e incluso ajustar o expandir con nuevos sistemas de recetas."
           ],
-          "status": "REVISIÓN"
+          "status": "ELIMINADO"
         },
         {
           "id": "ghast-update",

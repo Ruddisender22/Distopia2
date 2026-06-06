@@ -428,7 +428,7 @@
             "Starcatcher añade un nuevo minijuego de pesca basado en la habilidad, muchos secretos, trofeos, torneos y todo lo demás que un pescador podría desear 🎣\n¡ Hay más de 100 peces nuevos listos para que los captures y registres en tu catálogo, con restricciones únicas por bioma, clima, hora del día, altitud y más!",
             "¡Starcatcher tiene muchas funciones esperándote! 🐟 ✨\n🎣 Anzuelos, flotadores y cebos para tu caña\n🐡 Más de 100 peces únicos con diferentes tamaños, pesos y condiciones de pesca.\n🐛 Cajas de aparejos para guardar tus cebos y llevarte los peces a casa.\n🔥 Trucos únicos de minijuegos para diferentes peces\n🏆 Trofeos para recompensar tu progreso\n🕵️‍♀️ Catálogo para registrar todas tus capturas\n🏆 Torneos de pesca para desafiar a tus amigos\n♒ Acuarios para exhibir tus mejores capturas\n😮 Bloque de visualización para mostrar tu progreso a tus amigos\n🕵️‍♀️ Mensajes secretos que te dejaron para que los encontraras.\n📜 Mensaje en botella escrito por el jugador para compartir tus historias con el servidor.\n🤑 Vende tu contenedor para convertir tus capturas en dinero\n🥇 Variaciones de Golden Fish para quienes solo buscan lo mejor.\n👒 Diferentes cosméticos para mostrar tu sentido de la moda\n🦈 Tamaño del modelo dinámico basado en la captura específica\n🎣 Entidades aptas para la pesca de peces vivos\n🔧 Amplia compatibilidad integrada con varios otros mods relacionados con peces."
           ],
-          "status": "REVISIÓN"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "minecraft-comes-alive",
@@ -593,23 +593,37 @@
           "id": "stellarity",
           "name": "Stellarity",
           "images": [
-            "https://placehold.co/800x450/00001a/818cf8?text=Stellarity"
+            "https://media.forgecdn.net/attachments/1051/487/stellarity_new-1.png",
+            "https://i.imgur.com/ypTJ6bL.png",
+            "https://media.forgecdn.net/attachments/1051/474/2024-12-11_12.png",
+            "https://media.forgecdn.net/attachments/1051/482/2024-12-23_17.png",
+            "https://media.forgecdn.net/attachments/1051/485/2024-12-23_17.png",
+            "https://media.forgecdn.net/attachments/1051/477/2024-12-11_12.png",
+            "https://media.forgecdn.net/attachments/1051/478/2024-12-11_15.png",
+            "https://i.imgur.com/i520ske.png"
           ],
           "paragraphs": [
-            "Transforma el End en una dimensión masiva con nuevos biomas, estructuras, jefes y una historia propia que explorar."
+            "Una renovación radical de The End con un estilo fantástico único, que incluye mejoras en los biomas y las estructuras, nuevos objetos, armas y mucho más contenido por descubrir.",
+            "Stellarity es un paquete de datos que renueva por completo The End, añadiéndole nuevas formas de terreno, biomas, así como objetos, armas e incluso nuevas mecánicas de juego.\n\nEn lugar de seguir la temática habitual de una expansión al estilo de 'Minecraft: Dungeons' o convertirla en una dimensión alienígena, Stellarity mezcla el motivo habitual de una dimensión desolada con temas de magia intensa y fantasía.",
+            "Se han añadido un total de 23 nuevos biomas , incluyendo 4 biomas del End del juego base renovados (técnicamente solo dos de ellos, ya que los otros dos no tienen ninguna función en el juego base) ."
           ],
-          "status": "REVISIÓN"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "jaeden-nether",
           "name": "Jaeden's Nether Expansion",
           "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=Jaeden%27s+Nether"
+            "https://i.ytimg.com/vi/SGn5ZBT6lVM/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/978/919/image_2024-09-30_143655397.png",
+            "https://media.forgecdn.net/attachments/978/921/image_2024-09-30_143729089.png",
+            "https://cdn.modrinth.com/data/cached_images/785096d7cef82a540190a9b0f2671de05042197c.png",
+            "https://media.forgecdn.net/attachments/978/916/image_2024-09-30_143539190.png"
           ],
           "paragraphs": [
-            "Expansión masiva del Nether con nuevos biomas, estructuras y criaturas que hacen la dimensión infernal mucho más rica."
+            "Nether Expansion es un mod compatible con Vanilla que tiene como objetivo mejorar y agregar nuevo contenido a todos los aspectos de The Nether.",
+            "Jaden's Nether Expansion es un mod compatible con el juego base que busca expandir toda la dimensión del Nether, añadiendo contenido nuevo y renovando conceptos existentes del juego base. Este proyecto está en constante crecimiento y se actualiza continuamente, así que prepárate para el mod del Nether más grande hasta la fecha."
           ],
-          "status": "REVISIÓN"
+          "status": "SELECCIÓN DEL AUTOR"
         },
         {
           "id": "eternal-starlight",

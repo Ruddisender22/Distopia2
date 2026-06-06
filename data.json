@@ -1,8 +1,68 @@
 {
   "sections": [
     {
+      "name": "Dimensiones",
+      "icon": "🌌",
+      "mods": [
+        {
+          "id": "stellarity",
+          "name": "Stellarity",
+          "images": [
+            "https://media.forgecdn.net/attachments/1051/487/stellarity_new-1.png",
+            "https://i.imgur.com/ypTJ6bL.png",
+            "https://media.forgecdn.net/attachments/1051/474/2024-12-11_12.png",
+            "https://media.forgecdn.net/attachments/1051/482/2024-12-23_17.png",
+            "https://media.forgecdn.net/attachments/1051/485/2024-12-23_17.png",
+            "https://media.forgecdn.net/attachments/1051/477/2024-12-11_12.png",
+            "https://media.forgecdn.net/attachments/1051/478/2024-12-11_15.png",
+            "https://i.imgur.com/i520ske.png"
+          ],
+          "paragraphs": [
+            "Una renovación radical de The End con un estilo fantástico único, que incluye mejoras en los biomas y las estructuras, nuevos objetos, armas y mucho más contenido por descubrir.",
+            "Stellarity es un paquete de datos que renueva por completo The End, añadiéndole nuevas formas de terreno, biomas, así como objetos, armas e incluso nuevas mecánicas de juego.\n\nEn lugar de seguir la temática habitual de una expansión al estilo de 'Minecraft: Dungeons' o convertirla en una dimensión alienígena, Stellarity mezcla el motivo habitual de una dimensión desolada con temas de magia intensa y fantasía.",
+            "Se han añadido un total de 23 nuevos biomas , incluyendo 4 biomas del End del juego base renovados (técnicamente solo dos de ellos, ya que los otros dos no tienen ninguna función en el juego base) ."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "jaeden-nether",
+          "name": "Jaeden's Nether Expansion",
+          "images": [
+            "https://i.ytimg.com/vi/SGn5ZBT6lVM/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/978/919/image_2024-09-30_143655397.png",
+            "https://media.forgecdn.net/attachments/978/921/image_2024-09-30_143729089.png",
+            "https://cdn.modrinth.com/data/cached_images/785096d7cef82a540190a9b0f2671de05042197c.png",
+            "https://media.forgecdn.net/attachments/978/916/image_2024-09-30_143539190.png"
+          ],
+          "paragraphs": [
+            "Nether Expansion es un mod compatible con Vanilla que tiene como objetivo mejorar y agregar nuevo contenido a todos los aspectos de The Nether.",
+            "Jaden's Nether Expansion es un mod compatible con el juego base que busca expandir toda la dimensión del Nether, añadiendo contenido nuevo y renovando conceptos existentes del juego base. Este proyecto está en constante crecimiento y se actualiza continuamente, así que prepárate para el mod del Nether más grande hasta la fecha."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "eternal-starlight",
+          "name": "Eternal Starlight",
+          "images": [
+            "https://cdn.modrinth.com/data/cached_images/5b5fd13a601ae8013f11edb1131d2ad2dd16a80c.png",
+            "https://media.forgecdn.net/attachments/936/439/2024-08-09_16.png",
+            "https://media.forgecdn.net/attachments/936/437/2024-08-09_16.png",
+            "https://cdn.modrinth.com/data/XvcfUGfB/images/1ae02b0df79edad8e5d81fe2eed0459e6d4e7b6f.png",
+            "https://www.minecraft-guides.com/wp-content/uploads/2025/06/Ruin_Common.png",
+            "https://i.ytimg.com/vi/P2O6xJjSnXU/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/936/441/2024-08-09_16.png"
+          ],
+          "paragraphs": [
+            "Un mod que añade la mágica y misteriosa dimensión de la luz de las estrellas.",
+            "Eternal Starlight es un mod centrado en las dimensiones, que introduce un extenso mundo al estilo de los juegos de rol, repleto de nuevos biomas, criaturas únicas, jefes formidables y materiales raros.\n\nSe accede a esta dimensión a través de un portal activado por el Orbe de la Profecía. Los jugadores deben explorar y participar en combates para obtener objetos esenciales para el progreso, especialmente en los paquetes de mods que requieren la Estrella Allthemodium."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        }
+      ]
+    },
+    {
       "name": "Aventura y Rol",
-      "icon": "âš”ï¸",
+      "icon": "⚔️",
       "mods": [
         {
           "id": "origins",
@@ -62,63 +122,9 @@
       ]
     },
     {
-      "name": "GeneraciÃ³n de Mundo",
+      "name": "Generación de Mundo",
       "icon": "ðŸŒ",
       "mods": [
-        {
-          "id": "stellarity",
-          "name": "Stellarity",
-          "images": [
-            "https://media.forgecdn.net/attachments/1051/487/stellarity_new-1.png",
-            "https://i.imgur.com/ypTJ6bL.png",
-            "https://media.forgecdn.net/attachments/1051/474/2024-12-11_12.png",
-            "https://media.forgecdn.net/attachments/1051/482/2024-12-23_17.png",
-            "https://media.forgecdn.net/attachments/1051/485/2024-12-23_17.png",
-            "https://media.forgecdn.net/attachments/1051/477/2024-12-11_12.png",
-            "https://media.forgecdn.net/attachments/1051/478/2024-12-11_15.png",
-            "https://i.imgur.com/i520ske.png"
-          ],
-          "paragraphs": [
-            "Una renovación radical de The End con un estilo fantástico único, que incluye mejoras en los biomas y las estructuras, nuevos objetos, armas y mucho más contenido por descubrir.",
-            "Stellarity es un paquete de datos que renueva por completo The End, añadiéndole nuevas formas de terreno, biomas, así como objetos, armas e incluso nuevas mecánicas de juego.\n\nEn lugar de seguir la temática habitual de una expansión al estilo de 'Minecraft: Dungeons' o convertirla en una dimensión alienígena, Stellarity mezcla el motivo habitual de una dimensión desolada con temas de magia intensa y fantasía.",
-            "Se han añadido un total de 23 nuevos biomas , incluyendo 4 biomas del End del juego base renovados (técnicamente solo dos de ellos, ya que los otros dos no tienen ninguna función en el juego base) ."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "jaeden-nether",
-          "name": "Jaeden's Nether Expansion",
-          "images": [
-            "https://i.ytimg.com/vi/SGn5ZBT6lVM/maxresdefault.jpg",
-            "https://media.forgecdn.net/attachments/978/919/image_2024-09-30_143655397.png",
-            "https://media.forgecdn.net/attachments/978/921/image_2024-09-30_143729089.png",
-            "https://cdn.modrinth.com/data/cached_images/785096d7cef82a540190a9b0f2671de05042197c.png",
-            "https://media.forgecdn.net/attachments/978/916/image_2024-09-30_143539190.png"
-          ],
-          "paragraphs": [
-            "Nether Expansion es un mod compatible con Vanilla que tiene como objetivo mejorar y agregar nuevo contenido a todos los aspectos de The Nether.",
-            "Jaden's Nether Expansion es un mod compatible con el juego base que busca expandir toda la dimensión del Nether, añadiendo contenido nuevo y renovando conceptos existentes del juego base. Este proyecto está en constante crecimiento y se actualiza continuamente, así que prepárate para el mod del Nether más grande hasta la fecha."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "eternal-starlight",
-          "name": "Eternal Starlight",
-          "images": [
-            "https://cdn.modrinth.com/data/cached_images/5b5fd13a601ae8013f11edb1131d2ad2dd16a80c.png",
-            "https://media.forgecdn.net/attachments/936/439/2024-08-09_16.png",
-            "https://media.forgecdn.net/attachments/936/437/2024-08-09_16.png",
-            "https://cdn.modrinth.com/data/XvcfUGfB/images/1ae02b0df79edad8e5d81fe2eed0459e6d4e7b6f.png",
-            "https://www.minecraft-guides.com/wp-content/uploads/2025/06/Ruin_Common.png",
-            "https://i.ytimg.com/vi/P2O6xJjSnXU/maxresdefault.jpg",
-            "https://media.forgecdn.net/attachments/936/441/2024-08-09_16.png"
-          ],
-          "paragraphs": [
-            "Un mod que añade la mágica y misteriosa dimensión de la luz de las estrellas.",
-            "Eternal Starlight es un mod centrado en las dimensiones, que introduce un extenso mundo al estilo de los juegos de rol, repleto de nuevos biomas, criaturas únicas, jefes formidables y materiales raros.\n\nSe accede a esta dimensión a través de un portal activado por el Orbe de la Profecía. Los jugadores deben explorar y participar en combates para obtener objetos esenciales para el progreso, especialmente en los paquetes de mods que requieren la Estrella Allthemodium."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
         {
           "id": "no-mans-land",
           "name": "No Man's Land",
@@ -239,7 +245,7 @@
     },
     {
       "name": "Criaturas y Enemigos",
-      "icon": "â˜ ï¸",
+      "icon": "☠️",
       "mods": [
         {
           "id": "cataclysm",
@@ -379,7 +385,7 @@
       ]
     },
     {
-      "name": "Dificultad y ProgresiÃ³n",
+      "name": "Dificultad y Progresión",
       "icon": "ðŸ“ˆ",
       "mods": [
         {
@@ -459,7 +465,7 @@
       ]
     },
     {
-      "name": "TecnologÃ­a y Almacenaje",
+      "name": "Tecnología y Almacenaje",
       "icon": "âš™ï¸",
       "mods": [
         {
@@ -536,7 +542,7 @@
     },
     {
       "name": "Magia",
-      "icon": "ðŸ”®",
+      "icon": "🔮",
       "mods": [
         {
           "id": "pastel",
@@ -557,7 +563,7 @@
     },
     {
       "name": "Equipamiento y Armas",
-      "icon": "ðŸ›¡ï¸",
+      "icon": "🛡️",
       "mods": [
         {
           "id": "artifacts",
@@ -615,7 +621,7 @@
     },
     {
       "name": "Transporte de Jugadores",
-      "icon": "ðŸš€",
+      "icon": "🚀",
       "mods": [
         {
           "id": "dragon-mounts",
@@ -667,7 +673,7 @@
       ]
     },
     {
-      "name": "DecoraciÃ³n y CosmÃ©ticos",
+      "name": "Decoración y Cosméticos",
       "icon": "ðŸŽ¨",
       "mods": [
         {
@@ -755,98 +761,12 @@
           "paragraphs": [
             "Addon de Supplementaries que añade aún más bloques y objetos decorativos integrados con el estilo del mod principal."
           ]
-        },
-        {
-          "id": "alternative-rain",
-          "name": "Alternative Rain Sounds",
-          "images": [
-            "https://i.ytimg.com/vi/fcgwZZjIG8c/maxresdefault.jpg"
-          ],
-          "paragraphs": [
-            "Nuevos sonidos para la lluvia y el trueno.",
-            "El paquete de recursos Sonidos Alternativos de Lluvia reemplaza los sonidos predeterminados de lluvia y truenos con sonidos más realistas y atmosféricos. Ahora la lluvia suena mucho mejor que los sonidos predeterminados de Minecraft. Los truenos también se han actualizado, con sonidos más dramáticos y potentes. Con este paquete de recursos, podrás sumergirte aún más en el juego. ¡Espero que lo disfrutes!"
-          ]
-        },
-        {
-          "id": "farcr-dirt",
-          "name": "Farcr's Better Dirt",
-          "images": [
-            "https://placehold.co/800x450/0d0800/92400e?text=Farcr%27s+Better+Dirt"
-          ],
-          "paragraphs": [
-            "Resource pack que mejora notablemente la textura de la tierra, haciéndola más detallada y natural."
-          ]
-        },
-        {
-          "id": "farcr-recrafted",
-          "name": "Farcr's Re-Crafted",
-          "images": [
-            "https://media.forgecdn.net/attachments/786/616/tachis.png",
-            "https://media.forgecdn.net/attachments/737/143/2023-10-01_19.png",
-            "https://media.forgecdn.net/attachments/737/130/2023-10-01_18.png",
-            "https://media.forgecdn.net/attachments/737/138/2023-10-01_19.png",
-            "https://media.forgecdn.net/attachments/1639/64/2026-04-19_17-19-27-png.png",
-            "https://media.forgecdn.net/attachments/737/152/2023-10-01_19.png",
-            "https://media.forgecdn.net/attachments/745/244/2023-10-19_14.png"
-          ],
-          "paragraphs": [
-            "Una pequeña reinterpretación de Minecraft, Busca darle al juego un aspecto más sobrio y pulido, y con suerte, mayor cohesión y una experiencia más fluida."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "low-on-fire",
-          "name": "Low On Fire",
-          "images": [
-            "https://media.forgecdn.net/avatars/thumbnails/494/548/64/64/637806308919001110.png",
-            "https://media.forgecdn.net/attachments/433/29/half.png"
-          ],
-          "paragraphs": [
-            "Cuando estás en llamas, las llamas no cubren toda la pantalla, sino solo una pequeña fracción de ella."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "lower-shield",
-          "name": "Lower Shield",
-          "images": [
-            "https://media.forgecdn.net/attachments/1068/555/2025-01-16_15.png"
-          ],
-          "paragraphs": [
-            "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
-          ],
-          "status": "REVISIÓN"
-        },
-        {
-          "id": "undopia-zombies",
-          "name": "Undopia Zombie Skins",
-          "images": [
-            "https://media.forgecdn.net/attachments/1034/992/zombiefeaturbacksmall.png",
-            "https://media.forgecdn.net/attachments/889/328/new_skins_zombies1.png",
-            "https://media.forgecdn.net/attachments/889/329/new_skins_zombies2.png",
-            "https://media.forgecdn.net/attachments/1034/996/drowned.png"
-          ],
-          "paragraphs": [
-            "Añade variedad de zombies sin afectar al rendimiento del server y manteniendo un estilo vanilla",
-            "Zombie Skins añade una variante de zombi, cáscara y ahogado para cada aspecto predeterminado disponible en el juego. Las variantes de Steve y Alex aparecen aproximadamente 1,5 veces más a menudo que las demás porque son los aspectos originales."
-          ],
-          "status": "SELECCIÓN DEL AUTOR"
-        },
-        {
-          "id": "fancy-crops",
-          "name": "Fancy Crops",
-          "images": [
-            "https://placehold.co/800x450/0a1400/84cc16?text=Fancy+Crops"
-          ],
-          "paragraphs": [
-            "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
-          ]
         }
       ]
     },
     {
       "name": "Comida y Cultivos",
-      "icon": "ðŸŒ¾",
+      "icon": "🌾",
       "mods": [
         {
           "id": "farmers-delight",
@@ -930,7 +850,7 @@
     },
     {
       "name": "Utilidades y Calidad de Vida",
-      "icon": "ðŸ”§",
+      "icon": "🔧",
       "mods": [
         {
           "id": "lootr",
@@ -1080,6 +1000,98 @@
           ],
           "paragraphs": [
             "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Resource Packs",
+      "icon": "📦",
+      "mods": [
+        {
+          "id": "alternative-rain",
+          "name": "Alternative Rain Sounds",
+          "images": [
+            "https://i.ytimg.com/vi/fcgwZZjIG8c/maxresdefault.jpg"
+          ],
+          "paragraphs": [
+            "Nuevos sonidos para la lluvia y el trueno.",
+            "El paquete de recursos Sonidos Alternativos de Lluvia reemplaza los sonidos predeterminados de lluvia y truenos con sonidos más realistas y atmosféricos. Ahora la lluvia suena mucho mejor que los sonidos predeterminados de Minecraft. Los truenos también se han actualizado, con sonidos más dramáticos y potentes. Con este paquete de recursos, podrás sumergirte aún más en el juego. ¡Espero que lo disfrutes!"
+          ]
+        },
+        {
+          "id": "farcr-dirt",
+          "name": "Farcr's Better Dirt",
+          "images": [
+            "https://placehold.co/800x450/0d0800/92400e?text=Farcr%27s+Better+Dirt"
+          ],
+          "paragraphs": [
+            "Resource pack que mejora notablemente la textura de la tierra, haciéndola más detallada y natural."
+          ]
+        },
+        {
+          "id": "farcr-recrafted",
+          "name": "Farcr's Re-Crafted",
+          "images": [
+            "https://media.forgecdn.net/attachments/786/616/tachis.png",
+            "https://media.forgecdn.net/attachments/737/143/2023-10-01_19.png",
+            "https://media.forgecdn.net/attachments/737/130/2023-10-01_18.png",
+            "https://media.forgecdn.net/attachments/737/138/2023-10-01_19.png",
+            "https://media.forgecdn.net/attachments/1639/64/2026-04-19_17-19-27-png.png",
+            "https://media.forgecdn.net/attachments/737/152/2023-10-01_19.png",
+            "https://media.forgecdn.net/attachments/745/244/2023-10-19_14.png"
+          ],
+          "paragraphs": [
+            "Una pequeña reinterpretación de Minecraft, Busca darle al juego un aspecto más sobrio y pulido, y con suerte, mayor cohesión y una experiencia más fluida."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "low-on-fire",
+          "name": "Low On Fire",
+          "images": [
+            "https://media.forgecdn.net/avatars/thumbnails/494/548/64/64/637806308919001110.png",
+            "https://media.forgecdn.net/attachments/433/29/half.png"
+          ],
+          "paragraphs": [
+            "Cuando estás en llamas, las llamas no cubren toda la pantalla, sino solo una pequeña fracción de ella."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "lower-shield",
+          "name": "Lower Shield",
+          "images": [
+            "https://media.forgecdn.net/attachments/1068/555/2025-01-16_15.png"
+          ],
+          "paragraphs": [
+            "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
+          ],
+          "status": "REVISIÓN"
+        },
+        {
+          "id": "undopia-zombies",
+          "name": "Undopia Zombie Skins",
+          "images": [
+            "https://media.forgecdn.net/attachments/1034/992/zombiefeaturbacksmall.png",
+            "https://media.forgecdn.net/attachments/889/328/new_skins_zombies1.png",
+            "https://media.forgecdn.net/attachments/889/329/new_skins_zombies2.png",
+            "https://media.forgecdn.net/attachments/1034/996/drowned.png"
+          ],
+          "paragraphs": [
+            "Añade variedad de zombies sin afectar al rendimiento del server y manteniendo un estilo vanilla",
+            "Zombie Skins añade una variante de zombi, cáscara y ahogado para cada aspecto predeterminado disponible en el juego. Las variantes de Steve y Alex aparecen aproximadamente 1,5 veces más a menudo que las demás porque son los aspectos originales."
+          ],
+          "status": "SELECCIÓN DEL AUTOR"
+        },
+        {
+          "id": "fancy-crops",
+          "name": "Fancy Crops",
+          "images": [
+            "https://placehold.co/800x450/0a1400/84cc16?text=Fancy+Crops"
+          ],
+          "paragraphs": [
+            "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
           ]
         }
       ]

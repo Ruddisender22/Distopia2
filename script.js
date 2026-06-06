@@ -436,27 +436,40 @@ function buildSection(section) {
 
   function scrollTo(idx) {
     const n = section.mods.length;
-    currentIdx = Math.max(0, Math.min(idx, n-1));
-    track.scrollTo({ left: currentIdx * cardWidth(), behavior:"smooth" });
-    counter.textContent = `${String(currentIdx+1).padStart(2,"0")} / ${String(n).padStart(2,"0")}`;
-    dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.classList.toggle("active", i===currentIdx));
-    prevBtn.disabled = currentIdx===0;
-    nextBtn.disabled = currentIdx===n-1;
+    let targetIdx = Math.max(0, Math.min(idx, n-1));
+    track.scrollTo({ left: targetIdx * cardWidth(), behavior:"smooth" });
   }
 
-  prevBtn.addEventListener("click", () => scrollTo(currentIdx-1));
-  nextBtn.addEventListener("click", () => scrollTo(currentIdx+1));
-  dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.addEventListener("click", () => scrollTo(i)));
-
-  track.addEventListener("scroll", () => {
+  function updateCarouselUI() {
     const w = cardWidth(); if (!w) return;
-    const idx = Math.round(track.scrollLeft / w);
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const isAtEnd = track.scrollLeft >= maxScroll - 5;
+    
+    let idx = Math.round(track.scrollLeft / w);
+    if (isAtEnd) idx = section.mods.length - 1;
+
     if (idx !== currentIdx) {
       currentIdx = idx;
       counter.textContent = `${String(idx+1).padStart(2,"0")} / ${String(section.mods.length).padStart(2,"0")}`;
       dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.classList.toggle("active", i===idx));
     }
-  }, { passive:true });
+    prevBtn.disabled = track.scrollLeft <= 5;
+    nextBtn.disabled = isAtEnd;
+  }
+
+  prevBtn.addEventListener("click", () => {
+    let targetIdx = Math.ceil(track.scrollLeft / cardWidth()) - 1;
+    scrollTo(targetIdx);
+  });
+  nextBtn.addEventListener("click", () => {
+    let targetIdx = Math.floor(track.scrollLeft / cardWidth()) + 1;
+    scrollTo(targetIdx);
+  });
+  dotsWrap.querySelectorAll(".sdot").forEach((d,i) => d.addEventListener("click", () => scrollTo(i)));
+
+  track.addEventListener("scroll", updateCarouselUI, { passive:true });
+  // Initialize UI state
+  setTimeout(updateCarouselUI, 50);
 
   // ── GHOST-DOT FIX ──────────────────────────────────────────
   // Hide dots + arrows when all cards fit with no scroll needed

@@ -440,6 +440,55 @@
           "paragraphs": [
             "Añade nuevos enemigos piratas, estructuras oceánicas y características relacionadas con la piratería."
           ]
+        },
+        {
+          "id": "enderman-overhaul",
+          "name": "Enderman Overhaul",
+          "images": [
+            "https://i.imgur.com/5qipNL9.png",
+            "https://media.forgecdn.net/attachments/740/401/crimson_enderman.png",
+            "https://media.forgecdn.net/attachments/740/398/windswept_hills_enderman.png",
+            "https://media.forgecdn.net/attachments/740/280/cave_enderman.png",
+            "https://media.forgecdn.net/attachments/740/277/badlands_enderman.png",
+            "https://media.forgecdn.net/attachments/740/396/snowy_enderman.png",
+            "https://media.forgecdn.net/attachments/740/406/ocean_enderman.png",
+            "https://media.forgecdn.net/attachments/740/285/ice_spikes_enderman.png"
+          ],
+          "paragraphs": [
+            "Enderman Overhaul es un mod que expande drásticamente las variantes del Enderman, añadiendo más de 20 tipos nuevos. Cada variante tiene sus propios sonidos, modelos y animaciones únicos, y están adaptados a biomas específicos para hacer la exploración más diversa y desafiante.",
+            "Algunas variantes son pacíficas, mientras que otras son muy agresivas incluso sin contacto visual directo. También pueden soltar perlas de Ender especiales y otros recursos dependiendo de su hábitat."
+          ]
+        },
+        {
+          "id": "creeper-overhaul",
+          "name": "Creeper Overhaul",
+          "images": [
+            "https://i.imgur.com/W758n8u.png",
+            "https://media.forgecdn.net/attachments/419/336/swamp.png",
+            "https://media.forgecdn.net/attachments/419/308/bamboo.PNG",
+            "https://media.forgecdn.net/attachments/419/311/dark_oak.png",
+            "https://media.forgecdn.net/attachments/419/315/jungle.PNG",
+            "https://media.forgecdn.net/attachments/604/298/ocean_creeper_screenshot.png"
+          ],
+          "paragraphs": [
+            "Creeper Overhaul reemplaza a los clásicos creepers con una amplia variedad de nuevos tipos específicos de cada bioma (como creepers de la jungla, océano o nieve).",
+            "Cada variante tiene comportamientos, animaciones y modelos únicos proporcionados por GeckoLib, y algunos sueltan botines especiales o tienen interacciones distintas con su entorno. ¡Cuidado con los que se camuflan!"
+          ]
+        },
+        {
+          "id": "myths-and-legends",
+          "name": "Myths & Legends",
+          "images": [
+            "https://media.forgecdn.net/attachments/description/1133244/description_65d592f3-552e-4391-8f61-5b9b74ced301.png",
+            "https://media.forgecdn.net/attachments/1214/983/possessed-armor-in-game-png.png",
+            "https://media.forgecdn.net/attachments/1214/981/gargoyle-in-game-png.png",
+            "https://media.forgecdn.net/attachments/1214/982/imp-in-game-png.png",
+            "https://media.forgecdn.net/attachments/1214/984/black-charro-in-game-png.png"
+          ],
+          "paragraphs": [
+            "Myths & Legends es un mod de fantasía oscura que introduce una increíble variedad de criaturas míticas, estructuras y reliquias inspiradas en el folclore global.",
+            "Aporta una nueva capa de inmersión, atmósfera lúgubre y desafío. Prepárate para encontrarte con seres terroríficos como gárgolas, diablillos, almas condenadas o incluso amenazantes armaduras poseídas durante tus viajes."
+          ]
         }
       ]
     },
@@ -519,6 +568,17 @@
             "Los incendios dejarán tras de sí bloques carbonizados y cenizas en lugar de hacer desaparecer instantáneamente la madera."
           ],
           "status": "REVISIÓN"
+        },
+        {
+          "id": "savage-ender-dragon",
+          "name": "Savage Ender Dragon",
+          "images": [
+            "https://user-images.githubusercontent.com/38401808/163781131-8aaf911c-f103-491f-bd98-86f59179c28b.png"
+          ],
+          "paragraphs": [
+            "Savage Ender Dragon rediseña por completo la pelea final para convertirla en un verdadero y despiadado reto. La dificultad de la batalla se ajusta dinámicamente según el número de jugadores presentes.",
+            "El dragón ahora puede lanzar rayos, invocar Endermans furiosos, y sus bolas de fuego hacen daño explosivo. Además cuenta con nuevas mecánicas que penalizan y evitan estrategias fáciles como usar camas o abusar de las élitras."
+          ]
         }
       ]
     },
@@ -595,6 +655,35 @@
           ],
           "paragraphs": [
             "El mod Iron Chests incluye cofres para los distintos metales del Minecraft original, ¡con diferentes tamaños!"
+          ]
+        },
+        {
+          "id": "create-deep-dark",
+          "name": "Create: Deep Dark",
+          "images": [
+            "https://media.forgecdn.net/attachments/1418/644/1.png",
+            "https://media.forgecdn.net/attachments/1418/645/2.png",
+            "https://media.forgecdn.net/attachments/1418/646/3.png",
+            "https://media.forgecdn.net/attachments/1418/647/5.png",
+            "https://media.forgecdn.net/attachments/1418/649/7.png",
+            "https://media.forgecdn.net/attachments/1418/650/8.png"
+          ],
+          "paragraphs": [
+            "Create: Deep Dark es un complemento para el mod Create que introduce contenido de final de juego inspirado en el bioma del Oscuro Profundo (Deep Dark).",
+            "Su objetivo es hacer que explorar el territorio del Warden sea mucho más gratificante, permitiendo procesar nuevos recursos como los fragmentos de eco utilizando la maquinaria de Create para obtener armamentos y fluidos increíblemente poderosos."
+          ]
+        },
+        {
+          "id": "create-nuclear",
+          "name": "Create Nuclear",
+          "images": [
+            "https://media.forgecdn.net/attachments/1187/940/curseforge-png.png",
+            "https://media.forgecdn.net/attachments/1061/95/uranium-liquid.gif",
+            "https://media.forgecdn.net/attachments/1061/93/title.png"
+          ],
+          "paragraphs": [
+            "Create Nuclear es un complemento para Create que te permite entrar en la era atómica introduciendo un complejo sistema de energía nuclear.",
+            "Podrás automatizar la extracción y el refinado de uranio para alimentar reactores que generan inmensas cantidades de energía (Stress Units). Sin embargo, tendrás que construir protecciones y lidiar con los enormes peligros que conlleva la radiación."
           ]
         }
       ]
@@ -718,6 +807,54 @@
           ],
           "paragraphs": [
             "Golpea a tus enemigos en hierbas altas"
+          ]
+        },
+        {
+          "id": "enderite-mod",
+          "name": "Enderite Mod",
+          "images": [
+            "https://cdn.modrinth.com/data/6lvRWqbA/images/6291ebe10ccf3cfdbf288711a6e7e1e9433505a5.jpeg"
+          ],
+          "paragraphs": [
+            "Enderite Mod añade un nuevo material extremadamente poderoso al juego: la Enderita. Este material sirve como una evolución y mejora directa para la Netherita y se puede encontrar en las profundidades de The End.",
+            "Para extraerlo deberás explotar la mena y luego fundirla. El equipamiento creado con Enderita tiene habilidades únicas, como la capacidad de flotar en el vacío para evitar que pierdas tus objetos valiosos."
+          ]
+        },
+        {
+          "id": "relics",
+          "name": "Relics",
+          "images": [
+            "https://i.ytimg.com/vi/XWKc1QAYRc0/maxresdefault.jpg",
+            "https://i.imgur.com/YEVe5Z0.png",
+            "https://preview.redd.it/relic-guide-v0-pv0hg2te4ble1.png?width=3502&format=png&auto=webp&s=45b60acc37550138394e9e4017cf5dbfeb2ed613"
+          ],
+          "paragraphs": [
+            "Relics añade decenas de reliquias únicas, cada una con complejas mecánicas de combate y exploración, combinadas con un sistema de estadísticas aleatorias al estilo MMO.",
+            "Podrás encontrar o crear la versión 'perfecta' de tu reliquia, subiéndola de nivel y personalizando tu estilo de juego. El mod está diseñado para equilibrarse de forma natural y adaptarse a la escala de daño y salud de cualquier mundo."
+          ]
+        },
+        {
+          "id": "reliquified-artifacts",
+          "name": "Reliquified Artifacts",
+          "images": [
+            "https://allthemods.github.io/alltheguides/atma/img/curios/hands_slot_items.png",
+            "https://media.forgecdn.net/attachments/964/951/2024-09-12_07.png"
+          ],
+          "paragraphs": [
+            "Reliquified Artifacts es un mod de compatibilidad y mejora que integra el equipamiento del mod Artifacts dentro del complejo sistema de estadísticas y habilidades de Relics.",
+            "Muchos de los objetos clásicos de Artifacts ahora cuentan con mecánicas más profundas y escalables, dándoles una nueva vida para que encajen a la perfección con la progresión de nivel de tus reliquias."
+          ]
+        },
+        {
+          "id": "reliquified-cataclysm",
+          "name": "Reliquified L_Ender's Cataclysm",
+          "images": [
+            "https://www.9minecraft.net/wp-content/uploads/2026/01/Reliquified-L_Enders-Cataclysm-Mod-Thumbnail.png",
+            "https://www.minecraft-guides.com/wp-content/uploads/2025/05/Relic_ScouringEye-1024x383.png"
+          ],
+          "paragraphs": [
+            "Reliquified L_Ender's Cataclysm es un puente de compatibilidad que añade potentes reliquias inspiradas en los temibles jefes, mecánicas y estructuras de L_Ender's Cataclysm.",
+            "Está pensado para enriquecer la progresión en el juego tardío, recompensando a los jugadores que superen los formidables retos de los jefes con poderosas habilidades pasivas y activas vinculadas a sus nuevas reliquias."
           ]
         }
       ]
@@ -1142,6 +1279,18 @@
           ],
           "paragraphs": [
             "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
+          ]
+        },
+        {
+          "id": "mmmmmmmmmmmm",
+          "name": "MmmMmmMmmMmm",
+          "images": [
+            "https://media.forgecdn.net/attachments/316/868/modpage.png",
+            "https://media.forgecdn.net/attachments/316/883/ouch.png"
+          ],
+          "paragraphs": [
+            "MmmMmmMmmMmm (más conocido como Target Dummy) añade un objeto muy útil: el muñeco de pruebas de daño. Al golpearlo te mostrará números exactos indicando cuánto daño (DPS) logras infligir con tus armas.",
+            "Puedes equiparlo con armaduras para probar la penetración de daño contra objetivos resistentes, o ponerle cabezas de monstruos para convertirlo en no-muerto y comprobar cómo afectan encantamientos específicos como Castigo (Smite)."
           ]
         }
       ]

@@ -617,6 +617,19 @@
             "Características:\n- 2 conjuntos de armadura\n- 40 horas de contenido\n- Varias máquinas\n- Más de 30 herramientas\n- Demasiada comida\n- Como una cantidad injustificable\n- Se añadirán más\n- Casi 30 curiosidades\n- Un sistema logístico completo\n- Una dimensión en toda regla\n- Hay más mecánicos de los que caben aquí.\n- Bloques que abarcan varias pestañas creativas\n- Un mundo que cambia a medida que avanzas.\ny mucho más"
           ],
           "status": "REVISIÓN"
+        },
+        {
+          "id": "beautiful-potions",
+          "name": "Beautiful Potions",
+          "images": [
+            "https://media.forgecdn.net/attachments/1238/9/beautiful-potions-5.png",
+            "https://media.forgecdn.net/attachments/1238/13/beautiful-potions-10.png",
+            "https://media.forgecdn.net/attachments/1238/5/beautiful-potions-1.png"
+          ],
+          "paragraphs": [
+            "Este mod rediseña el aspecto de las pociones, dotando tanto a las originales como a las modificadas de diseños de botella únicos y coloridos que facilitan su reconocimiento.",
+            "Desde hace tiempo, la comunidad de Minecraft ha deseado que las pociones tengan diseños más distintivos y reconocibles. Este mod busca mejorar su aspecto visual, otorgando a cada poción una botella y un estilo únicos. Las texturas se han rediseñado para ser más coloridas, nítidas y visualmente atractivas, lo que permite que las pociones destaquen y sean más fáciles de identificar a simple vista."
+          ]
         }
       ]
     },

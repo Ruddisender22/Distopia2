@@ -562,7 +562,13 @@ function buildCard(mod) {
   card.className = "mod-card"; card.id = `card-${mod.id}`;
   if (myVote === 1)  card.classList.add("voted-up");
   if (myVote === -1) card.classList.add("voted-down");
-  if (mod.status === "ELIMINADO") card.classList.add("is-eliminated");
+  if (mod.status === "ELIMINADO") {
+    card.classList.add("is-eliminated");
+    const stamp = document.createElement("div");
+    stamp.className = "eliminated-stamp";
+    stamp.textContent = "ELIMINADO";
+    card.appendChild(stamp);
+  }
 
   // Thumbnail
   if (mod.images?.length > 0) {

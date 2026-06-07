@@ -529,7 +529,7 @@
           "id": "create-addictives",
           "name": "Create: Addictives",
           "images": [
-            "https://cdn.discordapp.com/attachments/1372350247967391887/1512620316877131846/e5cc225f-0048-407a-95d6-f6ef2abd8b19.png?ex=6a24c0f2&is=6a236f72&hm=f726b34d7956d51a252340b0a23152c397136fce82815b882681a9a122367247&",
+            "https://i.ytimg.com/vi/xpEpRcKj7kg/hqdefault.jpg",
             "https://media.forgecdn.net/attachments/1571/29/1000711914-jpg.jpg",
             "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg",
             "https://media.forgecdn.net/attachments/1571/24/1000711916-jpg.jpg",
@@ -818,7 +818,7 @@
           "id": "amendments",
           "name": "Amendments",
           "images": [
-            "https://placehold.co/800x450/0d1400/84cc16?text=Amendments"
+            "https://i.imgur.com/G4k4MIs.png"
           ],
           "paragraphs": [
             "Amendments es un mod muy configurable que se centra en realizar ajustes a muchos de los bloques originales del juego.",
@@ -985,7 +985,9 @@
           "id": "natures-compass",
           "name": "Nature's Compass",
           "images": [
-            "https://placehold.co/800x450/0a1a00/86efac?text=Nature%27s+Compass"
+            "https://i.ytimg.com/vi/2jTEAm-QH50/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDGavyTuAdNlcSrlGyi3eLPJaEmdA",
+            "https://i.imgur.com/GTSAfqv.png",
+            "https://i.ytimg.com/vi/-uACE13v75c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAW-hmmNGw9LUQ1ed-dT_eNVwRk1A"
           ],
           "paragraphs": [
             "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
@@ -995,7 +997,9 @@
           "id": "explorers-compass",
           "name": "Explorer's Compass",
           "images": [
-            "https://placehold.co/800x450/001a08/4ade80?text=Explorer%27s+Compass"
+            "https://zonacraft.net/wp-content/uploads/2024/01/explorers-compass-mod.webp",
+            "https://i.imgur.com/xSE8VSc.png",
+            "https://i.imgur.com/Q49Pvjv.png"
           ],
           "paragraphs": [
             "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
@@ -1005,17 +1009,23 @@
           "id": "traveler-toolbelt",
           "name": "Traveler Toolbelt",
           "images": [
-            "https://placehold.co/800x450/0d0800/fbbf24?text=Traveler+Toolbelt"
+            "https://i.ytimg.com/vi/Bu7hr1wmjiE/maxresdefault.jpg",
+            "https://media.forgecdn.net/avatars/thumbnails/1668/441/256/256/639061620838283541.png",
+            "https://i.imgur.com/w516LlM.png"
           ],
           "paragraphs": [
-            "Añade un cinturón de herramientas con slots rápidos de acceso para tus utensilios favoritos sin llenar el inventario."
+            "Cinturón de herramientas actualizable con intercambio rápido e intuitivo, integración con la API de Curios/Trinkets y mucho más."
           ]
         },
         {
           "id": "travelers-backpack",
           "name": "Traveler's Backpack",
           "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Traveler%27s+Backpack"
+            "https://i.imgur.com/OwJ2twO.png",
+            "https://i.tlauncher.org/images/Traveler_s-Backpack-mod-for-minecraft-logo.jpg",
+            "https://media.forgecdn.net/attachments/1021/494/upgrades-grid-dsc.png",
+            "https://media.forgecdn.net/attachments/1093/260/update-beta-project-png.png",
+            "https://i.tlauncher.org/images/tb.png"
           ],
           "paragraphs": [
             "Mochilas personalizables con almacenamiento extra, tanques de fluidos y herramientas integradas. El compañero perfecto de exploración."
@@ -1025,10 +1035,13 @@
           "id": "mob-lassos",
           "name": "Mob Lassos",
           "images": [
-            "https://placehold.co/800x450/0d1400/84cc16?text=Mob+Lassos"
+            "https://i.ytimg.com/vi/nWL2z8O9nOs/maxresdefault.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4IXEz0y_hTc7lllf3IZk_6dyrVAdiE3r6OQ&s",
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/moblassos/media/1.png"
           ],
           "paragraphs": [
-            "Permite capturar criaturas con un lazo para transportarlas y soltarlas donde quieras. Ideal para crear granjas de mobs."
+            "Mob Lassos añade algunas funciones útiles para mover criaturas: ¡Ahora puedes fabricar un lazo para transportar a la mayoría de las criaturas a cualquier lugar de tu inventario! ¡Sin necesidad de correas ni comida para animales!",
+            "▶️ Transporta a las criaturas con lazos. ¡Pero date prisa! ¡Las criaturas escaparán al cabo de un rato!\n\n▶️ El lazo dorado puede capturar a todos los animales terrestres.\n\n▶️ El lazo acuático puede capturar a todos los animales acuáticos.\n\n▶️ El lazo de diamante puede capturar a todos los animales y no tiene temporizador.\n\n▶️ El lazo esmeralda solo puede capturar aldeanos, ¡pero no todos los aldeanos quieren ser capturados! Asegúrate de que acepten un contrato primero, pero no todos servirán.\n\n▶️ Un lazo hostil puede capturar criaturas hostiles, ¡pero hay un inconveniente! Cualquier monstruo capturado debe tener menos del 50 % de salud y te morderá continuamente mientras llevas el lazo. ¡Ten cuidado!\n\n▶️ Cambia el nombre de la criatura capturada aplicándole un nuevo nombre al lazo en un yunque.\n\n▶️ Encantar un lazo con el encantamiento de sujeción para que dure más tiempo."
           ]
         },
         {
@@ -1052,17 +1065,17 @@
           "id": "repeatable-vaults",
           "name": "Repeatable Trial Vaults",
           "images": [
-            "https://placehold.co/800x450/000d1a/60a5fa?text=Repeatable+Vaults"
+            "https://static.beebom.com/wp-content/uploads/2024/01/Vault-block-and-the-trial-key-in-trial-chambers.jpg?w=1250&quality=75"
           ],
           "paragraphs": [
-            "Permite que los Trial Vaults del juego base sean repetibles. Sigue obteniendo recompensas de las cámaras de prueba."
+            "Consume una clave de prueba para poder usar la bóveda de prueba nuevamente."
           ]
         },
         {
           "id": "villager-names",
           "name": "Villager Names",
           "images": [
-            "https://placehold.co/800x450/001a08/22c55e?text=Villager+Names"
+            "https://i.redd.it/8pxctqrl7u031.png"
           ],
           "paragraphs": [
             "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
@@ -1072,7 +1085,7 @@
           "id": "piglin-names",
           "name": "Piglin Names",
           "images": [
-            "https://placehold.co/800x450/1a0800/f97316?text=Piglin+Names"
+            "https://cdn.serilum.com/projects/piglin-names/a.png"
           ],
           "paragraphs": [
             "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
@@ -1082,7 +1095,7 @@
           "id": "more-dragon-eggs",
           "name": "More Dragon Eggs",
           "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=More+Dragon+Eggs"
+            "https://cdn.mos.cms.futurecdn.net/SCBRtRY2o6pT2jC23uRed3.jpg"
           ],
           "paragraphs": [
             "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
@@ -1109,7 +1122,9 @@
           "id": "farcr-dirt",
           "name": "Farcr's Better Dirt",
           "images": [
-            "https://placehold.co/800x450/0d0800/92400e?text=Farcr%27s+Better+Dirt"
+            "https://media.forgecdn.net/attachments/734/703/2023-08-02_03.png",
+            "https://media.forgecdn.net/attachments/734/708/2023-09-26_14.png",
+            "https://media.forgecdn.net/attachments/734/710/2023-09-26_17.png"
           ],
           "paragraphs": [
             "Resource pack que mejora notablemente la textura de la tierra, haciéndola más detallada y natural."
@@ -1174,7 +1189,9 @@
           "id": "fancy-crops",
           "name": "Fancy Crops",
           "images": [
-            "https://placehold.co/800x450/0a1400/84cc16?text=Fancy+Crops"
+            "https://media.forgecdn.net/attachments/915/289/1ab4422225a47fd6c9e3012fa59e34e4842b2eeb.jpeg",
+            "https://media.forgecdn.net/attachments/690/183/comparison.jpg",
+            "https://media.forgecdn.net/attachments/690/157/wheat.jpg"
           ],
           "paragraphs": [
             "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."

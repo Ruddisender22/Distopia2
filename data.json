@@ -25,6 +25,20 @@
           "status": "ELIMINADO"
         },
         {
+          "id": "unusual-end",
+          "name": "Unusual End",
+          "images": [
+            "https://img.youtube.com/vi/9BiflIectOo/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/pZslb2Osw-g/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/MuAz6bIKzdk/maxresdefault.jpg",
+            "https://media.forgecdn.net/attachments/1012/111/2024-10-28_19.webp"
+          ],
+          "paragraphs": [
+            "Una actualización Vanilla+ End que amplía muchos aspectos del juego.",
+            "Unusual End es un mod que mejora el End, aportando mayor diversidad y contenido a esta dimensión, al tiempo que intenta adaptarse a la mayoría de las experiencias del End, tanto del juego base como de los mods."
+          ]
+        },
+        {
           "id": "jaeden-nether",
           "name": "Jaeden's Nether Expansion",
           "images": [

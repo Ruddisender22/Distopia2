@@ -751,7 +751,9 @@
           "id": "diagonal-fences",
           "name": "Diagonal Fences",
           "images": [
-            "https://placehold.co/800x450/0d0800/d97706?text=Diagonal+Fences"
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalfences/media/1.png",
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalfences/media/2.png",
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalfences/media/3.png"
           ],
           "paragraphs": [
             "Permite colocar vallas en diagonal para construir cercas más naturales y estéticamente agradables."
@@ -761,7 +763,7 @@
           "id": "diagonal-walls",
           "name": "Diagonal Walls",
           "images": [
-            "https://placehold.co/800x450/0d0900/b45309?text=Diagonal+Walls"
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwalls/media/1.png"
           ],
           "paragraphs": [
             "Permite colocar muros de piedra en diagonal, ideal para diseños arquitectónicos más complejos y naturales."
@@ -771,7 +773,9 @@
           "id": "diagonal-windows",
           "name": "Diagonal Windows",
           "images": [
-            "https://placehold.co/800x450/00101a/60a5fa?text=Diagonal+Windows"
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwindows/media/1.png",
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwindows/media/3.png",
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwindows/media/3.png"
           ],
           "paragraphs": [
             "Permite colocar cristales y ventanas en diagonal. Construye fachadas modernas y tejados con ángulos únicos."
@@ -781,10 +785,13 @@
           "id": "immersive-paintings",
           "name": "Immersive Paintings",
           "images": [
-            "https://placehold.co/800x450/1a001a/e879f9?text=Immersive+Paintings"
+            "https://media.forgecdn.net/attachments/474/232/screen_editor.jpg",
+            "https://media.forgecdn.net/attachments/474/233/screen_multi.jpg",
+            "https://media.forgecdn.net/attachments/474/234/screen_selector.jpg",
+            "https://media.forgecdn.net/attachments/474/234/screen_selector.jpg"
           ],
           "paragraphs": [
-            "Permite crear cuadros personalizados con tus propias imágenes, transformando las pinturas de Minecraft en arte real."
+            "¡Usa tus propias pinturas! ¡Arrastra y suelta! ¡En modo multijugador!"
           ]
         },
         {
@@ -814,7 +821,10 @@
             "https://placehold.co/800x450/0d1400/84cc16?text=Amendments"
           ],
           "paragraphs": [
-            "Addon de Supplementaries que añade aún más bloques y objetos decorativos integrados con el estilo del mod principal."
+            "Amendments es un mod muy configurable que se centra en realizar ajustes a muchos de los bloques originales del juego.",
+            "El objetivo de este mod es brindar más funcionalidades y mejorar el aspecto visual de muchas características del juego base sin agregar otras nuevas.",
+            "Mezcla de pociones en caldero, animación de linternas, escaleras alfombradas, calaveras de velas, pasteles dobles, mejores nenúfares y mucho más.",
+            "Este mod nació de la fusión de algunos de nuestros mods existentes. Por lo tanto, ya no necesitarás instalarlos. Estos son:\n\nEscaleras alfombradas\nMejores nenúfares\nMejores máquinas de discos\nAlgunas características complementarias\n\nAlgunas de las características más destacadas del mod son:\n\nMezcla de pociones en caldero\nFaroles de pared y animación de cómo sostener un farol\nMontones de calaveras y calaveras de velas\nMejor interfaz gráfica de usuario para atril"
           ]
         }
       ]
@@ -843,50 +853,62 @@
           "id": "fd-brewin-chewin",
           "name": "Farmer's Delight: Brewin' And Chewin'",
           "images": [
-            "https://placehold.co/800x450/1a0a00/f59e0b?text=Brewin+%26+Chewin"
+            "https://media.forgecdn.net/attachments/472/395/2022-06-27_21.png",
+            "https://media.forgecdn.net/attachments/472/394/2022-06-27_21.png",
+            "https://media.forgecdn.net/attachments/472/392/2022-06-27_21.png",
+            "https://media.forgecdn.net/attachments/472/393/2022-06-27_21.png"
           ],
           "paragraphs": [
-            "Addon de Farmer's Delight que añade cervecería, quesos y recetas fermentadas especiales."
+            "Complemento de Farmer's Delight que añade bebidas fermentadas. CERVEZAA"
           ]
         },
         {
           "id": "fd-starcatcher",
-          "name": "Farmer's Delight: Starcatcher",
+          "name": "Farmer's Delight: Eternal Starlight",
           "images": [
-            "https://placehold.co/800x450/00001a/6366f1?text=FD+Starcatcher"
+            "https://media.forgecdn.net/attachments/1705/943/2026-05-26_22-01-52-png.png",
+            "https://i.imgur.com/G4k4MIs.png"
           ],
           "paragraphs": [
-            "Compatibilidad entre Farmer's Delight y Starcatcher. Nuevas recetas que combinan ingredientes de ambos mods."
+            "Un mod que añade elementos de Eternal Starlight al mod de Farmer's Delight."
           ]
         },
         {
           "id": "fd-create",
           "name": "Farmer's Delight: Create",
           "images": [
-            "https://placehold.co/800x450/0d0018/c084fc?text=FD+Create"
+            "https://media.forgecdn.net/attachments/1203/72/3-png.png",
+            "https://media.forgecdn.net/attachments/1203/75/db095b9db32a26259327db653e41b37b4ede2104-png.png",
+            "https://media.forgecdn.net/attachments/1203/74/1bcdb418bac23eeafcae00d3193ff16c0d36750d-png.png",
+            "https://media.forgecdn.net/attachments/1203/73/izobrazhenie_2023-06-18_164230341-png.png"
           ],
           "paragraphs": [
-            "Integración entre Farmer's Delight y Create. Permite automatizar la cocina y la agricultura con maquinaria rotacional."
+            "Realizando automatización entre Farmer's Delight y Create"
           ]
         },
         {
           "id": "fd-end",
           "name": "Farmer's Delight: End",
           "images": [
-            "https://placehold.co/800x450/000d1a/818cf8?text=FD+End"
+            "https://media.forgecdn.net/attachments/651/34/ec317920-b9ea-4e16-a83a-36235c33ebba.png",
+            "https://media.forgecdn.net/attachments/651/37/2023-04-23_16.png",
+            "https://media.forgecdn.net/attachments/894/80/2024-06-20_19.png"
           ],
           "paragraphs": [
-            "Addon de Farmer's Delight con cultivos y recetas únicas del End. Ingredientes exóticos de la dimensión final."
+            "¡Un mod adicional para Farmer's Delight que consiste en añadir contenido culinario al final!"
           ]
         },
         {
           "id": "fd-nether",
           "name": "Farmer's Delight: Nether",
           "images": [
-            "https://placehold.co/800x450/1a0500/ef4444?text=FD+Nether"
+            "https://media.forgecdn.net/attachments/859/610/2024-05-04_14.png",
+            "https://media.forgecdn.net/attachments/859/611/2024-05-04_13.png",
+            "https://media.forgecdn.net/attachments/859/608/2024-05-04_12.png",
+            "https://media.forgecdn.net/attachments/859/609/2024-05-04_13.png"
           ],
           "paragraphs": [
-            "Addon de Farmer's Delight con cultivos y recetas del Nether. Cocina con ingredientes de las dimensiones infernales."
+            "Nuevo complemento del Nether para Farmer's Delight"
           ]
         },
         {
@@ -929,30 +951,34 @@
           "id": "player-revive",
           "name": "Player Revive",
           "images": [
-            "https://placehold.co/800x450/001a0d/4ade80?text=Player+Revive"
+            "https://media.forgecdn.net/avatars/97/938/636295724985402020.png"
           ],
           "paragraphs": [
-            "Al morir, los jugadores entran en estado de agonía durante unos segundos. Sus compañeros pueden revivirse antes de morir definitivamente."
+            "Reanima a tus amigos"
           ]
         },
         {
           "id": "simple-corpse",
           "name": "Simple Corpse",
           "images": [
-            "https://placehold.co/800x450/0d000d/d946ef?text=Simple+Corpse"
+            "https://media.forgecdn.net/attachments/description/null/description_ee706ae5-1e21-418b-8e37-976b91d57ea7.png",
+            "https://media.forgecdn.net/attachments/description/1096099/description_4615216c-036e-4296-b54d-548dc6b79c60.png"
           ],
           "paragraphs": [
-            "Al morir, tu inventario queda guardado en un cuerpo en el lugar de la muerte. Protege tus objetos durante un tiempo limitado."
+            "Mod básico de lápida con el estilo de un cadáver, sin interfaz de usuario ni teclas de acceso rápido."
           ]
         },
         {
           "id": "easy-anvils",
           "name": "Easy Anvils",
           "images": [
-            "https://placehold.co/800x450/0d0d0d/94a3b8?text=Easy+Anvils"
+            "https://media.forgecdn.net/attachments/503/27/2022-09-29_08.png",
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/easyanvils/media/1.png",
+            "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/easyanvils/media/2.png"
           ],
           "paragraphs": [
-            "Elimina el límite de coste de experiencia en los yunques y permite reparar objetos sin el fastidioso 'Too Expensive!'."
+            "Easy Anvils hace que los yunques sean más cómodos, menos frustrantes y mucho más prácticos de usar. Los objetos permanecen dentro de la interfaz al cerrarla, mientras que el contenido se muestra directamente en el bloque para una experiencia más inmersiva.",
+            "El mod también modifica varias mecánicas del yunque del juego base que pueden hacer que reparar y mejorar el equipo sea innecesariamente tedioso. Las penalizaciones por trabajo previo son mucho menos restrictivas, los costes de reparación se mantienen razonables durante más tiempo y varias acciones comunes resultan más asequibles."
           ]
         },
         {

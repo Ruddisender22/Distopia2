@@ -98,7 +98,7 @@
             "Implementa un sistema de anatomía avanzado que permite operar y extraer órganos.",
             "Posibilita robar órganos a criaturas exóticas para implantarlos en el cuerpo y absorber así sus atributos naturales."
           ],
-          "status": "REVISIÓN"
+          "status": "ELIMINADO"
         },
         {
           "id": "minecraft-comes-alive",
@@ -417,7 +417,10 @@
           "id": "treasures-of-the-dead",
           "name": "Treasures Of The Dead",
           "images": [
-            "https://media.forgecdn.net/attachments/1080/510/logo3.jpg"
+            "https://media.forgecdn.net/attachments/1080/510/logo3.jpg",
+            "https://media.forgecdn.net/attachments/1056/46/1.png",
+            "https://media.forgecdn.net/attachments/1144/176/2025-03-31_18-20-15-png.png",
+            "https://media.forgecdn.net/attachments/1080/511/7.png"
           ],
           "paragraphs": [
             "Añade nuevos enemigos piratas, estructuras oceánicas y características relacionadas con la piratería."
@@ -677,6 +680,16 @@
           ],
           "paragraphs": [
             "Incorpora un sistema de racha de bajas al combate. Matar monstruos en rápida sucesión otorga beneficios como mayor daño de ataque o daño de fuego en los golpes, facilitando el enfrentamiento contra grupos numerosos de enemigos."
+          ]
+        },
+        {
+          "id": "clean-swing",
+          "name": "Clean Swing",
+          "images": [
+            "https://i.ytimg.com/vi/7DbhDJlCPpE/maxresdefault.jpg"
+          ],
+          "paragraphs": [
+            "Golpea a tus enemigos en hierbas altas"
           ]
         }
       ]

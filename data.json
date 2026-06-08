@@ -697,6 +697,20 @@
       "icon": "🔮",
       "mods": [
         {
+          "id": "corail-tombstone",
+          "name": "Corail Tombstone",
+          "images": [
+            "https://media.forgecdn.net/attachments/433/292/grave_plate_test.jpg",
+            "https://media.forgecdn.net/attachments/1277/770/knowledge-screen.png",
+            "https://media.forgecdn.net/attachments/433/288/ambience.jpg"
+          ],
+          "paragraphs": [
+            "Guarda tus objetos de inventario a salvo en tumbas al morir, con muchas características para una mejor supervivencia y exploración, en una atmósfera de fantasía medieval relacionada con las tumbas decorativas y las almas fantasmales.",
+            "También introduce un sistema de ventajas: el Conocimiento de la Muerte, y un sistema mágico basado en objetos encantables con la ayuda de las Almas que rondan las Tumbas Decorativas y esperan ser liberadas de su condena eterna.",
+            "Una pantalla dentro del juego permite configurar las preferencias del jugador, acceder a un Compendio de información y seleccionar las ventajas."
+          ]
+        },
+        {
           "id": "pastel",
           "name": "Pastel",
           "images": [
@@ -1155,20 +1169,6 @@
             "Mod básico de lápida con el estilo de un cadáver, sin interfaz de usuario ni teclas de acceso rápido."
           ],
           "status": "ELIMINADO"
-        },
-        {
-          "id": "corail-tombstone",
-          "name": "Corail Tombstone",
-          "images": [
-            "https://media.forgecdn.net/attachments/433/292/grave_plate_test.jpg",
-            "https://media.forgecdn.net/attachments/1277/770/knowledge-screen.png",
-            "https://media.forgecdn.net/attachments/433/288/ambience.jpg"
-          ],
-          "paragraphs": [
-            "Guarda tus objetos de inventario a salvo en tumbas al morir, con muchas características para una mejor supervivencia y exploración, en una atmósfera de fantasía medieval relacionada con las tumbas decorativas y las almas fantasmales.",
-            "También introduce un sistema de ventajas: el Conocimiento de la Muerte, y un sistema mágico basado en objetos encantables con la ayuda de las Almas que rondan las Tumbas Decorativas y esperan ser liberadas de su condena eterna.",
-            "Una pantalla dentro del juego permite configurar las preferencias del jugador, acceder a un Compendio de información y seleccionar las ventajas."
-          ]
         },
         {
           "id": "easy-anvils",

@@ -195,7 +195,8 @@
           "paragraphs": [
             "Introduce el lúgubre bioma del Jardín Pálido y la misteriosa criatura Creaking al juego.",
             "Incluye nueva vegetación como el Roble pálido, junto con bloques decorativos de musgo y alfombras pálidas."
-          ]
+          ],
+          "status": "ELIMINADO"
         },
         {
           "id": "better-villages",

@@ -778,14 +778,14 @@
           ]
         },
         {
-          "id": "grappling-hooks",
-          "name": "Yori3o's Grappling Hooks",
+          "id": "simple-grappling-hook",
+          "name": "Simple Grappling Hook",
           "images": [
-            "https://media.forgecdn.net/attachments/1376/880/ergwgw-png.png",
-            "https://media.forgecdn.net/attachments/1376/879/video_2025-10-31_16-15-26-ezgif-com-video-to-webp.webp"
+            "https://media.forgecdn.net/attachments/1620/441/craft-png.png"
           ],
           "paragraphs": [
-            "Añade ganchos de agarre realistas y con un aspecto similar al del juego base."
+            "Añade un gancho de agarre funcional a Minecraft.",
+            "Lanza el gancho de agarre hacia cualquier bloque sólido.\nEngánchate a las superficies y serás atraído hacia ellas automáticamente.\nUna vez enganchado el gancho, tira de ti mismo con un segundo clic derecho.\nCadena de cuerda colocada entre tu mano y el gancho\nLigero : solo se genera 1 entidad por jugador, sin retrasos."
           ]
         },
         {
@@ -977,26 +977,6 @@
           "paragraphs": [
             "¡Usa tus propias pinturas! ¡Arrastra y suelta! ¡En modo multijugador!"
           ]
-        },
-        {
-          "id": "supplementaries",
-          "name": "Supplementaries",
-          "images": [
-            "https://media.forgecdn.net/attachments/401/408/supp_logo2.png",
-            "https://media.forgecdn.net/attachments/413/33/2021-12-06_18.png",
-            "https://media.forgecdn.net/attachments/619/842/2021-02-14-18-22-45.png",
-            "https://media.forgecdn.net/attachments/334/226/2021-01-14_02.png",
-            "https://media.forgecdn.net/attachments/402/106/2021-09-09_03.png",
-            "https://media.forgecdn.net/attachments/497/780/candles.png",
-            "https://media.forgecdn.net/attachments/619/841/ktmc9fp.png",
-            "https://media.forgecdn.net/attachments/619/845/ybsafhl.png",
-            "https://media.forgecdn.net/attachments/619/846/way-sign.png"
-          ],
-          "paragraphs": [
-            "Agrega multitud de herramientas funcionales de estilo clásico: tarros, letreros detallados, veletas, macetas y automatización.",
-            "Se enfoca en enriquecer la interactividad del mundo con bloques estéticos pero sumamente útiles."
-          ],
-          "status": "REVISIÓN"
         },
         {
           "id": "amendments",

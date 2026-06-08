@@ -1160,11 +1160,14 @@
           "id": "corail-tombstone",
           "name": "Corail Tombstone",
           "images": [
-            "https://i.imgur.com/gK9tqJk.png"
+            "https://media.forgecdn.net/attachments/433/292/grave_plate_test.jpg",
+            "https://media.forgecdn.net/attachments/1277/770/knowledge-screen.png",
+            "https://media.forgecdn.net/attachments/433/288/ambience.jpg"
           ],
           "paragraphs": [
-            "Evita la pérdida de objetos al morir generando una tumba decorativa en tu lugar de muerte.",
-            "Desbloquea tu tumba usando la llave que recibes al reaparecer. Además de proteger tu inventario, incluye un sistema ligero de magia medieval, control de encantamientos y conocimientos de la muerte que enriquecen la aventura."
+            "Guarda tus objetos de inventario a salvo en tumbas al morir, con muchas características para una mejor supervivencia y exploración, en una atmósfera de fantasía medieval relacionada con las tumbas decorativas y las almas fantasmales.",
+            "También introduce un sistema de ventajas: el Conocimiento de la Muerte, y un sistema mágico basado en objetos encantables con la ayuda de las Almas que rondan las Tumbas Decorativas y esperan ser liberadas de su condena eterna.",
+            "Una pantalla dentro del juego permite configurar las preferencias del jugador, acceder a un Compendio de información y seleccionar las ventajas."
           ]
         },
         {

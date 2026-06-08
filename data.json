@@ -567,7 +567,7 @@
             "Modifica el comportamiento del fuego para que se propague de forma veloz y realista.",
             "Los incendios dejarán tras de sí bloques carbonizados y cenizas en lugar de hacer desaparecer instantáneamente la madera."
           ],
-          "status": "REVISIÓN"
+          "status": "ELIMINADO"
         },
         {
           "id": "savage-ender-dragon",

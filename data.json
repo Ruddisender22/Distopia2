@@ -790,17 +790,6 @@
           "status": "ELIMINADO"
         },
         {
-          "id": "simple-grappling-hook",
-          "name": "Simple Grappling Hook",
-          "images": [
-            "https://media.forgecdn.net/attachments/1620/441/craft-png.png"
-          ],
-          "paragraphs": [
-            "Añade un gancho de agarre funcional a Minecraft.",
-            "Lanza el gancho de agarre hacia cualquier bloque sólido.\nEngánchate a las superficies y serás atraído hacia ellas automáticamente.\nUna vez enganchado el gancho, tira de ti mismo con un segundo clic derecho.\nCadena de cuerda colocada entre tu mano y el gancho\nLigero : solo se genera 1 entidad por jugador, sin retrasos."
-          ]
-        },
-        {
           "id": "warrior-rage",
           "name": "Warrior Rage",
           "images": [

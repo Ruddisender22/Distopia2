@@ -778,6 +778,18 @@
           ]
         },
         {
+          "id": "grappling-hooks",
+          "name": "Yori3o's Grappling Hooks",
+          "images": [
+            "https://media.forgecdn.net/attachments/1376/880/ergwgw-png.png",
+            "https://media.forgecdn.net/attachments/1376/879/video_2025-10-31_16-15-26-ezgif-com-video-to-webp.webp"
+          ],
+          "paragraphs": [
+            "Añade ganchos de agarre realistas y con un aspecto similar al del juego base."
+          ],
+          "status": "ELIMINADO"
+        },
+        {
           "id": "simple-grappling-hook",
           "name": "Simple Grappling Hook",
           "images": [

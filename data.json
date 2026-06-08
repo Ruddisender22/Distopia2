@@ -457,7 +457,8 @@
           "paragraphs": [
             "Enderman Overhaul es un mod que expande drásticamente las variantes del Enderman, añadiendo más de 20 tipos nuevos. Cada variante tiene sus propios sonidos, modelos y animaciones únicos, y están adaptados a biomas específicos para hacer la exploración más diversa y desafiante.",
             "Algunas variantes son pacíficas, mientras que otras son muy agresivas incluso sin contacto visual directo. También pueden soltar perlas de Ender especiales y otros recursos dependiendo de su hábitat."
-          ]
+          ],
+          "status": "ELIMINADO"
         },
         {
           "id": "creeper-overhaul",
@@ -473,7 +474,8 @@
           "paragraphs": [
             "Creeper Overhaul reemplaza a los clásicos creepers con una amplia variedad de nuevos tipos específicos de cada bioma (como creepers de la jungla, océano o nieve).",
             "Cada variante tiene comportamientos, animaciones y modelos únicos proporcionados por GeckoLib, y algunos sueltan botines especiales o tienen interacciones distintas con su entorno. ¡Cuidado con los que se camuflan!"
-          ]
+          ],
+          "status": "ELIMINADO"
         },
         {
           "id": "myths-and-legends",
@@ -684,7 +686,8 @@
           "paragraphs": [
             "Create Nuclear es un complemento para Create que te permite entrar en la era atómica introduciendo un complejo sistema de energía nuclear.",
             "Podrás automatizar la extracción y el refinado de uranio para alimentar reactores que generan inmensas cantidades de energía (Stress Units). Sin embargo, tendrás que construir protecciones y lidiar con los enormes peligros que conlleva la radiación."
-          ]
+          ],
+          "status": "ELIMINADO"
         }
       ]
     },

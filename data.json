@@ -819,7 +819,8 @@
           "paragraphs": [
             "Enderite Mod añade un nuevo material extremadamente poderoso al juego: la Enderita. Este material sirve como una evolución y mejora directa para la Netherita y se puede encontrar en las profundidades de The End.",
             "Para extraerlo deberás explotar la mena y luego fundirla. El equipamiento creado con Enderita tiene habilidades únicas, como la capacidad de flotar en el vacío para evitar que pierdas tus objetos valiosos."
-          ]
+          ],
+          "status": "ELIMINADO"
         },
         {
           "id": "relics",

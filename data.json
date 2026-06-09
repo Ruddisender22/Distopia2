@@ -1058,6 +1058,77 @@
                                                              "Reliquified L_Ender's Cataclysm es un puente de compatibilidad que añade potentes reliquias inspiradas en los temibles jefes, mecánicas y estructuras de L_Ender's Cataclysm.",
                                                              "Está pensado para enriquecer la progresión en el juego tardío, recompensando a los jugadores que superen los formidables retos de los jefes con poderosas habilidades pasivas y activas vinculadas a sus nuevas reliquias."
                                                          ]
+                                      },
+                                      {
+                                          "id":  "blossom-blade",
+                                          "name":  "Blossom Blade",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/864/763/blossom.png",
+                                                         "https://media.forgecdn.net/attachments/description/920268/description_3e1a24d5-de12-47f8-bcbd-01f10216c892.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade la Espada del Cerezo, un arma poderosa que brilla y suelta partículas de flores de cerezo al atacar."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "extra-bows-restrung",
+                                          "name":  "Extra bows: Restrung",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/description/null/description_7e874b81-8b0d-4f77-b0e2-dcdc17c71135.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade nuevos arcos y ballestas fabricables con diferentes materiales (hierro, diamante, netherita...) con estadísticas mejoradas."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "immersive-armors",
+                                          "name":  "Immersive Armors",
+                                          "paragraphs":  [
+                                                             "Añade docenas de nuevos conjuntos de armaduras fabricables con diseños únicos que encajan perfectamente con el estilo visual del juego."
+                                                         ],
+                                          "status":  "REVISIÓN",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/433/26/banner.jpg",
+                                                         "https://media.forgecdn.net/attachments/456/40/items.png"
+                                                     ]
+                                      },
+                                      {
+                                          "id":  "shield-expansion",
+                                          "name":  "Shield Expansion",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/description/583318/description_041a6191-5f41-4dfb-8dae-25037fabdb89.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade escudos de distintos materiales, la mecánica de paradas precisas (parries) y nuevos encantamientos defensivos."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "shield-parry",
+                                          "name":  "Shield Parry",
+                                          "images":  [
+                                                         "https://www.minecrafteo.com/wp-content/uploads/2019/02/shield-parry-mod.jpg"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade la posibilidad de desviar ataques (parry) y golpear a los enemigos con el escudo para darte ventaja estratégica en el combate cuerpo a cuerpo."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "slimy-stuff",
+                                          "name":  "Slimy Stuff",
+                                          "images":  [
+                                                         "https://i.ytimg.com/vi/drfL8aj8NRs/maxresdefault.jpg",
+                                                         "https://media.forgecdn.net/attachments/739/559/image2.png",
+                                                         "https://media.forgecdn.net/attachments/739/560/image3.png",
+                                                         "https://media.forgecdn.net/attachments/739/561/image4.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade nuevas armaduras de limo que te permiten rebotar, armas pegajosas y otros bloques de utilidad basados en las mecánicas del slime."
+                                                         ],
+                                          "status":  "REVISIÓN"
                                       }
                                   ]
                      },
@@ -1110,6 +1181,76 @@
                                           "paragraphs":  [
                                                              "Ofrece un dispositivo dimensional que registra puntos de interés en el espacio para abrir portales de teletransporte instantáneos entre ellos."
                                                          ]
+                                      },
+                                      {
+                                          "id":  "horseman",
+                                          "name":  "Horseman",
+                                          "images":  [
+                                                         "https://raw.githubusercontent.com/mortuusars/resources/main/media/horseman/horseman_in_boat.png",
+                                                         "https://raw.githubusercontent.com/mortuusars/resources/main/media/horseman/horseman_block_breaking.gif",
+                                                         "https://raw.githubusercontent.com/mortuusars/resources/main/media/horseman/horseman_hitch.gif"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Mejora el manejo de los caballos añadiendo conducción más suave, una mecánica para atarlos más fácilmente a los postes, y otras mejoras de control."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "icarus",
+                                          "name":  "Icarus",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/362/78/wings-mechanical-leather.png",
+                                                         "https://media.forgecdn.net/attachments/362/76/wings-feathered.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade una gran variedad de alas coloridas y únicas que puedes equiparte en la ranura de capa para volar y planear libremente por el mundo."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "piggyback",
+                                          "name":  "Piggyback",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/1155/651/example2-png.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Permite a los jugadores montarse sobre los hombros de otros jugadores o entidades para transportarlos fácilmente de un lado a otro."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "shiny-horses-reborn",
+                                          "name":  "Shiny Horses Reborn",
+                                          "images":  [
+                                                         "https://i.postimg.cc/ydHcCR9g/shinyhorses0.png",
+                                                         "https://media.forgecdn.net/avatars/thumbnails/1448/558/256/256/638939808367536897.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Permite aplicar encantamientos como Protección, Caída de Pluma o Velocidad directamente a las armaduras para caballos."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "simple-netherite-horse-armor",
+                                          "name":  "Simple Netherite Horse Armor",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/823/747/nha_tn-0.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade una robusta y resistente armadura de netherita fabricable para proteger al máximo a tus caballos."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "two-players-one-horse",
+                                          "name":  "Two Players One Horse",
+                                          "images":  [
+                                                         "https://r2.mcpedl.com/submissions/224543/images/2-players-on-horse-v111_2.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Permite que dos jugadores se monten y viajen juntos simultáneamente en un mismo caballo."
+                                                         ],
+                                          "status":  "REVISIÓN"
                                       }
                                   ]
                      },
@@ -1210,6 +1351,19 @@
                                                              "Realiza numerosos ajustes a los bloques originales del juego para brindarles más funcionalidades e inmersión.",
                                                              "Permite la mezcla de pociones en calderos, colocación de linternas en muros, apilado de calaveras y adición de detalles decorativos."
                                                          ]
+                                      },
+                                      {
+                                          "id":  "reddens-stone-lanterns",
+                                          "name":  "Redden's Stone Lanterns",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/794/976/e006207b28cd7045b414b0f25df6e822.png",
+                                                         "https://cdn.modrinth.com/data/cached_images/1ea27018a90f4aedf8ff7a31449b535e3b38ea20.jpeg",
+                                                         "https://media.forgecdn.net/attachments/794/973/e1de3375c63ae4dc16ba728fdfaefcc4.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade nuevos bloques de faroles de piedra elaborados y decorativos para iluminar y adornar tus construcciones exteriores y jardines."
+                                                         ],
+                                          "status":  "REVISIÓN"
                                       }
                                   ]
                      },
@@ -1314,56 +1468,9 @@
                                   ]
                      },
                      {
-                         "name":  "Utilidades y Calidad de Vida",
-                         "icon":  "🔧",
+                         "name":  "Utilidades",
+                         "icon":  "ðŸ§°",
                          "mods":  [
-                                      {
-                                          "id":  "lootr",
-                                          "name":  "Lootr",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
-                                                         "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Transforma la obtención de botín generando recompensas de forma individual en cada contenedor para cada jugador.",
-                                                             "Elimina la competencia desleal; todo explorador podrá abrir los cofres de las mazmorras y obtener su parte."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "player-revive",
-                                          "name":  "Player Revive",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/avatars/97/938/636295724985402020.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Reanima a tus amigos"
-                                                         ]
-                                      },
-                                      {
-                                          "id":  "simple-corpse",
-                                          "name":  "Simple Corpse",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/description/null/description_ee706ae5-1e21-418b-8e37-976b91d57ea7.png",
-                                                         "https://media.forgecdn.net/attachments/description/1096099/description_4615216c-036e-4296-b54d-548dc6b79c60.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Mod básico de lápida con el estilo de un cadáver, sin interfaz de usuario ni teclas de acceso rápido."
-                                                         ],
-                                          "status":  "ELIMINADO"
-                                      },
-                                      {
-                                          "id":  "easy-anvils",
-                                          "name":  "Easy Anvils",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/503/27/2022-09-29_08.png",
-                                                         "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/easyanvils/media/1.png",
-                                                         "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/easyanvils/media/2.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Mejora enormemente la experiencia al usar yunques, guardando objetos en su interior al salir del menú y ajustando inteligentemente los costos de nivel."
-                                                         ]
-                                      },
                                       {
                                           "id":  "natures-compass",
                                           "name":  "Nature's Compass",
@@ -1428,6 +1535,122 @@
                                                          ]
                                       },
                                       {
+                                          "id":  "mmmmmmmmmmmm",
+                                          "name":  "MmmMmmMmmMmm",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/316/868/modpage.png",
+                                                         "https://media.forgecdn.net/attachments/316/883/ouch.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "MmmMmmMmmMmm (más conocido como Target Dummy) añade un objeto muy útil: el muñeco de pruebas de daño. Al golpearlo te mostrará números exactos indicando cuánto daño (DPS) logras infligir con tus armas.",
+                                                             "Puedes equiparlo con armaduras para probar la penetración de daño contra objetivos resistentes, o ponerle cabezas de monstruos para convertirlo en no-muerto y comprobar cómo afectan encantamientos específicos como Castigo (Smite)."
+                                                         ]
+                                      },
+                                      {
+                                          "id":  "comforts",
+                                          "name":  "Comforts",
+                                          "images":  [
+                                                         "https://i.ytimg.com/vi/zwIGHJP5pME/maxresdefault.jpg",
+                                                         "https://media.forgecdn.net/attachments/219/973/hammockpan.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade sacos de dormir y hamacas (en 16 colores) que te permiten pasar la noche o el día rápidamente sin cambiar tu punto de reaparición."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "field-guide",
+                                          "name":  "Field Guide",
+                                          "images":  [
+                                                         "https://i.ytimg.com/vi/T7dFUs4GFzY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAV48tRTFuVbpe6d2BJOLjnaj-VLQ",
+                                                         "https://media.forgecdn.net/attachments/1558/481/2026-02-27_23-05-23-png.png",
+                                                         "https://media.forgecdn.net/attachments/1572/144/emu-png.png",
+                                                         "https://media.forgecdn.net/attachments/1558/483/2026-02-27_23-08-41-png.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade una Guía de Campo interactiva. Usa el catalejo para escanear y registrar información detallada sobre las plantas, animales y monstruos del mundo."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "playing-cards-chips",
+                                          "name":  "Playing Cards & Chips",
+                                          "images":  [
+                                                         "https://i.imgur.com/8ivTYrw.png",
+                                                         "https://i.imgur.com/bBav8cT.png",
+                                                         "https://i.imgur.com/O2WBvJI.png",
+                                                         "https://static.planetminecraft.com/files/image/minecraft/texture-pack/2021/361/13947043_xl.webp"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade barajas de cartas y fichas de póquer completamente funcionales para que puedas jugar y apostar con tus amigos."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "spain-national-anthem",
+                                          "name":  "Spain National Anthem",
+                                          "images":  [
+                                                         "https://i.ytimg.com/vi/wp9VJ3dMlds/maxresdefault.jpg"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      }
+                                  ]
+                     },
+                     {
+                         "name":  "Calidad de Vida",
+                         "icon":  "âœ¨",
+                         "mods":  [
+                                      {
+                                          "id":  "lootr",
+                                          "name":  "Lootr",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
+                                                         "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Transforma la obtención de botín generando recompensas de forma individual en cada contenedor para cada jugador.",
+                                                             "Elimina la competencia desleal; todo explorador podrá abrir los cofres de las mazmorras y obtener su parte."
+                                                         ],
+                                          "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "player-revive",
+                                          "name":  "Player Revive",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/avatars/97/938/636295724985402020.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Reanima a tus amigos"
+                                                         ]
+                                      },
+                                      {
+                                          "id":  "simple-corpse",
+                                          "name":  "Simple Corpse",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/description/null/description_ee706ae5-1e21-418b-8e37-976b91d57ea7.png",
+                                                         "https://media.forgecdn.net/attachments/description/1096099/description_4615216c-036e-4296-b54d-548dc6b79c60.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Mod básico de lápida con el estilo de un cadáver, sin interfaz de usuario ni teclas de acceso rápido."
+                                                         ],
+                                          "status":  "ELIMINADO"
+                                      },
+                                      {
+                                          "id":  "easy-anvils",
+                                          "name":  "Easy Anvils",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/503/27/2022-09-29_08.png",
+                                                         "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/easyanvils/media/1.png",
+                                                         "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/easyanvils/media/2.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Mejora enormemente la experiencia al usar yunques, guardando objetos en su interior al salir del menú y ajustando inteligentemente los costos de nivel."
+                                                         ]
+                                      },
+                                      {
                                           "id":  "ht-treechop",
                                           "name":  "HT's TreeChop",
                                           "images":  [
@@ -1482,18 +1705,6 @@
                                                      ],
                                           "paragraphs":  [
                                                              "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
-                                                         ]
-                                      },
-                                      {
-                                          "id":  "mmmmmmmmmmmm",
-                                          "name":  "MmmMmmMmmMmm",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/316/868/modpage.png",
-                                                         "https://media.forgecdn.net/attachments/316/883/ouch.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "MmmMmmMmmMmm (más conocido como Target Dummy) añade un objeto muy útil: el muñeco de pruebas de daño. Al golpearlo te mostrará números exactos indicando cuánto daño (DPS) logras infligir con tus armas.",
-                                                             "Puedes equiparlo con armaduras para probar la penetración de daño contra objetivos resistentes, o ponerle cabezas de monstruos para convertirlo en no-muerto y comprobar cómo afectan encantamientos específicos como Castigo (Smite)."
                                                          ]
                                       }
                                   ]
@@ -1590,235 +1801,6 @@
                                           "paragraphs":  [
                                                              "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
                                                          ]
-                                      }
-                                  ]
-                     },
-                     {
-                         "name":  "Equipamiento y Combate",
-                         "icon":  "⚔️",
-                         "mods":  [
-                                      {
-                                          "id":  "blossom-blade",
-                                          "name":  "Blossom Blade",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/864/763/blossom.png",
-                                                         "https://media.forgecdn.net/attachments/description/920268/description_3e1a24d5-de12-47f8-bcbd-01f10216c892.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade la Espada del Cerezo, un arma poderosa que brilla y suelta partículas de flores de cerezo al atacar."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "extra-bows-restrung",
-                                          "name":  "Extra bows: Restrung",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/description/null/description_7e874b81-8b0d-4f77-b0e2-dcdc17c71135.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade nuevos arcos y ballestas fabricables con diferentes materiales (hierro, diamante, netherita...) con estadísticas mejoradas."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "immersive-armors",
-                                          "name":  "Immersive Armors",
-                                          "paragraphs":  [
-                                                             "Añade docenas de nuevos conjuntos de armaduras fabricables con diseños únicos que encajan perfectamente con el estilo visual del juego."
-                                                         ],
-                                          "status":  "REVISIÓN",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/433/26/banner.jpg",
-                                                         "https://media.forgecdn.net/attachments/456/40/items.png"
-                                                     ]
-                                      },
-                                      {
-                                          "id":  "shield-expansion",
-                                          "name":  "Shield Expansion",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/description/583318/description_041a6191-5f41-4dfb-8dae-25037fabdb89.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade escudos de distintos materiales, la mecánica de paradas precisas (parries) y nuevos encantamientos defensivos."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "shield-parry",
-                                          "name":  "Shield Parry",
-                                          "images":  [
-                                                         "https://www.minecrafteo.com/wp-content/uploads/2019/02/shield-parry-mod.jpg"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade la posibilidad de desviar ataques (parry) y golpear a los enemigos con el escudo para darte ventaja estratégica en el combate cuerpo a cuerpo."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "slimy-stuff",
-                                          "name":  "Slimy Stuff",
-                                          "images":  [
-                                                         "https://i.ytimg.com/vi/drfL8aj8NRs/maxresdefault.jpg",
-                                                         "https://media.forgecdn.net/attachments/739/559/image2.png",
-                                                         "https://media.forgecdn.net/attachments/739/560/image3.png",
-                                                         "https://media.forgecdn.net/attachments/739/561/image4.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade nuevas armaduras de limo que te permiten rebotar, armas pegajosas y otros bloques de utilidad basados en las mecánicas del slime."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      }
-                                  ]
-                     },
-                     {
-                         "name":  "Utilidades y Miscelánea",
-                         "icon":  "🧰",
-                         "mods":  [
-                                      {
-                                          "id":  "comforts",
-                                          "name":  "Comforts",
-                                          "images":  [
-                                                         "https://i.ytimg.com/vi/zwIGHJP5pME/maxresdefault.jpg",
-                                                         "https://media.forgecdn.net/attachments/219/973/hammockpan.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade sacos de dormir y hamacas (en 16 colores) que te permiten pasar la noche o el día rápidamente sin cambiar tu punto de reaparición."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "field-guide",
-                                          "name":  "Field Guide",
-                                          "images":  [
-                                                         "https://i.ytimg.com/vi/T7dFUs4GFzY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAV48tRTFuVbpe6d2BJOLjnaj-VLQ",
-                                                         "https://media.forgecdn.net/attachments/1558/481/2026-02-27_23-05-23-png.png",
-                                                         "https://media.forgecdn.net/attachments/1572/144/emu-png.png",
-                                                         "https://media.forgecdn.net/attachments/1558/483/2026-02-27_23-08-41-png.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade una Guía de Campo interactiva. Usa el catalejo para escanear y registrar información detallada sobre las plantas, animales y monstruos del mundo."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "playing-cards-chips",
-                                          "name":  "Playing Cards & Chips",
-                                          "images":  [
-                                                         "https://i.imgur.com/8ivTYrw.png",
-                                                         "https://i.imgur.com/bBav8cT.png",
-                                                         "https://i.imgur.com/O2WBvJI.png",
-                                                         "https://static.planetminecraft.com/files/image/minecraft/texture-pack/2021/361/13947043_xl.webp"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade barajas de cartas y fichas de póquer completamente funcionales para que puedas jugar y apostar con tus amigos."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "spain-national-anthem",
-                                          "name":  "Spain National Anthem",
-                                          "images":  [
-                                                         "https://i.ytimg.com/vi/wp9VJ3dMlds/maxresdefault.jpg"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      }
-                                  ]
-                     },
-                     {
-                         "name":  "Monturas y Vehículos",
-                         "icon":  "🐎",
-                         "mods":  [
-                                      {
-                                          "id":  "horseman",
-                                          "name":  "Horseman",
-                                          "images":  [
-                                                         "https://raw.githubusercontent.com/mortuusars/resources/main/media/horseman/horseman_in_boat.png",
-                                                         "https://raw.githubusercontent.com/mortuusars/resources/main/media/horseman/horseman_block_breaking.gif",
-                                                         "https://raw.githubusercontent.com/mortuusars/resources/main/media/horseman/horseman_hitch.gif"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Mejora el manejo de los caballos añadiendo conducción más suave, una mecánica para atarlos más fácilmente a los postes, y otras mejoras de control."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "icarus",
-                                          "name":  "Icarus",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/362/78/wings-mechanical-leather.png",
-                                                         "https://media.forgecdn.net/attachments/362/76/wings-feathered.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade una gran variedad de alas coloridas y únicas que puedes equiparte en la ranura de capa para volar y planear libremente por el mundo."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "piggyback",
-                                          "name":  "Piggyback",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/1155/651/example2-png.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Permite a los jugadores montarse sobre los hombros de otros jugadores o entidades para transportarlos fácilmente de un lado a otro."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "shiny-horses-reborn",
-                                          "name":  "Shiny Horses Reborn",
-                                          "images":  [
-                                                         "https://i.postimg.cc/ydHcCR9g/shinyhorses0.png",
-                                                         "https://media.forgecdn.net/avatars/thumbnails/1448/558/256/256/638939808367536897.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Permite aplicar encantamientos como Protección, Caída de Pluma o Velocidad directamente a las armaduras para caballos."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "simple-netherite-horse-armor",
-                                          "name":  "Simple Netherite Horse Armor",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/823/747/nha_tn-0.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade una robusta y resistente armadura de netherita fabricable para proteger al máximo a tus caballos."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      },
-                                      {
-                                          "id":  "two-players-one-horse",
-                                          "name":  "Two Players One Horse",
-                                          "images":  [
-                                                         "https://r2.mcpedl.com/submissions/224543/images/2-players-on-horse-v111_2.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Permite que dos jugadores se monten y viajen juntos simultáneamente en un mismo caballo."
-                                                         ],
-                                          "status":  "REVISIÓN"
-                                      }
-                                  ]
-                     },
-                     {
-                         "name":  "Decoración",
-                         "icon":  "🛋️",
-                         "mods":  [
-                                      {
-                                          "id":  "reddens-stone-lanterns",
-                                          "name":  "Redden's Stone Lanterns",
-                                          "images":  [
-                                                         "https://media.forgecdn.net/attachments/794/976/e006207b28cd7045b414b0f25df6e822.png",
-                                                         "https://cdn.modrinth.com/data/cached_images/1ea27018a90f4aedf8ff7a31449b535e3b38ea20.jpeg",
-                                                         "https://media.forgecdn.net/attachments/794/973/e1de3375c63ae4dc16ba728fdfaefcc4.png"
-                                                     ],
-                                          "paragraphs":  [
-                                                             "Añade nuevos bloques de faroles de piedra elaborados y decorativos para iluminar y adornar tus construcciones exteriores y jardines."
-                                                         ],
-                                          "status":  "REVISIÓN"
                                       }
                                   ]
                      }

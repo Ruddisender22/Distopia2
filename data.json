@@ -925,7 +925,8 @@
                     ],
                     "paragraphs": [
                         "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "irons-spells-n-spellbooks",
@@ -1113,7 +1114,8 @@
                     ],
                     "paragraphs": [
                         "Añade la Espada del Cerezo, un arma que brilla y emite partículas de flores de cerezo al atacar."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "extra-bows-restrung",

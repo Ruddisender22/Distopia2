@@ -1195,18 +1195,6 @@
                         "Añade minerales de nivel superior (Allthemodium, Vibranium y Unobtainium) que sirven para fabricar el equipamiento y herramientas más avanzadas del juego."
                     ],
                     "status": "NUEVO"
-                },
-                {
-                    "id": "zenith-sword",
-                    "name": "The Zenith Sword",
-                    "images": [
-                        "https://www.minecraft-guides.com/wp-content/uploads/2026/02/Zenith-Sword-Featured-Image-860x484.png",
-                        "https://www.minecraft-guides.com/wp-content/uploads/2026/02/Zenith-Sword-Effect-Shown-1024x576.png"
-                    ],
-                    "paragraphs": [
-                        "Añade la Espada Zenith, un arma de progresión tardía que se fabrica combinando un gran número de espadas únicas para obtener efectos de área devastadores."
-                    ],
-                    "status": "NUEVO"
                 }
             ]
         },

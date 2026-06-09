@@ -1,4 +1,4 @@
-{
+﻿{
     "sections":  [
                      {
                          "name":  "Dimensiones",
@@ -246,7 +246,8 @@
                                           "paragraphs":  [
                                                              "Añade una gigantesca arena de Illagers en el desierto, repleta de todo tipo de Illagers y valioso botín.",
                                                              "La arena tiene varias secciones: el campo de batalla en el centro, gradas para espectadores, zonas de preparación, dormitorios, una pequeña herrería y la habitación del Ilusionista con la mejor recompensa."
-                                                         ]
+                                                         ],
+                                          "status":  "ELIMINADO"
                                       },
                                       {
                                           "id":  "nether-trials",
@@ -632,7 +633,7 @@
                                           "paragraphs":  [
                                                              "Mejora las mecánicas del fuego en el juego, haciéndolo más dinámico y realista al quemar materiales."
                                                          ],
-                                          "status":  "REVISIÓN"
+                                          "status":  "SELECCIÓN DEL AUTOR"
                                       },
                                       {
                                           "id":  "miners-moon",
@@ -1089,7 +1090,7 @@
                                           "paragraphs":  [
                                                              "Añade docenas de nuevos conjuntos de armaduras fabricables con diseños únicos que encajan perfectamente con el estilo visual del juego."
                                                          ],
-                                          "status":  "REVISIÓN",
+                                          "status":  "SELECCIÓN DEL AUTOR",
                                           "images":  [
                                                          "https://media.forgecdn.net/attachments/433/26/banner.jpg",
                                                          "https://media.forgecdn.net/attachments/456/40/items.png"
@@ -1181,7 +1182,8 @@
                                                      ],
                                           "paragraphs":  [
                                                              "Ofrece un dispositivo dimensional que registra puntos de interés en el espacio para abrir portales de teletransporte instantáneos entre ellos."
-                                                         ]
+                                                         ],
+                                          "status":  "SELECCIÓN DEL AUTOR"
                                       },
                                       {
                                           "id":  "horseman",
@@ -1506,7 +1508,8 @@
                                                      ],
                                           "paragraphs":  [
                                                              "Cinturón de herramientas actualizable con intercambio rápido e intuitivo, integración con la API de Curios/Trinkets y mucho más."
-                                                         ]
+                                                         ],
+                                          "status":  "SELECCIÓN DEL AUTOR"
                                       },
                                       {
                                           "id":  "travelers-backpack",
@@ -1520,7 +1523,8 @@
                                                      ],
                                           "paragraphs":  [
                                                              "Mochilas personalizables con almacenamiento extra, tanques de fluidos y herramientas integradas. El compañero perfecto de exploración."
-                                                         ]
+                                                         ],
+                                          "status":  "SELECCIÓN DEL AUTOR"
                                       },
                                       {
                                           "id":  "mob-lassos",
@@ -1571,7 +1575,7 @@
                                           "paragraphs":  [
                                                              "Añade una Guía de Campo interactiva. Usa el catalejo para escanear y registrar información detallada sobre las plantas, animales y monstruos del mundo."
                                                          ],
-                                          "status":  "REVISIÓN"
+                                          "status":  "SELECCIÓN DEL AUTOR"
                                       },
                                       {
                                           "id":  "playing-cards-chips",

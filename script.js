@@ -364,6 +364,11 @@ function renderAll() {
 
   modData.sections.forEach(s => {
     s.mods.sort((a, b) => {
+      const aSel = a.status === "SELECCIÓN DEL AUTOR";
+      const bSel = b.status === "SELECCIÓN DEL AUTOR";
+      if (aSel && !bSel) return -1;
+      if (!aSel && bSel) return 1;
+
       const aElim = a.status === "ELIMINADO";
       const bElim = b.status === "ELIMINADO";
       if (aElim && !bElim) return 1;

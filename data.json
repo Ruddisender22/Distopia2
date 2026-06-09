@@ -668,7 +668,8 @@
                     ],
                     "paragraphs": [
                         "Añade un evento lunar aleatorio, la Luna del Minero, que altera temporalmente la generación de minerales para hacerlos más abundantes."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "multiplayer-boss-attribute-modifier",

@@ -126,8 +126,7 @@
                     "paragraphs": [
                         "Sustituye a los aldeanos comunes por humanos interactivos con distintas personalidades, aspectos y oficios.",
                         "Permite charlar, comerciar, formar vínculos familiares y tener descendencia de ayuda en las tareas mundanas."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 }
             ]
         },
@@ -161,8 +160,7 @@
                     ],
                     "paragraphs": [
                         "Mejora de forma sutil y fiel los biomas clásicos de estilo vanilla añadiendo nuevas criaturas encantadoras, bloques únicos y mecánicas frescas."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "alexs-caves",
@@ -518,8 +516,7 @@
                     ],
                     "paragraphs": [
                         "Añade duendes comerciantes que aparecen bajo tierra o en la superficie, ofreciendo intercambios por objetos raros y valiosos."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "tameable-zombie-horse-and-skeleton-horse",
@@ -529,8 +526,7 @@
                     ],
                     "paragraphs": [
                         "Permite domar, equipar con montura y montar a los caballos zombi y esqueleto de la misma forma que a los caballos normales."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "unusual-prehistory-2",
@@ -590,8 +586,7 @@
                     ],
                     "paragraphs": [
                         "Añade eventos lunares que alteran el comportamiento del entorno durante la noche, como Lunas de Sangre peligrosas o Lunas de Cosecha que benefician la agricultura."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "spice-of-life",
@@ -672,8 +667,7 @@
                     ],
                     "paragraphs": [
                         "Añade un evento lunar aleatorio, la Luna del Minero, que altera temporalmente la generación de minerales para hacerlos más abundantes."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "multiplayer-boss-attribute-modifier",
@@ -683,8 +677,7 @@
                     ],
                     "paragraphs": [
                         "Aumenta automáticamente la vida y el daño de los jefes (como el Dragón o el Wither) dependiendo de cuántos jugadores estén luchando contra ellos simultáneamente."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "netherite-scrap-from-piglin-brutes",
@@ -694,8 +687,7 @@
                     ],
                     "paragraphs": [
                         "Otorga a los Piglin Brutos la probabilidad de soltar fragmentos de netherita al ser derrotados en combate."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 }
             ]
         },
@@ -813,8 +805,7 @@
                     ],
                     "paragraphs": [
                         "Añade propulsores, turbinas y motores avanzados al mod Create, diseñados para impulsar vehículos aéreos y terrestres personalizados."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "create-diesel-generators",
@@ -826,8 +817,7 @@
                     ],
                     "paragraphs": [
                         "Añade generadores diésel y refinerías de petróleo al mod Create para generar grandes cantidades de energía automatizada."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "iron-furnaces",
@@ -837,8 +827,7 @@
                     ],
                     "paragraphs": [
                         "Añade hornos mejorados de distintos materiales (hierro, oro, diamante) que cocinan y funden objetos más rápido."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "sawmil",
@@ -848,8 +837,7 @@
                     ],
                     "paragraphs": [
                         "Añade un aserradero que actúa como el cortapiedras pero para madera. Es compatible con cualquier mod e incluye la nueva profesión de aldeano Carpintero."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "create-big-cannons",
@@ -933,8 +921,7 @@
                     ],
                     "paragraphs": [
                         "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "irons-spells-n-spellbooks",
@@ -948,8 +935,7 @@
                     "paragraphs": [
                         "Añade un sistema de magia con progresión estilo RPG.",
                         "Incluye más de 80 hechizos, varitas personalizables, armaduras mágicas y grimorios de distintas escuelas de magia."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "winds-spellbooks",
@@ -961,8 +947,7 @@
                     ],
                     "paragraphs": [
                         "Añade la nueva escuela de magia de Viento a Iron's Spells, permitiendo lanzar tornados, ráfagas de aire y hechizos de movilidad aérea."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "woodwalkers-spellbooks",
@@ -973,8 +958,7 @@
                     ],
                     "paragraphs": [
                         "Añade un nuevo hechizo de evocación que te permite usar magia para transformarte físicamente en diferentes animales y monstruos del juego."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 }
             ]
         },
@@ -993,8 +977,7 @@
                     ],
                     "paragraphs": [
                         "Añade equipo mágico y tesoros ocultos esparcidos por campamentos subterráneos y baúles secretos, otorgando a su portador habilidades singulares."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "dynamic-caveman",
@@ -1006,8 +989,7 @@
                         "Permite usar materiales básicos como palos, piedras y obsidiana para infligir daño.",
                         "Añade ataques cuerpo a cuerpo para algunos objetos y mecánicas para lanzar otros, como piedras.",
                         "Incluye reglas de juego para activar o desactivar estas características en cada elemento."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "backported-spears",
@@ -1088,7 +1070,8 @@
                     "paragraphs": [
                         "Añade una colección de reliquias con mecánicas de combate y exploración, junto con un sistema de estadísticas aleatorias.",
                         "Permite subir de nivel y personalizar las reliquias. El mod está diseñado para adaptarse a la escala de daño y salud del mundo."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "reliquified-artifacts",
@@ -1100,7 +1083,8 @@
                     "paragraphs": [
                         "Integra el equipamiento del mod Artifacts dentro del sistema de estadísticas de Relics.",
                         "Los objetos de Artifacts reciben mecánicas escalables para adaptarse a la progresión de nivel del sistema de reliquias."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "reliquified-cataclysm",
@@ -1112,7 +1096,8 @@
                     "paragraphs": [
                         "Añade reliquias compatibles con el sistema de Relics inspiradas en los jefes y estructuras de Cataclysm.",
                         "Otorga habilidades pasivas y activas como recompensa al derrotar a los jefes y superar los desafíos del mod."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "blossom-blade",
@@ -1123,8 +1108,7 @@
                     ],
                     "paragraphs": [
                         "Añade la Espada del Cerezo, un arma que brilla y emite partículas de flores de cerezo al atacar."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "extra-bows-restrung",
@@ -1134,8 +1118,7 @@
                     ],
                     "paragraphs": [
                         "Añade nuevos arcos y ballestas fabricables con diferentes materiales (hierro, diamante, netherita...) con estadísticas mejoradas."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "immersive-armors",
@@ -1157,8 +1140,7 @@
                     ],
                     "paragraphs": [
                         "Añade escudos de distintos materiales, la mecánica de paradas precisas (parries) y nuevos encantamientos defensivos."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "shield-parry",
@@ -1183,7 +1165,7 @@
                     "paragraphs": [
                         "Añade nuevas armaduras de limo que te permiten rebotar, armas pegajosas y otros bloques de utilidad basados en las mecánicas del slime."
                     ],
-                    "status": "REVISIÓN"
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "allthemodium",
@@ -1194,7 +1176,7 @@
                     "paragraphs": [
                         "Añade minerales de nivel superior (Allthemodium, Vibranium y Unobtainium) que sirven para fabricar el equipamiento y herramientas más avanzadas del juego."
                     ],
-                    "status": "NUEVO"
+                    "status": "ELIMINADO"
                 }
             ]
         },
@@ -1214,8 +1196,7 @@
                     "paragraphs": [
                         "Recupera la esencia del clásico Dragon Mounts añadiendo dragones domesticables con modelos y animaciones actualizados.",
                         "Permite incubar huevos de dragón en diferentes entornos para obtener variantes elementales. Puedes domarlos, ponerles armadura, darles órdenes básicas y utilizarlos como montura voladora o terrestre."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "wings-of-fire",
@@ -1229,8 +1210,7 @@
                     "paragraphs": [
                         "Añade 6 variantes diferentes de fénix que puedes criar y utilizar como monturas voladoras.",
                         "Encuentra huevos petrificados por el mundo, caliéntalos en una cuna infernal y vincúlalos con linternas templadas para invocar a tu fénix personal."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "tempad",
@@ -1256,8 +1236,7 @@
                     ],
                     "paragraphs": [
                         "Mejora el manejo de los caballos añadiendo conducción más suave, una mecánica para atarlos más fácilmente a los postes, y otras mejoras de control."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "icarus",
@@ -1269,7 +1248,7 @@
                     "paragraphs": [
                         "Añade una gran variedad de alas coloridas y únicas que puedes equiparte en la ranura de capa para volar y planear libremente por el mundo."
                     ],
-                    "status": "REVISIÓN"
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "piggyback",
@@ -1279,8 +1258,7 @@
                     ],
                     "paragraphs": [
                         "Permite a los jugadores montarse sobre los hombros de otros jugadores o entidades para transportarlos fácilmente de un lado a otro."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "shiny-horses-reborn",
@@ -1291,8 +1269,7 @@
                     ],
                     "paragraphs": [
                         "Permite aplicar encantamientos como Protección, Caída de Pluma o Velocidad directamente a las armaduras para caballos."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "simple-netherite-horse-armor",
@@ -1302,8 +1279,7 @@
                     ],
                     "paragraphs": [
                         "Añade una robusta y resistente armadura de netherita fabricable para proteger al máximo a tus caballos."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "two-players-one-horse",
@@ -1313,8 +1289,7 @@
                     ],
                     "paragraphs": [
                         "Permite que dos jugadores se monten y viajen juntos simultáneamente en un mismo caballo."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "gliders",
@@ -1347,8 +1322,7 @@
                     "paragraphs": [
                         "Incorpora una gran variedad de muebles y elementos decorativos interactivos.",
                         "Cuenta con un sistema eléctrico funcional, envío de correo entre jugadores y dispositivos informáticos con aplicaciones."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "diagonal-fences",
@@ -1438,8 +1412,7 @@
                     ],
                     "paragraphs": [
                         "Añade nuevos bloques de faroles de piedra elaborados y decorativos para iluminar y adornar tus construcciones exteriores y jardines."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 }
             ]
         },
@@ -1632,8 +1605,7 @@
                     ],
                     "paragraphs": [
                         "Añade sacos de dormir y hamacas (en 16 colores) que te permiten pasar la noche o el día rápidamente sin cambiar tu punto de reaparición."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "field-guide",
@@ -1660,8 +1632,7 @@
                     ],
                     "paragraphs": [
                         "Añade barajas de cartas y fichas de póquer completamente funcionales para que puedas jugar y apostar con tus amigos."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "spain-national-anthem",
@@ -1671,8 +1642,7 @@
                     ],
                     "paragraphs": [
                         "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 }
             ]
         },
@@ -1689,8 +1659,7 @@
                     ],
                     "paragraphs": [
                         "Genera recompensas de forma individual en cada contenedor para cada jugador, permitiendo que todos los exploradores obtengan botín sin competir."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "player-revive",
@@ -1823,8 +1792,7 @@
                     ],
                     "paragraphs": [
                         "Ofrece una reinterpretación de las texturas originales. Busca dar al entorno visual un aspecto más sobrio, pulido y cohesionado."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "low-on-fire",
@@ -1835,8 +1803,7 @@
                     ],
                     "paragraphs": [
                         "Cuando estás en llamas, las llamas no cubren toda la pantalla, sino solo una pequeña fracción de ella."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "lower-shield",
@@ -1846,8 +1813,7 @@
                     ],
                     "paragraphs": [
                         "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
-                    ],
-                    "status": "REVISIÓN"
+                    ]
                 },
                 {
                     "id": "undopia-zombies",

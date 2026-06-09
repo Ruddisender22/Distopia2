@@ -672,8 +672,8 @@
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "multiplayer-boss-attribute-modifier",
-                    "name": "Multiplayer Boss Attribute Modifier",
+                    "id": "multiplayer-bosses",
+                    "name": "Multiplayer Bosses",
                     "images": [
                         "https://media.forgecdn.net/avatars/thumbnails/1805/224/256/256/639142307347327028.png"
                     ],

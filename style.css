@@ -639,12 +639,13 @@ body {
 .modal-close-btn {
   position: absolute; top: 1rem; right: 1rem; z-index: 10;
   width: 30px; height: 30px; border-radius: 50%;
-  background: rgba(255,255,255,0.07); border: 1px solid var(--border-h);
-  color: var(--t2); cursor: pointer;
+  background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   transition: all 0.15s;
 }
-.modal-close-btn:hover { background: rgba(248,113,113,0.18); border-color: rgba(248,113,113,0.5); color: var(--red); }
+.modal-close-btn:hover { background: rgba(248,113,113,0.8); border-color: var(--red); color: #fff; }
 
 .modal-split {
   display: grid; grid-template-columns: clamp(320px, 28%, 420px) 1fr;

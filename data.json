@@ -127,7 +127,24 @@
             "Permite charlar, comerciar, formar vínculos familiares y tener descendencia de ayuda en las tareas mundanas."
           ],
           "status": "REVISIÓN"
-        }
+        },
+        { "id": "blossom-blade", "name": "Blossom Blade", "paragraphs": ["La espada clavada en el pedestal brilla con una luz sagrada, desprendiendo el aroma de las flores de cerezo con cada movimiento."], "status": "REVISIÓN" },
+        { "id": "comforts", "name": "Comforts", "paragraphs": ["Añade sacos de dormir y hamacas para saltar la noche sin cambiar el punto de reaparición. ¡Disponible en 16 colores!"], "status": "REVISIÓN" },
+        { "id": "extra-bows-restrung", "name": "Extra bows: Restrung", "paragraphs": ["Añade nuevos arcos y ballestas de distintos niveles y materiales a Minecraft."], "status": "REVISIÓN" },
+        { "id": "field-guide", "name": "Field Guide", "paragraphs": ["Descubre plantas, animales y monstruos con tu catalejo. ¡Colecciónalos todos y toma notas en tu guía de campo personal!"], "status": "REVISIÓN" },
+        { "id": "horseman", "name": "Horseman", "paragraphs": ["Caballos mejorados: amarre más rápido, conducción más suave, mejoras de calidad de vida y mucho más..."], "status": "REVISIÓN" },
+        { "id": "icarus", "name": "Icarus", "paragraphs": ["Añade un montón de alas únicas y coloridas que se pueden usar para volar."], "status": "REVISIÓN" },
+        { "id": "immersive-armors", "name": "Immersive Armors", "paragraphs": ["Una gran cantidad de conjuntos de armadura únicos y fieles al estilo original del juego."], "status": "REVISIÓN" },
+        { "id": "piggyback", "name": "Piggyback", "paragraphs": ["Permite que los jugadores se suban unos a hombros de otros. ¡Lleva a tus amigos en la espalda por diversión, trabajo en equipo o puro caos!"], "status": "REVISIÓN" },
+        { "id": "playing-cards-chips", "name": "Playing Cards & Chips", "paragraphs": ["¡Cartas y fichas de póquer! Diseñadas para que apuestes y juegues con tus amigos."], "status": "REVISIÓN" },
+        { "id": "reddens-stone-lanterns", "name": "Redden's Stone Lanterns", "paragraphs": ["Añade preciosos faroles de piedra que encajan perfectamente para decoración exterior y jardines."], "status": "REVISIÓN" },
+        { "id": "shield-expansion", "name": "Shield Expansion", "paragraphs": ["Añade paradas precisas (parries), nuevos encantamientos, niveles y personalización a los escudos."], "status": "REVISIÓN" },
+        { "id": "shield-parry", "name": "Shield Parry", "paragraphs": ["Añade la posibilidad de desviar ataques y golpear con el escudo para darte ventaja en el combate (si tienes suficiente habilidad)."], "status": "REVISIÓN" },
+        { "id": "shiny-horses-reborn", "name": "Shiny Horses Reborn", "paragraphs": ["Permite encantar las armaduras para caballos, dándoles nuevas protecciones."], "status": "REVISIÓN" },
+        { "id": "simple-netherite-horse-armor", "name": "Simple Netherite Horse Armor", "paragraphs": ["Añade una robusta y resistente armadura de netherita para los caballos."], "status": "REVISIÓN" },
+        { "id": "slimy-stuff", "name": "Slimy Stuff", "paragraphs": ["Añade varias utilidades nuevas con limo, gelatinas, armaduras con habilidades pegajosas y armas..."], "status": "REVISIÓN" },
+        { "id": "spain-national-anthem", "name": "Spain National Anthem", "paragraphs": ["Añade un disco de música personalizado que contiene el himno nacional de España."], "status": "REVISIÓN" },
+        { "id": "two-players-one-horse", "name": "Two Players One Horse", "paragraphs": ["Este mod permite que dos jugadores monten juntos en el mismo caballo."], "status": "REVISIÓN" }
       ]
     },
     {
@@ -278,7 +295,8 @@
           "paragraphs": [
             "Añade docenas de nuevas estructuras oceánicas para enriquecer la exploración submarina, repletas de detalles y recompensas ocultas."
           ]
-        }
+        },
+        { "id": "the-roads-more-travelled", "name": "The Roads More Travelled", "paragraphs": ["Haz que tu mundo se sienta más inmersivo añadiendo un sistema de erosión gradual en los caminos y senderos por los que pasas habitualmente."], "status": "REVISIÓN" }
       ]
     },
     {
@@ -492,7 +510,9 @@
             "Myths & Legends es un mod de fantasía oscura que introduce una increíble variedad de criaturas míticas, estructuras y reliquias inspiradas en el folclore global.",
             "Aporta una nueva capa de inmersión, atmósfera lúgubre y desafío. Prepárate para encontrarte con seres terroríficos como gárgolas, diablillos, almas condenadas o incluso amenazantes armaduras poseídas durante tus viajes."
           ]
-        }
+        },
+        { "id": "goblin-traders", "name": "Goblin Traders", "paragraphs": ["Añade a unos simpáticos y escurridizos duendes comerciantes que te ofrecerán tratos únicos."], "status": "REVISIÓN" },
+        { "id": "tameable-zombie-horse-and-skeleton-horse", "name": "Tameable Zombie Horse And Skeleton Horse", "paragraphs": ["¡Haz que los caballos zombi y esqueleto puedan ser domesticados y montados como los normales!"], "status": "REVISIÓN" }
       ]
     },
     {
@@ -582,7 +602,11 @@
             "Savage Ender Dragon rediseña por completo la pelea final para convertirla en un verdadero y despiadado reto. La dificultad de la batalla se ajusta dinámicamente según el número de jugadores presentes.",
             "El dragón ahora puede lanzar rayos, invocar Endermans furiosos, y sus bolas de fuego hacen daño explosivo. Además cuenta con nuevas mecánicas que penalizan y evitan estrategias fáciles como usar camas o abusar de las élitras."
           ]
-        }
+        },
+        { "id": "burnt-basic", "name": "Burnt Basic", "paragraphs": ["Un mod que mejora el comportamiento del fuego de Minecraft original."], "status": "REVISIÓN" },
+        { "id": "miners-moon", "name": "Miner's Moon", "paragraphs": ["Un complemento para Enhanced Celestials que añade un nuevo evento: la Luna del Minero."], "status": "REVISIÓN" },
+        { "id": "multiplayer-boss-attribute-modifier", "name": "Multiplayer Boss Attribute Modifier", "paragraphs": ["Escala automáticamente las estadísticas de los jefes dependiendo del número de jugadores cercanos."], "status": "REVISIÓN" },
+        { "id": "netherite-scrap-from-piglin-brutes", "name": "Netherite Scrap From Piglin Brutes", "paragraphs": ["Otorga a los Piglin Brutos la probabilidad de soltar fragmentos de netherita al ser derrotados."], "status": "REVISIÓN" }
       ]
     },
     {
@@ -689,7 +713,11 @@
             "Podrás automatizar la extracción y el refinado de uranio para alimentar reactores que generan inmensas cantidades de energía (Stress Units). Sin embargo, tendrás que construir protecciones y lidiar con los enormes peligros que conlleva la radiación."
           ],
           "status": "ELIMINADO"
-        }
+        },
+        { "id": "create-propulsion", "name": "Create Propulsion", "paragraphs": ["Un complemento para Create que añade propulsores y motores compatibles con vehículos aéreos y terrestres."], "status": "REVISIÓN" },
+        { "id": "create-diesel-generators", "name": "Create: Diesel Generators", "paragraphs": ["Un mod que añade generadores diésel, una refinería de petróleo crudo y mucho más al mod Create."], "status": "REVISIÓN" },
+        { "id": "iron-furnaces", "name": "Iron Furnaces", "paragraphs": ["Inspirado en Iron Chests, añade hornos de diferentes materiales y niveles para cocinar más rápido."], "status": "REVISIÓN" },
+        { "id": "sawmil", "name": "Sawmil", "paragraphs": ["Un cortapiedras pero para madera. Compatible con las maderas de cualquier mod automáticamente. Incluye la profesión de carpintero."], "status": "REVISIÓN" }
       ]
     },
     {
@@ -1408,45 +1436,11 @@
           "paragraphs": [
             "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
           ]
-        }
-      ]
-    },
-    {
-      "name": "Nuevas Propuestas",
-      "icon": "🆕",
-      "mods": [
-        { "id": "blossom-blade", "name": "Blossom Blade", "paragraphs": ["The sword stuck in the pedestal glows with a holy light, carrying the smell of cherry blossoms with every swing."], "status": "REVISIÓN" },
-        { "id": "burnt-basic", "name": "Burnt Basic", "paragraphs": ["The vanilla fire enhancing mod."], "status": "REVISIÓN" },
-        { "id": "cataclysm-spellbooks", "name": "Cataclysm: Spellbooks", "paragraphs": ["An addon for Iron's Spells and Spellbooks and L_Ender's Cataclysm"], "status": "REVISIÓN" },
-        { "id": "comforts", "name": "Comforts", "paragraphs": ["Adds sleeping bags and hammocks for, respectively, portability and turning day to night, without setting new spawns. Comes in 16 different colors!"], "status": "REVISIÓN" },
-        { "id": "create-propulsion", "name": "Create Propulsion", "paragraphs": ["Port of Create: Propulsion mod to NeoForge 1.21.1 with support of Sable and Create: Aeronautics"], "status": "REVISIÓN" },
-        { "id": "create-diesel-generators", "name": "Create: Diesel Generators", "paragraphs": ["A mod that adds Diesel Generators, Crude Oil Refinery and much more to the create mod."], "status": "REVISIÓN" },
-        { "id": "extra-bows-restrung", "name": "Extra bows: Restrung", "paragraphs": ["Adds tiered bows and crossbows to Minecraft."], "status": "REVISIÓN" },
-        { "id": "field-guide", "name": "Field Guide", "paragraphs": ["Discover Plants, Animals and Monsters with a Spyglass. Collect them all and take notes in your personal Field Guide!"], "status": "REVISIÓN" },
-        { "id": "goblin-traders", "name": "Goblin Traders", "paragraphs": ["An Unofficial Port of MrCrayfish's Goblin Traders Mod"], "status": "REVISIÓN" },
-        { "id": "horseman", "name": "Horseman", "paragraphs": ["Improved horses: faster hitching, smooth riding, QOL features and more..."], "status": "REVISIÓN" },
-        { "id": "icarus", "name": "Icarus", "paragraphs": ["Adds a bunch of colourful and unique wings that can be worn in the Trinkets Cape slot."], "status": "REVISIÓN" },
-        { "id": "immersive-armors", "name": "Immersive Armors", "paragraphs": ["A lot of unique and vanilla-faithful armor sets."], "status": "REVISIÓN" },
-        { "id": "iron-furnaces", "name": "Iron Furnaces", "paragraphs": ["Inspired by cpw's Iron Chests mod, adds a few different tiers of furnace."], "status": "REVISIÓN" },
-        { "id": "irons-spells-n-spellbooks", "name": "Iron's Spells 'n Spellbooks", "paragraphs": ["A magic mod bringing back the classic RPG spellcasting fantasy. (irons spells and spellbooks)"], "status": "REVISIÓN" },
-        { "id": "miners-moon", "name": "Miner's Moon", "paragraphs": ["This Add-on for Enhanced Celestials adds a Miner's Moon"], "status": "REVISIÓN" },
-        { "id": "multiplayer-boss-attribute-modifier", "name": "Multiplayer Boss Attribute Modifier", "paragraphs": ["Automatically scales boss attributes based on the number of players nearby."], "status": "REVISIÓN" },
-        { "id": "netherite-scrap-from-piglin-brutes", "name": "Netherite Scrap From Piglin Brutes", "paragraphs": ["Gives Piglin Brutes a chance to drop Netherite Scrap upon defeat."], "status": "REVISIÓN" },
-        { "id": "piggyback", "name": "Piggyback", "paragraphs": ["Allow player riding each other and replace the default player sitting mechanic with a piggyback-style ride. Carry your friends on your back for fun, teamwork, or pure chaos!"], "status": "REVISIÓN" },
-        { "id": "playing-cards-chips", "name": "Playing Cards & Chips", "paragraphs": ["Playing cards and poker chips! Which are meant to be played with friends."], "status": "REVISIÓN" },
-        { "id": "reddens-stone-lanterns", "name": "Redden's Stone Lanterns", "paragraphs": ["Another decoration mod"], "status": "REVISIÓN" },
-        { "id": "sawmil", "name": "Sawmil", "paragraphs": ["Ultimate Woodcutter. As it was intented, compatible with any mod, automatically. Includes Carpenter Villager"], "status": "REVISIÓN" },
-        { "id": "shield-expansion", "name": "Shield Expansion", "paragraphs": ["Adds parrying, enchantments, tiers and customization to shields for more fun!"], "status": "REVISIÓN" },
-        { "id": "shield-parry", "name": "Shield Parry", "paragraphs": ["Adding new elements to combat. Parrying and bashing to give you the edge in all encounters (if youre skilled enough)"], "status": "REVISIÓN" },
-        { "id": "shiny-horses-reborn", "name": "Shiny Horses Reborn", "paragraphs": ["Enchantable Horse Armor"], "status": "REVISIÓN" },
-        { "id": "simple-netherite-horse-armor", "name": "Simple Netherite Horse Armor", "paragraphs": ["Yet another simple, netherite armor looking netherite horse armor mod."], "status": "REVISIÓN" },
-        { "id": "slimy-stuff", "name": "Slimy Stuff", "paragraphs": ["Adds several new utilities to slime, jelly, armor with sticky abilities, weapons..."], "status": "REVISIÓN" },
-        { "id": "spain-national-anthem", "name": "Spain National Anthem", "paragraphs": ["Adds a custom music disc containing the Spanish national anthem to the game."], "status": "REVISIÓN" },
-        { "id": "tameable-zombie-horse-and-skeleton-horse", "name": "Tameable Zombie Horse And Skeleton Horse", "paragraphs": ["Make the Zombie Horse and Skeleton Horse Tameable like normal Horses!"], "status": "REVISIÓN" },
-        { "id": "the-roads-more-travelled", "name": "The Roads More Travelled", "paragraphs": ["Make your world feel more immersive by adding a gradual erosion system to the terrain you walk on."], "status": "REVISIÓN" },
-        { "id": "two-players-one-horse", "name": "Two Players One Horse", "paragraphs": ["This mod allows two players to mount together on the same horse. Epic!"], "status": "REVISIÓN" },
-        { "id": "winds-spellbooks", "name": "Wind's Spellbooks", "paragraphs": ["Add a brand new \"Wind\" school to irons spells n spellbooks"], "status": "REVISIÓN" },
-        { "id": "woodwalkers-spellbooks", "name": "Woodwalkers Spellbooks", "paragraphs": ["Acts as an integration addon between Woodwalkers and Iron's Spells 'n Spellbooks, introducing a new evocation spell called Shapeshifting."], "status": "REVISIÓN" }
+        },
+        { "id": "cataclysm-spellbooks", "name": "Cataclysm: Spellbooks", "paragraphs": ["Un complemento de compatibilidad entre Iron's Spells and Spellbooks y L_Ender's Cataclysm."], "status": "REVISIÓN" },
+        { "id": "irons-spells-n-spellbooks", "name": "Iron's Spells 'n Spellbooks", "paragraphs": ["Un mod de magia que recupera la clásica fantasía de lanzar hechizos de los RPG de toda la vida."], "status": "REVISIÓN" },
+        { "id": "winds-spellbooks", "name": "Wind's Spellbooks", "paragraphs": ["Añade una nueva escuela de magia basada en el \"Viento\" a Iron's Spells 'n Spellbooks."], "status": "REVISIÓN" },
+        { "id": "woodwalkers-spellbooks", "name": "Woodwalkers Spellbooks", "paragraphs": ["Actúa como un complemento entre Woodwalkers y Iron's Spells 'n Spellbooks, introduciendo un nuevo hechizo para transformarte en criaturas."], "status": "REVISIÓN" }
       ]
     }
   ]

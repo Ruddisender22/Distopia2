@@ -1210,7 +1210,8 @@
                     "paragraphs": [
                         "Añade 6 variantes diferentes de fénix que puedes criar y utilizar como monturas voladoras.",
                         "Encuentra huevos petrificados por el mundo, caliéntalos en una cuna infernal y vincúlalos con linternas templadas para invocar a tu fénix personal."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "tempad",

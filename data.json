@@ -729,7 +729,7 @@
                         "https://media.forgecdn.net/attachments/1558/421/image-png.png"
                     ],
                     "paragraphs": [
-                        "¡Es hora de cocinar! Este mod introduce un mercado negro de drogas totalmente interactivas y cultivos ilícitos para darle un giro oscuro a tu aventura industrial.",
+                        "¡Es hora de cocinar! Este mod introduce la producción de drogas totalmente interactivas y cultivos ilícitos para darle un giro oscuro a tu aventura industrial.",
                         "Podrás usar toda la maquinaria de Create para establecer cadenas de producción completas y procesar sustancias como la marihuana, tabaco, cocaína, setas alucinógenas y muchas más.",
                         "Pero cuidado: cada sustancia genera tolerancia de forma individual y tiene efectos secundarios, alucinaciones personalizadas e incluso síndromes de abstinencia."
                     ],
@@ -1470,8 +1470,8 @@
                         "https://media.forgecdn.net/attachments/456/879/basic-crops.png"
                     ],
                     "paragraphs": [
-                        "¡Una acogedora ampliación del mundo de la agricultura y la cocina!",
-                        "Farmer's Delight es un mod que amplía gradualmente las posibilidades de la agricultura y la cocina en Minecraft.\n\nUtilizando un sistema de cocina sencillo y unos pocos ingredientes comunes, podrás preparar una gran variedad de comidas sustanciosas: desde sándwiches hasta ensaladas y guisos, desde postres exquisitos hasta banquetes deliciosos, ¡ningún ingrediente se quedará sin usar en tu cocina!\n\nTambién introduce un amplio conjunto de utilidades: una forma de mejorar la tierra en la que crecen tus cultivos, un nuevo tipo de herramienta para recolectar recursos , bonitas decoraciones para tus construcciones y muchos bloques y objetos que te ayudarán en tu aventura.\n\n¡Es hora de cultivar un poco de todo!"
+                        "Amplía las posibilidades de la agricultura y la cocina en Minecraft. Utiliza un sistema de cocina para preparar comidas con nuevos ingredientes y utensilios.",
+                        "Introduce mejoras en el suelo para tus cultivos, nuevas herramientas de recolección y bloques decorativos para enriquecer tu experiencia culinaria."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
@@ -1485,7 +1485,7 @@
                         "https://media.forgecdn.net/attachments/472/393/2022-06-27_21.png"
                     ],
                     "paragraphs": [
-                        "Complemento de Farmer's Delight que añade bebidas fermentadas. CERVEZAA"
+                        "Complemento para Farmer's Delight que añade bebidas fermentadas y alcohólicas."
                     ]
                 },
                 {
@@ -1496,7 +1496,7 @@
                         "https://i.imgur.com/G4k4MIs.png"
                     ],
                     "paragraphs": [
-                        "Un mod que añade elementos de Eternal Starlight al mod de Farmer's Delight."
+                        "Integra contenido y elementos de la dimensión de Eternal Starlight con el ecosistema de Farmer's Delight."
                     ]
                 },
                 {
@@ -1509,7 +1509,7 @@
                         "https://media.forgecdn.net/attachments/1203/73/izobrazhenie_2023-06-18_164230341-png.png"
                     ],
                     "paragraphs": [
-                        "Realizando automatización entre Farmer's Delight y Create"
+                        "Permite la automatización de la producción culinaria de Farmer's Delight utilizando la maquinaria e infraestructura de Create."
                     ]
                 },
                 {
@@ -1521,7 +1521,7 @@
                         "https://media.forgecdn.net/attachments/894/80/2024-06-20_19.png"
                     ],
                     "paragraphs": [
-                        "¡Un mod adicional para Farmer's Delight que consiste en añadir contenido culinario al final!"
+                        "Complemento para Farmer's Delight que expande el contenido culinario utilizando recursos exclusivos de la dimensión del End."
                     ]
                 },
                 {
@@ -1534,7 +1534,7 @@
                         "https://media.forgecdn.net/attachments/859/609/2024-05-04_13.png"
                     ],
                     "paragraphs": [
-                        "Nuevo complemento del Nether para Farmer's Delight"
+                        "Complemento para Farmer's Delight que expande la agricultura y cocina utilizando recursos y flora de la dimensión del Nether."
                     ]
                 },
                 {
@@ -1548,8 +1548,7 @@
                         "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
                     ],
                     "paragraphs": [
-                        "Renueva el sistema de pesca con más de 100 peces únicos, poseedores de diferentes tamaños, pesos y requisitos de clima.",
-                        "Añade cebos, cajas de aparejos, torneos, acuarios y divertidos minijuegos de captura para pescar."
+                        "Renueva el sistema de pesca con más de 100 peces únicos, cebos, cajas de aparejos, torneos, acuarios y minijuegos interactivos de captura."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 }
@@ -1620,8 +1619,8 @@
                         "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/moblassos/media/1.png"
                     ],
                     "paragraphs": [
-                        "Mob Lassos añade algunas funciones útiles para mover criaturas: ¡Ahora puedes fabricar un lazo para transportar a la mayoría de las criaturas a cualquier lugar de tu inventario! ¡Sin necesidad de correas ni comida para animales!",
-                        "▶️ Transporta a las criaturas con lazos. ¡Pero date prisa! ¡Las criaturas escaparán al cabo de un rato!\n\n▶️ El lazo dorado puede capturar a todos los animales terrestres.\n\n▶️ El lazo acuático puede capturar a todos los animales acuáticos.\n\n▶️ El lazo de diamante puede capturar a todos los animales y no tiene temporizador.\n\n▶️ El lazo esmeralda solo puede capturar aldeanos, ¡pero no todos los aldeanos quieren ser capturados! Asegúrate de que acepten un contrato primero, pero no todos servirán.\n\n▶️ Un lazo hostil puede capturar criaturas hostiles, ¡pero hay un inconveniente! Cualquier monstruo capturado debe tener menos del 50 % de salud y te morderá continuamente mientras llevas el lazo. ¡Ten cuidado!\n\n▶️ Cambia el nombre de la criatura capturada aplicándole un nuevo nombre al lazo en un yunque.\n\n▶️ Encantar un lazo con el encantamiento de sujeción para que dure más tiempo."
+                        "Añade diferentes tipos de lazos que te permiten capturar y transportar criaturas cómodamente en tu inventario.",
+                        "Existen diversas variantes, como el lazo acuático, esmeralda u hostil, cada una con características específicas y tiempos límite de retención."
                     ]
                 },
                 {
@@ -1632,8 +1631,8 @@
                         "https://media.forgecdn.net/attachments/316/883/ouch.png"
                     ],
                     "paragraphs": [
-                        "MmmMmmMmmMmm (más conocido como Target Dummy) añade un objeto muy útil: el muñeco de pruebas de daño. Al golpearlo te mostrará números exactos indicando cuánto daño (DPS) logras infligir con tus armas.",
-                        "Puedes equiparlo con armaduras para probar la penetración de daño contra objetivos resistentes, o ponerle cabezas de monstruos para convertirlo en no-muerto y comprobar cómo afectan encantamientos específicos como Castigo (Smite)."
+                        "Añade un muñeco de pruebas. Al golpearlo te mostrará el daño exacto (DPS) infligido por tus armas.",
+                        "Permite equiparle armaduras y cabezas para simular diferentes tipos de defensa y probar el efecto de encantamientos como Castigo."
                     ]
                 },
                 {
@@ -1713,8 +1712,7 @@
                         "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
                     ],
                     "paragraphs": [
-                        "Transforma la obtención de botín generando recompensas de forma individual en cada contenedor para cada jugador.",
-                        "Elimina la competencia desleal; todo explorador podrá abrir los cofres de las mazmorras y obtener su parte."
+                        "Genera recompensas de forma individual en cada contenedor para cada jugador, permitiendo que todos los exploradores obtengan botín sin competir."
                     ],
                     "status": "REVISIÓN"
                 },
@@ -1725,7 +1723,7 @@
                         "https://media.forgecdn.net/avatars/97/938/636295724985402020.png"
                     ],
                     "paragraphs": [
-                        "Reanima a tus amigos"
+                        "Permite reanimar a otros jugadores caídos antes de que mueran definitivamente, dándoles una segunda oportunidad en combate."
                     ]
                 },
                 {
@@ -1736,7 +1734,7 @@
                         "https://media.forgecdn.net/attachments/description/1096099/description_4615216c-036e-4296-b54d-548dc6b79c60.png"
                     ],
                     "paragraphs": [
-                        "Mod básico de lápida con el estilo de un cadáver, sin interfaz de usuario ni teclas de acceso rápido."
+                        "Sustituye la caída de objetos al morir por un cadáver que retiene el inventario del jugador, facilitando su recuperación sin límite de tiempo."
                     ],
                     "status": "ELIMINADO"
                 },
@@ -1749,7 +1747,7 @@
                         "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/easyanvils/media/2.png"
                     ],
                     "paragraphs": [
-                        "Mejora enormemente la experiencia al usar yunques, guardando objetos en su interior al salir del menú y ajustando inteligentemente los costos de nivel."
+                        "Mejora el uso de los yunques manteniendo los objetos en su interior al salir del menú y ajustando inteligentemente los costes de nivel."
                     ]
                 },
                 {
@@ -1762,10 +1760,8 @@
                         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGWk0QnuONgVrZBBRy0rXnfcHqu2uPLmmeQ&s"
                     ],
                     "paragraphs": [
-                        "Corta los árboles poco a poco, en lugar de hacerlo bloque a bloque.",
-                        "Permite talar árboles rompiendo repetidamente un solo bloque. El árbol completo solo se romperá después de un cierto número de golpes, y los árboles más grandes requieren más golpes. Inspirado en mods como Treecapitator.",
-                        "Cortar árboles no requiere un hacha, pero sin ella llevará bastante tiempo. Cortar diferentes trozos del mismo árbol contribuirá a derribarlo. Los jugadores pueden colaborar para talar esos grandes árboles. Los árboles más grandes requieren más talas en total, pero menos talas por bloque*. Mantén pulsado el botón \"sigilo\" al romper un bloque de tronco para romperlo normalmente.",
-                        "Se puede modificar para facilitar el talado de árboles"
+                        "Permite talar árboles enteros rompiendo progresivamente un solo bloque de tronco.",
+                        "Los árboles más grandes requieren más golpes, y varios jugadores pueden colaborar para derribarlos simultáneamente."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
@@ -1887,8 +1883,7 @@
                         "https://media.forgecdn.net/attachments/1034/996/drowned.png"
                     ],
                     "paragraphs": [
-                        "Añade variedad de zombies sin afectar al rendimiento del server y manteniendo un estilo vanilla",
-                        "Zombie Skins añade una variante de zombi, cáscara y ahogado para cada aspecto predeterminado disponible en el juego. Las variantes de Steve y Alex aparecen aproximadamente 1,5 veces más a menudo que las demás porque son los aspectos originales."
+                        "Añade variantes visuales de zombis, cáscaras y ahogados basadas en las apariencias predeterminadas del juego, manteniendo el estilo vanilla."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },

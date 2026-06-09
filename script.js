@@ -423,7 +423,7 @@ function buildSection(section) {
   const nextBtn = document.createElement("button"); nextBtn.className = "slider-nav next"; nextBtn.innerHTML = "›"; nextBtn.setAttribute("aria-label","Siguiente");
   viewport.appendChild(prevBtn);
   const track = document.createElement("div"); track.className = "slider-track";
-  section.mods.forEach(mod => track.appendChild(buildCard(mod)));
+  section.mods.forEach(mod => track.appendChild(buildCard(mod, section.name)));
   viewport.appendChild(track);
   viewport.appendChild(nextBtn);
   block.appendChild(viewport);
@@ -567,7 +567,7 @@ function startVotePolling() {
 }
 
 // ── Mod Card ────────────────────────────────────────────────────
-function buildCard(mod) {
+function buildCard(mod, sectionName = "") {
   const scoreObj = localVotes[mod.id] || {up:0, down:0};
   const upvotes = typeof scoreObj === 'object' ? (scoreObj.up || 0) : (scoreObj > 0 ? scoreObj : 0);
   const downvotes = typeof scoreObj === 'object' ? (scoreObj.down || 0) : (scoreObj < 0 ? Math.abs(scoreObj) : 0);
@@ -610,16 +610,18 @@ function buildCard(mod) {
   const nameEl = document.createElement("h3"); nameEl.className = "mod-name";
   nameEl.textContent = mod.name; nameEl.addEventListener("click", () => openModal(mod));
 
-  // Status replaces generic "MOD" tag when present
   const typeTag = document.createElement("span");
-  if (mod.status) {
-    const statusClsMap = { "SELECCIÓN DEL AUTOR": "status-confirmed", "REVISIÓN": "status-pending", "ELIMINADO": "status-removed" };
-    typeTag.className = `mod-type-tag status-inline ${statusClsMap[mod.status] || ""}`;
-    typeTag.textContent = mod.status;
+  if (mod.status === "SELECCIÓN DEL AUTOR") {
+    typeTag.className = "mod-type-tag status-inline status-confirmed";
+    typeTag.textContent = "SELECCIÓN DEL AUTOR";
+  } else if (sectionName === "Resource Packs" || mod._sectionName === "Resource Packs") {
+    typeTag.className = "mod-type-tag status-inline status-rp";
+    typeTag.textContent = "RESOURCE PACK";
   } else {
-    typeTag.className = "mod-type-tag status-inline status-pending";
-    typeTag.textContent = "REVISIÓN";
+    typeTag.className = "mod-type-tag status-inline status-mod";
+    typeTag.textContent = "MOD";
   }
+  
   titleRow.appendChild(nameEl); titleRow.appendChild(typeTag); body.appendChild(titleRow);
 
   if (mod.paragraphs?.length > 0) {
@@ -1071,8 +1073,8 @@ function initSearchAndFilter() {
     
     let allMods = [];
     modData.sections.forEach(s => {
-      s.mods.forEach(m => {
-        allMods.push({...m, _sectionName: s.name});
+      s.mods.forEach((m, idx) => {
+        allMods.push({...m, _sectionName: s.name, _idxFromEnd: s.mods.length - idx});
       });
     });
     
@@ -1082,15 +1084,13 @@ function initSearchAndFilter() {
         if (!text.includes(query)) return false;
       }
       
-      const sv = localVotes[m.id];
+      const sv = userVotesReady ? (userVotes[m.id] || 0) : 0;
       if (filter === "unvoted") {
-        if (sv && (sv.up === 1 || sv.down === 1)) return false;
+        if (sv !== 0) return false;
       } else if (filter === "voted-up") {
-        if (!sv || sv.up !== 1) return false;
+        if (sv !== 1) return false;
       } else if (filter === "voted-down") {
-        if (!sv || sv.down !== 1) return false;
-      } else if (filter === "status-review") {
-        if (m.status !== "REVISIÓN") return false;
+        if (sv !== -1) return false;
       } else if (filter === "status-deleted") {
         if (m.status !== "ELIMINADO") return false;
       }
@@ -1099,8 +1099,7 @@ function initSearchAndFilter() {
     });
     
     if (sort === "recent") {
-      // Reverse array to show newly added first
-      filtered.reverse();
+      filtered.sort((a,b) => a._idxFromEnd - b._idxFromEnd);
     } else if (sort === "alphabetical") {
       filtered.sort((a,b) => a.name.localeCompare(b.name));
     }

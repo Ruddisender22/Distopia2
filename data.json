@@ -531,6 +531,22 @@
                                                              "Permite domar, equipar con montura y cabalgar a los caballos zombis y caballos esqueletos tal como si fuesen caballos normales."
                                                          ],
                                           "status":  "REVISIÓN"
+                                      },
+                                      {
+                                          "id":  "unusual-prehistory-2",
+                                          "name":  "Unusual Prehistory 2",
+                                          "images":  [
+                                                         "https://media.forgecdn.net/attachments/1417/474/1.png",
+                                                         "https://media.forgecdn.net/attachments/1594/733/1.png",
+                                                         "https://media.forgecdn.net/attachments/1343/758/card-11-carnotaurus.png",
+                                                         "https://media.forgecdn.net/attachments/1342/840/card-4-dunkleosteus.png",
+                                                         "https://media.forgecdn.net/attachments/1401/857/card_1_majungasaurus-png.png"
+                                                     ],
+                                          "paragraphs":  [
+                                                             "Un extenso mod de prehistoria que te permite descubrir fósiles en el mundo, extraer su ADN y revivir una gran variedad de impresionantes criaturas prehistóricas y dinosaurios.",
+                                                             "Esta es la versión rediseñada y ampliada, que incluye modelos detallados, animaciones sorprendentes y nuevas mecánicas para interactuar y criar a estas bestias milenarias."
+                                                         ],
+                                          "status":  "EN DESARROLLO"
                                       }
                                   ]
                      },

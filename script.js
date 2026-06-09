@@ -636,6 +636,11 @@ function buildCard(mod, sectionName = "") {
     selTag.className = "mod-type-tag status-inline status-confirmed";
     selTag.textContent = "SELECCIÓN DEL AUTOR";
     tagsRow.appendChild(selTag);
+  } else if (mod.status === "EN DESARROLLO") {
+    const devTag = document.createElement("span");
+    devTag.className = "mod-type-tag status-inline status-pending";
+    devTag.textContent = "EN DESARROLLO";
+    tagsRow.appendChild(devTag);
   }
 
   body.appendChild(tagsRow);

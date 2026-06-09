@@ -907,6 +907,7 @@ function buildCarousel(mod) {
   const prevBtn = document.getElementById("carousel-prev");
   const nextBtn = document.getElementById("carousel-next");
   if (!track) return;
+  track.style.transform = "translateX(0)";
   track.innerHTML=""; if(dots) dots.innerHTML="";
   (mod.images||[]).forEach((src,i)=>{
     const slide = document.createElement("div"); slide.className="gallery-slide";

@@ -965,10 +965,9 @@
                         "https://media.forgecdn.net/avatars/thumbnails/1125/973/256/256/638683470246120057.png"
                     ],
                     "paragraphs": [
-                        "Dynamic Caveman te permite usar los materiales más básicos, como palos, piedras y obsidiana, para infligir un daño mínimo a otros jugadores o entidades. Los palos y las piedras pueden dañar al jugador mediante ataques cuerpo a cuerpo, y las piedras se pueden lanzar (haz clic derecho con la mano secundaria).",
-                        "Añade daño extra a palos y otros materiales básicos, y permite lanzar piedras con gran retroceso y la mitad de daño. Necesitas 4 piedras del mismo tipo para poder lanzarlas.",
-                        "Además, cada elemento renovado tiene una regla de juego para que puedas elegir si quieres o no que ese elemento tenga sus características adicionales.",
-                        "Lista completa de elementos dinámicos:\n\nPalos (2 de daño, tiene posibilidad de romperse)\nAdoquines y piedra (3 puntos de daño)\nPizarra profunda y pizarra profunda adoquinada (3,5 de daño)\nNetherrack (2 de daño, probabilidad de prender fuego a las entidades durante 4 segundos)\nPiedra final (4,5 de daño)\nObsidiana (5,5 de daño)\nVaras de fuego (3 de daño, posibilidad de prender fuego a las entidades durante 3 segundos, tiene posibilidad de romperse)"
+                        "Permite usar materiales básicos como palos, piedras y obsidiana para infligir daño.",
+                        "Añade ataques cuerpo a cuerpo para algunos objetos y mecánicas para lanzar otros, como piedras.",
+                        "Incluye reglas de juego para activar o desactivar estas características en cada elemento."
                     ],
                     "status": "REVISIÓN"
                 },
@@ -992,7 +991,7 @@
                         "https://i.tlauncher.org/images/justhammers-mod-screenshots-04.jpg"
                     ],
                     "paragraphs": [
-                        "Añade martillos al juego que pueden minar en cuadrículas de 3x3, 3x3x3, 5x5x1, 5x5x3 y, finalmente, ¡5x5x5! Son geniales."
+                        "Añade martillos que pueden minar en áreas de 3x3, 3x3x3, 5x5x1, 5x5x3 y 5x5x5."
                     ]
                 },
                 {
@@ -1025,7 +1024,7 @@
                         "https://i.ytimg.com/vi/7DbhDJlCPpE/maxresdefault.jpg"
                     ],
                     "paragraphs": [
-                        "Golpea a tus enemigos en hierbas altas"
+                        "Permite golpear a los enemigos a través de la hierba alta y otras plantas."
                     ]
                 },
                 {
@@ -1035,8 +1034,8 @@
                         "https://cdn.modrinth.com/data/6lvRWqbA/images/6291ebe10ccf3cfdbf288711a6e7e1e9433505a5.jpeg"
                     ],
                     "paragraphs": [
-                        "Enderite Mod añade un nuevo material extremadamente poderoso al juego: la Enderita. Este material sirve como una evolución y mejora directa para la Netherita y se puede encontrar en las profundidades de The End.",
-                        "Para extraerlo deberás explotar la mena y luego fundirla. El equipamiento creado con Enderita tiene habilidades únicas, como la capacidad de flotar en el vacío para evitar que pierdas tus objetos valiosos."
+                        "Añade un nuevo material al juego: la Enderita. Se encuentra en la dimensión del End y sirve como un nivel superior a la Netherita.",
+                        "El equipamiento fabricado con Enderita cuenta con la habilidad de flotar en el vacío para evitar la pérdida de los objetos."
                     ],
                     "status": "ELIMINADO"
                 },
@@ -1049,8 +1048,8 @@
                         "https://preview.redd.it/relic-guide-v0-pv0hg2te4ble1.png?width=3502&format=png&auto=webp&s=45b60acc37550138394e9e4017cf5dbfeb2ed613"
                     ],
                     "paragraphs": [
-                        "Relics añade una valiosa colección de reliquias únicas, cada una con complejas mecánicas de combate y exploración, combinadas con un sistema de estadísticas aleatorias al estilo MMO.",
-                        "Podrás encontrar o crear la versión 'perfecta' de tu reliquia, subiéndola de nivel y personalizando tu estilo de juego. El mod está diseñado para equilibrarse de forma natural y adaptarse a la escala de daño y salud de cualquier mundo."
+                        "Añade una colección de reliquias con mecánicas de combate y exploración, junto con un sistema de estadísticas aleatorias.",
+                        "Permite subir de nivel y personalizar las reliquias. El mod está diseñado para adaptarse a la escala de daño y salud del mundo."
                     ]
                 },
                 {
@@ -1061,8 +1060,8 @@
                         "https://media.forgecdn.net/attachments/964/951/2024-09-12_07.png"
                     ],
                     "paragraphs": [
-                        "Reliquified Artifacts es un mod de compatibilidad y mejora que integra el equipamiento del mod Artifacts dentro del complejo sistema de estadísticas y habilidades de Relics.",
-                        "Muchos de los objetos clásicos de Artifacts ahora cuentan con mecánicas más profundas y escalables, dándoles una nueva vida para que encajen a la perfección con la progresión de nivel de tus reliquias."
+                        "Integra el equipamiento del mod Artifacts dentro del sistema de estadísticas de Relics.",
+                        "Los objetos de Artifacts reciben mecánicas escalables para adaptarse a la progresión de nivel del sistema de reliquias."
                     ]
                 },
                 {
@@ -1073,8 +1072,8 @@
                         "https://www.minecraft-guides.com/wp-content/uploads/2025/05/Relic_ScouringEye-1024x383.png"
                     ],
                     "paragraphs": [
-                        "Reliquified L_Ender's Cataclysm es un puente de compatibilidad que añade potentes reliquias inspiradas en los temibles jefes, mecánicas y estructuras de L_Ender's Cataclysm.",
-                        "Está pensado para enriquecer la progresión en el juego tardío, recompensando a los jugadores que superen los formidables retos de los jefes con poderosas habilidades pasivas y activas vinculadas a sus nuevas reliquias."
+                        "Añade reliquias compatibles con el sistema de Relics inspiradas en los jefes y estructuras de Cataclysm.",
+                        "Otorga habilidades pasivas y activas como recompensa al derrotar a los jefes y superar los desafíos del mod."
                     ]
                 },
                 {
@@ -1085,7 +1084,7 @@
                         "https://media.forgecdn.net/attachments/description/920268/description_3e1a24d5-de12-47f8-bcbd-01f10216c892.png"
                     ],
                     "paragraphs": [
-                        "Añade la Espada del Cerezo, un arma poderosa que brilla y suelta partículas de flores de cerezo al atacar."
+                        "Añade la Espada del Cerezo, un arma que brilla y emite partículas de flores de cerezo al atacar."
                     ],
                     "status": "REVISIÓN"
                 },

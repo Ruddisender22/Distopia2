@@ -989,7 +989,8 @@
                         "Permite usar materiales básicos como palos, piedras y obsidiana para infligir daño.",
                         "Añade ataques cuerpo a cuerpo para algunos objetos y mecánicas para lanzar otros, como piedras.",
                         "Incluye reglas de juego para activar o desactivar estas características en cada elemento."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "backported-spears",

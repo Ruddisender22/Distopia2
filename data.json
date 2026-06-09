@@ -913,7 +913,8 @@
                     "paragraphs": [
                         "Rediseña el aspecto de las pociones para darles diseños de botella distintivos.",
                         "Mejora el aspecto visual otorgando a cada poción texturas diferentes, facilitando su identificación rápida en el inventario."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "cataclysm-spellbooks",

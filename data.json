@@ -1421,6 +1421,18 @@
                     "paragraphs": [
                         "Añade nuevos bloques de faroles de piedra elaborados y decorativos para iluminar y adornar tus construcciones exteriores y jardines."
                     ]
+                },
+                {
+                    "id": "rechiseled",
+                    "name": "Rechiseled",
+                    "images": [
+                        "https://imgur.com/uGsS7I5.png",
+                        "https://media.forgecdn.net/attachments/420/202/2022-01-03_20.png"
+                    ],
+                    "paragraphs": [
+                        "Sucesor espiritual del clásico mod Chisel, diseñado para ofrecer una enorme libertad creativa a los constructores del juego.",
+                        "Añade más de 600 variaciones decorativas de bloques vanilla y de otros mods, permitiendo transformar texturas mediante un cincel y una interfaz intuitiva con soporte para texturas conectadas y transiciones fluidas."
+                    ]
                 }
             ]
         },
@@ -1520,6 +1532,43 @@
                         "Renueva el sistema de pesca con más de 100 peces únicos, cebos, cajas de aparejos, torneos, acuarios y minijuegos interactivos de captura."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "artifacts-delight",
+                    "name": "Artifact's Delight",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/1633/949/256/256/639046651700911795.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento que añade compatibilidad y contenido entre los mods Farmer's Delight y Artifacts.",
+                        "Introduce recetas de cocina que utilizan y procesan los valiosos tesoros del mod Artifacts, como la posibilidad de picar la Carne de Vaca Eterna (Eternal Beef)."
+                    ]
+                },
+                {
+                    "id": "farmers-pizzeria",
+                    "name": "Farmer's Pizzeria",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1520/394/2026-02-07_14-55-21-png.png",
+                        "https://media.forgecdn.net/attachments/1520/396/2026-02-07_14-54-48-png.png",
+                        "https://media.forgecdn.net/attachments/1520/397/2026-02-07_14-54-55-png.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Farmer's Delight y Brewin' And Chewin' que añade una amplia variedad de pizzas artesanales e ingredientes culinarios.",
+                        "Introduce cultivos nuevos como la albahaca, y alimentos procesados como el salami o el queso dorblu, que los jugadores pueden hornear y cortar en porciones para comer."
+                    ]
+                },
+                {
+                    "id": "expanded-delight",
+                    "name": "Expanded Delight",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1067/823/2025-01-15_09.png",
+                        "https://media.forgecdn.net/attachments/1067/818/2025-01-15_09.png",
+                        "https://media.forgecdn.net/attachments/1067/819/2025-01-15_09.png"
+                    ],
+                    "paragraphs": [
+                        "Una extensa expansión para Farmer's Delight que amplía drásticamente el catálogo de alimentos y cultivos disponibles para el jugador.",
+                        "Añade una enorme selección de platos listos para comer, nuevos vegetales y árboles frutales, herramientas de cocina especializadas y mesas de trabajo funcionales que complementan la experiencia culinaria y agrícola."
+                    ]
                 }
             ]
         },

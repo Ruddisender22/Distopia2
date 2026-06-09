@@ -615,19 +615,26 @@ function buildCard(mod, sectionName = "") {
   const nameEl = document.createElement("h3"); nameEl.className = "mod-name";
   nameEl.textContent = mod.name; nameEl.addEventListener("click", () => openModal(mod));
 
-  const typeTag = document.createElement("span");
-  if (mod.status === "SELECCIÓN DEL AUTOR") {
-    typeTag.className = "mod-type-tag status-inline status-confirmed";
-    typeTag.textContent = "SELECCIÓN DEL AUTOR";
-  } else if (sectionName === "Resource Packs" || mod._sectionName === "Resource Packs") {
-    typeTag.className = "mod-type-tag status-inline status-rp";
-    typeTag.textContent = "RESOURCE PACK";
+  const baseTag = document.createElement("span");
+  if (sectionName === "Resource Packs" || mod._sectionName === "Resource Packs") {
+    baseTag.className = "mod-type-tag status-inline status-rp";
+    baseTag.textContent = "RESOURCE PACK";
   } else {
-    typeTag.className = "mod-type-tag status-inline status-mod";
-    typeTag.textContent = "MOD";
+    baseTag.className = "mod-type-tag status-inline status-mod";
+    baseTag.textContent = "MOD";
   }
   
-  titleRow.appendChild(nameEl); titleRow.appendChild(typeTag); body.appendChild(titleRow);
+  titleRow.appendChild(nameEl);
+  titleRow.appendChild(baseTag);
+
+  if (mod.status === "SELECCIÓN DEL AUTOR") {
+    const selTag = document.createElement("span");
+    selTag.className = "mod-type-tag status-inline status-confirmed";
+    selTag.textContent = "SELECCIÓN DEL AUTOR";
+    titleRow.appendChild(selTag);
+  }
+
+  body.appendChild(titleRow);
 
   if (mod.paragraphs?.length > 0) {
     const ex = document.createElement("p"); ex.className = "mod-excerpt"; ex.textContent = mod.paragraphs[0];

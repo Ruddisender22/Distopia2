@@ -547,6 +547,19 @@
                         "Esta versión incluye modelos detallados, animaciones fluidas y mecánicas para interactuar y criar a estas criaturas."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "ribbits",
+                    "name": "Ribbits",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/889/105/image_1.png",
+                        "https://cdn.modrinth.com/data/cached_images/73a878cb94d406ab3e3f136a295b794beb3a106a.png",
+                        "https://www.minecraft-guides.com/wp-content/uploads/2025/11/Fisher-1024x576.png"
+                    ],
+                    "paragraphs": [
+                        "Añade a los Ribbits, pequeñas criaturas amigables parecidas a ranas que habitan en el mundo y con las que puedes interactuar o comerciar."
+                    ],
+                    "status": "NUEVO"
                 }
             ]
         },
@@ -716,9 +729,9 @@
                         "https://media.forgecdn.net/attachments/1558/421/image-png.png"
                     ],
                     "paragraphs": [
-                        "Añade diversas sustancias interactivas y cultivos.",
-                        "Incluye cadenas de producción completas para procesar las materias primas utilizando maquinaria de Create. Las sustancias tienen sistemas de tolerancia, síndrome de abstinencia, mezclas y efectos visuales personalizados.",
-                        "Sustancias: Marihuana, cigarrillos, puros, cocaína, crack, heroína, fentanilo, lean, LSD, metanfetamina, DMT, MDMA, setas alucinógenas, vaporizadores, snus y bolsitas de nicotina."
+                        "¡Es hora de cocinar! Este mod introduce un mercado negro de drogas totalmente interactivas y cultivos ilícitos para darle un giro oscuro a tu aventura industrial.",
+                        "Podrás usar toda la maquinaria de Create para establecer cadenas de producción completas y procesar sustancias como la marihuana, tabaco, cocaína, setas alucinógenas y muchas más.",
+                        "Pero cuidado: cada sustancia genera tolerancia de forma individual y tiene efectos secundarios, alucinaciones personalizadas e incluso síndromes de abstinencia."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
@@ -837,6 +850,31 @@
                         "Añade un aserradero que actúa como el cortapiedras pero para madera. Es compatible con cualquier mod e incluye la nueva profesión de aldeano Carpintero."
                     ],
                     "status": "REVISIÓN"
+                },
+                {
+                    "id": "create-big-cannons",
+                    "name": "Create Big Cannons",
+                    "images": [
+                        "https://i.ytimg.com/vi/nnbNHZ3wJy4/maxresdefault.jpg",
+                        "https://imgur.com/vIVt3se.png",
+                        "https://imgur.com/dx9298q.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Create que permite diseñar y construir cañones de gran tamaño utilizando distintos materiales y mecanismos físicos."
+                    ],
+                    "status": "NUEVO"
+                },
+                {
+                    "id": "steam-n-rails",
+                    "name": "Steam 'n' Rails",
+                    "images": [
+                        "https://i.redd.it/a-few-trains-i-made-with-the-new-steam-rails-update-v0-v04m32k117vc1.png?width=1920&format=png&auto=webp&s=f3230f3e025486a3e02b093801402c30445d53ad",
+                        "https://media.forgecdn.net/attachments/794/769/64a92e01eaee601cba08f7d3ebbdd72f8d43bd2c.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Create que expande el sistema de trenes, añadiendo nuevos tipos de vías, vagonetas y mecánicas logísticas ferroviarias avanzadas."
+                    ],
+                    "status": "NUEVO"
                 }
             ]
         },
@@ -1146,6 +1184,29 @@
                         "Añade nuevas armaduras de limo que te permiten rebotar, armas pegajosas y otros bloques de utilidad basados en las mecánicas del slime."
                     ],
                     "status": "REVISIÓN"
+                },
+                {
+                    "id": "allthemodium",
+                    "name": "Allthemodium",
+                    "images": [
+                        "https://pic.pimg.tw/grant88/1614943323-4141937287-g.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade minerales de nivel superior (Allthemodium, Vibranium y Unobtainium) que sirven para fabricar el equipamiento y herramientas más avanzadas del juego."
+                    ],
+                    "status": "NUEVO"
+                },
+                {
+                    "id": "zenith-sword",
+                    "name": "The Zenith Sword",
+                    "images": [
+                        "https://www.minecraft-guides.com/wp-content/uploads/2026/02/Zenith-Sword-Featured-Image-860x484.png",
+                        "https://www.minecraft-guides.com/wp-content/uploads/2026/02/Zenith-Sword-Effect-Shown-1024x576.png"
+                    ],
+                    "paragraphs": [
+                        "Añade la Espada Zenith, un arma de progresión tardía que se fabrica combinando un gran número de espadas únicas para obtener efectos de área devastadores."
+                    ],
+                    "status": "NUEVO"
                 }
             ]
         },
@@ -1163,8 +1224,8 @@
                         "https://media.forgecdn.net/attachments/820/394/java_qodmujg1sl.png"
                     ],
                     "paragraphs": [
-                        "Dragon Mounts Remastered es la última versión que busca recuperar la esencia del querido Dragon Mounts Mod original.",
-                        "🐉 Modelos y animaciones de dragones actualizados\nDMR introduce dragones con modelos y animaciones mejorados, ofreciendo una apariencia pulida a la vez que mantienen la coherencia con el estilo de Minecraft.\n\n✨ Invoca a tu dragón con un silbido\nCrea un silbato y vincúlalo a un dragón específico. Esto te permitirá invocar a ese dragón a tu ubicación, incluso a través de dimensiones, lo que te dará mayor control sobre tus compañeros.\n\n🛠️ Comandos de comportamiento del dragón\nControla el comportamiento de tu dragón:\n\nSiéntese para mantenerlo inmóvil.\nTe siguen por tierra o por aire.\nDéjelo moverse libremente dentro de un radio determinado.\n📦 Inventario de dragones\nLos dragones pueden transportar cofres, lo que los convierte en compañeros útiles para viajes largos cuando se necesita espacio de almacenamiento adicional.\n\n🧬 Cría de dragones e híbridos\nPuedes criar dragones para crear híbridos que combinen rasgos de diferentes tipos. Experimenta para descubrir combinaciones y habilidades únicas.\n\n🌍 Cría basada en biomas\nCiertos dragones requieren biomas específicos para reproducirse, lo que fomenta la exploración y añade un nivel de desafío a la hora de desbloquear nuevos tipos.\n\n🔧 Tipos de dragones personalizados\nGracias a la compatibilidad con paquetes de datos, puedes crear tus propios tipos de dragones para personalizar aún más la experiencia.\n\n🏔️ Nuevas variantes de dragones\nDMR añade una selección de nuevos dragones inspirados en las actualizaciones modernas de Minecraft, ofreciendo nuevas opciones para descubrir y domesticar."
+                        "Recupera la esencia del clásico Dragon Mounts añadiendo dragones domesticables con modelos y animaciones actualizados.",
+                        "Permite incubar huevos de dragón en diferentes entornos para obtener variantes elementales. Puedes domarlos, ponerles armadura, darles órdenes básicas y utilizarlos como montura voladora o terrestre."
                     ],
                     "status": "REVISIÓN"
                 },
@@ -1178,11 +1239,8 @@
                         "https://i.imgur.com/DJVH3qv.png"
                     ],
                     "paragraphs": [
-                        "¿Alguna vez has querido montar un fénix? ¡Ahora puedes! Encuentra 6 huevos de fénix diferentes en tu mundo y dales un buen trato para que nazca tu nueva montura.",
-                        "WINGS OF FIRE es un mod que añade SEIS razas diferentes de fénix a Minecraft. ¡Encuentra huevos por todo tu mundo y eclosiona para crear nuevas y poderosas monturas!",
-                        "Encuentra huevos de fénix petrificados en diferentes estructuras de tu mundo y caliéntalos dentro del nuevo bloque CUNA INFERNAL . ¡Después de 15 minutos, tu huevo de fénix estará caliente!\n\n(Usar crema de magma sobre una base de fuego sin encender permite encenderla con fines decorativos).",
-                        "¡ Al combinar tus Huevos de Fénix recién calentados con las LINTERNAS TEMPLADAS , un nuevo objeto, se vincularán la linterna y el huevo, dándote el objeto capaz de invocar al legendario fénix!",
-                        "¡Haz clic derecho en tu linterna vinculada para invocar a tu Fénix! Una vez invocado, comenzarás a montar automáticamente en el Fénix, y cuando te bajes, ¡ PUM! (¡Cuidado con el daño por caída!)"
+                        "Añade 6 variantes diferentes de fénix que puedes criar y utilizar como monturas voladoras.",
+                        "Encuentra huevos petrificados por el mundo, caliéntalos en una cuna infernal y vincúlalos con linternas templadas para invocar a tu fénix personal."
                     ],
                     "status": "REVISIÓN"
                 },
@@ -1269,6 +1327,18 @@
                         "Permite que dos jugadores se monten y viajen juntos simultáneamente en un mismo caballo."
                     ],
                     "status": "REVISIÓN"
+                },
+                {
+                    "id": "gliders",
+                    "name": "Gliders",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/843/900/256/256/638240619391807565.png",
+                        "https://www.9minecraft.net/wp-content/uploads/2023/02/Gliders-Mod-Screenshots-5.png"
+                    ],
+                    "paragraphs": [
+                        "Añade planeadores (gliders) sencillos que te permiten descender lentamente y cruzar distancias por el aire con facilidad."
+                    ],
+                    "status": "NUEVO"
                 }
             ]
         },
@@ -1287,8 +1357,8 @@
                         "https://pbs.twimg.com/media/GIJ8GIya8AAbDHZ.jpg"
                     ],
                     "paragraphs": [
-                        "Incorpora una enorme variedad de muebles y elementos decorativos completamente interactivos para ambientar todo tipo de bases.",
-                        "Destaca un sistema eléctrico funcional, envío de correo entre jugadores y dispositivos informáticos con aplicaciones útiles."
+                        "Incorpora una gran variedad de muebles y elementos decorativos interactivos.",
+                        "Cuenta con un sistema eléctrico funcional, envío de correo entre jugadores y dispositivos informáticos con aplicaciones."
                     ],
                     "status": "REVISIÓN"
                 },
@@ -1336,7 +1406,7 @@
                         "https://media.forgecdn.net/attachments/474/234/screen_selector.jpg"
                     ],
                     "paragraphs": [
-                        "¡Usa tus propias pinturas! ¡Arrastra y suelta! ¡En modo multijugador!"
+                        "Permite importar y utilizar tus propias imágenes personalizadas como cuadros dentro del juego arrastrando y soltando."
                     ]
                 },
                 {
@@ -1616,6 +1686,18 @@
                         "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
                     ],
                     "status": "REVISIÓN"
+                },
+                {
+                    "id": "mining-gadgets",
+                    "name": "Mining Gadgets",
+                    "images": [
+                        "https://www.minecraft-guides.com/wp-content/uploads/mcg-icons/other%20mods/mininggadgets__mininggadget_fancy.png",
+                        "https://www.minecraft-guides.com/wp-content/uploads/2026/04/Mining-Gadget-MK3.png"
+                    ],
+                    "paragraphs": [
+                        "Introduce herramientas de minería láser alimentadas por energía, ofreciendo una forma avanzada y personalizable de recolectar recursos."
+                    ],
+                    "status": "NUEVO"
                 }
             ]
         },

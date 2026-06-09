@@ -1410,6 +1410,44 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Nuevas Propuestas",
+      "icon": "🆕",
+      "mods": [
+        { "id": "blossom-blade", "name": "Blossom Blade", "paragraphs": ["The sword stuck in the pedestal glows with a holy light, carrying the smell of cherry blossoms with every swing."], "status": "REVISIÓN" },
+        { "id": "burnt-basic", "name": "Burnt Basic", "paragraphs": ["The vanilla fire enhancing mod."], "status": "REVISIÓN" },
+        { "id": "cataclysm-spellbooks", "name": "Cataclysm: Spellbooks", "paragraphs": ["An addon for Iron's Spells and Spellbooks and L_Ender's Cataclysm"], "status": "REVISIÓN" },
+        { "id": "comforts", "name": "Comforts", "paragraphs": ["Adds sleeping bags and hammocks for, respectively, portability and turning day to night, without setting new spawns. Comes in 16 different colors!"], "status": "REVISIÓN" },
+        { "id": "create-propulsion", "name": "Create Propulsion", "paragraphs": ["Port of Create: Propulsion mod to NeoForge 1.21.1 with support of Sable and Create: Aeronautics"], "status": "REVISIÓN" },
+        { "id": "create-diesel-generators", "name": "Create: Diesel Generators", "paragraphs": ["A mod that adds Diesel Generators, Crude Oil Refinery and much more to the create mod."], "status": "REVISIÓN" },
+        { "id": "extra-bows-restrung", "name": "Extra bows: Restrung", "paragraphs": ["Adds tiered bows and crossbows to Minecraft."], "status": "REVISIÓN" },
+        { "id": "field-guide", "name": "Field Guide", "paragraphs": ["Discover Plants, Animals and Monsters with a Spyglass. Collect them all and take notes in your personal Field Guide!"], "status": "REVISIÓN" },
+        { "id": "goblin-traders", "name": "Goblin Traders", "paragraphs": ["An Unofficial Port of MrCrayfish's Goblin Traders Mod"], "status": "REVISIÓN" },
+        { "id": "horseman", "name": "Horseman", "paragraphs": ["Improved horses: faster hitching, smooth riding, QOL features and more..."], "status": "REVISIÓN" },
+        { "id": "icarus", "name": "Icarus", "paragraphs": ["Adds a bunch of colourful and unique wings that can be worn in the Trinkets Cape slot."], "status": "REVISIÓN" },
+        { "id": "immersive-armors", "name": "Immersive Armors", "paragraphs": ["A lot of unique and vanilla-faithful armor sets."], "status": "REVISIÓN" },
+        { "id": "iron-furnaces", "name": "Iron Furnaces", "paragraphs": ["Inspired by cpw's Iron Chests mod, adds a few different tiers of furnace."], "status": "REVISIÓN" },
+        { "id": "irons-spells-n-spellbooks", "name": "Iron's Spells 'n Spellbooks", "paragraphs": ["A magic mod bringing back the classic RPG spellcasting fantasy. (irons spells and spellbooks)"], "status": "REVISIÓN" },
+        { "id": "miners-moon", "name": "Miner's Moon", "paragraphs": ["This Add-on for Enhanced Celestials adds a Miner's Moon"], "status": "REVISIÓN" },
+        { "id": "multiplayer-boss-attribute-modifier", "name": "Multiplayer Boss Attribute Modifier", "paragraphs": ["Automatically scales boss attributes based on the number of players nearby."], "status": "REVISIÓN" },
+        { "id": "netherite-scrap-from-piglin-brutes", "name": "Netherite Scrap From Piglin Brutes", "paragraphs": ["Gives Piglin Brutes a chance to drop Netherite Scrap upon defeat."], "status": "REVISIÓN" },
+        { "id": "piggyback", "name": "Piggyback", "paragraphs": ["Allow player riding each other and replace the default player sitting mechanic with a piggyback-style ride. Carry your friends on your back for fun, teamwork, or pure chaos!"], "status": "REVISIÓN" },
+        { "id": "playing-cards-chips", "name": "Playing Cards & Chips", "paragraphs": ["Playing cards and poker chips! Which are meant to be played with friends."], "status": "REVISIÓN" },
+        { "id": "reddens-stone-lanterns", "name": "Redden's Stone Lanterns", "paragraphs": ["Another decoration mod"], "status": "REVISIÓN" },
+        { "id": "sawmil", "name": "Sawmil", "paragraphs": ["Ultimate Woodcutter. As it was intented, compatible with any mod, automatically. Includes Carpenter Villager"], "status": "REVISIÓN" },
+        { "id": "shield-expansion", "name": "Shield Expansion", "paragraphs": ["Adds parrying, enchantments, tiers and customization to shields for more fun!"], "status": "REVISIÓN" },
+        { "id": "shield-parry", "name": "Shield Parry", "paragraphs": ["Adding new elements to combat. Parrying and bashing to give you the edge in all encounters (if youre skilled enough)"], "status": "REVISIÓN" },
+        { "id": "shiny-horses-reborn", "name": "Shiny Horses Reborn", "paragraphs": ["Enchantable Horse Armor"], "status": "REVISIÓN" },
+        { "id": "simple-netherite-horse-armor", "name": "Simple Netherite Horse Armor", "paragraphs": ["Yet another simple, netherite armor looking netherite horse armor mod."], "status": "REVISIÓN" },
+        { "id": "slimy-stuff", "name": "Slimy Stuff", "paragraphs": ["Adds several new utilities to slime, jelly, armor with sticky abilities, weapons..."], "status": "REVISIÓN" },
+        { "id": "spain-national-anthem", "name": "Spain National Anthem", "paragraphs": ["Adds a custom music disc containing the Spanish national anthem to the game."], "status": "REVISIÓN" },
+        { "id": "tameable-zombie-horse-and-skeleton-horse", "name": "Tameable Zombie Horse And Skeleton Horse", "paragraphs": ["Make the Zombie Horse and Skeleton Horse Tameable like normal Horses!"], "status": "REVISIÓN" },
+        { "id": "the-roads-more-travelled", "name": "The Roads More Travelled", "paragraphs": ["Make your world feel more immersive by adding a gradual erosion system to the terrain you walk on."], "status": "REVISIÓN" },
+        { "id": "two-players-one-horse", "name": "Two Players One Horse", "paragraphs": ["This mod allows two players to mount together on the same horse. Epic!"], "status": "REVISIÓN" },
+        { "id": "winds-spellbooks", "name": "Wind's Spellbooks", "paragraphs": ["Add a brand new \"Wind\" school to irons spells n spellbooks"], "status": "REVISIÓN" },
+        { "id": "woodwalkers-spellbooks", "name": "Woodwalkers Spellbooks", "paragraphs": ["Acts as an integration addon between Woodwalkers and Iron's Spells 'n Spellbooks, introducing a new evocation spell called Shapeshifting."], "status": "REVISIÓN" }
+      ]
     }
   ]
 }

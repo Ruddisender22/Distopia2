@@ -357,7 +357,16 @@ async function loadUserVotesFromServer() {
 function renderAll() {
   const app = document.getElementById("app");
   app.innerHTML = "";
-  modData.sections.forEach(s => app.appendChild(buildSection(s)));
+  modData.sections.forEach(s => {
+    s.mods.sort((a, b) => {
+      const aElim = a.status === "ELIMINADO";
+      const bElim = b.status === "ELIMINADO";
+      if (aElim && !bElim) return 1;
+      if (!aElim && bElim) return -1;
+      return 0;
+    });
+    app.appendChild(buildSection(s));
+  });
 }
 
 function buildSection(section) {

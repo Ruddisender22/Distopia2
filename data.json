@@ -396,7 +396,8 @@
                     "paragraphs": [
                         "Añade variantes de criaturas que se integran en el mundo de Minecraft.",
                         "Cada variante aparece de forma natural en los biomas correspondientes. También puedes encontrar generadores en mazmorras y cámaras de prueba, añadiendo exploración adicional."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "primal",

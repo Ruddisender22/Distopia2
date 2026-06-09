@@ -596,7 +596,13 @@ function buildCard(mod, sectionName = "") {
     thumb.setAttribute("aria-label",`Ver detalle de ${mod.name}`);
     const img = document.createElement("img");
     img.src = mod.images[0]; img.alt = mod.name;
-    img.className = "mod-thumb-img"; img.loading = "lazy"; img.decoding = "async";
+    img.className = "mod-thumb-img";
+    if (mod.images[0].toLowerCase().includes(".gif")) {
+      img.loading = "eager";
+    } else {
+      img.loading = "lazy";
+      img.decoding = "async";
+    }
     img.onerror = () => { img.src = `https://placehold.co/800x450/07041a/4c3a8a?text=${encodeURIComponent(mod.name)}`; };
     thumb.appendChild(img);
     const hover = document.createElement("div"); hover.className = "thumb-hover";
@@ -923,7 +929,13 @@ function buildBentoGrid(mod) {
     const item = document.createElement("div"); item.className = "bento-item";
     const img  = document.createElement("img");
     img.src = src==="placeholder" ? `https://placehold.co/800x450/07041a/4c3a8a?text=${encodeURIComponent(mod.name)}` : src;
-    img.alt = `${mod.name} — imagen ${i+1}`; img.loading="lazy";
+    img.alt = `${mod.name} — imagen ${i+1}`;
+    if (img.src.toLowerCase().includes(".gif")) {
+      img.loading = "eager";
+    } else {
+      img.loading = "lazy";
+      img.decoding = "async";
+    }
     img.onerror=()=>{ img.src=`https://placehold.co/800x450/07041a/4c3a8a?text=Sin+imagen`; };
     item.appendChild(img); bento.appendChild(item);
   });
@@ -940,7 +952,13 @@ function buildCarousel(mod) {
   track.innerHTML=""; if(dots) dots.innerHTML="";
   (mod.images||[]).forEach((src,i)=>{
     const slide = document.createElement("div"); slide.className="gallery-slide";
-    const img   = document.createElement("img"); img.src=src; img.alt=`${mod.name} ${i+1}`; img.loading="lazy";
+    const img   = document.createElement("img"); img.src=src; img.alt=`${mod.name} ${i+1}`;
+    if (src.toLowerCase().includes(".gif")) {
+      img.loading = "eager";
+    } else {
+      img.loading = "lazy";
+      img.decoding = "async";
+    }
     img.onerror=()=>{ img.src=`https://placehold.co/800x450/07041a/4c3a8a?text=Sin+imagen`; };
     slide.appendChild(img); track.appendChild(slide);
     if(dots&&(mod.images||[]).length>1){

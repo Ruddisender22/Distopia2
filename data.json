@@ -1833,7 +1833,8 @@
                     ],
                     "paragraphs": [
                         "Resource pack que mejora notablemente la textura de la tierra, haciéndola más detallada y natural."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "farcr-recrafted",
@@ -1849,7 +1850,8 @@
                     ],
                     "paragraphs": [
                         "Ofrece una reinterpretación de las texturas originales. Busca dar al entorno visual un aspecto más sobrio, pulido y cohesionado."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "low-on-fire",
@@ -1870,7 +1872,8 @@
                     ],
                     "paragraphs": [
                         "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "undopia-zombies",
@@ -1896,6 +1899,17 @@
                     ],
                     "paragraphs": [
                         "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
+                    ]
+                },
+                {
+                    "id": "clearer-water-pack",
+                    "name": "Clearer Water Pack",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/description/null/description_54f8df46-5a85-4213-8a88-4d45a5901102.gif"
+                    ],
+                    "paragraphs": [
+                        "Resource pack que aumenta significativamente la claridad y transparencia del agua, permitiendo ver estructuras submarinas, criaturas y recursos con facilidad.",
+                        "Ideal para explorar océanos y ríos sin la densa niebla acuática por defecto, manteniendo un aspecto limpio y mejorando la visibilidad general bajo el agua."
                     ]
                 }
             ]

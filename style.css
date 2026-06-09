@@ -250,6 +250,63 @@ body {
    MAIN & SECTIONS
 ══════════════════════════════════════════════════════════════ */
 #app { position: relative; z-index: 10; padding-bottom: 5rem; }
+
+/* ══════════════════════════════════════════════════════════════
+   SEARCH & FILTERS
+══════════════════════════════════════════════════════════════ */
+.controls-bar {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  padding: 0 2rem; margin: 1rem 0 2.5rem;
+  align-items: center; justify-content: space-between;
+}
+.search-box {
+  flex: 1; min-width: 280px; max-width: 500px;
+  position: relative; display: flex; align-items: center;
+}
+.search-box svg {
+  position: absolute; left: 1rem; color: var(--t4);
+  pointer-events: none;
+}
+.search-box input {
+  width: 100%; padding: 0.8rem 1rem 0.8rem 2.8rem;
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: var(--r-pill); color: var(--t1);
+  font-family: var(--font-body); font-size: 0.9rem;
+  transition: all 0.2s; outline: none;
+}
+.search-box input:focus {
+  background: rgba(0,0,0,0.6); border-color: var(--violet);
+  box-shadow: 0 0 15px rgba(139,92,246,0.25);
+}
+.filter-box {
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+}
+.filter-box select {
+  padding: 0.7rem 2.2rem 0.7rem 1.2rem;
+  background: var(--glass) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round'%3E%3Cpolyline points='4 6 8 10 12 6'/%3E%3C/svg%3E") no-repeat right 0.8rem center;
+  border: 1px solid var(--border); border-radius: var(--r-pill);
+  color: var(--t2); font-family: var(--font-body); font-size: 0.82rem; font-weight: 600;
+  appearance: none; -webkit-appearance: none; cursor: pointer;
+  transition: all 0.2s; outline: none;
+}
+.filter-box select:hover, .filter-box select:focus {
+  border-color: var(--violet-r); color: var(--t1); background-color: rgba(255,255,255,0.06);
+}
+.filter-box select option {
+  background: var(--bg); color: var(--t1);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem; padding: 0 2rem 4rem;
+}
+.no-results {
+  grid-column: 1 / -1; padding: 4rem 1rem;
+  text-align: center; color: var(--t3); font-size: 1.1rem;
+  background: var(--glass); border-radius: var(--r-xl); border: 1px dashed var(--border-h);
+}
+
 .section-block { margin-bottom: 3.5rem; }
 
 .section-rule {

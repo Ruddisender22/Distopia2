@@ -355,8 +355,13 @@ async function loadUserVotesFromServer() {
 //  RENDER — Horizontal sliders per section
 // ══════════════════════════════════════════════════════════════
 function renderAll() {
-  const app = document.getElementById("app");
-  app.innerHTML = "";
+  const sectionsContainer = document.getElementById("sections-container");
+  if (!sectionsContainer) return;
+  sectionsContainer.innerHTML = "";
+  
+  const controlsBar = document.getElementById("controls-bar");
+  if (controlsBar) controlsBar.hidden = false;
+
   modData.sections.forEach(s => {
     s.mods.sort((a, b) => {
       const aElim = a.status === "ELIMINADO";
@@ -365,7 +370,7 @@ function renderAll() {
       if (!aElim && bElim) return -1;
       return 0;
     });
-    app.appendChild(buildSection(s));
+    sectionsContainer.appendChild(buildSection(s));
   });
 }
 
@@ -785,6 +790,7 @@ async function handleVote(modId, direction) {
   refreshModalScore(modId);
   refreshModalButtons();
   updateStatsBar();
+  if (window.refreshSearchFilter) window.refreshSearchFilter();
 
   try {
     const body = JSON.stringify({ id:modId, vote:newMyVote, sub:currentUser.sub, email:currentUser.email });
@@ -1037,5 +1043,161 @@ function escapeHtml(s){
   return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 }
 
+// ══════════════════════════════════════════════════════════════
+//  SEARCH, FILTER & SORT
+// ══════════════════════════════════════════════════════════════
+function initSearchAndFilter() {
+  const searchInput = document.getElementById("search-input");
+  const filterSelect = document.getElementById("filter-select");
+  const sortSelect = document.getElementById("sort-select");
+  
+  if (!searchInput || !filterSelect || !sortSelect) return;
+
+  const updateView = () => {
+    const query = searchInput.value.toLowerCase().trim();
+    const filter = filterSelect.value;
+    const sort = sortSelect.value;
+    
+    if (query === "" && filter === "all" && sort === "default") {
+      document.getElementById("sections-container").hidden = false;
+      document.getElementById("search-results-grid").hidden = true;
+      return;
+    }
+    
+    document.getElementById("sections-container").hidden = true;
+    const grid = document.getElementById("search-results-grid");
+    grid.hidden = false;
+    grid.innerHTML = "";
+    
+    let allMods = [];
+    modData.sections.forEach(s => {
+      s.mods.forEach(m => {
+        allMods.push({...m, _sectionName: s.name});
+      });
+    });
+    
+    let filtered = allMods.filter(m => {
+      if (query !== "") {
+        const text = (m.name + " " + (m.paragraphs?m.paragraphs.join(" "):"")).toLowerCase();
+        if (!text.includes(query)) return false;
+      }
+      
+      const sv = localVotes[m.id];
+      if (filter === "unvoted") {
+        if (sv && (sv.up === 1 || sv.down === 1)) return false;
+      } else if (filter === "voted-up") {
+        if (!sv || sv.up !== 1) return false;
+      } else if (filter === "voted-down") {
+        if (!sv || sv.down !== 1) return false;
+      } else if (filter === "status-review") {
+        if (m.status !== "REVISIÓN") return false;
+      } else if (filter === "status-deleted") {
+        if (m.status !== "ELIMINADO") return false;
+      }
+      
+      return true;
+    });
+    
+    if (sort === "recent") {
+      // Reverse array to show newly added first
+      filtered.reverse();
+    } else if (sort === "alphabetical") {
+      filtered.sort((a,b) => a.name.localeCompare(b.name));
+    }
+    
+    if (filtered.length === 0) {
+      grid.innerHTML = `<div class="no-results"><p>No se han encontrado mods que coincidan con la búsqueda.</p></div>`;
+      return;
+    }
+    
+    filtered.forEach(m => {
+      grid.appendChild(buildCard(m));
+    });
+  };
+
+  searchInput.addEventListener("input", updateView);
+  filterSelect.addEventListener("change", updateView);
+  sortSelect.addEventListener("change", updateView);
+  
+  window.refreshSearchFilter = updateView;
+}
+
+// ══════════════════════════════════════════════════════════════
+//  MOBILE SWIPE GESTURES
+// ══════════════════════════════════════════════════════════════
+function initSwipeGestures() {
+  const modalPanel = document.getElementById("modal-panel");
+  const track = document.getElementById("modal-carousel-track");
+  
+  if (!modalPanel || !track) return;
+
+  // Swipe for closing modal (downward)
+  let modalStartY = 0;
+  let modalCurrentY = 0;
+  
+  modalPanel.addEventListener("touchstart", (e) => {
+    // Solo si el contenido interno está arriba del todo (scrollTop === 0)
+    // O si tocamos una zona no scrolleable (como el head)
+    modalStartY = e.touches[0].clientY;
+  }, {passive: true});
+
+  modalPanel.addEventListener("touchmove", (e) => {
+    modalCurrentY = e.touches[0].clientY;
+    const diff = modalCurrentY - modalStartY;
+    
+    // Si hacemos scroll hacia abajo y estamos en la parte superior del panel
+    if (diff > 0 && modalPanel.scrollTop <= 0) {
+      modalPanel.style.transform = `translateY(${diff}px)`;
+      modalPanel.style.transition = "none";
+    }
+  }, {passive: true});
+
+  modalPanel.addEventListener("touchend", (e) => {
+    const diff = modalCurrentY - modalStartY;
+    modalPanel.style.transform = "";
+    modalPanel.style.transition = "";
+    
+    // Umbral de 100px para cerrar
+    if (diff > 100 && modalPanel.scrollTop <= 0) {
+      closeModal();
+    }
+    modalStartY = 0;
+    modalCurrentY = 0;
+  });
+
+  // Swipe for gallery (horizontal)
+  let trackStartX = 0;
+  let trackCurrentX = 0;
+  const galleryContainer = document.querySelector(".gallery-container");
+  
+  if (galleryContainer) {
+    galleryContainer.addEventListener("touchstart", (e) => {
+      trackStartX = e.touches[0].clientX;
+    }, {passive: true});
+    
+    galleryContainer.addEventListener("touchmove", (e) => {
+      trackCurrentX = e.touches[0].clientX;
+    }, {passive: true});
+    
+    galleryContainer.addEventListener("touchend", (e) => {
+      const diffX = trackStartX - trackCurrentX;
+      // Umbral de 50px para pasar imagen
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          // Swipe left -> Next image
+          carouselGo(carouselIdx + 1);
+        } else {
+          // Swipe right -> Prev image
+          carouselGo(carouselIdx - 1);
+        }
+      }
+      trackStartX = 0;
+      trackCurrentX = 0;
+    });
+  }
+}
+
 // ── Boot ──────────────────────────────────────────────────────
+initSearchAndFilter();
+initSwipeGestures();
 init();

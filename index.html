@@ -108,6 +108,32 @@
 
     <!-- ══ MAIN CONTENT — Votaciones ══ -->
     <main id="app" role="main">
+        <!-- Controles de búsqueda y filtros -->
+        <div id="controls-bar" class="controls-bar" hidden>
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" placeholder="Buscar por nombre o descripción..." autocomplete="off">
+            </div>
+            <div class="filter-box">
+                <select id="filter-select">
+                    <option value="all">Filtro: Todos</option>
+                    <option value="unvoted">Sin Votar</option>
+                    <option value="voted-up">Aprobados por mí</option>
+                    <option value="voted-down">Rechazados por mí</option>
+                    <option value="status-review">Estado: Revisión</option>
+                    <option value="status-deleted">Estado: Eliminado</option>
+                </select>
+                <select id="sort-select">
+                    <option value="default">Orden: Categorías</option>
+                    <option value="recent">Añadidos recientemente</option>
+                    <option value="alphabetical">Alfabético</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="sections-container"></div>
+        <div id="search-results-grid" class="results-grid" hidden></div>
+
         <div class="loading-state" id="loading-screen">
             <div class="spinner-ring" aria-label="Cargando"></div>
             <p class="loading-text">Cargando mods…</p>

@@ -1,4 +1,4 @@
-﻿{
+{
     "sections":  [
                      {
                          "name":  "Dimensiones",
@@ -1469,7 +1469,7 @@
                      },
                      {
                          "name":  "Utilidades",
-                         "icon":  "ðŸ§°",
+                         "icon":  "🧰",
                          "mods":  [
                                       {
                                           "id":  "natures-compass",
@@ -1601,7 +1601,7 @@
                      },
                      {
                          "name":  "Calidad de Vida",
-                         "icon":  "âœ¨",
+                         "icon":  "✨",
                          "mods":  [
                                       {
                                           "id":  "lootr",

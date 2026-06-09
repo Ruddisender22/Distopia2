@@ -1169,7 +1169,7 @@
                     "paragraphs": [
                         "Añade la posibilidad de desviar ataques (parry) y golpear a los enemigos con el escudo para darte ventaja estratégica en el combate cuerpo a cuerpo."
                     ],
-                    "status": "REVISIÓN"
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "slimy-stuff",
@@ -1244,7 +1244,7 @@
                     "paragraphs": [
                         "Ofrece un dispositivo dimensional que registra puntos de interés en el espacio para abrir portales de teletransporte instantáneos entre ellos."
                     ],
-                    "status": "SELECCIÓN DEL AUTOR"
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "horseman",

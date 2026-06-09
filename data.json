@@ -315,8 +315,8 @@
                                                          "Recursos/Cataclysm/Forja.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Introduce imponentes mazmorras, arenas de combate y estructuras masivas.",
-                                                             "Cada guarida presenta enfrentamientos contra temibles jefes épicos que sueltan armas, armaduras y equipo destructivo."
+                                                             "Introduce nuevas mazmorras, arenas de combate y estructuras de gran tamaño.",
+                                                             "Cada guarida presenta enfrentamientos contra jefes que sueltan armas, armaduras y equipamiento especial."
                                                          ],
                                           "status":  "SELECCIÓN DEL AUTOR"
                                       },
@@ -332,8 +332,8 @@
                                                          "https://github.com/user-attachments/assets/ec368079-347f-4bff-a844-84bfd9b06268"
                                                      ],
                                           "paragraphs":  [
-                                                             "Presenta una versión renovada y mucho más agresiva del Wither, diseñada para suponer un verdadero desafío.",
-                                                             "Introduce patrones de ataque destructivos y aumenta notablemente su salud máxima, forzando una batalla dinámica y letal."
+                                                             "Presenta una versión renovada y más agresiva del Wither, diseñada para suponer un mayor desafío.",
+                                                             "Introduce nuevos patrones de ataque y aumenta su salud máxima, forzando una batalla más compleja."
                                                          ],
                                           "status":  "ELIMINADO"
                                       },
@@ -396,8 +396,8 @@
                                                          "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/murk.webp"
                                                      ],
                                           "paragraphs":  [
-                                                             "Añade múltiples variantes de criaturas nuevas que se integran a la perfección en tu mundo de Minecraft.",
-                                                             "Cada variante de criatura aparece de forma natural en los biomas correspondientes. También puedes encontrar sus generadores en mazmorras y cámaras de prueba, lo que añade un nivel extra de desafío y exploración."
+                                                             "Añade variantes de criaturas que se integran en el mundo de Minecraft.",
+                                                             "Cada variante aparece de forma natural en los biomas correspondientes. También puedes encontrar generadores en mazmorras y cámaras de prueba, añadiendo exploración adicional."
                                                          ]
                                       },
                                       {
@@ -410,8 +410,8 @@
                                                          "https://media.forgecdn.net/attachments/1600/568/2026-03-27_01-16-28-png.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Mejora el entorno salvaje del juego para hacer la supervivencia más inmersiva y emocionante.",
-                                                             "Añade animales prehistóricos y primitivos que encajan con la estética original, incorporando mecánicas únicas."
+                                                             "Amplía la fauna del juego para hacer la supervivencia más inmersiva.",
+                                                             "Añade animales prehistóricos y primitivos que encajan con la estética original, incorporando mecánicas propias."
                                                          ],
                                           "status":  "SELECCIÓN DEL AUTOR"
                                       },
@@ -428,8 +428,8 @@
                                                          "https://media.forgecdn.net/attachments/1405/342/2025-11-26_17-27-22-png.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Añade una enorme variedad de animales al juego, acompañados de bloques, mecánicas y biomas inéditos.",
-                                                             "Introduce criaturas de todos los tamaños que interactúan dinámicamente con el entorno natural."
+                                                             "Añade una variedad de animales al juego, acompañados de nuevos bloques, mecánicas y biomas.",
+                                                             "Introduce criaturas de diversos tamaños que interactúan con el entorno natural."
                                                          ],
                                           "status":  "ELIMINADO"
                                       },
@@ -455,7 +455,7 @@
                                                          "https://media.forgecdn.net/attachments/1080/511/7.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Añade nuevos enemigos piratas, estructuras oceánicas y características relacionadas con la piratería."
+                                                             "Añade enemigos piratas, estructuras oceánicas y características relacionadas con la piratería."
                                                          ]
                                       },
                                       {
@@ -472,8 +472,8 @@
                                                          "https://media.forgecdn.net/attachments/740/285/ice_spikes_enderman.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Enderman Overhaul es un mod que expande drásticamente las variantes del Enderman, añadiendo más de 20 tipos nuevos. Cada variante tiene sus propios sonidos, modelos y animaciones únicos, y están adaptados a biomas específicos para hacer la exploración más diversa y desafiante.",
-                                                             "Algunas variantes son pacíficas, mientras que otras son muy agresivas incluso sin contacto visual directo. También pueden soltar perlas de Ender especiales y otros recursos dependiendo de su hábitat."
+                                                             "Expande las variantes del Enderman añadiendo más de 20 tipos nuevos. Cada variante cuenta con sonidos, modelos y animaciones propias, adaptándose a biomas específicos.",
+                                                             "Algunas variantes son neutrales, mientras que otras son agresivas incluso sin contacto visual directo. También pueden soltar perlas de Ender especiales y otros recursos dependiendo de su hábitat."
                                                          ],
                                           "status":  "ELIMINADO"
                                       },
@@ -489,8 +489,8 @@
                                                          "https://media.forgecdn.net/attachments/604/298/ocean_creeper_screenshot.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Creeper Overhaul reemplaza a los clásicos creepers con una amplia variedad de nuevos tipos específicos de cada bioma (como creepers de la jungla, océano o nieve).",
-                                                             "Cada variante tiene comportamientos, animaciones y modelos únicos proporcionados por GeckoLib, y algunos sueltan botines especiales o tienen interacciones distintas con su entorno. ¡Cuidado con los que se camuflan!"
+                                                             "Reemplaza a los creepers clásicos por nuevas variantes específicas para cada bioma (como creepers de la jungla, océano o nieve).",
+                                                             "Cada variante presenta comportamientos, animaciones y modelos propios. Algunos sueltan botines especiales, interactúan de forma distinta con el entorno o pueden camuflarse."
                                                          ],
                                           "status":  "ELIMINADO"
                                       },
@@ -505,8 +505,8 @@
                                                          "https://media.forgecdn.net/attachments/1214/984/black-charro-in-game-png.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Myths & Legends es un mod de fantasía oscura que introduce una increíble variedad de criaturas míticas, estructuras y reliquias inspiradas en el folclore global.",
-                                                             "Aporta una nueva capa de inmersión, atmósfera lúgubre y desafío. Prepárate para encontrarte con seres terroríficos como gárgolas, diablillos, almas condenadas o incluso amenazantes armaduras poseídas durante tus viajes."
+                                                             "Introduce criaturas míticas, estructuras y reliquias de fantasía oscura inspiradas en el folclore global.",
+                                                             "Añade nuevos desafíos y criaturas al mundo, como gárgolas, diablillos, almas condenadas y armaduras poseídas."
                                                          ]
                                       },
                                       {
@@ -517,7 +517,7 @@
                                                          "https://media.forgecdn.net/attachments/510/243/newscreenshot2a.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Añade duendes comerciantes escurridizos que aparecen bajo tierra o en el mundo y ofrecen intercambios de objetos raros y valiosos."
+                                                             "Añade duendes comerciantes que aparecen bajo tierra o en la superficie, ofreciendo intercambios por objetos raros y valiosos."
                                                          ],
                                           "status":  "REVISIÓN"
                                       },
@@ -528,7 +528,7 @@
                                                          "https://media.forgecdn.net/attachments/description/null/description_dcc38f1c-a466-4960-bd73-b1f616d373ec.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Permite domar, equipar con montura y cabalgar a los caballos zombis y caballos esqueletos tal como si fuesen caballos normales."
+                                                             "Permite domar, equipar con montura y montar a los caballos zombi y esqueleto de la misma forma que a los caballos normales."
                                                          ],
                                           "status":  "REVISIÓN"
                                       },
@@ -543,8 +543,8 @@
                                                          "https://media.forgecdn.net/attachments/1401/857/card_1_majungasaurus-png.png"
                                                      ],
                                           "paragraphs":  [
-                                                             "Un extenso mod de prehistoria que te permite descubrir fósiles en el mundo, extraer su ADN y revivir una gran variedad de impresionantes criaturas prehistóricas y dinosaurios.",
-                                                             "Esta es la versión rediseñada y ampliada, que incluye modelos detallados, animaciones sorprendentes y nuevas mecánicas para interactuar y criar a estas bestias milenarias."
+                                                             "Permite descubrir fósiles en el mundo, extraer su ADN y revivir una variedad de criaturas prehistóricas y dinosaurios.",
+                                                             "Esta versión incluye modelos detallados, animaciones fluidas y mecánicas para interactuar y criar a estas criaturas."
                                                          ],
                                           "status":  "SELECCIÓN DEL AUTOR"
                                       }

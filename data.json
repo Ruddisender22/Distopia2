@@ -700,7 +700,7 @@
                         "https://i.ytimg.com/vi/2Xc7qzTgVw8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD2MtA1ABimCg0bp52kzKupPkl_Qg"
                     ],
                     "paragraphs": [
-                        "Robustez en la automatización que permite construir fábricas, trenes y maquinaria compleja utilizando energía cinética.",
+                        "Permite construir fábricas, trenes y maquinaria compleja utilizando energía cinética.",
                         "Añade componentes mecánicos para líneas de producción eficientes, enfocadas siempre en lo visual y mecánico."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
@@ -716,8 +716,8 @@
                         "https://media.forgecdn.net/attachments/1558/421/image-png.png"
                     ],
                     "paragraphs": [
-                        "Create: Addictives añade drogas totalmente interactivas",
-                        "Características:\n\nCultivos que se pueden cultivar : el tabaco, la coca, la amapola, la marihuana y los hongos alucinógenos aparecen de forma natural en el mundo y se pueden cultivar.\nCadenas de producción completas : Procese las materias primas para convertirlas en sustancias refinadas utilizando la balsa, la muela y la prensa mecánica de Create.\nTolerancia y síndrome de abstinencia : Cada fármaco genera tolerancia de forma individual. Si dejas de consumirlo, sufrirás efectos secundarios como debilidad, lentitud y náuseas.\nSistema de mezcla : combina ingredientes de Minecraft con drogas antes de consumirlas para alterar sus efectos. Más de 60 efectos posibles según lo que añadas.\nSistema de fluidos : Procesar ciertas sustancias hasta convertirlas en forma líquida (aceite de THC, aceite de DMT, nicotina líquida) y utilizar dispositivos basados en fluidos como el Yart y el Dab Pen.\nEfectos visuales : superposiciones de pantalla personalizadas y alucinaciones para ciertas sustancias.",
+                        "Añade diversas sustancias interactivas y cultivos.",
+                        "Incluye cadenas de producción completas para procesar las materias primas utilizando maquinaria de Create. Las sustancias tienen sistemas de tolerancia, síndrome de abstinencia, mezclas y efectos visuales personalizados.",
                         "Sustancias: Marihuana, cigarrillos, puros, cocaína, crack, heroína, fentanilo, lean, LSD, metanfetamina, DMT, MDMA, setas alucinógenas, vaporizadores, snus y bolsitas de nicotina."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
@@ -733,8 +733,8 @@
                         "https://media.forgecdn.net/attachments/1635/787/car.png"
                     ],
                     "paragraphs": [
-                        "Expansión tecnológica para construir cualquier vehículo imaginable, desde dirigibles hasta aviones y coches funcionales.",
-                        "Amplía las mecánicas rotacionales para introducir físicas realistas y aerodinámicas al ensamblar artilugios."
+                        "Expansión tecnológica para construir vehículos como dirigibles, aviones y coches.",
+                        "Amplía las mecánicas rotacionales para introducir físicas aerodinámicas en la construcción."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
@@ -747,8 +747,7 @@
                         "https://media.forgecdn.net/attachments/647/276/defense.png"
                     ],
                     "paragraphs": [
-                        "Ya todos lo conocéis",
-                        "Añade multitud de bloques y objetos para defender y asegurar tu base."
+                        "Añade bloques y objetos de seguridad para defender y asegurar tus estructuras."
                     ]
                 },
                 {
@@ -758,7 +757,7 @@
                         "https://i.imgur.com/Kz3AG9B.png"
                     ],
                     "paragraphs": [
-                        "El mod Iron Chests incluye cofres para los distintos metales del Minecraft original, ¡con diferentes tamaños!"
+                        "Incluye cofres de diferentes tamaños correspondientes a los distintos metales del juego original."
                     ]
                 },
                 {
@@ -773,8 +772,8 @@
                         "https://media.forgecdn.net/attachments/1418/650/8.png"
                     ],
                     "paragraphs": [
-                        "Create: Deep Dark es un complemento para el mod Create que introduce contenido de final de juego inspirado en el bioma del Oscuro Profundo (Deep Dark).",
-                        "Su objetivo es hacer que explorar el territorio del Warden sea mucho más gratificante, permitiendo procesar nuevos recursos como los fragmentos de eco utilizando la maquinaria de Create para obtener armamentos y fluidos increíblemente poderosos."
+                        "Complemento para el mod Create que introduce contenido inspirado en el bioma del Oscuro Profundo (Deep Dark).",
+                        "Permite explorar el territorio del Warden para obtener y procesar recursos, como los fragmentos de eco, utilizando la maquinaria de Create para conseguir equipamiento especial."
                     ]
                 },
                 {
@@ -786,8 +785,8 @@
                         "https://media.forgecdn.net/attachments/1061/93/title.png"
                     ],
                     "paragraphs": [
-                        "Create Nuclear es un complemento para Create que te permite entrar en la era atómica introduciendo un complejo sistema de energía nuclear.",
-                        "Podrás automatizar la extracción y el refinado de uranio para alimentar reactores que generan inmensas cantidades de energía (Stress Units). Sin embargo, tendrás que construir protecciones y lidiar con los enormes peligros que conlleva la radiación."
+                        "Complemento para Create que introduce un sistema de energía nuclear.",
+                        "Permite automatizar la extracción y refinado de uranio para alimentar reactores que generan energía (Stress Units), requiriendo la construcción de protecciones para evitar los peligros de la radiación."
                     ],
                     "status": "ELIMINADO"
                 },
@@ -824,7 +823,7 @@
                         "https://media.forgecdn.net/attachments/279/110/furnaces.png"
                     ],
                     "paragraphs": [
-                        "Añade hornos mejorados fabricables con distintos materiales (hierro, oro, diamante) que cocinan y funden los objetos mucho más rápido."
+                        "Añade hornos mejorados de distintos materiales (hierro, oro, diamante) que cocinan y funden objetos más rápido."
                     ],
                     "status": "REVISIÓN"
                 },

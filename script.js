@@ -551,12 +551,12 @@ function startVotePolling() {
             
             const upEl = document.getElementById(`score-up-${modId}`);
             const dnEl = document.getElementById(`score-down-${modId}`);
-            if (upEl && parseInt(upEl.textContent) !== scoreObj.up) {
-              animateValue(upEl, parseInt(upEl.textContent)||0, scoreObj.up, 400);
-            }
-            if (dnEl && parseInt(dnEl.textContent) !== scoreObj.down) {
-              animateValue(dnEl, parseInt(dnEl.textContent)||0, scoreObj.down, 400);
-            }
+              if (upEl && parseInt(upEl.textContent) !== scoreObj.up) {
+                upEl.textContent = scoreObj.up; upEl.classList.add("bump"); setTimeout(()=>upEl.classList.remove("bump"), 320);
+              }
+              if (dnEl && parseInt(dnEl.textContent) !== scoreObj.down) {
+                dnEl.textContent = scoreObj.down; dnEl.classList.add("bump"); setTimeout(()=>dnEl.classList.remove("bump"), 320);
+              }
             refreshModalScore(modId);
           }
         }

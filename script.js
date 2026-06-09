@@ -625,16 +625,20 @@ function buildCard(mod, sectionName = "") {
   }
   
   titleRow.appendChild(nameEl);
-  titleRow.appendChild(baseTag);
+  body.appendChild(titleRow);
+
+  const tagsRow = document.createElement("div");
+  tagsRow.className = "mod-tags-row";
+  tagsRow.appendChild(baseTag);
 
   if (mod.status === "SELECCIÓN DEL AUTOR") {
     const selTag = document.createElement("span");
     selTag.className = "mod-type-tag status-inline status-confirmed";
     selTag.textContent = "SELECCIÓN DEL AUTOR";
-    titleRow.appendChild(selTag);
+    tagsRow.appendChild(selTag);
   }
 
-  body.appendChild(titleRow);
+  body.appendChild(tagsRow);
 
   if (mod.paragraphs?.length > 0) {
     const ex = document.createElement("p"); ex.className = "mod-excerpt"; ex.textContent = mod.paragraphs[0];

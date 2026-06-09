@@ -557,7 +557,10 @@ body {
 .mod-body { padding: 0.9rem 0.9rem 0.8rem; }
 .mod-title-row {
   display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 0.4rem; margin-bottom: 0.35rem;
+  gap: 0.4rem; margin-bottom: 0.2rem;
+}
+.mod-tags-row {
+  display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem;
 }
 .mod-name {
   font-family: var(--font-head);

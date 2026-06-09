@@ -1673,18 +1673,6 @@
                         "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
                     ],
                     "status": "REVISIÓN"
-                },
-                {
-                    "id": "mining-gadgets",
-                    "name": "Mining Gadgets",
-                    "images": [
-                        "https://www.minecraft-guides.com/wp-content/uploads/mcg-icons/other%20mods/mininggadgets__mininggadget_fancy.png",
-                        "https://www.minecraft-guides.com/wp-content/uploads/2026/04/Mining-Gadget-MK3.png"
-                    ],
-                    "paragraphs": [
-                        "Introduce herramientas de minería láser alimentadas por energía, ofreciendo una forma avanzada y personalizable de recolectar recursos."
-                    ],
-                    "status": "NUEVO"
                 }
             ]
         },

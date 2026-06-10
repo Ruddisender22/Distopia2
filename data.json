@@ -844,7 +844,8 @@
                     ],
                     "paragraphs": [
                         "Añade hornos mejorados de distintos materiales (hierro, oro, diamante) que cocinan y funden objetos más rápido."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "sawmil",

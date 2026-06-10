@@ -866,6 +866,21 @@
                         "Complemento para Create que expande el sistema de trenes, añadiendo nuevos tipos de vías, vagonetas y mecánicas logísticas ferroviarias avanzadas."
                     ],
                     "status": "ELIMINADO"
+                },
+                {
+                    "id": "create-numismatics",
+                    "name": "Create: Numismatics",
+                    "images": [
+                        "https://i.ytimg.com/vi/8WAg7x53KFE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB5ITENhsPWg1u2MuMkECgjuprUuQ",
+                        "https://preview.redd.it/create-numismatics-on-a-server-issue-where-the-vendor-does-v0-e47fv3fceu5g1.png?width=1919&format=png&auto=webp&s=0a7569e271a89c9af9ffac829ef57b5f5cf4a205",
+                        "https://preview.redd.it/create-numismatics-on-a-server-issue-where-the-vendor-does-v0-vz34s1xdeu5g1.png?width=1919&format=png&auto=webp&s=177e3eb682f370e3fdbb2f6671a32bca89e66e89"
+                    ],
+                    "paragraphs": [
+                        "Introduce un sistema de economía física y monetaria totalmente compatible con la tecnología del mod Create.",
+                        "Permite acuñar monedas físicas de distintas denominaciones utilizando prensas mecánicas y ensamblaje secuenciado, facilitando la automatización de la producción de dinero.",
+                        "Incluye máquinas de venta (vendors) y depósitos para crear tiendas automáticas entre jugadores, además de terminales bancarias y tarjetas para gestionar cuentas."
+                    ],
+                    "status": "NUEVO"
                 }
             ]
         },

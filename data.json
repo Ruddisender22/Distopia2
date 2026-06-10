@@ -1792,26 +1792,7 @@
                         "Consume una llave de Trial para poder usar la Trial Chamber nuevamente."
                     ]
                 },
-                {
-                    "id": "villager-names",
-                    "name": "Villager Names",
-                    "images": [
-                        "https://i.redd.it/8pxctqrl7u031.png"
-                    ],
-                    "paragraphs": [
-                        "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
-                    ]
-                },
-                {
-                    "id": "piglin-names",
-                    "name": "Piglin Names",
-                    "images": [
-                        "https://cdn.serilum.com/projects/piglin-names/a.png"
-                    ],
-                    "paragraphs": [
-                        "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
-                    ]
-                },
+
                 {
                     "id": "more-dragon-eggs",
                     "name": "More Dragon Eggs",

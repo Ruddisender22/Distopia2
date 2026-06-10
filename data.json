@@ -1863,6 +1863,17 @@
                     "paragraphs": [
                         "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
                     ]
+                },
+                {
+                    "id": "simple-voice-chat",
+                    "name": "Simple Voice Chat",
+                    "images": [
+                        "https://i.ytimg.com/vi/mjblVOTJz2Y/maxresdefault.jpg",
+                        "https://minecraft.fr/wp-content/uploads/2022/01/simple-voice-chat-mod-minecraft.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade chat de voz de proximidad en tiempo real en el servidor. Permite comunicarte por voz directamente con otros jugadores cercanos, con soporte para audio bidireccional, ajuste de volumen y atenuación de sonido por la distancia y los bloques de por medio."
+                    ]
                 }
             ]
         },

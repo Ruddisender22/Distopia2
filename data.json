@@ -577,18 +577,7 @@
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
-                {
-                    "id": "enhanced-celestials",
-                    "name": "Enhanced Celestials",
-                    "images": [
-                        "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
-                        "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
-                        "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
-                    ],
-                    "paragraphs": [
-                        "Añade eventos lunares que alteran el comportamiento del entorno durante la noche, como Lunas de Sangre peligrosas o Lunas de Cosecha que benefician la agricultura."
-                    ]
-                },
+
                 {
                     "id": "spice-of-life",
                     "name": "Spice of Life: Carrot Edition",
@@ -930,55 +919,6 @@
                         "Mejora el aspecto visual otorgando a cada poción texturas diferentes, facilitando su identificación rápida en el inventario."
                     ],
                     "status": "ELIMINADO"
-                },
-                {
-                    "id": "cataclysm-spellbooks",
-                    "name": "Cataclysm: Spellbooks",
-                    "images": [
-                        "https://i.ytimg.com/vi/pdI1WRpu3dA/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/XU89RbQqTxQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqDCXWgTzp4THycIWrGl4LxJN39g"
-                    ],
-                    "paragraphs": [
-                        "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "irons-spells-n-spellbooks",
-                    "name": "Iron's Spells 'n Spellbooks",
-                    "images": [
-                        "https://i.ytimg.com/vi/YtC2d2z4jPU/maxresdefault.jpg",
-                        "https://iron.wiki/img/screenshots/materials.png",
-                        "https://iron.wiki/img/screenshots/armor.png",
-                        "https://preview.redd.it/irons-spells-and-spellbooks-bug-v0-4trs3gcme9yc1.png?width=810&format=png&auto=webp&s=d19a6ed7d8dd6f1fb171cd5749fb77a3ccda8b85"
-                    ],
-                    "paragraphs": [
-                        "Añade un sistema de magia con progresión estilo RPG.",
-                        "Incluye más de 80 hechizos, varitas personalizables, armaduras mágicas y grimorios de distintas escuelas de magia."
-                    ]
-                },
-                {
-                    "id": "winds-spellbooks",
-                    "name": "Wind's Spellbooks",
-                    "images": [
-                        "https://cdn.modrinth.com/data/cached_images/4c32775e1dff756dc78bbe98f49236164d2cf829.png",
-                        "https://cdn.modrinth.com/data/cached_images/f079b3d71b71bce28b6d50586fd0c1e4886597a1.jpeg",
-                        "https://cdn.modrinth.com/data/cached_images/2dd7abf5be7c74aa6f369b22465018b076c3cf10.jpeg"
-                    ],
-                    "paragraphs": [
-                        "Añade la nueva escuela de magia de Viento a Iron's Spells, permitiendo lanzar tornados, ráfagas de aire y hechizos de movilidad aérea."
-                    ]
-                },
-                {
-                    "id": "woodwalkers-spellbooks",
-                    "name": "Woodwalkers Spellbooks",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1660/358/2026-05-02_04-49-06-png.png",
-                        "https://media.forgecdn.net/attachments/1660/359/2026-05-02_04-49-10-png.png"
-                    ],
-                    "paragraphs": [
-                        "Añade un nuevo hechizo de evocación que te permite usar magia para transformarte físicamente en diferentes animales y monstruos del juego."
-                    ]
                 }
             ]
         },

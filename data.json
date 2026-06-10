@@ -1253,7 +1253,8 @@
                     ],
                     "paragraphs": [
                         "Incrementa la utilidad del cobre añadiendo nuevas variantes de herramientas, armas, armaduras y bloques funcionales de cobre (como tolvas y yunques)."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "simply-traps",
@@ -1264,6 +1265,18 @@
                     ],
                     "paragraphs": [
                         "Añade trampas de diseño clásico y estilo vainilla, como pinchos para el suelo o la pared, trampas de foso y más, ideales para defender tu base."
+                    ]
+                },
+                {
+                    "id": "ender-dragon-loot",
+                    "name": "Ender Dragon Loot",
+                    "images": [
+                        "https://i.imgur.com/ZXolBwe.png",
+                        "https://media.forgecdn.net/attachments/description/867839/description_9c6ffbe3-31cc-4667-a071-133c86c0fbf8.png",
+                        "https://media.forgecdn.net/attachments/description/867839/description_2165c858-97fe-4a8b-b185-26d8ca98324b.png"
+                    ],
+                    "paragraphs": [
+                        "Hace que derrotar al Dragón del End sea mucho más gratificante al añadir Escamas de Dragón como botín. Estas escamas se pueden usar para fabricar un set de armadura especial, herramientas de alto nivel y un Yunque de Dragón irrompible sin límite de nivel de reparación."
                     ]
                 }
             ]
@@ -1855,7 +1868,8 @@
                     ],
                     "paragraphs": [
                         "Añade una selección de discos de música coleccionables que contienen las icónicas canciones y bandas sonoras de Five Nights at Freddy's para reproducir en tus tocadiscos."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 }
             ]
         },

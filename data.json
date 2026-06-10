@@ -705,6 +705,18 @@
                     "paragraphs": [
                         "Otorga a los Piglin Brutos la probabilidad de soltar fragmentos de netherita al ser derrotados en combate."
                     ]
+                },
+                {
+                    "id": "simple-heart-crystal",
+                    "name": "Simple Heart Crystal",
+                    "images": [
+                        "https://i.imgur.com/GjijADx.png",
+                        "https://i.imgur.com/ZCB5ZC8.png",
+                        "https://i.imgur.com/MUnIehw.png"
+                    ],
+                    "paragraphs": [
+                        "Añade cristales de corazón que se generan en estructuras y cuevas del mundo y que, al ser consumidos por el jugador, incrementan de forma permanente su salud máxima."
+                    ]
                 }
             ]
         },
@@ -1231,6 +1243,27 @@
                         "Añade minerales de nivel superior (Allthemodium, Vibranium y Unobtainium) que sirven para fabricar el equipamiento y herramientas más avanzadas del juego."
                     ],
                     "status": "ELIMINADO"
+                },
+                {
+                    "id": "everything-is-copper",
+                    "name": "Everything is Copper",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/437/309/2022-03-04_20.png"
+                    ],
+                    "paragraphs": [
+                        "Incrementa la utilidad del cobre añadiendo nuevas variantes de herramientas, armas, armaduras y bloques funcionales de cobre (como tolvas y yunques)."
+                    ]
+                },
+                {
+                    "id": "simply-traps",
+                    "name": "Simply Traps",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/description/1172014/description_fd561495-aa42-4d3e-b755-fc6d27913b1a.png",
+                        "https://media.forgecdn.net/attachments/1057/396/screenshot_2.png"
+                    ],
+                    "paragraphs": [
+                        "Añade trampas de diseño clásico y estilo vainilla, como pinchos para el suelo o la pared, trampas de foso y más, ideales para defender tu base."
+                    ]
                 }
             ]
         },
@@ -1357,6 +1390,16 @@
                         "Añade planeadores (gliders) sencillos que te permiten descender lentamente y cruzar distancias por el aire con facilidad."
                     ],
                     "status": "NUEVO"
+                },
+                {
+                    "id": "fireproof-boats",
+                    "name": "Fireproof Boats",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/781/955/256/256/638128581697779385.png"
+                    ],
+                    "paragraphs": [
+                        "Añade botes fabricados con maderas del Nether (carmesí y distorsionada) que son completamente resistentes al fuego y te permiten navegar de forma segura por lagos de lava."
+                    ]
                 }
             ]
         },
@@ -1479,6 +1522,40 @@
                     "paragraphs": [
                         "Sucesor espiritual del clásico mod Chisel, diseñado para ofrecer una enorme libertad creativa a los constructores del juego.",
                         "Añade más de 600 variaciones decorativas de bloques vanilla y de otros mods, permitiendo transformar texturas mediante un cincel y una interfaz intuitiva con soporte para texturas conectadas y transiciones fluidas."
+                    ]
+                },
+                {
+                    "id": "beautify",
+                    "name": "Beautify!",
+                    "images": [
+                        "https://i.imgur.com/tDSBihU.jpeg",
+                        "https://i.imgur.com/aVn4B6m.gif"
+                    ],
+                    "paragraphs": [
+                        "Añade una gran variedad de bloques y objetos de decoración de estilo vainilla muy detallados, como plantas colgantes, persianas, pilas de libros y enrejados para dar vida a tus construcciones."
+                    ]
+                },
+                {
+                    "id": "hallow-costumes",
+                    "name": "Hallow Costumes",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1372/205/2025-10-27_01-55-31-png.png",
+                        "https://media.forgecdn.net/attachments/1373/545/2025-10-28_01-23-50-png.png"
+                    ],
+                    "paragraphs": [
+                        "Añade disfraces espeluznantes inspirados en personajes icónicos de terror y diversos accesorios temáticos de Halloween para personalizar a tu personaje."
+                    ]
+                },
+                {
+                    "id": "new-slab-variants",
+                    "name": "New Slab Variants",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/864/183/new-slab-variants-3.jpg",
+                        "https://media.forgecdn.net/attachments/864/185/new-slab-variants-5.jpg",
+                        "https://media.forgecdn.net/attachments/864/182/new-slab-variants-2.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade más de 200 nuevas variantes de losas (slabs) para una enorme cantidad de bloques vainilla que antes no las tenían, incluyendo losas de tierra, terracota, cristal y más."
                     ]
                 }
             ]
@@ -1723,7 +1800,7 @@
                     "paragraphs": [
                         "Añade una Guía de Campo interactiva. Usa el catalejo para escanear y registrar información detallada sobre las plantas, animales y monstruos del mundo."
                     ],
-                    "status": "SELECCIÓN DEL AUTOR"
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "playing-cards-chips",
@@ -1756,6 +1833,27 @@
                     ],
                     "paragraphs": [
                         "Añade varitas de construcción que permiten colocar múltiples bloques a la vez, facilitando la edificación de estructuras y grandes plataformas de manera rápida y eficiente."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "construction-sticks",
+                    "name": "Construction Sticks",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/1133/505/256/256/638693822363856344.png"
+                    ],
+                    "paragraphs": [
+                        "Añade varitas (sticks) de construcción en diferentes materiales (madera, cobre, hierro, diamante y netherita) que permiten colocar múltiples bloques a la vez en la dirección que miras. Puedes aplicar plantillas en la mesa de herrería para obtener habilidades especiales."
+                    ]
+                },
+                {
+                    "id": "fnaf-music-disks",
+                    "name": "FNaF Music Disk Mod",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/417/12/256/256/637640366395328794.png"
+                    ],
+                    "paragraphs": [
+                        "Añade una selección de discos de música coleccionables que contienen las icónicas canciones y bandas sonoras de Five Nights at Freddy's para reproducir en tus tocadiscos."
                     ]
                 }
             ]

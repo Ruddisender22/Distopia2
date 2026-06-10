@@ -72,6 +72,18 @@
                         "Se accede a este mundo etéreo a través de un portal que debes activar con el Orbe de la Profecía. Allí tendrás que explorar, combatir y sobrevivir para obtener el equipamiento esencial que te permita seguir progresando."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "the-bumblezone",
+                    "name": "The Bumblezone",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/278/358/2020-02-11_18.png",
+                        "https://media.forgecdn.net/attachments/732/31/floral_meadow.png",
+                        "https://media.forgecdn.net/attachments/597/700/hanging_gardens2.png"
+                    ],
+                    "paragraphs": [
+                        "Añade una hermosa y colorida dimensión basada en el interior de una colmena de abejas. Explora un ecosistema único lleno de estructuras de panales, flores gigantes, miel y criaturas pacíficas u hostiles según cómo trates a sus habitantes."
+                    ]
                 }
             ]
         },
@@ -577,7 +589,19 @@
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
-
+                {
+                    "id": "enhanced-celestials",
+                    "name": "Enhanced Celestials",
+                    "images": [
+                        "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
+                        "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
+                        "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade eventos lunares que alteran el comportamiento del entorno durante la noche, como Lunas de Sangre peligrosas o Lunas de Cosecha que benefician la agricultura."
+                    ],
+                    "status": "ELIMINADO"
+                },
                 {
                     "id": "spice-of-life",
                     "name": "Spice of Life: Carrot Edition",
@@ -870,6 +894,18 @@
                         "Incluye máquinas de venta (vendors) y depósitos para crear tiendas automáticas entre jugadores, además de terminales bancarias y tarjetas para gestionar cuentas."
                     ],
                     "status": "NUEVO"
+                },
+                {
+                    "id": "jumbo-furnace",
+                    "name": "Jumbo Furnace",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/298/545/splash.png",
+                        "https://media.forgecdn.net/attachments/298/547/hoppers.png",
+                        "https://media.forgecdn.net/attachments/298/546/gui.png"
+                    ],
+                    "paragraphs": [
+                        "Permite fabricar un horno gigante de bloques múltiples (3x3x3) que puede procesar hasta 9 objetos simultáneamente o hacer recetas especiales de fundición avanzada."
+                    ]
                 }
             ]
         },
@@ -917,6 +953,58 @@
                     "paragraphs": [
                         "Rediseña el aspecto de las pociones para darles diseños de botella distintivos.",
                         "Mejora el aspecto visual otorgando a cada poción texturas diferentes, facilitando su identificación rápida en el inventario."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "cataclysm-spellbooks",
+                    "name": "Cataclysm: Spellbooks",
+                    "images": [
+                        "https://i.ytimg.com/vi/pdI1WRpu3dA/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/XU89RbQqTxQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqDCXWgTzp4THycIWrGl4LxJN39g"
+                    ],
+                    "paragraphs": [
+                        "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "irons-spells-n-spellbooks",
+                    "name": "Iron's Spells 'n Spellbooks",
+                    "images": [
+                        "https://i.ytimg.com/vi/YtC2d2z4jPU/maxresdefault.jpg",
+                        "https://iron.wiki/img/screenshots/materials.png",
+                        "https://iron.wiki/img/screenshots/armor.png",
+                        "https://preview.redd.it/irons-spells-and-spellbooks-bug-v0-4trs3gcme9yc1.png?width=810&format=png&auto=webp&s=d19a6ed7d8dd6f1fb171cd5749fb77a3ccda8b85"
+                    ],
+                    "paragraphs": [
+                        "Añade un sistema de magia con progresión estilo RPG.",
+                        "Incluye más de 80 hechizos, varitas personalizables, armaduras mágicas y grimorios de distintas escuelas de magia."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "winds-spellbooks",
+                    "name": "Wind's Spellbooks",
+                    "images": [
+                        "https://cdn.modrinth.com/data/cached_images/4c32775e1dff756dc78bbe98f49236164d2cf829.png",
+                        "https://cdn.modrinth.com/data/cached_images/f079b3d71b71bce28b6d50586fd0c1e4886597a1.jpeg",
+                        "https://cdn.modrinth.com/data/cached_images/2dd7abf5be7c74aa6f369b22465018b076c3cf10.jpeg"
+                    ],
+                    "paragraphs": [
+                        "Añade la nueva escuela de magia de Viento a Iron's Spells, permitiendo lanzar tornados, ráfagas de aire y hechizos de movilidad aérea."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "woodwalkers-spellbooks",
+                    "name": "Woodwalkers Spellbooks",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1660/358/2026-05-02_04-49-06-png.png",
+                        "https://media.forgecdn.net/attachments/1660/359/2026-05-02_04-49-10-png.png"
+                    ],
+                    "paragraphs": [
+                        "Añade un nuevo hechizo de evocación que te permite usar magia para transformarte físicamente en diferentes animales y monstruos del juego."
                     ],
                     "status": "ELIMINADO"
                 }
@@ -1655,6 +1743,16 @@
                     "paragraphs": [
                         "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
                     ]
+                },
+                {
+                    "id": "building-wands",
+                    "name": "Building Wands",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/249/945/256/256/637176059718454738.png"
+                    ],
+                    "paragraphs": [
+                        "Añade varitas de construcción que permiten colocar múltiples bloques a la vez, facilitando la edificación de estructuras y grandes plataformas de manera rápida y eficiente."
+                    ]
                 }
             ]
         },
@@ -1732,7 +1830,28 @@
                         "Consume una llave de Trial para poder usar la Trial Chamber nuevamente."
                     ]
                 },
-
+                {
+                    "id": "villager-names",
+                    "name": "Villager Names",
+                    "images": [
+                        "https://i.redd.it/8pxctqrl7u031.png"
+                    ],
+                    "paragraphs": [
+                        "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "piglin-names",
+                    "name": "Piglin Names",
+                    "images": [
+                        "https://cdn.serilum.com/projects/piglin-names/a.png"
+                    ],
+                    "paragraphs": [
+                        "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
+                    ],
+                    "status": "ELIMINADO"
+                },
                 {
                     "id": "more-dragon-eggs",
                     "name": "More Dragon Eggs",

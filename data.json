@@ -835,7 +835,8 @@
                     ],
                     "paragraphs": [
                         "Añade generadores diésel y refinerías de petróleo al mod Create para generar grandes cantidades de energía automatizada."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "iron-furnaces",

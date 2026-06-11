@@ -1536,7 +1536,8 @@
                     "paragraphs": [
                         "Sucesor espiritual del clásico mod Chisel, diseñado para ofrecer una enorme libertad creativa a los constructores del juego.",
                         "Añade más de 600 variaciones decorativas de bloques vanilla y de otros mods, permitiendo transformar texturas mediante un cincel y una interfaz intuitiva con soporte para texturas conectadas y transiciones fluidas."
-                    ]
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "beautify",

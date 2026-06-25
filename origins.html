@@ -665,7 +665,18 @@
         });
 
         // ── Boot ──
-        renderRaces('all');
+        function ensureAndRenderRaces(filter) {
+            if (typeof RACES_DATA === 'undefined') {
+                const s = document.createElement('script');
+                s.src = 'races_data.js';
+                s.onload = () => renderRaces(filter);
+                document.head.appendChild(s);
+            } else {
+                renderRaces(filter);
+            }
+        }
+
+        ensureAndRenderRaces('all');
         
         // Initialize slider position
         setTimeout(() => {

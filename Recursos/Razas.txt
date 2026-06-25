@@ -91,3 +91,1173 @@ Disparo de telaraña [V]: Lanza un proyectil que coloca una telaraña al impacta
 
 Energía: Recurso interno necesario para usar tus habilidades.
 
+---
+
+Asura
+
+Impacto: Alto
+
+Descripción: Un berserker frágil que se vuelve más rápido y fuerte cuanto más cerca está de la muerte. Drena vida con sus ataques y desata una furia imparable en combate.
+
+Poderes y características:
+
+Cuerpo frágil: Tu salud máxima se reduce en 3 corazones.
+
+Furia de sangre I: Por debajo de dos tercios de tu salud máxima, obtienes Fuerza I y Velocidad I.
+
+Furia de sangre II: Por debajo del 40% de salud, obtienes Fuerza II y Velocidad II.
+
+Furia de sangre III: Al llegar al 25% de salud, te conviertes en un Asura y obtienes Fuerza III y Velocidad III.
+
+Ira inamovible: Al 25% de salud, nada puede moverte (100% de resistencia al empuje).
+
+Golpe de Asura [V]: Te lanzas hacia adelante y golpeas el suelo, lanzando por los aires a todos los enemigos cercanos.
+
+Frenesí [G]: Estallas en furia de batalla y obtienes Fuerza II, Velocidad II y Resistencia I durante 6 segundos.
+
+---
+
+Autómata
+
+Impacto: Alto
+
+Descripción: Un constructo mecánico que no necesita respirar ni comer. Sin embargo, las pociones de curación no le afectan, su recuperación natural es extremadamente lenta y sus movimientos son pesados.
+
+Poderes y características:
+
+Estructura de hierro: Resistencia I permanente.
+
+Chasis sellado: No necesita respirar y no puede ahogarse.
+
+Motor perpetuo: Nunca tiene hambre, ya que funciona con una fuente de energía interna.
+
+Cuerpo mecánico: Inmune a los efectos de Regeneración, Curación instantánea y Veneno. El resto de pociones le afectan normalmente.
+
+Óptica nocturna: Sensores integrados que le permiten ver claramente en la oscuridad.
+
+Chasis pesado: Su velocidad de movimiento se reduce en un 15%.
+
+Articulaciones rígidas: Su regeneración de salud natural funciona a un 25% de la velocidad normal.
+
+Estructura anclada: 40% de resistencia al empuje (knockback) gracias a su gran peso.
+
+---
+Aviar
+
+Impacto: Bajo
+
+Descripción: Un ser alado que desciende con gracia, no teme a las alturas y observa el mundo desde arriba.
+
+Poderes y características:
+
+Peso pluma: Inmune al daño por caída.
+
+Caída lenta [V] (Alternable): Te permite descender suavemente. Viene desactivada por defecto. Nota: mantén esta habilidad desactivada si quieres asestar golpes críticos en combate, ya que requieren una caída a velocidad normal.
+
+Dieta de atleta: Todas tus acciones consumen un 75% menos de energía (hambre).
+
+Vista aguda: Visión mejorada que te permite ver un poco mejor en la oscuridad.
+
+Huesos huecos: Tu salud máxima se reduce en 1 corazón.
+
+Salto de pluma [G]: Realizas un salto rápido hacia arriba impulsado por tus alas. No consume barra de hambre.
+
+---
+
+Blazeling
+
+Impacto: Alto
+
+Descripción: Criatura nacida de los fuegos del Nether. Posee escamas de azufre y prospera en este reino oscuro, pero el agua y la lluvia son letales para él. Aparece inicialmente en el Nether.
+
+Poderes y características:
+
+Corazón de brasas: Inmunidad total al fuego, la lava, los bloques de magma y las quemaduras.
+
+Escamas de Blaze: +3 corazones de vida máxima.
+
+Nacido en el Nether: Velocidad de movimiento aumentada mientras estés en el Nether (no muestra icono de efecto).
+
+Calor interno: Tu barra de hambre se agota un 25% más rápido.
+
+Debilidad al agua: El agua actúa como veneno. Recibes 1.5 puntos de daño por segundo si estás en el agua o bajo la lluvia.
+
+Visión térmica: Visión adaptada que te permite ver claramente en la oscuridad.
+
+Proyectil de fuego [V]: Lanza una pequeña bola de fuego en la dirección que estés mirando. Cuesta 2 de energía. Tiene un tiempo de recarga de 4 segundos.
+
+Puños de azufre: Puedes minar con las manos desnudas al mismo nivel que un pico de piedra (puedes romper piedra, minerales y netherrack sin necesidad de herramientas).
+
+Dieta fúngica: Puedes alimentarte de hongos carmesí y distorsionados (clic derecho) para restaurar 5 puntos de hambre y 0.6 de saturación.
+
+Energía: Recurso interno necesario para utilizar tus habilidades.
+
+---
+Breeze
+
+Impacto: Alto
+
+Descripción: Criatura de viento nacida en las Cámaras de las Pruebas (Trial Chambers). Es veloz, ágil en el aire y ataca con ráfagas, pero es extremadamente frágil.
+
+Poderes y características:
+
+Carga de viento [V]: Lanza un proyectil de viento que empuja a los enemigos. Tiempo de recarga de 5 segundos.
+
+Impulso de viento [G]: Te propulsa rápidamente hacia adelante sobre una ráfaga de viento. Tiempo de recarga de 4 segundos.
+
+Cojín de aire [N] (Alternable): El viento amortigua tu caída. Viene activado por defecto (desactívalo con la tecla si necesitas realizar golpes críticos).
+
+Corriente ascendente [B] (Alternable): Obtienes Impulso de Salto II. Viene activado por defecto (desactívalo si prefieres la altura de salto normal).
+
+Viento a favor: Te mueves un 15% más rápido.
+
+Cuerpo de voluta: Tu salud máxima se reduce en 4 corazones.
+
+Estructura ligera: Tu tamaño es un 90% del de un jugador normal.
+
+---
+Nacido en Cuevas (Caveborn)
+
+Impacto: Medio
+
+Descripción: Criado en la oscuridad profunda, puede comer piedra y picar minerales con las manos desnudas, pero se debilita bajo la luz del sol.
+
+Poderes y características:
+
+Adaptación a la oscuridad: Visión adaptada a la oscuridad profunda, no requiere antorchas.
+
+Pisada de cueva: Inmune al daño por caída.
+
+Manos de minero: Rompe todos los bloques el doble de rápido.
+
+Puños de piedra: Extrae minerales y piedra con las manos desnudas al mismo nivel que un pico de piedra.
+
+Fortuna minera: Mientras el efecto de Suerte esté activo (obtenido al comer diamante), los minerales sueltan botín como si se picaran con el encantamiento Fortuna II.
+
+Devorador de piedra: Puede comer roca (cobblestone), piedra, granito, diorita, andesita, toba (tuff), pizarra profunda (deepslate), basalto y piedra negra (blackstone) para obtener una nutrición modesta.
+
+Paladar de hierro: Puede comer lingotes de hierro, hierro crudo y pepitas de hierro.
+
+Paladar dorado: Puede comer lingotes de oro, oro crudo y pepitas de oro.
+
+Paladar de diamante: Puede comer diamantes (su saturación es comparable a la de una zanahoria dorada).
+
+Paladar de netherita: Puede comer lingotes y fragmentos de netherita.
+
+Frenesí de hierro: Comer hierro otorga Prisa minera I durante 60 segundos.
+
+Fiebre del oro: Comer oro otorga Velocidad I durante 2 minutos.
+
+Claridad de diamante: Comer diamante otorga Suerte II durante 5 minutos, lo que a su vez activa la habilidad de "Fortuna minera".
+
+Núcleo de netherita: Comer netherita otorga Fuerza I y Resistencia I durante 5 minutos.
+
+Sensibilidad al sol: Se prende fuego y recibe 1 punto de daño por segundo al exponerse a la luz solar directa.
+
+Complexión compacta: Su tamaño es un 85% del de un jugador normal, lo que facilita el paso por túneles estrechos.
+
+---
+Nacido de las Cenizas (Cinderborn)
+
+Impacto: Alto
+
+Descripción: Un elemental de fuego volcánico. Es inmune a las llamas, aterroriza a las bestias y se cura con la lava, pero es devastado por el agua.
+
+Poderes y características:
+
+Núcleo fundido: Inmunidad total al fuego, la lava, los bloques de magma y las quemaduras.
+
+Erupción [V]: Lanza una ráfaga de 4 pequeñas bolas de fuego en la dirección que estés mirando. Cuesta 3 de aguante (stamina). Tiempo de recarga de 5 segundos.
+
+Piel de basalto: Resistencia I permanente.
+
+Baño de magma: Recupera 1 punto de vida (HP) por segundo mientras esté sumergido en lava.
+
+Fuerza volcánica: Obtiene el efecto de Fuerza mientras se encuentre en el Nether.
+
+Apagado: El agua actúa como veneno. Recibes 1.5 puntos de daño por segundo si estás en el agua o bajo la lluvia.
+
+Resplandor de ascuas: Tu fuego interno emite luz, iluminando incluso las cuevas más oscuras.
+
+Aura infernal: La mayoría de las criaturas pasivas (ganado, aldeanos, fauna) huyen de tu presencia llameante.
+
+Dieta fúngica: Puedes alimentarte de hongos carmesí y distorsionados (clic derecho) para restaurar 5 puntos de hambre y 0.6 de saturación.
+
+Aguante (Stamina): Reservas físicas que se consumen al utilizar habilidades activas.
+
+---
+Dracónico
+
+Impacto: Alto
+
+Descripción: De sangre de dragón y temible. Inmune al fuego y aterrador para las bestias, pero su llama dracónica consume su aguante (stamina) rápidamente.
+
+Poderes y características:
+
+Sangre de dragón: Inmunidad total al fuego, la lava, los bloques de magma y las quemaduras.
+
+Zancada fundida: Nada en lava con la misma facilidad que otros nadan en agua.
+
+Visión fundida: Ve claramente a través de la lava, sin niebla ni distorsión por calor.
+
+Amortiguación alar: Alas vestigiales que evitan el daño por caída.
+
+Alas de dragón [V] (Alternable): Planea libremente por el aire usando poderosas alas dracónicas.
+
+Aliento de llamas [G]: Lanza una ráfaga de 4 pequeñas bolas de fuego en la dirección que estés mirando. Cuesta 3 de aguante (stamina) y tiene un tiempo de recarga de 4 segundos.
+
+Presencia alfa: La mayoría de las criaturas pasivas (ganado, aldeanos, fauna) huyen de tu presencia dracónica.
+
+Estatura imponente: Tu tamaño es un 20% mayor que el de un jugador normal.
+
+Fuerza dracónica: Infliges 2 puntos de daño extra por golpe.
+
+Llama sofocada: Recibes 1.5 puntos de daño por segundo si estás en el agua o bajo la lluvia.
+
+Apetito dracónico: Consumes tu aguante (stamina) un 50% más rápido.
+
+Aguante (Stamina): Reservas físicas que se consumen al utilizar habilidades activas.
+---
+Enano (Dwarf)
+
+Impacto: Medio
+
+Descripción: Un robusto artesano subterráneo: compacto, resistente e incansable en la forja, pero de extremidades cortas y lento en sus movimientos.
+
+Poderes y características:
+
+Estructura compacta: Tu tamaño es un 80% del de un jugador normal, lo que te permite pasar por espacios más estrechos.
+
+Constitución robusta: Resistencia I permanente.
+
+Visión en la oscuridad: Puedes ver claramente en la oscuridad total.
+
+Piernas robustas: Tu velocidad de movimiento se reduce en un 15%.
+
+Conocimiento de la piedra: Rompes bloques un 25% más rápido.
+
+Brazos cortos: Tu alcance para interactuar con bloques se reduce en 0.5 bloques.
+
+Metabolismo eficiente: Todas tus actividades consumen un 25% menos de hambre.
+
+Pico reliquia: Apareces inicialmente con un pico de hierro enano (Irrompibilidad II, Eficiencia I) al elegir este origen.
+---
+Mago de Tierra
+
+Impacto: Alto
+
+Descripción: Un geomante inquebrantable que golpea el suelo para dañar a sus enemigos y levanta muros de piedra con un gesto. Es inamovible como una montaña, pero el agua y las alturas son sus grandes debilidades.
+
+Poderes y características:
+
+Golpe sísmico [V]: Golpea la tierra, infligiendo 6 puntos de daño y empujando a todas las entidades cercanas. Cuesta 3 de maná y tiene un tiempo de recarga de 6 segundos.
+
+Muro de piedra [G]: Coloca un bloque de roca (cobblestone) en el lugar que estés mirando. Tiempo de recarga de 2 segundos.
+
+Conocimiento de la piedra: Minas piedra y minerales un 50% más rápido.
+
+Enraizado: Recibes un 50% menos de empuje (knockback), manteniéndote firme como la roca madre.
+
+Pesado: No puedes nadar; te hundes rápidamente como una piedra.
+
+Ligado a la tierra: Recibes un 50% más de daño por caída.
+
+Maná: Energía mágica utilizada para lanzar tus habilidades.
+---
+Elitariano (Elytrian)
+
+Impacto: Medio
+
+Descripción: Especialista en vuelo. Surca los cielos y es inmune a la energía cinética, pero tiene una constitución frágil y no puede usar armaduras pesadas.
+
+Poderes y características:
+
+Vuelo natural: Planea como si llevaras unas élitras sin necesidad del objeto. Pulsa saltar mientras caes para desplegar tus alas.
+
+Impulso de élitras [V]: Obtienes un impulso de velocidad al lanzarte a volar usando élitras.
+
+Velocidad celestial: Tu velocidad de vuelo aumenta un 30%.
+
+Caída de pluma: Inmunidad al daño por caída.
+
+Cojín de viento: Inmune al daño por colisión al volar (puedes chocar contra paredes sin recibir daño).
+
+Constitución frágil: Tu salud máxima se reduce en 2 corazones.
+
+Incapaz de llevar armadura pesada: Solo puedes equipar armadura de cuero o cota de mallas (no puedes usar hierro, oro, diamante ni netherita).
+---
+Enderiano
+
+Impacto: Bajo
+
+Descripción: Nacido en el End. Puede teletransportarse, esquivar proyectiles y los endermen lo ignoran, pero el agua le quema como ácido. Aparece inicialmente en el End.
+
+Poderes y características:
+
+Ojos de Ender: Los endermen ignoran tu mirada; puedes verlos a los ojos sin provocar que te ataquen.
+
+Paso del vacío: 50% de probabilidad de teletransportarte y evitar el daño al ser golpeado por un proyectil.
+
+Hidrofobia: Recibes 2 puntos de daño por segundo al tocar el agua o estar bajo la lluvia.
+
+Salto de Ender [V]: Te teletransportas a donde estés mirando (hasta 50 bloques de distancia). Cuesta 2 de energía. Tiempo de recarga de 3 segundos.
+
+Energía: Recurso interno necesario para usar tus habilidades.
+---
+Enderite
+
+Impacto: Alto
+
+Descripción: Un ser del End, maestro de la teletransportación y la intangibilidad. Cae con gracia, pero es vulnerable al agua y a la luz del día.
+
+Poderes y características:
+
+Paso de salto [V]: Te teletransportas hasta 32 bloques en la dirección en la que miras. Cuesta 2 de energía. Tiempo de recarga de 3 segundos.
+
+Fase del vacío [G]: Te permite atravesar paredes sólidas. Cuesta 3 de energía. Tiempo de recarga de 10 segundos.
+
+Deriva de Ender: Caes lentamente y con gracia, como si la gravedad apenas te afectara.
+
+Vista del End: Visión perfecta y clara en la oscuridad total.
+
+Autoridad del vacío: Los endermites y los pececillos de plata (silverfish) huyen al verte.
+
+Debilidad de Ender: Recibes 2 puntos de daño por segundo al tocar el agua o bajo la lluvia.
+
+Sensibilidad a la luz: Recibes un 50% más de daño cuando estás expuesto a la luz solar.
+
+Garras del vacío: Infliges 3 puntos de daño extra por cada golpe.
+
+Energía: Recurso interno para utilizar tus habilidades.
+---
+Felino
+
+Impacto: Medio
+
+Descripción: Un humanoide felino ágil, con gran visión nocturna y un poderoso salto. Siempre cae de pie, pero odia el agua y consume energía rápidamente.
+
+Poderes y características:
+
+Nueve vidas: Siempre caes a salvo. Inmunidad total al daño por caída.
+
+Ojos de gato: Puedes ver de forma clara en la oscuridad.
+
+Ágil: Te mueves un 10% más rápido que un humano normal.
+
+Calma del depredador: Los creepers te temen y no se acercarán a ti.
+
+Abalanzarse [V]: Das un poderoso salto impulsado en la dirección que estés mirando. Cuesta 2 de energía. Tiempo de recarga de 4 segundos.
+
+Odia el agua: Recibes 0.5 puntos de daño por segundo mientras estás en el agua o bajo la lluvia.
+
+Metabolismo acelerado: Tu barra de hambre se consume un 30% más rápido de lo normal.
+
+Energía: Recurso interno necesario para usar tus habilidades.
+---
+Mago de Fuego
+
+Impacto: Alto
+
+Descripción: Un piromante volátil envuelto en llamas. Lanza bolas de fuego, crea ráfagas infernales y quema a quienes le atacan. Es inmune al fuego, pero el agua es su perdición.
+
+Poderes y características:
+
+Bola de fuego [V]: Lanza una ráfaga de cuatro pequeñas bolas de fuego en la dirección que estés mirando. Cuesta 3 de maná. Tiempo de recarga de 4 segundos.
+
+Ráfaga infernal [G]: Libera una explosión de llamas que daña a todos los enemigos cercanos. Cuesta 3 de maná. Tiempo de recarga de 8 segundos.
+
+Manto de llamas: Los enemigos reciben un 30% del daño que te infligen a modo de contraataque de fuego.
+
+Inmunidad al fuego: Inmunidad total al daño por fuego, lava y bloques de magma.
+
+Debilidad al agua: Recibes 1 punto de daño por segundo al estar en el agua o bajo la lluvia.
+
+Horno interno: Debido al calor, tu barra de hambre se agota un 50% más rápido.
+
+Maná: Energía mágica utilizada para lanzar tus habilidades.
+---
+
+Nacido de la Escarcha (Frostborn)
+
+Impacto: Medio
+
+Descripción: Elemental de hielo y frío. Congela a sus enemigos y prospera en las taigas, pero el fuego y el Nether le resultan devastadores.
+
+Poderes y características:
+
+Nova de escarcha [V]: Golpea a los enemigos cercanos aplicándoles lentitud extrema. Cuesta 2 de aguante. Tiempo de recarga de 10 segundos.
+
+Sangre fría: Obtienes fuerza mientras estés en biomas fríos de taiga.
+
+Derretimiento: Recibes el doble de daño por fuego.
+
+Caminar sobre hielo [G]: Coloca un bloque de hielo donde estés mirando. Tiempo de recarga de 1 segundo.
+
+Caparazón de hielo: Resistencia I permanente (el hielo cristalizado desvía los golpes).
+
+Enfermedad por calor: Recibes 2 puntos de daño por segundo mientras estés en el Nether.
+
+Inmunidad al frío: Eres completamente inmune al daño por congelación.
+
+Aguante (Stamina): Reservas físicas utilizadas para lanzar habilidades activas.
+---
+
+Cuerpo Dorado (Golden Body)
+
+Impacto: Medio
+
+Descripción: Maestro del qigong duro y las artes del Cuerpo de Hierro. Un muro acorazado e inamovible que castiga a quien lo golpea, a costa de su propia agilidad.
+
+Poderes y características:
+
+Camisa de hierro: Tu carne endurecida actúa como armadura, otorgando +8 puntos de armadura de forma natural.
+
+Postura enraizada: Te mantienes firme como una montaña, siendo muy difícil que te empujen (resistencia al knockback).
+
+Qigong duro: Los ataques físicos contra tu cuerpo rebotan y dañan al atacante.
+
+Cuerpo dorado [V]: Forjas tu cuerpo dorado interior obteniendo protección casi total (Resistencia V) durante 5 segundos.
+
+Postura pesada: Todo tu acondicionamiento físico te pesa, por lo que te mueves un poco más lento.
+---
+
+Golem (Golem)
+
+Impacto: Alto
+
+Descripción: Una fortaleza andante de hierro y voluntad. Casi inamovible, pero lento y altamente vulnerable al calor.
+
+Poderes y características:
+
+Piel de hierro: Resistencia I permanente. Tu recubrimiento de hierro absorbe golpes incluso sin llevar armadura equipada.
+
+Inamovible: Tienes un 80% de resistencia al empuje (knockback).
+
+Estructura imponente: Eres un 30% más grande que un jugador normal.
+
+Constitución de hierro: Inmunidad total al veneno, al efecto Wither y al hambre.
+
+Pesado: Te mueves un 25% más lento que un humano normal.
+
+Punto de fusión: Recibes un 80% más de daño por fuego, lava y bloques de magma, ya que el hierro conduce el calor.
+
+Golpe sísmico [V]: Golpeas la tierra con puños de hierro. Inflige 4 puntos de daño y Lentitud II durante 4 segundos a todos los enemigos en un radio de 5 bloques. Cuesta 3 de aguante. Recarga de 7 segundos.
+
+Aguante (Stamina): Reservas físicas utilizadas para lanzar habilidades activas.
+---
+
+Gorgona (Gorgon)
+
+Impacto: Alto
+
+Descripción: Una monstruosidad con piel de piedra cuya mirada petrifica y cuyos puños destrozan, pero el peso de la piedra ralentiza todos sus pasos.
+
+Poderes y características:
+
+Mirada petrificante [V]: Congela a todos los enemigos cercanos aplicándoles Lentitud V. Cuesta 3 de aguante. Tiempo de recarga de 15 segundos.
+
+Puños de piedra: Infliges 4 puntos de daño extra por cada golpe.
+
+Piel de granito: Resistencia I permanente. Tu piel de piedra suaviza los impactos.
+
+Inamovible: Tienes un 50% de resistencia al empuje (knockback).
+
+Pesada: Te mueves un 20% más lento de lo normal.
+
+Masa imponente: Eres un 15% más grande que un jugador normal.
+
+Apetito de piedra: Consumes tu aguante un 50% más rápido, ya que mantener tu forma de piedra agota la energía.
+
+Aguante (Stamina): Reservas físicas utilizadas para lanzar habilidades activas.
+---
+
+Mago de Gravedad (Gravity Mage)
+
+Impacto: Alto
+
+Descripción: Manipulador de campos gravitacionales capaz de curvar el espacio. Atrae a sus enemigos a una singularidad o los expulsa con fuerza, pero su propio cuerpo está poco ligado a la tierra.
+
+Poderes y características:
+
+Pozo gravitatorio [V]: Lanza un orbe oscuro que se convierte en un agujero negro al impactar. Atrae a las entidades cercanas hacia el centro y les inflige daño durante 4 segundos. Cuesta 4 de maná. Recarga de 20 segundos.
+
+Repulsión [G]: Libera una onda de choque gravitacional que empuja lejos a todas las entidades cercanas. Cuesta 3 de maná. Recarga de 4 segundos.
+
+Levitación [N] (Alternable): Desafía la gravedad y asciende a voluntad (Levitación I). Viene desactivado por defecto (actívalo con la tecla).
+
+Cojín gravitatorio: Inmunidad total al daño por caída.
+
+Desligado: Recibes un 75% más de empuje (knockback), tu gravedad debilitada hace que sea fácil lanzarte por los aires.
+
+Frágil: Infliges un 25% menos de daño cuerpo a cuerpo. Tu poder reside en la gravedad, no en los golpes físicos.
+
+Maná: Energía mágica utilizada para lanzar tus habilidades.
+---
+Colmenero (Hiveling)
+
+Impacto: Alto
+
+Descripción: Un insectoide similar a una abeja que vuela libremente, pica a sus enemigos con veneno y hace crecer los cultivos. Sus alas frágiles y su hambre insaciable son el precio de su vuelo.
+
+Poderes y características:
+
+Alas zumbadoras: Planea como si llevaras unas élitras. Pulsa saltar mientras caes para despegar.
+
+Despegue: Obtienes un +40% de fuerza de salto.
+
+Aguijón venenoso [V]: Dispara un proyectil venenoso a tu objetivo. Cuesta 1 de energía. Recarga de 6 segundos.
+
+Polinizador: Los cultivos cercanos crecen mucho más rápido en tu presencia.
+
+Estructura pequeña: Tu tamaño es un 60% del de un jugador normal.
+
+Artrópodo: Eres vulnerable a las armas con el encantamiento Perdición de los Artrópodos.
+
+Alas frágiles: Tu salud máxima se reduce en 3 corazones.
+
+Metabolismo acelerado: Consumes energía (hambre) un 50% más rápido, volar es agotador.
+
+Energía: Recurso interno necesario para usar tus habilidades.
+----
+
+Diminuto (Inchling)
+
+Impacto: Medio
+
+Descripción: Un humanoide del tamaño de una cuarta parte de lo normal que escala paredes con facilidad y se mueve a una velocidad sorprendente, aunque su cuerpo es sumamente frágil.
+
+Poderes y características:
+
+Diminuto: Eres tan solo una cuarta parte del tamaño normal.
+
+Trepa-muros: Puedes agarrarte y escalar cualquier superficie.
+
+Peso pluma: Eres tan ligero que nunca recibes daño por caída.
+
+Cuerpo frágil: Tu salud máxima se reduce en 5 corazones.
+
+Pies rápidos: Te mueves un 15% más rápido de lo normal.
+
+Apetito pequeño: Tu barra de hambre se vacía a la mitad de velocidad que la de un jugador normal.
+
+Monje de Hierro (Iron Monk)
+
+Impacto: Medio
+
+Descripción: Un monje defensor que basa todas sus artes en una única reserva de aguante (stamina). Levanta su guardia para ignorar los golpes, pero tanto bloquear como atacar consumen la misma energía.
+
+Poderes y características:
+
+Aguante (Stamina): Alimenta tanto tu guardia como tus habilidades. Solo se recupera cuando bajas la guardia.
+
+Guardia [V] (Alternable): Levanta tu guardia. Mientras la mantengas, no podrás moverte (Lentitud), pero absorberás casi todo el daño a costa de drenar tu aguante. Pulsa de nuevo para bajarla.
+
+Mantenimiento de guardia: Mantener la guardia activa consume aguante constantemente.
+
+Baluarte: Mientras bloquees y tengas aguante de sobra, el daño recibido se reduce en un 90%.
+
+Parada (Parry): Cada golpe que bloquees con éxito sonará como un escudo y consumirá una porción de tu aguante.
+
+Golpe de palma [G]: Lanza una onda de choque a tu alrededor que daña y lanza por los aires a los enemigos cercanos. Cuesta 20 de aguante.
+
+Resolución de hierro: Tienes resistencia natural a que te empujen o te saquen de tu postura.
+---
+
+Kraken
+
+Impacto: Alto
+
+Descripción: Un colosal depredador de las profundidades. Es devastador bajo el agua gracias a sus tentáculos, disparos de tinta y guardianes invocados, pero es lento y vulnerable en la superficie. Aparece en biomas de océano.
+
+Poderes y características:
+
+Latigazo de tentáculo [V]: Dispara un proyectil de sombras que ciega y ralentiza a los enemigos en un radio de 6 bloques. Cuesta 2 de esencia. Recarga de 6 segundos.
+
+Disparo de tinta [G]: Dispara un chorro de tinta concentrada que ralentiza severamente a los enemigos en un radio de 5 bloques. Cuesta 2 de esencia. Recarga de 8 segundos.
+
+Pulmones profundos: Puedes respirar bajo el agua indefinidamente y tienes visión clara sin niebla submarina.
+
+Embestida de marea: Nadas mucho más rápido que los habitantes de la superficie.
+
+Piscívoro: Solo puedes comer pescado.
+
+Adaptación cruda: El bacalao y el salmón crudos te alimentan lo mismo que sus versiones cocinadas.
+
+Placas de presión: Resistencia I permanente, tu piel soporta la presión abisal.
+
+Llamada de las profundidades [N]: Invoca un guardián marino para luchar a tu lado (máximo 2 a la vez). Cuesta 5 de esencia. Recarga de 20 segundos. Recibes 1 punto de daño si el guardián muere en combate.
+
+Varado: Te mueves un 30% más lento en tierra firme.
+
+Agonía superficial: Recibes 1 punto de daño por segundo bajo la luz solar directa.
+
+Colosal: Eres un 30% más grande que un jugador normal.
+
+Desecación: Tu barra de oxígeno se agota fuera del agua; te asfixiarás si pasas demasiado tiempo en la superficie.
+
+Afinidad acuática: Minas a máxima velocidad mientras estás sumergido.
+
+Nadador natural: Te mueves un poco más rápido por el agua de forma pasiva.
+
+Esencia: Energía de las profundidades marinas usada para tus habilidades.
+----
+
+Tritón (Merling)
+
+Impacto: Medio
+
+Descripción: Un habitante acuático nacido en el océano abierto. Respira bajo el agua y nada con facilidad, pero es lento y se seca en tierra firme. Aparece en biomas de océano.
+
+Poderes y características:
+
+Branquias: Puedes respirar bajo el agua indefinidamente y tienes visión submarina clara.
+
+Velocidad acuática: Nadas mucho más rápido.
+
+Piscívoro: Solo puedes comer pescado.
+
+Adaptación cruda: El bacalao y el salmón crudos te alimentan lo mismo que sus versiones cocinadas.
+
+Marinero de agua dulce: Te mueves un 10% más lento en tierra firme.
+
+Desecación: Tu barra de oxígeno se consume fuera del agua, provocando asfixia si se agota.
+
+Afinidad acuática: Minas a velocidad normal bajo el agua.
+
+Nadador natural: Tu velocidad de movimiento en el agua está ligeramente aumentada.
+----
+
+Domador de Monstruos (Monster Tamer)
+
+Impacto: Alto
+
+Descripción: Un intrépido controlador de bestias que doblega a las criaturas hostiles a su voluntad. Solo es frágil, pero con su leal manada a su lado es una fuerza a tener en cuenta.
+
+Poderes y características:
+
+Dominar [V]: Mira a una criatura hostil y usa esta habilidad para doblegarla. Te seguirá y te defenderá (máximo 4 criaturas domadas). Cuesta 3 de esencia. Recarga de 10 segundos.
+
+¡Ataca! [G]: Mira a un objetivo y ordena a toda tu manada que lo ataque. Recarga de 2 segundos.
+
+Vínculo de manada: Tus criaturas domadas regeneran 1 HP cada 6 segundos mientras no estén en combate.
+
+Debilidad en solitario: Infliges un 25% menos de daño cuerpo a cuerpo (dependes de tu manada para luchar).
+
+Alimentar a la manada: Tu barra de hambre se agota un 50% más rápido debido al esfuerzo de mantener el vínculo.
+
+Esencia: Energía de vínculo natural necesaria para domar criaturas.
+----
+
+Nigromante (Necromancer)
+
+Impacto: Alto
+
+Descripción: Un maestro de la muerte que comanda súbditos no muertos. Esqueletos Wither y arqueros luchan a su lado, pero su propia fuerza vital está ligada a la de ellos.
+
+Poderes y características:
+
+Alzar Esqueleto Wither [V]: Invoca un Esqueleto Wither para luchar por ti (máximo 2 a la vez). Cuesta 6 de esencia. Recarga de 30 segundos. Si muere en combate, recibes 1 punto de daño.
+
+Alzar Arquero Esqueleto [G]: Invoca un Esqueleto Arquero (máximo 3 a la vez). Cuesta 4 de esencia. Recarga de 20 segundos. Si muere en combate, recibes 1 punto de daño.
+
+Naturaleza no muerta: Eres clasificado como un no muerto. Las pociones de curación te dañan, las de daño te curan y eres inmune al veneno. Vulnerable al encantamiento Golpe (Smite).
+
+Visión de la muerte: Puedes ver claramente en la oscuridad total.
+
+Decadencia solar: Recibes 1.5 puntos de daño por segundo al estar expuesto a la luz solar directa.
+
+Cuerpo marchito: Tu salud máxima se reduce en 3 corazones (la magia de muerte consume tu cuerpo).
+
+Abrazo de la muerte: Tu regeneración de salud natural se reduce al 40% de lo normal.
+
+Esencia: Energía de almas utilizada para invocar y controlar.
+----
+
+Fantasma (Phantom)
+
+Impacto: Alto
+
+Descripción: Un ser espectral que planea en la noche con alas de élitras, extrae fuerza de sus asesinatos, pero se quema con el sol y es incapaz de dormir.
+
+Poderes y características:
+
+Ojos nocturnos: Puedes ver claramente en la oscuridad total.
+
+Alas espectrales: Planeas como si llevaras unas élitras. Pulsa saltar mientras caes para desplegar tus alas.
+
+Batir de alas [V]: Obtienes un gran impulso de velocidad al lanzarte a volar.
+
+Placa lunar: Obtienes Resistencia I bajo la luz de la luna (solo de noche). La luz del día anula esta protección.
+
+Drenaje de alma: Te curas 1 HP cada vez que asesinas a una entidad viva.
+
+Ingrávido: Eres inmune al daño por caída.
+
+Quemadura solar: Te prendes fuego y recibes 1.5 puntos de daño por segundo bajo la luz solar directa.
+
+Forma frágil: Tu salud máxima se reduce en 2 corazones.
+
+Terror insomne: No puedes dormir en camas, la noche es tu elemento natural.
+---
+
+Piglin
+
+Impacto: Alto
+
+Descripción: Un guerrero del Nether obsesionado con el oro. Es poderoso en su hogar y respetado por los suyos, pero se debilita fuera del Nether.
+
+Poderes y características:
+
+Furia del Nether: Obtienes Fuerza II mientras estás en el Nether.
+
+Parentesco de oro: Los Piglins y los Piglin Brutos no te atacarán.
+
+Golpes brutales: Infliges 2 puntos de daño extra por cada impacto.
+
+Enfermedad de la superficie: Sufres el efecto de Debilidad permanentemente mientras estás en el Overworld (mundo normal).
+
+Ojos del Nether: Puedes ver de forma clara en la oscuridad.
+
+Pavor de almas: El fuego de almas te afecta más profundamente; recibes 0.5 puntos de daño por segundo mientras pisas el bioma Valle de Arena de Almas.
+
+Dieta fúngica: Puedes alimentarte de hongos carmesí y distorsionados (clic derecho) para restaurar 5 puntos de hambre y 0.6 de saturación.
+---
+Cultivador de Qi (Qi Cultivator)
+
+Impacto: Medio
+
+Descripción: Un practicante de artes internas que canaliza el Qi en golpes de palma a distancia y endurece su cuerpo. Medita para rellenar tus reservas, ya que un cultivador sin energía es solo un monje.
+
+Poderes y características:
+
+Qi: Tu energía interna. Se gasta en artes de palma y se repone lentamente, o de forma rápida mediante la meditación.
+
+Meditación: Agáchate y mantente quieto para reunir Qi mucho más rápido de lo que regresa por sí solo.
+
+Calma interior: Mientras meditas (agachado), tu Qi circulante cura tus heridas de forma pasiva.
+
+Palma vibrante [V]: Lanza un proyectil de Qi comprimido que golpea a distancia. Cuesta 25 de Qi.
+
+Qi endurecido [G]: Inunda tu cuerpo con Qi para fortalecerlo, obteniendo Resistencia II durante 6 segundos. Cuesta 30 de Qi.
+---
+
+Renacido (Revenant)
+
+Impacto: Medio
+
+Descripción: Un errante no muerto que atraviesa la materia y lanza proyectiles de marchitamiento. No se ahoga y ve en la oscuridad, pero se cura lentamente y se quema con la luz del sol.
+
+Poderes y características:
+
+Naturaleza no muerta: Eres clasificado como un no muerto. Las pociones de curación te dañan, las de daño te curan y eres inmune al veneno.
+
+Sin aliento: No necesitas respirar. Puedes sobrevivir indefinidamente bajo el agua.
+
+Ojos de hombre muerto: Puedes ver claramente en la oscuridad total.
+
+Paso en fase [V]: Atraviesa una pared sólida en la dirección a la que estés mirando. Tiempo de recarga de 3 segundos.
+
+Proyectil del vacío [G]: Dispara un rayo de energía marchita que explota creando un área de niebla dañina. Cuesta 1 de energía. Recarga de 4 segundos.
+
+Maldición de la luz solar: Te prendes fuego y recibes 2 puntos de daño por segundo al exponerte a la luz solar directa.
+
+Forma marchita: Tu regeneración de salud natural se reduce al 40% de lo normal.
+
+Energía: Energía interna utilizada para habilidades rápidas.
+---
+
+Nacido del Sculk (Sculkborn)
+
+Impacto: Alto
+
+Descripción: Un ser de la oscuridad profunda. Está acorazado, es resistente y posee poder sónico, pero es lento, frágil bajo el sol y se debilita en la superficie.
+
+Poderes y características:
+
+Alarido sónico [V]: Dispara un devastador proyectil sónico que golpea en un radio de 7 bloques. Cuesta 2 de aguante y tiene 6 segundos de recarga.
+
+Pulso de Sculk [G]: Dispara un pulso sónico que deja un campo persistente de Oscuridad a su paso. Cuesta 3 de aguante y tiene 15 segundos de recarga.
+
+Ecolocalización: Percibes el mundo a través de vibraciones; la oscuridad no es un obstáculo para ti.
+
+Caparazón de Sculk: Resistencia I permanente (tus densas placas de sculk absorben el daño).
+
+Profundamente enraizado: Tienes un 50% de resistencia al empuje (knockback).
+
+Agonía superficial: Recibes 2 puntos de daño por segundo al exponerte a la luz solar directa.
+
+Deflexión sónica: Las flechas que te disparen son desviadas por tus campos de vibración.
+
+Sentido de vibración: Sientes el movimiento a través del suelo; las entidades vivas cercanas brillarán para ti.
+
+Pesado: Te mueves un 15% más lento de lo normal.
+
+Forma hueca: Tu salud máxima se reduce en 2 corazones. Un cuerpo hecho a medias de sculk es quebradizo.
+
+Aguante: Reservas físicas para utilizar tus habilidades.
+----
+
+Shulk
+
+Impacto: Alto
+
+Descripción: Acorazado como un shulker. Ignora los golpes, se refugia en su caparazón al verse acorralado y lanza a sus enemigos por los aires con levitación. Lento, pero inquebrantable.
+
+Poderes y características:
+
+Caparazón: Resistencia I permanente. Tu caparazón absorbe golpes que romperían un cuerpo más blando.
+
+Masa de Shulker: Te mueves más lento de lo normal.
+
+Liberación de proyectiles [V]: Libera una ráfaga de proyectiles que hacen levitar a los enemigos cercanos hacia arriba durante 3 segundos. Cuesta 2 de aguante. Recarga de 8 segundos.
+
+Retirada al caparazón [G]: Te desvaneces dentro de tu caparazón y reapareces hasta a 12 bloques de distancia. Cuesta 3 de aguante. Recarga de 10 segundos.
+
+Aterrizado: Eres inmune al efecto de levitación. Tu caparazón te mantiene anclado al suelo.
+
+Aguante: Reservas físicas requeridas para lanzar tus habilidades.
+---
+
+Esqueleto (Skeleton)
+
+Impacto: Alto
+
+Descripción: Un saco de huesos reanimado. Rápido, ligero y letal con el arco. De constitución frágil, huye del sol y solo puede ingerir los bocados más repugnantes.
+
+Poderes y características:
+
+No muerto: Eres un no muerto. Las pociones de curación te dañan, las de daño te curan y el encantamiento Golpe (Smite) te inflige daño extra.
+
+Puntería: Infliges +2 de daño adicional al usar armas de proyectiles.
+
+Huesos ligeros: Al tener los huesos huecos, eres un 20% más rápido al caminar.
+
+Peso pluma: Saltas un 30% más alto de lo normal.
+
+Estructura frágil: Tus huesos son débiles, lo que reduce tu salud máxima a 7 corazones.
+
+Quemado por el sol: Te quemas bajo la luz solar directa a menos que lleves puesto un casco.
+
+Dieta sin huesos: Solo puedes comer polvo de hueso, carne podrida y ojos de araña.
+
+Apetito óseo: El polvo de hueso es totalmente comestible para ti.
+---
+
+Slime
+
+Impacto: Alto
+
+Descripción: Un ser gelatinoso que debe mantenerse hidratado para sobrevivir. Rebota sin hacerse daño al caer, se divide para evitar la muerte si está bien húmedo y se vuelve más resistente con la experiencia.
+
+Poderes y características:
+
+Humedad: Tienes una barra de humedad que se agota con el tiempo (más rápido en desiertos o si te prendes fuego). Quédate en el agua o bajo la lluvia para rehidratarte. Por encima del 75%: Regeneración I. Por debajo del 10%: -4 de armadura. Al 0%: Comienzas a recibir daño.
+
+División: Si vas a morir y tienes más del 75% de humedad, en lugar de morir te divides, teletransportándote a 50 bloques de distancia con 2 corazones. Tu salud máxima se regenerará a la normalidad al cabo de 2 minutos.
+
+Crecimiento gelatinoso: Obtienes +1 corazón de vida máxima por cada 10 niveles de experiencia. Esto se reinicia al morir.
+
+Rebotar: Eres inmune al daño por caída; en su lugar, rebotas.
+---
+
+Engendro de Esporas (Sporeling)
+
+Impacto: Medio
+
+Descripción: Criatura fúngica que prospera en la oscuridad y los campos de champiñones. Ataca con esporas tóxicas, pero se marchita con la luz del sol.
+
+Poderes y características:
+
+Nube de esporas [V]: Dispara un proyectil que entra en erupción creando una nube persistente de esporas venenosas. Cuesta 3 de vitalidad. Recarga de 12 segundos.
+
+Resiliencia tóxica: Eres completamente inmune a todos los efectos de veneno.
+
+Vista de micelio: Puedes ver claramente en la oscuridad total.
+
+Simbiosis fúngica: Tu salud se regenera de forma pasiva mientras te encuentres en biomas de champiñones.
+
+Contacto fúngico: Te curas 1 punto de vida por segundo al estar parado sobre o dentro de bloques de champiñón o micelio.
+
+Caparazón fúngico: Resistencia I permanente. Tu crecimiento fúngico endurecido suaviza los golpes.
+
+Marchitamiento solar: Recibes 1 punto de daño por segundo al exponerte a la luz solar directa.
+
+Paso enraizado: Te mueves un 10% más lento de lo normal.
+
+Vitalidad: Fuerza vital extraída de la naturaleza.
+---
+
+Guardia de Piedra (Stoneguard)
+
+Impacto: Medio
+
+Descripción: Nacido de la piedra viva. Un centinela inquebrantable que devuelve el daño a sus atacantes, mina roca con las manos desnudas y coloca luz en la oscuridad. Es lento, pero la tierra firme lo protege.
+
+Poderes y características:
+
+Piel de piedra: Tu cuerpo de piedra te otorga +3 corazones de vida máxima.
+
+Rebote rocoso: Devuelves un 20% del daño que recibes a tus atacantes.
+
+Aterrizado: Tienes un 50% de resistencia al empuje (knockback).
+
+Luz de piedra [V]: Coloca un bloque de piedra luminosa (glowstone) en la superficie que estés mirando. Recarga de 100 ticks (unos 5 segundos).
+
+Pies de piedra: Te mueves un 10% más lento que un humano normal.
+
+Triturador de piedra: Rompes bloques el doble de rápido.
+
+Presencia protectora [G] (Alternable): Los monstruos no podrán aparecer (spawnear) en un radio de 48 bloques a tu alrededor.
+
+Aguante: Reservas físicas para tus habilidades activas.
+
+---
+
+Strider
+
+Impacto: Alto
+
+Descripción: Una criatura nativa del Nether que camina sobre la lava y se cura con su calor, pero el mundo exterior frío y el agua son devastadores para ella.
+
+Poderes y características:
+
+Nacido en la lava: Inmunidad total al fuego, la lava, los bloques de magma y las quemaduras.
+
+Velocidad del Nether: Obtienes un impulso de velocidad pasivo mientras estás en el Nether.
+
+Hidrofobia: Recibes 2 puntos de daño por segundo al tocar el agua o bajo la lluvia.
+
+Recuperación de magma: Te curas 2 puntos de vida por segundo mientras estás sumergido en lava.
+
+Visión del Nether: Puedes ver de forma clara en la oscuridad total.
+
+Sangre fría: Te mueves más lento cuando estás en el mundo exterior (Overworld) frío.
+
+Piel de obsidiana: Resistencia I permanente. Tu piel endurecida por el magma absorbe los impactos.
+
+Estampida [V]: Cargas hacia adelante impulsado por tus gruesas piernas. Cuesta 2 de aguante. Recarga de 4 segundos.
+
+Dieta fúngica: Puedes alimentarte de hongos carmesí y distorsionados del Nether (clic derecho para obtener 5 de hambre y 0.6 de saturación).
+
+Aguante: Reservas físicas que se consumen al usar habilidades.
+---
+
+Silvano (Sylvan)
+
+Impacto: Bajo
+
+Descripción: Un espíritu del bosque antiguo. Veloz entre los árboles, amado por la fauna y capaz de enredar a los enemigos con raíces. La lluvia lo cura, pero el Nether lo abrasa.
+
+Poderes y características:
+
+Uno con la naturaleza: Los monstruos hostiles te dejan en paz; solo te atacarán si tú los golpeas primero.
+
+Abrazo de la lluvia: Te curas lentamente mientras estás en contacto con el agua.
+
+Nacido en el bosque: Obtienes un impulso de velocidad pasivo mientras te encuentras en biomas de bosque.
+
+Bendición de la naturaleza: Los cultivos cercanos crecen más rápido en tu presencia, como si la tierra estuviera bendecida.
+
+Enredadera [V]: Enraíza a todas las criaturas cercanas en su lugar, aplicándoles una poderosa Lentitud VI durante 4 segundos. Cuesta 2 de vitalidad. Recarga de 200 ticks (10 segundos).
+
+Maldición de corrupción: Recibes 1 punto de daño por segundo mientras estás en biomas del Nether. Llevar botas con el encantamiento Paso Helado (Frost Walker) previene completamente este daño.
+
+Vitalidad: Fuerza vital extraída de la naturaleza para tus habilidades.
+---
+Pequeño (Tiny)
+
+Impacto: Medio
+
+Descripción: Pequeño en estatura pero rápido y ágil. Escala cualquier pared, atrae objetos caídos desde lejos, pero sus golpes son suaves como una pluma.
+
+Poderes y características:
+
+Diminuto: Eres solo un 50% del tamaño de un jugador normal.
+
+Agarre de superficie: Puedes escalar cualquier pared con total facilidad.
+
+Escurridizo: Te mueves un 20% más rápido que un humano normal.
+
+Ligero como una pluma: Eres tan pequeño que apenas notas las caídas. Inmunidad total al daño por caída.
+
+Coleccionista [V] (Alternable): Los objetos tirados en el suelo son atraídos hacia ti desde una mayor distancia.
+
+Brazos pequeños: Tus golpes cuerpo a cuerpo infligen 2 puntos de daño menos.
+
+Estómago pequeño: Tu barra de hambre se vacía un 80% más rápido, los cuerpos pequeños queman energía velozmente.
+---
+Umbral
+
+Impacto: Medio
+
+Descripción: Un hijo de las sombras. Lanza orbes de energía oscura, se desplaza a gran velocidad y desvía las flechas. Es muy ágil en la oscuridad, pero se quema con la luz del sol.
+
+Poderes y características:
+
+Visión de sombras: Ves perfectamente en la oscuridad total.
+
+Orbe de sombras [V]: Coloca un orbe invisible que sume un radio de 28 bloques en Oscuridad. Puedes tener hasta 4 orbes activos a la vez; al poner uno nuevo se elimina el más antiguo. Cuesta 2 de energía. Recarga de 3 segundos (60 ticks).
+
+Impulso de sombras [G]: Te lanzas a gran velocidad hacia adelante en la dirección en la que te mueves. Cuesta 2 de energía. Recarga de 3 segundos (60 ticks).
+
+Aversión a la luz: Recibes 1 punto de daño por segundo al exponerte a la luz solar directa.
+
+Paso de sombras: Las flechas atraviesan tu forma sombría sin hacerte ningún daño.
+
+Carrera de sombras: Correr (sprintar) no te consume hambre adicional.
+
+Energía: Energía interna utilizada para tus habilidades rápidas.
+---
+Vampiro (Vampire)
+
+Impacto: Alto
+
+Descripción: Un depredador no muerto de la noche. Veloz, fuerte y eternamente hambriento. La luz del sol le causa agonía, el agua corriente lo quema y solo puede sustentarse a base de carne cruda.
+
+Poderes y características:
+
+Naturaleza no muerta: Eres clasificado como un no muerto. Las pociones de curación te dañan, las de daño te curan y eres inmune al veneno.
+
+Ojos de depredador: Puedes ver claramente en la oscuridad total.
+
+Colmillos: Infliges 2 puntos de daño extra en cada golpe.
+
+Velocidad sobrenatural: Te mueves un 15% más rápido, siendo un destello bajo la luz de la luna.
+
+Quemadura solar: Te prendes fuego y recibes 2 puntos de daño por segundo al exponerte a la luz solar directa.
+
+Vitalidad de cadáver: Tu regeneración de salud natural se reduce al 40% de lo normal.
+
+Dieta de sangre: Solo puedes alimentarte de carne cruda, carne podrida y ojos de araña.
+
+Agua corriente: Recibes 1 punto de daño por segundo mientras estás en el agua o bajo la lluvia.
+---
+Verdante (Verdant)
+
+Impacto: Bajo
+
+Descripción: La encarnación viva del mundo verde. Incansable y en paz con la naturaleza salvaje, pero es severamente destruido por la corrupción del Nether.
+
+Poderes y características:
+
+Parentesco salvaje: Todas las criaturas del juego (incluso las hostiles) te ignoran por completo, a menos que tú las ataques primero.
+
+Aterrizaje de raíces: Las raíces amortiguan todas tus caídas, haciéndote inmune al daño por caída.
+
+Incansable: Correr (sprintar) no consume hambre extra.
+
+Cosecha abundante: Al romper cultivos maduros o troncos de madera obtienes un bloque o ítem adicional de botín.
+
+Corazón del bosque: Regeneras salud de forma lenta y pasiva mientras te encuentres en biomas de bosque.
+
+Putrefacción por corrupción: Recibes 2 puntos de daño por segundo mientras estás en el Nether. (Las botas con el encantamiento Paso Helado evitan este daño por completo).
+---
+Caminante del Vacío (Voidwalker)
+
+Impacto: Medio
+
+Descripción: Un ser tocado por la energía del End. Puede atravesar bloques, teletransportarse cortas distancias y caminar sin ser detectado por los monstruos. Corre sin cansarse, pero el agua es una agonía para él.
+
+Poderes y características:
+
+Paseo en fase [V]: Atraviesa una pared sólida en la dirección a la que estés mirando. Cuesta 3 de energía. Recarga de 4 segundos (80 ticks).
+
+Paso del vacío [G]: Te teletransportas a donde estás mirando (hasta un máximo de 24 bloques). Cuesta 2 de energía. Recarga de 4 segundos (80 ticks).
+
+Visión del vacío: Ves a la perfección en la oscuridad total.
+
+Invisible: Las criaturas hostiles no notan tu presencia a menos que tú las ataques.
+
+Quemado por el vacío: Recibes 1 punto de daño por segundo al entrar en contacto con el agua o la lluvia.
+
+Ingrávido: Correr (sprintar) no te consume hambre extra.
+
+Energía: Energía interna para utilizar tus habilidades.
+---
+Warden
+
+Impacto: Alto
+
+Descripción: Nacido de la Oscuridad Profunda (Deep Dark). Siente el mundo a través de vibraciones, lanza un estampido sónico a distancia y golpea como un ariete. Lento en sus movimientos y sufre con la luz solar.
+
+Poderes y características:
+
+Estampido sónico [V]: Dispara una devastadora ráfaga sónica que inflige 8 de daño mágico y aplica Lentitud III en un área de 10 bloques. Cuesta 4 de aguante. Recarga de 20 segundos.
+
+Ecolocalización [G] (Alternable): Las entidades vivas cercanas brillan, lo que te permite verlas incluso a través de las paredes.
+
+Sentido de temblor [N] (Alternable): Percibes entidades lejanas: cada 2 segundos, cualquier cosa en un radio de 24 bloques brillará durante 3 segundos.
+
+Fuerza de la Oscuridad Profunda: Infliges 4 puntos de daño extra por cada golpe.
+
+Piel ancestral: Resistencia II permanente. Tu carne primordial y tus gruesas placas de sculk ignoran gran parte del daño.
+
+Vista de la Oscuridad Profunda [B] (Alternable): Percibes el mundo por sus vibraciones, por lo que la oscuridad total te resulta irrelevante.
+
+Estructura colosal: Eres un 15% más grande que un jugador normal.
+
+Agonía diurna: Recibes 1 punto de daño por segundo al estar expuesto a la luz solar directa.
+
+Torpe: Te mueves un 30% más lento de lo normal. Eres una fuerza devastadora, pero pesada.
+
+Aguante: Reservas físicas para usar tus habilidades activas.
+---
+Mago de Agua (Water Mage)
+
+Impacto: Alto
+
+Descripción: Un hechicero fluido que controla las mareas y las corrientes curativas. Se siente en casa bajo el océano, pero se debilita enormemente en los páramos áridos.
+
+Poderes y características:
+
+Maremoto [V]: Lanza un cono de agua hacia adelante que inflige 4 puntos de daño y empuja a los enemigos lejos de ti. Recarga de 5 segundos.
+
+Niebla curativa [G]: Libera una onda de curación que restaura 6 puntos de vida a ti y a los jugadores cercanos. Cuesta 3 de maná. Recarga de 10 segundos.
+
+Acuático: Puedes respirar bajo el agua indefinidamente.
+
+Corriente veloz: Nadas significativamente más rápido que un humano normal.
+
+Regeneración por humedad: Regeneras salud lentamente mientras estás sumergido en agua.
+
+Deshidratación: Recibes daño constante si estás en desiertos o badlands (tierras baldías), el aire seco drena tus fuerzas.
+
+Frágil: Infliges un 25% menos de daño cuerpo a cuerpo. Tu poder fluye por el agua, no por el músculo.
+
+Maná: Energía mágica utilizada para lanzar tus hechizos.
+---
+Caminante del Viento (Windwalker)
+
+Impacto: Medio
+
+Descripción: Maestro del qinggong, el arte de la ingravidez. Camina por el aire, escala paredes escarpadas y corre con el viento sin temer jamás a las caídas, aunque no posee gran fuerza física en combate.
+
+Poderes y características:
+
+Caída de pluma: Flotas como una hoja en el viento y eres completamente inmune al daño por caída.
+
+Salto elevado: El viento te eleva a cada paso: saltas mucho más alto que cualquier luchador atado a la tierra.
+
+Pasos de nube [V]: Pulsa saltar en el aire para impulsarte nuevamente (puedes hacerlo hasta dos veces antes de tocar el suelo). Esto mantiene tu impulso y velocidad.
+
+Gracia en el muro: Te adhieres y escalas superficies verticales como una golondrina en un acantilado.
+
+Impulso de vendaval [G]: Te impulsas hacia adelante sobre una ráfaga de viento. Apunta hacia arriba para salir lanzado por los aires.
+
+Corriente rápida: Te mueves con la ligereza del viento, siempre un paso más rápido de lo normal.
+
+Tifón desgarrador [N]: Golpeas la tierra e invocas un rugiente ciclón que atrae a los enemigos, los golpea violentamente y los lanza hacia el cielo.
+---
+Espectro (Wraith)
+
+Impacto: Alto
+
+Descripción: Un espíritu atormentado que vaga a través de la materia sólida. Puede atravesar casi cualquier bloque, excepto la obsidiana. Mantener su forma física le drena el hambre y la luz solar abrasa su cuerpo espectral.
+
+Poderes y características:
+
+Forma espectral [V] (Alternable): Te permite atravesar bloques sólidos. Mientras estás dentro de un bloque, puedes volar libremente (saltar para subir, agacharte para bajar). La obsidiana, la obsidiana llorosa y la piedra base (bedrock) bloquean tu paso. Estar en fase dentro de los bloques drena tu barra de hambre.
+
+Sensibilidad solar: Te quemas al estar expuesto bajo la luz solar directa.
+
+Forma inestable: Mantener tu cuerpo espectral es agotador: tu barra de hambre se vacía un 75% más rápido de lo normal.

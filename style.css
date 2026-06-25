@@ -1172,12 +1172,12 @@ body {
   padding: 5rem 2rem 2rem;
 }
 .landing-hero-inner {
-  max-width: 720px; margin: 0 auto;
+  max-width: 1400px; margin: 0 auto;
 }
 .landing-logo {
-  height: 180px; width: auto;
+  height: 340px; width: auto;
   border-radius: 12%;
-  filter: drop-shadow(0 0 30px rgba(255,204,0,0.45));
+  filter: drop-shadow(0 0 35px rgba(255,204,0,0.5));
   margin-bottom: 1.5rem;
   transition: filter 0.3s, transform 0.3s;
   animation: logoFloat 6s ease-in-out infinite;
@@ -1214,8 +1214,9 @@ body {
   animation: goldShine 4s linear infinite;
 }
 .landing-description {
-  font-size: 1rem; color: var(--t2);
-  line-height: 1.75; max-width: 56ch; margin: 0 auto;
+  font-size: 1.15rem; color: #ffffff !important;
+  font-weight: 500; text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  line-height: 1.8; max-width: 76ch; margin: 0 auto;
 }
 .landing-divider {
   margin: 2.5rem auto 0;
@@ -1229,7 +1230,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
-  max-width: 1100px; margin: 2.5rem auto 0;
+  max-width: 1400px; margin: 2.5rem auto 0;
   padding: 0 2rem;
 }
 .landing-nav-card {
@@ -1591,26 +1592,46 @@ body {
 /* ══ ORIGINS CONTENT GRID ══ */
 .origins-content {
   position: relative; z-index: 10;
-  max-width: 1000px; margin: 0 auto;
+  max-width: 1400px; margin: 0 auto;
   padding: 2rem 2rem 4rem;
   display: flex; flex-direction: column;
   gap: 1.5rem;
 }
 
+/* ══ ORIGINS RACES GRID ══ */
+.origins-races-grid {
+  position: relative; z-index: 10;
+  max-width: 1550px; margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
 /* ══ RACE CARD ══ */
 .race-card {
   position: relative;
-  padding: 2rem 2rem 1.5rem;
+  padding: 2.2rem 2rem 1.5rem;
   background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.018) 100%);
   backdrop-filter: var(--blur-md) saturate(140%);
   -webkit-backdrop-filter: var(--blur-md) saturate(140%);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--r-2xl);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.06) inset;
+  border: 1px solid rgba(255,204,0,0.15);
+  border-radius: 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 15px rgba(255,204,0,0.02);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s, border-color 0.3s;
   opacity: 0;
   transform: translateY(20px);
+}
+.race-card::before {
+  content: '';
+  position: absolute;
+  top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border: 1px solid rgba(255,204,0,0.25);
+  border-radius: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 .race-card.revealed {
   opacity: 1; transform: translateY(0);
@@ -1618,13 +1639,13 @@ body {
 }
 .race-card:hover {
   box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 30px rgba(255,204,0,0.06);
-  border-color: rgba(255,204,0,0.2);
+  border-color: rgba(255,204,0,0.3);
 }
 
 /* Ornate corners */
 .race-card-corner {
-  position: absolute; width: 20px; height: 20px;
-  border-color: rgba(255,204,0,0.35);
+  position: absolute; width: 14px; height: 14px;
+  border-color: rgba(255,204,0,0.7);
   border-style: solid; border-width: 0;
   pointer-events: none; z-index: 2;
 }
@@ -1677,6 +1698,12 @@ body {
   border: 1px solid rgba(248,113,113,0.5);
   color: var(--red);
   box-shadow: 0 0 12px rgba(248,113,113,0.2);
+}
+.impact-low {
+  background: rgba(74,222,128,0.12);
+  border: 1px solid rgba(74,222,128,0.4);
+  color: var(--green);
+  box-shadow: 0 0 12px rgba(74,222,128,0.15);
 }
 
 /* Race description */
@@ -1792,6 +1819,45 @@ body {
   margin: 0;
 }
 
+/* ══ ORIGINS FILTER BAR ══ */
+.origins-filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem auto 0;
+  max-width: 800px;
+  padding: 0 1.5rem;
+  z-index: 10;
+  position: relative;
+}
+.filter-btn {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-pill);
+  color: var(--t2);
+  padding: 0.5rem 1.1rem;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.04em;
+}
+.filter-btn:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,204,0,0.3);
+  color: var(--t1);
+}
+.filter-btn.active {
+  background: rgba(255,204,0,0.12);
+  border-color: rgba(255,204,0,0.5);
+  color: var(--violet);
+  box-shadow: 0 0 15px rgba(255,204,0,0.15);
+}
+
+
+
 /* Origins placeholder (for classes) */
 .origins-placeholder {
   text-align: center;
@@ -1820,7 +1886,7 @@ body {
 ══════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   .landing-hero { padding: 4rem 1.5rem 1.5rem; }
-  .landing-logo { height: 120px; }
+  .landing-logo { height: 240px; }
   .landing-nav { grid-template-columns: 1fr; padding: 0 1.5rem; }
   .landing-section { padding: 2rem 1.5rem; }
   .mechanics-grid { grid-template-columns: 1fr; }
@@ -1834,7 +1900,7 @@ body {
   .race-icon { font-size: 2rem; }
 }
 @media (max-width: 480px) {
-  .landing-logo { height: 90px; }
+  .landing-logo { height: 180px; }
   .landing-description { font-size: 0.88rem; }
   .race-card-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }

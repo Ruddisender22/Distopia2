@@ -267,6 +267,11 @@ async function init() {
 
   loadSession();
 
+  // Guard to only fetch mod data and setup voting on the votaciones page
+  if (!document.getElementById("sections-container")) {
+    return;
+  }
+
   try {
     const [dataRes, votes] = await Promise.all([
       fetch("data.json"),

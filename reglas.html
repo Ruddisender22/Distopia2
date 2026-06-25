@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=21">
+    <link rel="stylesheet" href="style.css?v=22">
 </head>
 
 <body>
@@ -22,16 +22,53 @@
     <!-- Ambient background -->
     <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-    <!-- ══ BACK NAV ══ -->
-    <a href="index.html" class="origins-back-link" id="origins-back">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-        Volver al inicio
-    </a>
+    <!-- ══ NAVBAR ══ -->
+    <header class="site-navbar">
+        <div class="nav-brand">
+            <a href="index.html">
+                <img src="Recursos/IconTransparente.png" alt="Distopia 2" class="nav-brand-img">
+                <span class="nav-brand-title">Distopia 2</span>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="origins.html" class="nav-link">Origins</a>
+            <a href="mecanicas.html" class="nav-link">Mecánicas</a>
+            <a href="progresion.html" class="nav-link">Progresión</a>
+            <a href="votaciones.html" class="nav-link">Votaciones</a>
+            <a href="reglas.html" class="nav-link active">Reglas</a>
+            <a href="mods.html" class="nav-link">Lista de Mods</a>
+        </nav>
+        
+        <!-- Auth corner inside navbar -->
+        <div class="auth-corner" id="auth-corner">
+            <div class="login-wrapper" id="login-wrapper">
+                <div class="login-visual" aria-hidden="true">
+                    <svg class="g-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>Iniciar sesión</span>
+                </div>
+            </div>
 
-    <!-- ══ HEADER ══ -->
+            <div class="user-chip" id="user-chip" hidden>
+                <img id="user-avatar" class="chip-avatar" src="" alt="">
+                <div class="chip-info">
+                    <span class="chip-name" id="user-name"></span>
+                    <span class="chip-email" id="user-email"></span>
+                </div>
+                <button class="chip-logout" id="logout-btn" aria-label="Cerrar sesión" title="Cerrar sesión">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══ ORIGINS HEADER ══ -->
     <header class="origins-header">
         <div class="origins-header-ornament top-left"></div>
         <div class="origins-header-ornament top-right"></div>
@@ -67,6 +104,55 @@
         </div>
     </main>
 
+    <!-- ══ AUTH MODAL — premium login wall ══ -->
+    <div class="auth-modal-overlay" id="auth-modal-overlay" hidden role="dialog" aria-modal="true"
+        aria-label="Iniciar sesión para votar">
+        <div class="auth-modal-sheet" id="auth-modal-panel">
+
+            <button class="auth-modal-close" id="auth-modal-close" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+
+            <div class="auth-modal-body">
+                <!-- Left: editorial -->
+                <div class="auth-modal-left">
+                    <img src="Recursos/IconTransparente.png" alt="Distopia 2" class="auth-modal-logo"
+                        onerror="this.src='Recursos/IconTransparente.png'; this.style.display='none'">
+                    <span class="auth-modal-eyebrow">Distopia 2: Requiem</span>
+                    <h2 class="auth-modal-headline">Únete a<br>Distopia 2: Requiem</h2>
+                    <p class="auth-modal-body-text">Inicia sesión para guardar tus votos y decidir el futuro del
+                        servidor. Tu voz cuenta.</p>
+                </div>
+
+                <!-- Right: login methods -->
+                <div class="auth-modal-right">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" id="tab-login">Identificarse</button>
+                    </div>
+
+                    <form class="custom-auth-form" id="custom-auth-form">
+                        <div class="form-group">
+                            <label for="auth-email">Correo Electrónico</label>
+                            <input type="email" id="auth-email" placeholder="tu@correo.com" required>
+                            <p class="password-warning" style="margin-top: 8px;">Este correo se usará para guardar y recuperar tus votos.</p>
+                        </div>
+                        <button class="custom-auth-btn" id="custom-auth-submit" type="submit">Entrar a votar</button>
+                    </form>
+
+                    <p class="auth-privacy">Al continuar, aceptas el uso de tus datos únicamente para autenticación y votación en Distopia 2.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ══ TOAST ══ -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
     <!-- ══ FOOTER ══ -->
     <footer class="site-footer">
         <div class="footer-inner">
@@ -80,53 +166,7 @@
         </div>
     </footer>
 
-    <script>
-        // ── Fire sparks background ──
-        function initBlobBg() {
-            const canvas = document.getElementById("bg-canvas");
-            if (!canvas) return;
-            const ctx = canvas.getContext("2d");
-            let W = 0, H = 0;
-            function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-            window.addEventListener("resize", resize); resize();
-            const sparks = [];
-            const numSparks = 85;
-            for (let i = 0; i < numSparks; i++) {
-                sparks.push({
-                    x: Math.random() * W, y: Math.random() * H,
-                    vx: (Math.random() - 0.5) * 1.2, vy: -(Math.random() * 1.5 + 0.5),
-                    radius: Math.random() * 2.5 + 0.5, alpha: Math.random() * 0.8 + 0.2,
-                    fadeRate: Math.random() * 0.008 + 0.002,
-                    hue: Math.random() < 0.5 ? 35 : (Math.random() < 0.5 ? 15 : 55),
-                    swayOffset: Math.random() * Math.PI * 2, swaySpeed: Math.random() * 0.03 + 0.01
-                });
-            }
-            function draw() {
-                ctx.clearRect(0, 0, W, H);
-                sparks.forEach(s => {
-                    s.x += s.vx + Math.sin(s.swayOffset) * 0.4;
-                    s.swayOffset += s.swaySpeed;
-                    s.y += s.vy;
-                    s.alpha -= s.fadeRate;
-                    if (s.alpha <= 0 || s.y < -10) {
-                        s.y = H + 10; s.x = Math.random() * W;
-                        s.alpha = Math.random() * 0.8 + 0.2;
-                        s.radius = Math.random() * 2.5 + 0.5;
-                        s.vx = (Math.random() - 0.5) * 1.2;
-                        s.vy = -(Math.random() * 1.5 + 0.5);
-                    }
-                    ctx.beginPath();
-                    ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `hsla(${s.hue}, 100%, 65%, ${s.alpha})`;
-                    ctx.fill();
-                });
-                requestAnimationFrame(draw);
-            }
-            draw();
-        }
-        initBlobBg();
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

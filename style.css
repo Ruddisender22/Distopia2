@@ -1905,3 +1905,294 @@ body {
   .race-card-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 
+
+/* ══════════════════════════════════════════════════════════════
+   NEW PORTAL LAYOUT, NAVBAR, AND TRANSITIONS
+   ══════════════════════════════════════════════════════════════ */
+
+/* ══ SITE NAVBAR (TOP NAV BAR MENU) ══ */
+.site-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(8, 4, 16, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.nav-brand a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-brand-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 204, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.nav-brand:hover .nav-brand-img {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.nav-brand-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #ffcc00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--t3);
+  letter-spacing: 0.03em;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--t1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.nav-link.active {
+  color: var(--violet);
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(255, 204, 0, 0.4);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--violet);
+  transition: width 0.25s ease, left 0.25s ease;
+  box-shadow: 0 0 8px var(--violet);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+  background: var(--violet);
+}
+
+/* Auth corner inside navbar adjustments */
+.site-navbar .auth-corner {
+  position: static;
+  inset: auto;
+}
+
+/* Adjust page content headers for fixed navbar spacing */
+.origins-header {
+  padding-top: 8rem; /* space for fixed navbar */
+}
+
+.site-header {
+  padding-top: 8rem; /* space for fixed navbar */
+}
+
+/* ══ PAGE TRANSITIONS / ANIMATIONS ══ */
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  opacity: 0;
+  animation: pageReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ══ LANDING HERO REDESIGN ══ */
+.landing-hero {
+  min-height: calc(100vh - 72px);
+  margin-top: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.landing-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 960px;
+  width: 100%;
+}
+
+.landing-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--violet);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.landing-logo {
+  height: 420px;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(255, 204, 0, 0.3));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+  margin-bottom: 1.5rem;
+}
+
+.landing-logo:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 60px rgba(255, 204, 0, 0.55));
+}
+
+.landing-author {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  color: var(--t2);
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.landing-desc-section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--r-xl);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.landing-divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.landing-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* ══ EXTRA VOTING BADGES ══ */
+.finished-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--red);
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  border-radius: var(--r-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 12px rgba(248, 113, 113, 0.15);
+}
+
+/* Responsive Navbar overrides */
+@media (max-width: 1024px) {
+  .site-navbar {
+    padding: 0 1.5rem;
+  }
+  .nav-links {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+  .site-navbar .auth-corner {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.25rem;
+  }
+  .landing-hero {
+    min-height: calc(100vh - 160px);
+    margin-top: 160px;
+    padding: 2rem 1rem;
+  }
+  .landing-logo {
+    height: 280px;
+  }
+  .origins-header, .site-header {
+    padding-top: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-logo {
+    height: 200px;
+  }
+  .landing-author {
+    font-size: 0.95rem;
+  }
+  .landing-description {
+    font-size: 0.95rem;
+  }
+}

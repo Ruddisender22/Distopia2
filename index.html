@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Distopia 2: Requiem — Servidor Minecraft moddado con razas, progresión por etapas y un mundo refabricado. Explora, lucha y sobrevive.">
+        content="Distopia 2: Requiem — Servidor Minecraft moddado con razas, clases, progresión por etapas y un mundo refabricado. Explora, lucha y sobrevive.">
     <meta name="theme-color" content="#05020a">
     <title>Distopia 2: Requiem</title>
     <link rel="icon" type="image/png" href="Recursos/IconTransparente.png">
@@ -14,40 +14,59 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="stylesheet" href="style.css?v=22">
 </head>
 
 <body>
 
-    <!-- Ambient background (CSS-driven, light pastel blobs via canvas) -->
+    <!-- Ambient background -->
     <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-    <!-- ══ AUTH CORNER — top right chip ══ -->
-    <div class="auth-corner" id="auth-corner">
-        <div class="login-wrapper" id="login-wrapper">
-            <div class="login-visual" aria-hidden="true">
-                <svg class="g-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-                <span>Iniciar sesión</span>
-            </div>
+    <!-- ══ NAVBAR ══ -->
+    <header class="site-navbar">
+        <div class="nav-brand">
+            <a href="index.html">
+                <img src="Recursos/IconTransparente.png" alt="Distopia 2" class="nav-brand-img">
+                <span class="nav-brand-title">Distopia 2</span>
+            </a>
         </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link active">Inicio</a>
+            <a href="origins.html" class="nav-link">Origins</a>
+            <a href="mecanicas.html" class="nav-link">Mecánicas</a>
+            <a href="progresion.html" class="nav-link">Progresión</a>
+            <a href="votaciones.html" class="nav-link">Votaciones</a>
+            <a href="reglas.html" class="nav-link">Reglas</a>
+            <a href="mods.html" class="nav-link">Lista de Mods</a>
+        </nav>
+        
+        <!-- Auth corner inside navbar -->
+        <div class="auth-corner" id="auth-corner">
+            <div class="login-wrapper" id="login-wrapper">
+                <div class="login-visual" aria-hidden="true">
+                    <svg class="g-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>Iniciar sesión</span>
+                </div>
+            </div>
 
-        <div class="user-chip" id="user-chip" hidden>
-            <img id="user-avatar" class="chip-avatar" src="" alt="">
-            <div class="chip-info">
-                <span class="chip-name" id="user-name"></span>
-                <span class="chip-email" id="user-email"></span>
+            <div class="user-chip" id="user-chip" hidden>
+                <img id="user-avatar" class="chip-avatar" src="" alt="">
+                <div class="chip-info">
+                    <span class="chip-name" id="user-name"></span>
+                    <span class="chip-email" id="user-email"></span>
+                </div>
+                <button class="chip-logout" id="logout-btn" aria-label="Cerrar sesión" title="Cerrar sesión">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+                    </svg>
+                </button>
             </div>
-            <button class="chip-logout" id="logout-btn" aria-label="Cerrar sesión" title="Cerrar sesión">
-                <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round">
-                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
-                </svg>
-            </button>
         </div>
-    </div>
+    </header>
 
     <!-- ══ LANDING HERO ══ -->
     <header class="landing-hero" id="landing-hero">
@@ -55,244 +74,34 @@
             <span class="landing-eyebrow">Modpack Minecraft · NeoForge 1.21.1</span>
             <img src="Recursos/IconTransparente.png" alt="Distopia 2 Requiem" class="landing-logo"
                 onerror="this.src='Recursos/Icon.png'">
-            <p class="landing-description">
-                Esta es la pagina web oficial del servidor de Distopia 2. Este servidor está creado con el fin de jugar todos juntos y pasarnoslo bien. Los mods se han escogido cuidadosamente con el fin de tener contenido equilibrado para que cada uno de nosotros podamos pasárnoslo bien (según cada estilo de juego), además de priorizar la optimización.
-            </p>
-        </div>
-        <div class="landing-divider">
-            <svg viewBox="0 0 400 20" width="400" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10 L120 10 L140 2 L160 10 L200 10 L240 10 L260 2 L280 10 L400 10" stroke="url(#landingGoldGrad)" stroke-width="1.5"/>
-                <circle cx="200" cy="10" r="3.5" fill="#ffcc00"/>
-                <circle cx="140" cy="2" r="1.8" fill="#ffcc00" opacity="0.6"/>
-                <circle cx="260" cy="2" r="1.8" fill="#ffcc00" opacity="0.6"/>
-                <defs>
-                    <linearGradient id="landingGoldGrad" x1="0" y1="10" x2="400" y2="10">
-                        <stop offset="0%" stop-color="transparent"/>
-                        <stop offset="20%" stop-color="#ffcc00" stop-opacity="0.5"/>
-                        <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
-                        <stop offset="80%" stop-color="#ffcc00" stop-opacity="0.5"/>
-                        <stop offset="100%" stop-color="transparent"/>
-                    </linearGradient>
-                </defs>
-            </svg>
+            <div class="landing-author">Hecho por Ruddisender22</div>
+            
+            <div class="landing-desc-section">
+                <div class="landing-divider">
+                    <svg viewBox="0 0 400 20" width="400" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10 L120 10 L140 2 L160 10 L200 10 L240 10 L260 2 L280 10 L400 10" stroke="url(#landingGoldGrad)" stroke-width="1.5"/>
+                        <circle cx="200" cy="10" r="3.5" fill="#ffcc00"/>
+                        <circle cx="140" cy="2" r="1.8" fill="#ffcc00" opacity="0.6"/>
+                        <circle cx="260" cy="2" r="1.8" fill="#ffcc00" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="landingGoldGrad" x1="0" y1="10" x2="400" y2="10">
+                                <stop offset="0%" stop-color="transparent"/>
+                                <stop offset="20%" stop-color="#ffcc00" stop-opacity="0.5"/>
+                                <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
+                                <stop offset="80%" stop-color="#ffcc00" stop-opacity="0.5"/>
+                                <stop offset="100%" stop-color="transparent"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <p class="landing-description">
+                    Esta es la pagina web oficial del servidor de Distopia 2. Este servidor está creado con el fin de jugar todos juntos y pasarnoslo bien. Los mods se han escogido cuidadosamente con el fin de tener contenido equilibrado para que cada uno de nosotros podamos pasárnoslo bien (según cada estilo de juego), además de priorizar la optimización.
+                </p>
+            </div>
         </div>
     </header>
 
-    <!-- ══ LANDING NAV ══ -->
-    <nav class="landing-nav" id="landing-nav" role="navigation" aria-label="Secciones del servidor">
-        <a href="origins.html" class="landing-nav-card" id="nav-origins">
-            <div class="lnav-icon">🧬</div>
-            <div class="lnav-info">
-                <h3>Origins</h3>
-                <p>Razas y clases jugables</p>
-            </div>
-            <svg class="lnav-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="mecanicas.html" class="landing-nav-card" id="nav-mecanicas">
-            <div class="lnav-icon">⚙️</div>
-            <div class="lnav-info">
-                <h3>Mecánicas</h3>
-                <p>Cambios y sistemas propios</p>
-            </div>
-            <svg class="lnav-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="progresion.html" class="landing-nav-card" id="nav-progresion">
-            <div class="lnav-icon">📈</div>
-            <div class="lnav-info">
-                <h3>Progresión</h3>
-                <p>Sistema de etapas del servidor</p>
-            </div>
-            <svg class="lnav-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="#voting-section" class="landing-nav-card" id="nav-votaciones" onclick="switchTab('votaciones'); event.preventDefault();">
-            <div class="lnav-icon">🗳️</div>
-            <div class="lnav-info">
-                <h3>Votaciones</h3>
-                <p>Resultados de la comunidad</p>
-            </div>
-            <span class="lnav-badge finished">Finalizadas</span>
-            <svg class="lnav-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="reglas.html" class="landing-nav-card" id="nav-reglas">
-            <div class="lnav-icon">📋</div>
-            <div class="lnav-info">
-                <h3>Reglas</h3>
-                <p>Normas del servidor</p>
-            </div>
-            <svg class="lnav-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="mods.html" class="landing-nav-card" id="nav-mods">
-            <div class="lnav-icon">📦</div>
-            <div class="lnav-info">
-                <h3>Lista de Mods</h3>
-                <p>Todos los mods del servidor</p>
-            </div>
-            <svg class="lnav-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-    </nav>
-
-    <!-- ══ VOTING SECTION (hidden by default, shown via nav) ══ -->
-    <section id="voting-section" hidden>
-        <!-- HEADER for voting mode -->
-        <header class="site-header" id="voting-header">
-            <div class="header-inner">
-                <div class="header-brand">
-                    <img src="Recursos/IconTransparente.png" alt="Distopia 2 Requiem" class="header-logo"
-                        onerror="this.src='Recursos/Icon.png'">
-                    <div class="header-text">
-                        <span class="header-eyebrow">Modpack Minecraft · Distopia 2: Requiem</span>
-                        <h2 class="header-title">Votaciones <span class="finished-badge">Finalizadas</span></h2>
-                        <p class="header-subtitle">Las votaciones han terminado. Aquí puedes ver los resultados finales de la comunidad.</p>
-                    </div>
-                </div>
-                <div class="header-stats">
-                    <div class="hstat"><span class="hstat-val" id="stat-mods-val">—</span><span
-                            class="hstat-lbl">mods</span></div>
-                    <div class="hstat-div"></div>
-                    <div class="hstat"><span class="hstat-val" id="stat-rp-val">—</span><span
-                            class="hstat-lbl">recursos</span></div>
-                    <div class="hstat-div"></div>
-                    <div class="hstat"><span class="hstat-val" id="stat-votes-val">—</span><span
-                            class="hstat-lbl">votos</span></div>
-                    <div class="hstat-div"></div>
-                    <div class="hstat"><span class="hstat-val" id="stat-sections-val">—</span><span
-                            class="hstat-lbl">categorías</span></div>
-                </div>
-            </div>
-            <div class="header-rule"></div>
-            <div class="voting-back-bar">
-                <button class="voting-back-btn" onclick="switchTab('landing')">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    Volver al inicio
-                </button>
-            </div>
-        </header>
-
-        <!-- Hidden stats (JS compat layer) -->
-        <nav class="sr-only" aria-label="Estadísticas">
-            <span id="stat-mods"></span>
-            <span id="stat-votes"></span>
-            <span id="stat-sections"></span>
-            <span id="stat-hint"></span>
-        </nav>
-
-        <!-- ══ MAIN CONTENT — Votaciones ══ -->
-        <main id="app" role="main">
-            <!-- Controles de búsqueda y filtros -->
-            <div id="controls-bar" class="controls-bar" hidden>
-                <div class="search-box">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <input type="text" id="search-input" placeholder="Buscar por nombre o descripción..." autocomplete="off">
-                </div>
-                <div class="filter-box">
-                    <select id="filter-select">
-                        <option value="all">Filtro: Todos</option>
-                        <option value="unvoted">Sin Votar</option>
-                        <option value="voted-up">Aprobados por mí</option>
-                        <option value="voted-down">Rechazados por mí</option>
-                        <option value="status-deleted">Estado: Eliminado</option>
-                    </select>
-                    <select id="sort-select">
-                        <option value="default">Orden: Categorías</option>
-                        <option value="recent">Añadidos recientemente</option>
-                        <option value="alphabetical">Alfabético</option>
-                    </select>
-                </div>
-            </div>
-
-            <div id="sections-container"></div>
-            <div id="search-results-grid" class="results-grid" hidden></div>
-
-            <div class="loading-state" id="loading-screen">
-                <div class="spinner-ring" aria-label="Cargando"></div>
-                <p class="loading-text">Cargando mods…</p>
-            </div>
-        </main>
-    </section>
-
-    <!-- ══ MOD DETAIL MODAL — split layout ══ -->
-    <div class="modal-backdrop" id="modal-overlay" hidden role="dialog" aria-modal="true" aria-label="Detalle del mod">
-        <div class="modal-sheet" id="modal-panel" tabindex="-1">
-
-            <button class="modal-close-btn" id="modal-close" aria-label="Cerrar">
-                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round">
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-            </button>
-
-            <div class="modal-split">
-                <!-- LEFT: description + vote -->
-                <div class="modal-left">
-                    <div class="modal-left-scroll">
-                        <p class="modal-eyebrow">Mod · Distopia 2: Requiem</p>
-                        <h2 class="modal-title" id="modal-mod-name"></h2>
-                        <div class="modal-score-row">
-                            <div class="modal-score-card">
-                                <span class="modal-score-number" id="modal-vote-score">0</span>
-                                <span class="modal-score-label">votos</span>
-                            </div>
-                        </div>
-                        <div class="modal-desc" id="modal-description"></div>
-                        <div class="modal-actions" id="modal-actions">
-                            <button class="action-btn support" id="modal-upvote-btn" aria-label="Apoyar">
-                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                                    stroke-width="2.5" stroke-linecap="round">
-                                    <polyline points="18 15 12 9 6 15" />
-                                </svg>
-                                Upvote
-                            </button>
-                            <button class="action-btn reject" id="modal-downvote-btn" aria-label="Rechazar">
-                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                                    stroke-width="2.5" stroke-linecap="round">
-                                    <polyline points="6 9 12 15 18 9" />
-                                </svg>
-                                Downvote
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RIGHT: bento image grid -->
-                <div class="modal-right">
-                    <div class="bento-grid" id="modal-bento"></div>
-                    <!-- Mobile carousel -->
-                    <div class="modal-gallery" id="modal-carousel">
-                        <div class="gallery-track" id="modal-carousel-track"></div>
-                        <button class="gallery-nav prev" id="carousel-prev" aria-label="Anterior">‹</button>
-                        <button class="gallery-nav next" id="carousel-next" aria-label="Siguiente">›</button>
-                        <div class="gallery-dots" id="carousel-dots"></div>
-                        <div class="gallery-counter" id="carousel-counter"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile sticky vote -->
-            <div class="modal-mobile-vote" id="modal-mobile-vote">
-                <div class="mmv-score">
-                    <span id="modal-vote-score-m">0</span>
-                    <span>pts</span>
-                </div>
-                <button class="action-btn support sm" id="modal-upvote-btn-m" aria-label="Apoyar">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round">
-                        <polyline points="18 15 12 9 6 15" />
-                    </svg>
-                    Upvote
-                </button>
-                <button class="action-btn reject sm" id="modal-downvote-btn-m" aria-label="Rechazar">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round">
-                        <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                    Downvote
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ══ AUTH MODAL — premium login wall (solo al intentar votar) ══ -->
+    <!-- ══ AUTH MODAL — premium login wall ══ -->
     <div class="auth-modal-overlay" id="auth-modal-overlay" hidden role="dialog" aria-modal="true"
         aria-label="Iniciar sesión para votar">
         <div class="auth-modal-sheet" id="auth-modal-panel">
@@ -314,29 +123,6 @@
                     <h2 class="auth-modal-headline">Únete a<br>Distopia 2: Requiem</h2>
                     <p class="auth-modal-body-text">Inicia sesión para guardar tus votos y decidir el futuro del
                         servidor. Tu voz cuenta.</p>
-                    <ul class="auth-modal-perks">
-                        <li>
-                            <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="4 10 8 14 16 6" />
-                            </svg>
-                            Voto persistente entre sesiones
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="4 10 8 14 16 6" />
-                            </svg>
-                            Un voto por mod, siempre justo
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="4 10 8 14 16 6" />
-                            </svg>
-                            Cambia de opinión cuando quieras
-                        </li>
-                    </ul>
                 </div>
 
                 <!-- Right: login methods -->

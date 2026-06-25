@@ -1645,7 +1645,6 @@ window.RACES_DATA = [
         "type": "buff",
         "icon": "🥗",
         "key": null
-      },
       }
     ]
   },

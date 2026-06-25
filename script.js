@@ -1103,95 +1103,100 @@ function escapeHtml(s){
 // ══════════════════════════════════════════════════════════════
 //  ORIGINS: RAZAS & CLASES
 // ══════════════════════════════════════════════════════════════
-function switchOriginsTab(tab) {
-  const razasContainer = document.getElementById("origins-razas");
-  const clasesContainer = document.getElementById("origins-clases");
-  const tabRazas = document.getElementById("tab-razas");
-  const tabClases = document.getElementById("tab-clases");
-  
-  if (tab === 'razas') {
-    if (razasContainer) razasContainer.hidden = false;
-    if (clasesContainer) clasesContainer.hidden = true;
-    if (tabRazas) tabRazas.classList.add("active");
-    if (tabClases) tabClases.classList.remove("active");
-    renderRazas();
-  } else if (tab === 'clases') {
-    if (razasContainer) razasContainer.hidden = true;
-    if (clasesContainer) clasesContainer.hidden = false;
-    if (tabRazas) tabRazas.classList.remove("active");
-    if (tabClases) tabClases.classList.add("active");
-    renderClases();
-  }
-}
+const originsFilterBar = document.getElementById('origins-filter-bar');
+const inlineOrigins = originsFilterBar && originsFilterBar.getAttribute('data-origins-inline') === 'true';
 
-function renderRazas() {
-  const container = document.getElementById("origins-razas");
-  if (!container) return;
-  container.innerHTML = "";
-  
-  if (typeof RACES_DATA === "undefined" || !RACES_DATA) return;
-  
-  const filterBar = document.getElementById("origins-filter-bar");
-  const activeImpact = filterBar?.getAttribute("data-active-impact") || "all";
-  
-  RACES_DATA.forEach(race => {
-    if (activeImpact !== "all" && race.impact !== activeImpact) return;
-    const article = document.createElement("article");
-    article.className = "origins-card";
-    article.onclick = () => openOriginsDetail(race, "race");
+if (!inlineOrigins) {
+  window.switchOriginsTab = function(tab) {
+    const razasContainer = document.getElementById("origins-razas");
+    const clasesContainer = document.getElementById("origins-clases");
+    const tabRazas = document.getElementById("tab-razas");
+    const tabClases = document.getElementById("tab-clases");
     
-    const impactText = race.impact === "none" ? "Ninguno" : 
-                       race.impact === "low" ? "Bajo" :
-                       race.impact === "medium" ? "Medio" :
-                       race.impact === "high" ? "Alto" : "Desconocido";
-    
-    article.innerHTML = `
-      <div class="origins-card-head">
-        <div class="origins-emoji">${race.emoji || "🌍"}</div>
-        <div class="origins-info">
-          <h2 class="origins-name">${escapeHtml(race.name)}</h2>
-          <div class="origins-impact">Impacto: ${impactText}</div>
-        </div>
-      </div>
-      <p class="origins-description">${escapeHtml(race.description)}</p>
-    `;
-    container.appendChild(article);
-  });
-}
+    if (tab === 'razas') {
+      if (razasContainer) razasContainer.hidden = false;
+      if (clasesContainer) clasesContainer.hidden = true;
+      if (tabRazas) tabRazas.classList.add("active");
+      if (tabClases) tabClases.classList.remove("active");
+      window.renderRazas();
+    } else if (tab === 'clases') {
+      if (razasContainer) razasContainer.hidden = true;
+      if (clasesContainer) clasesContainer.hidden = false;
+      if (tabRazas) tabRazas.classList.remove("active");
+      if (tabClases) tabClases.classList.add("active");
+      window.renderClases();
+    }
+  };
 
-function renderClases() {
-  const container = document.getElementById("origins-clases");
-  if (!container) return;
-  container.innerHTML = "";
-  
-  if (typeof CLASSES_DATA === "undefined" || !CLASSES_DATA) return;
-  
-  const filterBar = document.getElementById("origins-filter-bar");
-  const activeImpact = filterBar?.getAttribute("data-active-impact") || "all";
-  
-  CLASSES_DATA.forEach(cls => {
-    if (activeImpact !== "all" && cls.impact !== activeImpact) return;
-    const article = document.createElement("article");
-    article.className = "origins-card";
-    article.onclick = () => openOriginsDetail(cls, "class");
+  window.renderRazas = function() {
+    const container = document.getElementById("origins-razas");
+    if (!container) return;
+    container.innerHTML = "";
     
-    const impactText = cls.impact === "none" ? "Ninguno" : 
-                       cls.impact === "low" ? "Bajo" :
-                       cls.impact === "medium" ? "Medio" :
-                       cls.impact === "high" ? "Alto" : "Desconocido";
+    if (typeof RACES_DATA === "undefined" || !RACES_DATA) return;
     
-    article.innerHTML = `
-      <div class="origins-card-head">
-        <div class="origins-emoji">${cls.emoji || "⚔️"}</div>
-        <div class="origins-info">
-          <h2 class="origins-name">${escapeHtml(cls.name)}</h2>
-          <div class="origins-impact">Impacto: ${impactText}</div>
+    const filterBar = document.getElementById("origins-filter-bar");
+    const activeImpact = filterBar?.getAttribute("data-active-impact") || "all";
+    
+    RACES_DATA.forEach(race => {
+      if (activeImpact !== "all" && race.impact !== activeImpact) return;
+      const article = document.createElement("article");
+      article.className = "origins-card";
+      article.onclick = () => openOriginsDetail(race, "race");
+      
+      const impactText = race.impact === "none" ? "Ninguno" : 
+                         race.impact === "low" ? "Bajo" :
+                         race.impact === "medium" ? "Medio" :
+                         race.impact === "high" ? "Alto" : "Desconocido";
+      
+      article.innerHTML = `
+        <div class="origins-card-head">
+          <div class="origins-emoji">${race.emoji || "🌍"}</div>
+          <div class="origins-info">
+            <h2 class="origins-name">${escapeHtml(race.name)}</h2>
+            <div class="origins-impact">Impacto: ${impactText}</div>
+          </div>
         </div>
-      </div>
-      <p class="origins-description">${escapeHtml(cls.description)}</p>
-    `;
-    container.appendChild(article);
-  });
+        <p class="origins-description">${escapeHtml(race.description)}</p>
+      `;
+      container.appendChild(article);
+    });
+  };
+
+  window.renderClases = function() {
+    const container = document.getElementById("origins-clases");
+    if (!container) return;
+    container.innerHTML = "";
+    
+    if (typeof CLASSES_DATA === "undefined" || !CLASSES_DATA) return;
+    
+    const filterBar = document.getElementById("origins-filter-bar");
+    const activeImpact = filterBar?.getAttribute("data-active-impact") || "all";
+    
+    CLASSES_DATA.forEach(cls => {
+      if (activeImpact !== "all" && cls.impact !== activeImpact) return;
+      const article = document.createElement("article");
+      article.className = "origins-card";
+      article.onclick = () => openOriginsDetail(cls, "class");
+      
+      const impactText = cls.impact === "none" ? "Ninguno" : 
+                         cls.impact === "low" ? "Bajo" :
+                         cls.impact === "medium" ? "Medio" :
+                         cls.impact === "high" ? "Alto" : "Desconocido";
+      
+      article.innerHTML = `
+        <div class="origins-card-head">
+          <div class="origins-emoji">${cls.emoji || "⚔️"}</div>
+          <div class="origins-info">
+            <h2 class="origins-name">${escapeHtml(cls.name)}</h2>
+            <div class="origins-impact">Impacto: ${impactText}</div>
+          </div>
+        </div>
+        <p class="origins-description">${escapeHtml(cls.description)}</p>
+      `;
+      container.appendChild(article);
+    });
+  };
 }
 
 function initOriginsFilter() {
@@ -1400,30 +1405,30 @@ function initSwipeGestures() {
 // ── Boot ──────────────────────────────────────────────────────
 initSearchAndFilter();
 initSwipeGestures();
-// Only initialize the origins filter from the global script if the page
-// does not include an inline origins implementation. Origins pages that
-// include their own inline script set `data-origins-inline="true"` on
-// the filter bar to opt-out of the global initializer.
-const originsFilterBar = document.getElementById('origins-filter-bar');
-if (!(originsFilterBar && originsFilterBar.getAttribute('data-origins-inline') === 'true')) {
-  initOriginsFilter();
-}
 init();
+
 // Initialize origins page if on origins.html
+// Only boot the legacy origins filter if the page is not using the inline origins implementation.
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("origins-razas")) {
-    // Prefer new render function names if present, fall back to old ones if available
-    if (typeof renderRaces === 'function') {
-      try { renderRaces('all'); } catch (e) { console.warn('renderRaces failed', e); }
-    } else if (typeof renderRazas === 'function') {
-      try { renderRazas(); } catch (e) { console.warn('renderRazas failed', e); }
+  const originsFilterBar = document.getElementById('origins-filter-bar');
+  const inlineOrigins = originsFilterBar && originsFilterBar.getAttribute('data-origins-inline') === 'true';
+
+  if (!inlineOrigins) {
+    initOriginsFilter();
+
+    if (document.getElementById("origins-razas")) {
+      if (typeof renderRaces === 'function') {
+        try { renderRaces('all'); } catch (e) { console.warn('renderRaces failed', e); }
+      } else if (typeof renderRazas === 'function') {
+        try { renderRazas(); } catch (e) { console.warn('renderRazas failed', e); }
+      }
     }
-  }
-  if (document.getElementById("origins-clases")) {
-    if (typeof renderClasses === 'function') {
-      try { renderClasses('all'); } catch (e) { console.warn('renderClasses failed', e); }
-    } else if (typeof renderClases === 'function') {
-      try { renderClases(); } catch (e) { console.warn('renderClases failed', e); }
+    if (document.getElementById("origins-clases")) {
+      if (typeof renderClasses === 'function') {
+        try { renderClasses('all'); } catch (e) { console.warn('renderClasses failed', e); }
+      } else if (typeof renderClases === 'function') {
+        try { renderClases(); } catch (e) { console.warn('renderClases failed', e); }
+      }
     }
   }
 });

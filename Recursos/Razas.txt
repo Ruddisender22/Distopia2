@@ -640,6 +640,7 @@ Pies rápidos: Te mueves un 15% más rápido de lo normal.
 
 Apetito pequeño: Tu barra de hambre se vacía a la mitad de velocidad que la de un jugador normal.
 
+---
 Monje de Hierro (Iron Monk)
 
 Impacto: Medio

@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=24">
+    <link rel="stylesheet" href="style.css?v=25">
     <script src="races_data.js"></script>
     <script src="classes_data.js"></script>
 </head>
@@ -296,6 +296,15 @@
                 });
             }, { threshold: 0.05 });
             cards.forEach(c => revealObserver.observe(c));
+
+            // Fallback: if for some reason IntersectionObserver doesn't trigger
+            // (e.g. certain browsers / race conditions), reveal cards after a short delay.
+            setTimeout(() => {
+                const anyRevealed = document.querySelector('.race-card.revealed');
+                if (!anyRevealed) {
+                    cards.forEach(c => c.classList.add('revealed'));
+                }
+            }, 180);
         }
 
         // ── Rendering simplified cards ──

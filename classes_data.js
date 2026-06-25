@@ -1,4 +1,4 @@
-const CLASSES_DATA = [
+var CLASSES_DATA = [
   {
     "name": "Nini",
     "emoji": "🤷",

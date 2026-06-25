@@ -1,4 +1,4 @@
-const RACES_DATA = [
+var RACES_DATA = [
   {
     "name": "Humano",
     "emoji": "🧑",

@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=24">
+    <link rel="stylesheet" href="style.css?v=25">
 </head>
 
 <body>
@@ -149,33 +149,6 @@
                     rel="noopener noreferrer" class="footer-link">Ruddisender22</a></p>
         </div>
     </footer>
-
-    <!-- ══ COLLAPSIBLE TECH CHANGELOG ══ -->
-    <div class="tech-changelog" id="tech-changelog">
-        <button class="changelog-toggle" id="changelog-toggle" aria-expanded="false" onclick="toggleChangelog()">
-            <span class="toggle-icon">▶</span> Cambios de la última versión
-        </button>
-        <div class="changelog-content" id="changelog-content">
-            <div class="changelog-line">------------------</div>
-            <ul class="changelog-list">
-                <li><span>✦</span> Nueva sección interactiva de <strong>Origins</strong> añadida para explorar razas y clases.</li>
-                <li><span>✦</span> Diseño inmersivo de fichas detalladas con carrusel animado en 3D.</li>
-                <li><span>✦</span> Finalización de la sección de <strong>Votaciones</strong> con resultados de la comunidad.</li>
-                <li><span>✦</span> Optimización de velocidad de carga y transiciones animadas fluidas.</li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-        function toggleChangelog() {
-            const container = document.getElementById('tech-changelog');
-            const btn = document.getElementById('changelog-toggle');
-            if (container) {
-                const isOpen = container.classList.toggle('open');
-                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            }
-        }
-    </script>
     <script src="script.js"></script>
 </body>
 

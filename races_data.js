@@ -1602,7 +1602,7 @@ const RACES_DATA = [
     "name": "Diminuto (Inchling)",
     "emoji": "🐜",
     "impact": "medium",
-    "description": "Un monje defensor que basa todas sus artes en una única reserva de aguante (stamina). Levanta su guardia para ignorar los golpes, pero tanto bloquear como atacar consumen la misma energía.",
+    "description": "Un humanoide del tamaño de una cuarta parte de lo normal que escala paredes con facilidad y se mueve a una velocidad sorprendente, aunque su cuerpo es sumamente frágil.",
     "traits": [
       {
         "name": "Diminuto",
@@ -1646,6 +1646,15 @@ const RACES_DATA = [
         "icon": "🥗",
         "key": null
       },
+      }
+    ]
+  },
+  {
+    "name": "Monje de Hierro (Iron Monk)",
+    "emoji": "🥋",
+    "impact": "medium",
+    "description": "Un monje defensor que basa todas sus artes en una única reserva de aguante (stamina). Levanta su guardia para ignorar los golpes, pero tanto bloquear como atacar consumen la misma energía.",
+    "traits": [
       {
         "name": "Aguante (Stamina)",
         "desc": "Alimenta tanto tu guardia como tus habilidades. Solo se recupera cuando bajas la guardia.",
@@ -1663,8 +1672,8 @@ const RACES_DATA = [
       {
         "name": "Mantenimiento de guardia",
         "desc": "Mantener la guardia activa consume aguante constantemente.",
-        "type": "ability",
-        "icon": "🛡️",
+        "type": "debuff",
+        "icon": "⏳",
         "key": null
       },
       {
@@ -1678,7 +1687,7 @@ const RACES_DATA = [
         "name": "Parada (Parry)",
         "desc": "Cada golpe que bloquees con éxito sonará como un escudo y consumirá una porción de tu aguante.",
         "type": "buff",
-        "icon": "🛡️",
+        "icon": "⚔️",
         "key": null
       },
       {
@@ -1692,7 +1701,7 @@ const RACES_DATA = [
         "name": "Resolución de hierro",
         "desc": "Tienes resistencia natural a que te empujen o te saquen de tu postura.",
         "type": "buff",
-        "icon": "🛡️",
+        "icon": "⚓",
         "key": null
       }
     ]

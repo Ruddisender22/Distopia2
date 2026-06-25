@@ -1400,7 +1400,14 @@ function initSwipeGestures() {
 // ── Boot ──────────────────────────────────────────────────────
 initSearchAndFilter();
 initSwipeGestures();
-initOriginsFilter();
+// Only initialize the origins filter from the global script if the page
+// does not include an inline origins implementation. Origins pages that
+// include their own inline script set `data-origins-inline="true"` on
+// the filter bar to opt-out of the global initializer.
+const originsFilterBar = document.getElementById('origins-filter-bar');
+if (!(originsFilterBar && originsFilterBar.getAttribute('data-origins-inline') === 'true')) {
+  initOriginsFilter();
+}
 init();
 // Initialize origins page if on origins.html
 document.addEventListener("DOMContentLoaded", () => {

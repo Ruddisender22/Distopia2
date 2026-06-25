@@ -17,6 +17,25 @@
     <link rel="stylesheet" href="style.css?v=25">
     <script src="races_data.js"></script>
     <script src="classes_data.js"></script>
+    <script>
+        // Synchronous fallback loader: ensure RACES_DATA is defined before other scripts run
+        (function() {
+            try {
+                if (typeof window.RACES_DATA === 'undefined') {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', '/races_data.js', false); // synchronous
+                    xhr.send(null);
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var script = document.createElement('script');
+                        script.text = xhr.responseText;
+                        document.head.appendChild(script);
+                    }
+                }
+            } catch (e) {
+                console.warn('sync races_data loader failed', e);
+            }
+        })();
+    </script>
 </head>
 
 <body>

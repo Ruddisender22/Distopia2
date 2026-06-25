@@ -676,11 +676,27 @@
                             xhr.open('GET', '/races_data.js');
                             xhr.onload = () => {
                                 try {
-                                    const m = xhr.responseText.match(/=\s*(\[([\s\S]*)\])\s*;?$/);
-                                    if (m && m[1]) {
-                                        window.RACES_DATA = JSON.parse(m[1]);
+                                    const text = xhr.responseText;
+                                    const firstBracket = text.indexOf('[');
+                                    if (firstBracket !== -1) {
+                                        let depth = 0;
+                                        let endIndex = -1;
+                                        for (let i = firstBracket; i < text.length; i++) {
+                                            const ch = text[i];
+                                            if (ch === '[') depth++;
+                                            else if (ch === ']') {
+                                                depth--;
+                                                if (depth === 0) { endIndex = i; break; }
+                                            }
+                                        }
+                                        if (endIndex !== -1) {
+                                            const arrText = text.slice(firstBracket, endIndex + 1);
+                                            window.RACES_DATA = JSON.parse(arrText);
+                                        } else {
+                                            console.error('Could not find matching bracket in races_data.js');
+                                        }
                                     } else {
-                                        console.error('Could not extract array text from races_data.js');
+                                        console.error('No array bracket found in races_data.js');
                                     }
                                 } catch (e) { console.error('parse races_data failed', e); }
                                 renderRaces(filter);

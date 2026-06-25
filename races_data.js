@@ -1,4 +1,4 @@
-var RACES_DATA = [
+window.RACES_DATA = [
   {
     "name": "Humano",
     "emoji": "🧑",

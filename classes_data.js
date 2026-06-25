@@ -1,4 +1,4 @@
-var CLASSES_DATA = [
+window.CLASSES_DATA = [
   {
     "name": "Nini",
     "emoji": "🤷",

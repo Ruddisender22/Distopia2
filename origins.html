@@ -667,56 +667,43 @@
         // ── Boot ──
         function ensureAndRenderRaces(filter) {
             if (typeof RACES_DATA === 'undefined') {
-                const s = document.createElement('script');
-                s.src = 'races_data.js';
-                s.onload = () => {
-                    if (typeof RACES_DATA === 'undefined') {
-                        try {
-                            const xhr = new XMLHttpRequest();
-                            xhr.open('GET', '/races_data.js');
-                            xhr.onload = () => {
-                                try {
-                                    const text = xhr.responseText;
-                                    const firstBracket = text.indexOf('[');
-                                    if (firstBracket !== -1) {
-                                        let depth = 0;
-                                        let endIndex = -1;
-                                        for (let i = firstBracket; i < text.length; i++) {
-                                            const ch = text[i];
-                                            if (ch === '[') depth++;
-                                            else if (ch === ']') {
-                                                depth--;
-                                                if (depth === 0) { endIndex = i; break; }
-                                            }
-                                        }
-                                        if (endIndex !== -1) {
-                                            const arrText = text.slice(firstBracket, endIndex + 1);
-                                            window.RACES_DATA = JSON.parse(arrText);
-                                        } else {
-                                            console.error('Could not find matching bracket in races_data.js');
-                                        }
-                                    } else {
-                                        console.error('No array bracket found in races_data.js');
-                                    }
-                                } catch (e) { console.error('parse races_data failed', e); }
-                                renderRaces(filter);
-                            };
-                            xhr.onerror = () => { console.error('Failed to fetch races_data.js'); renderRaces(filter); };
-                            xhr.send();
-                            return;
-                        } catch (e) {
-                            console.error('Fallback loader failed', e);
-                        }
+                // Fetch the file and inject its text as a script so it executes reliably
+                fetch('/races_data.js').then(r => r.text()).then(text => {
+                    try {
+                        const s = document.createElement('script');
+                        s.textContent = text;
+                        document.head.appendChild(s);
+                    } catch (e) {
+                        console.error('script injection failed', e);
                     }
+                    // Give the injected script a moment to execute
+                    setTimeout(() => renderRaces(filter), 20);
+                }).catch(err => {
+                    console.error('Failed to load races_data.js via fetch', err);
                     renderRaces(filter);
-                };
-                document.head.appendChild(s);
+                });
             } else {
                 renderRaces(filter);
             }
         }
 
+        // Ensure default on load: Razas + Todos
         ensureAndRenderRaces('all');
+        setTimeout(() => {
+            try {
+                // Force tab and filter defaults
+                const btnTodos = document.querySelector('.origins-filter-bar .filter-btn[data-impact="all"]');
+                document.getElementById('tab-razas')?.classList.add('active');
+                document.getElementById('tab-clases')?.classList.remove('active');
+                document.getElementById('origins-razas')?.removeAttribute('hidden');
+                document.getElementById('origins-clases')?.setAttribute('hidden', '');
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                if (btnTodos) {
+                    btnTodos.classList.add('active');
+                    updateFilterSlider(btnTodos);
+                }
+            } catch (e) { console.warn('default tab setup failed', e); }
+        }, 120);
         
         // Initialize slider position
         setTimeout(() => {

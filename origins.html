@@ -669,7 +669,24 @@
             if (typeof RACES_DATA === 'undefined') {
                 const s = document.createElement('script');
                 s.src = 'races_data.js';
-                s.onload = () => renderRaces(filter);
+                s.onload = () => {
+                    if (typeof RACES_DATA === 'undefined') {
+                        try {
+                            const xhr = new XMLHttpRequest();
+                            xhr.open('GET', '/races_data.js');
+                            xhr.onload = () => {
+                                try { window.eval(xhr.responseText); } catch (e) { console.error('eval races_data failed', e); }
+                                renderRaces(filter);
+                            };
+                            xhr.onerror = () => { console.error('Failed to fetch races_data.js'); renderRaces(filter); };
+                            xhr.send();
+                            return;
+                        } catch (e) {
+                            console.error('Fallback loader failed', e);
+                        }
+                    }
+                    renderRaces(filter);
+                };
                 document.head.appendChild(s);
             } else {
                 renderRaces(filter);

@@ -675,7 +675,14 @@
                             const xhr = new XMLHttpRequest();
                             xhr.open('GET', '/races_data.js');
                             xhr.onload = () => {
-                                try { window.eval(xhr.responseText); } catch (e) { console.error('eval races_data failed', e); }
+                                try {
+                                    const m = xhr.responseText.match(/=\s*(\[([\s\S]*)\])\s*;?$/);
+                                    if (m && m[1]) {
+                                        window.RACES_DATA = JSON.parse(m[1]);
+                                    } else {
+                                        console.error('Could not extract array text from races_data.js');
+                                    }
+                                } catch (e) { console.error('parse races_data failed', e); }
                                 renderRaces(filter);
                             };
                             xhr.onerror = () => { console.error('Failed to fetch races_data.js'); renderRaces(filter); };

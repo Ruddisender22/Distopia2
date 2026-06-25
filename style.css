@@ -1214,7 +1214,7 @@ body {
   animation: goldShine 4s linear infinite;
 }
 .landing-description {
-  font-size: 1rem; color: var(--t3);
+  font-size: 1rem; color: var(--t2);
   line-height: 1.75; max-width: 56ch; margin: 0 auto;
 }
 .landing-divider {

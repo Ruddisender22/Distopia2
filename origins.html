@@ -40,12 +40,13 @@
             <a href="reglas.html" class="nav-link">Reglas</a>
             <a href="votaciones.html" class="nav-link">Votaciones (Finalizadas)</a>
         </nav>
-        
+
         <!-- Auth corner inside navbar -->
         <div class="auth-corner" id="auth-corner">
             <div class="login-wrapper" id="login-wrapper">
                 <div class="login-visual" aria-hidden="true">
-                    <svg class="g-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="g-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
                     </svg>
@@ -75,7 +76,8 @@
         <div class="origins-header-ornament top-right"></div>
         <span class="origins-eyebrow">Distopia 2: Requiem</span>
         <h1 class="origins-title">Origins</h1>
-        <p class="origins-subtitle">Elige tu raza y forja tu destino. Cada elección cambia tu forma de jugar.</p>
+        <p class="origins-subtitle">Elige tu raza y forja tu destino. Cada elección cambia tu forma de jugar. Existe la
+            posibilidad de obtener un orbe especial para cambiar este origen.</p>
         <div class="origins-divider">
             <svg viewBox="0 0 200 20" width="200" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 10 L60 10 L70 2 L80 10 L100 10 L120 10 L130 2 L140 10 L200 10" stroke="url(#goldGrad)"
@@ -107,21 +109,24 @@
             Razas
         </button>
         <button class="origins-tab" id="tab-clases" onclick="switchOriginsTab('clases')">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
             Clases
         </button>
     </nav>
 
     <!-- ══ IMPACT FILTER BAR ══ -->
-    <div class="origins-filter-bar" id="origins-filter-bar">
-        <button class="filter-btn active" data-impact="all">Todos</button>
-        <button class="filter-btn" data-impact="high">Impacto Alto</button>
-        <button class="filter-btn" data-impact="medium">Impacto Medio</button>
-        <button class="filter-btn" data-impact="low">Impacto Bajo</button>
-        <button class="filter-btn" data-impact="none">Sin Impacto</button>
+    <div class="origins-filter-wrapper">
+        <div class="origins-filter-bar" id="origins-filter-bar">
+            <div class="filter-slider" id="filter-slider"></div>
+            <button class="filter-btn active" data-impact="all">Todos</button>
+            <button class="filter-btn" data-impact="high">Impacto Alto</button>
+            <button class="filter-btn" data-impact="medium">Impacto Medio</button>
+            <button class="filter-btn" data-impact="low">Impacto Bajo</button>
+            <button class="filter-btn" data-impact="none">Sin Impacto</button>
+        </div>
     </div>
 
     <!-- ══ RAZAS GRID ══ -->
@@ -135,33 +140,46 @@
     </main>
 
     <!-- ══ IMMERSIVE DETAIL VIEW ══ -->
-    <div class="immersive-overlay" id="immersive-overlay" hidden role="dialog" aria-modal="true" aria-label="Vista inmersiva">
+    <div class="immersive-overlay" id="immersive-overlay" hidden role="dialog" aria-modal="true"
+        aria-label="Vista inmersiva">
         <button class="immersive-close" onclick="closeImmersiveView()" aria-label="Cerrar">&times;</button>
-        
+
         <div class="immersive-carousel-wrapper">
             <button class="immersive-desktop-nav prev" onclick="navigateImmersive(-1)" aria-label="Anterior">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
             </button>
-            
+
             <div class="immersive-track-viewport">
                 <div class="immersive-track" id="immersive-track">
                     <!-- Slides rendered dynamically by JavaScript -->
                 </div>
             </div>
-            
+
             <button class="immersive-desktop-nav next" onclick="navigateImmersive(1)" aria-label="Siguiente">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <polyline points="9 18 15 12 9 6" />
+                </svg>
             </button>
         </div>
 
         <div class="immersive-mobile-nav" id="immersive-mobile-nav">
             <button class="immersive-nav-btn prev" onclick="navigateImmersive(-1)" aria-label="Anterior">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
                 <span>Anterior</span>
             </button>
             <button class="immersive-nav-btn next" onclick="navigateImmersive(1)" aria-label="Siguiente">
                 <span>Siguiente</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <polyline points="9 18 15 12 9 6" />
+                </svg>
             </button>
         </div>
     </div>
@@ -200,12 +218,14 @@
                         <div class="form-group">
                             <label for="auth-email">Correo Electrónico</label>
                             <input type="email" id="auth-email" placeholder="tu@correo.com" required>
-                            <p class="password-warning" style="margin-top: 8px;">Este correo se usará para guardar y recuperar tus votos.</p>
+                            <p class="password-warning" style="margin-top: 8px;">Este correo se usará para guardar y
+                                recuperar tus votos.</p>
                         </div>
                         <button class="custom-auth-btn" id="custom-auth-submit" type="submit">Entrar a votar</button>
                     </form>
 
-                    <p class="auth-privacy">Al continuar, aceptas el uso de tus datos únicamente para autenticación y votación en Distopia 2.</p>
+                    <p class="auth-privacy">Al continuar, aceptas el uso de tus datos únicamente para autenticación y
+                        votación en Distopia 2.</p>
                 </div>
             </div>
 
@@ -401,7 +421,7 @@
             document.body.style.overflow = 'hidden';
 
             renderImmersiveTrack();
-            
+
             // Focus overlay
             overlay.focus();
         }
@@ -421,10 +441,10 @@
         // Helper to resolve appropriate emojis for traits if they default to sparkle
         function getTraitIcon(trait) {
             if (trait.icon && trait.icon !== '✨') return trait.icon;
-            
+
             const name = trait.name.toLowerCase();
             const desc = trait.desc.toLowerCase();
-            
+
             if (name.includes('vida') || name.includes('salud') || name.includes('corazón') || desc.includes('vida') || desc.includes('corazón')) return '❤️';
             if (name.includes('armadura') || name.includes('defensa') || name.includes('resistencia') || desc.includes('daño recibido') || desc.includes('blindaje')) return '🛡️';
             if (name.includes('fuerza') || name.includes('daño') || name.includes('ataque') || name.includes('combate') || desc.includes('daño de ataque') || name.includes('espada') || name.includes('golpe')) return '⚔️';
@@ -440,7 +460,7 @@
             if (name.includes('comida') || name.includes('hambre') || name.includes('voraz') || name.includes('comer') || desc.includes('saturación')) return '🍖';
             if (name.includes('caos') || name.includes('explosión') || name.includes('tnt')) return '💥';
             if (name.includes('encantamiento') || name.includes('magia') || name.includes('runa') || name.includes('clérigo') || desc.includes('encantar')) return '✨';
-            
+
             if (trait.type === 'debuff') return '⚠️';
             if (trait.type === 'ability') return '⚡';
             return '✨';
@@ -560,12 +580,23 @@
             }
         }
 
-        // Window resize centering update
+        // ── Sliding Filter Indicator ──
+        function updateFilterSlider(activeBtn) {
+            const slider = document.getElementById('filter-slider');
+            if (slider && activeBtn) {
+                slider.style.left = `${activeBtn.offsetLeft}px`;
+                slider.style.width = `${activeBtn.offsetWidth}px`;
+            }
+        }
+
+        // Window resize centering & slider update
         window.addEventListener('resize', () => {
             const overlay = document.getElementById('immersive-overlay');
             if (overlay && !overlay.hidden) {
                 positionTrack();
             }
+            const activeBtn = document.querySelector('.filter-btn.active');
+            if (activeBtn) updateFilterSlider(activeBtn);
         });
 
         // ── Keyboard listeners ──
@@ -602,11 +633,18 @@
                 } else {
                     renderClasses(currentImpactFilter);
                 }
+                updateFilterSlider(btn);
             });
         });
 
         // ── Boot ──
         renderRaces('all');
+        
+        // Initialize slider position
+        setTimeout(() => {
+            const activeBtn = document.querySelector('.filter-btn.active');
+            if (activeBtn) updateFilterSlider(activeBtn);
+        }, 100);
     </script>
 
 </body>

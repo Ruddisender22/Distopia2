@@ -1879,6 +1879,38 @@ body {
   box-shadow: none !important;
 }
 
+/* Individual button colors based on impact level */
+.filter-btn[data-impact="all"] {
+  color: #999999;
+}
+.filter-btn[data-impact="all"]:hover {
+  color: #bbbbbb;
+}
+.filter-btn[data-impact="none"] {
+  color: #4ade80;
+}
+.filter-btn[data-impact="none"]:hover {
+  color: #5ef585;
+}
+.filter-btn[data-impact="low"] {
+  color: #ffd700;
+}
+.filter-btn[data-impact="low"]:hover {
+  color: #ffed4e;
+}
+.filter-btn[data-impact="medium"] {
+  color: #ff6a00;
+}
+.filter-btn[data-impact="medium"]:hover {
+  color: #ff8c3a;
+}
+.filter-btn[data-impact="high"] {
+  color: #f87171;
+}
+.filter-btn[data-impact="high"]:hover {
+  color: #fb9090;
+}
+
 
 
 /* Origins placeholder (for classes) */
@@ -2778,112 +2810,48 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   padding-top: 9.5rem !important; /* Spacing below the fixed navbar */
 }
 
-/* ══ FUTURISTIC TECH CHANGELOG ══ */
-.tech-changelog {
-  position: fixed;
-  right: 2.5rem;
-  bottom: 2.5rem;
-  z-index: 100;
-  background: rgba(10, 5, 20, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--r-md);
-  backdrop-filter: var(--blur-sm);
-  -webkit-backdrop-filter: var(--blur-sm);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.04);
-  padding: 0.9rem 1.3rem;
-  max-width: 330px;
-  width: calc(100vw - 5rem);
-  color: #ffffff;
-  font-family: 'Inter', system-ui, sans-serif;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+/* Slider dynamic colors based on active impact */
+.origins-filter-bar[data-active-impact="all"] .filter-slider {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.06);
+}
+.origins-filter-bar[data-active-impact="all"] .filter-btn.active {
+  color: #ffffff !important;
 }
 
-.changelog-toggle {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-family: var(--font-head);
-  font-size: 0.82rem;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  width: 100%;
-  text-align: left;
-  padding: 0;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transition: color 0.3s;
+.origins-filter-bar[data-active-impact="none"] .filter-slider {
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.45);
+  box-shadow: 0 0 15px rgba(74, 222, 128, 0.15);
+}
+.origins-filter-bar[data-active-impact="none"] .filter-btn.active {
+  color: #4ade80 !important;
 }
 
-.changelog-toggle:hover {
-  color: var(--violet);
+.origins-filter-bar[data-active-impact="low"] .filter-slider {
+  background: rgba(255, 204, 0, 0.12);
+  border-color: rgba(255, 204, 0, 0.45);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.15);
+}
+.origins-filter-bar[data-active-impact="low"] .filter-btn.active {
+  color: #ffcc00 !important;
 }
 
-.changelog-toggle .toggle-icon {
-  font-size: 0.7rem;
-  transition: transform 0.3s ease;
-  display: inline-block;
+.origins-filter-bar[data-active-impact="medium"] .filter-slider {
+  background: rgba(255, 106, 0, 0.12);
+  border-color: rgba(255, 106, 0, 0.45);
+  box-shadow: 0 0 15px rgba(255, 106, 0, 0.15);
+}
+.origins-filter-bar[data-active-impact="medium"] .filter-btn.active {
+  color: #ff6a00 !important;
 }
 
-.tech-changelog.open .changelog-toggle .toggle-icon {
-  transform: rotate(90deg);
+.origins-filter-bar[data-active-impact="high"] .filter-slider {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.45);
+  box-shadow: 0 0 15px rgba(248, 113, 113, 0.15);
 }
-
-.changelog-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.tech-changelog.open .changelog-content {
-  max-height: 400px;
-  margin-top: 0.2rem;
-}
-
-.changelog-line {
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  margin: 0.4rem 0 0.7rem;
-  user-select: none;
-  font-family: monospace;
-}
-
-.changelog-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.changelog-list li {
-  font-size: 0.85rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.82);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.55rem;
-}
-
-.changelog-list li span {
-  color: var(--violet);
-  font-size: 0.75rem;
-  margin-top: 0.15rem;
-}
-
-/* responsive changelog layout */
-@media (max-width: 768px) {
-  .tech-changelog {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin: 2.5rem auto 0;
-    max-width: 500px;
-    width: 100%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  }
+.origins-filter-bar[data-active-impact="high"] .filter-btn.active {
+  color: #f87171 !important;
 }

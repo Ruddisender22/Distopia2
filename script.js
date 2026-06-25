@@ -1101,6 +1101,152 @@ function escapeHtml(s){
 }
 
 // ══════════════════════════════════════════════════════════════
+//  ORIGINS: RAZAS & CLASES
+// ══════════════════════════════════════════════════════════════
+function switchOriginsTab(tab) {
+  const razasContainer = document.getElementById("origins-razas");
+  const clasesContainer = document.getElementById("origins-clases");
+  const tabRazas = document.getElementById("tab-razas");
+  const tabClases = document.getElementById("tab-clases");
+  
+  if (tab === 'razas') {
+    if (razasContainer) razasContainer.hidden = false;
+    if (clasesContainer) clasesContainer.hidden = true;
+    if (tabRazas) tabRazas.classList.add("active");
+    if (tabClases) tabClases.classList.remove("active");
+    renderRazas();
+  } else if (tab === 'clases') {
+    if (razasContainer) razasContainer.hidden = true;
+    if (clasesContainer) clasesContainer.hidden = false;
+    if (tabRazas) tabRazas.classList.remove("active");
+    if (tabClases) tabClases.classList.add("active");
+    renderClases();
+  }
+}
+
+function renderRazas() {
+  const container = document.getElementById("origins-razas");
+  if (!container) return;
+  container.innerHTML = "";
+  
+  if (typeof RACES_DATA === "undefined" || !RACES_DATA) return;
+  
+  const filterBar = document.getElementById("origins-filter-bar");
+  const activeImpact = filterBar?.getAttribute("data-active-impact") || "all";
+  
+  RACES_DATA.forEach(race => {
+    if (activeImpact !== "all" && race.impact !== activeImpact) return;
+    const article = document.createElement("article");
+    article.className = "origins-card";
+    article.onclick = () => openOriginsDetail(race, "race");
+    
+    const impactText = race.impact === "none" ? "Ninguno" : 
+                       race.impact === "low" ? "Bajo" :
+                       race.impact === "medium" ? "Medio" :
+                       race.impact === "high" ? "Alto" : "Desconocido";
+    
+    article.innerHTML = `
+      <div class="origins-card-head">
+        <div class="origins-emoji">${race.emoji || "🌍"}</div>
+        <div class="origins-info">
+          <h2 class="origins-name">${escapeHtml(race.name)}</h2>
+          <div class="origins-impact">Impacto: ${impactText}</div>
+        </div>
+      </div>
+      <p class="origins-description">${escapeHtml(race.description)}</p>
+    `;
+    container.appendChild(article);
+  });
+}
+
+function renderClases() {
+  const container = document.getElementById("origins-clases");
+  if (!container) return;
+  container.innerHTML = "";
+  
+  if (typeof CLASSES_DATA === "undefined" || !CLASSES_DATA) return;
+  
+  const filterBar = document.getElementById("origins-filter-bar");
+  const activeImpact = filterBar?.getAttribute("data-active-impact") || "all";
+  
+  CLASSES_DATA.forEach(cls => {
+    if (activeImpact !== "all" && cls.impact !== activeImpact) return;
+    const article = document.createElement("article");
+    article.className = "origins-card";
+    article.onclick = () => openOriginsDetail(cls, "class");
+    
+    const impactText = cls.impact === "none" ? "Ninguno" : 
+                       cls.impact === "low" ? "Bajo" :
+                       cls.impact === "medium" ? "Medio" :
+                       cls.impact === "high" ? "Alto" : "Desconocido";
+    
+    article.innerHTML = `
+      <div class="origins-card-head">
+        <div class="origins-emoji">${cls.emoji || "⚔️"}</div>
+        <div class="origins-info">
+          <h2 class="origins-name">${escapeHtml(cls.name)}</h2>
+          <div class="origins-impact">Impacto: ${impactText}</div>
+        </div>
+      </div>
+      <p class="origins-description">${escapeHtml(cls.description)}</p>
+    `;
+    container.appendChild(article);
+  });
+}
+
+function initOriginsFilter() {
+  const filterBar = document.getElementById("origins-filter-bar");
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const filterSlider = document.getElementById("filter-slider");
+  
+  if (!filterBar || filterButtons.length === 0) return;
+  
+  filterButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      const impact = btn.getAttribute("data-impact");
+      filterBar.setAttribute("data-active-impact", impact);
+      
+      // Update slider position
+      const rect = btn.getBoundingClientRect();
+      const barRect = filterBar.getBoundingClientRect();
+      if (filterSlider) {
+        filterSlider.style.width = (rect.width - 8) + "px";
+        filterSlider.style.left = (rect.left - barRect.left + 4) + "px";
+      }
+      
+      // Update active state
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      
+      // Re-render current tab
+      const tabRazas = document.getElementById("tab-razas");
+      const tabClases = document.getElementById("tab-clases");
+      if (tabRazas?.classList.contains("active")) {
+        renderRazas();
+      } else if (tabClases?.classList.contains("active")) {
+        renderClases();
+      }
+    });
+  });
+  
+  // Set initial slider position
+  const activeBtn = filterButtons[0];
+  if (activeBtn) {
+    const rect = activeBtn.getBoundingClientRect();
+    const barRect = filterBar.getBoundingClientRect();
+    if (filterSlider) {
+      filterSlider.style.width = (rect.width - 8) + "px";
+      filterSlider.style.left = (rect.left - barRect.left + 4) + "px";
+    }
+  }
+}
+
+function openOriginsDetail(item, type) {
+  // TODO: Implement detail view for races and classes
+  console.log("Opening detail for", type, item);
+}
+
+// ══════════════════════════════════════════════════════════════
 //  SEARCH, FILTER & SORT
 // ══════════════════════════════════════════════════════════════
 function initSearchAndFilter() {
@@ -1254,4 +1400,14 @@ function initSwipeGestures() {
 // ── Boot ──────────────────────────────────────────────────────
 initSearchAndFilter();
 initSwipeGestures();
+initOriginsFilter();
 init();
+// Initialize origins page if on origins.html
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("origins-razas")) {
+    renderRazas();
+  }
+  if (document.getElementById("origins-clases")) {
+    renderClases();
+  }
+});

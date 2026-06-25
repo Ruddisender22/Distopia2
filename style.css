@@ -1907,6 +1907,7 @@ body {
 
 
 
+
 /* ══════════════════════════════════════════════════════════════
    NEW PORTAL LAYOUT, NAVBAR, AND TRANSITIONS
    ══════════════════════════════════════════════════════════════ */
@@ -1921,8 +1922,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  background: rgba(8, 4, 16, 0.85);
+  padding: 0 3rem;
+  background: rgba(8, 4, 16, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1965,15 +1966,15 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 2.5rem; /* Increased spacing as requested */
 }
 
 .nav-link {
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--t3);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   transition: color 0.25s ease, text-shadow 0.25s ease;
   position: relative;
   padding: 0.5rem 0;
@@ -2026,11 +2027,53 @@ body {
   padding-top: 8rem; /* space for fixed navbar */
 }
 
+/* Fix voting page header logo size (was giant, now normal 90px inline) */
+#voting-header .header-logo {
+  height: 90px !important;
+  width: auto !important;
+  filter: drop-shadow(0 0 15px rgba(255,204,0,0.3));
+}
+
+/* Align footer elements (left, center, right grid layout on desktop) */
+.site-footer {
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid var(--border);
+  padding: 2rem 3rem;
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: stretch;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.footer-links {
+  text-align: center;
+  margin: 0;
+}
+
+.footer-credit {
+  text-align: right;
+  margin: 0;
+  font-size: 0.88rem;
+}
+
 /* ══ PAGE TRANSITIONS / ANIMATIONS ══ */
 @keyframes pageReveal {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -2172,6 +2215,14 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   flex-direction: column;
   justify-content: flex-start;
   cursor: pointer;
+  transform: translateY(30px) scale(0.96);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s, border-color 0.3s !important;
+}
+
+.race-card.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .race-description {
@@ -2183,20 +2234,23 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   margin-bottom: 0;
 }
 
-/* ══ IMMERSIVE DETAIL VIEW ══ */
+/* ══ IMMERSIVE DETAIL CAROUSEL VIEW ══ */
 .immersive-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(4, 2, 8, 0.9);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(4, 2, 8, 0.94);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1500;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  outline: none;
 }
 
 .immersive-overlay:not([hidden]) {
@@ -2204,135 +2258,123 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   pointer-events: auto;
 }
 
-.immersive-sheet {
-  position: relative;
-  background: linear-gradient(145deg, rgba(20, 10, 30, 0.65) 0%, rgba(5, 2, 10, 0.98) 100%);
-  border: 1px solid rgba(255, 204, 0, 0.2);
-  border-radius: var(--r-xl);
-  width: 90%;
-  max-width: 800px;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 4rem 2.5rem;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 204, 0, 0.05);
-  animation: immersiveScaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  overflow-y: auto;
-  outline: none;
-}
-
-@keyframes immersiveScaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96) translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
 .immersive-close {
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   right: 1.5rem;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
   color: var(--t3);
-  font-size: 2rem;
+  font-size: 1.6rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
-  transition: color 0.2s, transform 0.2s;
-  z-index: 10;
+  transition: all 0.25s;
+  z-index: 1600;
 }
 
 .immersive-close:hover {
   color: var(--violet);
-  transform: rotate(90deg);
+  background: rgba(255, 204, 0, 0.1);
+  border-color: rgba(255, 204, 0, 0.35);
+  transform: rotate(90deg) scale(1.05);
 }
 
-.immersive-desktop-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
-  color: var(--t2);
+.immersive-carousel-wrapper {
+  position: relative;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  z-index: 5;
+  height: 80vh;
 }
 
-.immersive-desktop-nav.prev { left: 1rem; }
-.immersive-desktop-nav.next { right: 1rem; }
-
-.immersive-desktop-nav:hover {
-  background: rgba(255, 204, 0, 0.1);
-  border-color: rgba(255, 204, 0, 0.4);
-  color: var(--violet);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.25);
-  transform: translateY(-50%) scale(1.05);
-}
-
-.immersive-mobile-nav {
-  display: none;
+.immersive-track-viewport {
   width: 100%;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.25rem;
-}
-
-.immersive-nav-btn {
-  flex: 1;
-  display: inline-flex;
+  height: 100%;
+  overflow: visible;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--r-md);
-  color: var(--t2);
-  font-family: var(--font-head);
-  font-size: 0.82rem;
-  font-weight: 700;
+  position: relative;
+  pointer-events: none;
+}
+
+.immersive-track {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+}
+
+/* Individual slides in track */
+.immersive-slide {
+  flex-shrink: 0;
+  width: 1050px;
+  max-width: 85vw;
+  opacity: 0.12;
+  transform: scale(0.8);
+  filter: blur(5px);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
-  transition: all 0.2s;
 }
 
-.immersive-nav-btn:hover {
-  background: rgba(255, 204, 0, 0.08);
-  border-color: rgba(255, 204, 0, 0.35);
-  color: var(--violet);
+/* Active centered slide rules */
+.immersive-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
+  cursor: default;
 }
 
-/* Immersive Content Details */
-.immersive-content {
+/* Peeking side slides rules */
+.immersive-slide.prev-slide, .immersive-slide.next-slide {
+  opacity: 0.35;
+  transform: scale(0.82);
+  filter: blur(3px);
+}
+
+.immersive-slide.prev-slide:hover, .immersive-slide.next-slide:hover {
+  opacity: 0.6;
+  filter: blur(1px);
+}
+
+/* Card inner visual styling */
+.immersive-slide-inner {
+  display: flex;
+  gap: 3.5rem;
+  padding: 3.5rem;
+  background: linear-gradient(145deg, rgba(22, 11, 33, 0.6) 0%, rgba(6, 2, 12, 0.96) 100%);
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  border-radius: var(--r-xl);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85), 0 0 50px rgba(255, 204, 0, 0.04);
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.immersive-info-side {
+  width: 320px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
 }
 
 .immersive-big-icon {
-  font-size: 5rem;
+  font-size: 5.5rem;
   margin-bottom: 1.25rem;
-  filter: drop-shadow(0 0 25px rgba(255, 204, 0, 0.3));
+  filter: drop-shadow(0 0 25px rgba(255, 204, 0, 0.35));
   animation: floatEmoji 3s ease-in-out infinite;
-}
-
-@keyframes floatEmoji {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
 }
 
 .immersive-title {
@@ -2353,18 +2395,17 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 }
 
 .immersive-desc {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: var(--t2);
-  max-width: 60ch;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
-.immersive-traits-section {
-  width: 100%;
-  text-align: left;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.5rem;
+/* Traits side as a clean grid */
+.immersive-traits-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .immersive-traits-title {
@@ -2375,30 +2416,130 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   margin-bottom: 1.25rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.5rem;
 }
 
-/* Scrollbar styles for sheet */
-.immersive-sheet::-webkit-scrollbar {
+.immersive-traits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.immersive-traits-grid .trait-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--r-md);
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.immersive-traits-grid .trait-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.immersive-traits-grid .trait-content strong {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--t1);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.immersive-traits-grid .trait-content p {
+  font-size: 0.8rem;
+  color: var(--t3);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Nav arrows outside the card */
+.immersive-desktop-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: var(--t2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10;
+}
+
+.immersive-desktop-nav.prev { left: 4rem; }
+.immersive-desktop-nav.next { right: 4rem; }
+
+.immersive-desktop-nav:hover {
+  background: rgba(255, 204, 0, 0.12);
+  border-color: rgba(255, 204, 0, 0.5);
+  color: var(--violet);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.immersive-mobile-nav {
+  display: none;
+}
+
+/* Scrollbar styling for traits panel */
+.immersive-slide-inner::-webkit-scrollbar {
   width: 6px;
 }
-.immersive-sheet::-webkit-scrollbar-track {
+.immersive-slide-inner::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
 }
-.immersive-sheet::-webkit-scrollbar-thumb {
+.immersive-slide-inner::-webkit-scrollbar-thumb {
   background: rgba(255, 204, 0, 0.2);
   border-radius: 3px;
 }
-.immersive-sheet::-webkit-scrollbar-thumb:hover {
+.immersive-slide-inner::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 204, 0, 0.4);
 }
 
 /* Responsive Navbar overrides */
+@media (max-width: 1200px) {
+  .immersive-slide {
+    width: 900px;
+  }
+}
+
 @media (max-width: 1024px) {
   .site-navbar {
     padding: 0 1.5rem;
   }
   .nav-links {
-    gap: 1.25rem;
+    gap: 1.5rem;
+  }
+  .immersive-slide {
+    width: 780px;
+  }
+  .immersive-desktop-nav.prev { left: 2rem; }
+  .immersive-desktop-nav.next { right: 2rem; }
+}
+
+@media (max-width: 900px) {
+  .immersive-slide {
+    width: 650px;
+  }
+  .immersive-slide-inner {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+  .immersive-info-side {
+    width: 100%;
   }
 }
 
@@ -2431,14 +2572,53 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   .origins-header, .site-header {
     padding-top: 170px;
   }
+  
+  /* Footer mobile centering */
+  .footer-inner {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .footer-brand, .footer-links, .footer-credit {
+    text-align: center;
+  }
+  
   .immersive-desktop-nav {
     display: none;
   }
   .immersive-mobile-nav {
     display: flex;
+    width: 100%;
+    max-width: 90vw;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
-  .immersive-sheet {
-    padding: 2.5rem 2rem 2rem;
+  .immersive-slide {
+    width: 90vw;
+    max-width: 90vw;
+    opacity: 1;
+    transform: none !important;
+    filter: none !important;
+  }
+  .immersive-track {
+    gap: 1rem;
+    position: relative;
+    transform: none !important;
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+    width: 100%;
+    align-items: center;
+  }
+  .immersive-slide:not(.active) {
+    display: none;
+  }
+  .immersive-track-viewport {
+    height: auto;
   }
 }
 
@@ -2452,7 +2632,7 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   .landing-description {
     font-size: 0.95rem;
   }
-  .immersive-sheet {
+  .immersive-slide-inner {
     padding: 2rem 1.25rem;
   }
 }

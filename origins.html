@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=22">
+    <link rel="stylesheet" href="style.css?v=23">
     <script src="races_data.js"></script>
     <script src="classes_data.js"></script>
 </head>
@@ -418,6 +418,34 @@
             positionTrack();
         }
 
+        // Helper to resolve appropriate emojis for traits if they default to sparkle
+        function getTraitIcon(trait) {
+            if (trait.icon && trait.icon !== '✨') return trait.icon;
+            
+            const name = trait.name.toLowerCase();
+            const desc = trait.desc.toLowerCase();
+            
+            if (name.includes('vida') || name.includes('salud') || name.includes('corazón') || desc.includes('vida') || desc.includes('corazón')) return '❤️';
+            if (name.includes('armadura') || name.includes('defensa') || name.includes('resistencia') || desc.includes('daño recibido') || desc.includes('blindaje')) return '🛡️';
+            if (name.includes('fuerza') || name.includes('daño') || name.includes('ataque') || name.includes('combate') || desc.includes('daño de ataque') || name.includes('espada') || name.includes('golpe')) return '⚔️';
+            if (name.includes('velocidad') || name.includes('rápido') || name.includes('movimiento') || name.includes('pies') || desc.includes('velocidad') || name.includes('ligero')) return '⚡';
+            if (name.includes('salto') || name.includes('gravedad') || name.includes('caída') || desc.includes('saltar')) return '🦘';
+            if (name.includes('fuego') || name.includes('quemadura') || name.includes('lava') || name.includes('calor') || desc.includes('fuego')) return '🔥';
+            if (name.includes('agua') || name.includes('nadar') || name.includes('respiración') || name.includes('mar') || name.includes('abisal') || desc.includes('agua')) return '💧';
+            if (name.includes('veneno') || name.includes('toxina') || name.includes('pocion') || name.includes('alquimia') || desc.includes('efecto de poción')) return '🧪';
+            if (name.includes('oro') || name.includes('moneda') || name.includes('riqueza') || name.includes('comerciar') || desc.includes('esmeralda') || desc.includes('barato')) return '🪙';
+            if (name.includes('arco') || name.includes('flecha') || name.includes('distancia') || name.includes('proyectil') || name.includes('tirador')) return '🏹';
+            if (name.includes('noche') || name.includes('oscuridad') || name.includes('visión') || name.includes('sombra') || desc.includes('poca luz')) return '👁️';
+            if (name.includes('mina') || name.includes('pico') || name.includes('romper') || name.includes('excavar') || desc.includes('picar') || name.includes('herrero')) return '⛏️';
+            if (name.includes('comida') || name.includes('hambre') || name.includes('voraz') || name.includes('comer') || desc.includes('saturación')) return '🍖';
+            if (name.includes('caos') || name.includes('explosión') || name.includes('tnt')) return '💥';
+            if (name.includes('encantamiento') || name.includes('magia') || name.includes('runa') || name.includes('clérigo') || desc.includes('encantar')) return '✨';
+            
+            if (trait.type === 'debuff') return '⚠️';
+            if (trait.type === 'ability') return '⚡';
+            return '✨';
+        }
+
         function renderImmersiveTrack() {
             const track = document.getElementById('immersive-track');
             if (!track) return;
@@ -460,9 +488,10 @@
                         }
 
                         const typeClass = trait.type || 'buff';
+                        const resolvedIcon = getTraitIcon(trait);
                         traitsHtml += `
                             <div class="trait-item ${typeClass}">
-                                <span class="trait-icon">${trait.icon || '✨'}</span>
+                                <span class="trait-icon">${resolvedIcon}</span>
                                 <div class="trait-content">
                                     <strong>${traitName}${kbdHtml}</strong>
                                     <p>${trait.desc}</p>
@@ -486,8 +515,11 @@
                         </div>
                         <div class="immersive-traits-side">
                             <h3 class="immersive-traits-title">${titleLabel}</h3>
-                            <div class="immersive-traits-grid">
-                                ${traitsHtml ? traitsHtml : '<p class="trait-empty">Sin características adicionales.</p>'}
+                            <div class="immersive-traits-scroll">
+                                <div class="immersive-traits-grid">
+                                    ${traitsHtml ? traitsHtml : '<p class="trait-empty">Sin características adicionales.</p>'}
+                                </div>
+                                <div class="immersive-traits-spacer" style="height: 3.5rem;"></div>
                             </div>
                         </div>
                     </div>

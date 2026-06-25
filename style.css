@@ -2357,8 +2357,48 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   border: 1px solid rgba(255, 204, 0, 0.2);
   border-radius: var(--r-xl);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85), 0 0 50px rgba(255, 204, 0, 0.04);
-  max-height: 75vh;
-  overflow-y: auto;
+  height: 600px;
+  max-height: 78vh;
+  overflow: hidden; /* Static name/desc sidebar, scroll traits separately */
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.immersive-slide.active .immersive-slide-inner {
+  border-color: rgba(255, 204, 0, 0.35);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85), 0 0 50px rgba(255, 204, 0, 0.12);
+}
+
+/* Premium Ornate Cyber Corners on Slide Inner */
+.immersive-slide-inner::before,
+.immersive-slide-inner::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: #ffcc00;
+  border-style: solid;
+  pointer-events: none;
+  z-index: 5;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.immersive-slide-inner::before {
+  top: -1px;
+  left: -1px;
+  border-width: 3px 0 0 3px;
+  border-top-left-radius: var(--r-xl);
+}
+.immersive-slide-inner::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 3px 3px 0;
+  border-bottom-right-radius: var(--r-xl);
+}
+.immersive-slide.active .immersive-slide-inner::before,
+.immersive-slide.active .immersive-slide-inner::after {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(255, 204, 0, 0.85));
 }
 
 .immersive-info-side {
@@ -2368,6 +2408,7 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center; /* Center content vertically for clean balance */
 }
 
 .immersive-big-icon {
@@ -2406,6 +2447,8 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   flex: 1;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .immersive-traits-title {
@@ -2420,6 +2463,31 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   padding-bottom: 0.5rem;
 }
 
+.immersive-traits-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 1.5rem; /* Moves scrollbar away from the border and content */
+  padding-bottom: 2rem;
+  margin-right: -0.5rem;
+}
+
+/* Scrollbar styling for traits panel */
+.immersive-traits-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.immersive-traits-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.immersive-traits-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 204, 0, 0.2);
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+.immersive-traits-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 204, 0, 0.45);
+}
+
 .immersive-traits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -2431,11 +2499,11 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--r-md);
-  padding: 0.85rem 1rem;
+  padding: 1rem 1.2rem;
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  transition: background 0.25s, border-color 0.25s;
+  gap: 0.85rem;
+  transition: all 0.25s ease;
 }
 
 .immersive-traits-grid .trait-item:hover {
@@ -2443,19 +2511,50 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Color Coding for Advantage, Disadvantage, and Ability */
+.immersive-traits-grid .trait-item.buff {
+  border-left: 3px solid rgba(74, 222, 128, 0.5) !important;
+  background: rgba(74, 222, 128, 0.03);
+}
+.immersive-traits-grid .trait-item.buff:hover {
+  border-left-color: rgba(74, 222, 128, 0.8) !important;
+  border-color: rgba(74, 222, 128, 0.2) rgba(74, 222, 128, 0.2) rgba(74, 222, 128, 0.2) rgba(74, 222, 128, 0.8) !important;
+  background: rgba(74, 222, 128, 0.06);
+}
+
+.immersive-traits-grid .trait-item.debuff {
+  border-left: 3px solid rgba(248, 113, 113, 0.5) !important;
+  background: rgba(248, 113, 113, 0.03);
+}
+.immersive-traits-grid .trait-item.debuff:hover {
+  border-left-color: rgba(248, 113, 113, 0.8) !important;
+  border-color: rgba(248, 113, 113, 0.2) rgba(248, 113, 113, 0.2) rgba(248, 113, 113, 0.2) rgba(248, 113, 113, 0.8) !important;
+  background: rgba(248, 113, 113, 0.06);
+}
+
+.immersive-traits-grid .trait-item.ability {
+  border-left: 3px solid rgba(255, 204, 0, 0.6) !important;
+  background: rgba(255, 204, 0, 0.04);
+}
+.immersive-traits-grid .trait-item.ability:hover {
+  border-left-color: rgba(255, 204, 0, 0.95) !important;
+  border-color: rgba(255, 204, 0, 0.25) rgba(255, 204, 0, 0.25) rgba(255, 204, 0, 0.25) rgba(255, 204, 0, 0.95) !important;
+  background: rgba(255, 204, 0, 0.08);
+}
+
 .immersive-traits-grid .trait-content strong {
   font-family: var(--font-head);
-  font-size: 0.85rem;
+  font-size: 1.05rem; /* Larger font size */
   font-weight: 700;
   color: var(--t1);
   display: block;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.25rem;
 }
 
 .immersive-traits-grid .trait-content p {
-  font-size: 0.8rem;
-  color: var(--t3);
-  line-height: 1.5;
+  font-size: 0.92rem; /* Larger font size */
+  color: #ffffff; /* Brighter white color for readability */
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -2537,9 +2636,21 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
     flex-direction: column;
     gap: 2rem;
     padding: 2.5rem;
+    height: auto !important;
+    max-height: 75vh !important;
+    overflow-y: auto !important;
   }
   .immersive-info-side {
-    width: 100%;
+    width: 100% !important;
+  }
+  .immersive-traits-side {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .immersive-traits-scroll {
+    overflow-y: visible !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
   }
 }
 

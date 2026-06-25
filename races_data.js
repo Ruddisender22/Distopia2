@@ -1344,7 +1344,7 @@ const RACES_DATA = [
   },
   {
     "name": "Golem (Golem)",
-    "emoji": "🗿",
+    "emoji": "🪨",
     "impact": "high",
     "description": "Una fortaleza andante de hierro y voluntad. Casi inamovible, pero lento y altamente vulnerable al calor.",
     "traits": [
@@ -2225,7 +2225,7 @@ const RACES_DATA = [
   },
   {
     "name": "Nacido del Sculk (Sculkborn)",
-    "emoji": "👁️‍🗨️",
+    "emoji": "👾",
     "impact": "high",
     "description": "Un ser de la oscuridad profunda. Está acorazado, es resistente y posee poder sónico, pero es lento, frágil bajo el sol y se debilita en la superficie.",
     "traits": [

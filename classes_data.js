@@ -1,7 +1,7 @@
 const CLASSES_DATA = [
   {
     "name": "Nini",
-    "emoji": "🛡️",
+    "emoji": "🤷",
     "impact": "none",
     "description": "No destaca en nada en particular. A veces, el camino más simple es el correcto.",
     "traits": []
@@ -66,7 +66,7 @@ const CLASSES_DATA = [
         "name": "Vínculo empático",
         "desc": "Los efectos de poción que recibes se comparten con tus animales domados cercanos.",
         "type": "buff",
-        "icon": "🦁",
+        "icon": "🐾",
         "key": null
       },
       {
@@ -80,7 +80,7 @@ const CLASSES_DATA = [
   },
   {
     "name": "Berserker",
-    "emoji": "😡",
+    "emoji": "🪓",
     "impact": "none",
     "description": "Un luchador frenético que sacrifica su barra de hambre a cambio de un poder bruto devastador.",
     "traits": [
@@ -166,7 +166,7 @@ const CLASSES_DATA = [
   },
   {
     "name": "Clérigo (Cleric)",
-    "emoji": "🛐",
+    "emoji": "✨",
     "impact": "none",
     "description": "Un erudito sagrado con habilidades de encantamiento mejoradas y pociones de mayor duración.",
     "traits": [
@@ -632,7 +632,7 @@ const CLASSES_DATA = [
   },
   {
     "name": "Centinela (Sentinel)",
-    "emoji": "💂",
+    "emoji": "🛡️",
     "impact": "none",
     "description": "Un especialista defensivo con armadura natural, espinas y paso inamovible.",
     "traits": [
@@ -746,7 +746,7 @@ const CLASSES_DATA = [
   },
   {
     "name": "Titán (Titan)",
-    "emoji": "🗿",
+    "emoji": "💪",
     "impact": "none",
     "description": "Un bruto imponente con salud adicional, mayor alcance y una estatura majestuosa.",
     "traits": [

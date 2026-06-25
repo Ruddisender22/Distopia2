@@ -1405,9 +1405,18 @@ init();
 // Initialize origins page if on origins.html
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("origins-razas")) {
-    renderRazas();
+    // Prefer new render function names if present, fall back to old ones if available
+    if (typeof renderRaces === 'function') {
+      try { renderRaces('all'); } catch (e) { console.warn('renderRaces failed', e); }
+    } else if (typeof renderRazas === 'function') {
+      try { renderRazas(); } catch (e) { console.warn('renderRazas failed', e); }
+    }
   }
   if (document.getElementById("origins-clases")) {
-    renderClases();
+    if (typeof renderClasses === 'function') {
+      try { renderClasses('all'); } catch (e) { console.warn('renderClasses failed', e); }
+    } else if (typeof renderClases === 'function') {
+      try { renderClases(); } catch (e) { console.warn('renderClases failed', e); }
+    }
   }
 });

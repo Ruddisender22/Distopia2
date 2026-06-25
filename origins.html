@@ -17,25 +17,7 @@
     <link rel="stylesheet" href="style.css?v=25">
     <script src="races_data.js"></script>
     <script src="classes_data.js"></script>
-    <script>
-        // Synchronous fallback loader: ensure RACES_DATA is defined before other scripts run
-        (function() {
-            try {
-                if (typeof window.RACES_DATA === 'undefined') {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('GET', '/races_data.js', false); // synchronous
-                    xhr.send(null);
-                    if (xhr.status >= 200 && xhr.status < 300) {
-                        var script = document.createElement('script');
-                        script.text = xhr.responseText;
-                        document.head.appendChild(script);
-                    }
-                }
-            } catch (e) {
-                console.warn('sync races_data loader failed', e);
-            }
-        })();
-    </script>
+    <!-- Simplified: rely on normal script loading for `races_data.js` and `classes_data.js`. -->
 </head>
 
 <body>
@@ -683,52 +665,41 @@
             });
         });
 
-        // ── Boot ──
-        function ensureAndRenderRaces(filter) {
-            if (typeof RACES_DATA === 'undefined') {
-                // Fetch the file and inject its text as a script so it executes reliably
-                fetch('/races_data.js').then(r => r.text()).then(text => {
-                    try {
-                        const s = document.createElement('script');
-                        s.textContent = text;
-                        document.head.appendChild(s);
-                    } catch (e) {
-                        console.error('script injection failed', e);
-                    }
-                    // Give the injected script a moment to execute
-                    setTimeout(() => renderRaces(filter), 20);
-                }).catch(err => {
-                    console.error('Failed to load races_data.js via fetch', err);
-                    renderRaces(filter);
-                });
-            } else {
-                renderRaces(filter);
-            }
-        }
-
-        // Ensure default on load: Razas + Todos
-        ensureAndRenderRaces('all');
-        setTimeout(() => {
-            try {
-                // Force tab and filter defaults
-                const btnTodos = document.querySelector('.origins-filter-bar .filter-btn[data-impact="all"]');
-                document.getElementById('tab-razas')?.classList.add('active');
-                document.getElementById('tab-clases')?.classList.remove('active');
-                document.getElementById('origins-razas')?.removeAttribute('hidden');
-                document.getElementById('origins-clases')?.setAttribute('hidden', '');
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                if (btnTodos) {
-                    btnTodos.classList.add('active');
-                    updateFilterSlider(btnTodos);
+        // ── Boot (simplified) ──
+        document.addEventListener('DOMContentLoaded', () => {
+            const boot = () => {
+                if (typeof window.RACES_DATA !== 'undefined') {
+                    renderRaces('all');
+                } else {
+                    // If the data script hasn't executed yet, wait for full load
+                    window.addEventListener('load', () => {
+                        if (typeof window.RACES_DATA !== 'undefined') renderRaces('all');
+                    }, { once: true });
                 }
-            } catch (e) { console.warn('default tab setup failed', e); }
-        }, 120);
-        
-        // Initialize slider position
-        setTimeout(() => {
-            const activeBtn = document.querySelector('.filter-btn.active');
-            if (activeBtn) updateFilterSlider(activeBtn);
-        }, 100);
+
+                // Force tab and filter defaults: Razas + Todos
+                try {
+                    const btnTodos = document.querySelector('.origins-filter-bar .filter-btn[data-impact="all"]');
+                    document.getElementById('tab-razas')?.classList.add('active');
+                    document.getElementById('tab-clases')?.classList.remove('active');
+                    document.getElementById('origins-razas')?.removeAttribute('hidden');
+                    document.getElementById('origins-clases')?.setAttribute('hidden', '');
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    if (btnTodos) {
+                        btnTodos.classList.add('active');
+                        updateFilterSlider(btnTodos);
+                    }
+                } catch (e) { console.warn('default tab setup failed', e); }
+
+                // Initialize slider position
+                setTimeout(() => {
+                    const activeBtn = document.querySelector('.filter-btn.active');
+                    if (activeBtn) updateFilterSlider(activeBtn);
+                }, 100);
+            };
+
+            boot();
+        });
     </script>
 
 </body>

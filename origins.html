@@ -362,6 +362,15 @@
             });
 
             initScrollReveal();
+
+            // Ensure cards are visible even if IntersectionObserver doesn't fire
+            setTimeout(() => {
+                const anyRevealedNow = document.querySelector('.race-card.revealed');
+                if (!anyRevealedNow) {
+                    const all = document.querySelectorAll('.race-card');
+                    all.forEach((c, i) => setTimeout(() => c.classList.add('revealed'), i * 18));
+                }
+            }, 220);
         }
 
         const classesGrid = document.getElementById('origins-clases');
@@ -417,7 +426,16 @@
                 classesGrid.appendChild(card);
             });
 
-            initScrollReveal();
+                initScrollReveal();
+
+                // Ensure cards are visible even if IntersectionObserver doesn't fire
+                setTimeout(() => {
+                    const anyRevealedNow = document.querySelector('.race-card.revealed');
+                    if (!anyRevealedNow) {
+                        const all = document.querySelectorAll('.race-card');
+                        all.forEach((c, i) => setTimeout(() => c.classList.add('revealed'), i * 18));
+                    }
+                }, 220);
         }
 
         // ── Immersive Detail View ──

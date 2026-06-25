@@ -287,29 +287,40 @@ async function init() {
 }
 
 // ══════════════════════════════════════════════════════════════
-//  NAVIGATION — Tab switching
+//  NAVIGATION — Tab switching (Landing ↔ Voting)
 // ══════════════════════════════════════════════════════════════
 function switchTab(tab) {
-  const votPage = document.getElementById('app');
-  const srvPage = document.getElementById('servidor-page');
-  const votTab  = document.getElementById('tab-votaciones');
-  const srvTab  = document.getElementById('tab-servidor');
-  const title   = document.querySelector('.header-title');
+  const landingHero    = document.getElementById('landing-hero');
+  const landingNav     = document.getElementById('landing-nav');
+  const landingSections = document.querySelectorAll('.landing-section');
+  const votingSection  = document.getElementById('voting-section');
 
   if (tab === 'votaciones') {
-    votPage?.removeAttribute('hidden');
-    srvPage?.setAttribute('hidden','');
-    votTab?.classList.add('active');
-    srvTab?.classList.remove('active');
-    if (title) title.textContent = 'Votaciones';
+    // Hide landing content
+    landingHero?.setAttribute('hidden','');
+    landingNav?.setAttribute('hidden','');
+    landingSections.forEach(s => s.setAttribute('hidden',''));
+    // Show voting section
+    votingSection?.removeAttribute('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
-    votPage?.setAttribute('hidden','');
-    srvPage?.removeAttribute('hidden');
-    votTab?.classList.remove('active');
-    srvTab?.classList.add('active');
-    if (title) title.textContent = 'El Servidor';
+    // Show landing content
+    landingHero?.removeAttribute('hidden');
+    landingNav?.removeAttribute('hidden');
+    landingSections.forEach(s => s.removeAttribute('hidden'));
+    // Hide voting section
+    votingSection?.setAttribute('hidden','');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 
 // ── Aggregate votes ─────────────────────────────────────────────
 async function fetchAggregateVotes() {

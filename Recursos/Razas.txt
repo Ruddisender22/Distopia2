@@ -1,0 +1,93 @@
+Razas:
+---
+Humano
+
+Impacto: Ninguno
+
+Descripción: Ser humano estándar. Sin poderes ni debilidades, conserva las mecánicas y estadísticas base del juego.
+
+---
+Abisal
+
+Impacto: Alto
+
+Descripción: Criatura marina rápida y resistente en el agua, capaz de invocar guardianes. Es lenta en tierra y se asfixia si pasa demasiado tiempo fuera del agua. Aparece en océanos.
+
+Poderes y características:
+
+Respiración branquial: Respira agua en lugar de aire y tiene visión submarina clara.
+
+Corriente profunda / Nadador natural: Movimiento mucho más rápido y eficiente bajo el agua.
+
+Visión profunda: Visión adaptada a la oscuridad absoluta.
+
+Espinas de presión: Devuelve el 30% del daño recibido a sus atacantes.
+
+Piel endurecida: +2 corazones de vida máxima.
+
+Adaptación acuática: Mina a velocidad normal bajo el agua.
+
+Tridente abisal: Apareces inicialmente con un tridente encantado (Reparación, Irrompibilidad III, Propulsión Acuática III).
+
+Comando abisal [V]: Invoca hasta 2 guardianes aliados para luchar. Cuesta 5 de Esencia. Recarga de 20 segundos. Si el guardián muere en combate, recibes 1 punto de daño.
+
+Piscívoro: Solo puede comer pescado.
+
+Adaptación cruda: El salmón y bacalao crudos alimentan lo mismo que sus versiones cocinadas.
+
+Caminante terrestre: Movimiento un 10% más lento en tierra firme.
+
+Desecación: La barra de oxígeno se consume fuera del agua, provocando asfixia al vaciarse.
+
+Esencia: Energía abisal utilizada para lanzar la habilidad de Comando.
+
+---
+
+Mago de Aire
+
+Impacto: Alto
+
+Descripción: Aeromante ágil que controla el viento para atacar y moverse. Es muy rápido y ligero, pero también muy frágil.
+
+Poderes y características:
+
+Carga de viento [V]: Dispara una ráfaga que empuja a los objetivos al impactar.
+
+Tornado [G]: Lanza un proyectil que crea un tornado. Atrae, levanta y hace girar a las entidades cercanas durante 4 segundos. Cuesta 4 de maná.
+
+Corriente ascendente [N]: Te impulsa hacia arriba sobre una columna de aire.
+
+Aterrizaje amortiguado: Inmunidad al daño por caída.
+
+Céfiro: Movimiento un 20% más rápido a pie.
+
+Caída lenta [B] (Alternable): Desciendes suavemente. Puedes desactivarlo con la misma tecla si necesitas caer rápido.
+
+Cuerpo frágil: -2 corazones de vida máxima.
+
+Peso ligero: Recibes un 50% más de empuje (knockback) de los ataques.
+
+Maná: Energía mágica necesaria para lanzar las habilidades.
+
+----
+
+Arácnido
+
+Impacto: Medio
+
+Descripción: Ágiles humanoides-araña capaces de escalar paredes, lanzar telarañas y atacar con colmillos venenosos.
+
+Poderes y características:
+
+Escalada de muros: Trepa cualquier superficie vertical. Presiona contra una pared para agarrarte, salta para subir y agáchate para mantenerte en el sitio. Inmunidad al daño por caída mientras estás agarrado.
+
+Caminante de telarañas: Te mueves por las telarañas sin ralentizarte y las rompes casi al instante.
+
+Artrópodo: Eres clasificado como artrópodo, por lo que recibes daño extra de armas con el encantamiento Perdición de los Artrópodos.
+
+Colmillo de araña: Tus ataques cuerpo a cuerpo inyectan veneno (Veneno I durante 3 segundos al objetivo).
+
+Disparo de telaraña [V]: Lanza un proyectil que coloca una telaraña al impactar, atrapando lo que toque. Cuesta 2 de energía.
+
+Energía: Recurso interno necesario para usar tus habilidades.
+

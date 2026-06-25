@@ -1,6 +1,6 @@
 const CLASSES_DATA = [
   {
-    "name": "Clases",
+    "name": "Nini",
     "emoji": "🛡️",
     "impact": "none",
     "description": "No destaca en nada en particular. A veces, el camino más simple es el correcto.",

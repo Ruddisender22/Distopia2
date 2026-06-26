@@ -3103,7 +3103,7 @@ window.RACES_DATA = [
     "name": "Mago de Agua (Water Mage)",
     "emoji": "💧",
     "impact": "high",
-    "description": "Un hechicero fluido que controla las mareas y las corrientes curativas. Se siente en casa bajo el océano, pero se debilita enormemente en los páramos áridos.",
+    "description": "Un hechicero que controla las mareas y las corrientes curativas. Se siente en casa bajo el océano, pero se debilita enormemente en los páramos áridos.",
     "traits": [
       {
         "name": "Maremoto [V]",

@@ -156,14 +156,14 @@ window.RACES_DATA = [
       {
         "name": "Cuerpo frágil",
         "desc": "-2 corazones de vida máxima.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
       {
         "name": "Peso ligero",
         "desc": "Recibes un 50% más de empuje (knockback) de los ataques.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🪶",
         "key": null
       },
@@ -185,7 +185,7 @@ window.RACES_DATA = [
       {
         "name": "Escalada de muros",
         "desc": "Trepa cualquier superficie vertical. Presiona contra una pared para agarrarte, salta para subir y agáchate para mantenerte en el sitio. Inmunidad al daño por caída mientras estás agarrado.",
-        "type": "buff",
+        "type": "ability",
         "icon": "🧗",
         "key": null
       },
@@ -235,7 +235,7 @@ window.RACES_DATA = [
       {
         "name": "Cuerpo frágil",
         "desc": "Tu salud máxima se reduce en 3 corazones.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
@@ -334,7 +334,7 @@ window.RACES_DATA = [
       {
         "name": "Articulaciones rígidas",
         "desc": "Su regeneración de salud natural funciona a un 25% de la velocidad normal.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🩹",
         "key": null
       },
@@ -611,7 +611,7 @@ window.RACES_DATA = [
       {
         "name": "Frenesí de hierro",
         "desc": "Comer hierro otorga Prisa minera I durante 60 segundos.",
-        "type": "ability",
+        "type": "buff",
         "icon": "🔥",
         "key": null
       },
@@ -625,7 +625,7 @@ window.RACES_DATA = [
       {
         "name": "Claridad de diamante",
         "desc": "Comer diamante otorga Suerte II durante 5 minutos, lo que a su vez activa la habilidad de \"Fortuna minera\".",
-        "type": "buff",
+        "type": "ability",
         "icon": "💎",
         "key": null
       },
@@ -646,7 +646,7 @@ window.RACES_DATA = [
       {
         "name": "Complexión compacta",
         "desc": "Su tamaño es un 85% del de un jugador normal, lo que facilita el paso por túneles estrechos.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "👶",
         "key": null
       }
@@ -710,7 +710,7 @@ window.RACES_DATA = [
       {
         "name": "Aura infernal",
         "desc": "La mayoría de las criaturas pasivas (ganado, aldeanos, fauna) huyen de tu presencia llameante.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "👹",
         "key": null
       },
@@ -760,7 +760,7 @@ window.RACES_DATA = [
       {
         "name": "Amortiguación alar",
         "desc": "Alas vestigiales que evitan el daño por caída.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🪶",
         "key": null
       },
@@ -788,7 +788,7 @@ window.RACES_DATA = [
       {
         "name": "Estatura imponente",
         "desc": "Tu tamaño es un 20% mayor que el de un jugador normal.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🐉",
         "key": null
       },
@@ -809,7 +809,7 @@ window.RACES_DATA = [
       {
         "name": "Apetito dracónico",
         "desc": "Consumes tu aguante (stamina) un 50% más rápido.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🍖",
         "key": null
       },
@@ -952,7 +952,7 @@ window.RACES_DATA = [
       {
         "name": "Vuelo natural",
         "desc": "Planea como si llevaras unas élitras sin necesidad del objeto. Pulsa saltar mientras caes para desplegar tus alas.",
-        "type": "buff",
+        "type": "ability",
         "icon": "🦋",
         "key": null
       },
@@ -987,7 +987,7 @@ window.RACES_DATA = [
       {
         "name": "Constitución frágil",
         "desc": "Tu salud máxima se reduce en 2 corazones.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
@@ -1016,7 +1016,7 @@ window.RACES_DATA = [
       {
         "name": "Paso del vacío",
         "desc": "50% de probabilidad de teletransportarte y evitar el daño al ser golpeado por un proyectil.",
-        "type": "ability",
+        "type": "buff",
         "icon": "🌌",
         "key": null
       },
@@ -1087,7 +1087,7 @@ window.RACES_DATA = [
       {
         "name": "Debilidad de Ender",
         "desc": "Recibes 2 puntos de daño por segundo al tocar el agua o bajo la lluvia.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "✨",
         "key": null
       },
@@ -1123,7 +1123,7 @@ window.RACES_DATA = [
       {
         "name": "Nueve vidas",
         "desc": "Siempre caes a salvo. Inmunidad total al daño por caída.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🥀",
         "key": null
       },
@@ -1251,7 +1251,7 @@ window.RACES_DATA = [
       {
         "name": "Sangre fría",
         "desc": "Obtienes fuerza mientras estés en biomas fríos de taiga.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "❄️",
         "key": null
       },
@@ -1450,7 +1450,7 @@ window.RACES_DATA = [
       {
         "name": "Masa imponente",
         "desc": "Eres un 15% más grande que un jugador normal.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🗿",
         "key": null
       },
@@ -1507,14 +1507,14 @@ window.RACES_DATA = [
       {
         "name": "Desligado",
         "desc": "Recibes un 75% más de empuje (knockback), tu gravedad debilitada hace que sea fácil lanzarte por los aires.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🪶",
         "key": null
       },
       {
         "name": "Frágil",
         "desc": "Infliges un 25% menos de daño cuerpo a cuerpo. Tu poder reside en la gravedad, no en los golpes físicos.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
@@ -1536,7 +1536,7 @@ window.RACES_DATA = [
       {
         "name": "Alas zumbadoras",
         "desc": "Planea como si llevaras unas élitras. Pulsa saltar mientras caes para despegar.",
-        "type": "buff",
+        "type": "ability",
         "icon": "✨",
         "key": null
       },
@@ -1571,14 +1571,14 @@ window.RACES_DATA = [
       {
         "name": "Artrópodo",
         "desc": "Eres vulnerable a las armas con el encantamiento Perdición de los Artrópodos.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🕷️",
         "key": null
       },
       {
         "name": "Alas frágiles",
         "desc": "Tu salud máxima se reduce en 3 corazones.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
@@ -1621,14 +1621,14 @@ window.RACES_DATA = [
       {
         "name": "Peso pluma",
         "desc": "Eres tan ligero que nunca recibes daño por caída.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🪶",
         "key": null
       },
       {
         "name": "Cuerpo frágil",
         "desc": "Tu salud máxima se reduce en 5 corazones.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
@@ -1642,7 +1642,7 @@ window.RACES_DATA = [
       {
         "name": "Apetito pequeño",
         "desc": "Tu barra de hambre se vacía a la mitad de velocidad que la de un jugador normal.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🥗",
         "key": null
       }
@@ -1671,7 +1671,7 @@ window.RACES_DATA = [
       {
         "name": "Mantenimiento de guardia",
         "desc": "Mantener la guardia activa consume aguante constantemente.",
-        "type": "debuff",
+        "type": "ability",
         "icon": "⏳",
         "key": null
       },
@@ -1784,14 +1784,14 @@ window.RACES_DATA = [
       {
         "name": "Colosal",
         "desc": "Eres un 30% más grande que un jugador normal.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🗿",
         "key": null
       },
       {
         "name": "Desecación",
         "desc": "Tu barra de oxígeno se agota fuera del agua; te asfixiarás si pasas demasiado tiempo en la superficie.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "☠️",
         "key": null
       },
@@ -1990,7 +1990,7 @@ window.RACES_DATA = [
       {
         "name": "Esencia",
         "desc": "Energía de almas utilizada para invocar y controlar.",
-        "type": "ability",
+        "type": "buff",
         "icon": "🧪",
         "key": null
       }
@@ -2012,7 +2012,7 @@ window.RACES_DATA = [
       {
         "name": "Alas espectrales",
         "desc": "Planeas como si llevaras unas élitras. Pulsa saltar mientras caes para desplegar tus alas.",
-        "type": "buff",
+        "type": "ability",
         "icon": "👻",
         "key": null
       },
@@ -2054,7 +2054,7 @@ window.RACES_DATA = [
       {
         "name": "Forma frágil",
         "desc": "Tu salud máxima se reduce en 2 corazones.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
@@ -2303,7 +2303,7 @@ window.RACES_DATA = [
       {
         "name": "Forma hueca",
         "desc": "Tu salud máxima se reduce en 2 corazones. Un cuerpo hecho a medias de sculk es quebradizo.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "✨",
         "key": null
       },
@@ -2375,7 +2375,7 @@ window.RACES_DATA = [
       {
         "name": "No muerto",
         "desc": "Eres un no muerto. Las pociones de curación te dañan, las de daño te curan y el encantamiento Golpe (Smite) te inflige daño extra.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚔️",
         "key": null
       },
@@ -2403,7 +2403,7 @@ window.RACES_DATA = [
       {
         "name": "Estructura frágil",
         "desc": "Tus huesos son débiles, lo que reduce tu salud máxima a 7 corazones.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },
@@ -2417,7 +2417,7 @@ window.RACES_DATA = [
       {
         "name": "Dieta sin huesos",
         "desc": "Solo puedes comer polvo de hueso, carne podrida y ojos de araña.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🦴",
         "key": null
       },
@@ -2524,7 +2524,7 @@ window.RACES_DATA = [
       {
         "name": "Paso enraizado",
         "desc": "Te mueves un 10% más lento de lo normal.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚓",
         "key": null
       },
@@ -2766,7 +2766,7 @@ window.RACES_DATA = [
       {
         "name": "Ligero como una pluma",
         "desc": "Eres tan pequeño que apenas notas las caídas. Inmunidad total al daño por caída.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🥀",
         "key": null
       },
@@ -2780,7 +2780,7 @@ window.RACES_DATA = [
       {
         "name": "Brazos pequeños",
         "desc": "Tus golpes cuerpo a cuerpo infligen 2 puntos de daño menos.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "📏",
         "key": null
       },
@@ -3072,7 +3072,7 @@ window.RACES_DATA = [
       {
         "name": "Estructura colosal",
         "desc": "Eres un 15% más grande que un jugador normal.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🗿",
         "key": null
       },
@@ -3150,7 +3150,7 @@ window.RACES_DATA = [
       {
         "name": "Frágil",
         "desc": "Infliges un 25% menos de daño cuerpo a cuerpo. Tu poder fluye por el agua, no por el músculo.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "⚡",
         "key": null
       },

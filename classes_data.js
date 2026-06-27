@@ -108,7 +108,7 @@ window.CLASSES_DATA = [
       {
         "name": "Temerario",
         "desc": "Tienes -2 puntos de armadura natural (la furia te hace olvidar defenderte).",
-        "type": "debuff",
+        "type": "buff",
         "icon": "💔",
         "key": null
       },
@@ -144,7 +144,7 @@ window.CLASSES_DATA = [
       {
         "name": "Ahuyentar muertos vivientes",
         "desc": "Tus golpes a criaturas no muertas les aplican el efecto de Debilidad durante 4 segundos.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "☠️",
         "key": null
       },
@@ -173,7 +173,7 @@ window.CLASSES_DATA = [
       {
         "name": "Buenas comidas",
         "desc": "La comida que crafteas proporciona puntos de hambre y saturación adicionales.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🍲",
         "key": null
       },
@@ -223,7 +223,7 @@ window.CLASSES_DATA = [
       {
         "name": "Piernas de mar",
         "desc": "El daño por ahogamiento se reduce a la mitad.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🏊",
         "key": null
       },
@@ -381,7 +381,7 @@ window.CLASSES_DATA = [
       {
         "name": "Reabastecimiento",
         "desc": "Los intercambios con aldeanos nunca se agotan para ti.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🔄",
         "key": null
       },
@@ -467,7 +467,7 @@ window.CLASSES_DATA = [
       {
         "name": "Ahuyentar muertos vivientes",
         "desc": "Tus golpes a criaturas no muertas les aplican el efecto de Debilidad durante 4 segundos.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "☠️",
         "key": null
       },
@@ -710,7 +710,7 @@ window.CLASSES_DATA = [
       {
         "name": "Imponente",
         "desc": "Eres un 25% más grande que un jugador normal.",
-        "type": "debuff",
+        "type": "buff",
         "icon": "🗿",
         "key": null
       },

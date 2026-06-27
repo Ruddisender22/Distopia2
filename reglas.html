@@ -1,22 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Reglas y normas de convivencia del servidor de Minecraft Distopia 2: Requiem.">
-    <meta name="theme-color" content="#05020a">
-    <title>Reglas — Distopia 2: Requiem</title>
+    <title>Reglas del Servidor - Distopia 2: Requiem</title>
     <link rel="icon" type="image/png" href="Recursos/IconTransparente.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=25">
-</head>
+    <style>
+        /* ── ESTILOS EXCLUSIVOS PARA LAS REGLAS ── */
+        .rules-hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        .rules-title {
+            font-family: var(--font-head);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 40px rgba(255,204,0,0.4), 0 2px 10px rgba(0,0,0,0.6);
+            background: linear-gradient(135deg, #ffffff 0%, #ffcc00 50%, #ff8800 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .rules-subtitle {
+            font-size: 1.1rem;
+            color: var(--t2);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
 
+        .rules-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+
+        .rule-card {
+            position: relative;
+            background: linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: var(--blur-md) saturate(180%);
+            -webkit-backdrop-filter: var(--blur-md) saturate(180%);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--r-xl);
+            padding: 2.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s, border-color 0.4s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rule-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 30px rgba(255,204,0,0.15), inset 0 1px 0 rgba(255,255,255,0.12);
+            border-color: rgba(255,204,0,0.3);
+        }
+
+        .rule-bg-number {
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            font-family: var(--font-head);
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.02);
+            line-height: 1;
+            pointer-events: none;
+            z-index: 0;
+            transition: color 0.4s;
+        }
+
+        .rule-card:hover .rule-bg-number {
+            color: rgba(255,204,0,0.05);
+        }
+
+        .rule-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .rule-number-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #ffcc00 0%, #ff8800 100%);
+            border-radius: 12px;
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #05020a;
+            box-shadow: 0 0 20px rgba(255,204,0,0.4);
+            flex-shrink: 0;
+        }
+
+        .rule-title {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--t1);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .rule-content {
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+            color: var(--t2);
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .rule-content p {
+            margin-bottom: 1rem;
+        }
+
+        .rule-content ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            list-style: none;
+        }
+
+        .rule-content li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .rule-content li::before {
+            content: "•";
+            position: absolute;
+            left: -1.2rem;
+            color: var(--violet);
+            font-weight: bold;
+        }
+
+        .rule-content .allowed li::before { color: var(--green); }
+        .rule-content .forbidden li::before { color: var(--red); }
+
+        .rule-highlight {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.2rem;
+            background: rgba(255,204,0,0.1);
+            border-left: 4px solid #ffcc00;
+            border-radius: 0 var(--r-sm) var(--r-sm) 0;
+            font-weight: 600;
+            color: #ffcc00;
+            font-style: italic;
+        }
+
+        .list-title {
+            font-weight: 700;
+            color: var(--t1);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .list-title.text-green { color: var(--green); text-shadow: 0 0 10px rgba(74,222,128,0.3); }
+        .list-title.text-red { color: var(--red); text-shadow: 0 0 10px rgba(248,113,113,0.3); }
+
+        /* Estilo especial para la regla final */
+        .rule-card.final-rule {
+            grid-column: 1 / -1;
+            background: linear-gradient(145deg, rgba(30,15,45,0.6) 0%, rgba(10,5,20,0.8) 100%);
+            border-color: rgba(167,139,250,0.4);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 40px rgba(167,139,250,0.15);
+            text-align: center;
+            align-items: center;
+        }
+        .rule-card.final-rule:hover {
+            border-color: rgba(167,139,250,0.8);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 60px rgba(167,139,250,0.3);
+        }
+        .rule-card.final-rule .rule-header {
+            justify-content: center;
+        }
+        .rule-card.final-rule .rule-number-badge {
+            background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+            box-shadow: 0 0 20px rgba(167,139,250,0.5);
+        }
+        .rule-card.final-rule .rule-highlight {
+            border-left: none;
+            background: rgba(167,139,250,0.15);
+            color: #a78bfa;
+            border-radius: var(--r-md);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .rules-hero { padding: 6rem 1.5rem 3rem; }
+            .rules-container { grid-template-columns: 1fr; padding: 0 1.5rem 4rem; }
+            .rule-bg-number { font-size: 8rem; right: 0; }
+        }
+    </style>
+</head>
 <body>
 
     <!-- Ambient background -->
@@ -36,128 +235,282 @@
             <a href="mecanicas.html" class="nav-link">Mecánicas</a>
             <a href="mods.html" class="nav-link">Lista de Mods</a>
             <a href="reglas.html" class="nav-link active">Reglas</a>
-            <a href="votaciones.html" class="nav-link">Votaciones (Finalizadas)</a>
+            <a href="votaciones.html" class="nav-link">Votaciones</a>
         </nav>
-        
-        <!-- Auth corner inside navbar -->
-        <div class="auth-corner" id="auth-corner">
-            <div class="login-wrapper" id="login-wrapper">
-                <div class="login-visual" aria-hidden="true">
-                    <svg class="g-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                    <span>Iniciar sesión</span>
-                </div>
-            </div>
-
-            <div class="user-chip" id="user-chip" hidden>
-                <img id="user-avatar" class="chip-avatar" src="" alt="">
-                <div class="chip-info">
-                    <span class="chip-name" id="user-name"></span>
-                    <span class="chip-email" id="user-email"></span>
-                </div>
-                <button class="chip-logout" id="logout-btn" aria-label="Cerrar sesión" title="Cerrar sesión">
-                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round">
-                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
-                    </svg>
-                </button>
-            </div>
-        </div>
     </header>
 
-    <!-- ══ ORIGINS HEADER ══ -->
-    <header class="origins-header">
-        <div class="origins-header-ornament top-left"></div>
-        <div class="origins-header-ornament top-right"></div>
-        <span class="origins-eyebrow">Distopia 2: Requiem</span>
-        <h1 class="origins-title">Reglas del Servidor</h1>
-        <p class="origins-subtitle">Las normas de convivencia y el código de conducta del servidor.</p>
-        <div class="origins-divider">
-            <svg viewBox="0 0 200 20" width="200" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10 L60 10 L70 2 L80 10 L100 10 L120 10 L130 2 L140 10 L200 10" stroke="url(#goldGrad)"
-                    stroke-width="1.5" />
-                <circle cx="100" cy="10" r="3" fill="#ffcc00" />
-                <circle cx="70" cy="2" r="1.5" fill="#ffcc00" opacity="0.6" />
-                <circle cx="130" cy="2" r="1.5" fill="#ffcc00" opacity="0.6" />
-                <defs>
-                    <linearGradient id="goldGrad" x1="0" y1="10" x2="200" y2="10">
-                        <stop offset="0%" stop-color="transparent" />
-                        <stop offset="30%" stop-color="#ffcc00" stop-opacity="0.7" />
-                        <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9" />
-                        <stop offset="70%" stop-color="#ffcc00" stop-opacity="0.7" />
-                        <stop offset="100%" stop-color="transparent" />
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
-    </header>
+    <main id="app">
+        <!-- ══ HEADER REGLAS ══ -->
+        <section class="rules-hero">
+            <h1 class="rules-title">Reglas del Servidor</h1>
+            <p class="rules-subtitle">Para mantener una comunidad sana y una experiencia de juego justa, todos los jugadores deben respetar la siguiente normativa.</p>
+        </section>
 
-    <!-- ══ CONTENT ══ -->
-    <main class="origins-content" style="max-width: 1200px; margin: 0 auto; padding-top: 1rem;">
-        <div class="rules-placeholder">
-            <div class="origins-placeholder-icon">📜</div>
-            <p>Las reglas del servidor se publicarán próximamente.</p>
-            <span class="soon-tag">Próximamente</span>
-        </div>
-    </main>
-
-    <!-- ══ AUTH MODAL — premium login wall ══ -->
-    <div class="auth-modal-overlay" id="auth-modal-overlay" hidden role="dialog" aria-modal="true"
-        aria-label="Iniciar sesión para votar">
-        <div class="auth-modal-sheet" id="auth-modal-panel">
-
-            <button class="auth-modal-close" id="auth-modal-close" aria-label="Cerrar">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round">
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-            </button>
-
-            <div class="auth-modal-body">
-                <!-- Left: editorial -->
-                <div class="auth-modal-left">
-                    <img src="Recursos/IconTransparente.png" alt="Distopia 2" class="auth-modal-logo"
-                        onerror="this.src='Recursos/IconTransparente.png'; this.style.display='none'">
-                    <span class="auth-modal-eyebrow">Distopia 2: Requiem</span>
-                    <h2 class="auth-modal-headline">Únete a<br>Distopia 2: Requiem</h2>
-                    <p class="auth-modal-body-text">Inicia sesión para guardar tus votos y decidir el futuro del
-                        servidor. Tu voz cuenta.</p>
+        <!-- ══ CONTENEDOR DE REGLAS ══ -->
+        <section class="rules-container">
+            
+            <!-- Regla 1 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">1</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">1</div>
+                    <h2 class="rule-title">Filosofía del servidor</h2>
                 </div>
-
-                <!-- Right: login methods -->
-                <div class="auth-modal-right">
-                    <div class="auth-tabs">
-                        <button class="auth-tab active" id="tab-login">Identificarse</button>
+                <div class="rule-content">
+                    <p>Este servidor no es anárquico, pero tampoco pretende controlar cada cosa que hacen los jugadores.</p>
+                    <p>Hay libertad para jugar, comerciar, competir, vengarse, hacer alianzas, traicionar, explorar y tomar decisiones propias.</p>
+                    <p>Aquí las acciones tienen consecuencias. Si haces algo contra otro jugador, debes aceptar que ese jugador pueda responder.</p>
+                    <div class="rule-highlight">
+                        "Esa libertad tiene un límite: no se permite arruinar la experiencia de otros jugadores de forma abusiva, repetitiva o sin posibilidad de respuesta."
                     </div>
-
-                    <form class="custom-auth-form" id="custom-auth-form">
-                        <div class="form-group">
-                            <label for="auth-email">Correo Electrónico</label>
-                            <input type="email" id="auth-email" placeholder="tu@correo.com" required>
-                            <p class="password-warning" style="margin-top: 8px;">Este correo se usará para guardar y recuperar tus votos.</p>
-                        </div>
-                        <button class="custom-auth-btn" id="custom-auth-submit" type="submit">Entrar a votar</button>
-                    </form>
-
-                    <p class="auth-privacy">Al continuar, aceptas el uso de tus datos únicamente para autenticación y votación en Distopia 2.</p>
                 </div>
             </div>
 
-        </div>
-    </div>
+            <!-- Regla 2 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">2</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">2</div>
+                    <h2 class="rule-title">Respeto básico</h2>
+                </div>
+                <div class="rule-content">
+                    <span class="list-title text-red">No se permite:</span>
+                    <ul class="forbidden">
+                        <li>Insultar de forma grave.</li>
+                        <li>Acosar a un jugador.</li>
+                        <li>Amenazar fuera del juego.</li>
+                        <li>Perseguir a alguien constantemente para que deje de jugar.</li>
+                    </ul>
+                    <p>Puedes picarte, discutir y tener rivalidades dentro del juego, pero no convertirlo en algo personal.</p>
+                </div>
+            </div>
 
-    <!-- ══ TOAST ══ -->
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+            <!-- Regla 3 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">3</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">3</div>
+                    <h2 class="rule-title">Robos</h2>
+                </div>
+                <div class="rule-content">
+                    <p>El robo está permitido con límites.</p>
+                    <span class="list-title text-green">Está permitido:</span>
+                    <ul class="allowed">
+                        <li>Robar recursos de cofres no protegidos.</li>
+                        <li>Saquear bases abandonadas.</li>
+                        <li>Robar como parte de una guerra, conflicto o venganza.</li>
+                    </ul>
+                    <span class="list-title text-red">No está permitido:</span>
+                    <ul class="forbidden">
+                        <li>Vaciar completamente una base solo para fastidiar.</li>
+                        <li>Robar objetos únicos, imposibles de recuperar o esenciales sin motivo.</li>
+                        <li>Robar repetidamente al mismo jugador hasta impedirle jugar.</li>
+                        <li>Usar bugs, glitches o exploits para entrar en zonas protegidas.</li>
+                    </ul>
+                    <div class="rule-highlight">Regla práctica: robar está permitido; destrozar la progresión de alguien, no.</div>
+                </div>
+            </div>
+
+            <!-- Regla 4 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">4</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">4</div>
+                    <h2 class="rule-title">Griefing y destrucción</h2>
+                </div>
+                <div class="rule-content">
+                    <p>No se permite destruir bases sin motivo.</p>
+                    <span class="list-title text-green">Está permitido:</span>
+                    <ul class="allowed">
+                        <li>Romper bloques durante un ataque o conflicto.</li>
+                        <li>Hacer daños moderados como represalia.</li>
+                        <li>Atacar estructuras si hay una guerra o rivalidad clara.</li>
+                    </ul>
+                    <span class="list-title text-red">No está permitido:</span>
+                    <ul class="forbidden">
+                        <li>Romper cofres, máquinas o sistemas de mods solo por molestar.</li>
+                        <li>Destruir construcciones decorativas grandes sin razón.</li>
+                    </ul>
+                    <div class="rule-highlight">Regla práctica: puedes castigar; no puedes borrar del mapa el trabajo de otro jugador.</div>
+                </div>
+            </div>
+
+            <!-- Regla 5 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">5</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">5</div>
+                    <h2 class="rule-title">PvP</h2>
+                </div>
+                <div class="rule-content">
+                    <p>El PvP está permitido, pero con límites.</p>
+                    <span class="list-title text-green">Está permitido:</span>
+                    <ul class="allowed">
+                        <li>Pelear por recursos.</li>
+                        <li>Defender tu base.</li>
+                        <li>Atacar durante una guerra.</li>
+                        <li>Vengarte si alguien te ha robado, atacado o traicionado.</li>
+                    </ul>
+                    <span class="list-title text-red">No está permitido:</span>
+                    <ul class="forbidden">
+                        <li>Matar repetidamente al mismo jugador sin dejarle jugar.</li>
+                        <li>Campeo en camas, portales, spawn o zonas de reaparición.</li>
+                        <li>Matar a jugadores nuevos nada más entrar.</li>
+                        <li>Usar trampas imposibles de evitar en zonas comunes.</li>
+                    </ul>
+                    <div class="rule-highlight">Regla práctica: matar una vez puede ser parte del juego; impedir jugar es abuso.</div>
+                </div>
+            </div>
+
+            <!-- Regla 6 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">6</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">6</div>
+                    <h2 class="rule-title">Venganza y “ojo por ojo”</h2>
+                </div>
+                <div class="rule-content">
+                    <p>La venganza está permitida, pero debe ser proporcional.</p>
+                    <p>Si alguien te roba, puedes robarle. Si alguien te mata, puedes matarle. Si alguien te destruye algo, puedes responder.</p>
+                    <p>Pero no se permite escalar una tontería hasta destruir por completo a otro jugador.</p>
+                    <span class="list-title">Ejemplos:</span>
+                    <ul>
+                        <li>Si te roban hierro, no puedes destruir toda una base.</li>
+                        <li>Si te matan una vez, no puedes campearle durante una hora.</li>
+                        <li>Si te rompen una máquina, puedes exigir reparación, compensación o responder con un daño similar.</li>
+                    </ul>
+                    <div class="rule-highlight">Regla principal: la respuesta debe tener relación con el daño recibido.</div>
+                </div>
+            </div>
+
+            <!-- Regla 7 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">7</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">7</div>
+                    <h2 class="rule-title">Mods, bugs y exploits</h2>
+                </div>
+                <div class="rule-content">
+                    <p>No se permite aprovechar bugs, glitches o errores de mods.</p>
+                    <span class="list-title text-red">Prohibido:</span>
+                    <ul class="forbidden">
+                        <li>Duplicar objetos.</li>
+                        <li>Crashear el servidor.</li>
+                        <li>Crear máquinas que generen lag excesivo.</li>
+                        <li>Usar exploits para conseguir recursos, energía o ventajas imposibles.</li>
+                        <li>Usar clientes modificados, hacks, x-ray, autoclickers o macros abusivas.</li>
+                    </ul>
+                    <p>Si encuentras un bug, repórtalo. Si lo usas en secreto, se considerará trampa.</p>
+                </div>
+            </div>
+
+            <!-- Regla 8 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">8</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">8</div>
+                    <h2 class="rule-title">Máquinas, granjas y lag</h2>
+                </div>
+                <div class="rule-content">
+                    <p>Los mods permiten hacer máquinas grandes, pero el servidor tiene límites.</p>
+                    <span class="list-title text-red">No está permitido:</span>
+                    <ul class="forbidden">
+                        <li>Crear granjas que generen lag constante.</li>
+                        <li>Dejar máquinas funcionando sin control.</li>
+                        <li>Llenar chunks de entidades, ítems o mobs.</li>
+                        <li>Usar sistemas automáticos que afecten al rendimiento del servidor.</li>
+                    </ul>
+                    <p>El staff podrá apagar, limitar o retirar máquinas que causen problemas.</p>
+                </div>
+            </div>
+
+            <!-- Regla 9 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">9</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">9</div>
+                    <h2 class="rule-title">Comercio y acuerdos</h2>
+                </div>
+                <div class="rule-content">
+                    <p>Los acuerdos entre jugadores son responsabilidad de quienes los hacen.</p>
+                    <span class="list-title text-green">Está permitido:</span>
+                    <ul class="allowed">
+                        <li>Vender, comprar e intercambiar.</li>
+                        <li>Hacer y romper alianzas.</li>
+                        <li>Traicionar dentro del juego.</li>
+                    </ul>
+                    <p>Pero si haces una estafa, aceptas que el otro jugador pueda responder dentro de las reglas.</p>
+                    <p>El staff solo intervendrá si hay abuso claro, trampas, bugs o acoso.</p>
+                </div>
+            </div>
+
+            <!-- Regla 10 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">10</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">10</div>
+                    <h2 class="rule-title">Spawn y zonas comunes</h2>
+                </div>
+                <div class="rule-content">
+                    <p>Las zonas comunes deben respetarse. El spawn debe ser una zona segura o semi-segura.</p>
+                    <span class="list-title text-red">No se permite:</span>
+                    <ul class="forbidden">
+                        <li>Romper caminos, portales o edificios públicos.</li>
+                        <li>Poner trampas en zonas comunes.</li>
+                        <li>Bloquear accesos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Regla 11 -->
+            <div class="rule-card">
+                <div class="rule-bg-number">11</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">11</div>
+                    <h2 class="rule-title">Sanciones</h2>
+                </div>
+                <div class="rule-content">
+                    <p>Las sanciones dependerán de la gravedad.</p>
+                    <span class="list-title">Posibles sanciones:</span>
+                    <ul>
+                        <li>Aviso / Devolver objetos / Reparar daños.</li>
+                        <li>Compensar al jugador afectado.</li>
+                        <li>Cárcel temporal dentro del juego.</li>
+                        <li>Ban temporal o permanente.</li>
+                    </ul>
+                    <div class="rule-highlight">
+                        Si rompes algo, lo reparas.<br>
+                        Si abusas, se te limita.<br>
+                        Si vienes a destruir el servidor, te vas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regla 12 -->
+            <div class="rule-card final-rule">
+                <div class="rule-bg-number">12</div>
+                <div class="rule-header">
+                    <div class="rule-number-badge">12</div>
+                    <h2 class="rule-title">Regla final</h2>
+                </div>
+                <div class="rule-content">
+                    <p>No intentes buscar vacíos legales. Que algo no esté escrito exactamente no significa que esté permitido.</p>
+                    <p>El criterio principal será este:</p>
+                    <div class="rule-highlight">
+                        <strong>¿Tu acción crea juego, conflicto y consecuencias interesantes?</strong> Entonces probablemente está permitida.<br><br>
+                        <strong>¿Tu acción solo busca molestar, abusar o hacer que otro jugador deje de jugar?</strong> Entonces no está permitida.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
 
     <!-- ══ FOOTER ══ -->
     <footer class="site-footer">
         <div class="footer-inner">
             <p class="footer-brand">Distopia 2: Requiem · Modpack Minecraft</p>
-            <p class="footer-links"><a href="privacy.html" class="footer-link">Política de Privacidad</a>
-                &nbsp;·&nbsp;
+            <p class="footer-links"><a href="privacy.html" class="footer-link">Política de Privacidad</a> &nbsp;·&nbsp;
                 <a href="terms.html" class="footer-link">Términos de Servicio</a>
             </p>
             <p class="footer-credit">Hecho por <a href="https://github.com/Ruddisender22" target="_blank"
@@ -165,7 +518,61 @@
         </div>
     </footer>
 
+    <!-- Background Canvas Script -->
+    <script>
+        function initBlobBg() {
+            const canvas = document.getElementById("bg-canvas");
+            if (!canvas) return;
+            const ctx = canvas.getContext("2d");
+
+            let W = 0, H = 0;
+            function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+            window.addEventListener("resize", resize); resize();
+
+            const sparks = [];
+            const numSparks = 85;
+
+            for (let i = 0; i < numSparks; i++) {
+                sparks.push({
+                    x: Math.random() * W,
+                    y: Math.random() * H,
+                    vx: (Math.random() - 0.5) * 1.2,
+                    vy: -(Math.random() * 1.5 + 0.5),
+                    radius: Math.random() * 2.5 + 0.5,
+                    alpha: Math.random() * 0.8 + 0.2,
+                    fadeRate: Math.random() * 0.008 + 0.002,
+                    hue: Math.random() < 0.5 ? 35 : (Math.random() < 0.5 ? 15 : 55),
+                    swayOffset: Math.random() * Math.PI * 2,
+                    swaySpeed: Math.random() * 0.03 + 0.01
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                sparks.forEach(s => {
+                    s.x += s.vx + Math.sin(s.swayOffset) * 0.4;
+                    s.swayOffset += s.swaySpeed;
+                    s.y += s.vy;
+                    s.alpha -= s.fadeRate;
+                    if (s.alpha <= 0 || s.y < -10) {
+                        s.y = H + 10;
+                        s.x = Math.random() * W;
+                        s.alpha = Math.random() * 0.8 + 0.2;
+                        s.radius = Math.random() * 2.5 + 0.5;
+                        s.vx = (Math.random() - 0.5) * 1.2;
+                        s.vy = -(Math.random() * 1.5 + 0.5);
+                    }
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsla(${s.hue}, 100%, 65%, ${s.alpha})`;
+                    ctx.fill();
+                });
+                requestAnimationFrame(draw);
+            }
+            draw();
+        }
+        initBlobBg();
+    </script>
     <script src="script.js"></script>
 </body>
-
 </html>

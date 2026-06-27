@@ -106,7 +106,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Mago de Aire",
+    "name": "Mago de Aire (Air Mage)",
     "emoji": "💨",
     "impact": "high",
     "description": "Aeromante ágil que controla el viento para atacar y moverse. Es muy rápido y ligero, pero también muy frágil.",
@@ -177,7 +177,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Arácnido",
+    "name": "Arácnido (Arachnid)",
     "emoji": "🕷️",
     "impact": "medium",
     "description": "Ágiles humanoides-araña capaces de escalar paredes, lanzar telarañas y atacar con colmillos venenosos.",
@@ -284,7 +284,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Autómata",
+    "name": "Autómata (Automaton)",
     "emoji": "🤖",
     "impact": "high",
     "description": "Un constructo mecánico que no necesita respirar ni comer. Sin embargo, las pociones de curación no le afectan, su recuperación natural es extremadamente lenta y sus movimientos son pesados.",
@@ -348,7 +348,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Aviar",
+    "name": "Aviar (Avian)",
     "emoji": "🦅",
     "impact": "low",
     "description": "Un ser alado que desciende con gracia, no teme a las alturas y observa el mundo desde arriba.",
@@ -731,7 +731,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Dracónico",
+    "name": "Dracónico (Draconic)",
     "emoji": "🐉",
     "impact": "high",
     "description": "De sangre de dragón y temible. Inmune al fuego y aterrador para las bestias, pero su llama dracónica consume su aguante (stamina) rápidamente.",
@@ -887,7 +887,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Mago de Tierra",
+    "name": "Mago de Tierra (Earth Mage)",
     "emoji": "⛰️",
     "impact": "high",
     "description": "Un geomante inquebrantable que golpea el suelo para dañar a sus enemigos y levanta muros de piedra con un gesto. Es inamovible como una montaña, pero el agua y las alturas son sus grandes debilidades.",
@@ -1179,7 +1179,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Mago de Fuego",
+    "name": "Mago de Fuego (Fire Mage)",
     "emoji": "🔥",
     "impact": "high",
     "description": "Un piromante volátil envuelto en llamas. Lanza bolas de fuego, crea ráfagas infernales y quema a quienes le atacan. Es inmune al fuego, pero el agua es su perdición.",
@@ -1343,7 +1343,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Golem (Golem)",
+    "name": "Golem",
     "emoji": "🪨",
     "impact": "high",
     "description": "Una fortaleza andante de hierro y voluntad. Casi inamovible, pero lento y altamente vulnerable al calor.",

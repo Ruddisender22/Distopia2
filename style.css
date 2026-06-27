@@ -2022,6 +2022,9 @@ body {
   display: flex;
   align-items: center;
   gap: 2.5rem; /* Increased spacing as requested */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-link {
@@ -2719,6 +2722,8 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
     gap: 1rem;
   }
   .nav-links {
+    position: static;
+    transform: none;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;

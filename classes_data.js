@@ -122,49 +122,6 @@ window.CLASSES_DATA = [
     ]
   },
   {
-    "name": "Herrero (Blacksmith)",
-    "emoji": "⚒️",
-    "impact": "none",
-    "description": "Un maestro artesano cuyo equipamiento es de mayor calidad y cuyas reparaciones son más eficientes.",
-    "traits": [
-      {
-        "name": "Artesanía de calidad",
-        "desc": "El equipo que fabricas es superior (las herramientas minan más rápido, las armas pegan más duro, las armaduras son más resistentes y todo dura más).",
-        "type": "buff",
-        "icon": "⚒️",
-        "key": null
-      },
-      {
-        "name": "Reparaciones eficientes",
-        "desc": "Las reparaciones en el yunque cuestan menos y restauran más durabilidad.",
-        "type": "buff",
-        "icon": "🔧",
-        "key": null
-      },
-      {
-        "name": "Manos de forja",
-        "desc": "Puedes romper piedra con las manos desnudas al mismo nivel que un pico de piedra.",
-        "type": "buff",
-        "icon": "🔨",
-        "key": null
-      },
-      {
-        "name": "Templado en la forja",
-        "desc": "Recibes la mitad de daño por fuego, lava, bloques de magma y quemaduras.",
-        "type": "buff",
-        "icon": "🔥",
-        "key": null
-      },
-      {
-        "name": "Hierro inicial",
-        "desc": "Apareces inicialmente con 4 lingotes de hierro en tu inventario.",
-        "type": "buff",
-        "icon": "🪙",
-        "key": null
-      }
-    ]
-  },
-  {
     "name": "Clérigo (Cleric)",
     "emoji": "✨",
     "impact": "none",

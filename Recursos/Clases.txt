@@ -55,24 +55,6 @@ Temerario: Tienes -2 puntos de armadura natural (la furia te hace olvidar defend
 
 Piel dura: +20% de resistencia al empuje (knockback).
 --
-Herrero (Blacksmith)
-
-Impacto: Ninguno
-
-Descripción: Un maestro artesano cuyo equipamiento es de mayor calidad y cuyas reparaciones son más eficientes.
-
-Poderes y características:
-
-Artesanía de calidad: El equipo que fabricas es superior (las herramientas minan más rápido, las armas pegan más duro, las armaduras son más resistentes y todo dura más).
-
-Reparaciones eficientes: Las reparaciones en el yunque cuestan menos y restauran más durabilidad.
-
-Manos de forja: Puedes romper piedra con las manos desnudas al mismo nivel que un pico de piedra.
-
-Templado en la forja: Recibes la mitad de daño por fuego, lava, bloques de magma y quemaduras.
-
-Hierro inicial: Apareces inicialmente con 4 lingotes de hierro en tu inventario.
---
 Clérigo (Cleric)
 
 Impacto: Ninguno

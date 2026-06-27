@@ -227,63 +227,6 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Asura",
-    "emoji": "👹",
-    "impact": "high",
-    "description": "Un berserker frágil que se vuelve más rápido y fuerte cuanto más cerca está de la muerte. Drena vida con sus ataques y desata una furia imparable en combate.",
-    "traits": [
-      {
-        "name": "Cuerpo frágil",
-        "desc": "Tu salud máxima se reduce en 3 corazones.",
-        "type": "debuff",
-        "icon": "⚡",
-        "key": null
-      },
-      {
-        "name": "Furia de sangre I",
-        "desc": "Por debajo de dos tercios de tu salud máxima, obtienes Fuerza I y Velocidad I.",
-        "type": "buff",
-        "icon": "🩸",
-        "key": null
-      },
-      {
-        "name": "Furia de sangre II",
-        "desc": "Por debajo del 40% de salud, obtienes Fuerza II y Velocidad II.",
-        "type": "buff",
-        "icon": "🩸",
-        "key": null
-      },
-      {
-        "name": "Furia de sangre III",
-        "desc": "Al llegar al 25% de salud, te conviertes en un Asura y obtienes Fuerza III y Velocidad III.",
-        "type": "buff",
-        "icon": "🩸",
-        "key": null
-      },
-      {
-        "name": "Ira inamovible",
-        "desc": "Al 25% de salud, nada puede moverte (100% de resistencia al empuje).",
-        "type": "buff",
-        "icon": "🛡️",
-        "key": null
-      },
-      {
-        "name": "Golpe de Asura [V]",
-        "desc": "Te lanzas hacia adelante y golpeas el suelo, lanzando por los aires a todos los enemigos cercanos.",
-        "type": "ability",
-        "icon": "⚡",
-        "key": "V"
-      },
-      {
-        "name": "Frenesí [G]",
-        "desc": "Estallas en furia de batalla y obtienes Fuerza II, Velocidad II y Resistencia I durante 6 segundos.",
-        "type": "ability",
-        "icon": "🔥",
-        "key": "G"
-      }
-    ]
-  },
-  {
     "name": "Autómata (Automaton)",
     "emoji": "🤖",
     "impact": "high",

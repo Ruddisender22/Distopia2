@@ -93,30 +93,6 @@ Energía: Recurso interno necesario para usar tus habilidades.
 
 ---
 
-Asura
-
-Impacto: Alto
-
-Descripción: Un berserker frágil que se vuelve más rápido y fuerte cuanto más cerca está de la muerte. Drena vida con sus ataques y desata una furia imparable en combate.
-
-Poderes y características:
-
-Cuerpo frágil: Tu salud máxima se reduce en 3 corazones.
-
-Furia de sangre I: Por debajo de dos tercios de tu salud máxima, obtienes Fuerza I y Velocidad I.
-
-Furia de sangre II: Por debajo del 40% de salud, obtienes Fuerza II y Velocidad II.
-
-Furia de sangre III: Al llegar al 25% de salud, te conviertes en un Asura y obtienes Fuerza III y Velocidad III.
-
-Ira inamovible: Al 25% de salud, nada puede moverte (100% de resistencia al empuje).
-
-Golpe de Asura [V]: Te lanzas hacia adelante y golpeas el suelo, lanzando por los aires a todos los enemigos cercanos.
-
-Frenesí [G]: Estallas en furia de batalla y obtienes Fuerza II, Velocidad II y Resistencia I durante 6 segundos.
-
----
-
 Autómata
 
 Impacto: Alto

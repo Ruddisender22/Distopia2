@@ -1592,63 +1592,6 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Monje de Hierro (Iron Monk)",
-    "emoji": "🥋",
-    "impact": "medium",
-    "description": "Un monje defensor que basa todas sus artes en una única reserva de aguante (stamina). Levanta su guardia para ignorar los golpes, pero tanto bloquear como atacar consumen la misma energía.",
-    "traits": [
-      {
-        "name": "Aguante (Stamina)",
-        "desc": "Alimenta tanto tu guardia como tus habilidades. Solo se recupera cuando bajas la guardia.",
-        "type": "resource",
-        "icon": "🏃",
-        "key": null
-      },
-      {
-        "name": "Guardia [V] (Alternable)",
-        "desc": "Levanta tu guardia. Mientras la mantengas, no podrás moverte (Lentitud), pero absorberás casi todo el daño a costa de drenar tu aguante. Pulsa de nuevo para bajarla.",
-        "type": "ability",
-        "icon": "🛡️",
-        "key": "V"
-      },
-      {
-        "name": "Mantenimiento de guardia",
-        "desc": "Mantener la guardia activa consume aguante constantemente.",
-        "type": "ability",
-        "icon": "⏳",
-        "key": null
-      },
-      {
-        "name": "Baluarte",
-        "desc": "Mientras bloquees y tengas aguante de sobra, el daño recibido se reduce en un 90%.",
-        "type": "buff",
-        "icon": "🛡️",
-        "key": null
-      },
-      {
-        "name": "Parada (Parry)",
-        "desc": "Cada golpe que bloquees con éxito sonará como un escudo y consumirá una porción de tu aguante.",
-        "type": "buff",
-        "icon": "⚔️",
-        "key": null
-      },
-      {
-        "name": "Golpe de palma [G]",
-        "desc": "Lanza una onda de choque a tu alrededor que daña y lanza por los aires a los enemigos cercanos. Cuesta 20 de aguante.",
-        "type": "ability",
-        "icon": "💥",
-        "key": "G"
-      },
-      {
-        "name": "Resolución de hierro",
-        "desc": "Tienes resistencia natural a que te empujen o te saquen de tu postura.",
-        "type": "buff",
-        "icon": "⚓",
-        "key": null
-      }
-    ]
-  },
-  {
     "name": "Kraken",
     "emoji": "🐙",
     "impact": "high",

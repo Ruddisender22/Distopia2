@@ -2908,63 +2908,6 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Caminante del Vacío (Voidwalker)",
-    "emoji": "🌌",
-    "impact": "medium",
-    "description": "Un ser tocado por la energía del End. Puede atravesar bloques, teletransportarse cortas distancias y caminar sin ser detectado por los monstruos. Corre sin cansarse, pero el agua es una agonía para él.",
-    "traits": [
-      {
-        "name": "Paseo en fase [V]",
-        "desc": "Atraviesa una pared sólida en la dirección a la que estés mirando. Cuesta 3 de energía. Recarga de 4 segundos (80 ticks).",
-        "type": "ability",
-        "icon": "🌌",
-        "key": "V"
-      },
-      {
-        "name": "Paso del vacío [G]",
-        "desc": "Te teletransportas a donde estás mirando (hasta un máximo de 24 bloques). Cuesta 2 de energía. Recarga de 4 segundos (80 ticks).",
-        "type": "ability",
-        "icon": "🌌",
-        "key": "G"
-      },
-      {
-        "name": "Visión del vacío",
-        "desc": "Ves a la perfección en la oscuridad total.",
-        "type": "buff",
-        "icon": "✨",
-        "key": null
-      },
-      {
-        "name": "Invisible",
-        "desc": "Las criaturas hostiles no notan tu presencia a menos que tú las ataques.",
-        "type": "buff",
-        "icon": "🌫️",
-        "key": null
-      },
-      {
-        "name": "Quemado por el vacío",
-        "desc": "Recibes 1 punto de daño por segundo al entrar en contacto con el agua o la lluvia.",
-        "type": "debuff",
-        "icon": "💧",
-        "key": null
-      },
-      {
-        "name": "Ingrávido",
-        "desc": "Correr (sprintar) no te consume hambre extra.",
-        "type": "buff",
-        "icon": "🪶",
-        "key": null
-      },
-      {
-        "name": "Energía",
-        "desc": "Energía interna para utilizar tus habilidades.",
-        "type": "resource",
-        "icon": "⚡",
-        "key": null
-      }
-    ]
-  },
-  {
     "name": "Warden",
     "emoji": "👾",
     "impact": "high",

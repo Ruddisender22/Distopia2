@@ -3189,7 +3189,7 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    width: 140px;
+    width: 160px;
     height: 120px;
     background: linear-gradient(145deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0.01) 100%);
     border: 1px solid rgba(255, 215, 0, 0.2);

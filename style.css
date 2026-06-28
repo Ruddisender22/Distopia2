@@ -2862,15 +2862,15 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 }
 
 /* ══════════════════════════════════════════════════════════════
-   FEATURES SHOWCASE (APPLE CENTERED)
+   FEATURES SHOWCASE (APPLE CENTERED COMPACT & DETAILED)
 ══════════════════════════════════════════════════════════════ */
 .features-showcase {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem 2rem 10rem;
+  padding: 4rem 2rem 8rem;
   display: flex;
   flex-direction: column;
-  gap: 15rem; /* Massive spacing to separate features completely */
+  gap: 8rem; /* Much tighter gap */
 }
 
 .feature-centered {
@@ -2887,7 +2887,7 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-head);
-  font-size: 25rem;
+  font-size: 15rem; /* Smaller number */
   font-weight: 900;
   line-height: 1;
   color: transparent;
@@ -2897,12 +2897,13 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 }
 
 .fc-visual-small {
-  width: 350px;
-  height: 350px;
+  width: 250px; /* Smaller image */
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 50px rgba(167, 139, 250, 0.15);
-  margin-bottom: 4rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 30px rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(255,255,255,0.1); /* Detail */
+  margin-bottom: 2rem;
   z-index: 2;
   position: relative;
   background: var(--glass);
@@ -2917,25 +2918,32 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 .fc-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-xl);
+  padding: 2.5rem 3rem 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .fc-title {
   font-family: var(--font-head);
-  font-size: clamp(2.5rem, 5vw, 3.5rem); 
+  font-size: clamp(2rem, 4vw, 2.8rem); 
   font-weight: 800;
-  color: var(--t1); margin-bottom: 2rem;
+  color: var(--t1); margin-bottom: 1.5rem;
   line-height: 1.1; letter-spacing: -0.02em;
 }
 
 .fc-desc {
-  font-size: 1.25rem; color: var(--t2); line-height: 1.8;
+  font-size: 1.15rem; color: var(--t2); line-height: 1.7;
 }
 
 .fc-list {
   margin-top: 2rem; padding: 0; list-style: none;
   display: inline-block; text-align: left;
-  color: var(--t2); font-size: 1.15rem; line-height: 1.7;
+  color: var(--t2); font-size: 1.1rem; line-height: 1.6;
 }
 .fc-list li { margin-bottom: 1rem; position: relative; padding-left: 1.5rem; }
 .fc-list li::before { content: '•'; color: var(--cyan); position: absolute; left: 0; font-weight: bold; }
@@ -2972,9 +2980,10 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 }
 
 @media (max-width: 900px) {
-  .features-showcase { gap: 10rem; padding: 2rem 1.5rem; }
-  .fc-visual-small { width: 250px; height: 250px; }
-  .fc-number-bg { font-size: 15rem; }
+  .features-showcase { gap: 6rem; padding: 2rem 1.5rem; }
+  .fc-visual-small { width: 200px; height: 200px; }
+  .fc-number-bg { font-size: 10rem; }
+  .fc-content { padding: 2rem 1.5rem 1rem; }
 }
 
 /* ══════════════════════════════════════════════════════════════

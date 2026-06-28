@@ -1432,3 +1432,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+
+// ══════════════════════════════════════════════════════════════
+//  ANIMATE ON SCROLL (AOS) LOGIC
+// ══════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+    const animatableSelectors = [
+        '.landing-desc-section', 
+        '.landing-logo',
+        '.nav-card',
+        '.section-block', 
+        '.rule-card', 
+        '.feature-centered', 
+        '.origins-header', 
+        '.page-title',
+        '.page-subtitle'
+    ];
+    
+    const elements = document.querySelectorAll(animatableSelectors.join(', '));
+    elements.forEach(el => {
+        el.classList.add('aos-init');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Determine index among currently intersecting items to stagger
+                const delay = Math.random() * 150; 
+                setTimeout(() => {
+                    entry.target.classList.add('aos-animate');
+                }, delay);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
+
+    elements.forEach(el => observer.observe(el));
+});

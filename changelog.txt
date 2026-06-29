@@ -1,0 +1,13 @@
+- Arreglado GUI tombstone
+- IA MCA modificada para obtener mayor rendimiento
+- Origins:
+    - Quitadas varias razas
+    - Eliminado piscivoro
+    - Eliminado spawns en dimensiones
+    - Cambiado durabilidad de casco bajo el sol
+    - Añadidas armaduras de mods
+    - Aumentado el cooldown del teleport del enderian y enderite
+    - Aumentado el cooldown del cohete de Elytarian
+- Deshabilitado spawn del boss del portal de Eternal Starlight
+- Deshabilitada los items Dragon Egg hasta la etapa 3
+- Deshabilitada las recetas de Ojos de Bosses y Orbe de Origin

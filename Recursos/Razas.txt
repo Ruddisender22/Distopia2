@@ -750,33 +750,6 @@ Abrazo de la muerte: Tu regeneración de salud natural se reduce al 40% de lo no
 Esencia: Energía de almas utilizada para invocar y controlar.
 ----
 
-Fantasma (Phantom)
-
-Impacto: Alto
-
-Descripción: Un ser espectral que planea en la noche con alas de élitras, extrae fuerza de sus asesinatos, pero se quema con el sol y es incapaz de dormir.
-
-Poderes y características:
-
-Ojos nocturnos: Puedes ver claramente en la oscuridad total.
-
-Alas espectrales: Planeas como si llevaras unas élitras. Pulsa saltar mientras caes para desplegar tus alas.
-
-Batir de alas [V]: Obtienes un gran impulso de velocidad al lanzarte a volar.
-
-Placa lunar: Obtienes Resistencia I bajo la luz de la luna (solo de noche). La luz del día anula esta protección.
-
-Drenaje de alma: Te curas 1 HP cada vez que asesinas a una entidad viva.
-
-Ingrávido: Eres inmune al daño por caída.
-
-Quemadura solar: Te prendes fuego y recibes 1.5 puntos de daño por segundo bajo la luz solar directa.
-
-Forma frágil: Tu salud máxima se reduce en 2 corazones.
-
-Terror insomne: No puedes dormir en camas, la noche es tu elemento natural.
----
-
 Piglin
 
 Impacto: Alto

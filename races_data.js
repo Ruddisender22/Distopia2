@@ -70,8 +70,8 @@ window.RACES_DATA = [
       },
       {
         "name": "Piscívoro",
-        "desc": "Solo puede comer pescado.",
-        "type": "buff",
+        "desc": "Solo puede comer pescado. (Desactivado)",
+        "type": "resource",
         "icon": "✨",
         "key": null
       },
@@ -163,7 +163,7 @@ window.RACES_DATA = [
       {
         "name": "Peso ligero",
         "desc": "Recibes un 50% más de empuje (knockback) de los ataques.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🪶",
         "key": null
       },
@@ -277,7 +277,7 @@ window.RACES_DATA = [
       {
         "name": "Articulaciones rígidas",
         "desc": "Su regeneración de salud natural funciona a un 25% de la velocidad normal.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🩹",
         "key": null
       },
@@ -653,7 +653,7 @@ window.RACES_DATA = [
       {
         "name": "Aura infernal",
         "desc": "La mayoría de las criaturas pasivas (ganado, aldeanos, fauna) huyen de tu presencia llameante.",
-        "type": "buff",
+        "type": "resource",
         "icon": "👹",
         "key": null
       },
@@ -752,7 +752,7 @@ window.RACES_DATA = [
       {
         "name": "Apetito dracónico",
         "desc": "Consumes tu aguante (stamina) un 50% más rápido.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🍖",
         "key": null
       },
@@ -1450,7 +1450,7 @@ window.RACES_DATA = [
       {
         "name": "Desligado",
         "desc": "Recibes un 75% más de empuje (knockback), tu gravedad debilitada hace que sea fácil lanzarte por los aires.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🪶",
         "key": null
       },
@@ -1514,7 +1514,7 @@ window.RACES_DATA = [
       {
         "name": "Artrópodo",
         "desc": "Eres vulnerable a las armas con el encantamiento Perdición de los Artrópodos.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🕷️",
         "key": null
       },
@@ -1627,8 +1627,8 @@ window.RACES_DATA = [
       },
       {
         "name": "Piscívoro",
-        "desc": "Solo puedes comer pescado.",
-        "type": "buff",
+        "desc": "Solo puedes comer pescado. (Desactivado)",
+        "type": "resource",
         "icon": "✨",
         "key": null
       },
@@ -1677,7 +1677,7 @@ window.RACES_DATA = [
       {
         "name": "Desecación",
         "desc": "Tu barra de oxígeno se agota fuera del agua; te asfixiarás si pasas demasiado tiempo en la superficie.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "☠️",
         "key": null
       },
@@ -1726,8 +1726,8 @@ window.RACES_DATA = [
       },
       {
         "name": "Piscívoro",
-        "desc": "Solo puedes comer pescado.",
-        "type": "buff",
+        "desc": "Solo puedes comer pescado. (Desactivado)",
+        "type": "resource",
         "icon": "✨",
         "key": null
       },
@@ -2303,7 +2303,7 @@ window.RACES_DATA = [
       {
         "name": "Dieta sin huesos",
         "desc": "Solo puedes comer polvo de hueso, carne podrida y ojos de araña.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "🦴",
         "key": null
       },
@@ -2325,7 +2325,7 @@ window.RACES_DATA = [
       {
         "name": "Humedad",
         "desc": "Tienes una barra de humedad que se agota con el tiempo (más rápido en desiertos o si te prendes fuego). Quédate en el agua o bajo la lluvia para rehidratarte. Por encima del 75%: Regeneración I. Por debajo del 10%: -4 de armadura. Al 0%: Comienzas a recibir daño.",
-        "type": "resource",
+        "type": "debuff",
         "icon": "💧",
         "key": null
       },
@@ -2666,7 +2666,7 @@ window.RACES_DATA = [
       {
         "name": "Brazos pequeños",
         "desc": "Tus golpes cuerpo a cuerpo infligen 2 puntos de daño menos.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "📏",
         "key": null
       },
@@ -2787,7 +2787,7 @@ window.RACES_DATA = [
       {
         "name": "Dieta de sangre",
         "desc": "Solo puedes alimentarte de carne cruda, carne podrida y ojos de araña.",
-        "type": "buff",
+        "type": "debuff",
         "icon": "✨",
         "key": null
       },

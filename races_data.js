@@ -1242,6 +1242,7 @@ window.RACES_DATA = [
       }
     ]
   },
+/*
   {
     "name": "Cuerpo Dorado (Golden Body)",
     "emoji": "🧘",
@@ -1285,6 +1286,7 @@ window.RACES_DATA = [
       }
     ]
   },
+*/
   {
     "name": "Golem",
     "emoji": "🪨",
@@ -2921,6 +2923,7 @@ window.RACES_DATA = [
       }
     ]
   },
+/*
   {
     "name": "Caminante del Viento (Windwalker)",
     "emoji": "💨",
@@ -2978,6 +2981,7 @@ window.RACES_DATA = [
       }
     ]
   },
+*/
   {
     "name": "Espectro (Wraith)",
     "emoji": "👻",

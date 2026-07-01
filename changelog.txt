@@ -11,3 +11,5 @@
 - Deshabilitado spawn del boss del portal de Eternal Starlight
 - Deshabilitada los items Dragon Egg hasta la etapa 3
 - Deshabilitada las recetas de Ojos de Bosses y Orbe de Origin
+- Cambiados los crafteos de las monedas y deshabilitadas tipos no usados
+- Cambiado el aspecto de los peces gacha

@@ -70,70 +70,122 @@
 
     <!-- ══ LANDING HERO ══ -->
     <header class="landing-hero" id="landing-hero">
+        <!-- Minecraft pixel-art background -->
+        <div class="mc-bg-hero" aria-hidden="true"></div>
+
         <div class="landing-hero-inner">
             <img src="Recursos/IconTransparente.png" alt="Distopia 2 Requiem" class="landing-logo"
                 onerror="this.src='Recursos/Icon.png'">
             <span class="landing-eyebrow">Modpack Minecraft · NeoForge 1.21.1</span>
             <div class="landing-author">Hecho por Ruddisender22</div>
 
-            <div class="landing-desc-section" style="max-width: 1100px; margin: 0 auto; width: 100%;">
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; align-items: center; background: linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%); backdrop-filter: var(--blur-md); -webkit-backdrop-filter: var(--blur-md); border: 1px solid var(--border-h); padding: 2rem 2.5rem; border-radius: var(--r-2xl); box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1); margin-bottom: 1.5rem; position: relative; overflow: hidden;">
-                    <!-- Specular highlight on container -->
-                    <div style="position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent); opacity: 0.6;"></div>
-                    
-                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <span style="font-family: var(--font-head); font-size: 2.8rem; font-weight: 900; color: var(--t1); background: linear-gradient(135deg, #ffcc00 0%, #ff8800 40%, #ff2200 75%, #ffcc00 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 10px rgba(255, 136, 0, 0.4)); line-height: 1;">+200</span>
-                        <span style="font-size: 0.9rem; font-weight: 700; color: var(--t3); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 0.4rem;">Mods</span>
-                    </div>
-                    <div style="font-size: 2.5rem; color: var(--border-h); line-height: 1; font-weight: 300;">|</div>
-                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <span style="font-family: var(--font-head); font-size: 2.5rem; font-weight: 900; color: var(--t1); background: linear-gradient(135deg, #00ccff 0%, #0088ff 40%, #0055ff 75%, #00ccff 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 10px rgba(0, 204, 255, 0.4)); line-height: 1;">21</span>
-                        <span style="font-size: 0.9rem; font-weight: 700; color: var(--t3); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 0.4rem;">Jugadores</span>
-                    </div>
-                    <div style="font-size: 2.5rem; color: var(--border-h); line-height: 1; font-weight: 300;">|</div>
-                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <span style="font-family: var(--font-head); font-size: 2.8rem; font-weight: 900; color: var(--t1); background: linear-gradient(135deg, #4ade80 0%, #22c55e 40%, #16a34a 75%, #4ade80 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 10px rgba(74, 222, 128, 0.4)); line-height: 1;">16 GB</span>
-                        <span style="font-size: 0.9rem; font-weight: 700; color: var(--t3); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 0.4rem;">Host Dedicado</span>
-                    </div>
+            <!-- Stats -->
+            <div class="landing-stats">
+                <div class="landing-stat">
+                    <span class="landing-stat-value gold">+200</span>
+                    <span class="landing-stat-label">Mods</span>
                 </div>
-                
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                     <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(255,255,255,0.03); padding: 0.8rem 2rem; border-radius: var(--r-pill); border: 1px solid var(--border-h); box-shadow: inset 0 2px 10px rgba(255,255,255,0.02), 0 5px 15px rgba(0,0,0,0.3);">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--violet)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 5px rgba(255,204,0,0.6));"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <span style="font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: #fff; letter-spacing: 0.05em; text-transform: uppercase;">Modpack con Contenido Para Todos</span>
-                    </div>
-                    <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(255,255,255,0.03); padding: 0.8rem 2rem; border-radius: var(--r-pill); border: 1px solid var(--border-h); box-shadow: inset 0 2px 10px rgba(255,255,255,0.02), 0 5px 15px rgba(0,0,0,0.3);">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#e879f9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 5px rgba(232,121,249,0.6));"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                        <span style="font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: #fff; letter-spacing: 0.05em; text-transform: uppercase;">Cuidadosamente Configurado</span>
-                    </div>
+                <div class="landing-stat-sep">|</div>
+                <div class="landing-stat">
+                    <span class="landing-stat-value blue">23</span>
+                    <span class="landing-stat-label">Jugadores</span>
                 </div>
-                
-                <p style="font-size: 1.3rem; line-height: 1.8; color: rgba(255, 255, 255, 0.75); text-align: center; max-width: 1000px; margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.9); font-weight: 400; padding: 0 1.5rem;">
-                    ¡Bienvenido a la web oficial de <strong style="font-size: 1.6rem; color: #ffcc00; font-weight: 900; text-shadow: 0 0 15px rgba(255,204,0,0.4);">Distopia 2</strong>! Este servidor de Minecraft está creado para que juguemos juntos y pasemos un <strong style="font-size: 1.45rem; color: #fff; font-weight: 700;">verano inolvidable</strong>. Con <strong style="font-size: 1.45rem; color: #fff; font-weight: 700;">más de 200 mods</strong> meticulosamente seleccionados, ofrecemos un entorno <strong style="font-size: 1.45rem; color: #fff; font-weight: 700;">cuidadosamente configurado</strong> que incluye <strong style="font-size: 1.5rem; color: #fff; font-weight: 800;">razas, clases, nuevas dimensiones y exploración inmersiva</strong>. El contenido está diseñado para adaptarse a <strong style="font-size: 1.45rem; color: #fff; font-weight: 700;">cualquier estilo de juego</strong>, garantizando <strong style="font-size: 1.5rem; color: #fff; font-weight: 800;">rendimiento y estabilidad</strong> en nuestros PC gracias a las optimizaciones aplicadas.
-                </p>
+                <div class="landing-stat-sep">|</div>
+                <div class="landing-stat">
+                    <span class="landing-stat-value green">16 GB</span>
+                    <span class="landing-stat-label">Host Dedicado</span>
+                </div>
+            </div>
 
-                <div style="margin-top: 2.5rem; text-align: center;">
-                    <h3 style="font-family: var(--font-head); font-size: 1.5rem; color: var(--t1); margin-bottom: 1.2rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">Jugadores Confirmados</h3>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; max-width: 900px; margin: 0 auto;">
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Ruddisender22</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Adventur56</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Juanchichichi</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Noeliaa</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Tokki</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">arturo_ml7</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">ice nigger</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">REDOX</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Raulogy</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">neru</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Aoiiryuu</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Nairezen</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">Cabra</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">GuillerMerlos</span>
-                        <span style="background: rgba(0, 204, 255, 0.1); border: 1px solid rgba(0, 204, 255, 0.3); color: #00ccff; padding: 0.5rem 1.2rem; border-radius: var(--r-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);">DavidDiez</span>
+            <!-- Description -->
+            <p class="landing-description">
+                ¡Bienvenido a la web oficial de <span class="brand-name">Distopia 2</span>!
+                Un servidor privado de Minecraft creado por <span class="creator-name">Ruddisender22</span>, 
+                con la colaboración de <span class="creator-name">Adventur56</span> (mods y administración) y 
+                <span class="creator-name">Aoiiryuu</span> (background y lobby). Cuidadosamente preparado para ofrecer una 
+                <strong>experiencia de juego novedosa y entretenida</strong>, con el fin de tener un pedazo de mundo. 
+                Incluye <strong>capítulos de misiones</strong> (con más añadiéndose con el tiempo), 
+                <strong>gachas</strong>, <strong>clases</strong>, <strong>nuevos mobs</strong>, 
+                <strong>dimensiones</strong>, <strong>armaduras</strong> y mucho más. El rendimiento en el cliente 
+                es <strong>espectacular y soporta shaders</strong>. En el servidor optimizamos para que 
+                no haya lag cuando hay muchas personas conectadas.
+            </p>
+
+            <!-- Stage Banner -->
+            <div class="stage-banner">
+                <div class="stage-banner-header">
+                    <div class="stage-badge">
+                        <span class="pulse-dot"></span>
+                        Etapa 1 — ¡Hola Mundo!
+                    </div>
+                    <span class="stage-banner-title">Etapa Actual</span>
+                </div>
+                <ul class="stage-banner-points">
+                    <li>Solo Overworld habilitado</li>
+                    <li>Misiones del Capítulo 1 disponibles</li>
+                    <li>Gachas hasta rareza Mega</li>
+                    <li>Mobs difíciles desactivados</li>
+                    <li>Nether, End y Eternal Starlight prohibidos</li>
+                    <li>Inicio suave para explorar sin estrés</li>
+                </ul>
+            </div>
+
+            <!-- Player Roster -->
+            <div class="player-roster-section">
+                <h3 class="player-roster-title">23 Jugadores Confirmados</h3>
+                <div class="player-roster-wrapper">
+                    <div class="player-roster-track" id="player-roster-track">
+                        <div class="roster-player"><span class="roster-role">👑</span><span class="roster-name admin">Ruddis</span></div>
+                        <div class="roster-player"><span class="roster-role">⚙️</span><span class="roster-name collab">Adventur</span></div>
+                        <div class="roster-player"><span class="roster-role">🎨</span><span class="roster-name collab">Airin</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Tokki</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Verde</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Guiler</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">DavidDiez06</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Reedox</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Clau</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Manza</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Nerea</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Juanchi</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Merlos</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Botis</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Clonmi</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Dani</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Raulogy</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Nioken</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Cabra</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Noelia</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Nagore</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Arturo</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Czar</span></div>
+                        <!-- Duplicated for infinite scroll -->
+                        <div class="roster-player"><span class="roster-role">👑</span><span class="roster-name admin">Ruddis</span></div>
+                        <div class="roster-player"><span class="roster-role">⚙️</span><span class="roster-name collab">Adventur</span></div>
+                        <div class="roster-player"><span class="roster-role">🎨</span><span class="roster-name collab">Airin</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Tokki</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Verde</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Guiler</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">DavidDiez06</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Reedox</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Clau</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Manza</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Nerea</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Juanchi</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Merlos</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Botis</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Clonmi</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Dani</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Raulogy</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Nioken</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Cabra</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Noelia</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Nagore</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Arturo</span></div>
+                        <div class="roster-player"><span class="roster-role">🎮</span><span class="roster-name">Czar</span></div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="landing-nav-cards-container">
                 <span class="nav-circles-label">Explorar Secciones</span>
                 <div class="landing-nav-cards-scroll-wrapper">
@@ -161,7 +213,8 @@
                     </div>
                 </div>
             </div>
-</header>
+        </div>
+    </header>
 
     <!-- ══ AUTH MODAL — premium login wall ══ -->
     <div class="auth-modal-overlay" id="auth-modal-overlay" hidden role="dialog" aria-modal="true"

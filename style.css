@@ -3271,3 +3271,492 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 
 .origins-header.aos-init { transform: translateY(-20px); }
 .origins-header.aos-init.aos-animate { transform: translateY(0); }
+
+/* ══════════════════════════════════════════════════════════════
+   LANDING HERO (MINECRAFT BG + RESTRUCTURED)
+══════════════════════════════════════════════════════════════ */
+.landing-hero {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.landing-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 2rem 3rem;
+  text-align: center;
+}
+
+.mc-bg-hero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 380px;
+  background: url('Recursos/Minecraft/menubackground.png') center bottom / cover no-repeat;
+  image-rendering: pixelated;
+  opacity: 0.18;
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.landing-logo {
+  width: 180px;
+  height: 180px;
+  filter: drop-shadow(0 0 30px rgba(255, 204, 0, 0.4));
+  animation: logoFloat 6s ease-in-out infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.landing-eyebrow {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--violet);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+.landing-author {
+  font-size: 0.9rem;
+  color: var(--t3);
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* Stats row */
+.landing-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.landing-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.landing-stat-value {
+  font-family: var(--font-head);
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+.landing-stat-value.gold { background: linear-gradient(135deg, #ffcc00 0%, #ff8800 40%, #ff2200 75%, #ffcc00 100%); -webkit-background-clip: text; filter: drop-shadow(0 2px 10px rgba(255, 136, 0, 0.4)); }
+.landing-stat-value.blue { background: linear-gradient(135deg, #00ccff 0%, #0088ff 40%, #0055ff 75%, #00ccff 100%); -webkit-background-clip: text; filter: drop-shadow(0 2px 10px rgba(0, 204, 255, 0.4)); }
+.landing-stat-value.green { background: linear-gradient(135deg, #4ade80 0%, #22c55e 40%, #16a34a 75%, #4ade80 100%); -webkit-background-clip: text; filter: drop-shadow(0 2px 10px rgba(74, 222, 128, 0.4)); }
+
+.landing-stat-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 0.4rem;
+}
+
+.landing-stat-sep {
+  font-size: 2.5rem;
+  color: var(--border-h);
+  line-height: 1;
+  font-weight: 300;
+}
+
+/* Description */
+.landing-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--t2);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+  font-weight: 400;
+  padding: 0 1rem;
+}
+
+.landing-description strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.landing-description .brand-name {
+  font-size: 1.3rem;
+  color: #ffcc00;
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(255,204,0,0.4);
+}
+
+.landing-description .creator-name {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+/* ── Stage Banner ── */
+.stage-banner {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 2.5rem;
+  background: linear-gradient(145deg, rgba(255,204,0,0.06) 0%, rgba(255,204,0,0.01) 100%);
+  border: 1px solid rgba(255,204,0,0.25);
+  border-radius: var(--r-xl);
+  padding: 1.8rem 2.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,204,0,0.5), transparent);
+  opacity: 0.6;
+}
+
+.stage-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #ffcc00 0%, #ff8800 100%);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--r-pill);
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #05020a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 20px rgba(255,204,0,0.3);
+}
+
+.stage-badge .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #05020a;
+  border-radius: 50%;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.stage-banner-title {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--t1);
+}
+
+.stage-banner-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+}
+
+.stage-banner-points li {
+  font-size: 0.9rem;
+  color: var(--t2);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.stage-banner-points li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* ── Player Roster (Vertical Marquee) ── */
+.player-roster-section {
+  margin-top: 2.5rem;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player-roster-title {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  color: var(--t1);
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.player-roster-wrapper {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.player-roster-track {
+  display: flex;
+  flex-direction: column;
+  animation: rosterScroll 30s linear infinite;
+}
+
+.player-roster-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rosterScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.roster-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.roster-player:hover {
+  transform: scale(1.05);
+}
+
+.roster-player:hover .roster-name {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.roster-role {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.roster-name {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--t2);
+  letter-spacing: 0.02em;
+  transition: all 0.3s;
+}
+
+.roster-name.admin { color: #ffcc00; text-shadow: 0 0 10px rgba(255,204,0,0.3); }
+.roster-name.collab { color: var(--cyan); text-shadow: 0 0 10px rgba(0,204,255,0.3); }
+
+/* ══════════════════════════════════════════════════════════════
+   GACHA TIERS (Characteristics Page)
+══════════════════════════════════════════════════════════════ */
+.gacha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gacha-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.2rem 0.8rem;
+  border-radius: var(--r-lg);
+  border: 1px solid;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gacha-tier:hover {
+  transform: translateY(-5px);
+}
+
+.gacha-tier-name {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gacha-tier-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.gacha-tier.normal   { border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.05); }
+.gacha-tier.normal .gacha-tier-name { color: #4ade80; }
+.gacha-tier.super    { border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.05); }
+.gacha-tier.super .gacha-tier-name { color: #38bdf8; }
+.gacha-tier.mega     { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.05); }
+.gacha-tier.mega .gacha-tier-name { color: #3b82f6; }
+.gacha-tier.ultra    { border-color: rgba(232,121,249,0.3); background: rgba(232,121,249,0.05); }
+.gacha-tier.ultra .gacha-tier-name { color: #e879f9; }
+.gacha-tier.master   { border-color: rgba(255,204,0,0.3); background: rgba(255,204,0,0.05); }
+.gacha-tier.master .gacha-tier-name { color: #ffcc00; }
+.gacha-tier.requiem  { border-color: rgba(248,113,113,0.3); background: rgba(248,113,113,0.05); }
+.gacha-tier.requiem .gacha-tier-name { color: #f87171; }
+
+/* ══════════════════════════════════════════════════════════════
+   STAGE TIMELINE (Characteristics Page)
+══════════════════════════════════════════════════════════════ */
+.stage-timeline {
+  max-width: 900px;
+  margin: 2rem auto;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.stage-timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(255,204,0,0.6), rgba(0,204,255,0.6), rgba(232,121,249,0.6));
+}
+
+.stage-tl-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 1.8rem 2rem;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+}
+
+.stage-tl-item::before {
+  content: '';
+  position: absolute;
+  left: -2.4rem;
+  top: 2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: var(--bg);
+}
+
+.stage-tl-item.stage-1::before { border-color: #ffcc00; box-shadow: 0 0 10px rgba(255,204,0,0.5); }
+.stage-tl-item.stage-2::before { border-color: #00ccff; box-shadow: 0 0 10px rgba(0,204,255,0.5); }
+.stage-tl-item.stage-3::before { border-color: #e879f9; box-shadow: 0 0 10px rgba(232,121,249,0.5); }
+.stage-tl-item.stage-event::before { border-color: #f87171; box-shadow: 0 0 10px rgba(248,113,113,0.5); background: #f87171; }
+
+.stage-tl-label {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.stage-tl-item.stage-1 .stage-tl-label { color: #ffcc00; }
+.stage-tl-item.stage-2 .stage-tl-label { color: #00ccff; }
+.stage-tl-item.stage-3 .stage-tl-label { color: #e879f9; }
+.stage-tl-item.stage-event .stage-tl-label { color: #f87171; }
+
+.stage-tl-title {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--t1);
+  margin-bottom: 0.8rem;
+}
+
+.stage-tl-desc {
+  font-size: 1rem;
+  color: var(--t2);
+  line-height: 1.7;
+}
+
+.stage-tl-points {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.stage-tl-points li {
+  font-size: 0.95rem;
+  color: var(--t2);
+  padding: 0.3rem 0 0.3rem 1.2rem;
+  position: relative;
+}
+
+.stage-tl-points li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.stage-tl-item.stage-1 .stage-tl-points li::before { color: #ffcc00; }
+.stage-tl-item.stage-2 .stage-tl-points li::before { color: #00ccff; }
+.stage-tl-item.stage-3 .stage-tl-points li::before { color: #e879f9; }
+.stage-tl-item.stage-event .stage-tl-points li::before { color: #f87171; }
+
+/* Mc sky separator */
+.mc-sky-separator {
+  width: 100%;
+  height: 120px;
+  background: url('Recursos/Minecraft/menubackgroundsky.png') center / cover no-repeat;
+  image-rendering: pixelated;
+  opacity: 0.15;
+  mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+}
+
+@media (max-width: 768px) {
+  .landing-hero-inner { padding: 5rem 1.5rem 2rem; }
+  .landing-stats { gap: 1.5rem; }
+  .landing-stat-value { font-size: 2rem; }
+  .landing-stat-sep { font-size: 1.5rem; }
+  .stage-banner { padding: 1.2rem 1.5rem; }
+  .stage-banner-points { grid-template-columns: 1fr; }
+  .stage-timeline { padding-left: 2.2rem; }
+  .stage-tl-item::before { left: -1.8rem; }
+  .gacha-grid { grid-template-columns: repeat(3, 1fr); }
+  .player-roster-wrapper { height: 180px; }
+}

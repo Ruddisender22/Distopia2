@@ -890,7 +890,7 @@ window.RACES_DATA = [
     "name": "Elitariano (Elytrian)",
     "emoji": "🦋",
     "impact": "medium",
-    "description": "Especialista en vuelo. Surca los cielos y es inmune a la energía cinética, pero tiene una constitución frágil y no puede usar armaduras pesadas.",
+    "description": "Especialista en vuelo. Surca los cielos y es inmune a la energía cinética, pero tiene una constitución frágil, es débil al sol y tiene restricciones de armadura.",
     "traits": [
       {
         "name": "Vuelo natural",
@@ -928,6 +928,13 @@ window.RACES_DATA = [
         "key": null
       },
       {
+        "name": "Afinidad pacífica",
+        "desc": "Inmunidad a los mobs hostiles (solo te ignoran los mobs hostiles comunes).",
+        "type": "buff",
+        "icon": "🕊️",
+        "key": null
+      },
+      {
         "name": "Constitución frágil",
         "desc": "Tu salud máxima se reduce en 2 corazones.",
         "type": "debuff",
@@ -935,8 +942,15 @@ window.RACES_DATA = [
         "key": null
       },
       {
+        "name": "Sensibilidad solar",
+        "desc": "Te quemas bajo el sol a menos que lleves un casco equipado.",
+        "type": "debuff",
+        "icon": "☀️",
+        "key": null
+      },
+      {
         "name": "Incapaz de llevar armadura pesada",
-        "desc": "Solo puedes equipar armadura de cuero o cota de mallas (no puedes usar hierro, oro, diamante ni netherita).",
+        "desc": "Solo puedes equipar armadura de cuero o cota de mallas (no puedes usar hierro, oro, diamante ni netherita). Sin embargo, las armaduras de late game (Apotheosis y demás) funcionan normal si son pesadas.",
         "type": "debuff",
         "icon": "🛡️",
         "key": null

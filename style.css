@@ -3293,16 +3293,16 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 
 .mc-bg-hero {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 380px;
-  background: url('Recursos/Minecraft/menubackground.png') center bottom / cover no-repeat;
+  height: 100%;
+  background: url('Recursos/Minecraft/menubackground.png') center center / cover no-repeat;
   image-rendering: pixelated;
-  opacity: 0.18;
-  mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  opacity: 0.25;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, transparent 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -3598,53 +3598,70 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 /* ══════════════════════════════════════════════════════════════
    GACHA TIERS (Characteristics Page)
 ══════════════════════════════════════════════════════════════ */
-.gacha-grid {
+.gacha-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
 
-.gacha-tier {
+.gacha-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  padding: 1.2rem 0.8rem;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
   border-radius: var(--r-lg);
   border: 1px solid;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gacha-tier:hover {
+.gacha-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
-.gacha-tier-name {
+.gacha-image-slot {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--r-md);
+  background: rgba(0,0,0,0.4);
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.6);
+  border: 1px dashed rgba(255,255,255,0.1);
+}
+
+.gacha-name {
   font-family: var(--font-head);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
-.gacha-tier-icon {
-  font-size: 2rem;
-  line-height: 1;
-}
+.gacha-card.tier-normal   { border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.05); }
+.gacha-card.tier-normal:hover   { border-color: rgba(74,222,128,0.6); }
+.gacha-card.tier-normal .gacha-name { color: #4ade80; }
 
-.gacha-tier.normal   { border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.05); }
-.gacha-tier.normal .gacha-tier-name { color: #4ade80; }
-.gacha-tier.super    { border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.05); }
-.gacha-tier.super .gacha-tier-name { color: #38bdf8; }
-.gacha-tier.mega     { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.05); }
-.gacha-tier.mega .gacha-tier-name { color: #3b82f6; }
-.gacha-tier.ultra    { border-color: rgba(232,121,249,0.3); background: rgba(232,121,249,0.05); }
-.gacha-tier.ultra .gacha-tier-name { color: #e879f9; }
-.gacha-tier.master   { border-color: rgba(255,204,0,0.3); background: rgba(255,204,0,0.05); }
-.gacha-tier.master .gacha-tier-name { color: #ffcc00; }
-.gacha-tier.requiem  { border-color: rgba(248,113,113,0.3); background: rgba(248,113,113,0.05); }
-.gacha-tier.requiem .gacha-tier-name { color: #f87171; }
+.gacha-card.tier-super    { border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.05); }
+.gacha-card.tier-super:hover    { border-color: rgba(56,189,248,0.6); }
+.gacha-card.tier-super .gacha-name { color: #38bdf8; }
+
+.gacha-card.tier-mega     { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.05); }
+.gacha-card.tier-mega:hover     { border-color: rgba(59,130,246,0.6); }
+.gacha-card.tier-mega .gacha-name { color: #3b82f6; }
+
+.gacha-card.tier-ultra    { border-color: rgba(232,121,249,0.3); background: rgba(232,121,249,0.05); }
+.gacha-card.tier-ultra:hover    { border-color: rgba(232,121,249,0.6); }
+.gacha-card.tier-ultra .gacha-name { color: #e879f9; }
+
+.gacha-card.tier-master   { border-color: rgba(255,204,0,0.3); background: rgba(255,204,0,0.05); }
+.gacha-card.tier-master:hover   { border-color: rgba(255,204,0,0.6); }
+.gacha-card.tier-master .gacha-name { color: #ffcc00; }
+
+.gacha-card.tier-requiem  { border-color: rgba(248,113,113,0.3); background: rgba(248,113,113,0.05); }
+.gacha-card.tier-requiem:hover  { border-color: rgba(248,113,113,0.6); }
+.gacha-card.tier-requiem .gacha-name { color: #f87171; }
 
 /* ══════════════════════════════════════════════════════════════
    STAGE TIMELINE (Characteristics Page)
@@ -3722,30 +3739,21 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   line-height: 1.7;
 }
 
-.stage-tl-points {
+.stage-tl-features {
   margin-top: 1rem;
-  list-style: none;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.stage-tl-points li {
+.stage-feature-item {
   font-size: 0.95rem;
   color: var(--t2);
-  padding: 0.3rem 0 0.3rem 1.2rem;
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.4;
 }
-
-.stage-tl-points li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-.stage-tl-item.stage-1 .stage-tl-points li::before { color: #ffcc00; }
-.stage-tl-item.stage-2 .stage-tl-points li::before { color: #00ccff; }
-.stage-tl-item.stage-3 .stage-tl-points li::before { color: #e879f9; }
-.stage-tl-item.stage-event .stage-tl-points li::before { color: #f87171; }
 
 /* Mc sky separator */
 .mc-sky-separator {

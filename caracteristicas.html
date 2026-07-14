@@ -205,12 +205,11 @@
              Feature 3: Más loot para todos
         ═══════════════════════════════════════════════════════════ -->
         <div class="feature-centered">
-            <div class="fc-number-bg">03</div>
-            <div class="fc-visual-small aspect-square" style="display: flex; align-items: center; justify-content: center; background: none; border: none;">
-                <img src="Recursos/Minecraft/Capturas/lootr.png" alt="Loot" style="width: 100%; border-radius: var(--r-md); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
-            </div>
             <div class="fc-content">
                 <h2 class="fc-title">Más loot para todos</h2>
+                <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 1.5rem;">
+                    <img src="Recursos/Minecraft/Capturas/lootr.png" alt="Loot" style="width: 100%; max-width: 600px; border-radius: var(--r-md); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+                </div>
                 <p class="fc-desc">La exploración debe ser recompensada. Ahora cada cofre de botín que os encontréis por
                     el mundo tendrá <span class="highlight-violet">loot único instanciado para cada jugador</span>. ¡Se
                     acabó el quedarse sin nada o pelearse porque alguien llegó antes a explorar la dungeon!</p>
@@ -225,18 +224,22 @@
             <div class="fc-content">
                 <h2 class="fc-title">Minecraft con esteroides</h2>
                 <p class="fc-desc">Un mundo completamente renovado. <span class="highlight-green">Nuevas maderas, nuevos animales curiosos y nuevas estructuras</span> por todas partes. Encontraréis estructuras de saqueadores, <span class="highlight-violet">castillos</span>, <span class="highlight-cyan">torres mágicas</span> y secretos ocultos en las minas. Nueva vegetación, nuevas plantas y un aspecto visual más bonito con <span class="highlight-magenta">niebla más pronunciada</span>. <span class="highlight-orange">Tiburones</span> en los mares, <span class="highlight-green">cocodrilos</span> en los pantanos, <span class="highlight-cyan">osos</span> en los bosques, <span class="highlight-violet">águilas</span> en las montañas y ciervos por todos lados, entre muchos otros.</p>
-                <div class="image-carousel">
-                    <img src="Recursos/Minecraft/Capturas/mundo1.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo2.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo3.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo4.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo5.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo6.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo7.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo8.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo9.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo10.png" alt="Mundo inmersivo">
-                    <img src="Recursos/Minecraft/Capturas/mundo11.png" alt="Mundo inmersivo">
+                <div class="carousel-wrapper" style="position: relative; width: 100%; max-width: 800px; margin: 1.5rem auto;">
+                    <button class="carousel-btn prev-btn" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10094;</button>
+                    <div class="image-carousel" style="margin: 0;">
+                        <img src="Recursos/Minecraft/Capturas/mundo1.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo2.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo3.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo4.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo5.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo6.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo7.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo8.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo9.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo10.png" alt="Mundo inmersivo">
+                        <img src="Recursos/Minecraft/Capturas/mundo11.png" alt="Mundo inmersivo">
+                    </div>
+                    <button class="carousel-btn next-btn" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10095;</button>
                 </div>
             </div>
         </div>
@@ -255,13 +258,17 @@
                     <li><span class="highlight-violet">Myths and Legends</span>: Criaturas de fantasía oscura inspiradas en folklore mundial: Abaddon, Gargoyles, armaduras poseídas, el espectral Black Charro y más.</li>
                 </ul>
                 <p class="fc-desc">Además, los <span class="highlight-green">creepers no rompen bloques</span> pero spawnean <span class="highlight-red">mini creepers muy peligrosos</span>. Piglins y pillagers pueden aparecer con <span class="highlight-orange">armadura completa</span>. En el Nether solo habrá esqueletos wither y aparecerán <span class="highlight-violet">esqueletos bebé</span>.</p>
-                <div class="image-carousel">
-                    <img src="Recursos/Minecraft/Capturas/enemigos1.png" alt="Enemigo">
-                    <img src="Recursos/Minecraft/Capturas/enemigos2.png" alt="Enemigo">
-                    <img src="Recursos/Minecraft/Capturas/enemigos3.png" alt="Enemigo">
-                    <img src="Recursos/Minecraft/Capturas/enemigos4.png" alt="Enemigo">
-                    <img src="Recursos/Minecraft/Capturas/enemigos5.png" alt="Enemigo">
-                    <img src="Recursos/Minecraft/Capturas/enemigos6.png" alt="Enemigo">
+                <div class="carousel-wrapper" style="position: relative; width: 100%; max-width: 800px; margin: 1.5rem auto;">
+                    <button class="carousel-btn prev-btn" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10094;</button>
+                    <div class="image-carousel" style="margin: 0;">
+                        <img src="Recursos/Minecraft/Capturas/enemigos1.png" alt="Enemigo">
+                        <img src="Recursos/Minecraft/Capturas/enemigos2.png" alt="Enemigo">
+                        <img src="Recursos/Minecraft/Capturas/enemigos3.png" alt="Enemigo">
+                        <img src="Recursos/Minecraft/Capturas/enemigos4.png" alt="Enemigo">
+                        <img src="Recursos/Minecraft/Capturas/enemigos5.png" alt="Enemigo">
+                        <img src="Recursos/Minecraft/Capturas/enemigos6.png" alt="Enemigo">
+                    </div>
+                    <button class="carousel-btn next-btn" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10095;</button>
                 </div>
             </div>
         </div>
@@ -271,11 +278,11 @@
         ═══════════════════════════════════════════════════════════ -->
         <div class="feature-centered">
             <div class="fc-number-bg">06</div>
-            <div class="fc-visual-small aspect-square" style="display: flex; align-items: center; justify-content: center; background: none; border: none;">
-                <img src="Recursos/Minecraft/Capturas/12ojos.png" alt="12 Ojos del Fin" style="width: 100%; border-radius: var(--r-md); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
-            </div>
             <div class="fc-content">
                 <h2 class="fc-title">Los 12 Ojos del Fin</h2>
+                <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 1.5rem;">
+                    <img src="Recursos/Minecraft/Capturas/12ojos.png" alt="12 Ojos del Fin" style="width: 100%; max-width: 600px; border-radius: var(--r-md); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+                </div>
                 <p class="fc-desc">El portal hacia la dimensión final ya no se abre con los métodos tradicionales. Para
                     viajar al End tendréis que explorar y farmear <span class="highlight-cyan">12 ojos distintos de
                         End</span>, que se encuentran esparcidos y escondidos por todo el mundo, añadiendo un enorme
@@ -288,11 +295,6 @@
         ═══════════════════════════════════════════════════════════ -->
         <div class="feature-centered">
             <div class="fc-number-bg">07</div>
-            <div class="fc-visual-small aspect-square">
-                <div class="visual-placeholder">
-                    <span class="placeholder-text">Arsenal</span>
-                </div>
-            </div>
             <div class="fc-content">
                 <h2 class="fc-title">Arsenal y combate renovado</h2>
                 <p class="fc-desc">Un sistema de equipamiento completamente ampliado:</p>
@@ -303,6 +305,21 @@
                     <li>Nuevo tipo de combate centrado en la <span class="highlight-cyan">magia</span> (Iron's Spellbooks): armaduras mágicas, bastones, armas con hechizos y muchos <span class="highlight-magenta">complementos pasivos</span> para tu armadura (Curios).</li>
                     <li>Escudos de distintos materiales con <span class="highlight-red">mecánicas de parry</span> para dominar el combate.</li>
                 </ul>
+                <div class="carousel-wrapper" style="position: relative; width: 100%; max-width: 800px; margin: 1.5rem auto;">
+                    <button class="carousel-btn prev-btn" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10094;</button>
+                    <div class="image-carousel" style="margin: 0;">
+                        <img src="Recursos/Minecraft/Capturas/armaduras1.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras2.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras3.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras4.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras5.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras6.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras7.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras8.png" alt="Armadura">
+                        <img src="Recursos/Minecraft/Capturas/armaduras9.png" alt="Armadura">
+                    </div>
+                    <button class="carousel-btn next-btn" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10095;</button>
+                </div>
             </div>
         </div>
 
@@ -311,14 +328,17 @@
         ═══════════════════════════════════════════════════════════ -->
         <div class="feature-centered">
             <div class="fc-number-bg">08</div>
-            <div class="fc-visual-small aspect-square">
-                <div class="visual-placeholder">
-                    <span class="placeholder-text">Apotheosis</span>
-                </div>
-            </div>
             <div class="fc-content">
                 <h2 class="fc-title">Apotheosis: Potencia sin límites</h2>
                 <p class="fc-desc">Con <span class="highlight-magenta">Apotheosis</span>, los encantamientos y el equipamiento alcanzan niveles muy superiores a los de Minecraft vanilla. Aparecen <span class="highlight-red">nuevos mini bosses</span> por el mundo que droppean materiales valiosos. Podréis usar <span class="highlight-cyan">mejores encantamientos</span> superando los límites clásicos, <span class="highlight-green">gemas que ofrecen nuevos atributos</span>, y <span class="highlight-violet">imbuir el equipamiento con materiales de distintas rarezas</span> para volveros increíblemente fuertes.</p>
+                <div class="carousel-wrapper" style="position: relative; width: 100%; max-width: 800px; margin: 1.5rem auto;">
+                    <button class="carousel-btn prev-btn" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10094;</button>
+                    <div class="image-carousel" style="margin: 0;">
+                        <img src="Recursos/Minecraft/Capturas/apoth1.png" alt="Apotheosis">
+                        <img src="Recursos/Minecraft/Capturas/apoth2.png" alt="Apotheosis">
+                    </div>
+                    <button class="carousel-btn next-btn" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--violet); border: none; color: #fff; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-weight: bold;">&#10095;</button>
+                </div>
             </div>
         </div>
 
@@ -703,6 +723,50 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+            const carousel = wrapper.querySelector('.image-carousel');
+            const prev = wrapper.querySelector('.prev-btn');
+            const next = wrapper.querySelector('.next-btn');
+            
+            if (!carousel || !prev || !next) return;
+
+            const scrollAmount = () => carousel.clientWidth;
+
+            prev.addEventListener('click', () => {
+                carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+            });
+            next.addEventListener('click', () => {
+                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                }
+            });
+
+            let interval;
+            const startAutoScroll = () => {
+                interval = setInterval(() => {
+                    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                    }
+                }, 4000);
+            };
+
+            const stopAutoScroll = () => clearInterval(interval);
+
+            startAutoScroll();
+
+            wrapper.addEventListener('mouseenter', stopAutoScroll);
+            wrapper.addEventListener('mouseleave', startAutoScroll);
+            
+            // Touch support
+            wrapper.addEventListener('touchstart', stopAutoScroll, {passive: true});
+            wrapper.addEventListener('touchend', startAutoScroll, {passive: true});
+        });
+    </script>
 </body>
 
 </html>

@@ -887,7 +887,7 @@ window.RACES_DATA = [
     ]
   },
   {
-    "name": "Elitariano (Elytrian)",
+    "name": "Elytrariano (Elytrian)",
     "emoji": "🦋",
     "impact": "medium",
     "description": "Especialista en vuelo. Surca los cielos y es inmune a la energía cinética, pero tiene una constitución frágil, es débil al sol y tiene restricciones de armadura.",
@@ -2653,7 +2653,7 @@ window.RACES_DATA = [
       },
       {
         "name": "Aversión a la luz",
-        "desc": "Recibes 1 punto de daño por segundo al exponerte a la luz solar directa.",
+        "desc": "Recibes 1 punto de daño por segundo al exponerte a la luz solar directa a menos que lleves un casco equipado.",
         "type": "debuff",
         "icon": "☀️",
         "key": null
@@ -2717,7 +2717,7 @@ window.RACES_DATA = [
       },
       {
         "name": "Quemadura solar",
-        "desc": "Te prendes fuego y recibes 2 puntos de daño por segundo al exponerte a la luz solar directa.",
+        "desc": "Te prendes fuego y recibes 2 puntos de daño por segundo al exponerte a la luz solar directa a menos que lleves un casco equipado.",
         "type": "debuff",
         "icon": "☀️",
         "key": null
@@ -2753,7 +2753,7 @@ window.RACES_DATA = [
     "traits": [
       {
         "name": "Parentesco salvaje",
-        "desc": "Todas las criaturas del juego (incluso las hostiles) te ignoran por completo, a menos que tú las ataques primero.",
+        "desc": "Todas las criaturas del juego (incluso las hostiles comunes) te ignoran por completo, a menos que tú las ataques primero.",
         "type": "buff",
         "icon": "🌱",
         "key": null

@@ -3803,12 +3803,13 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 .image-carousel::-webkit-scrollbar { display: none; }
 .image-carousel::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: var(--r-pill); }
 .image-carousel::-webkit-scrollbar-thumb { background: var(--violet); border-radius: var(--r-pill); }
-.image-carousel img { flex: 0 0 100%; scroll-snap-align: center; border-radius: var(--r-md); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.5); object-fit: contain; max-height: 350px; height: auto; background: rgba(0,0,0,0.2); }
+.image-carousel img { flex: 0 0 100%; scroll-snap-align: center; border-radius: var(--r-xl); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 15px 30px rgba(0,0,0,0.6); object-fit: contain; max-height: 350px; height: auto; background: rgba(0,0,0,0.2); }
 
 
 .gacha-full-card { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; width: 100%; max-width: 300px; margin: 0 auto; }
 .gacha-full-card:hover { transform: translateY(-5px); filter: brightness(1.1); }
-.gacha-full-card img { width: 100%; height: auto; display: block; border-radius: var(--r-md); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+.gacha-full-card img { width: 100%; height: auto; display: block; border-radius: var(--r-xl); box-shadow: 0 15px 30px rgba(0,0,0,0.6); }
+
 
 
 

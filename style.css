@@ -3805,3 +3805,10 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   .gacha-grid { grid-template-columns: repeat(3, 1fr); }
   .player-roster-wrapper { height: 180px; }
 }
+
+.image-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; width: 100%; max-width: 800px; margin: 1.5rem auto; padding-bottom: 1rem; scrollbar-width: thin; scrollbar-color: var(--violet) transparent; }
+.image-carousel::-webkit-scrollbar { height: 8px; }
+.image-carousel::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: var(--r-pill); }
+.image-carousel::-webkit-scrollbar-thumb { background: var(--violet); border-radius: var(--r-pill); }
+.image-carousel img { flex: 0 0 100%; scroll-snap-align: center; border-radius: var(--r-md); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.5); object-fit: cover; max-height: 450px; }
+

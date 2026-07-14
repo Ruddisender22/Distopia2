@@ -3308,8 +3308,8 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 }
 
 .landing-logo {
-  width: 180px;
-  height: 180px;
+  width: 260px;
+  height: 260px;
   filter: drop-shadow(0 0 30px rgba(255, 204, 0, 0.4));
   animation: logoFloat 6s ease-in-out infinite;
   margin-bottom: 1.5rem;
@@ -3387,16 +3387,28 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 }
 
 /* Description */
+.landing-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
 .landing-description {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   color: var(--t2);
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
   text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+  font-weight: 500;
+}
+
+.landing-description.secondary-desc {
+  font-size: 1.15rem;
   font-weight: 400;
-  padding: 0 1rem;
+  color: var(--t3);
 }
 
 .landing-description strong {
@@ -3483,27 +3495,27 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   color: var(--t1);
 }
 
-.stage-banner-points {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.6rem;
-  list-style: none;
-  padding: 0;
+.stage-banner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.stage-banner-points li {
-  font-size: 0.9rem;
+.stage-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 500;
   color: var(--t2);
-  padding-left: 1.2rem;
-  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.stage-banner-points li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: #ffcc00;
-  font-weight: bold;
+.feature-icon {
+  font-size: 1.2rem;
 }
 
 /* ── Player Roster (Vertical Marquee) ── */
@@ -3527,41 +3539,39 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 }
 
 .player-roster-wrapper {
-  height: 220px;
-  overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  width: 100%;
 }
 
-.player-roster-track {
-  display: flex;
-  flex-direction: column;
-  animation: rosterScroll 30s linear infinite;
-}
-
-.player-roster-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes rosterScroll {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
+.player-roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.8rem;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.2);
+  border-radius: var(--r-xl);
+  border: 1px solid var(--border-l);
 }
 
 .roster-player {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-  cursor: default;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .roster-player:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
 }
+
+
 
 .roster-player:hover .roster-name {
   color: #fff;

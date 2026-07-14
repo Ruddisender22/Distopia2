@@ -3298,11 +3298,11 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   right: 0;
   width: 100%;
   height: 100%;
-  background: url('Recursos/Minecraft/menubackground.png') center center / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(5,2,10,0.3) 0%, rgba(5,2,10,0.8) 100%), url('Recursos/Minecraft/menubackground.png') center center / cover no-repeat;
   image-rendering: pixelated;
-  opacity: 0.25;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, transparent 100%);
+  opacity: 0.65;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 85%, transparent 100%);
   pointer-events: none;
   z-index: 0;
 }

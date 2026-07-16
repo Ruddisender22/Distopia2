@@ -1410,18 +1410,6 @@
                     ]
                 },
                 {
-                    "id": "diagonal-fences",
-                    "name": "Diagonal Fences",
-                    "images": [
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalfences/media/1.png",
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalfences/media/2.png",
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalfences/media/3.png"
-                    ],
-                    "paragraphs": [
-                        "Permite colocar vallas en diagonal para construir cercas más naturales y estéticamente agradables."
-                    ]
-                },
-                {
                     "id": "diagonal-walls",
                     "name": "Diagonal Walls",
                     "images": [
@@ -1429,18 +1417,6 @@
                     ],
                     "paragraphs": [
                         "Permite colocar muros de piedra en diagonal, ideal para diseños arquitectónicos más complejos y naturales."
-                    ]
-                },
-                {
-                    "id": "diagonal-windows",
-                    "name": "Diagonal Windows",
-                    "images": [
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwindows/media/1.png",
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwindows/media/3.png",
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwindows/media/3.png"
-                    ],
-                    "paragraphs": [
-                        "Permite colocar cristales y ventanas en diagonal. Construye fachadas modernas y tejados con ángulos únicos."
                     ]
                 },
                 {

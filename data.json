@@ -22,18 +22,6 @@
                     "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
-                    "id": "cataclysm-spellbooks",
-                    "name": "Cataclysm: Spellbooks",
-                    "images": [
-                        "https://i.ytimg.com/vi/pdI1WRpu3dA/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/XU89RbQqTxQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqDCXWgTzp4THycIWrGl4LxJN39g"
-                    ],
-                    "paragraphs": [
-                        "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
                     "id": "corail-tombstone",
                     "name": "Corail Tombstone",
                     "images": [
@@ -108,17 +96,6 @@
                     "paragraphs": [
                         "Añade propulsores, turbinas y motores avanzados al mod Create, diseñados para impulsar vehículos aéreos y terrestres personalizados."
                     ]
-                },
-                {
-                    "id": "create-addictives",
-                    "name": "Create: Addictives",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg"
-                    ],
-                    "paragraphs": [
-                        "crea tu imperio de drogas y pruéba sus efectos con tus amigos."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
                     "id": "create-deep-dark",
@@ -851,6 +828,18 @@
                     "status": "ELIMINADO"
                 },
                 {
+                    "id": "cataclysm-spellbooks",
+                    "name": "Cataclysm: Spellbooks",
+                    "images": [
+                        "https://i.ytimg.com/vi/pdI1WRpu3dA/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/XU89RbQqTxQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqDCXWgTzp4THycIWrGl4LxJN39g"
+                    ],
+                    "paragraphs": [
+                        "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
                     "id": "clean-swing",
                     "name": "Clean Swing",
                     "images": [
@@ -1457,6 +1446,17 @@
                     "paragraphs": [
                         "Añade varitas (sticks) de construcción en diferentes materiales (madera, cobre, hierro, diamante y netherita) que permiten colocar múltiples bloques a la vez en la dirección que miras. Puedes aplicar plantillas en la mesa de herrería para obtener habilidades especiales."
                     ]
+                },
+                {
+                    "id": "create-addictives",
+                    "name": "Create: Addictives",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg"
+                    ],
+                    "paragraphs": [
+                        "crea tu imperio de drogas y pruéba sus efectos con tus amigos."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
                     "id": "diagonal-walls",

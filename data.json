@@ -719,10 +719,7 @@
                     "id": "create",
                     "name": "Create",
                     "images": [
-                        "https://i.ytimg.com/vi/G7bHeb3QyE0/maxresdefault.jpg",
-                        "https://static0.cbrimages.com/wordpress/wp-content/uploads/2021/11/Minecraft-Create-Mod-cover-spread-with-windmill-and-machines.jpg",
-                        "https://i.ytimg.com/vi/jDIuWv7ROi8/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/2Xc7qzTgVw8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD2MtA1ABimCg0bp52kzKupPkl_Qg"
+                        "https://i.ytimg.com/vi/NQIAvYO_Ras/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCqGsp6MJeyaD7sPIcWtc92OVp_aw"
                     ],
                     "paragraphs": [
                         "Permite construir fábricas, trenes y maquinaria compleja utilizando energía cinética.",
@@ -734,16 +731,10 @@
                     "id": "create-addictives",
                     "name": "Create: Addictives",
                     "images": [
-                        "https://i.ytimg.com/vi/xpEpRcKj7kg/hqdefault.jpg",
-                        "https://media.forgecdn.net/attachments/1571/29/1000711914-jpg.jpg",
-                        "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg",
-                        "https://media.forgecdn.net/attachments/1571/24/1000711916-jpg.jpg",
-                        "https://media.forgecdn.net/attachments/1558/421/image-png.png"
+                        "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg"
                     ],
                     "paragraphs": [
-                        "¡Es hora de cocinar! Este mod introduce la producción de drogas totalmente interactivas y cultivos ilícitos para darle un giro oscuro a tu aventura industrial.",
-                        "Podrás usar toda la maquinaria de Create para establecer cadenas de producción completas y procesar sustancias como la marihuana, tabaco, cocaína, setas alucinógenas y muchas más.",
-                        "Pero cuidado: cada sustancia genera tolerancia de forma individual y tiene efectos secundarios, alucinaciones personalizadas e incluso síndromes de abstinencia."
+                        "crea tu imperio de drogas y pruéba sus efectos con tus amigos."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
@@ -751,15 +742,10 @@
                     "id": "create-aeronautics",
                     "name": "Create Aeronautics",
                     "images": [
-                        "https://media.forgecdn.net/attachments/1635/782/airships.png",
-                        "https://media.forgecdn.net/attachments/1635/780/cloud-skipper.png",
-                        "https://media.forgecdn.net/attachments/1635/785/dock.png",
-                        "https://media.forgecdn.net/attachments/1635/788/plane.png",
-                        "https://media.forgecdn.net/attachments/1635/787/car.png"
+                        "https://i.ytimg.com/vi/SO8tpWfZjGk/maxresdefault.jpg"
                     ],
                     "paragraphs": [
-                        "Expansión tecnológica para construir vehículos como dirigibles, aviones y coches.",
-                        "Amplía las mecánicas rotacionales para introducir físicas aerodinámicas en la construcción."
+                        "Construye aviones y vehiculos terrestres!"
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },

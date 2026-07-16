@@ -1,578 +1,9 @@
 {
     "sections": [
         {
-            "name": "Dimensiones",
-            "icon": "🌌",
+            "name": "🏆 Grandes Expansiones",
+            "description": "",
             "mods": [
-                {
-                    "id": "unusual-end",
-                    "name": "Unusual End",
-                    "images": [
-                        "https://img.youtube.com/vi/9BiflIectOo/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/pZslb2Osw-g/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/MuAz6bIKzdk/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/1012/111/2024-10-28_19.webp"
-                    ],
-                    "paragraphs": [
-                        "Una actualización Vanilla+ para The End que amplía drásticamente la dimensión con nueva diversidad.",
-                        "Introduce biomas totalmente nuevos como los Gloopy Plains, flora endémica, bloques de construcción (Gloopstone, Gloopslate) y criaturas únicas como las luciérnagas del End y los temibles Endstone Trappers."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "jaden-nether",
-                    "name": "Jaden's Nether Expansion",
-                    "images": [
-                        "https://i.ytimg.com/vi/SGn5ZBT6lVM/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/978/919/image_2024-09-30_143655397.png",
-                        "https://media.forgecdn.net/attachments/978/921/image_2024-09-30_143729089.png",
-                        "https://cdn.modrinth.com/data/cached_images/785096d7cef82a540190a9b0f2671de05042197c.png",
-                        "https://media.forgecdn.net/attachments/978/916/image_2024-09-30_143539190.png"
-                    ],
-                    "paragraphs": [
-                        "Mejora y agrega nuevo contenido Vanilla+ a todos los aspectos del Nether.",
-                        "Expande la dimensión añadiendo biomas inéditos, criaturas exóticas y estructuras masivas como el Sanctum, renovando la experiencia para que siga sintiéndose inmersiva y equilibrada."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "eternal-starlight",
-                    "name": "Eternal Starlight",
-                    "images": [
-                        "https://cdn.modrinth.com/data/cached_images/5b5fd13a601ae8013f11edb1131d2ad2dd16a80c.png",
-                        "https://media.forgecdn.net/attachments/936/439/2024-08-09_16.png",
-                        "https://media.forgecdn.net/attachments/936/437/2024-08-09_16.png",
-                        "https://cdn.modrinth.com/data/XvcfUGfB/images/1ae02b0df79edad8e5d81fe2eed0459e6d4e7b6f.png",
-                        "https://www.minecraft-guides.com/wp-content/uploads/2025/06/Ruin_Common.png",
-                        "https://i.ytimg.com/vi/P2O6xJjSnXU/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/936/441/2024-08-09_16.png"
-                    ],
-                    "paragraphs": [
-                        "Introduce una extensa y mágica dimensión de rol, repleta de biomas únicos, criaturas misteriosas, jefes formidables y materiales muy raros.",
-                        "Se accede a este mundo etéreo a través de un portal que debes activar con el Orbe de la Profecía. Allí tendrás que explorar, combatir y sobrevivir para obtener el equipamiento esencial que te permita seguir progresando."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "the-bumblezone",
-                    "name": "The Bumblezone",
-                    "images": [
-                        "https://i.ytimg.com/vi/DrHzWP32w6I/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDW8ZarFlAen5gvDDBCok0tcaavjg",
-                        "https://media.forgecdn.net/attachments/278/358/2020-02-11_18.png",
-                        "https://media.forgecdn.net/attachments/732/31/floral_meadow.png",
-                        "https://media.forgecdn.net/attachments/597/700/hanging_gardens2.png"
-                    ],
-                    "paragraphs": [
-                        "Añade una hermosa y colorida dimensión basada en el interior de una colmena de abejas. Explora un ecosistema único lleno de estructuras de panales, flores gigantes, miel y criaturas pacíficas u hostiles según cómo trates a sus habitantes."
-                    ],
-                    "status": "ELIMINADO"
-                }
-            ]
-        },
-        {
-            "name": "Aventura y Rol",
-            "icon": "⚔️",
-            "mods": [
-                {
-                    "id": "origins",
-                    "name": "Origins",
-                    "images": [
-                        "https://minecraft.fr/wp-content/uploads/2021/12/origins-mod-minecraft.jpg",
-                        "https://i.imgur.com/617o2yF.png",
-                        "https://staticg.sportskeeda.com/editor/2021/10/ca86d-16333460584633-800.jpg"
-                    ],
-                    "paragraphs": [
-                        "Permite seleccionar una raza única al crear un mundo, otorgando habilidades especiales, ventajas determinantes y vulnerabilidades marcadas."
-                    ]
-                },
-                {
-                    "id": "origins-classes",
-                    "name": "Origins: Classes",
-                    "images": [
-                        "https://i.ytimg.com/vi/axUNBMEFTI8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAc1Or_Z9tfnPVM1ZLmAC4KZqHmQA"
-                    ],
-                    "paragraphs": [
-                        "Incorpora una selección de clases de especialización como Arquero, Herrero, Clérigo o Explorador que otorgan ligeros beneficios pasivos sin imponer penalizaciones ni desventajas al jugador."
-                    ]
-                },
-                {
-                    "id": "chest-cavity-beyond",
-                    "name": "Chest Cavity Beyond",
-                    "images": [
-                        "https://i.ytimg.com/vi/9QFp7WpC838/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6L3FrUtRKEInrtftWadeELQNq2Q",
-                        "https://cdn.modrinth.com/data/cached_images/c9ff1f33a9388e153ff5427bc4c4d93ea2347a61.webp",
-                        "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2021/04/Enderman-Chest-Cavity-mod.jpg?q=50&fit=crop&w=825&dpr=1.5"
-                    ],
-                    "paragraphs": [
-                        "Implementa un sistema de anatomía avanzado que permite operar y extraer órganos.",
-                        "Posibilita robar órganos a criaturas exóticas para implantarlos en el cuerpo y absorber así sus atributos naturales."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "minecraft-comes-alive",
-                    "name": "MCA Reborn",
-                    "images": [
-                        "https://i.ytimg.com/vi/qgy6M91zzYU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAGZ9zxJVamZ2km9uE-0TV1PYt-TQ"
-                    ],
-                    "paragraphs": [
-                        "Sustituye a los aldeanos comunes por humanos interactivos con distintas personalidades, aspectos y oficios.",
-                        "Permite charlar, comerciar, formar vínculos familiares y tener descendencia de ayuda en las tareas mundanas."
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Generación de Mundo",
-            "icon": "🌍",
-            "mods": [
-                {
-                    "id": "no-mans-land",
-                    "name": "No Man's Land",
-                    "images": [
-                        "https://i.ytimg.com/vi/RduumoQJqpk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCjJlCPWYarijJXoVwat1rh54Mxag",
-                        "https://i.ytimg.com/vi/w0pTLLgZR6k/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/1112/294/inside-an-old-growth-forest_12.png",
-                        "https://media.forgecdn.net/attachments/1112/284/beach_2.png",
-                        "https://media.forgecdn.net/attachments/1112/301/river-along-an-old-growth-forest_19.png"
-                    ],
-                    "paragraphs": [
-                        "Perfecciona drásticamente la generación de terreno Vanilla+, optimizando biomas existentes y añadiendo frondosos bosques antiguos sumamente inmersivos, nueva vegetación y criaturas."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "ecologics",
-                    "name": "Ecologics",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/424/77/crabncastle.jpg",
-                        "https://media.forgecdn.net/attachments/432/858/desertstuff.png",
-                        "https://media.forgecdn.net/attachments/439/748/snowyupdate.png",
-                        "https://media.forgecdn.net/attachments/443/775/squirrels.png"
-                    ],
-                    "paragraphs": [
-                        "Mejora de forma sutil y fiel los biomas clásicos de estilo vanilla añadiendo nuevas criaturas encantadoras, bloques únicos y mecánicas frescas."
-                    ]
-                },
-                {
-                    "id": "alexs-caves",
-                    "name": "Alex's Caves",
-                    "images": [
-                        "https://i.ytimg.com/vi/pEeaVttRo18/maxresdefault.jpg",
-                        "https://cdn.modrinth.com/data/cached_images/6bea1f277d234f4ed385dc9cd1bf9855876391fd.jpeg",
-                        "https://cdn.modrinth.com/data/U6GY0xp0/images/e2e859f9dfba2a5b0e52cabb51b8916d6cce9278.jpeg",
-                        "https://cdn.modrinth.com/data/U6GY0xp0/images/50ed8746315312c1702746d23ff357d7ea326aec.jpeg",
-                        "https://cdn.modrinth.com/data/U6GY0xp0/images/8ecd2a55f8b2f42babacb31c0f771be434a8c6cc.jpeg",
-                        "https://cdn.modrinth.com/data/U6GY0xp0/images/6dfd473407ad68950ad95c1e6b9d9c127e387df5.jpeg",
-                        "https://cdn.modrinth.com/data/U6GY0xp0/images/8b8bca522ee76b34e5e55a0e80ba49313db6fc5b.jpeg",
-                        "https://cdn.modrinth.com/data/U6GY0xp0/images/6148dcac7cf47f4f609eb3c0027ae95c24f10d8a.jpeg"
-                    ],
-                    "paragraphs": [
-                        "Añade 6 biomas de cuevas subterráneas masivas y extremadamente raras, repletas de mecánicas, peligros y criaturas prehistóricas, abisales o tóxicas.",
-                        "Para encontrar estos biomas, es necesario localizar mapas especializados en cabañas subterráneas que guían la expedición.",
-                        "Cada cueva presenta su propia iluminación, niebla y atmósfera inmersiva que transforman el entorno por completo."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "pale-garden",
-                    "name": "Perfect Parity Neo: Pale Garden Awakens",
-                    "images": [
-                        "https://lionsdigest1.com/wp-content/uploads/2024/12/IMG_6934.jpeg",
-                        "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/MC_HolidayPreRelease_BlogEditorial_ArticleImage_01_1280x720.jpg",
-                        "https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b3/Pale_Garden_Vibrant.png/revision/latest?cb=20250607021259",
-                        "https://media.forgecdn.net/attachments/978/29/2024-09-28_22.png"
-                    ],
-                    "paragraphs": [
-                        "Introduce el lúgubre bioma del Jardín Pálido y la misteriosa criatura Creaking al juego.",
-                        "Incluye nueva vegetación como el Roble pálido, junto con bloques decorativos de musgo y alfombras pálidas."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "better-villages",
-                    "name": "Better Villages",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/645/628/savanna_3.png",
-                        "https://media.forgecdn.net/attachments/645/624/savanna_1.png",
-                        "https://media.forgecdn.net/attachments/466/401/snow_1.png",
-                        "https://media.forgecdn.net/attachments/458/251/2.png",
-                        "https://media.forgecdn.net/attachments/458/247/0.png",
-                        "https://media.forgecdn.net/attachments/458/136/ethandstrue.png",
-                        "https://media.forgecdn.net/attachments/648/629/example_bounti.png",
-                        "https://media.forgecdn.net/attachments/645/626/savanna_2.png"
-                    ],
-                    "paragraphs": [
-                        "Mejora significativamente la apariencia y el diseño general de todas las aldeas de Minecraft, optimizando su estructura estructural para que se sientan mucho más orgánicas.",
-                        "Introduce nuevos diseños de casas arquitectónicas, integra mejor los caminos con el terreno y busca crear una experiencia de inmersión y exploración más realista sin salirse del estilo vanilla."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "dungeons-nether",
-                    "name": "Dungeons Dimensions: Nether",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1545/158/518a27c9817ad4976a4d51b0eda2e2a92dab7371-png.png",
-                        "https://media.forgecdn.net/attachments/1545/145/08ff5807732cce17d1a779556cad1698ff9241ef-png.png",
-                        "https://media.forgecdn.net/attachments/1545/162/ca55e4e0b141bf4eaaf35805bbfd2bca833fc13d-png.png",
-                        "https://media.forgecdn.net/attachments/1545/150/8aeaa050f1ab553b45a10d82f76f8e8758f72893-png.png",
-                        "https://media.forgecdn.net/attachments/1545/153/5eca9cb7c9e930b0ae1c18e96920b6655760ba7d-png.png",
-                        "https://media.forgecdn.net/attachments/1545/154/6e939e052809c6b0d96ccb176b882c05bd1d4b98-png.png"
-                    ],
-                    "paragraphs": [
-                        "Agrega contenido de terreno de Minecraft Dungeons para el Nether.",
-                        "Dungeons Dimensions: Nether añade nuevos bloques y vegetación, actualiza los modelos y texturas de bloques existentes y añade una nueva generación de mundos, todo ello basado en su apariencia en Minecraft: Dungeons."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "illager-arena",
-                    "name": "Illager Arena",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1350/25/arena.png",
-                        "https://media.forgecdn.net/attachments/1350/24/battleground.png",
-                        "https://media.forgecdn.net/attachments/1349/506/2025-10-07_04.png"
-                    ],
-                    "paragraphs": [
-                        "Añade una gigantesca arena de Illagers en el desierto, repleta de todo tipo de Illagers y valioso botín.",
-                        "La arena tiene varias secciones: el campo de batalla en el centro, gradas para espectadores, zonas de preparación, dormitorios, una pequeña herrería y la habitación del Ilusionista con la mejor recompensa."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "nether-trials",
-                    "name": "Nether Trials & Chambers",
-                    "images": [
-                        "https://i.postimg.cc/HxQBWpY1/hellish_trials_banner.png",
-                        "https://i.postimg.cc/y6SCC945/2025_12_27_16_44_36.png",
-                        "https://i.postimg.cc/9096P3YF/2025_12_28_00_20_50.png",
-                        "https://i.postimg.cc/d3CbRMjJ/2025_12_28_00_22_39.png",
-                        "https://i.postimg.cc/fTgb1v2y/2025_12_28_16_38_37.png",
-                        "https://i.postimg.cc/gk0JM7DL/2025_12_28_00_45_31_(1).png",
-                        "https://i.postimg.cc/x8mwGr3H/2025_12_28_00_15_59.png"
-                    ],
-                    "paragraphs": [
-                        "Genera Trial Chambers únicas en la dimensión del Nether.",
-                        "Estas fortalezas incluyen características desafiantes como bóvedas de recompensas, generadores de combate, la criatura Brisa y trampas con cargas de viento."
-                    ]
-                },
-                {
-                    "id": "underwater-villages",
-                    "name": "Underwater Villages",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1138/519/2025-03-25_19.png",
-                        "https://media.forgecdn.net/attachments/1138/520/2025-03-25_19.png",
-                        "https://media.forgecdn.net/attachments/1138/521/2025-03-25_19.png",
-                        "https://media.forgecdn.net/attachments/1138/522/2025-03-25_19.png",
-                        "https://media.forgecdn.net/attachments/1138/523/2025-03-25_19.png",
-                        "https://media.forgecdn.net/attachments/1138/524/2025-03-25_19.png"
-                    ],
-                    "paragraphs": [
-                        "Añade nuevos poblados oceánicos y estructuras sumergidas para enriquecer la exploración submarina, habitados por aldeanos acuáticos y repletos de detalles y recompensas ocultas."
-                    ]
-                },
-                {
-                    "id": "the-roads-more-travelled",
-                    "name": "The Roads More Travelled",
-                    "images": [
-                        "https://img.youtube.com/vi/OvsNVaFiK1Y/maxresdefault.jpg",
-                        "https://i.imgur.com/Uqg119h.png",
-                        "https://i.imgur.com/PHJaK3E.png",
-                        "https://i.imgur.com/LOvPlVV.png"
-                    ],
-                    "paragraphs": [
-                        "Crea un sistema de erosión que forma senderos de tierra automáticamente en los caminos por los que pasas caminando frecuentemente."
-                    ],
-                    "status": "ELIMINADO"
-                }
-            ]
-        },
-        {
-            "name": "Criaturas y Enemigos",
-            "icon": "☠️",
-            "mods": [
-                {
-                    "id": "cataclysm",
-                    "name": "L_Ender 's Cataclysm",
-                    "images": [
-                        "https://i.ytimg.com/vi/rBVnM2JYAAc/maxresdefault.jpg"
-                    ],
-                    "paragraphs": [
-                        "Introduce nuevas mazmorras, arenas de combate y estructuras de gran tamaño.",
-                        "Cada guarida presenta enfrentamientos contra jefes que sueltan armas, armaduras y equipamiento especial."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "wither-wrath",
-                    "name": "Wither's Wrath",
-                    "images": [
-                        "https://i.ytimg.com/vi/pA7_XPDWF7E/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/1231/631/curse-gif.gif",
-                        "https://static.planetminecraft.com/files/image/minecraft/data-pack/2021/017/14923277-boobs-moment_xl.webp",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDeyDmzYu_-aS15P_RGWYI26aftCWd1uAzvQ&s",
-                        "https://github.com/user-attachments/assets/60f6e28e-dd9e-417c-a01c-81c8784d54bd",
-                        "https://github.com/user-attachments/assets/ec368079-347f-4bff-a844-84bfd9b06268"
-                    ],
-                    "paragraphs": [
-                        "Presenta una versión renovada y más agresiva del Wither, diseñada para suponer un mayor desafío.",
-                        "Introduce nuevos patrones de ataque y aumenta su salud máxima, forzando una batalla más compleja."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "royal-variations",
-                    "name": "Royal Variations",
-                    "images": [
-                        "https://i.ytimg.com/vi/SIy9yi7BN3Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAmXbS-Hv4d9oYlIH_Lf88Ep61Cxg",
-                        "https://media.forgecdn.net/attachments/1343/722/2025-09-23_04.png",
-                        "https://media.forgecdn.net/attachments/1343/721/2025-09-23_04.png",
-                        "https://media.forgecdn.net/attachments/1343/724/2025-10-02_02.png",
-                        "https://media.forgecdn.net/attachments/1343/725/2025-09-23_04.png"
-                    ],
-                    "paragraphs": [
-                        "Añade variaciones reales mejoradas de las criaturas originales del juego, con características propias.",
-                        "Todas las criaturas que encontrarás periódicamente en el mundo tienen sus propias habilidades y una mayor cantidad de experiencia y botines, incluyendo nuevos objetos con su propia utilidad. Este mod diversificará y complicará ligeramente tu supervivencia sin sobrecargar el juego con demasiadas mecánicas."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "piglin-proliferation",
-                    "name": "Piglin Proliferation",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/874/341/2c67fb2f135dfe1d112ba2559cbb87e7eefade6e.webp",
-                        "https://media.forgecdn.net/attachments/874/342/11d95258123964ab82fdf79e1140c782ad6b2f1d.webp",
-                        "https://cdn.modrinth.com/data/cached_images/6e730067e3e640e7df9c17b544898b7b0b853751.png",
-                        "https://www.minecrafteo.com/wp-content/uploads/2023/11/piglin-proliferation-mod-363x212.jpg"
-                    ],
-                    "paragraphs": [
-                        "Diversifica a los Piglins al otorgar características únicas a sus variantes originales y añadiendo nuevos tipos de guerreros.",
-                        "Busca establecer la identidad de esta especie como una civilización diversa y multifacética dentro del Nether."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "variants-venture",
-                    "name": "Variants & Venture",
-                    "images": [
-                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/logo.png",
-                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/gelid.webp",
-                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/thicket.webp",
-                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/verdant.webp",
-                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/murk.webp"
-                    ],
-                    "paragraphs": [
-                        "Añade variantes de criaturas que se integran en el mundo de Minecraft.",
-                        "Cada variante aparece de forma natural en los biomas correspondientes. También puedes encontrar generadores en mazmorras y cámaras de prueba, añadiendo exploración adicional."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "primal",
-                    "name": "Primal",
-                    "images": [
-                        "https://cdn.modrinth.com/data/cached_images/cf4195afe91c34d812b70668566480dd7db064bc.png",
-                        "https://cdn.modrinth.com/data/cached_images/d35b44870d11d133ae66a8319a3684f1792d28be.jpeg",
-                        "https://cdn.modrinth.com/data/cached_images/3279725dd2b3374ec08485a71cdefa5eab5e7299.jpeg",
-                        "https://media.forgecdn.net/attachments/1600/568/2026-03-27_01-16-28-png.png"
-                    ],
-                    "paragraphs": [
-                        "Amplía la fauna del juego para hacer la supervivencia más inmersiva.",
-                        "Añade animales prehistóricos y primitivos que encajan con la estética original, incorporando mecánicas propias."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "spawn",
-                    "name": "Spawn",
-                    "images": [
-                        "https://i.ytimg.com/vi/dedPNkX38Ok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1EYGcfin27Hi4x4XP_POSZAUd2A",
-                        "https://i.ytimg.com/vi/f7tAHa8yA9A/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/N_kGvDJXcf0/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/1405/348/2025-11-26_16-57-49-copy-png.png",
-                        "https://media.forgecdn.net/attachments/1405/335/2025-11-26_16-53-11-png.png",
-                        "https://media.forgecdn.net/attachments/1405/349/2025-11-26_17-14-36-copy-png.png",
-                        "https://media.forgecdn.net/attachments/1405/342/2025-11-26_17-27-22-png.png"
-                    ],
-                    "paragraphs": [
-                        "Añade una variedad de animales al juego, acompañados de nuevos bloques, mecánicas y biomas.",
-                        "Introduce criaturas de diversos tamaños que interactúan con el entorno natural."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "ghast-update",
-                    "name": "Ghast Update",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1138/815/capture-da-c-cran-2025-03-26-012539-png.png",
-                        "https://media.forgecdn.net/attachments/1135/453/capture-decran-2025-03-23-184138.png",
-                        "https://media.forgecdn.net/attachments/1136/845/capture-da-c-cran-2025-03-25-002740-png.png"
-                    ],
-                    "paragraphs": [
-                        "Expande el contenido relacionado con el Nether, añadiendo nuevas mecánicas a los clásicos espectros flotantes del juego."
-                    ]
-                },
-                {
-                    "id": "treasures-of-the-dead",
-                    "name": "Treasures Of The Dead",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1080/510/logo3.jpg",
-                        "https://media.forgecdn.net/attachments/1056/46/1.png",
-                        "https://media.forgecdn.net/attachments/1144/176/2025-03-31_18-20-15-png.png",
-                        "https://media.forgecdn.net/attachments/1080/511/7.png"
-                    ],
-                    "paragraphs": [
-                        "Añade enemigos piratas, estructuras oceánicas y características relacionadas con la piratería."
-                    ]
-                },
-                {
-                    "id": "enderman-overhaul",
-                    "name": "Enderman Overhaul",
-                    "images": [
-                        "https://i.imgur.com/5qipNL9.png",
-                        "https://media.forgecdn.net/attachments/740/401/crimson_enderman.png",
-                        "https://media.forgecdn.net/attachments/740/398/windswept_hills_enderman.png",
-                        "https://media.forgecdn.net/attachments/740/280/cave_enderman.png",
-                        "https://media.forgecdn.net/attachments/740/277/badlands_enderman.png",
-                        "https://media.forgecdn.net/attachments/740/396/snowy_enderman.png",
-                        "https://media.forgecdn.net/attachments/740/406/ocean_enderman.png",
-                        "https://media.forgecdn.net/attachments/740/285/ice_spikes_enderman.png"
-                    ],
-                    "paragraphs": [
-                        "Expande las variantes del Enderman añadiendo más de 20 tipos nuevos. Cada variante cuenta con sonidos, modelos y animaciones propias, adaptándose a biomas específicos.",
-                        "Algunas variantes son neutrales, mientras que otras son agresivas incluso sin contacto visual directo. También pueden soltar perlas de Ender especiales y otros recursos dependiendo de su hábitat."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "creeper-overhaul",
-                    "name": "Creeper Overhaul",
-                    "images": [
-                        "https://i.imgur.com/W758n8u.png",
-                        "https://media.forgecdn.net/attachments/419/336/swamp.png",
-                        "https://media.forgecdn.net/attachments/419/308/bamboo.PNG",
-                        "https://media.forgecdn.net/attachments/419/311/dark_oak.png",
-                        "https://media.forgecdn.net/attachments/419/315/jungle.PNG",
-                        "https://media.forgecdn.net/attachments/604/298/ocean_creeper_screenshot.png"
-                    ],
-                    "paragraphs": [
-                        "Reemplaza a los creepers clásicos por nuevas variantes específicas para cada bioma (como creepers de la jungla, océano o nieve).",
-                        "Cada variante presenta comportamientos, animaciones y modelos propios. Algunos sueltan botines especiales, interactúan de forma distinta con el entorno o pueden camuflarse."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "myths-and-legends",
-                    "name": "Myths & Legends",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/description/1133244/description_65d592f3-552e-4391-8f61-5b9b74ced301.png",
-                        "https://media.forgecdn.net/attachments/1214/983/possessed-armor-in-game-png.png",
-                        "https://media.forgecdn.net/attachments/1214/981/gargoyle-in-game-png.png",
-                        "https://media.forgecdn.net/attachments/1214/982/imp-in-game-png.png",
-                        "https://media.forgecdn.net/attachments/1214/984/black-charro-in-game-png.png"
-                    ],
-                    "paragraphs": [
-                        "Introduce criaturas míticas, estructuras y reliquias de fantasía oscura inspiradas en el folclore global.",
-                        "Añade nuevos desafíos y criaturas al mundo, como gárgolas, diablillos, almas condenadas y armaduras poseídas."
-                    ]
-                },
-                {
-                    "id": "goblin-traders",
-                    "name": "Goblin Traders",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/510/242/newscreenshot1a.png",
-                        "https://media.forgecdn.net/attachments/510/243/newscreenshot2a.png"
-                    ],
-                    "paragraphs": [
-                        "Añade duendes comerciantes que aparecen bajo tierra o en la superficie, ofreciendo intercambios por objetos raros y valiosos."
-                    ]
-                },
-                {
-                    "id": "tameable-zombie-horse-and-skeleton-horse",
-                    "name": "Tameable Zombie Horse And Skeleton Horse",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/description/null/description_dcc38f1c-a466-4960-bd73-b1f616d373ec.png"
-                    ],
-                    "paragraphs": [
-                        "Permite domar, equipar con montura y montar a los caballos zombi y esqueleto de la misma forma que a los caballos normales."
-                    ]
-                },
-                {
-                    "id": "unusual-prehistory-2",
-                    "name": "Unusual Prehistory 2",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1417/474/1.png",
-                        "https://media.forgecdn.net/attachments/1594/733/1.png",
-                        "https://media.forgecdn.net/attachments/1343/758/card-11-carnotaurus.png",
-                        "https://media.forgecdn.net/attachments/1342/840/card-4-dunkleosteus.png",
-                        "https://media.forgecdn.net/attachments/1401/857/card_1_majungasaurus-png.png"
-                    ],
-                    "paragraphs": [
-                        "Permite descubrir fósiles en el mundo, extraer su ADN y revivir una variedad de criaturas prehistóricas y dinosaurios.",
-                        "Esta versión incluye modelos detallados, animaciones fluidas y mecánicas para interactuar y criar a estas criaturas."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "ribbits",
-                    "name": "Ribbits",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/889/105/image_1.png",
-                        "https://cdn.modrinth.com/data/cached_images/73a878cb94d406ab3e3f136a295b794beb3a106a.png",
-                        "https://www.minecraft-guides.com/wp-content/uploads/2025/11/Fisher-1024x576.png"
-                    ],
-                    "paragraphs": [
-                        "Añade a los Ribbits, pequeñas criaturas amigables parecidas a ranas que habitan en el mundo y con las que puedes interactuar o comerciar."
-                    ],
-                    "status": "ELIMINADO"
-                }
-            ]
-        },
-        {
-            "name": "Dificultad y Progresión",
-            "icon": "📈",
-            "mods": [
-                {
-                    "id": "end-remastered",
-                    "name": "End Remastered",
-                    "images": [
-                        "https://www.minecraft-guides.com/wp-content/uploads/2022/05/PortalFrame.jpg",
-                        "https://static.wikia.nocookie.net/endremastered/images/e/ed/Eyes_of_end_remastered.png/revision/latest/smart/width/250/height/250?cb=20231231130313",
-                        "https://i.ytimg.com/vi/IC4ti0dGgl4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwZNWrkhEVxF33OXvfgL8AUZOAhw"
-                    ],
-                    "paragraphs": [
-                        "Cambia la forma de acceder a la dimensión del End, requiriendo encontrar diversos ojos de ender ocultos en el mundo y mazmorras."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "enhanced-celestials",
-                    "name": "Enhanced Celestials",
-                    "images": [
-                        "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
-                        "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
-                        "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
-                    ],
-                    "paragraphs": [
-                        "Añade eventos lunares que alteran el comportamiento del entorno durante la noche, como Lunas de Sangre peligrosas o Lunas de Cosecha que benefician la agricultura."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "spice-of-life",
-                    "name": "Spice of Life: Carrot Edition",
-                    "images": [
-                        "https://media.forgecdn.net/avatars/360/935/637525655151502872.png",
-                        "https://media.forgecdn.net/attachments/248/616/2019-03-14_01.png",
-                        "https://media.forgecdn.net/attachments/248/619/2019-03-14_01.png",
-                        "https://media.forgecdn.net/attachments/248/618/2019-03-14_01.png"
-                    ],
-                    "paragraphs": [
-                        "Mod basado en la alimentación que recompensa al jugador por descubrir y consumir nuevos alimentos.",
-                        "El mod lleva la cuenta de los alimentos únicos consumidos. Al alcanzar ciertas cantidades, el jugador gana corazones de forma permanente, aumentando su salud máxima. Para maximizar la vida, es necesario buscar y elaborar alimentos variados."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
                 {
                     "id": "apotheosis",
                     "name": "Apotheosis",
@@ -591,84 +22,31 @@
                     "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
-                    "id": "burnt-fire",
-                    "name": "Burnt: Better Vanilla Fire",
+                    "id": "cataclysm-spellbooks",
+                    "name": "Cataclysm: Spellbooks",
                     "images": [
-                        "https://media.forgecdn.net/attachments/840/661/title.jpg",
-                        "https://media.forgecdn.net/attachments/966/159/lonelytree.jpg",
-                        "https://media.forgecdn.net/attachments/966/165/mansionfire.jpg",
-                        "https://media.forgecdn.net/attachments/966/166/mansionembers.jpg"
+                        "https://i.ytimg.com/vi/pdI1WRpu3dA/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/XU89RbQqTxQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqDCXWgTzp4THycIWrGl4LxJN39g"
                     ],
                     "paragraphs": [
-                        "Modifica el comportamiento del fuego para que se propague de forma más realista.",
-                        "Los incendios dejan tras de sí bloques carbonizados y cenizas en lugar de hacer desaparecer la madera instantáneamente."
+                        "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
                     ],
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "savage-ender-dragon",
-                    "name": "Savage Ender Dragon",
+                    "id": "corail-tombstone",
+                    "name": "Corail Tombstone",
                     "images": [
-                        "https://user-images.githubusercontent.com/38401808/163781131-8aaf911c-f103-491f-bd98-86f59179c28b.png"
+                        "https://media.forgecdn.net/attachments/433/292/grave_plate_test.jpg",
+                        "https://media.forgecdn.net/attachments/1277/770/knowledge-screen.png",
+                        "https://media.forgecdn.net/attachments/433/288/ambience.jpg"
                     ],
                     "paragraphs": [
-                        "Rediseña la pelea final para convertirla en un desafío mayor. La dificultad de la batalla se ajusta de forma dinámica según el número de jugadores presentes.",
-                        "El dragón puede lanzar rayos e invocar Endermans, y sus bolas de fuego hacen daño explosivo. Además, incluye mecánicas que penalizan estrategias como el uso de camas o élitras."
+                        "Guarda tus objetos en tumbas al morir. Añade mecánicas de supervivencia y exploración en una atmósfera de fantasía oscura.",
+                        "Introduce el sistema de ventajas 'Conocimiento de la Muerte' y un sistema mágico basado en objetos encantables a través de almas de tumbas decorativas.",
+                        "Incluye una interfaz para configurar preferencias, acceder al compendio de información y gestionar ventajas."
                     ]
                 },
-                {
-                    "id": "burnt-basic",
-                    "name": "Burnt Basic",
-                    "images": [
-                        "https://i.ytimg.com/vi/HEizwboHxco/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/1173/450/mansionfire-jpg.jpg",
-                        "https://www.9minecraft.net/wp-content/uploads/2026/01/Burnt-Basic-Mod-Screenshots-1.jpg"
-                    ],
-                    "paragraphs": [
-                        "Mejora las mecánicas del fuego en el juego, dándole un comportamiento más dinámico al quemar materiales."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "miners-moon",
-                    "name": "Miner's Moon",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/description/438447/description_598f50e4-3f5c-4c07-ac41-d138460b4e09.png"
-                    ],
-                    "paragraphs": [
-                        "Añade un evento lunar aleatorio, la Luna del Minero, que altera temporalmente la generación de minerales para hacerlos más abundantes."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "netherite-scrap-from-piglin-brutes",
-                    "name": "Netherite Scrap From Piglin Brutes",
-                    "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/510/844/256/256/637828380871638775.png"
-                    ],
-                    "paragraphs": [
-                        "Otorga a los Piglin Brutos la probabilidad de soltar fragmentos de netherita al ser derrotados en combate."
-                    ]
-                },
-                {
-                    "id": "simple-heart-crystal",
-                    "name": "Simple Heart Crystal",
-                    "images": [
-                        "https://i.imgur.com/GjijADx.png",
-                        "https://i.imgur.com/ZCB5ZC8.png",
-                        "https://i.imgur.com/MUnIehw.png"
-                    ],
-                    "paragraphs": [
-                        "Añade cristales de corazón que se generan en estructuras y cuevas del mundo y que, al ser consumidos por el jugador, incrementan de forma permanente su salud máxima."
-                    ],
-                    "status": "ELIMINADO"
-                }
-            ]
-        },
-        {
-            "name": "Tecnología y Almacenaje",
-            "icon": "⚙️",
-            "mods": [
                 {
                     "id": "create",
                     "name": "Create",
@@ -678,17 +56,6 @@
                     "paragraphs": [
                         "Permite construir fábricas, trenes y maquinaria compleja utilizando energía cinética.",
                         "Añade componentes mecánicos para líneas de producción eficientes, enfocadas siempre en lo visual y mecánico."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "create-addictives",
-                    "name": "Create: Addictives",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg"
-                    ],
-                    "paragraphs": [
-                        "crea tu imperio de drogas y pruéba sus efectos con tus amigos."
                     ],
                     "status": "SELECCIÓN DEL AUTOR"
                 },
@@ -704,43 +71,17 @@
                     "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
-                    "id": "security-craft",
-                    "name": "Security Craft",
+                    "id": "create-big-cannons",
+                    "name": "Create Big Cannons",
                     "images": [
-                        "https://media.forgecdn.net/attachments/647/279/item-security.png",
-                        "https://media.forgecdn.net/attachments/647/278/explosives.png",
-                        "https://media.forgecdn.net/attachments/647/276/defense.png"
+                        "https://i.ytimg.com/vi/nnbNHZ3wJy4/maxresdefault.jpg",
+                        "https://imgur.com/vIVt3se.png",
+                        "https://imgur.com/dx9298q.png"
                     ],
                     "paragraphs": [
-                        "Añade bloques y objetos de seguridad para defender y asegurar tus estructuras."
+                        "Complemento para Create que permite diseñar y construir cañones de gran tamaño utilizando distintos materiales y mecanismos físicos."
                     ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "iron-chest",
-                    "name": "Iron Chest",
-                    "images": [
-                        "https://i.imgur.com/Kz3AG9B.png"
-                    ],
-                    "paragraphs": [
-                        "Incluye cofres de diferentes tamaños correspondientes a los distintos metales del juego original."
-                    ]
-                },
-                {
-                    "id": "create-deep-dark",
-                    "name": "Create: Deep Dark",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1418/644/1.png",
-                        "https://media.forgecdn.net/attachments/1418/645/2.png",
-                        "https://media.forgecdn.net/attachments/1418/646/3.png",
-                        "https://media.forgecdn.net/attachments/1418/647/5.png",
-                        "https://media.forgecdn.net/attachments/1418/649/7.png",
-                        "https://media.forgecdn.net/attachments/1418/650/8.png"
-                    ],
-                    "paragraphs": [
-                        "Complemento para el mod Create que introduce contenido inspirado en el bioma del Oscuro Profundo (Deep Dark).",
-                        "Permite explorar el territorio del Warden para obtener y procesar recursos, como los fragmentos de eco, utilizando la maquinaria de Create para conseguir equipamiento especial."
-                    ]
+                    "status": "NUEVO"
                 },
                 {
                     "id": "create-nuclear",
@@ -769,6 +110,33 @@
                     ]
                 },
                 {
+                    "id": "create-addictives",
+                    "name": "Create: Addictives",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1571/27/1000711913-jpg.jpg"
+                    ],
+                    "paragraphs": [
+                        "crea tu imperio de drogas y pruéba sus efectos con tus amigos."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "create-deep-dark",
+                    "name": "Create: Deep Dark",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1418/644/1.png",
+                        "https://media.forgecdn.net/attachments/1418/645/2.png",
+                        "https://media.forgecdn.net/attachments/1418/646/3.png",
+                        "https://media.forgecdn.net/attachments/1418/647/5.png",
+                        "https://media.forgecdn.net/attachments/1418/649/7.png",
+                        "https://media.forgecdn.net/attachments/1418/650/8.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para el mod Create que introduce contenido inspirado en el bioma del Oscuro Profundo (Deep Dark).",
+                        "Permite explorar el territorio del Warden para obtener y procesar recursos, como los fragmentos de eco, utilizando la maquinaria de Create para conseguir equipamiento especial."
+                    ]
+                },
+                {
                     "id": "create-diesel-generators",
                     "name": "Create: Diesel Generators",
                     "images": [
@@ -778,52 +146,6 @@
                     ],
                     "paragraphs": [
                         "Añade generadores diésel y refinerías de petróleo al mod Create para generar grandes cantidades de energía automatizada."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "iron-furnaces",
-                    "name": "Iron Furnaces",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/279/110/furnaces.png"
-                    ],
-                    "paragraphs": [
-                        "Añade hornos mejorados de distintos materiales (hierro, oro, diamante) que cocinan y funden objetos más rápido."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "sawmil",
-                    "name": "Sawmil",
-                    "images": [
-                        "https://i.imgur.com/8dNQkxR.png"
-                    ],
-                    "paragraphs": [
-                        "Añade un aserradero que actúa como el cortapiedras pero para madera. Es compatible con cualquier mod e incluye la nueva profesión de aldeano Carpintero."
-                    ]
-                },
-                {
-                    "id": "create-big-cannons",
-                    "name": "Create Big Cannons",
-                    "images": [
-                        "https://i.ytimg.com/vi/nnbNHZ3wJy4/maxresdefault.jpg",
-                        "https://imgur.com/vIVt3se.png",
-                        "https://imgur.com/dx9298q.png"
-                    ],
-                    "paragraphs": [
-                        "Complemento para Create que permite diseñar y construir cañones de gran tamaño utilizando distintos materiales y mecanismos físicos."
-                    ],
-                    "status": "NUEVO"
-                },
-                {
-                    "id": "steam-n-rails",
-                    "name": "Steam 'n' Rails",
-                    "images": [
-                        "https://i.redd.it/a-few-trains-i-made-with-the-new-steam-rails-update-v0-v04m32k117vc1.png?width=1920&format=png&auto=webp&s=f3230f3e025486a3e02b093801402c30445d53ad",
-                        "https://media.forgecdn.net/attachments/794/769/64a92e01eaee601cba08f7d3ebbdd72f8d43bd2c.png"
-                    ],
-                    "paragraphs": [
-                        "Complemento para Create que expande el sistema de trenes, añadiendo nuevos tipos de vías, vagonetas y mecánicas logísticas ferroviarias avanzadas."
                     ],
                     "status": "ELIMINADO"
                 },
@@ -843,77 +165,17 @@
                     "status": "NUEVO"
                 },
                 {
-                    "id": "jumbo-furnace",
-                    "name": "Jumbo Furnace",
+                    "id": "fd-create",
+                    "name": "Farmer's Delight: Create",
                     "images": [
-                        "https://media.forgecdn.net/attachments/298/545/splash.png",
-                        "https://media.forgecdn.net/attachments/298/547/hoppers.png",
-                        "https://media.forgecdn.net/attachments/298/546/gui.png"
+                        "https://media.forgecdn.net/attachments/1203/72/3-png.png",
+                        "https://media.forgecdn.net/attachments/1203/75/db095b9db32a26259327db653e41b37b4ede2104-png.png",
+                        "https://media.forgecdn.net/attachments/1203/74/1bcdb418bac23eeafcae00d3193ff16c0d36750d-png.png",
+                        "https://media.forgecdn.net/attachments/1203/73/izobrazhenie_2023-06-18_164230341-png.png"
                     ],
                     "paragraphs": [
-                        "Permite fabricar un horno gigante de bloques múltiples (3x3x3) que puede procesar hasta 9 objetos simultáneamente o hacer recetas especiales de fundición avanzada."
+                        "Permite la automatización de la producción culinaria de Farmer's Delight utilizando la maquinaria e infraestructura de Create."
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Magia",
-            "icon": "🔮",
-            "mods": [
-                {
-                    "id": "corail-tombstone",
-                    "name": "Corail Tombstone",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/433/292/grave_plate_test.jpg",
-                        "https://media.forgecdn.net/attachments/1277/770/knowledge-screen.png",
-                        "https://media.forgecdn.net/attachments/433/288/ambience.jpg"
-                    ],
-                    "paragraphs": [
-                        "Guarda tus objetos en tumbas al morir. Añade mecánicas de supervivencia y exploración en una atmósfera de fantasía oscura.",
-                        "Introduce el sistema de ventajas 'Conocimiento de la Muerte' y un sistema mágico basado en objetos encantables a través de almas de tumbas decorativas.",
-                        "Incluye una interfaz para configurar preferencias, acceder al compendio de información y gestionar ventajas."
-                    ]
-                },
-                {
-                    "id": "pastel",
-                    "name": "Pastel",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1234/195/pastel-banner.png",
-                        "https://media.forgecdn.net/attachments/1234/339/2025-06-28_09.png",
-                        "https://media.forgecdn.net/attachments/1234/337/2025-06-28_10.png"
-                    ],
-                    "paragraphs": [
-                        "Mod de magia centrado en la exploración del color como energía natural.",
-                        "Añade sistemas de progresión, exploración de dimensiones, maquinaria y herramientas basadas en la esencia del color.",
-                        "Características principales: armaduras, herramientas, máquinas, nuevos alimentos, un sistema logístico y una nueva dimensión."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "beautiful-potions",
-                    "name": "Beautiful Potions",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1238/9/beautiful-potions-5.png",
-                        "https://media.forgecdn.net/attachments/1238/13/beautiful-potions-10.png",
-                        "https://media.forgecdn.net/attachments/1238/5/beautiful-potions-1.png"
-                    ],
-                    "paragraphs": [
-                        "Rediseña el aspecto de las pociones para darles diseños de botella distintivos.",
-                        "Mejora el aspecto visual otorgando a cada poción texturas diferentes, facilitando su identificación rápida en el inventario."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "cataclysm-spellbooks",
-                    "name": "Cataclysm: Spellbooks",
-                    "images": [
-                        "https://i.ytimg.com/vi/pdI1WRpu3dA/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/XU89RbQqTxQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqDCXWgTzp4THycIWrGl4LxJN39g"
-                    ],
-                    "paragraphs": [
-                        "Añade compatibilidad entre Iron's Spells y L_Ender's Cataclysm, permitiendo usar nuevos hechizos mágicos basados en los jefes del mod Cataclysm."
-                    ],
-                    "status": "ELIMINADO"
                 },
                 {
                     "id": "irons-spells-n-spellbooks",
@@ -929,6 +191,21 @@
                         "Incluye más de 80 hechizos, varitas personalizables, armaduras mágicas y grimorios de distintas escuelas de magia."
                     ],
                     "status": "ELIMINADO"
+                },
+                {
+                    "id": "starcatcher",
+                    "name": "Starcatcher",
+                    "images": [
+                        "https://i.ytimg.com/vi/jRNG5cYSqpg/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/1344/608/minigame-png.png",
+                        "https://media.forgecdn.net/attachments/1397/874/b94b8c911433e0a25eafd0fcecad6c6e4a1fea2e-png.png",
+                        "https://media.forgecdn.net/attachments/1643/456/description_4bbc8f21-1912-44e5-a865-4ec0388b4548.png",
+                        "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
+                    ],
+                    "paragraphs": [
+                        "Renueva el sistema de pesca con más de 100 peces únicos, cebos, cajas de aparejos, torneos, acuarios y minijuegos interactivos de captura."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
                     "id": "winds-spellbooks",
@@ -958,9 +235,587 @@
             ]
         },
         {
-            "name": "Equipamiento y Armas",
-            "icon": "🛡️",
+            "name": "🌍 Mundo e Inmersión",
+            "description": "",
             "mods": [
+                {
+                    "id": "alexs-caves",
+                    "name": "Alex's Caves",
+                    "images": [
+                        "https://i.ytimg.com/vi/pEeaVttRo18/maxresdefault.jpg",
+                        "https://cdn.modrinth.com/data/cached_images/6bea1f277d234f4ed385dc9cd1bf9855876391fd.jpeg",
+                        "https://cdn.modrinth.com/data/U6GY0xp0/images/e2e859f9dfba2a5b0e52cabb51b8916d6cce9278.jpeg",
+                        "https://cdn.modrinth.com/data/U6GY0xp0/images/50ed8746315312c1702746d23ff357d7ea326aec.jpeg",
+                        "https://cdn.modrinth.com/data/U6GY0xp0/images/8ecd2a55f8b2f42babacb31c0f771be434a8c6cc.jpeg",
+                        "https://cdn.modrinth.com/data/U6GY0xp0/images/6dfd473407ad68950ad95c1e6b9d9c127e387df5.jpeg",
+                        "https://cdn.modrinth.com/data/U6GY0xp0/images/8b8bca522ee76b34e5e55a0e80ba49313db6fc5b.jpeg",
+                        "https://cdn.modrinth.com/data/U6GY0xp0/images/6148dcac7cf47f4f609eb3c0027ae95c24f10d8a.jpeg"
+                    ],
+                    "paragraphs": [
+                        "Añade 6 biomas de cuevas subterráneas masivas y extremadamente raras, repletas de mecánicas, peligros y criaturas prehistóricas, abisales o tóxicas.",
+                        "Para encontrar estos biomas, es necesario localizar mapas especializados en cabañas subterráneas que guían la expedición.",
+                        "Cada cueva presenta su propia iluminación, niebla y atmósfera inmersiva que transforman el entorno por completo."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "amendments",
+                    "name": "Amendments",
+                    "images": [
+                        "https://i.imgur.com/G4k4MIs.png"
+                    ],
+                    "paragraphs": [
+                        "Realiza numerosos ajustes a los bloques originales del juego para brindarles más funcionalidades e inmersión.",
+                        "Permite la mezcla de pociones en calderos, colocación de linternas en muros, apilado de calaveras y adición de detalles decorativos."
+                    ]
+                },
+                {
+                    "id": "beautify",
+                    "name": "Beautify!",
+                    "images": [
+                        "https://i.imgur.com/tDSBihU.jpeg",
+                        "https://i.imgur.com/aVn4B6m.gif"
+                    ],
+                    "paragraphs": [
+                        "Añade una gran variedad de bloques y objetos de decoración de estilo vainilla muy detallados, como plantas colgantes, persianas, pilas de libros y enrejados para dar vida a tus construcciones."
+                    ]
+                },
+                {
+                    "id": "better-villages",
+                    "name": "Better Villages",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/645/628/savanna_3.png",
+                        "https://media.forgecdn.net/attachments/645/624/savanna_1.png",
+                        "https://media.forgecdn.net/attachments/466/401/snow_1.png",
+                        "https://media.forgecdn.net/attachments/458/251/2.png",
+                        "https://media.forgecdn.net/attachments/458/247/0.png",
+                        "https://media.forgecdn.net/attachments/458/136/ethandstrue.png",
+                        "https://media.forgecdn.net/attachments/648/629/example_bounti.png",
+                        "https://media.forgecdn.net/attachments/645/626/savanna_2.png"
+                    ],
+                    "paragraphs": [
+                        "Mejora significativamente la apariencia y el diseño general de todas las aldeas de Minecraft, optimizando su estructura estructural para que se sientan mucho más orgánicas.",
+                        "Introduce nuevos diseños de casas arquitectónicas, integra mejor los caminos con el terreno y busca crear una experiencia de inmersión y exploración más realista sin salirse del estilo vanilla."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "chest-cavity-beyond",
+                    "name": "Chest Cavity Beyond",
+                    "images": [
+                        "https://i.ytimg.com/vi/9QFp7WpC838/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6L3FrUtRKEInrtftWadeELQNq2Q",
+                        "https://cdn.modrinth.com/data/cached_images/c9ff1f33a9388e153ff5427bc4c4d93ea2347a61.webp",
+                        "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2021/04/Enderman-Chest-Cavity-mod.jpg?q=50&fit=crop&w=825&dpr=1.5"
+                    ],
+                    "paragraphs": [
+                        "Implementa un sistema de anatomía avanzado que permite operar y extraer órganos.",
+                        "Posibilita robar órganos a criaturas exóticas para implantarlos en el cuerpo y absorber así sus atributos naturales."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "dungeons-nether",
+                    "name": "Dungeons Dimensions: Nether",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1545/158/518a27c9817ad4976a4d51b0eda2e2a92dab7371-png.png",
+                        "https://media.forgecdn.net/attachments/1545/145/08ff5807732cce17d1a779556cad1698ff9241ef-png.png",
+                        "https://media.forgecdn.net/attachments/1545/162/ca55e4e0b141bf4eaaf35805bbfd2bca833fc13d-png.png",
+                        "https://media.forgecdn.net/attachments/1545/150/8aeaa050f1ab553b45a10d82f76f8e8758f72893-png.png",
+                        "https://media.forgecdn.net/attachments/1545/153/5eca9cb7c9e930b0ae1c18e96920b6655760ba7d-png.png",
+                        "https://media.forgecdn.net/attachments/1545/154/6e939e052809c6b0d96ccb176b882c05bd1d4b98-png.png"
+                    ],
+                    "paragraphs": [
+                        "Agrega contenido de terreno de Minecraft Dungeons para el Nether.",
+                        "Dungeons Dimensions: Nether añade nuevos bloques y vegetación, actualiza los modelos y texturas de bloques existentes y añade una nueva generación de mundos, todo ello basado en su apariencia en Minecraft: Dungeons."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "ecologics",
+                    "name": "Ecologics",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/424/77/crabncastle.jpg",
+                        "https://media.forgecdn.net/attachments/432/858/desertstuff.png",
+                        "https://media.forgecdn.net/attachments/439/748/snowyupdate.png",
+                        "https://media.forgecdn.net/attachments/443/775/squirrels.png"
+                    ],
+                    "paragraphs": [
+                        "Mejora de forma sutil y fiel los biomas clásicos de estilo vanilla añadiendo nuevas criaturas encantadoras, bloques únicos y mecánicas frescas."
+                    ]
+                },
+                {
+                    "id": "end-remastered",
+                    "name": "End Remastered",
+                    "images": [
+                        "https://www.minecraft-guides.com/wp-content/uploads/2022/05/PortalFrame.jpg",
+                        "https://static.wikia.nocookie.net/endremastered/images/e/ed/Eyes_of_end_remastered.png/revision/latest/smart/width/250/height/250?cb=20231231130313",
+                        "https://i.ytimg.com/vi/IC4ti0dGgl4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwZNWrkhEVxF33OXvfgL8AUZOAhw"
+                    ],
+                    "paragraphs": [
+                        "Cambia la forma de acceder a la dimensión del End, requiriendo encontrar diversos ojos de ender ocultos en el mundo y mazmorras."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "enhanced-celestials",
+                    "name": "Enhanced Celestials",
+                    "images": [
+                        "https://i.ytimg.com/vi/CqP3pWvjg6g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpOAQ62YS-vUG29DzhKWk3vMc0rQ",
+                        "https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/201/17393073-superdefault_xl.webp",
+                        "https://i.ytimg.com/vi/Fqjgm__Pt3Q/maxresdefault.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade eventos lunares que alteran el comportamiento del entorno durante la noche, como Lunas de Sangre peligrosas o Lunas de Cosecha que benefician la agricultura."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "eternal-starlight",
+                    "name": "Eternal Starlight",
+                    "images": [
+                        "https://cdn.modrinth.com/data/cached_images/5b5fd13a601ae8013f11edb1131d2ad2dd16a80c.png",
+                        "https://media.forgecdn.net/attachments/936/439/2024-08-09_16.png",
+                        "https://media.forgecdn.net/attachments/936/437/2024-08-09_16.png",
+                        "https://cdn.modrinth.com/data/XvcfUGfB/images/1ae02b0df79edad8e5d81fe2eed0459e6d4e7b6f.png",
+                        "https://www.minecraft-guides.com/wp-content/uploads/2025/06/Ruin_Common.png",
+                        "https://i.ytimg.com/vi/P2O6xJjSnXU/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/936/441/2024-08-09_16.png"
+                    ],
+                    "paragraphs": [
+                        "Introduce una extensa y mágica dimensión de rol, repleta de biomas únicos, criaturas misteriosas, jefes formidables y materiales muy raros.",
+                        "Se accede a este mundo etéreo a través de un portal que debes activar con el Orbe de la Profecía. Allí tendrás que explorar, combatir y sobrevivir para obtener el equipamiento esencial que te permita seguir progresando."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "fd-starcatcher",
+                    "name": "Farmer's Delight: Eternal Starlight",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1705/943/2026-05-26_22-01-52-png.png",
+                        "https://i.imgur.com/G4k4MIs.png"
+                    ],
+                    "paragraphs": [
+                        "Integra contenido y elementos de la dimensión de Eternal Starlight con el ecosistema de Farmer's Delight."
+                    ]
+                },
+                {
+                    "id": "hallow-costumes",
+                    "name": "Hallow Costumes",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1372/205/2025-10-27_01-55-31-png.png",
+                        "https://media.forgecdn.net/attachments/1373/545/2025-10-28_01-23-50-png.png"
+                    ],
+                    "paragraphs": [
+                        "Añade disfraces espeluznantes inspirados en personajes icónicos de terror y diversos accesorios temáticos de Halloween para personalizar a tu personaje."
+                    ]
+                },
+                {
+                    "id": "illager-arena",
+                    "name": "Illager Arena",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1350/25/arena.png",
+                        "https://media.forgecdn.net/attachments/1350/24/battleground.png",
+                        "https://media.forgecdn.net/attachments/1349/506/2025-10-07_04.png"
+                    ],
+                    "paragraphs": [
+                        "Añade una gigantesca arena de Illagers en el desierto, repleta de todo tipo de Illagers y valioso botín.",
+                        "La arena tiene varias secciones: el campo de batalla en el centro, gradas para espectadores, zonas de preparación, dormitorios, una pequeña herrería y la habitación del Ilusionista con la mejor recompensa."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "immersive-paintings",
+                    "name": "Immersive Paintings",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/474/232/screen_editor.jpg",
+                        "https://media.forgecdn.net/attachments/474/233/screen_multi.jpg",
+                        "https://media.forgecdn.net/attachments/474/234/screen_selector.jpg",
+                        "https://media.forgecdn.net/attachments/474/234/screen_selector.jpg"
+                    ],
+                    "paragraphs": [
+                        "Permite importar y utilizar tus propias imágenes personalizadas como cuadros dentro del juego arrastrando y soltando."
+                    ]
+                },
+                {
+                    "id": "jaden-nether",
+                    "name": "Jaden's Nether Expansion",
+                    "images": [
+                        "https://i.ytimg.com/vi/SGn5ZBT6lVM/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/978/919/image_2024-09-30_143655397.png",
+                        "https://media.forgecdn.net/attachments/978/921/image_2024-09-30_143729089.png",
+                        "https://cdn.modrinth.com/data/cached_images/785096d7cef82a540190a9b0f2671de05042197c.png",
+                        "https://media.forgecdn.net/attachments/978/916/image_2024-09-30_143539190.png"
+                    ],
+                    "paragraphs": [
+                        "Mejora y agrega nuevo contenido Vanilla+ a todos los aspectos del Nether.",
+                        "Expande la dimensión añadiendo biomas inéditos, criaturas exóticas y estructuras masivas como el Sanctum, renovando la experiencia para que siga sintiéndose inmersiva y equilibrada."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "minecraft-comes-alive",
+                    "name": "MCA Reborn",
+                    "images": [
+                        "https://i.ytimg.com/vi/qgy6M91zzYU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAGZ9zxJVamZ2km9uE-0TV1PYt-TQ"
+                    ],
+                    "paragraphs": [
+                        "Sustituye a los aldeanos comunes por humanos interactivos con distintas personalidades, aspectos y oficios.",
+                        "Permite charlar, comerciar, formar vínculos familiares y tener descendencia de ayuda en las tareas mundanas."
+                    ]
+                },
+                {
+                    "id": "mrcrayfish-furniture",
+                    "name": "MrCrayfish's Furniture Mod: Refurbished",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/791/961/kitchendemoscreenshot.png",
+                        "https://media.forgecdn.net/attachments/792/547/bedroomdemoscreenshot.png",
+                        "https://media.forgecdn.net/attachments/792/665/outdoordemoscreenshot.png",
+                        "https://media.forgecdn.net/attachments/793/579/bathroomdemoscreenshot.png",
+                        "https://pbs.twimg.com/media/GIJ8GIya8AAbDHZ.jpg"
+                    ],
+                    "paragraphs": [
+                        "Incorpora una gran variedad de muebles y elementos decorativos interactivos.",
+                        "Cuenta con un sistema eléctrico funcional, envío de correo entre jugadores y dispositivos informáticos con aplicaciones."
+                    ]
+                },
+                {
+                    "id": "nether-trials",
+                    "name": "Nether Trials & Chambers",
+                    "images": [
+                        "https://i.postimg.cc/HxQBWpY1/hellish_trials_banner.png",
+                        "https://i.postimg.cc/y6SCC945/2025_12_27_16_44_36.png",
+                        "https://i.postimg.cc/9096P3YF/2025_12_28_00_20_50.png",
+                        "https://i.postimg.cc/d3CbRMjJ/2025_12_28_00_22_39.png",
+                        "https://i.postimg.cc/fTgb1v2y/2025_12_28_16_38_37.png",
+                        "https://i.postimg.cc/gk0JM7DL/2025_12_28_00_45_31_(1).png",
+                        "https://i.postimg.cc/x8mwGr3H/2025_12_28_00_15_59.png"
+                    ],
+                    "paragraphs": [
+                        "Genera Trial Chambers únicas en la dimensión del Nether.",
+                        "Estas fortalezas incluyen características desafiantes como bóvedas de recompensas, generadores de combate, la criatura Brisa y trampas con cargas de viento."
+                    ]
+                },
+                {
+                    "id": "new-slab-variants",
+                    "name": "New Slab Variants",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/864/183/new-slab-variants-3.jpg",
+                        "https://media.forgecdn.net/attachments/864/185/new-slab-variants-5.jpg",
+                        "https://media.forgecdn.net/attachments/864/182/new-slab-variants-2.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade más de 200 nuevas variantes de losas (slabs) para una enorme cantidad de bloques vainilla que antes no las tenían, incluyendo losas de tierra, terracota, cristal y más."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "no-mans-land",
+                    "name": "No Man's Land",
+                    "images": [
+                        "https://i.ytimg.com/vi/RduumoQJqpk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCjJlCPWYarijJXoVwat1rh54Mxag",
+                        "https://i.ytimg.com/vi/w0pTLLgZR6k/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/1112/294/inside-an-old-growth-forest_12.png",
+                        "https://media.forgecdn.net/attachments/1112/284/beach_2.png",
+                        "https://media.forgecdn.net/attachments/1112/301/river-along-an-old-growth-forest_19.png"
+                    ],
+                    "paragraphs": [
+                        "Perfecciona drásticamente la generación de terreno Vanilla+, optimizando biomas existentes y añadiendo frondosos bosques antiguos sumamente inmersivos, nueva vegetación y criaturas."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "origins",
+                    "name": "Origins",
+                    "images": [
+                        "https://minecraft.fr/wp-content/uploads/2021/12/origins-mod-minecraft.jpg",
+                        "https://i.imgur.com/617o2yF.png",
+                        "https://staticg.sportskeeda.com/editor/2021/10/ca86d-16333460584633-800.jpg"
+                    ],
+                    "paragraphs": [
+                        "Permite seleccionar una raza única al crear un mundo, otorgando habilidades especiales, ventajas determinantes y vulnerabilidades marcadas."
+                    ]
+                },
+                {
+                    "id": "origins-classes",
+                    "name": "Origins: Classes",
+                    "images": [
+                        "https://i.ytimg.com/vi/axUNBMEFTI8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAc1Or_Z9tfnPVM1ZLmAC4KZqHmQA"
+                    ],
+                    "paragraphs": [
+                        "Incorpora una selección de clases de especialización como Arquero, Herrero, Clérigo o Explorador que otorgan ligeros beneficios pasivos sin imponer penalizaciones ni desventajas al jugador."
+                    ]
+                },
+                {
+                    "id": "pale-garden",
+                    "name": "Perfect Parity Neo: Pale Garden Awakens",
+                    "images": [
+                        "https://lionsdigest1.com/wp-content/uploads/2024/12/IMG_6934.jpeg",
+                        "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/MC_HolidayPreRelease_BlogEditorial_ArticleImage_01_1280x720.jpg",
+                        "https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b3/Pale_Garden_Vibrant.png/revision/latest?cb=20250607021259",
+                        "https://media.forgecdn.net/attachments/978/29/2024-09-28_22.png"
+                    ],
+                    "paragraphs": [
+                        "Introduce el lúgubre bioma del Jardín Pálido y la misteriosa criatura Creaking al juego.",
+                        "Incluye nueva vegetación como el Roble pálido, junto con bloques decorativos de musgo y alfombras pálidas."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "primal",
+                    "name": "Primal",
+                    "images": [
+                        "https://cdn.modrinth.com/data/cached_images/cf4195afe91c34d812b70668566480dd7db064bc.png",
+                        "https://cdn.modrinth.com/data/cached_images/d35b44870d11d133ae66a8319a3684f1792d28be.jpeg",
+                        "https://cdn.modrinth.com/data/cached_images/3279725dd2b3374ec08485a71cdefa5eab5e7299.jpeg",
+                        "https://media.forgecdn.net/attachments/1600/568/2026-03-27_01-16-28-png.png"
+                    ],
+                    "paragraphs": [
+                        "Amplía la fauna del juego para hacer la supervivencia más inmersiva.",
+                        "Añade animales prehistóricos y primitivos que encajan con la estética original, incorporando mecánicas propias."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "rechiseled",
+                    "name": "Rechiseled",
+                    "images": [
+                        "https://imgur.com/uGsS7I5.png",
+                        "https://media.forgecdn.net/attachments/420/202/2022-01-03_20.png"
+                    ],
+                    "paragraphs": [
+                        "Sucesor espiritual del clásico mod Chisel, diseñado para ofrecer una enorme libertad creativa a los constructores del juego.",
+                        "Añade más de 600 variaciones decorativas de bloques vanilla y de otros mods, permitiendo transformar texturas mediante un cincel y una interfaz intuitiva con soporte para texturas conectadas y transiciones fluidas."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "reddens-stone-lanterns",
+                    "name": "Redden's Stone Lanterns",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/794/976/e006207b28cd7045b414b0f25df6e822.png",
+                        "https://cdn.modrinth.com/data/cached_images/1ea27018a90f4aedf8ff7a31449b535e3b38ea20.jpeg",
+                        "https://media.forgecdn.net/attachments/794/973/e1de3375c63ae4dc16ba728fdfaefcc4.png"
+                    ],
+                    "paragraphs": [
+                        "Añade nuevos bloques de faroles de piedra elaborados y decorativos para iluminar y adornar tus construcciones exteriores y jardines."
+                    ]
+                },
+                {
+                    "id": "supplementaries",
+                    "name": "Supplementaries",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/401/408/supp_logo2.png",
+                        "https://media.forgecdn.net/attachments/413/33/2021-12-06_18.png",
+                        "https://media.forgecdn.net/attachments/619/842/2021-02-14-18-22-45.png",
+                        "https://media.forgecdn.net/attachments/334/226/2021-01-14_02.png",
+                        "https://media.forgecdn.net/attachments/402/106/2021-09-09_03.png",
+                        "https://media.forgecdn.net/attachments/497/780/candles.png",
+                        "https://media.forgecdn.net/attachments/619/841/ktmc9fp.png",
+                        "https://media.forgecdn.net/attachments/619/845/ybsafhl.png",
+                        "https://media.forgecdn.net/attachments/619/846/way-sign.png"
+                    ],
+                    "paragraphs": [
+                        "Agrega multitud de herramientas funcionales de estilo clásico: tarros, letreros detallados, veletas, macetas y automatización.",
+                        "Se enfoca en enriquecer la interactividad del mundo con bloques estéticos pero sumamente útiles."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "the-bumblezone",
+                    "name": "The Bumblezone",
+                    "images": [
+                        "https://i.ytimg.com/vi/DrHzWP32w6I/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDW8ZarFlAen5gvDDBCok0tcaavjg",
+                        "https://media.forgecdn.net/attachments/278/358/2020-02-11_18.png",
+                        "https://media.forgecdn.net/attachments/732/31/floral_meadow.png",
+                        "https://media.forgecdn.net/attachments/597/700/hanging_gardens2.png"
+                    ],
+                    "paragraphs": [
+                        "Añade una hermosa y colorida dimensión basada en el interior de una colmena de abejas. Explora un ecosistema único lleno de estructuras de panales, flores gigantes, miel y criaturas pacíficas u hostiles según cómo trates a sus habitantes."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "the-roads-more-travelled",
+                    "name": "The Roads More Travelled",
+                    "images": [
+                        "https://img.youtube.com/vi/OvsNVaFiK1Y/maxresdefault.jpg",
+                        "https://i.imgur.com/Uqg119h.png",
+                        "https://i.imgur.com/PHJaK3E.png",
+                        "https://i.imgur.com/LOvPlVV.png"
+                    ],
+                    "paragraphs": [
+                        "Crea un sistema de erosión que forma senderos de tierra automáticamente en los caminos por los que pasas caminando frecuentemente."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "underwater-villages",
+                    "name": "Underwater Villages",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1138/519/2025-03-25_19.png",
+                        "https://media.forgecdn.net/attachments/1138/520/2025-03-25_19.png",
+                        "https://media.forgecdn.net/attachments/1138/521/2025-03-25_19.png",
+                        "https://media.forgecdn.net/attachments/1138/522/2025-03-25_19.png",
+                        "https://media.forgecdn.net/attachments/1138/523/2025-03-25_19.png",
+                        "https://media.forgecdn.net/attachments/1138/524/2025-03-25_19.png"
+                    ],
+                    "paragraphs": [
+                        "Añade nuevos poblados oceánicos y estructuras sumergidas para enriquecer la exploración submarina, habitados por aldeanos acuáticos y repletos de detalles y recompensas ocultas."
+                    ]
+                },
+                {
+                    "id": "unusual-end",
+                    "name": "Unusual End",
+                    "images": [
+                        "https://img.youtube.com/vi/9BiflIectOo/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/pZslb2Osw-g/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/MuAz6bIKzdk/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/1012/111/2024-10-28_19.webp"
+                    ],
+                    "paragraphs": [
+                        "Una actualización Vanilla+ para The End que amplía drásticamente la dimensión con nueva diversidad.",
+                        "Introduce biomas totalmente nuevos como los Gloopy Plains, flora endémica, bloques de construcción (Gloopstone, Gloopslate) y criaturas únicas como las luciérnagas del End y los temibles Endstone Trappers."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                }
+            ]
+        },
+        {
+            "name": "🍗 Comidas",
+            "description": "",
+            "mods": [
+                {
+                    "id": "artifacts-delight",
+                    "name": "Artifact's Delight",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/1633/949/256/256/639046651700911795.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento que añade compatibilidad y contenido entre los mods Farmer's Delight y Artifacts.",
+                        "Introduce recetas de cocina que utilizan y procesan los valiosos tesoros del mod Artifacts, como la posibilidad de picar la Carne de Vaca Eterna (Eternal Beef)."
+                    ]
+                },
+                {
+                    "id": "expanded-delight",
+                    "name": "Expanded Delight",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1067/823/2025-01-15_09.png",
+                        "https://media.forgecdn.net/attachments/1067/818/2025-01-15_09.png",
+                        "https://media.forgecdn.net/attachments/1067/819/2025-01-15_09.png"
+                    ],
+                    "paragraphs": [
+                        "Una extensa expansión para Farmer's Delight que amplía drásticamente el catálogo de alimentos y cultivos disponibles para el jugador.",
+                        "Añade una enorme selección de platos listos para comer, nuevos vegetales y árboles frutales, herramientas de cocina especializadas y mesas de trabajo funcionales que complementan la experiencia culinaria y agrícola."
+                    ]
+                },
+                {
+                    "id": "fancy-crops",
+                    "name": "Fancy Crops",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/915/289/1ab4422225a47fd6c9e3012fa59e34e4842b2eeb.jpeg",
+                        "https://media.forgecdn.net/attachments/690/183/comparison.jpg",
+                        "https://media.forgecdn.net/attachments/690/157/wheat.jpg"
+                    ],
+                    "paragraphs": [
+                        "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "farmers-delight",
+                    "name": "Farmer's Delight",
+                    "images": [
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRav8MVScQSRuIqBb0dIOwYxPOlIkFZ83awM8D2pVz56cJH3CY2II3cvFc4&s=10"
+                    ],
+                    "paragraphs": [
+                        "Amplía las posibilidades de la agricultura y la cocina en Minecraft. Utiliza un sistema de cocina para preparar comidas con nuevos ingredientes y utensilios.",
+                        "Introduce mejoras en el suelo para tus cultivos, nuevas herramientas de recolección y bloques decorativos para enriquecer tu experiencia culinaria."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "fd-brewin-chewin",
+                    "name": "Farmer's Delight: Brewin' And Chewin'",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/472/395/2022-06-27_21.png",
+                        "https://media.forgecdn.net/attachments/472/394/2022-06-27_21.png",
+                        "https://media.forgecdn.net/attachments/472/392/2022-06-27_21.png",
+                        "https://media.forgecdn.net/attachments/472/393/2022-06-27_21.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Farmer's Delight que añade bebidas fermentadas y alcohólicas."
+                    ]
+                },
+                {
+                    "id": "fd-end",
+                    "name": "Farmer's Delight: End",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/651/34/ec317920-b9ea-4e16-a83a-36235c33ebba.png",
+                        "https://media.forgecdn.net/attachments/651/37/2023-04-23_16.png",
+                        "https://media.forgecdn.net/attachments/894/80/2024-06-20_19.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Farmer's Delight que expande el contenido culinario utilizando recursos exclusivos de la dimensión del End."
+                    ]
+                },
+                {
+                    "id": "fd-nether",
+                    "name": "Farmer's Delight: Nether",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/859/610/2024-05-04_14.png",
+                        "https://media.forgecdn.net/attachments/859/611/2024-05-04_13.png",
+                        "https://media.forgecdn.net/attachments/859/608/2024-05-04_12.png",
+                        "https://media.forgecdn.net/attachments/859/609/2024-05-04_13.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Farmer's Delight que expande la agricultura y cocina utilizando recursos y flora de la dimensión del Nether."
+                    ]
+                },
+                {
+                    "id": "farmers-pizzeria",
+                    "name": "Farmer's Pizzeria",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1520/394/2026-02-07_14-55-21-png.png",
+                        "https://media.forgecdn.net/attachments/1520/396/2026-02-07_14-54-48-png.png",
+                        "https://media.forgecdn.net/attachments/1520/397/2026-02-07_14-54-55-png.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Farmer's Delight y Brewin' And Chewin' que añade una amplia variedad de pizzas artesanales e ingredientes culinarios.",
+                        "Introduce cultivos nuevos como la albahaca, y alimentos procesados como el salami o el queso dorblu, que los jugadores pueden hornear y cortar en porciones para comer."
+                    ]
+                },
+                {
+                    "id": "spice-of-life",
+                    "name": "Spice of Life: Carrot Edition",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/360/935/637525655151502872.png",
+                        "https://media.forgecdn.net/attachments/248/616/2019-03-14_01.png",
+                        "https://media.forgecdn.net/attachments/248/619/2019-03-14_01.png",
+                        "https://media.forgecdn.net/attachments/248/618/2019-03-14_01.png"
+                    ],
+                    "paragraphs": [
+                        "Mod basado en la alimentación que recompensa al jugador por descubrir y consumir nuevos alimentos.",
+                        "El mod lleva la cuenta de los alimentos únicos consumidos. Al alcanzar ciertas cantidades, el jugador gana corazones de forma permanente, aumentando su salud máxima. Para maximizar la vida, es necesario buscar y elaborar alimentos variados."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                }
+            ]
+        },
+        {
+            "name": "⚔️ Combate y Equipamiento",
+            "description": "",
+            "mods": [
+                {
+                    "id": "allthemodium",
+                    "name": "Allthemodium",
+                    "images": [
+                        "https://pic.pimg.tw/grant88/1614943323-4141937287-g.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade minerales de nivel superior (Allthemodium, Vibranium y Unobtainium) que sirven para fabricar el equipamiento y herramientas más avanzadas del juego."
+                    ],
+                    "status": "ELIMINADO"
+                },
                 {
                     "id": "artifacts",
                     "name": "Artifacts",
@@ -970,19 +825,6 @@
                     "paragraphs": [
                         "Equipamiento que se encuentra esparcido por el mundo y tienen poderes únicos."
                     ]
-                },
-                {
-                    "id": "dynamic-caveman",
-                    "name": "Dynamic Caveman",
-                    "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/1125/973/256/256/638683470246120057.png"
-                    ],
-                    "paragraphs": [
-                        "Permite usar materiales básicos como palos, piedras y obsidiana para infligir daño.",
-                        "Añade ataques cuerpo a cuerpo para algunos objetos y mecánicas para lanzar otros, como piedras.",
-                        "Incluye reglas de juego para activar o desactivar estas características en cada elemento."
-                    ],
-                    "status": "ELIMINADO"
                 },
                 {
                     "id": "backported-spears",
@@ -997,38 +839,16 @@
                     ]
                 },
                 {
-                    "id": "just-hammers",
-                    "name": "Just Hammers",
+                    "id": "blossom-blade",
+                    "name": "Blossom Blade",
                     "images": [
-                        "https://i.ytimg.com/vi/o1vazgPgX70/maxresdefault.jpg",
-                        "https://i.tlauncher.org/images/justhammers-mod-screenshots-04.jpg"
+                        "https://media.forgecdn.net/attachments/864/763/blossom.png",
+                        "https://media.forgecdn.net/attachments/description/920268/description_3e1a24d5-de12-47f8-bcbd-01f10216c892.png"
                     ],
                     "paragraphs": [
-                        "Añade martillos que pueden minar en áreas de 3x3, 3x3x3, 5x5x1, 5x5x3 y 5x5x5."
-                    ]
-                },
-                {
-                    "id": "grappling-hooks",
-                    "name": "Yori3o's Grappling Hooks",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1376/880/ergwgw-png.png",
-                        "https://media.forgecdn.net/attachments/1376/879/video_2025-10-31_16-15-26-ezgif-com-video-to-webp.webp"
-                    ],
-                    "paragraphs": [
-                        "Añade ganchos de agarre realistas y con un aspecto similar al del juego base."
+                        "Añade la Espada del Cerezo, un arma que brilla y emite partículas de flores de cerezo al atacar."
                     ],
                     "status": "ELIMINADO"
-                },
-                {
-                    "id": "warrior-rage",
-                    "name": "Warrior Rage",
-                    "images": [
-                        "https://i.imgur.com/mVCWXQg.png",
-                        "https://i.imgur.com/tX1BGKb.png"
-                    ],
-                    "paragraphs": [
-                        "Incorpora un sistema de racha de bajas al combate. Matar monstruos en rápida sucesión otorga beneficios como mayor daño de ataque o daño de fuego en los golpes, facilitando el enfrentamiento contra grupos numerosos de enemigos."
-                    ]
                 },
                 {
                     "id": "clean-swing",
@@ -1041,14 +861,57 @@
                     ]
                 },
                 {
-                    "id": "enderite-mod",
-                    "name": "Enderite Mod",
+                    "id": "everything-is-copper",
+                    "name": "Everything is Copper",
                     "images": [
-                        "https://cdn.modrinth.com/data/6lvRWqbA/images/6291ebe10ccf3cfdbf288711a6e7e1e9433505a5.jpeg"
+                        "https://media.forgecdn.net/attachments/437/309/2022-03-04_20.png"
                     ],
                     "paragraphs": [
-                        "Añade un nuevo material al juego: la Enderita. Se encuentra en la dimensión del End y sirve como un nivel superior a la Netherita.",
-                        "El equipamiento fabricado con Enderita cuenta con la habilidad de flotar en el vacío para evitar la pérdida de los objetos."
+                        "Incrementa la utilidad del cobre añadiendo nuevas variantes de herramientas, armas, armaduras y bloques funcionales de cobre (como tolvas y yunques)."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "extra-bows-restrung",
+                    "name": "Extra bows: Restrung",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/description/null/description_7e874b81-8b0d-4f77-b0e2-dcdc17c71135.png"
+                    ],
+                    "paragraphs": [
+                        "Añade nuevos arcos y ballestas fabricables con diferentes materiales (hierro, diamante, netherita...) con estadísticas mejoradas."
+                    ]
+                },
+                {
+                    "id": "immersive-armors",
+                    "name": "Immersive Armors",
+                    "paragraphs": [
+                        "Añade nuevos conjuntos de armaduras fabricables con diseños únicos que encajan perfectamente con el estilo visual del juego. Lo mejor de este mod es que aporta una gran variedad estética y las armaduras otorgan efectos especiales muy útiles."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/433/26/banner.jpg",
+                        "https://media.forgecdn.net/attachments/456/40/items.png"
+                    ]
+                },
+                {
+                    "id": "just-hammers",
+                    "name": "Just Hammers",
+                    "images": [
+                        "https://i.ytimg.com/vi/o1vazgPgX70/maxresdefault.jpg",
+                        "https://i.tlauncher.org/images/justhammers-mod-screenshots-04.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade martillos que pueden minar en áreas de 3x3, 3x3x3, 5x5x1, 5x5x3 y 5x5x5."
+                    ]
+                },
+                {
+                    "id": "lower-shield",
+                    "name": "Lower Shield",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1068/555/2025-01-16_15.png"
+                    ],
+                    "paragraphs": [
+                        "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
                     ],
                     "status": "ELIMINADO"
                 },
@@ -1080,53 +943,6 @@
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "reliquified-cataclysm",
-                    "name": "Reliquified L_Ender's Cataclysm",
-                    "images": [
-                        "https://www.9minecraft.net/wp-content/uploads/2026/01/Reliquified-L_Enders-Cataclysm-Mod-Thumbnail.png",
-                        "https://www.minecraft-guides.com/wp-content/uploads/2025/05/Relic_ScouringEye-1024x383.png"
-                    ],
-                    "paragraphs": [
-                        "Añade reliquias compatibles con el sistema de Relics inspiradas en los jefes y estructuras de Cataclysm.",
-                        "Otorga habilidades pasivas y activas como recompensa al derrotar a los jefes y superar los desafíos del mod."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "blossom-blade",
-                    "name": "Blossom Blade",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/864/763/blossom.png",
-                        "https://media.forgecdn.net/attachments/description/920268/description_3e1a24d5-de12-47f8-bcbd-01f10216c892.png"
-                    ],
-                    "paragraphs": [
-                        "Añade la Espada del Cerezo, un arma que brilla y emite partículas de flores de cerezo al atacar."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "extra-bows-restrung",
-                    "name": "Extra bows: Restrung",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/description/null/description_7e874b81-8b0d-4f77-b0e2-dcdc17c71135.png"
-                    ],
-                    "paragraphs": [
-                        "Añade nuevos arcos y ballestas fabricables con diferentes materiales (hierro, diamante, netherita...) con estadísticas mejoradas."
-                    ]
-                },
-                {
-                    "id": "immersive-armors",
-                    "name": "Immersive Armors",
-                    "paragraphs": [
-                        "Añade nuevos conjuntos de armaduras fabricables con diseños únicos que encajan perfectamente con el estilo visual del juego. Lo mejor de este mod es que aporta una gran variedad estética y las armaduras otorgan efectos especiales muy útiles."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/433/26/banner.jpg",
-                        "https://media.forgecdn.net/attachments/456/40/items.png"
-                    ]
-                },
-                {
                     "id": "shield-expansion",
                     "name": "Shield Expansion",
                     "images": [
@@ -1148,69 +964,269 @@
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "slimy-stuff",
-                    "name": "Slimy Stuff",
+                    "id": "simple-heart-crystal",
+                    "name": "Simple Heart Crystal",
                     "images": [
-                        "https://i.ytimg.com/vi/drfL8aj8NRs/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/739/559/image2.png",
-                        "https://media.forgecdn.net/attachments/739/560/image3.png",
-                        "https://media.forgecdn.net/attachments/739/561/image4.png"
+                        "https://i.imgur.com/GjijADx.png",
+                        "https://i.imgur.com/ZCB5ZC8.png",
+                        "https://i.imgur.com/MUnIehw.png"
                     ],
                     "paragraphs": [
-                        "Añade nuevas armaduras de limo que te permiten rebotar, armas pegajosas y otros bloques de utilidad basados en las mecánicas del slime."
-                    ],
-                    "status": "REVISIÓN"
-                },
-                {
-                    "id": "allthemodium",
-                    "name": "Allthemodium",
-                    "images": [
-                        "https://pic.pimg.tw/grant88/1614943323-4141937287-g.jpg"
-                    ],
-                    "paragraphs": [
-                        "Añade minerales de nivel superior (Allthemodium, Vibranium y Unobtainium) que sirven para fabricar el equipamiento y herramientas más avanzadas del juego."
+                        "Añade cristales de corazón que se generan en estructuras y cuevas del mundo y que, al ser consumidos por el jugador, incrementan de forma permanente su salud máxima."
                     ],
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "everything-is-copper",
-                    "name": "Everything is Copper",
+                    "id": "simple-netherite-horse-armor",
+                    "name": "Simple Netherite Horse Armor",
                     "images": [
-                        "https://media.forgecdn.net/attachments/437/309/2022-03-04_20.png"
+                        "https://media.forgecdn.net/attachments/823/747/nha_tn-0.png"
                     ],
                     "paragraphs": [
-                        "Incrementa la utilidad del cobre añadiendo nuevas variantes de herramientas, armas, armaduras y bloques funcionales de cobre (como tolvas y yunques)."
+                        "Añade una robusta y resistente armadura de netherita fabricable para proteger al máximo a tus caballos."
+                    ]
+                },
+                {
+                    "id": "warrior-rage",
+                    "name": "Warrior Rage",
+                    "images": [
+                        "https://i.imgur.com/mVCWXQg.png",
+                        "https://i.imgur.com/tX1BGKb.png"
+                    ],
+                    "paragraphs": [
+                        "Incorpora un sistema de racha de bajas al combate. Matar monstruos en rápida sucesión otorga beneficios como mayor daño de ataque o daño de fuego en los golpes, facilitando el enfrentamiento contra grupos numerosos de enemigos."
+                    ]
+                },
+                {
+                    "id": "grappling-hooks",
+                    "name": "Yori3o's Grappling Hooks",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1376/880/ergwgw-png.png",
+                        "https://media.forgecdn.net/attachments/1376/879/video_2025-10-31_16-15-26-ezgif-com-video-to-webp.webp"
+                    ],
+                    "paragraphs": [
+                        "Añade ganchos de agarre realistas y con un aspecto similar al del juego base."
                     ],
                     "status": "ELIMINADO"
-                },
-                {
-                    "id": "simply-traps",
-                    "name": "Simply Traps",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/description/1172014/description_fd561495-aa42-4d3e-b755-fc6d27913b1a.png",
-                        "https://media.forgecdn.net/attachments/1057/396/screenshot_2.png"
-                    ],
-                    "paragraphs": [
-                        "Añade trampas de diseño clásico y estilo vainilla, como pinchos para el suelo o la pared, trampas de foso y más, ideales para defender tu base."
-                    ]
-                },
-                {
-                    "id": "ender-dragon-loot",
-                    "name": "Ender Dragon Loot",
-                    "images": [
-                        "https://i.imgur.com/ZXolBwe.png",
-                        "https://media.forgecdn.net/attachments/description/867839/description_9c6ffbe3-31cc-4667-a071-133c86c0fbf8.png",
-                        "https://media.forgecdn.net/attachments/description/867839/description_2165c858-97fe-4a8b-b185-26d8ca98324b.png"
-                    ],
-                    "paragraphs": [
-                        "Hace que derrotar al Dragón del End sea mucho más gratificante al añadir Escamas de Dragón como botín. Estas escamas se pueden usar para fabricar un set de armadura especial, herramientas de alto nivel y un Yunque de Dragón irrompible sin límite de nivel de reparación."
-                    ]
                 }
             ]
         },
         {
-            "name": "Transporte de Jugadores",
-            "icon": "🚀",
+            "name": "👹 Enemigos",
+            "description": "",
+            "mods": [
+                {
+                    "id": "creeper-overhaul",
+                    "name": "Creeper Overhaul",
+                    "images": [
+                        "https://i.imgur.com/W758n8u.png",
+                        "https://media.forgecdn.net/attachments/419/336/swamp.png",
+                        "https://media.forgecdn.net/attachments/419/308/bamboo.PNG",
+                        "https://media.forgecdn.net/attachments/419/311/dark_oak.png",
+                        "https://media.forgecdn.net/attachments/419/315/jungle.PNG",
+                        "https://media.forgecdn.net/attachments/604/298/ocean_creeper_screenshot.png"
+                    ],
+                    "paragraphs": [
+                        "Reemplaza a los creepers clásicos por nuevas variantes específicas para cada bioma (como creepers de la jungla, océano o nieve).",
+                        "Cada variante presenta comportamientos, animaciones y modelos propios. Algunos sueltan botines especiales, interactúan de forma distinta con el entorno o pueden camuflarse."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "enderman-overhaul",
+                    "name": "Enderman Overhaul",
+                    "images": [
+                        "https://i.imgur.com/5qipNL9.png",
+                        "https://media.forgecdn.net/attachments/740/401/crimson_enderman.png",
+                        "https://media.forgecdn.net/attachments/740/398/windswept_hills_enderman.png",
+                        "https://media.forgecdn.net/attachments/740/280/cave_enderman.png",
+                        "https://media.forgecdn.net/attachments/740/277/badlands_enderman.png",
+                        "https://media.forgecdn.net/attachments/740/396/snowy_enderman.png",
+                        "https://media.forgecdn.net/attachments/740/406/ocean_enderman.png",
+                        "https://media.forgecdn.net/attachments/740/285/ice_spikes_enderman.png"
+                    ],
+                    "paragraphs": [
+                        "Expande las variantes del Enderman añadiendo más de 20 tipos nuevos. Cada variante cuenta con sonidos, modelos y animaciones propias, adaptándose a biomas específicos.",
+                        "Algunas variantes son neutrales, mientras que otras son agresivas incluso sin contacto visual directo. También pueden soltar perlas de Ender especiales y otros recursos dependiendo de su hábitat."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "ghast-update",
+                    "name": "Ghast Update",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1138/815/capture-da-c-cran-2025-03-26-012539-png.png",
+                        "https://media.forgecdn.net/attachments/1135/453/capture-decran-2025-03-23-184138.png",
+                        "https://media.forgecdn.net/attachments/1136/845/capture-da-c-cran-2025-03-25-002740-png.png"
+                    ],
+                    "paragraphs": [
+                        "Expande el contenido relacionado con el Nether, añadiendo nuevas mecánicas a los clásicos espectros flotantes del juego."
+                    ]
+                },
+                {
+                    "id": "cataclysm",
+                    "name": "L_Ender 's Cataclysm",
+                    "images": [
+                        "https://i.ytimg.com/vi/rBVnM2JYAAc/maxresdefault.jpg"
+                    ],
+                    "paragraphs": [
+                        "Introduce nuevas mazmorras, arenas de combate y estructuras de gran tamaño.",
+                        "Cada guarida presenta enfrentamientos contra jefes que sueltan armas, armaduras y equipamiento especial."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "myths-and-legends",
+                    "name": "Myths & Legends",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/description/1133244/description_65d592f3-552e-4391-8f61-5b9b74ced301.png",
+                        "https://media.forgecdn.net/attachments/1214/983/possessed-armor-in-game-png.png",
+                        "https://media.forgecdn.net/attachments/1214/981/gargoyle-in-game-png.png",
+                        "https://media.forgecdn.net/attachments/1214/982/imp-in-game-png.png",
+                        "https://media.forgecdn.net/attachments/1214/984/black-charro-in-game-png.png"
+                    ],
+                    "paragraphs": [
+                        "Introduce criaturas míticas, estructuras y reliquias de fantasía oscura inspiradas en el folclore global.",
+                        "Añade nuevos desafíos y criaturas al mundo, como gárgolas, diablillos, almas condenadas y armaduras poseídas."
+                    ]
+                },
+                {
+                    "id": "piglin-proliferation",
+                    "name": "Piglin Proliferation",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/874/341/2c67fb2f135dfe1d112ba2559cbb87e7eefade6e.webp",
+                        "https://media.forgecdn.net/attachments/874/342/11d95258123964ab82fdf79e1140c782ad6b2f1d.webp",
+                        "https://cdn.modrinth.com/data/cached_images/6e730067e3e640e7df9c17b544898b7b0b853751.png",
+                        "https://www.minecrafteo.com/wp-content/uploads/2023/11/piglin-proliferation-mod-363x212.jpg"
+                    ],
+                    "paragraphs": [
+                        "Diversifica a los Piglins al otorgar características únicas a sus variantes originales y añadiendo nuevos tipos de guerreros.",
+                        "Busca establecer la identidad de esta especie como una civilización diversa y multifacética dentro del Nether."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "reliquified-cataclysm",
+                    "name": "Reliquified L_Ender's Cataclysm",
+                    "images": [
+                        "https://www.9minecraft.net/wp-content/uploads/2026/01/Reliquified-L_Enders-Cataclysm-Mod-Thumbnail.png",
+                        "https://www.minecraft-guides.com/wp-content/uploads/2025/05/Relic_ScouringEye-1024x383.png"
+                    ],
+                    "paragraphs": [
+                        "Añade reliquias compatibles con el sistema de Relics inspiradas en los jefes y estructuras de Cataclysm.",
+                        "Otorga habilidades pasivas y activas como recompensa al derrotar a los jefes y superar los desafíos del mod."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "ribbits",
+                    "name": "Ribbits",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/889/105/image_1.png",
+                        "https://cdn.modrinth.com/data/cached_images/73a878cb94d406ab3e3f136a295b794beb3a106a.png",
+                        "https://www.minecraft-guides.com/wp-content/uploads/2025/11/Fisher-1024x576.png"
+                    ],
+                    "paragraphs": [
+                        "Añade a los Ribbits, pequeñas criaturas amigables parecidas a ranas que habitan en el mundo y con las que puedes interactuar o comerciar."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "royal-variations",
+                    "name": "Royal Variations",
+                    "images": [
+                        "https://i.ytimg.com/vi/SIy9yi7BN3Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAmXbS-Hv4d9oYlIH_Lf88Ep61Cxg",
+                        "https://media.forgecdn.net/attachments/1343/722/2025-09-23_04.png",
+                        "https://media.forgecdn.net/attachments/1343/721/2025-09-23_04.png",
+                        "https://media.forgecdn.net/attachments/1343/724/2025-10-02_02.png",
+                        "https://media.forgecdn.net/attachments/1343/725/2025-09-23_04.png"
+                    ],
+                    "paragraphs": [
+                        "Añade variaciones reales mejoradas de las criaturas originales del juego, con características propias.",
+                        "Todas las criaturas que encontrarás periódicamente en el mundo tienen sus propias habilidades y una mayor cantidad de experiencia y botines, incluyendo nuevos objetos con su propia utilidad. Este mod diversificará y complicará ligeramente tu supervivencia sin sobrecargar el juego con demasiadas mecánicas."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "savage-ender-dragon",
+                    "name": "Savage Ender Dragon",
+                    "images": [
+                        "https://user-images.githubusercontent.com/38401808/163781131-8aaf911c-f103-491f-bd98-86f59179c28b.png"
+                    ],
+                    "paragraphs": [
+                        "Rediseña la pelea final para convertirla en un desafío mayor. La dificultad de la batalla se ajusta de forma dinámica según el número de jugadores presentes.",
+                        "El dragón puede lanzar rayos e invocar Endermans, y sus bolas de fuego hacen daño explosivo. Además, incluye mecánicas que penalizan estrategias como el uso de camas o élitras."
+                    ]
+                },
+                {
+                    "id": "spawn",
+                    "name": "Spawn",
+                    "images": [
+                        "https://i.ytimg.com/vi/dedPNkX38Ok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1EYGcfin27Hi4x4XP_POSZAUd2A",
+                        "https://i.ytimg.com/vi/f7tAHa8yA9A/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/N_kGvDJXcf0/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/1405/348/2025-11-26_16-57-49-copy-png.png",
+                        "https://media.forgecdn.net/attachments/1405/335/2025-11-26_16-53-11-png.png",
+                        "https://media.forgecdn.net/attachments/1405/349/2025-11-26_17-14-36-copy-png.png",
+                        "https://media.forgecdn.net/attachments/1405/342/2025-11-26_17-27-22-png.png"
+                    ],
+                    "paragraphs": [
+                        "Añade una variedad de animales al juego, acompañados de nuevos bloques, mecánicas y biomas.",
+                        "Introduce criaturas de diversos tamaños que interactúan con el entorno natural."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "treasures-of-the-dead",
+                    "name": "Treasures Of The Dead",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1080/510/logo3.jpg",
+                        "https://media.forgecdn.net/attachments/1056/46/1.png",
+                        "https://media.forgecdn.net/attachments/1144/176/2025-03-31_18-20-15-png.png",
+                        "https://media.forgecdn.net/attachments/1080/511/7.png"
+                    ],
+                    "paragraphs": [
+                        "Añade enemigos piratas, estructuras oceánicas y características relacionadas con la piratería."
+                    ]
+                },
+                {
+                    "id": "variants-venture",
+                    "name": "Variants & Venture",
+                    "images": [
+                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/logo.png",
+                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/gelid.webp",
+                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/thicket.webp",
+                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/verdant.webp",
+                        "https://raw.githubusercontent.com/Faboslav/variants-and-ventures/master/.github/assets/murk.webp"
+                    ],
+                    "paragraphs": [
+                        "Añade variantes de criaturas que se integran en el mundo de Minecraft.",
+                        "Cada variante aparece de forma natural en los biomas correspondientes. También puedes encontrar generadores en mazmorras y cámaras de prueba, añadiendo exploración adicional."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "wither-wrath",
+                    "name": "Wither's Wrath",
+                    "images": [
+                        "https://i.ytimg.com/vi/pA7_XPDWF7E/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/1231/631/curse-gif.gif",
+                        "https://static.planetminecraft.com/files/image/minecraft/data-pack/2021/017/14923277-boobs-moment_xl.webp",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDeyDmzYu_-aS15P_RGWYI26aftCWd1uAzvQ&s",
+                        "https://github.com/user-attachments/assets/60f6e28e-dd9e-417c-a01c-81c8784d54bd",
+                        "https://github.com/user-attachments/assets/ec368079-347f-4bff-a844-84bfd9b06268"
+                    ],
+                    "paragraphs": [
+                        "Presenta una versión renovada y más agresiva del Wither, diseñada para suponer un mayor desafío.",
+                        "Introduce nuevos patrones de ataque y aumenta su salud máxima, forzando una batalla más compleja."
+                    ],
+                    "status": "ELIMINADO"
+                }
+            ]
+        },
+        {
+            "name": "🐎 Monturas y Transporte",
+            "description": "",
             "mods": [
                 {
                     "id": "dragon-mounts",
@@ -1227,33 +1243,26 @@
                     ]
                 },
                 {
-                    "id": "wings-of-fire",
-                    "name": "Wings Of Fire!",
+                    "id": "fireproof-boats",
+                    "name": "Fireproof Boats",
                     "images": [
-                        "https://i.imgur.com/BhRStvf.png",
-                        "https://cdn.modrinth.com/data/cached_images/97341ce45b01f4668bafeb1b957c3d2f46476442.png",
-                        "https://i.imgur.com/soA44nB.png",
-                        "https://i.imgur.com/DJVH3qv.png"
+                        "https://media.forgecdn.net/avatars/thumbnails/781/955/256/256/638128581697779385.png"
                     ],
                     "paragraphs": [
-                        "Añade 6 variantes diferentes de fénix que puedes criar y utilizar como monturas voladoras.",
-                        "Encuentra huevos petrificados por el mundo, caliéntalos en una cuna infernal y vincúlalos con linternas templadas para invocar a tu fénix personal."
-                    ],
-                    "status": "ELIMINADO"
+                        "Añade botes fabricados con maderas del Nether (carmesí y distorsionada) que son completamente resistentes al fuego y te permiten navegar de forma segura por lagos de lava."
+                    ]
                 },
                 {
-                    "id": "tempad",
-                    "name": "Tempad",
+                    "id": "gliders",
+                    "name": "Gliders",
                     "images": [
-                        "https://www.minecraft-guides.com/wp-content/uploads/2026/04/Tempad.png",
-                        "https://cdn.modrinth.com/data/cached_images/664b01058c20fdc19d4fef353f986b90249ff89e.png",
-                        "https://preview.redd.it/minecraft-tempad-mod-gui-v0-1o7p9gaqta0d1.png?width=1080&crop=smart&auto=webp&s=cb69a8658ced7cb46d533c267851280b6be53d4e",
-                        "https://www.9minecraft.net/wp-content/uploads/2025/03/Tempad-With-Shaders-Mod-Screenshots-8.jpg"
+                        "https://media.forgecdn.net/avatars/thumbnails/843/900/256/256/638240619391807565.png",
+                        "https://www.9minecraft.net/wp-content/uploads/2023/02/Gliders-Mod-Screenshots-5.png"
                     ],
                     "paragraphs": [
-                        "Ofrece un dispositivo dimensional que registra puntos de interés en el espacio para abrir portales de teletransporte instantáneos entre ellos."
+                        "Añade planeadores (gliders) sencillos que te permiten descender lentamente y cruzar distancias por el aire con facilidad."
                     ],
-                    "status": "ELIMINADO"
+                    "status": "NUEVO"
                 },
                 {
                     "id": "horseman",
@@ -1301,14 +1310,28 @@
                     ]
                 },
                 {
-                    "id": "simple-netherite-horse-armor",
-                    "name": "Simple Netherite Horse Armor",
+                    "id": "tameable-zombie-horse-and-skeleton-horse",
+                    "name": "Tameable Zombie Horse And Skeleton Horse",
                     "images": [
-                        "https://media.forgecdn.net/attachments/823/747/nha_tn-0.png"
+                        "https://media.forgecdn.net/attachments/description/null/description_dcc38f1c-a466-4960-bd73-b1f616d373ec.png"
                     ],
                     "paragraphs": [
-                        "Añade una robusta y resistente armadura de netherita fabricable para proteger al máximo a tus caballos."
+                        "Permite domar, equipar con montura y montar a los caballos zombi y esqueleto de la misma forma que a los caballos normales."
                     ]
+                },
+                {
+                    "id": "tempad",
+                    "name": "Tempad",
+                    "images": [
+                        "https://www.minecraft-guides.com/wp-content/uploads/2026/04/Tempad.png",
+                        "https://cdn.modrinth.com/data/cached_images/664b01058c20fdc19d4fef353f986b90249ff89e.png",
+                        "https://preview.redd.it/minecraft-tempad-mod-gui-v0-1o7p9gaqta0d1.png?width=1080&crop=smart&auto=webp&s=cb69a8658ced7cb46d533c267851280b6be53d4e",
+                        "https://www.9minecraft.net/wp-content/uploads/2025/03/Tempad-With-Shaders-Mod-Screenshots-8.jpg"
+                    ],
+                    "paragraphs": [
+                        "Ofrece un dispositivo dimensional que registra puntos de interés en el espacio para abrir portales de teletransporte instantáneos entre ellos."
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
                     "id": "two-players-one-horse",
@@ -1321,373 +1344,98 @@
                     ]
                 },
                 {
-                    "id": "gliders",
-                    "name": "Gliders",
+                    "id": "wings-of-fire",
+                    "name": "Wings Of Fire!",
                     "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/843/900/256/256/638240619391807565.png",
-                        "https://www.9minecraft.net/wp-content/uploads/2023/02/Gliders-Mod-Screenshots-5.png"
+                        "https://i.imgur.com/BhRStvf.png",
+                        "https://cdn.modrinth.com/data/cached_images/97341ce45b01f4668bafeb1b957c3d2f46476442.png",
+                        "https://i.imgur.com/soA44nB.png",
+                        "https://i.imgur.com/DJVH3qv.png"
                     ],
                     "paragraphs": [
-                        "Añade planeadores (gliders) sencillos que te permiten descender lentamente y cruzar distancias por el aire con facilidad."
-                    ],
-                    "status": "NUEVO"
-                },
-                {
-                    "id": "fireproof-boats",
-                    "name": "Fireproof Boats",
-                    "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/781/955/256/256/638128581697779385.png"
-                    ],
-                    "paragraphs": [
-                        "Añade botes fabricados con maderas del Nether (carmesí y distorsionada) que son completamente resistentes al fuego y te permiten navegar de forma segura por lagos de lava."
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Decoración y Cosméticos",
-            "icon": "🎨",
-            "mods": [
-                {
-                    "id": "mrcrayfish-furniture",
-                    "name": "MrCrayfish's Furniture Mod: Refurbished",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/791/961/kitchendemoscreenshot.png",
-                        "https://media.forgecdn.net/attachments/792/547/bedroomdemoscreenshot.png",
-                        "https://media.forgecdn.net/attachments/792/665/outdoordemoscreenshot.png",
-                        "https://media.forgecdn.net/attachments/793/579/bathroomdemoscreenshot.png",
-                        "https://pbs.twimg.com/media/GIJ8GIya8AAbDHZ.jpg"
-                    ],
-                    "paragraphs": [
-                        "Incorpora una gran variedad de muebles y elementos decorativos interactivos.",
-                        "Cuenta con un sistema eléctrico funcional, envío de correo entre jugadores y dispositivos informáticos con aplicaciones."
-                    ]
-                },
-                {
-                    "id": "diagonal-walls",
-                    "name": "Diagonal Walls",
-                    "images": [
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwalls/media/1.png"
-                    ],
-                    "paragraphs": [
-                        "Permite colocar muros de piedra en diagonal, ideal para diseños arquitectónicos más complejos y naturales."
-                    ]
-                },
-                {
-                    "id": "immersive-paintings",
-                    "name": "Immersive Paintings",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/474/232/screen_editor.jpg",
-                        "https://media.forgecdn.net/attachments/474/233/screen_multi.jpg",
-                        "https://media.forgecdn.net/attachments/474/234/screen_selector.jpg",
-                        "https://media.forgecdn.net/attachments/474/234/screen_selector.jpg"
-                    ],
-                    "paragraphs": [
-                        "Permite importar y utilizar tus propias imágenes personalizadas como cuadros dentro del juego arrastrando y soltando."
-                    ]
-                },
-                {
-                    "id": "supplementaries",
-                    "name": "Supplementaries",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/401/408/supp_logo2.png",
-                        "https://media.forgecdn.net/attachments/413/33/2021-12-06_18.png",
-                        "https://media.forgecdn.net/attachments/619/842/2021-02-14-18-22-45.png",
-                        "https://media.forgecdn.net/attachments/334/226/2021-01-14_02.png",
-                        "https://media.forgecdn.net/attachments/402/106/2021-09-09_03.png",
-                        "https://media.forgecdn.net/attachments/497/780/candles.png",
-                        "https://media.forgecdn.net/attachments/619/841/ktmc9fp.png",
-                        "https://media.forgecdn.net/attachments/619/845/ybsafhl.png",
-                        "https://media.forgecdn.net/attachments/619/846/way-sign.png"
-                    ],
-                    "paragraphs": [
-                        "Agrega multitud de herramientas funcionales de estilo clásico: tarros, letreros detallados, veletas, macetas y automatización.",
-                        "Se enfoca en enriquecer la interactividad del mundo con bloques estéticos pero sumamente útiles."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "amendments",
-                    "name": "Amendments",
-                    "images": [
-                        "https://i.imgur.com/G4k4MIs.png"
-                    ],
-                    "paragraphs": [
-                        "Realiza numerosos ajustes a los bloques originales del juego para brindarles más funcionalidades e inmersión.",
-                        "Permite la mezcla de pociones en calderos, colocación de linternas en muros, apilado de calaveras y adición de detalles decorativos."
-                    ]
-                },
-                {
-                    "id": "reddens-stone-lanterns",
-                    "name": "Redden's Stone Lanterns",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/794/976/e006207b28cd7045b414b0f25df6e822.png",
-                        "https://cdn.modrinth.com/data/cached_images/1ea27018a90f4aedf8ff7a31449b535e3b38ea20.jpeg",
-                        "https://media.forgecdn.net/attachments/794/973/e1de3375c63ae4dc16ba728fdfaefcc4.png"
-                    ],
-                    "paragraphs": [
-                        "Añade nuevos bloques de faroles de piedra elaborados y decorativos para iluminar y adornar tus construcciones exteriores y jardines."
-                    ]
-                },
-                {
-                    "id": "rechiseled",
-                    "name": "Rechiseled",
-                    "images": [
-                        "https://imgur.com/uGsS7I5.png",
-                        "https://media.forgecdn.net/attachments/420/202/2022-01-03_20.png"
-                    ],
-                    "paragraphs": [
-                        "Sucesor espiritual del clásico mod Chisel, diseñado para ofrecer una enorme libertad creativa a los constructores del juego.",
-                        "Añade más de 600 variaciones decorativas de bloques vanilla y de otros mods, permitiendo transformar texturas mediante un cincel y una interfaz intuitiva con soporte para texturas conectadas y transiciones fluidas."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "beautify",
-                    "name": "Beautify!",
-                    "images": [
-                        "https://i.imgur.com/tDSBihU.jpeg",
-                        "https://i.imgur.com/aVn4B6m.gif"
-                    ],
-                    "paragraphs": [
-                        "Añade una gran variedad de bloques y objetos de decoración de estilo vainilla muy detallados, como plantas colgantes, persianas, pilas de libros y enrejados para dar vida a tus construcciones."
-                    ]
-                },
-                {
-                    "id": "hallow-costumes",
-                    "name": "Hallow Costumes",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1372/205/2025-10-27_01-55-31-png.png",
-                        "https://media.forgecdn.net/attachments/1373/545/2025-10-28_01-23-50-png.png"
-                    ],
-                    "paragraphs": [
-                        "Añade disfraces espeluznantes inspirados en personajes icónicos de terror y diversos accesorios temáticos de Halloween para personalizar a tu personaje."
-                    ]
-                },
-                {
-                    "id": "new-slab-variants",
-                    "name": "New Slab Variants",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/864/183/new-slab-variants-3.jpg",
-                        "https://media.forgecdn.net/attachments/864/185/new-slab-variants-5.jpg",
-                        "https://media.forgecdn.net/attachments/864/182/new-slab-variants-2.jpg"
-                    ],
-                    "paragraphs": [
-                        "Añade más de 200 nuevas variantes de losas (slabs) para una enorme cantidad de bloques vainilla que antes no las tenían, incluyendo losas de tierra, terracota, cristal y más."
+                        "Añade 6 variantes diferentes de fénix que puedes criar y utilizar como monturas voladoras.",
+                        "Encuentra huevos petrificados por el mundo, caliéntalos en una cuna infernal y vincúlalos con linternas templadas para invocar a tu fénix personal."
                     ],
                     "status": "ELIMINADO"
                 }
             ]
         },
         {
-            "name": "Comida y Cultivos",
-            "icon": "🌾",
+            "name": "🛠️ Utilidad y Calidad de Vida",
+            "description": "",
             "mods": [
                 {
-                    "id": "farmers-delight",
-                    "name": "Farmer's Delight",
+                    "id": "alternative-rain",
+                    "name": "Alternative Rain Sounds",
                     "images": [
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRav8MVScQSRuIqBb0dIOwYxPOlIkFZ83awM8D2pVz56cJH3CY2II3cvFc4&s=10"
+                        "https://i.ytimg.com/vi/fcgwZZjIG8c/maxresdefault.jpg"
                     ],
                     "paragraphs": [
-                        "Amplía las posibilidades de la agricultura y la cocina en Minecraft. Utiliza un sistema de cocina para preparar comidas con nuevos ingredientes y utensilios.",
-                        "Introduce mejoras en el suelo para tus cultivos, nuevas herramientas de recolección y bloques decorativos para enriquecer tu experiencia culinaria."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "fd-brewin-chewin",
-                    "name": "Farmer's Delight: Brewin' And Chewin'",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/472/395/2022-06-27_21.png",
-                        "https://media.forgecdn.net/attachments/472/394/2022-06-27_21.png",
-                        "https://media.forgecdn.net/attachments/472/392/2022-06-27_21.png",
-                        "https://media.forgecdn.net/attachments/472/393/2022-06-27_21.png"
-                    ],
-                    "paragraphs": [
-                        "Complemento para Farmer's Delight que añade bebidas fermentadas y alcohólicas."
+                        "Sustituye los sonidos ambientales de lluvia y truenos por efectos mucho más realistas y envolventes."
                     ]
                 },
                 {
-                    "id": "fd-starcatcher",
-                    "name": "Farmer's Delight: Eternal Starlight",
+                    "id": "beautiful-potions",
+                    "name": "Beautiful Potions",
                     "images": [
-                        "https://media.forgecdn.net/attachments/1705/943/2026-05-26_22-01-52-png.png",
-                        "https://i.imgur.com/G4k4MIs.png"
+                        "https://media.forgecdn.net/attachments/1238/9/beautiful-potions-5.png",
+                        "https://media.forgecdn.net/attachments/1238/13/beautiful-potions-10.png",
+                        "https://media.forgecdn.net/attachments/1238/5/beautiful-potions-1.png"
                     ],
                     "paragraphs": [
-                        "Integra contenido y elementos de la dimensión de Eternal Starlight con el ecosistema de Farmer's Delight."
-                    ]
+                        "Rediseña el aspecto de las pociones para darles diseños de botella distintivos.",
+                        "Mejora el aspecto visual otorgando a cada poción texturas diferentes, facilitando su identificación rápida en el inventario."
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
-                    "id": "fd-create",
-                    "name": "Farmer's Delight: Create",
+                    "id": "building-wands",
+                    "name": "Building Wands",
                     "images": [
-                        "https://media.forgecdn.net/attachments/1203/72/3-png.png",
-                        "https://media.forgecdn.net/attachments/1203/75/db095b9db32a26259327db653e41b37b4ede2104-png.png",
-                        "https://media.forgecdn.net/attachments/1203/74/1bcdb418bac23eeafcae00d3193ff16c0d36750d-png.png",
-                        "https://media.forgecdn.net/attachments/1203/73/izobrazhenie_2023-06-18_164230341-png.png"
+                        "https://media.forgecdn.net/avatars/thumbnails/249/945/256/256/637176059718454738.png"
                     ],
                     "paragraphs": [
-                        "Permite la automatización de la producción culinaria de Farmer's Delight utilizando la maquinaria e infraestructura de Create."
-                    ]
+                        "Añade varitas de construcción que permiten colocar múltiples bloques a la vez, facilitando la edificación de estructuras y grandes plataformas de manera rápida y eficiente."
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
-                    "id": "fd-end",
-                    "name": "Farmer's Delight: End",
+                    "id": "burnt-basic",
+                    "name": "Burnt Basic",
                     "images": [
-                        "https://media.forgecdn.net/attachments/651/34/ec317920-b9ea-4e16-a83a-36235c33ebba.png",
-                        "https://media.forgecdn.net/attachments/651/37/2023-04-23_16.png",
-                        "https://media.forgecdn.net/attachments/894/80/2024-06-20_19.png"
+                        "https://i.ytimg.com/vi/HEizwboHxco/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/1173/450/mansionfire-jpg.jpg",
+                        "https://www.9minecraft.net/wp-content/uploads/2026/01/Burnt-Basic-Mod-Screenshots-1.jpg"
                     ],
                     "paragraphs": [
-                        "Complemento para Farmer's Delight que expande el contenido culinario utilizando recursos exclusivos de la dimensión del End."
-                    ]
+                        "Mejora las mecánicas del fuego en el juego, dándole un comportamiento más dinámico al quemar materiales."
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
-                    "id": "fd-nether",
-                    "name": "Farmer's Delight: Nether",
+                    "id": "burnt-fire",
+                    "name": "Burnt: Better Vanilla Fire",
                     "images": [
-                        "https://media.forgecdn.net/attachments/859/610/2024-05-04_14.png",
-                        "https://media.forgecdn.net/attachments/859/611/2024-05-04_13.png",
-                        "https://media.forgecdn.net/attachments/859/608/2024-05-04_12.png",
-                        "https://media.forgecdn.net/attachments/859/609/2024-05-04_13.png"
+                        "https://media.forgecdn.net/attachments/840/661/title.jpg",
+                        "https://media.forgecdn.net/attachments/966/159/lonelytree.jpg",
+                        "https://media.forgecdn.net/attachments/966/165/mansionfire.jpg",
+                        "https://media.forgecdn.net/attachments/966/166/mansionembers.jpg"
                     ],
                     "paragraphs": [
-                        "Complemento para Farmer's Delight que expande la agricultura y cocina utilizando recursos y flora de la dimensión del Nether."
-                    ]
+                        "Modifica el comportamiento del fuego para que se propague de forma más realista.",
+                        "Los incendios dejan tras de sí bloques carbonizados y cenizas en lugar de hacer desaparecer la madera instantáneamente."
+                    ],
+                    "status": "ELIMINADO"
                 },
                 {
-                    "id": "starcatcher",
-                    "name": "Starcatcher",
+                    "id": "clearer-water-pack",
+                    "name": "Clearer Water Pack",
                     "images": [
-                        "https://i.ytimg.com/vi/jRNG5cYSqpg/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/1344/608/minigame-png.png",
-                        "https://media.forgecdn.net/attachments/1397/874/b94b8c911433e0a25eafd0fcecad6c6e4a1fea2e-png.png",
-                        "https://media.forgecdn.net/attachments/1643/456/description_4bbc8f21-1912-44e5-a865-4ec0388b4548.png",
-                        "https://media.forgecdn.net/attachments/1398/385/2025-11-19_19-56-45-png.png"
+                        "https://media.forgecdn.net/attachments/description/null/description_54f8df46-5a85-4213-8a88-4d45a5901102.gif"
                     ],
                     "paragraphs": [
-                        "Renueva el sistema de pesca con más de 100 peces únicos, cebos, cajas de aparejos, torneos, acuarios y minijuegos interactivos de captura."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "artifacts-delight",
-                    "name": "Artifact's Delight",
-                    "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/1633/949/256/256/639046651700911795.png"
-                    ],
-                    "paragraphs": [
-                        "Complemento que añade compatibilidad y contenido entre los mods Farmer's Delight y Artifacts.",
-                        "Introduce recetas de cocina que utilizan y procesan los valiosos tesoros del mod Artifacts, como la posibilidad de picar la Carne de Vaca Eterna (Eternal Beef)."
-                    ]
-                },
-                {
-                    "id": "farmers-pizzeria",
-                    "name": "Farmer's Pizzeria",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1520/394/2026-02-07_14-55-21-png.png",
-                        "https://media.forgecdn.net/attachments/1520/396/2026-02-07_14-54-48-png.png",
-                        "https://media.forgecdn.net/attachments/1520/397/2026-02-07_14-54-55-png.png"
-                    ],
-                    "paragraphs": [
-                        "Complemento para Farmer's Delight y Brewin' And Chewin' que añade una amplia variedad de pizzas artesanales e ingredientes culinarios.",
-                        "Introduce cultivos nuevos como la albahaca, y alimentos procesados como el salami o el queso dorblu, que los jugadores pueden hornear y cortar en porciones para comer."
-                    ]
-                },
-                {
-                    "id": "expanded-delight",
-                    "name": "Expanded Delight",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1067/823/2025-01-15_09.png",
-                        "https://media.forgecdn.net/attachments/1067/818/2025-01-15_09.png",
-                        "https://media.forgecdn.net/attachments/1067/819/2025-01-15_09.png"
-                    ],
-                    "paragraphs": [
-                        "Una extensa expansión para Farmer's Delight que amplía drásticamente el catálogo de alimentos y cultivos disponibles para el jugador.",
-                        "Añade una enorme selección de platos listos para comer, nuevos vegetales y árboles frutales, herramientas de cocina especializadas y mesas de trabajo funcionales que complementan la experiencia culinaria y agrícola."
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Utilidades",
-            "icon": "🧰",
-            "mods": [
-                {
-                    "id": "natures-compass",
-                    "name": "Nature's Compass",
-                    "images": [
-                        "https://i.ytimg.com/vi/2jTEAm-QH50/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDGavyTuAdNlcSrlGyi3eLPJaEmdA",
-                        "https://i.imgur.com/GTSAfqv.png",
-                        "https://i.ytimg.com/vi/-uACE13v75c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAW-hmmNGw9LUQ1ed-dT_eNVwRk1A"
-                    ],
-                    "paragraphs": [
-                        "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
-                    ]
-                },
-                {
-                    "id": "explorers-compass",
-                    "name": "Explorer's Compass",
-                    "images": [
-                        "https://zonacraft.net/wp-content/uploads/2024/01/explorers-compass-mod.webp",
-                        "https://i.imgur.com/xSE8VSc.png",
-                        "https://i.imgur.com/Q49Pvjv.png"
-                    ],
-                    "paragraphs": [
-                        "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
-                    ]
-                },
-                {
-                    "id": "traveler-toolbelt",
-                    "name": "Traveler Toolbelt",
-                    "images": [
-                        "https://i.ytimg.com/vi/Bu7hr1wmjiE/maxresdefault.jpg"
-                    ],
-                    "paragraphs": [
-                        "Cinturón de herramientas actualizable con intercambio rápido e intuitivo, integración con la API de Curios/Trinkets y mucho más."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "travelers-backpack",
-                    "name": "Traveler's Backpack",
-                    "images": [
-                        "https://i.imgur.com/OwJ2twO.png",
-                        "https://i.tlauncher.org/images/Traveler_s-Backpack-mod-for-minecraft-logo.jpg",
-                        "https://media.forgecdn.net/attachments/1021/494/upgrades-grid-dsc.png",
-                        "https://media.forgecdn.net/attachments/1093/260/update-beta-project-png.png",
-                        "https://i.tlauncher.org/images/tb.png"
-                    ],
-                    "paragraphs": [
-                        "Mochilas personalizables con almacenamiento extra, tanques de fluidos y herramientas integradas. El compañero perfecto de exploración."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "mob-lassos",
-                    "name": "Mob Lassos",
-                    "images": [
-                        "https://i.ytimg.com/vi/nWL2z8O9nOs/maxresdefault.jpg",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4IXEz0y_hTc7lllf3IZk_6dyrVAdiE3r6OQ&s",
-                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/moblassos/media/1.png"
-                    ],
-                    "paragraphs": [
-                        "Añade diferentes tipos de lazos que te permiten capturar y transportar criaturas cómodamente en tu inventario.",
-                        "Existen diversas variantes, como el lazo acuático, esmeralda u hostil, cada una con características específicas y tiempos límite de retención."
-                    ]
-                },
-                {
-                    "id": "mmmmmmmmmmmm",
-                    "name": "MmmMmmMmmMmm",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/316/868/modpage.png",
-                        "https://media.forgecdn.net/attachments/316/883/ouch.png"
-                    ],
-                    "paragraphs": [
-                        "Añade un muñeco de pruebas. Al golpearlo te mostrará el daño exacto (DPS) infligido por tus armas.",
-                        "Permite equiparle armaduras y cabezas para simular diferentes tipos de defensa y probar el efecto de encantamientos como Castigo."
+                        "Resource pack que aumenta significativamente la claridad y transparencia del agua, permitiendo ver estructuras submarinas, criaturas y recursos con facilidad.",
+                        "Ideal para explorar océanos y ríos sin la densa niebla acuática por defecto, manteniendo un aspecto limpio y mejorando la visibilidad general bajo el agua."
                     ]
                 },
                 {
@@ -1702,54 +1450,6 @@
                     ]
                 },
                 {
-                    "id": "field-guide",
-                    "name": "Field Guide",
-                    "images": [
-                        "https://i.ytimg.com/vi/T7dFUs4GFzY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAV48tRTFuVbpe6d2BJOLjnaj-VLQ",
-                        "https://media.forgecdn.net/attachments/1558/481/2026-02-27_23-05-23-png.png",
-                        "https://media.forgecdn.net/attachments/1572/144/emu-png.png",
-                        "https://media.forgecdn.net/attachments/1558/483/2026-02-27_23-08-41-png.png"
-                    ],
-                    "paragraphs": [
-                        "Añade una Guía de Campo interactiva. Usa el catalejo para escanear y registrar información detallada sobre las plantas, animales y monstruos del mundo."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
-                    "id": "playing-cards-chips",
-                    "name": "Playing Cards & Chips",
-                    "images": [
-                        "https://i.imgur.com/8ivTYrw.png",
-                        "https://i.imgur.com/bBav8cT.png",
-                        "https://i.imgur.com/O2WBvJI.png",
-                        "https://static.planetminecraft.com/files/image/minecraft/texture-pack/2021/361/13947043_xl.webp"
-                    ],
-                    "paragraphs": [
-                        "Añade barajas de cartas y fichas de póquer completamente funcionales para que puedas jugar y apostar con tus amigos."
-                    ]
-                },
-                {
-                    "id": "spain-national-anthem",
-                    "name": "Spain National Anthem",
-                    "images": [
-                        "https://i.ytimg.com/vi/wp9VJ3dMlds/maxresdefault.jpg"
-                    ],
-                    "paragraphs": [
-                        "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
-                    ]
-                },
-                {
-                    "id": "building-wands",
-                    "name": "Building Wands",
-                    "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/249/945/256/256/637176059718454738.png"
-                    ],
-                    "paragraphs": [
-                        "Añade varitas de construcción que permiten colocar múltiples bloques a la vez, facilitando la edificación de estructuras y grandes plataformas de manera rápida y eficiente."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
                     "id": "construction-sticks",
                     "name": "Construction Sticks",
                     "images": [
@@ -1760,51 +1460,25 @@
                     ]
                 },
                 {
-                    "id": "fnaf-music-disks",
-                    "name": "FNaF Music Disk Mod",
+                    "id": "diagonal-walls",
+                    "name": "Diagonal Walls",
                     "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/417/12/256/256/637640366395328794.png"
+                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/diagonalwalls/media/1.png"
                     ],
                     "paragraphs": [
-                        "Añade una selección de discos de música coleccionables que contienen las icónicas canciones y bandas sonoras de Five Nights at Freddy's para reproducir en tus tocadiscos."
-                    ],
-                    "status": "ELIMINADO"
-                }
-            ]
-        },
-        {
-            "name": "Calidad de Vida",
-            "icon": "✨",
-            "mods": [
-                {
-                    "id": "lootr",
-                    "name": "Lootr",
-                    "images": [
-                        "https://i.ytimg.com/vi/vJTGw4-uDl0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBqlgFraheKkjYwko0u3FEUzSGJ8A"
-                    ],
-                    "paragraphs": [
-                        "Genera recompensas de forma individual en cada contenedor para cada jugador, permitiendo que todos los exploradores obtengan botín sin competir."
+                        "Permite colocar muros de piedra en diagonal, ideal para diseños arquitectónicos más complejos y naturales."
                     ]
                 },
                 {
-                    "id": "player-revive",
-                    "name": "Player Revive",
+                    "id": "dynamic-caveman",
+                    "name": "Dynamic Caveman",
                     "images": [
-                        "https://media.forgecdn.net/avatars/97/938/636295724985402020.png"
+                        "https://media.forgecdn.net/avatars/thumbnails/1125/973/256/256/638683470246120057.png"
                     ],
                     "paragraphs": [
-                        "Permite reanimar a otros jugadores caídos antes de que mueran definitivamente, dándoles una segunda oportunidad en combate."
-                    ]
-                },
-                {
-                    "id": "simple-corpse",
-                    "name": "Simple Corpse",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/description/null/description_ee706ae5-1e21-418b-8e37-976b91d57ea7.png",
-                        "https://media.forgecdn.net/attachments/description/1096099/description_4615216c-036e-4296-b54d-548dc6b79c60.png"
-                    ],
-                    "paragraphs": [
-                        "Sustituye la caída de objetos al morir por un cadáver que retiene el inventario del jugador, facilitando su recuperación sin límite de tiempo."
+                        "Permite usar materiales básicos como palos, piedras y obsidiana para infligir daño.",
+                        "Añade ataques cuerpo a cuerpo para algunos objetos y mecánicas para lanzar otros, como piedras.",
+                        "Incluye reglas de juego para activar o desactivar estas características en cada elemento."
                     ],
                     "status": "ELIMINADO"
                 },
@@ -1821,88 +1495,51 @@
                     ]
                 },
                 {
-                    "id": "ht-treechop",
-                    "name": "HT's TreeChop",
+                    "id": "ender-dragon-loot",
+                    "name": "Ender Dragon Loot",
                     "images": [
-                        "https://media.forgecdn.net/attachments/1300/652/mcpedl-png.png",
-                        "https://i.ytimg.com/vi/NtZEakVAb6A/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/_4V1-_rNfoM/maxresdefault.jpg",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGWk0QnuONgVrZBBRy0rXnfcHqu2uPLmmeQ&s"
+                        "https://i.imgur.com/ZXolBwe.png",
+                        "https://media.forgecdn.net/attachments/description/867839/description_9c6ffbe3-31cc-4667-a071-133c86c0fbf8.png",
+                        "https://media.forgecdn.net/attachments/description/867839/description_2165c858-97fe-4a8b-b185-26d8ca98324b.png"
                     ],
                     "paragraphs": [
-                        "Permite talar árboles enteros rompiendo progresivamente un solo bloque de tronco.",
-                        "Los árboles más grandes requieren más golpes, y varios jugadores pueden colaborar para derribarlos simultáneamente."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
-                    "id": "repeatable-vaults",
-                    "name": "Repeatable Trial Vaults",
-                    "images": [
-                        "https://static.beebom.com/wp-content/uploads/2024/01/Vault-block-and-the-trial-key-in-trial-chambers.jpg?w=1250&quality=75"
-                    ],
-                    "paragraphs": [
-                        "Consume una llave de Trial para poder usar la Trial Chamber nuevamente."
+                        "Hace que derrotar al Dragón del End sea mucho más gratificante al añadir Escamas de Dragón como botín. Estas escamas se pueden usar para fabricar un set de armadura especial, herramientas de alto nivel y un Yunque de Dragón irrompible sin límite de nivel de reparación."
                     ]
                 },
                 {
-                    "id": "villager-names",
-                    "name": "Villager Names",
+                    "id": "enderite-mod",
+                    "name": "Enderite Mod",
                     "images": [
-                        "https://i.redd.it/8pxctqrl7u031.png"
+                        "https://cdn.modrinth.com/data/6lvRWqbA/images/6291ebe10ccf3cfdbf288711a6e7e1e9433505a5.jpeg"
                     ],
                     "paragraphs": [
-                        "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
+                        "Añade un nuevo material al juego: la Enderita. Se encuentra en la dimensión del End y sirve como un nivel superior a la Netherita.",
+                        "El equipamiento fabricado con Enderita cuenta con la habilidad de flotar en el vacío para evitar la pérdida de los objetos."
                     ],
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "piglin-names",
-                    "name": "Piglin Names",
+                    "id": "explorers-compass",
+                    "name": "Explorer's Compass",
                     "images": [
-                        "https://cdn.serilum.com/projects/piglin-names/a.png"
+                        "https://zonacraft.net/wp-content/uploads/2024/01/explorers-compass-mod.webp",
+                        "https://i.imgur.com/xSE8VSc.png",
+                        "https://i.imgur.com/Q49Pvjv.png"
                     ],
                     "paragraphs": [
-                        "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
+                        "Brújula de exploración que permite localizar cualquier estructura generada en el mundo. Encuentra templos, aldeas y más al instante."
+                    ]
+                },
+                {
+                    "id": "fnaf-music-disks",
+                    "name": "FNaF Music Disk Mod",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/417/12/256/256/637640366395328794.png"
+                    ],
+                    "paragraphs": [
+                        "Añade una selección de discos de música coleccionables que contienen las icónicas canciones y bandas sonoras de Five Nights at Freddy's para reproducir en tus tocadiscos."
                     ],
                     "status": "ELIMINADO"
-                },
-                {
-                    "id": "more-dragon-eggs",
-                    "name": "More Dragon Eggs",
-                    "images": [
-                        "https://cdn.mos.cms.futurecdn.net/SCBRtRY2o6pT2jC23uRed3.jpg"
-                    ],
-                    "paragraphs": [
-                        "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
-                    ]
-                },
-                {
-                    "id": "simple-voice-chat",
-                    "name": "Simple Voice Chat",
-                    "images": [
-                        "https://i.ytimg.com/vi/mjblVOTJz2Y/maxresdefault.jpg",
-                        "https://minecraft.fr/wp-content/uploads/2022/01/simple-voice-chat-mod-minecraft.jpg"
-                    ],
-                    "paragraphs": [
-                        "Añade chat de voz de proximidad en tiempo real en el servidor. Permite comunicarte por voz directamente con otros jugadores cercanos, con soporte para audio bidireccional, ajuste de volumen y atenuación de sonido por la distancia y los bloques de por medio."
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Resource Packs",
-            "icon": "📦",
-            "mods": [
-                {
-                    "id": "alternative-rain",
-                    "name": "Alternative Rain Sounds",
-                    "images": [
-                        "https://i.ytimg.com/vi/fcgwZZjIG8c/maxresdefault.jpg"
-                    ],
-                    "paragraphs": [
-                        "Sustituye los sonidos ambientales de lluvia y truenos por efectos mucho más realistas y envolventes."
-                    ]
                 },
                 {
                     "id": "farcr-dirt",
@@ -1935,6 +1572,89 @@
                     "status": "ELIMINADO"
                 },
                 {
+                    "id": "field-guide",
+                    "name": "Field Guide",
+                    "images": [
+                        "https://i.ytimg.com/vi/T7dFUs4GFzY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAV48tRTFuVbpe6d2BJOLjnaj-VLQ",
+                        "https://media.forgecdn.net/attachments/1558/481/2026-02-27_23-05-23-png.png",
+                        "https://media.forgecdn.net/attachments/1572/144/emu-png.png",
+                        "https://media.forgecdn.net/attachments/1558/483/2026-02-27_23-08-41-png.png"
+                    ],
+                    "paragraphs": [
+                        "Añade una Guía de Campo interactiva. Usa el catalejo para escanear y registrar información detallada sobre las plantas, animales y monstruos del mundo."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "goblin-traders",
+                    "name": "Goblin Traders",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/510/242/newscreenshot1a.png",
+                        "https://media.forgecdn.net/attachments/510/243/newscreenshot2a.png"
+                    ],
+                    "paragraphs": [
+                        "Añade duendes comerciantes que aparecen bajo tierra o en la superficie, ofreciendo intercambios por objetos raros y valiosos."
+                    ]
+                },
+                {
+                    "id": "ht-treechop",
+                    "name": "HT's TreeChop",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1300/652/mcpedl-png.png",
+                        "https://i.ytimg.com/vi/NtZEakVAb6A/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/_4V1-_rNfoM/maxresdefault.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGWk0QnuONgVrZBBRy0rXnfcHqu2uPLmmeQ&s"
+                    ],
+                    "paragraphs": [
+                        "Permite talar árboles enteros rompiendo progresivamente un solo bloque de tronco.",
+                        "Los árboles más grandes requieren más golpes, y varios jugadores pueden colaborar para derribarlos simultáneamente."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "iron-chest",
+                    "name": "Iron Chest",
+                    "images": [
+                        "https://i.imgur.com/Kz3AG9B.png"
+                    ],
+                    "paragraphs": [
+                        "Incluye cofres de diferentes tamaños correspondientes a los distintos metales del juego original."
+                    ]
+                },
+                {
+                    "id": "iron-furnaces",
+                    "name": "Iron Furnaces",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/279/110/furnaces.png"
+                    ],
+                    "paragraphs": [
+                        "Añade hornos mejorados de distintos materiales (hierro, oro, diamante) que cocinan y funden objetos más rápido."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "jumbo-furnace",
+                    "name": "Jumbo Furnace",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/298/545/splash.png",
+                        "https://media.forgecdn.net/attachments/298/547/hoppers.png",
+                        "https://media.forgecdn.net/attachments/298/546/gui.png"
+                    ],
+                    "paragraphs": [
+                        "Permite fabricar un horno gigante de bloques múltiples (3x3x3) que puede procesar hasta 9 objetos simultáneamente o hacer recetas especiales de fundición avanzada."
+                    ]
+                },
+                {
+                    "id": "lootr",
+                    "name": "Lootr",
+                    "images": [
+                        "https://i.ytimg.com/vi/vJTGw4-uDl0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBqlgFraheKkjYwko0u3FEUzSGJ8A"
+                    ],
+                    "paragraphs": [
+                        "Genera recompensas de forma individual en cada contenedor para cada jugador, permitiendo que todos los exploradores obtengan botín sin competir."
+                    ]
+                },
+                {
                     "id": "low-on-fire",
                     "name": "Low On Fire",
                     "images": [
@@ -1946,15 +1666,250 @@
                     ]
                 },
                 {
-                    "id": "lower-shield",
-                    "name": "Lower Shield",
+                    "id": "miners-moon",
+                    "name": "Miner's Moon",
                     "images": [
-                        "https://media.forgecdn.net/attachments/1068/555/2025-01-16_15.png"
+                        "https://media.forgecdn.net/attachments/description/438447/description_598f50e4-3f5c-4c07-ac41-d138460b4e09.png"
                     ],
                     "paragraphs": [
-                        "Baja la posición del escudo en primera persona para mejorar la visibilidad durante el bloqueo."
+                        "Añade un evento lunar aleatorio, la Luna del Minero, que altera temporalmente la generación de minerales para hacerlos más abundantes."
                     ],
                     "status": "ELIMINADO"
+                },
+                {
+                    "id": "mmmmmmmmmmmm",
+                    "name": "MmmMmmMmmMmm",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/316/868/modpage.png",
+                        "https://media.forgecdn.net/attachments/316/883/ouch.png"
+                    ],
+                    "paragraphs": [
+                        "Añade un muñeco de pruebas. Al golpearlo te mostrará el daño exacto (DPS) infligido por tus armas.",
+                        "Permite equiparle armaduras y cabezas para simular diferentes tipos de defensa y probar el efecto de encantamientos como Castigo."
+                    ]
+                },
+                {
+                    "id": "mob-lassos",
+                    "name": "Mob Lassos",
+                    "images": [
+                        "https://i.ytimg.com/vi/nWL2z8O9nOs/maxresdefault.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4IXEz0y_hTc7lllf3IZk_6dyrVAdiE3r6OQ&s",
+                        "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/moblassos/media/1.png"
+                    ],
+                    "paragraphs": [
+                        "Añade diferentes tipos de lazos que te permiten capturar y transportar criaturas cómodamente en tu inventario.",
+                        "Existen diversas variantes, como el lazo acuático, esmeralda u hostil, cada una con características específicas y tiempos límite de retención."
+                    ]
+                },
+                {
+                    "id": "more-dragon-eggs",
+                    "name": "More Dragon Eggs",
+                    "images": [
+                        "https://cdn.mos.cms.futurecdn.net/SCBRtRY2o6pT2jC23uRed3.jpg"
+                    ],
+                    "paragraphs": [
+                        "El dragón del End deja un huevo cada vez que es derrotado, permitiendo a todos los jugadores del servidor obtener uno."
+                    ]
+                },
+                {
+                    "id": "natures-compass",
+                    "name": "Nature's Compass",
+                    "images": [
+                        "https://i.ytimg.com/vi/2jTEAm-QH50/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDGavyTuAdNlcSrlGyi3eLPJaEmdA",
+                        "https://i.imgur.com/GTSAfqv.png",
+                        "https://i.ytimg.com/vi/-uACE13v75c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAW-hmmNGw9LUQ1ed-dT_eNVwRk1A"
+                    ],
+                    "paragraphs": [
+                        "Brújula especial que permite buscar cualquier bioma del juego. Nunca más te perderás buscando el bioma que necesitas."
+                    ]
+                },
+                {
+                    "id": "netherite-scrap-from-piglin-brutes",
+                    "name": "Netherite Scrap From Piglin Brutes",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/thumbnails/510/844/256/256/637828380871638775.png"
+                    ],
+                    "paragraphs": [
+                        "Otorga a los Piglin Brutos la probabilidad de soltar fragmentos de netherita al ser derrotados en combate."
+                    ]
+                },
+                {
+                    "id": "pastel",
+                    "name": "Pastel",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/1234/195/pastel-banner.png",
+                        "https://media.forgecdn.net/attachments/1234/339/2025-06-28_09.png",
+                        "https://media.forgecdn.net/attachments/1234/337/2025-06-28_10.png"
+                    ],
+                    "paragraphs": [
+                        "Mod de magia centrado en la exploración del color como energía natural.",
+                        "Añade sistemas de progresión, exploración de dimensiones, maquinaria y herramientas basadas en la esencia del color.",
+                        "Características principales: armaduras, herramientas, máquinas, nuevos alimentos, un sistema logístico y una nueva dimensión."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "piglin-names",
+                    "name": "Piglin Names",
+                    "images": [
+                        "https://cdn.serilum.com/projects/piglin-names/a.png"
+                    ],
+                    "paragraphs": [
+                        "Asigna nombres únicos a los piglins, haciendo las interacciones con ellos más inmersivas y memorables."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "player-revive",
+                    "name": "Player Revive",
+                    "images": [
+                        "https://media.forgecdn.net/avatars/97/938/636295724985402020.png"
+                    ],
+                    "paragraphs": [
+                        "Permite reanimar a otros jugadores caídos antes de que mueran definitivamente, dándoles una segunda oportunidad en combate."
+                    ]
+                },
+                {
+                    "id": "playing-cards-chips",
+                    "name": "Playing Cards & Chips",
+                    "images": [
+                        "https://i.imgur.com/8ivTYrw.png",
+                        "https://i.imgur.com/bBav8cT.png",
+                        "https://i.imgur.com/O2WBvJI.png",
+                        "https://static.planetminecraft.com/files/image/minecraft/texture-pack/2021/361/13947043_xl.webp"
+                    ],
+                    "paragraphs": [
+                        "Añade barajas de cartas y fichas de póquer completamente funcionales para que puedas jugar y apostar con tus amigos."
+                    ]
+                },
+                {
+                    "id": "repeatable-vaults",
+                    "name": "Repeatable Trial Vaults",
+                    "images": [
+                        "https://static.beebom.com/wp-content/uploads/2024/01/Vault-block-and-the-trial-key-in-trial-chambers.jpg?w=1250&quality=75"
+                    ],
+                    "paragraphs": [
+                        "Consume una llave de Trial para poder usar la Trial Chamber nuevamente."
+                    ]
+                },
+                {
+                    "id": "sawmil",
+                    "name": "Sawmil",
+                    "images": [
+                        "https://i.imgur.com/8dNQkxR.png"
+                    ],
+                    "paragraphs": [
+                        "Añade un aserradero que actúa como el cortapiedras pero para madera. Es compatible con cualquier mod e incluye la nueva profesión de aldeano Carpintero."
+                    ]
+                },
+                {
+                    "id": "security-craft",
+                    "name": "Security Craft",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/647/279/item-security.png",
+                        "https://media.forgecdn.net/attachments/647/278/explosives.png",
+                        "https://media.forgecdn.net/attachments/647/276/defense.png"
+                    ],
+                    "paragraphs": [
+                        "Añade bloques y objetos de seguridad para defender y asegurar tus estructuras."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "simple-corpse",
+                    "name": "Simple Corpse",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/description/null/description_ee706ae5-1e21-418b-8e37-976b91d57ea7.png",
+                        "https://media.forgecdn.net/attachments/description/1096099/description_4615216c-036e-4296-b54d-548dc6b79c60.png"
+                    ],
+                    "paragraphs": [
+                        "Sustituye la caída de objetos al morir por un cadáver que retiene el inventario del jugador, facilitando su recuperación sin límite de tiempo."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "simple-voice-chat",
+                    "name": "Simple Voice Chat",
+                    "images": [
+                        "https://i.ytimg.com/vi/mjblVOTJz2Y/maxresdefault.jpg",
+                        "https://minecraft.fr/wp-content/uploads/2022/01/simple-voice-chat-mod-minecraft.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade chat de voz de proximidad en tiempo real en el servidor. Permite comunicarte por voz directamente con otros jugadores cercanos, con soporte para audio bidireccional, ajuste de volumen y atenuación de sonido por la distancia y los bloques de por medio."
+                    ]
+                },
+                {
+                    "id": "simply-traps",
+                    "name": "Simply Traps",
+                    "images": [
+                        "https://media.forgecdn.net/attachments/description/1172014/description_fd561495-aa42-4d3e-b755-fc6d27913b1a.png",
+                        "https://media.forgecdn.net/attachments/1057/396/screenshot_2.png"
+                    ],
+                    "paragraphs": [
+                        "Añade trampas de diseño clásico y estilo vainilla, como pinchos para el suelo o la pared, trampas de foso y más, ideales para defender tu base."
+                    ]
+                },
+                {
+                    "id": "slimy-stuff",
+                    "name": "Slimy Stuff",
+                    "images": [
+                        "https://i.ytimg.com/vi/drfL8aj8NRs/maxresdefault.jpg",
+                        "https://media.forgecdn.net/attachments/739/559/image2.png",
+                        "https://media.forgecdn.net/attachments/739/560/image3.png",
+                        "https://media.forgecdn.net/attachments/739/561/image4.png"
+                    ],
+                    "paragraphs": [
+                        "Añade nuevas armaduras de limo que te permiten rebotar, armas pegajosas y otros bloques de utilidad basados en las mecánicas del slime."
+                    ],
+                    "status": "REVISIÓN"
+                },
+                {
+                    "id": "spain-national-anthem",
+                    "name": "Spain National Anthem",
+                    "images": [
+                        "https://i.ytimg.com/vi/wp9VJ3dMlds/maxresdefault.jpg"
+                    ],
+                    "paragraphs": [
+                        "Añade un nuevo disco de música personalizado que se puede reproducir para escuchar el himno nacional de España."
+                    ]
+                },
+                {
+                    "id": "steam-n-rails",
+                    "name": "Steam 'n' Rails",
+                    "images": [
+                        "https://i.redd.it/a-few-trains-i-made-with-the-new-steam-rails-update-v0-v04m32k117vc1.png?width=1920&format=png&auto=webp&s=f3230f3e025486a3e02b093801402c30445d53ad",
+                        "https://media.forgecdn.net/attachments/794/769/64a92e01eaee601cba08f7d3ebbdd72f8d43bd2c.png"
+                    ],
+                    "paragraphs": [
+                        "Complemento para Create que expande el sistema de trenes, añadiendo nuevos tipos de vías, vagonetas y mecánicas logísticas ferroviarias avanzadas."
+                    ],
+                    "status": "ELIMINADO"
+                },
+                {
+                    "id": "traveler-toolbelt",
+                    "name": "Traveler Toolbelt",
+                    "images": [
+                        "https://i.ytimg.com/vi/Bu7hr1wmjiE/maxresdefault.jpg"
+                    ],
+                    "paragraphs": [
+                        "Cinturón de herramientas actualizable con intercambio rápido e intuitivo, integración con la API de Curios/Trinkets y mucho más."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
+                },
+                {
+                    "id": "travelers-backpack",
+                    "name": "Traveler's Backpack",
+                    "images": [
+                        "https://i.imgur.com/OwJ2twO.png",
+                        "https://i.tlauncher.org/images/Traveler_s-Backpack-mod-for-minecraft-logo.jpg",
+                        "https://media.forgecdn.net/attachments/1021/494/upgrades-grid-dsc.png",
+                        "https://media.forgecdn.net/attachments/1093/260/update-beta-project-png.png",
+                        "https://i.tlauncher.org/images/tb.png"
+                    ],
+                    "paragraphs": [
+                        "Mochilas personalizables con almacenamiento extra, tanques de fluidos y herramientas integradas. El compañero perfecto de exploración."
+                    ],
+                    "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
                     "id": "undopia-zombies",
@@ -1971,28 +1926,31 @@
                     "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
-                    "id": "fancy-crops",
-                    "name": "Fancy Crops",
+                    "id": "unusual-prehistory-2",
+                    "name": "Unusual Prehistory 2",
                     "images": [
-                        "https://media.forgecdn.net/attachments/915/289/1ab4422225a47fd6c9e3012fa59e34e4842b2eeb.jpeg",
-                        "https://media.forgecdn.net/attachments/690/183/comparison.jpg",
-                        "https://media.forgecdn.net/attachments/690/157/wheat.jpg"
+                        "https://media.forgecdn.net/attachments/1417/474/1.png",
+                        "https://media.forgecdn.net/attachments/1594/733/1.png",
+                        "https://media.forgecdn.net/attachments/1343/758/card-11-carnotaurus.png",
+                        "https://media.forgecdn.net/attachments/1342/840/card-4-dunkleosteus.png",
+                        "https://media.forgecdn.net/attachments/1401/857/card_1_majungasaurus-png.png"
                     ],
                     "paragraphs": [
-                        "Mejora visualmente todos los cultivos de Minecraft con texturas más detalladas y animadas. Tu granja nunca había parecido tan bien."
+                        "Permite descubrir fósiles en el mundo, extraer su ADN y revivir una variedad de criaturas prehistóricas y dinosaurios.",
+                        "Esta versión incluye modelos detallados, animaciones fluidas y mecánicas para interactuar y criar a estas criaturas."
                     ],
-                    "status": "ELIMINADO"
+                    "status": "SELECCIÓN DEL AUTOR"
                 },
                 {
-                    "id": "clearer-water-pack",
-                    "name": "Clearer Water Pack",
+                    "id": "villager-names",
+                    "name": "Villager Names",
                     "images": [
-                        "https://media.forgecdn.net/attachments/description/null/description_54f8df46-5a85-4213-8a88-4d45a5901102.gif"
+                        "https://i.redd.it/8pxctqrl7u031.png"
                     ],
                     "paragraphs": [
-                        "Resource pack que aumenta significativamente la claridad y transparencia del agua, permitiendo ver estructuras submarinas, criaturas y recursos con facilidad.",
-                        "Ideal para explorar océanos y ríos sin la densa niebla acuática por defecto, manteniendo un aspecto limpio y mejorando la visibilidad general bajo el agua."
-                    ]
+                        "Asigna nombres únicos a todos los aldeanos del mundo, dándoles personalidad e identidad propia."
+                    ],
+                    "status": "ELIMINADO"
                 }
             ]
         }

@@ -330,23 +330,6 @@
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "qlipoth-awakening",
-                    "name": "Qliphoth Awakening",
-                    "images": [
-                        "https://preview.redd.it/qliphoth-awakening-was-just-ported-to-1-20-1-forge-neoforge-v0-ff5ouvoiqwpf1.png?auto=webp&s=d2d113c74b61cbdd7325217e2a202771f7e9ab48",
-                        "https://i.redd.it/e4dwrcvvd0cg1.png",
-                        "https://i.ytimg.com/vi/3J3pmN4sURo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDVT4LSERdv75MRV7xlcxyiiiEsRQ",
-                        "https://i.ytimg.com/vi/LB1QV8H9jS4/maxresdefault.jpg",
-                        "https://i.ytimg.com/vi/2rJL4voCnbU/sddefault.jpg"
-                    ],
-                    "paragraphs": [
-                        "Añade varios jefes con ataques y mecánicas únicas.",
-                        "Qliphoth Awakening es un mod que se centra en añadir varios jefes, cada uno con su propio conjunto de ataques, mecánicas únicas y objetos que sueltan al derrotarlos.",
-                        "Antes de invocar a un jefe, se te presentará una descripción detallada de sus ataques y mecánicas. Puedes leerla completa y prepararte, o poner a prueba tus habilidades y enfrentarte a él sin preparación."
-                    ],
-                    "status": "SELECCIÓN DEL AUTOR"
-                },
-                {
                     "id": "royal-variations",
                     "name": "Royal Variations",
                     "images": [
@@ -1513,11 +1496,7 @@
                     "id": "farmers-delight",
                     "name": "Farmer's Delight",
                     "images": [
-                        "https://i.ytimg.com/vi/BUI9L3yDrtc/maxresdefault.jpg",
-                        "https://cdn.modrinth.com/data/R2OftAxM/images/f200944fad13f6afe5e16b6f75b8c4d947667cd8.png",
-                        "https://i.ytimg.com/vi/BY-c9gAiqMM/maxresdefault.jpg",
-                        "https://media.forgecdn.net/attachments/456/881/kitchenware.png",
-                        "https://media.forgecdn.net/attachments/456/879/basic-crops.png"
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRav8MVScQSRuIqBb0dIOwYxPOlIkFZ83awM8D2pVz56cJH3CY2II3cvFc4&s=10"
                     ],
                     "paragraphs": [
                         "Amplía las posibilidades de la agricultura y la cocina en Minecraft. Utiliza un sistema de cocina para preparar comidas con nuevos ingredientes y utensilios.",

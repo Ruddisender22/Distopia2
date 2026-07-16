@@ -687,16 +687,6 @@
                     "status": "ELIMINADO"
                 },
                 {
-                    "id": "multiplayer-boss-attribute-modifier",
-                    "name": "Multiplayer Bosses",
-                    "images": [
-                        "https://media.forgecdn.net/avatars/thumbnails/1805/224/256/256/639142307347327028.png"
-                    ],
-                    "paragraphs": [
-                        "Aumenta automáticamente la vida y el daño de los jefes (como el Dragón o el Wither) dependiendo de cuántos jugadores estén luchando contra ellos simultáneamente."
-                    ]
-                },
-                {
                     "id": "netherite-scrap-from-piglin-brutes",
                     "name": "Netherite Scrap From Piglin Brutes",
                     "images": [
@@ -1035,13 +1025,10 @@
                     "id": "artifacts",
                     "name": "Artifacts",
                     "images": [
-                        "https://i.ytimg.com/vi/hTiNWWYTnao/maxresdefault.jpg",
-                        "https://zonacraft.net/wp-content/uploads/2022/07/Artifacts-Mod-2-384x216.png",
-                        "https://www.40servidoresmc.es/blog/wp-content/uploads/2020/08/artifacts-mod-1-16.jpg",
-                        "https://static.wikia.nocookie.net/artifacts-minecraft/images/0/01/Artifacts.png/revision/latest/smart/width/386/height/259?cb=20251008053547"
+                        "https://www.minecrafteo.com/wp-content/uploads/2021/10/artifacts-mod-1-17.jpg"
                     ],
                     "paragraphs": [
-                        "Añade equipo mágico y tesoros ocultos esparcidos por campamentos subterráneos y baúles secretos, otorgando a su portador habilidades singulares."
+                        "Equipamiento que se encuentra esparcido por el mundo y tienen poderes únicos."
                     ]
                 },
                 {
@@ -1883,8 +1870,7 @@
                     "id": "lootr",
                     "name": "Lootr",
                     "images": [
-                        "https://media.forgecdn.net/attachments/284/586/java_81n0xdlino.png",
-                        "https://media.forgecdn.net/attachments/1478/24/2026-01-19_20-05-50-png.png"
+                        "https://i.ytimg.com/vi/vJTGw4-uDl0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBqlgFraheKkjYwko0u3FEUzSGJ8A"
                     ],
                     "paragraphs": [
                         "Genera recompensas de forma individual en cada contenedor para cada jugador, permitiendo que todos los exploradores obtengan botín sin competir."

@@ -1340,7 +1340,7 @@
                     "id": "two-players-one-horse",
                     "name": "Two Players One Horse",
                     "images": [
-                        "https://r2.mcpedl.com/submissions/224543/images/2-players-on-horse-v111_2.png"
+                        "https://media.forgecdn.net/attachments/1218/752/8ada0fc84d4bf9c20c467e0c28484be53ee86bab-png.png"
                     ],
                     "paragraphs": [
                         "Permite que dos jugadores se monten y viajen juntos simultáneamente en un mismo caballo."
@@ -1673,9 +1673,7 @@
                     "id": "traveler-toolbelt",
                     "name": "Traveler Toolbelt",
                     "images": [
-                        "https://i.ytimg.com/vi/Bu7hr1wmjiE/maxresdefault.jpg",
-                        "https://media.forgecdn.net/avatars/thumbnails/1668/441/256/256/639061620838283541.png",
-                        "https://i.imgur.com/w516LlM.png"
+                        "https://i.ytimg.com/vi/Bu7hr1wmjiE/maxresdefault.jpg"
                     ],
                     "paragraphs": [
                         "Cinturón de herramientas actualizable con intercambio rápido e intuitivo, integración con la API de Curios/Trinkets y mucho más."

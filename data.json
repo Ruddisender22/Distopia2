@@ -5,26 +5,6 @@
             "icon": "🌌",
             "mods": [
                 {
-                    "id": "stellarity",
-                    "name": "Stellarity",
-                    "images": [
-                        "https://media.forgecdn.net/attachments/1051/487/stellarity_new-1.png",
-                        "https://i.imgur.com/ypTJ6bL.png",
-                        "https://media.forgecdn.net/attachments/1051/474/2024-12-11_12.png",
-                        "https://media.forgecdn.net/attachments/1051/482/2024-12-23_17.png",
-                        "https://media.forgecdn.net/attachments/1051/485/2024-12-23_17.png",
-                        "https://media.forgecdn.net/attachments/1051/477/2024-12-11_12.png",
-                        "https://media.forgecdn.net/attachments/1051/478/2024-12-11_15.png",
-                        "https://i.imgur.com/i520ske.png"
-                    ],
-                    "paragraphs": [
-                        "Una renovación radical de The End con un intenso estilo de magia y fantasía. Este mod (anteriormente un paquete de datos) mejora drásticamente los biomas y las estructuras del juego base.",
-                        "Stellarity mezcla la atmósfera desolada del End con nuevos objetos, armas, mecánicas de juego y peleas contra jefes mucho más desafiantes, incluyendo un Ender Dragon mejorado y jefes inspirados en títulos como Terraria.",
-                        "Se han añadido un total de 23 biomas nuevos que enriquecen enormemente la exploración de esta dimensión terminal."
-                    ],
-                    "status": "ELIMINADO"
-                },
-                {
                     "id": "unusual-end",
                     "name": "Unusual End",
                     "images": [

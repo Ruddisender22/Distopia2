@@ -3681,6 +3681,7 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
 .gacha-card.tier-super:hover    { border-color: rgba(56,189,248,0.6); }
 .gacha-card.tier-super .gacha-name { color: #38bdf8; }
 
+
 .gacha-card.tier-mega     { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.05); }
 .gacha-card.tier-mega:hover     { border-color: rgba(59,130,246,0.6); }
 .gacha-card.tier-mega .gacha-name { color: #3b82f6; }
@@ -3937,14 +3938,119 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
     margin: 0 0 0.5rem 0;
 }
 
-.mod-card-desc {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.4;
-    margin: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+
+/* ================================================================
+   MOBILE RESPONSIVENESS OVERRIDES
+   ================================================================ */
+@media (max-width: 768px) {
+    /* Navbar */
+    .site-navbar {
+        flex-wrap: wrap;
+        padding: 0.8rem 1rem;
+        height: auto;
+    }
+    .nav-brand {
+        margin-bottom: 0.5rem;
+    }
+    .nav-links {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 0.8rem;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+    }
+    .nav-links::-webkit-scrollbar {
+        height: 4px;
+    }
+    .nav-links::-webkit-scrollbar-thumb {
+        background: var(--violet);
+        border-radius: 4px;
+    }
+    .auth-corner {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* General Layout */
+    .content-wrapper, .page-header, .features-showcase, .origins-header {
+        padding: 1.5rem 1rem;
+    }
+    .page-title { font-size: 1.8rem; }
+    .page-subtitle { font-size: 0.95rem; }
+    .section-title { font-size: 1.5rem; }
+    .fc-title { font-size: 1.5rem; }
+    
+    .landing-hero { padding: 4rem 1rem; }
+    .landing-eyebrow { font-size: 0.75rem; }
+
+    /* Grids Override */
+    .player-roster-grid,
+    .class-grid,
+    .race-grid,
+    .mods-grid,
+    .vote-grid,
+    .gallery-grid,
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    /* Origin Header adjustments */
+    .origins-header-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .origins-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Stage Banner & Timeline */
+    .stage-banner-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .stage-banner-features {
+        grid-template-columns: 1fr !important;
+    }
+    .stage-timeline {
+        padding-left: 1.5rem;
+    }
+
+    /* Modals */
+    .modal-content, .class-modal-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 1.5rem;
+    }
+    .modal-banner {
+        height: 100px;
+    }
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    /* Tables, Iframes, Media */
+    img, video, iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Specific Stats */
+    .landing-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .landing-stat-sep {
+        display: none;
+    }
 }

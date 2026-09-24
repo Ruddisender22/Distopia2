@@ -3532,6 +3532,194 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
   font-size: 1.2rem;
 }
 
+/* ── Farewell Banner (Fin de Servidor) ── */
+.farewell-banner {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto 2.8rem;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 204, 0, 0.12) 0%, rgba(138, 43, 226, 0.08) 45%, rgba(12, 5, 20, 0.92) 100%);
+  border: 1px solid rgba(255, 204, 0, 0.35);
+  border-radius: var(--r-2xl);
+  padding: 2.8rem 2.4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 50px -10px rgba(0, 0, 0, 0.7), 0 0 60px -15px rgba(255, 204, 0, 0.22);
+  text-align: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.farewell-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 204, 0, 0.9), rgba(232, 121, 249, 0.9), transparent);
+}
+
+.farewell-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, rgba(255, 60, 60, 0.2) 0%, rgba(255, 140, 0, 0.2) 100%);
+  border: 1px solid rgba(255, 100, 100, 0.45);
+  padding: 0.45rem 1.4rem;
+  border-radius: var(--r-pill);
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ff9e9e;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 0 20px rgba(255, 60, 60, 0.2);
+}
+
+.farewell-badge-pulse {
+  width: 9px;
+  height: 9px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff4d4d;
+  animation: pulseEnded 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseEnded {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.75); }
+}
+
+.farewell-title {
+  font-family: 'Cinzel', 'Outfit', serif;
+  font-size: clamp(1.8rem, 4.8vw, 3.1rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 auto 1.2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #ffeaa7 30%, #ffcc00 65%, #ff8800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 18px rgba(255, 180, 0, 0.4));
+}
+
+.farewell-gratitude {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #ffda79;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  padding: 0.6rem 1.4rem;
+  background: rgba(255, 204, 0, 0.07);
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  line-height: 1.4;
+}
+
+.farewell-quote-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 780px;
+  background: rgba(0, 0, 0, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-left: 4px solid #ffcc00;
+  border-radius: var(--r-lg);
+  padding: 2.2rem 2.4rem;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.farewell-quote-mark {
+  position: absolute;
+  top: 0.6rem;
+  right: 1.2rem;
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(255, 204, 0, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+.farewell-quote-text {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--t2);
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+}
+
+.farewell-author-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.2rem;
+}
+
+.farewell-author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffcc00 0%, #ff8800 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 0 16px rgba(255, 204, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.farewell-author-meta {
+  text-align: left;
+}
+
+.farewell-author-name {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  display: block;
+}
+
+.farewell-author-role {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.farewell-worlds-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+  padding: 1rem 1.4rem;
+  background: linear-gradient(90deg, rgba(0, 204, 255, 0.09) 0%, rgba(255, 204, 0, 0.07) 100%);
+  border: 1px dashed rgba(0, 204, 255, 0.35);
+  border-radius: var(--r-md);
+  font-size: 0.98rem;
+  color: var(--t2);
+  line-height: 1.5;
+}
+
+.farewell-worlds-notice strong {
+  color: var(--cyan);
+}
+
 /* ── Player Roster (Vertical Marquee) ── */
 .player-roster-section {
   margin-top: 2.5rem;
@@ -4023,6 +4211,27 @@ body > *:not(.site-navbar):not(.auth-modal-overlay):not(.toast):not(#bg-canvas):
     }
     .stage-timeline {
         padding-left: 1.5rem;
+    }
+
+    /* Farewell Banner mobile */
+    .farewell-banner {
+        padding: 2rem 1.2rem;
+    }
+    .farewell-quote-wrapper {
+        padding: 1.6rem 1.2rem;
+    }
+    .farewell-gratitude {
+        font-size: 0.98rem;
+        padding: 0.5rem 1rem;
+    }
+    .farewell-quote-text {
+        font-size: 1.02rem;
+        line-height: 1.7;
+    }
+    .farewell-worlds-notice {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.92rem;
     }
 
     /* Modals */
